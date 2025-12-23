@@ -13392,19 +13392,19 @@
     },
     {
       "offset": "0x147A1",
-      "active": true,
+      "active": false,
       "start": "0x147A9",
       "end": "0x147B8"
     },
     {
       "offset": "0x14805",
-      "active": true,
+      "active": false,
       "start": "0x1480D",
       "end": "0x1481C"
     },
     {
       "offset": "0x1482D",
-      "active": true,
+      "active": false,
       "start": "0x14835",
       "end": "0x14844"
     },

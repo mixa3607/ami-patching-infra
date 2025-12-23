@@ -31,7 +31,7 @@
 |   - Trusted Computing:                           | Ref      | [🟢0x14738, 🟢0x14786]            |
 |     -   Security Device Support                  | OneOf    |                                   |
 |     -   Disable Block Sid                        | OneOf    | [🟢0x14915]                       |
-|   - ACPI Settings:                               | Ref      | [🟢0x147A1]                       |
+|   - ACPI Settings:                               | Ref      | [🔘0x147A1]                       |
 |     - Enable ACPI Auto Configuration             | CheckBox |                                   |
 |   - AST2500SEC Super IO Configuration:           | Ref      |                                   |
 |     - Serial Port 1 Configuration:               | Ref      | [🟢0x15007]                       |
@@ -147,7 +147,7 @@
 |       - CPU2 RPM Speed                           | Numeric  | [🟢0x16307, 🟢0x16319]            |
 |       - CPU2 duty cycle                          | Numeric  | [🟢0x16307, 🟢0x16340]            |
 |     - Smart Fan Function                         | OneOf    |                                   |
-|   - UEFI Variables Protection:                   | Ref      | [🟢0x14805]                       |
+|   - UEFI Variables Protection:                   | Ref      | [🔘0x14805]                       |
 |     - Password protection of Runtime Variables   | OneOf    |                                   |
 |   - Serial Port Console Redirection:             | Ref      |                                   |
 |     - Console Redirection                        | CheckBox | [🟢0x163C6]                       |
@@ -173,7 +173,7 @@
 |       - Terminal Type EMS                        | OneOf    |                                   |
 |       - Bits per second EMS                      | OneOf    |                                   |
 |       - Flow Control EMS                         | OneOf    |                                   |
-|   - SIO Common Setting:                          | Ref      | [🟢0x1482D]                       |
+|   - SIO Common Setting:                          | Ref      | [🔘0x1482D]                       |
 |     - Lock Legacy Resources                      | CheckBox |                                   |
 |   - PCI Subsystem Settings:                      | Ref      |                                   |
 |     - PCI Latency Timer                          | OneOf    | [🟢0x16DB4]                       |
@@ -323,7 +323,7 @@
 |     - Trusted Computing:                         | Ref      | [🟢0x14738, 🟢0x14786]            |
 |       -   Security Device Support                | OneOf    |                                   |
 |       -   Disable Block Sid                      | OneOf    | [🟢0x14915]                       |
-|     - ACPI Settings:                             | Ref      | [🟢0x147A1]                       |
+|     - ACPI Settings:                             | Ref      | [🔘0x147A1]                       |
 |       - Enable ACPI Auto Configuration           | CheckBox |                                   |
 |     - AST2500SEC Super IO Configuration:         | Ref      |                                   |
 |       - Serial Port 1 Configuration:             | Ref      | [🟢0x15007]                       |
@@ -439,7 +439,7 @@
 |         - CPU2 RPM Speed                         | Numeric  | [🟢0x16307, 🟢0x16319]            |
 |         - CPU2 duty cycle                        | Numeric  | [🟢0x16307, 🟢0x16340]            |
 |       - Smart Fan Function                       | OneOf    |                                   |
-|     - UEFI Variables Protection:                 | Ref      | [🟢0x14805]                       |
+|     - UEFI Variables Protection:                 | Ref      | [🔘0x14805]                       |
 |       - Password protection of Runtime Variables | OneOf    |                                   |
 |     - Serial Port Console Redirection:           | Ref      |                                   |
 |       - Console Redirection                      | CheckBox | [🟢0x163C6]                       |
@@ -465,7 +465,7 @@
 |         - Terminal Type EMS                      | OneOf    |                                   |
 |         - Bits per second EMS                    | OneOf    |                                   |
 |         - Flow Control EMS                       | OneOf    |                                   |
-|     - SIO Common Setting:                        | Ref      | [🟢0x1482D]                       |
+|     - SIO Common Setting:                        | Ref      | [🔘0x1482D]                       |
 |       - Lock Legacy Resources                    | CheckBox |                                   |
 |     - PCI Subsystem Settings:                    | Ref      |                                   |
 |       - PCI Latency Timer                        | OneOf    | [🟢0x16DB4]                       |
@@ -615,7 +615,7 @@
 |   - Trusted Computing:                           | Ref      | [🟢0x14738, 🟢0x14786]            |
 |     -   Security Device Support                  | OneOf    |                                   |
 |     -   Disable Block Sid                        | OneOf    | [🟢0x14915]                       |
-|   - ACPI Settings:                               | Ref      | [🟢0x147A1]                       |
+|   - ACPI Settings:                               | Ref      | [🔘0x147A1]                       |
 |     - Enable ACPI Auto Configuration             | CheckBox |                                   |
 |   - AST2500SEC Super IO Configuration:           | Ref      |                                   |
 |     - Serial Port 1 Configuration:               | Ref      | [🟢0x15007]                       |
@@ -731,7 +731,7 @@
 |       - CPU2 RPM Speed                           | Numeric  | [🟢0x16307, 🟢0x16319]            |
 |       - CPU2 duty cycle                          | Numeric  | [🟢0x16307, 🟢0x16340]            |
 |     - Smart Fan Function                         | OneOf    |                                   |
-|   - UEFI Variables Protection:                   | Ref      | [🟢0x14805]                       |
+|   - UEFI Variables Protection:                   | Ref      | [🔘0x14805]                       |
 |     - Password protection of Runtime Variables   | OneOf    |                                   |
 |   - Serial Port Console Redirection:             | Ref      |                                   |
 |     - Console Redirection                        | CheckBox | [🟢0x163C6]                       |
@@ -757,7 +757,7 @@
 |       - Terminal Type EMS                        | OneOf    |                                   |
 |       - Bits per second EMS                      | OneOf    |                                   |
 |       - Flow Control EMS                         | OneOf    |                                   |
-|   - SIO Common Setting:                          | Ref      | [🟢0x1482D]                       |
+|   - SIO Common Setting:                          | Ref      | [🔘0x1482D]                       |
 |     - Lock Legacy Resources                      | CheckBox |                                   |
 |   - PCI Subsystem Settings:                      | Ref      |                                   |
 |     - PCI Latency Timer                          | OneOf    | [🟢0x16DB4]                       |
