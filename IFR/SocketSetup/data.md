@@ -3,7 +3,7 @@
 |-------------------------------------------------------------------------------------------|----------|------------------------------------------------------------------------------------------|
 | - Socket Configuration:                                                                   | Menu     |                                                                                          |
 |   - Processor Configuration:                                                              | Ref      |                                                                                          |
-|     - Per-Socket Configuration:                                                           | Ref      | [🟢0x43651]                                                                              |
+|     - Per-Socket Configuration:                                                           | Ref      | [🔘0x43651]                                                                              |
 |       - CPU Socket 0 Configuration:                                                       | Ref      |                                                                                          |
 |         - Core Disable Bitmap(Hex)                                                        | Numeric  | [🟢0x45AE8]                                                                              |
 |         - IOT Cfg                                                                         | OneOf    | [🟢0x45B42]                                                                              |
@@ -160,7 +160,7 @@
 |         -     Buffer Size                                                                 | OneOf    | [🟢0x455B1, 🟢0x45970, 🟢0x45999]                                                        |
 |         -     Cache Type                                                                  | OneOf    | [🟢0x455B1, 🟢0x45970, 🟢0x45999]                                                        |
 |     - RDT CAT Opportunistic Tuning                                                        | OneOf    | [🟢0x445AA, 🟢0x445CC]                                                                   |
-|   - Common RefCode Configuration:                                                         | Ref      | [🟢0x126D9]                                                                              |
+|   - Common RefCode Configuration:                                                         | Ref      | [🔘0x126D9]                                                                              |
 |     - MMCFG Base                                                                          | OneOf    |                                                                                          |
 |     - MMCFG Size                                                                          | OneOf    |                                                                                          |
 |     - MMIO High Base                                                                      | OneOf    |                                                                                          |
@@ -172,7 +172,7 @@
 |     - Publish SRAT                                                                        | OneOf    |                                                                                          |
 |     - SRAT Memory Hot Plug                                                                | OneOf    | [🟢0x12A27]                                                                              |
 |     - SRAT CPU Hot Plug                                                                   | OneOf    | [🟢0x12A27]                                                                              |
-|   - Uncore Configuration:                                                                 | Ref      | [🟢0x126D9]                                                                              |
+|   - Uncore Configuration:                                                                 | Ref      | [🔘0x126D9]                                                                              |
 |     - Uncore General Configuration:                                                       | Ref      |                                                                                          |
 |       - Uncore Status                                                                     | Ref      |                                                                                          |
 |       - Degrade Precedence                                                                | OneOf    |                                                                                          |
@@ -282,7 +282,7 @@
 |           - Current UPI Link Speed                                                        | OneOf    | [🟢0x13FA0]                                                                              |
 |           - Current UPI Link Speed                                                        | OneOf    | [🟢0x13FF5]                                                                              |
 |         - Bus Resources Allocation Ratio                                                  | Numeric  |                                                                                          |
-|   - Memory Configuration:                                                                 | Ref      | [🟢0x12701]                                                                              |
+|   - Memory Configuration:                                                                 | Ref      | [🔘0x12701]                                                                              |
 |     - Enforce POR                                                                         | OneOf    |                                                                                          |
 |     - Enforce Population POR                                                              | OneOf    | [🟢0x3FA92]                                                                              |
 |     - PPR Type                                                                            | OneOf    |                                                                                          |
@@ -4939,7 +4939,7 @@
 |     - PCIe PTM Enable                                                                     | OneOf    | [🟢0x1416A]                                                                              |
 |     - Pcie Relaxed Ordering                                                               | OneOf    | [🟢0x1416A]                                                                              |
 |     - PCIe PHY test mode                                                                  | OneOf    | [🟢0x1416A]                                                                              |
-|   - Advanced Power Management Configuration:                                              | Ref      | [🟢0x12729]                                                                              |
+|   - Advanced Power Management Configuration:                                              | Ref      | [🔘0x12729]                                                                              |
 |     - Pcode Dispatcher Watchdog Timer                                                     | OneOf    |                                                                                          |
 |     - CPU P State Control:                                                                | Ref      |                                                                                          |
 |       - Uncore Freq Scaling                                                               | OneOf    | [🟢0x4633C]                                                                              |

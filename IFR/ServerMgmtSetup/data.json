@@ -2083,31 +2083,31 @@
     },
     {
       "offset": "0x166E4",
-      "active": true,
+      "active": false,
       "start": "0x166EC",
       "end": "0x1678C"
     },
     {
       "offset": "0x166E0",
-      "active": true,
+      "active": false,
       "start": "0x166E4",
       "end": "0x1678E"
     },
     {
       "offset": "0x16794",
-      "active": true,
+      "active": false,
       "start": "0x1679C",
       "end": "0x167D3"
     },
     {
       "offset": "0x16790",
-      "active": true,
+      "active": false,
       "start": "0x16794",
       "end": "0x167D5"
     },
     {
       "offset": "0x167DB",
-      "active": true,
+      "active": false,
       "start": "0x167E3",
       "end": "0x1681A"
     },
@@ -2143,43 +2143,43 @@
     },
     {
       "offset": "0x167D7",
-      "active": true,
+      "active": false,
       "start": "0x167DB",
       "end": "0x16989"
     },
     {
       "offset": "0x1698F",
-      "active": true,
+      "active": false,
       "start": "0x16997",
       "end": "0x169CE"
     },
     {
       "offset": "0x1698B",
-      "active": true,
+      "active": false,
       "start": "0x1698F",
       "end": "0x169D0"
     },
     {
       "offset": "0x169D6",
-      "active": true,
+      "active": false,
       "start": "0x169DE",
       "end": "0x169FF"
     },
     {
       "offset": "0x169D2",
-      "active": true,
+      "active": false,
       "start": "0x169D6",
       "end": "0x16A01"
     },
     {
       "offset": "0x16A07",
-      "active": true,
+      "active": false,
       "start": "0x16A0F",
       "end": "0x16A28"
     },
     {
       "offset": "0x16A03",
-      "active": true,
+      "active": false,
       "start": "0x16A07",
       "end": "0x16A2A"
     },
@@ -2191,25 +2191,25 @@
     },
     {
       "offset": "0x16A53",
-      "active": true,
+      "active": false,
       "start": "0x16A5B",
       "end": "0x16A74"
     },
     {
       "offset": "0x16A4F",
-      "active": true,
+      "active": false,
       "start": "0x16A53",
       "end": "0x16A76"
     },
     {
       "offset": "0x16A7C",
-      "active": true,
+      "active": false,
       "start": "0x16A84",
       "end": "0x16A9D"
     },
     {
       "offset": "0x16A78",
-      "active": true,
+      "active": false,
       "start": "0x16A7C",
       "end": "0x16A9F"
     },

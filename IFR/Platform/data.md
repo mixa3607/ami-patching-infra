@@ -2,11 +2,11 @@
 | Path                                                        | Type     | SuppressIf                        |
 |-------------------------------------------------------------|----------|-----------------------------------|
 | - Platform Configuration:                                   | Menu     |                                   |
-|   - Fake Varstore Item                                      | OneOf    | [🟢0x1593C]                       |
+|   - Fake Varstore Item                                      | OneOf    | [🔘0x1593C]                       |
 |   - C002d                                                   | Numeric  |                                   |
-|   - Platform Over Clocking Support                          | CheckBox | [🟢0x1597F]                       |
-|   - Anti Flash Wearout Supported                            | CheckBox | [🟢0x159A1]                       |
-|   - Bios Guard Supported                                    | CheckBox | [🟢0x159C3]                       |
+|   - Platform Over Clocking Support                          | CheckBox | [🔘0x1597F]                       |
+|   - Anti Flash Wearout Supported                            | CheckBox | [🔘0x159A1]                       |
+|   - Bios Guard Supported                                    | CheckBox | [🔘0x159C3]                       |
 |   - PCH Configuration:                                      | Ref      |                                   |
 |     - Gbe Region Valid                                      | OneOf    | [🟢0x16790]                       |
 |     - PCH Stepping                                          | Numeric  | [🟢0x16790]                       |
@@ -799,7 +799,7 @@
 |       -  IE FW Watchdog Timer                               | OneOf    |                                   |
 |       - ME Reset Prep Done                                  | OneOf    |                                   |
 |       - IE Reset Prep Done                                  | OneOf    |                                   |
-|   - OverClocking Feature:                                   | Ref      | [🟢0x159F4, 🟢0x159FC]            |
+|   - OverClocking Feature:                                   | Ref      | [🔘0x159F4, 🔘0x159FC]            |
 |     - OverClocking Feature                                  | OneOf    |                                   |
 |     - Filter Pll                                            | OneOf    | [🟢0x212AD]                       |
 |     - Processor:                                            | Ref      | [🟢0x212AD]                       |
@@ -830,7 +830,7 @@
 |       - CPU VCCin Voltage Level                             | Numeric  |                                   |
 |       - FIVR Faults                                         | OneOf    |                                   |
 |       - FIVR Efficiency Management                          | OneOf    |                                   |
-|   - Miscellaneous Configuration:                            | Ref      | [🟢0x15A17]                       |
+|   - Miscellaneous Configuration:                            | Ref      | [🔘0x15A17]                       |
 |     - Application Profile Configuration                     | OneOf    |                                   |
 |     - KCS Access Control Policy                             | OneOf    |                                   |
 |     - Max Page Table Size Select                            | OneOf    | [🟢0x15BB7]                       |
@@ -890,11 +890,11 @@
 |     - Firmware Configuration                                | OneOf    |                                   |
 |     - Storage OPROM Suppression                             | OneOf    | [🟢0x16549]                       |
 |     - RSA Support                                           | OneOf    | [🟢0x16570]                       |
-|   - Workstation ME Configuration:                           | Ref      | [🟢0x15A30, 🟢0x15A38]            |
+|   - Workstation ME Configuration:                           | Ref      | [🔘0x15A30, 🔘0x15A38]            |
 |     - ME Firmware Type                                      | Numeric  | [🟢0x20580, 🟢0x205C9]            |
 |     - Delayed Authentication Mode (DAM)                     | OneOf    | [🟢0x20580]                       |
 |     - Core Bios Done Message                                | OneOf    | [🟢0x20580]                       |
-|   - Server ME Configuration:                                | Ref      | [🟢0x15A57, 🟢0x15A5F]            |
+|   - Server ME Configuration:                                | Ref      | [🔘0x15A57, 🔘0x15A5F]            |
 |     - ME Firmware Type                                      | Numeric  | [🟢0x208CC, 🟢0x20905]            |
 |     - ME PTT Supported                                      | CheckBox | [🟢0x208CC, 🟢0x2092A]            |
 |     - PTT Support                                           | OneOf    | [🟢0x208CC]                       |
@@ -905,7 +905,7 @@
 |     -   PSU #2                                              | Numeric  | [🟢0x208CC, 🟢0x20A53]            |
 |     -   PSU #3                                              | Numeric  | [🟢0x208CC, 🟢0x20A53]            |
 |     -   PSU #4                                              | Numeric  | [🟢0x208CC, 🟢0x20A53]            |
-|   - Server ME Debug Configuration:                          | Ref      | [🟢0x15A7E, 🟢0x15A86]            |
+|   - Server ME Debug Configuration:                          | Ref      | [🔘0x15A7E, 🔘0x15A86]            |
 |     - Server ME General Configuration:                      | Ref      | [🟢0x208CC]                       |
 |       - ME Initialization Complete Timeout                  | Numeric  | [🟢0x208CC]                       |
 |       - Enable HSIO Messaging                               | OneOf    | [🟢0x208CC]                       |
@@ -945,7 +945,7 @@
 |       -   Hardware Changed                                  | OneOf    | [🟢0x208CC]                       |
 |       - PTU Load Override                                   | CheckBox | [🟢0x208CC]                       |
 |     - ME UEFI FW Health Status                              | Ref      | [🟢0x208CC]                       |
-|   - ME DFX Debug Configuration:                             | Ref      | [🟢0x15AA5, 🟢0x15AAD]            |
+|   - ME DFX Debug Configuration:                             | Ref      | [🔘0x15AA5, 🔘0x15AAD]            |
 |     - ME DFX General Configuration:                         | Ref      | [🟢0x210F4]                       |
 |       - Enable HSIO Messaging                               | OneOf    | [🟢0x210F4]                       |
 |       - DRAM Init Done Enable                               | CheckBox | [🟢0x210F4]                       |
@@ -956,7 +956,7 @@
 |       - IDEr Enable                                         | OneOf    | [🟢0x210F4]                       |
 |       - KT Enable                                           | OneOf    | [🟢0x210F4]                       |
 |       - Enable HECI Dump                                    | OneOf    | [🟢0x210F4]                       |
-|   - Runtime Error Logging:                                  | Ref      | [🟢0x15ACC]                       |
+|   - Runtime Error Logging:                                  | Ref      | [🔘0x15ACC]                       |
 |     - System Errors                                         | OneOf    |                                   |
 |     - S/W Error Injection Support                           | OneOf    | [🟢0x1F066]                       |
 |     - RAS Log Level                                         | OneOf    |                                   |
@@ -1076,7 +1076,7 @@
 |       - Patrol Scrub Error Reporting                        | OneOf    | [🟢0x204EB]                       |
 |       - 2LM Correctable Error Logging in m2mem              | OneOf    | [🟢0x20520]                       |
 |       - Latch First Corrected Error in KTI                  | OneOf    | [🟢0x20520]                       |
-|   - Reserve Memory:                                         | Ref      | [🟢0x15ACC]                       |
+|   - Reserve Memory:                                         | Ref      | [🔘0x15ACC]                       |
 |     - Reserve Memory Range                                  | CheckBox |                                   |
 |     - Start Address                                         | Numeric  |                                   |
 |     - Reserve TAGEC Memory                                  | OneOf    |                                   |
