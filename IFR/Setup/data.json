@@ -305,7 +305,7 @@
           "varStoreId": "0x0",
           "formId": "0x271B",
           "pageId": "0700",
-          "accessLevel": "01",
+          "accessLevel": "05",
           "failsafe": "00",
           "optimal": "00",
           "offsets": {
@@ -416,7 +416,7 @@
           "varStoreId": "0x0",
           "formId": "0x2739",
           "pageId": "1300",
-          "accessLevel": "01",
+          "accessLevel": "05",
           "failsafe": "00",
           "optimal": "00",
           "offsets": {
@@ -455,7 +455,7 @@
           "varStoreId": "0x0",
           "formId": "0x274D",
           "pageId": "1A00",
-          "accessLevel": "01",
+          "accessLevel": "05",
           "failsafe": "00",
           "optimal": "00",
           "offsets": {

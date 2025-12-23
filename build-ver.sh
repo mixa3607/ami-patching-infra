@@ -60,8 +60,12 @@ function patch_IFRs {
     IFR_FILE="$(ls "$IFR_DIR" | grep '\.sct$')"
     echo "GUID: $IFR_GUID"
     echo "FILE: $IFR_FILE"
-    $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$IFR_GUID" 0x10 "$IFR_DIR/$IFR_FILE" -asis  -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
+    $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$IFR_GUID" 0x10 "$IFR_DIR/$IFR_FILE" -asis -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
   done
+
+  SETUPDATA_GUID=FE612B72-203C-47B1-8560-A66D946EB371
+  SETUPDATA_FILE="$(find "$SOURCES_DIR/IFR" -maxdepth 1 -mindepth 1 -type f -name '*setupdata*.bin')"
+  $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$SETUPDATA_GUID" 0x18 "$SETUPDATA_FILE" -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
 }
 
 function patch_dmi {
