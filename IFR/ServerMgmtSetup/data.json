@@ -32,7 +32,7 @@
               "value": "0"
             }
           ],
-          "accessLevel": "09",
+          "accessLevel": "05",
           "failsafe": "01",
           "optimal": "01",
           "offsets": {
@@ -90,7 +90,7 @@
               "value": "8"
             }
           ],
-          "accessLevel": "09",
+          "accessLevel": "05",
           "failsafe": "01",
           "optimal": "01",
           "offsets": {
@@ -122,7 +122,7 @@
               "value": "0"
             }
           ],
-          "accessLevel": "09",
+          "accessLevel": "05",
           "failsafe": "00",
           "optimal": "00",
           "offsets": {
@@ -164,7 +164,7 @@
               "value": "0"
             }
           ],
-          "accessLevel": "09",
+          "accessLevel": "05",
           "failsafe": "01",
           "optimal": "01",
           "offsets": {
@@ -199,7 +199,7 @@
           "min": "0x1",
           "max": "0x1E",
           "step": "0x1",
-          "accessLevel": "09",
+          "accessLevel": "05",
           "failsafe": "06",
           "optimal": "06",
           "offsets": {
@@ -249,7 +249,7 @@
               "value": "3"
             }
           ],
-          "accessLevel": "09",
+          "accessLevel": "05",
           "failsafe": "00",
           "optimal": "00",
           "offsets": {
@@ -291,7 +291,7 @@
               "value": "0"
             }
           ],
-          "accessLevel": "09",
+          "accessLevel": "05",
           "failsafe": "00",
           "optimal": "00",
           "offsets": {
@@ -326,7 +326,7 @@
           "min": "0x1",
           "max": "0x1E",
           "step": "0x1",
-          "accessLevel": "09",
+          "accessLevel": "05",
           "failsafe": "0A",
           "optimal": "0A",
           "offsets": {
@@ -376,7 +376,7 @@
               "value": "3"
             }
           ],
-          "accessLevel": "09",
+          "accessLevel": "05",
           "failsafe": "01",
           "optimal": "01",
           "offsets": {
@@ -418,7 +418,7 @@
               "value": "0"
             }
           ],
-          "accessLevel": "09",
+          "accessLevel": "05",
           "failsafe": "00",
           "optimal": "00",
           "offsets": {
@@ -449,7 +449,7 @@
           "varStoreId": "0x0",
           "formId": "0x2714",
           "pageId": "3100",
-          "accessLevel": "21",
+          "accessLevel": "05",
           "failsafe": "00",
           "optimal": "00",
           "offsets": {
@@ -471,7 +471,7 @@
           "varStoreId": "0x0",
           "formId": "0x2716",
           "pageId": "3200",
-          "accessLevel": "21",
+          "accessLevel": "05",
           "failsafe": "00",
           "optimal": "00",
           "offsets": {
@@ -493,7 +493,7 @@
           "varStoreId": "0x0",
           "formId": "0x2728",
           "pageId": "3300",
-          "accessLevel": "21",
+          "accessLevel": "05",
           "failsafe": "00",
           "optimal": "00",
           "offsets": {
@@ -514,7 +514,7 @@
           "varStoreId": "0x0",
           "formId": "0x272B",
           "pageId": "3400",
-          "accessLevel": "21",
+          "accessLevel": "05",
           "failsafe": "00",
           "optimal": "00",
           "offsets": {
@@ -536,7 +536,7 @@
           "varStoreId": "0x0",
           "formId": "0x273B",
           "pageId": "3500",
-          "accessLevel": "21",
+          "accessLevel": "05",
           "failsafe": "00",
           "optimal": "00",
           "offsets": {
@@ -2423,7 +2423,7 @@
     "setupTxt": "c7ccd528e73d4d1d9c949f670d9e1baef94b9b0e17156bfdbb29beeb912e63c0",
     "setupSct": "5f88c5ac7654076a4a4533ab1b7c82de3e9702efe6e1ff8796a32100bd59389e",
     "amitseSct": "aeda04443c9f22ad7105201831b3653ba0917846dbc44ff2dbcfd05cb99faefb",
-    "setupdataBin": "13b0752b9ec485a1bc72a1dea32edec39a669498ab8317be86e82634983ce1f4",
+    "setupdataBin": "71570aea3a300f95f01a1bea0c7dcd50bb276fa5ec484608db3515c21802b2e3",
     "offsetChecksum": "e20b2226a0570087c83f7caa3c0dfacb6072159ab7e2611afddbcfb2779402da"
   }
 }
