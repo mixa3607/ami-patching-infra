@@ -1,0 +1,501 @@
+{
+  "menu": [
+    {
+      "name": "FPGA Configuration",
+      "formId": "0x47D0",
+      "offset": "0x4C404"
+    }
+  ],
+  "forms": [
+    {
+      "name": "FPGA Configuration",
+      "type": "Form",
+      "formId": "0x47D0",
+      "referencedIn": [],
+      "children": [
+        {
+          "name": "Sockets Enable Bitmap(Hex)",
+          "description": "0: Disable all Sockets, 0xFF: Enable all Sockets. ",
+          "type": "Numeric",
+          "questionId": "0x1",
+          "varStoreId": "0x9A00",
+          "varOffset": "0x0",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x1",
+          "accessLevel": "09",
+          "failsafe": "03",
+          "optimal": "03",
+          "offsets": {
+            "accessLevel": "0x1DD0C",
+            "failsafe": "0x1DD30",
+            "optimal": "0x1DD31"
+          },
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "3"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "name": "Socket 0 BitStream",
+          "description": "Pick a BitStream to assign to this socket.",
+          "type": "OneOf",
+          "questionId": "0x2",
+          "varStoreId": "0x9A00",
+          "varOffset": "0x1",
+          "size": "8",
+          "options": [
+            {
+              "option": "Auto",
+              "value": "0, Default, MfgDefault"
+            },
+            {
+              "option": "SKX-PO-BBS",
+              "value": "1"
+            },
+            {
+              "option": "None",
+              "value": "255"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1DD9C",
+            "failsafe": "0x1DDC0",
+            "optimal": "0x1DDC1"
+          }
+        },
+        {
+          "name": "Socket 1 BitStream",
+          "description": "Pick a BitStream to assign to this socket.",
+          "type": "OneOf",
+          "questionId": "0x3",
+          "varStoreId": "0x9A00",
+          "varOffset": "0x2",
+          "size": "8",
+          "options": [
+            {
+              "option": "Auto",
+              "value": "0, Default, MfgDefault"
+            },
+            {
+              "option": "SKX-PO-BBS",
+              "value": "1"
+            },
+            {
+              "option": "None",
+              "value": "255"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1DDE4",
+            "failsafe": "0x1DE08",
+            "optimal": "0x1DE09"
+          }
+        },
+        {
+          "name": "Socket 0 Threshold 1",
+          "description": "Select the FPGA Temperature Threshold.",
+          "type": "OneOf",
+          "questionId": "0x4",
+          "varStoreId": "0x9A00",
+          "varOffset": "0x5",
+          "size": "8",
+          "options": [
+            {
+              "option": "Disable",
+              "value": "0"
+            },
+            {
+              "option": "60 C",
+              "value": "60"
+            },
+            {
+              "option": "65 C",
+              "value": "65"
+            },
+            {
+              "option": "70 C",
+              "value": "70"
+            },
+            {
+              "option": "75 C",
+              "value": "75"
+            },
+            {
+              "option": "80 C",
+              "value": "80"
+            },
+            {
+              "option": "85 C",
+              "value": "85"
+            },
+            {
+              "option": "90 C",
+              "value": "90, Default, MfgDefault"
+            },
+            {
+              "option": "93 C",
+              "value": "93"
+            },
+            {
+              "option": "94 C",
+              "value": "94"
+            },
+            {
+              "option": "95 C",
+              "value": "95"
+            },
+            {
+              "option": "96 C",
+              "value": "96"
+            },
+            {
+              "option": "97 C",
+              "value": "97"
+            },
+            {
+              "option": "98 C",
+              "value": "98"
+            },
+            {
+              "option": "99 C",
+              "value": "99"
+            },
+            {
+              "option": "100 C",
+              "value": "100"
+            },
+            {
+              "option": "101 C",
+              "value": "101"
+            },
+            {
+              "option": "102 C",
+              "value": "102"
+            },
+            {
+              "option": "103 C",
+              "value": "103"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "5A",
+          "optimal": "5A",
+          "offsets": {
+            "accessLevel": "0x1DE6C",
+            "failsafe": "0x1DE90",
+            "optimal": "0x1DE91"
+          }
+        },
+        {
+          "name": "Socket 0 Threshold 2",
+          "description": "Select the FPGA Temperature Threshold.",
+          "type": "OneOf",
+          "questionId": "0x5",
+          "varStoreId": "0x9A00",
+          "varOffset": "0x9",
+          "size": "8",
+          "options": [
+            {
+              "option": "Disable",
+              "value": "0"
+            },
+            {
+              "option": "60 C",
+              "value": "60"
+            },
+            {
+              "option": "65 C",
+              "value": "65"
+            },
+            {
+              "option": "70 C",
+              "value": "70"
+            },
+            {
+              "option": "75 C",
+              "value": "75"
+            },
+            {
+              "option": "80 C",
+              "value": "80"
+            },
+            {
+              "option": "85 C",
+              "value": "85"
+            },
+            {
+              "option": "90 C",
+              "value": "90"
+            },
+            {
+              "option": "93 C",
+              "value": "93, Default, MfgDefault"
+            },
+            {
+              "option": "94 C",
+              "value": "94"
+            },
+            {
+              "option": "95 C",
+              "value": "95"
+            },
+            {
+              "option": "96 C",
+              "value": "96"
+            },
+            {
+              "option": "97 C",
+              "value": "97"
+            },
+            {
+              "option": "98 C",
+              "value": "98"
+            },
+            {
+              "option": "99 C",
+              "value": "99"
+            },
+            {
+              "option": "100 C",
+              "value": "100"
+            },
+            {
+              "option": "101 C",
+              "value": "101"
+            },
+            {
+              "option": "102 C",
+              "value": "102"
+            },
+            {
+              "option": "103 C",
+              "value": "103"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "5D",
+          "optimal": "5D",
+          "offsets": {
+            "accessLevel": "0x1DEB4",
+            "failsafe": "0x1DED8",
+            "optimal": "0x1DED9"
+          }
+        },
+        {
+          "name": "Socket 1 Threshold 1",
+          "description": "Select the FPGA Temperature Threshold.",
+          "type": "OneOf",
+          "questionId": "0x6",
+          "varStoreId": "0x9A00",
+          "varOffset": "0x6",
+          "size": "8",
+          "options": [
+            {
+              "option": "Disable",
+              "value": "0"
+            },
+            {
+              "option": "60 C",
+              "value": "60"
+            },
+            {
+              "option": "65 C",
+              "value": "65"
+            },
+            {
+              "option": "70 C",
+              "value": "70"
+            },
+            {
+              "option": "75 C",
+              "value": "75"
+            },
+            {
+              "option": "80 C",
+              "value": "80"
+            },
+            {
+              "option": "85 C",
+              "value": "85"
+            },
+            {
+              "option": "90 C",
+              "value": "90, Default, MfgDefault"
+            },
+            {
+              "option": "93 C",
+              "value": "93"
+            },
+            {
+              "option": "94 C",
+              "value": "94"
+            },
+            {
+              "option": "95 C",
+              "value": "95"
+            },
+            {
+              "option": "96 C",
+              "value": "96"
+            },
+            {
+              "option": "97 C",
+              "value": "97"
+            },
+            {
+              "option": "98 C",
+              "value": "98"
+            },
+            {
+              "option": "99 C",
+              "value": "99"
+            },
+            {
+              "option": "100 C",
+              "value": "100"
+            },
+            {
+              "option": "101 C",
+              "value": "101"
+            },
+            {
+              "option": "102 C",
+              "value": "102"
+            },
+            {
+              "option": "103 C",
+              "value": "103"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "5A",
+          "optimal": "5A",
+          "offsets": {
+            "accessLevel": "0x1DEFC",
+            "failsafe": "0x1DF20",
+            "optimal": "0x1DF21"
+          }
+        },
+        {
+          "name": "Socket 1 Threshold 2",
+          "description": "Select the FPGA Temperature Threshold.",
+          "type": "OneOf",
+          "questionId": "0x7",
+          "varStoreId": "0x9A00",
+          "varOffset": "0xA",
+          "size": "8",
+          "options": [
+            {
+              "option": "Disable",
+              "value": "0"
+            },
+            {
+              "option": "60 C",
+              "value": "60"
+            },
+            {
+              "option": "65 C",
+              "value": "65"
+            },
+            {
+              "option": "70 C",
+              "value": "70"
+            },
+            {
+              "option": "75 C",
+              "value": "75"
+            },
+            {
+              "option": "80 C",
+              "value": "80"
+            },
+            {
+              "option": "85 C",
+              "value": "85"
+            },
+            {
+              "option": "90 C",
+              "value": "90"
+            },
+            {
+              "option": "93 C",
+              "value": "93, Default, MfgDefault"
+            },
+            {
+              "option": "94 C",
+              "value": "94"
+            },
+            {
+              "option": "95 C",
+              "value": "95"
+            },
+            {
+              "option": "96 C",
+              "value": "96"
+            },
+            {
+              "option": "97 C",
+              "value": "97"
+            },
+            {
+              "option": "98 C",
+              "value": "98"
+            },
+            {
+              "option": "99 C",
+              "value": "99"
+            },
+            {
+              "option": "100 C",
+              "value": "100"
+            },
+            {
+              "option": "101 C",
+              "value": "101"
+            },
+            {
+              "option": "102 C",
+              "value": "102"
+            },
+            {
+              "option": "103 C",
+              "value": "103"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "5D",
+          "optimal": "5D",
+          "offsets": {
+            "accessLevel": "0x1DF44",
+            "failsafe": "0x1DF68",
+            "optimal": "0x1DF69"
+          }
+        }
+      ]
+    }
+  ],
+  "varStores": [],
+  "suppressions": [],
+  "version": "0.0.8",
+  "hashes": {
+    "setupTxt": "cb3b99b2ceb228b24d87ccd9e03441ce595bc98bf8e28e7d34c2e350a2332316",
+    "setupSct": "a56c68531df21adf7df5bff6a3e4ed05f7a00138a30d1083d252a6e4c1af4408",
+    "amitseSct": "aeda04443c9f22ad7105201831b3653ba0917846dbc44ff2dbcfd05cb99faefb",
+    "setupdataBin": "13b0752b9ec485a1bc72a1dea32edec39a669498ab8317be86e82634983ce1f4",
+    "offsetChecksum": "a3d653892e074398db678946d1602e0207924098680d978f7b366e9516d412bc"
+  }
+}

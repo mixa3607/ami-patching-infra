@@ -1,0 +1,2429 @@
+{
+  "menu": [
+    {
+      "name": "Server Mgmt",
+      "formId": "0x2711",
+      "offset": "0x4C424"
+    }
+  ],
+  "forms": [
+    {
+      "name": "Server Mgmt",
+      "type": "Form",
+      "formId": "0x2711",
+      "referencedIn": [],
+      "children": [
+        {
+          "name": "BMC Support",
+          "description": "Enable/Disable interfaces to communicate with BMC",
+          "type": "OneOf",
+          "questionId": "0x1",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x0",
+          "size": "8",
+          "options": [
+            {
+              "option": "Enabled",
+              "value": "1"
+            },
+            {
+              "option": "Disabled",
+              "value": "0"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "01",
+          "optimal": "01",
+          "offsets": {
+            "accessLevel": "0x185F4",
+            "failsafe": "0x18618",
+            "optimal": "0x18619"
+          },
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "1"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "name": "IPMI Interface Type",
+          "description": "Type of Interface to communicate BMC from HOST",
+          "type": "OneOf",
+          "questionId": "0x2",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x16",
+          "size": "8",
+          "options": [
+            {
+              "option": "Kcs Interface",
+              "value": "1"
+            },
+            {
+              "option": "Bt Interface",
+              "value": "3"
+            },
+            {
+              "option": "Ssif Interface",
+              "value": "4"
+            },
+            {
+              "option": "Ipmb Interface",
+              "value": "5"
+            },
+            {
+              "option": "Usb Interface",
+              "value": "6"
+            },
+            {
+              "option": "Oem1 Interface",
+              "value": "7"
+            },
+            {
+              "option": "Oem2 Interface",
+              "value": "8"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "01",
+          "optimal": "01",
+          "offsets": {
+            "accessLevel": "0x18644",
+            "failsafe": "0x18668",
+            "optimal": "0x18669"
+          },
+          "suppressIf": [
+            "0x166E0",
+            "0x166E4"
+          ]
+        },
+        {
+          "name": "Wait For BMC",
+          "description": "Wait For BMC response for specified time out. In PILOTII, BMC starts at the same time when BIOS starts during AC power ON. It takes around 30 seconds to initialize Host to BMC interfaces.",
+          "type": "OneOf",
+          "questionId": "0x3",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x1",
+          "size": "8",
+          "options": [
+            {
+              "option": "Enabled",
+              "value": "1"
+            },
+            {
+              "option": "Disabled",
+              "value": "0"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x18694",
+            "failsafe": "0x186B8",
+            "optimal": "0x186B9"
+          },
+          "suppressIf": [
+            "0x16790",
+            "0x16794"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "0"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "FRB-2 Timer",
+          "description": "Enable or Disable FRB-2 timer(POST timer)",
+          "type": "OneOf",
+          "questionId": "0x4",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x17",
+          "size": "8",
+          "options": [
+            {
+              "option": "Enabled",
+              "value": "1"
+            },
+            {
+              "option": "Disabled",
+              "value": "0"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "01",
+          "optimal": "01",
+          "offsets": {
+            "accessLevel": "0x186E4",
+            "failsafe": "0x18708",
+            "optimal": "0x18709"
+          },
+          "suppressIf": [
+            "0x167D7",
+            "0x167DB"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "1"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "name": "FRB-2 Timer timeout",
+          "description": "Enter value Between 1 to 30 min for FRB-2 Timer Expiration",
+          "type": "Numeric",
+          "questionId": "0x5",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x18",
+          "size": "8",
+          "min": "0x1",
+          "max": "0x1E",
+          "step": "0x1",
+          "accessLevel": "09",
+          "failsafe": "06",
+          "optimal": "06",
+          "offsets": {
+            "accessLevel": "0x18734",
+            "failsafe": "0x18758",
+            "optimal": "0x18759"
+          },
+          "suppressIf": [
+            "0x167D7",
+            "0x1681C"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "6"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "name": "FRB-2 Timer Policy",
+          "description": "Configure how the system should respond if the FRB-2 Timer expires. Not available if FRB-2 Timer is disabled.",
+          "type": "OneOf",
+          "questionId": "0x6",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x19",
+          "size": "8",
+          "options": [
+            {
+              "option": "Do Nothing",
+              "value": "0"
+            },
+            {
+              "option": "Reset",
+              "value": "1"
+            },
+            {
+              "option": "Power Down",
+              "value": "2"
+            },
+            {
+              "option": "Power Cycle",
+              "value": "3"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x18784",
+            "failsafe": "0x187A8",
+            "optimal": "0x187A9"
+          },
+          "suppressIf": [
+            "0x167D7",
+            "0x16859"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "0"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "OS Watchdog Timer",
+          "description": "If enabled, starts a BIOS timer which can only be shut off by Management Software after the OS loads.  Helps determine that the OS successfully loaded or follows the OS Boot Watchdog Timer policy.",
+          "type": "OneOf",
+          "questionId": "0x7",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x1A",
+          "size": "8",
+          "options": [
+            {
+              "option": "Enabled",
+              "value": "1"
+            },
+            {
+              "option": "Disabled",
+              "value": "0"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x187D4",
+            "failsafe": "0x187F8",
+            "optimal": "0x187F9"
+          },
+          "suppressIf": [
+            "0x167D7",
+            "0x168B2"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "0"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "OS Wtd Timer Timeout",
+          "description": "Enter the value Between 1 to 30 min for OS Boot Watchdog Timer Expiration. Not available if OS Boot Watchdog Timer is disabled.",
+          "type": "Numeric",
+          "questionId": "0x8",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x1B",
+          "size": "8",
+          "min": "0x1",
+          "max": "0x1E",
+          "step": "0x1",
+          "accessLevel": "09",
+          "failsafe": "0A",
+          "optimal": "0A",
+          "offsets": {
+            "accessLevel": "0x18824",
+            "failsafe": "0x18848",
+            "optimal": "0x18849"
+          },
+          "suppressIf": [
+            "0x167D7",
+            "0x168F3"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "10"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "name": "OS Wtd Timer Policy",
+          "description": "Configure how the system should respond if the OS Boot Watchdog Timer expires. Not available if OS Boot Watchdog Timer is disabled.",
+          "type": "OneOf",
+          "questionId": "0x9",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x1C",
+          "size": "8",
+          "options": [
+            {
+              "option": "Do Nothing",
+              "value": "0"
+            },
+            {
+              "option": "Reset",
+              "value": "1"
+            },
+            {
+              "option": "Power Down",
+              "value": "2"
+            },
+            {
+              "option": "Power Cycle",
+              "value": "3"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "01",
+          "optimal": "01",
+          "offsets": {
+            "accessLevel": "0x18874",
+            "failsafe": "0x18898",
+            "optimal": "0x18899"
+          },
+          "suppressIf": [
+            "0x167D7",
+            "0x16930"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "1"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "name": "Serial Mux",
+          "description": "Press <Enter> to enable or disable Serial Mux configuration.",
+          "type": "OneOf",
+          "questionId": "0xA",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x25",
+          "size": "8",
+          "options": [
+            {
+              "option": "Enabled",
+              "value": "1"
+            },
+            {
+              "option": "Disabled",
+              "value": "0"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x188C4",
+            "failsafe": "0x188E8",
+            "optimal": "0x188E9"
+          },
+          "suppressIf": [
+            "0x1698B",
+            "0x1698F"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "0"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "System Event Log",
+          "description": "Press <Enter> to change the SEL event log configuration.",
+          "type": "Ref",
+          "questionId": "0x2713",
+          "varStoreId": "0x0",
+          "formId": "0x2714",
+          "pageId": "3100",
+          "accessLevel": "21",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x18954",
+            "failsafe": "0x18978",
+            "optimal": "0x18979",
+            "pageId": "0x18950"
+          },
+          "suppressIf": [
+            "0x169D2",
+            "0x169D6"
+          ]
+        },
+        {
+          "name": "Bmc self test log",
+          "description": "logs the report returned by BMC self test command",
+          "type": "Ref",
+          "questionId": "0x2715",
+          "varStoreId": "0x0",
+          "formId": "0x2716",
+          "pageId": "3200",
+          "accessLevel": "21",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x18994",
+            "failsafe": "0x189B8",
+            "optimal": "0x189B9",
+            "pageId": "0x18990"
+          },
+          "suppressIf": [
+            "0x16A03",
+            "0x16A07"
+          ]
+        },
+        {
+          "name": "BMC network configuration",
+          "description": "Configure BMC network parameters",
+          "type": "Ref",
+          "questionId": "0x2727",
+          "varStoreId": "0x0",
+          "formId": "0x2728",
+          "pageId": "3300",
+          "accessLevel": "21",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x189D4",
+            "failsafe": "0x189F8",
+            "optimal": "0x189F9",
+            "pageId": "0x189D0"
+          },
+          "suppressIf": [
+            "0x16A2C"
+          ]
+        },
+        {
+          "name": "View System Event Log",
+          "description": "Press <Enter> to view the System Event Log Records.",
+          "type": "Ref",
+          "questionId": "0x272A",
+          "varStoreId": "0x0",
+          "formId": "0x272B",
+          "pageId": "3400",
+          "accessLevel": "21",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x18A14",
+            "failsafe": "0x18A38",
+            "optimal": "0x18A39",
+            "pageId": "0x18A10"
+          },
+          "suppressIf": [
+            "0x16A4F",
+            "0x16A53"
+          ]
+        },
+        {
+          "name": "BMC User Settings",
+          "description": "Press <Enter> to Add, Delete and Set Privilege level for users.",
+          "type": "Ref",
+          "questionId": "0x273A",
+          "varStoreId": "0x0",
+          "formId": "0x273B",
+          "pageId": "3500",
+          "accessLevel": "21",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x18A54",
+            "failsafe": "0x18A78",
+            "optimal": "0x18A79",
+            "pageId": "0x18A50"
+          },
+          "suppressIf": [
+            "0x16A78",
+            "0x16A7C"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "System Event Log",
+      "type": "Form",
+      "formId": "0x2714",
+      "referencedIn": [
+        "0x2711"
+      ],
+      "children": [
+        {
+          "name": "SEL Components",
+          "description": "Change this to enable or disable event logging for error/progress codes during boot.",
+          "type": "OneOf",
+          "questionId": "0xB",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x1D",
+          "size": "8",
+          "options": [
+            {
+              "option": "Disabled",
+              "value": "0"
+            },
+            {
+              "option": "Enabled",
+              "value": "1"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "01",
+          "optimal": "01",
+          "offsets": {
+            "accessLevel": "0x18B14",
+            "failsafe": "0x18B38",
+            "optimal": "0x18B39"
+          },
+          "suppressIf": [
+            "0x16ADD"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "1"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "name": "Erase SEL",
+          "description": "Choose options for erasing SEL.",
+          "type": "OneOf",
+          "questionId": "0xC",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x1E",
+          "size": "8",
+          "options": [
+            {
+              "option": "No",
+              "value": "0"
+            },
+            {
+              "option": "Yes, On next reset",
+              "value": "1"
+            },
+            {
+              "option": "Yes, On every reset",
+              "value": "2"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x18BE4",
+            "failsafe": "0x18C08",
+            "optimal": "0x18C09"
+          },
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "0"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "When SEL is Full",
+          "description": "Choose options for reactions to a full SEL.",
+          "type": "OneOf",
+          "questionId": "0xD",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x1F",
+          "size": "8",
+          "options": [
+            {
+              "option": "Do Nothing",
+              "value": "0"
+            },
+            {
+              "option": "Erase Immediately",
+              "value": "1"
+            },
+            {
+              "option": "Delete Oldest Record",
+              "value": "2"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x18C34",
+            "failsafe": "0x18C58",
+            "optimal": "0x18C59"
+          }
+        },
+        {
+          "name": "Log EFI Status Codes",
+          "description": "Disable the logging of EFI Status Codes or log only error code or only progress code or both.",
+          "type": "OneOf",
+          "questionId": "0xE",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x20",
+          "size": "8",
+          "options": [
+            {
+              "option": "Disabled",
+              "value": "0"
+            },
+            {
+              "option": "Both",
+              "value": "1"
+            },
+            {
+              "option": "Error code",
+              "value": "2"
+            },
+            {
+              "option": "Progress code",
+              "value": "3"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "02",
+          "optimal": "02",
+          "offsets": {
+            "accessLevel": "0x18D04",
+            "failsafe": "0x18D28",
+            "optimal": "0x18D29"
+          },
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "2"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bmc self test log",
+      "type": "Form",
+      "formId": "0x2716",
+      "referencedIn": [
+        "0x2711"
+      ],
+      "children": [
+        {
+          "name": "Erase Log",
+          "description": "Erase Log Options",
+          "type": "OneOf",
+          "questionId": "0xF",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x23",
+          "size": "8",
+          "options": [
+            {
+              "option": "Yes, On every reset",
+              "value": "1"
+            },
+            {
+              "option": "No",
+              "value": "0"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "01",
+          "optimal": "01",
+          "offsets": {
+            "accessLevel": "0x18E94",
+            "failsafe": "0x18EB8",
+            "optimal": "0x18EB9"
+          },
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "1"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "name": "When log is full",
+          "description": "Select the action to be taken when log is full",
+          "type": "OneOf",
+          "questionId": "0x10",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x24",
+          "size": "8",
+          "options": [
+            {
+              "option": "Clear Log",
+              "value": "1"
+            },
+            {
+              "option": "Do not log any more",
+              "value": "0"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "01",
+          "optimal": "01",
+          "offsets": {
+            "accessLevel": "0x18EE4",
+            "failsafe": "0x18F08",
+            "optimal": "0x18F09"
+          },
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "1"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BMC network configuration",
+      "type": "Form",
+      "formId": "0x2728",
+      "referencedIn": [
+        "0x2711"
+      ],
+      "children": [
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x2729",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x26",
+          "size": "8",
+          "min": "0x0",
+          "max": "0x63",
+          "step": "0x1",
+          "accessLevel": "21",
+          "failsafe": "00",
+          "optimal": "3C",
+          "offsets": {
+            "accessLevel": "0x195B4",
+            "failsafe": "0x195D8",
+            "optimal": "0x195D9"
+          },
+          "suppressIf": [
+            "0x16D84"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "60"
+            }
+          ]
+        },
+        {
+          "name": "Configuration Address source",
+          "description": "Select to configure LAN channel parameters statically or dynamically(by BIOS or BMC). Unspecified option will not modify any BMC network parameters during BIOS phase",
+          "type": "OneOf",
+          "questionId": "0x11",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x27",
+          "size": "8",
+          "options": [
+            {
+              "option": "Unspecified",
+              "value": "0"
+            },
+            {
+              "option": "Static",
+              "value": "1"
+            },
+            {
+              "option": "DynamicBmcDhcp",
+              "value": "2"
+            },
+            {
+              "option": "DynamicBmcNonDhcp",
+              "value": "4"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1967C",
+            "failsafe": "0x196A0",
+            "optimal": "0x196A1"
+          },
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "0"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "Station IP address",
+          "description": "Enter station IP address",
+          "type": "String",
+          "questionId": "0x271F",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "accessLevel": "21",
+          "failsafe": "B6",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x196CC",
+            "failsafe": "0x196F0",
+            "optimal": "0x196F1"
+          },
+          "suppressIf": [
+            "0x16DF3"
+          ]
+        },
+        {
+          "name": "Subnet mask",
+          "description": "Enter subnet mask",
+          "type": "String",
+          "questionId": "0x2720",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "accessLevel": "21",
+          "failsafe": "B8",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1971C",
+            "failsafe": "0x19740",
+            "optimal": "0x19741"
+          },
+          "suppressIf": [
+            "0x16DF3"
+          ]
+        },
+        {
+          "name": "Router IP address",
+          "description": "Enter router IP address",
+          "type": "String",
+          "questionId": "0x2721",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "accessLevel": "21",
+          "failsafe": "B7",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x197AC",
+            "failsafe": "0x197D0",
+            "optimal": "0x197D1"
+          },
+          "suppressIf": [
+            "0x16DF3"
+          ]
+        },
+        {
+          "name": "Router MAC address",
+          "description": "Enter router MAC address",
+          "type": "String",
+          "questionId": "0x2722",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "accessLevel": "21",
+          "failsafe": "B9",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x197FC",
+            "failsafe": "0x19820",
+            "optimal": "0x19821"
+          },
+          "suppressIf": [
+            "0x16DF3"
+          ]
+        },
+        {
+          "name": "IPv6 Support",
+          "description": "Enable or Disable LAN1 IPv6 Support",
+          "type": "OneOf",
+          "questionId": "0x2717",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0xA4",
+          "size": "8",
+          "options": [
+            {
+              "option": "Enabled",
+              "value": "1"
+            },
+            {
+              "option": "Disabled",
+              "value": "0"
+            },
+            {
+              "option": "Unsupported",
+              "value": "2"
+            }
+          ],
+          "accessLevel": "21",
+          "failsafe": "01",
+          "optimal": "01",
+          "offsets": {
+            "accessLevel": "0x19B8C",
+            "failsafe": "0x19BB0",
+            "optimal": "0x19BB1"
+          },
+          "suppressIf": [
+            "0x16F02"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "1"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "name": "Configuration Address source",
+          "description": "Select to configure LAN channel parameters statically or dynamically(by BIOS or BMC). Unspecified option will not modify any BMC network parameters during BIOS phase",
+          "type": "OneOf",
+          "questionId": "0x12",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0xA6",
+          "size": "8",
+          "options": [
+            {
+              "option": "Unspecified",
+              "value": "0"
+            },
+            {
+              "option": "Static",
+              "value": "1"
+            },
+            {
+              "option": "DynamicBmcDhcp",
+              "value": "2"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x19C1C",
+            "failsafe": "0x19C40",
+            "optimal": "0x19C41"
+          },
+          "suppressIf": [
+            "0x16F58"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "0"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "Station IPv6 address",
+          "description": "Enter station IPv6 address",
+          "type": "String",
+          "questionId": "0x271D",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "accessLevel": "21",
+          "failsafe": "BA",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x19C6C",
+            "failsafe": "0x19C90",
+            "optimal": "0x19C91"
+          },
+          "suppressIf": [
+            "0x16F58",
+            "0x16FA1"
+          ]
+        },
+        {
+          "name": "Prefix Length",
+          "description": "Change the prefix length",
+          "type": "Numeric",
+          "questionId": "0x13",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0xA5",
+          "size": "8",
+          "min": "0x0",
+          "max": "0x80",
+          "step": "0x0",
+          "accessLevel": "01",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x19CBC",
+            "failsafe": "0x19CE0",
+            "optimal": "0x19CE1"
+          },
+          "suppressIf": [
+            "0x16F58",
+            "0x16FA1"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "0"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "Configuration Router Lan1 Address source",
+          "description": "Select to configure LAN channel parameters statically or dynamically(by BIOS or BMC). Unspecified option will not modify any BMC network parameters during BIOS phase",
+          "type": "OneOf",
+          "questionId": "0x14",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0xA7",
+          "size": "8",
+          "options": [
+            {
+              "option": "Unspecified",
+              "value": "0"
+            },
+            {
+              "option": "Static",
+              "value": "1"
+            },
+            {
+              "option": "DynamicBmcDhcp",
+              "value": "2"
+            }
+          ],
+          "accessLevel": "09",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x19F8C",
+            "failsafe": "0x19FB0",
+            "optimal": "0x19FB1"
+          },
+          "suppressIf": [
+            "0x16F58"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "0"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "IPv6 Router1 IP Address",
+          "description": "Change the IPv6 Router1 IP Address",
+          "type": "String",
+          "questionId": "0x2719",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "accessLevel": "21",
+          "failsafe": "BA",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x19FDC",
+            "failsafe": "0x1A000",
+            "optimal": "0x1A001"
+          },
+          "suppressIf": [
+            "0x16F58",
+            "0x17087"
+          ]
+        },
+        {
+          "name": "IPv6 Router1 Prefix Length Lan1",
+          "description": "Change the IPv6 Router Prefix Length",
+          "type": "Numeric",
+          "questionId": "0x15",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0xA8",
+          "size": "8",
+          "min": "0x0",
+          "max": "0x80",
+          "step": "0x0",
+          "accessLevel": "01",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1A02C",
+            "failsafe": "0x1A050",
+            "optimal": "0x1A051"
+          },
+          "suppressIf": [
+            "0x16F58",
+            "0x17087"
+          ],
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "0"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "IPv6 Router1 Prefix Value Lan1",
+          "description": "Change the IPv6 Router Prefix  Value",
+          "type": "String",
+          "questionId": "0x271B",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "accessLevel": "21",
+          "failsafe": "BA",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1A07C",
+            "failsafe": "0x1A0A0",
+            "optimal": "0x1A0A1"
+          },
+          "suppressIf": [
+            "0x16F58",
+            "0x17087"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "View System Event Log",
+      "type": "Form",
+      "formId": "0x272B",
+      "referencedIn": [
+        "0x2711",
+        "0x272B"
+      ],
+      "children": [
+        {
+          "name": "View remaining System Event Log",
+          "description": "Press <Enter> to view the remaining System Event Log Records.",
+          "type": "Ref",
+          "questionId": "0x272C",
+          "varStoreId": "0x0",
+          "formId": "0x272B",
+          "pageId": "3400",
+          "accessLevel": "21",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1A48C",
+            "failsafe": "0x1A4B0",
+            "optimal": "0x1A4B1",
+            "pageId": "0x1A488"
+          },
+          "suppressIf": [
+            "0x171AE"
+          ]
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Ref",
+          "questionId": "0x16",
+          "varStoreId": "0x0",
+          "formId": "0x272B",
+          "pageId": "3400",
+          "accessLevel": "01",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1A68C",
+            "failsafe": "0x1A6B0",
+            "optimal": "0x1A6B1",
+            "pageId": "0x1A688"
+          },
+          "suppressIf": [
+            "0x17254"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BMC User Settings",
+      "type": "Form",
+      "formId": "0x273B",
+      "referencedIn": [
+        "0x2711"
+      ],
+      "children": [
+        {
+          "name": "Add User",
+          "description": "Press <Enter> to Add a User.",
+          "type": "Ref",
+          "questionId": "0x273C",
+          "varStoreId": "0x0",
+          "formId": "0x273F",
+          "pageId": "3600",
+          "accessLevel": "21",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1A74C",
+            "failsafe": "0x1A770",
+            "optimal": "0x1A771",
+            "pageId": "0x1A748"
+          }
+        },
+        {
+          "name": "Delete User",
+          "description": "Press <Enter> to Delete a User.",
+          "type": "Ref",
+          "questionId": "0x273D",
+          "varStoreId": "0x0",
+          "formId": "0x2740",
+          "pageId": "3700",
+          "accessLevel": "21",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1A7CC",
+            "failsafe": "0x1A7F0",
+            "optimal": "0x1A7F1",
+            "pageId": "0x1A7C8"
+          }
+        },
+        {
+          "name": "Change User Settings",
+          "description": "Press <Enter> to Change User Settings.",
+          "type": "Ref",
+          "questionId": "0x273E",
+          "varStoreId": "0x0",
+          "formId": "0x2741",
+          "pageId": "3800",
+          "accessLevel": "21",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1A84C",
+            "failsafe": "0x1A870",
+            "optimal": "0x1A871",
+            "pageId": "0x1A848"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BMC Add User Details",
+      "type": "Form",
+      "formId": "0x273F",
+      "referencedIn": [
+        "0x273B"
+      ],
+      "children": [
+        {
+          "name": "User Name",
+          "description": "Enter BMC User Name",
+          "type": "String",
+          "questionId": "0x272D",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "accessLevel": "21",
+          "failsafe": "2D",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1A90C",
+            "failsafe": "0x1A930",
+            "optimal": "0x1A931"
+          }
+        },
+        {
+          "name": "User Access",
+          "description": "Enable/Disable the BMC User's Access.",
+          "type": "OneOf",
+          "questionId": "0x272F",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x256",
+          "size": "8",
+          "options": [
+            {
+              "option": "Enable",
+              "value": "1"
+            },
+            {
+              "option": "Disable",
+              "value": "0"
+            }
+          ],
+          "accessLevel": "21",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1A9AC",
+            "failsafe": "0x1A9D0",
+            "optimal": "0x1A9D1"
+          },
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "0"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "Channel No",
+          "description": "Enter BMC Channel Number",
+          "type": "Numeric",
+          "questionId": "0x2730",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x254",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xF",
+          "step": "0x0",
+          "accessLevel": "21",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1A9FC",
+            "failsafe": "0x1AA20",
+            "optimal": "0x1AA21"
+          },
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "0"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "User Privilege Limit",
+          "description": "Enter BMC User Privilege Limit for Selected Channel",
+          "type": "OneOf",
+          "questionId": "0x2731",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x255",
+          "size": "8",
+          "options": [
+            {
+              "option": "No Access",
+              "value": "15"
+            },
+            {
+              "option": "Callback",
+              "value": "1"
+            },
+            {
+              "option": "User",
+              "value": "2"
+            },
+            {
+              "option": "Operator",
+              "value": "3"
+            },
+            {
+              "option": "Administrator",
+              "value": "4"
+            },
+            {
+              "option": "OEM Proprietary",
+              "value": "5"
+            }
+          ],
+          "accessLevel": "21",
+          "failsafe": "0F",
+          "optimal": "0F",
+          "offsets": {
+            "accessLevel": "0x1AA4C",
+            "failsafe": "0x1AA70",
+            "optimal": "0x1AA71"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BMC Delete User Details",
+      "type": "Form",
+      "formId": "0x2740",
+      "referencedIn": [
+        "0x273B"
+      ],
+      "children": [
+        {
+          "name": "User Name",
+          "description": "Enter BMC User Name",
+          "type": "String",
+          "questionId": "0x2732",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "accessLevel": "21",
+          "failsafe": "2D",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1AB1C",
+            "failsafe": "0x1AB40",
+            "optimal": "0x1AB41"
+          }
+        }
+      ]
+    },
+    {
+      "name": "BMC Change User Settings",
+      "type": "Form",
+      "formId": "0x2741",
+      "referencedIn": [
+        "0x273B"
+      ],
+      "children": [
+        {
+          "name": "User Name",
+          "description": "Enter BMC User Name",
+          "type": "String",
+          "questionId": "0x2734",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "accessLevel": "21",
+          "failsafe": "2D",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1AC2C",
+            "failsafe": "0x1AC50",
+            "optimal": "0x1AC51"
+          }
+        },
+        {
+          "name": "User Access",
+          "description": "Enable/Disable the BMC User's Access.",
+          "type": "OneOf",
+          "questionId": "0x2739",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x25B",
+          "size": "8",
+          "options": [
+            {
+              "option": "Enable",
+              "value": "1"
+            },
+            {
+              "option": "Disable",
+              "value": "0"
+            }
+          ],
+          "accessLevel": "21",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1AD0C",
+            "failsafe": "0x1AD30",
+            "optimal": "0x1AD31"
+          },
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "0"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "Channel No",
+          "description": "Enter BMC Channel Number",
+          "type": "Numeric",
+          "questionId": "0x2736",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x25C",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xF",
+          "step": "0x0",
+          "accessLevel": "21",
+          "failsafe": "00",
+          "optimal": "00",
+          "offsets": {
+            "accessLevel": "0x1AD5C",
+            "failsafe": "0x1AD80",
+            "optimal": "0x1AD81"
+          },
+          "defaults": [
+            {
+              "defaultId": "0x0",
+              "value": "0"
+            },
+            {
+              "defaultId": "0x1",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "User Privilege Limit",
+          "description": "Enter BMC User Privilege Limit for Selected Channel",
+          "type": "OneOf",
+          "questionId": "0x2737",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x25D",
+          "size": "8",
+          "options": [
+            {
+              "option": "No Access",
+              "value": "15"
+            },
+            {
+              "option": "Callback",
+              "value": "1"
+            },
+            {
+              "option": "User",
+              "value": "2"
+            },
+            {
+              "option": "Operator",
+              "value": "3"
+            },
+            {
+              "option": "Administrator",
+              "value": "4"
+            },
+            {
+              "option": "OEM Proprietary",
+              "value": "5"
+            }
+          ],
+          "accessLevel": "21",
+          "failsafe": "0F",
+          "optimal": "0F",
+          "offsets": {
+            "accessLevel": "0x1ADAC",
+            "failsafe": "0x1ADD0",
+            "optimal": "0x1ADD1"
+          }
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x17",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x263",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x18",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x25E",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x19",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x261",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x1A",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x260",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x1B",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x25F",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x1C",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x25A",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x1D",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x262",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x1E",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x259",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x1F",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x257",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x20",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x258",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x21",
+          "varStoreId": "0x2",
+          "varStoreName": "ErrorManager",
+          "varOffset": "0x0",
+          "size": "16",
+          "min": "0x0",
+          "max": "0xFFFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x22",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x199",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x23",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x21",
+          "size": "16",
+          "min": "0x0",
+          "max": "0xFFFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x24",
+          "varStoreId": "0xF000",
+          "varStoreName": "SystemAccess",
+          "varOffset": "0x0",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x25",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x15",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x26",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x14",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x27",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x13",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x28",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x12",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x29",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x11",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x2A",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0x10",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        },
+        {
+          "name": "",
+          "description": "",
+          "type": "Numeric",
+          "questionId": "0x2B",
+          "varStoreId": "0x1",
+          "varStoreName": "ServerSetup",
+          "varOffset": "0xE",
+          "size": "8",
+          "min": "0x0",
+          "max": "0xFF",
+          "step": "0x0",
+          "accessLevel": null,
+          "failsafe": null,
+          "optimal": null,
+          "offsets": null
+        }
+      ]
+    }
+  ],
+  "varStores": [
+    {
+      "varStoreId": "0xF000",
+      "size": "0x1",
+      "name": "SystemAccess"
+    },
+    {
+      "varStoreId": "0x1",
+      "size": "0x264",
+      "name": "ServerSetup"
+    },
+    {
+      "varStoreId": "0x2",
+      "size": "0x4",
+      "name": "ErrorManager"
+    }
+  ],
+  "suppressions": [
+    {
+      "offset": "0x16667",
+      "active": true,
+      "start": "0x1666F",
+      "end": "0x166A7"
+    },
+    {
+      "offset": "0x1675F",
+      "active": true,
+      "start": "0x16767",
+      "end": "0x1677A"
+    },
+    {
+      "offset": "0x16750",
+      "active": true,
+      "start": "0x16758",
+      "end": "0x1677C"
+    },
+    {
+      "offset": "0x16741",
+      "active": true,
+      "start": "0x16749",
+      "end": "0x1677E"
+    },
+    {
+      "offset": "0x16732",
+      "active": true,
+      "start": "0x1673A",
+      "end": "0x16780"
+    },
+    {
+      "offset": "0x16723",
+      "active": true,
+      "start": "0x1672B",
+      "end": "0x16782"
+    },
+    {
+      "offset": "0x16714",
+      "active": true,
+      "start": "0x1671C",
+      "end": "0x16784"
+    },
+    {
+      "offset": "0x16705",
+      "active": true,
+      "start": "0x1670D",
+      "end": "0x16786"
+    },
+    {
+      "offset": "0x166E4",
+      "active": true,
+      "start": "0x166EC",
+      "end": "0x1678C"
+    },
+    {
+      "offset": "0x166E0",
+      "active": true,
+      "start": "0x166E4",
+      "end": "0x1678E"
+    },
+    {
+      "offset": "0x16794",
+      "active": true,
+      "start": "0x1679C",
+      "end": "0x167D3"
+    },
+    {
+      "offset": "0x16790",
+      "active": true,
+      "start": "0x16794",
+      "end": "0x167D5"
+    },
+    {
+      "offset": "0x167DB",
+      "active": true,
+      "start": "0x167E3",
+      "end": "0x1681A"
+    },
+    {
+      "offset": "0x1681C",
+      "active": true,
+      "start": "0x16824",
+      "end": "0x16857"
+    },
+    {
+      "offset": "0x16859",
+      "active": true,
+      "start": "0x16861",
+      "end": "0x168B0"
+    },
+    {
+      "offset": "0x168B2",
+      "active": true,
+      "start": "0x168BA",
+      "end": "0x168F1"
+    },
+    {
+      "offset": "0x168F3",
+      "active": true,
+      "start": "0x168FB",
+      "end": "0x1692E"
+    },
+    {
+      "offset": "0x16930",
+      "active": true,
+      "start": "0x16938",
+      "end": "0x16987"
+    },
+    {
+      "offset": "0x167D7",
+      "active": true,
+      "start": "0x167DB",
+      "end": "0x16989"
+    },
+    {
+      "offset": "0x1698F",
+      "active": true,
+      "start": "0x16997",
+      "end": "0x169CE"
+    },
+    {
+      "offset": "0x1698B",
+      "active": true,
+      "start": "0x1698F",
+      "end": "0x169D0"
+    },
+    {
+      "offset": "0x169D6",
+      "active": true,
+      "start": "0x169DE",
+      "end": "0x169FF"
+    },
+    {
+      "offset": "0x169D2",
+      "active": true,
+      "start": "0x169D6",
+      "end": "0x16A01"
+    },
+    {
+      "offset": "0x16A07",
+      "active": true,
+      "start": "0x16A0F",
+      "end": "0x16A28"
+    },
+    {
+      "offset": "0x16A03",
+      "active": true,
+      "start": "0x16A07",
+      "end": "0x16A2A"
+    },
+    {
+      "offset": "0x16A2C",
+      "active": true,
+      "start": "0x16A34",
+      "end": "0x16A4D"
+    },
+    {
+      "offset": "0x16A53",
+      "active": true,
+      "start": "0x16A5B",
+      "end": "0x16A74"
+    },
+    {
+      "offset": "0x16A4F",
+      "active": true,
+      "start": "0x16A53",
+      "end": "0x16A76"
+    },
+    {
+      "offset": "0x16A7C",
+      "active": true,
+      "start": "0x16A84",
+      "end": "0x16A9D"
+    },
+    {
+      "offset": "0x16A78",
+      "active": true,
+      "start": "0x16A7C",
+      "end": "0x16A9F"
+    },
+    {
+      "offset": "0x16AA5",
+      "active": true,
+      "start": "0x16AAD",
+      "end": "0x16AC8"
+    },
+    {
+      "offset": "0x16AA1",
+      "active": true,
+      "start": "0x16AA5",
+      "end": "0x16ACA"
+    },
+    {
+      "offset": "0x16ADD",
+      "active": true,
+      "start": "0x16AE5",
+      "end": "0x16B12"
+    },
+    {
+      "offset": "0x16B8B",
+      "active": true,
+      "start": "0x16B93",
+      "end": "0x16BA6"
+    },
+    {
+      "offset": "0x16D84",
+      "active": true,
+      "start": "0x16D88",
+      "end": "0x16DA4"
+    },
+    {
+      "offset": "0x16DF3",
+      "active": true,
+      "start": "0x16DFF",
+      "end": "0x16E87"
+    },
+    {
+      "offset": "0x16E89",
+      "active": true,
+      "start": "0x16E91",
+      "end": "0x16EC1"
+    },
+    {
+      "offset": "0x16F1B",
+      "active": true,
+      "start": "0x16F23",
+      "end": "0x16F31"
+    },
+    {
+      "offset": "0x16F33",
+      "active": true,
+      "start": "0x16F3F",
+      "end": "0x16F46"
+    },
+    {
+      "offset": "0x16F02",
+      "active": true,
+      "start": "0x16F0A",
+      "end": "0x16F56"
+    },
+    {
+      "offset": "0x16FA1",
+      "active": true,
+      "start": "0x16FAD",
+      "end": "0x16FEC"
+    },
+    {
+      "offset": "0x16FEE",
+      "active": true,
+      "start": "0x16FFA",
+      "end": "0x17048"
+    },
+    {
+      "offset": "0x17087",
+      "active": true,
+      "start": "0x17093",
+      "end": "0x170F2"
+    },
+    {
+      "offset": "0x170F4",
+      "active": true,
+      "start": "0x17100",
+      "end": "0x17162"
+    },
+    {
+      "offset": "0x16F58",
+      "active": true,
+      "start": "0x16F64",
+      "end": "0x17164"
+    },
+    {
+      "offset": "0x17166",
+      "active": true,
+      "start": "0x17172",
+      "end": "0x17184"
+    },
+    {
+      "offset": "0x17186",
+      "active": true,
+      "start": "0x17192",
+      "end": "0x171A4"
+    },
+    {
+      "offset": "0x171AE",
+      "active": true,
+      "start": "0x171BC",
+      "end": "0x171D4"
+    },
+    {
+      "offset": "0x171D6",
+      "active": true,
+      "start": "0x171E0",
+      "end": "0x171F2"
+    },
+    {
+      "offset": "0x171F4",
+      "active": true,
+      "start": "0x17202",
+      "end": "0x1720B"
+    },
+    {
+      "offset": "0x1720D",
+      "active": true,
+      "start": "0x1721B",
+      "end": "0x17224"
+    },
+    {
+      "offset": "0x17226",
+      "active": true,
+      "start": "0x17240",
+      "end": "0x17252"
+    },
+    {
+      "offset": "0x17254",
+      "active": true,
+      "start": "0x1725E",
+      "end": "0x1726D"
+    },
+    {
+      "offset": "0x173DD",
+      "active": true,
+      "start": "0x173E5",
+      "end": "0x173F8"
+    },
+    {
+      "offset": "0x173CE",
+      "active": true,
+      "start": "0x173D6",
+      "end": "0x173FA"
+    },
+    {
+      "offset": "0x173BF",
+      "active": true,
+      "start": "0x173C7",
+      "end": "0x173FC"
+    },
+    {
+      "offset": "0x173B0",
+      "active": true,
+      "start": "0x173B8",
+      "end": "0x173FE"
+    },
+    {
+      "offset": "0x173A1",
+      "active": true,
+      "start": "0x173A9",
+      "end": "0x17400"
+    },
+    {
+      "offset": "0x17497",
+      "active": true,
+      "start": "0x1749F",
+      "end": "0x174BA"
+    },
+    {
+      "offset": "0x1758D",
+      "active": true,
+      "start": "0x17595",
+      "end": "0x175A8"
+    },
+    {
+      "offset": "0x1757E",
+      "active": true,
+      "start": "0x17586",
+      "end": "0x175AA"
+    },
+    {
+      "offset": "0x1756F",
+      "active": true,
+      "start": "0x17577",
+      "end": "0x175AC"
+    },
+    {
+      "offset": "0x17560",
+      "active": true,
+      "start": "0x17568",
+      "end": "0x175AE"
+    },
+    {
+      "offset": "0x17551",
+      "active": true,
+      "start": "0x17559",
+      "end": "0x175B0"
+    }
+  ],
+  "version": "0.0.8",
+  "hashes": {
+    "setupTxt": "c7ccd528e73d4d1d9c949f670d9e1baef94b9b0e17156bfdbb29beeb912e63c0",
+    "setupSct": "5f88c5ac7654076a4a4533ab1b7c82de3e9702efe6e1ff8796a32100bd59389e",
+    "amitseSct": "aeda04443c9f22ad7105201831b3653ba0917846dbc44ff2dbcfd05cb99faefb",
+    "setupdataBin": "13b0752b9ec485a1bc72a1dea32edec39a669498ab8317be86e82634983ce1f4",
+    "offsetChecksum": "e20b2226a0570087c83f7caa3c0dfacb6072159ab7e2611afddbcfb2779402da"
+  }
+}

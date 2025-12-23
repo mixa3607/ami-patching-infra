@@ -1,0 +1,116 @@
+Program version: 1.6.0, Extraction mode: UEFI
+0xEFC: FormSet Guid: 22819110-7F6F-4852-B4BB-13A770149B0C, Title: "FPGA Configuration", Help: "Displays and provides option to change the FPGA Settings" { 0E A7 10 91 81 22 6F 7F 52 48 B4 BB 13 A7 70 14 9B 0C 04 00 05 00 01 71 99 03 93 45 85 04 4B B4 5E 32 EB 83 26 04 0E }
+0xF23: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Class, Class: 0x2C { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 03 2C 00 }
+0xF38: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: SubClass, SubClass: 0x0 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 04 00 00 }
+0xF4D: 	DefaultStore DefaultId: 0x0, Name: "Standard Default" { 5C 06 07 00 00 00 }
+0xF53: 	DefaultStore DefaultId: 0x1, Name: "Manufacture Default" { 5C 06 08 00 01 00 }
+0xF59: 	VarStoreEfi Guid: 75839B0B-0A99-4233-8AA4-3866F6CEF4B3, VarStoreId: 0x9A00, Attributes: 0x3, Size: 0x1B, Name: "FpgaSocketConfig" { 26 2B 00 9A 0B 9B 83 75 99 0A 33 42 8A A4 38 66 F6 CE F4 B3 03 00 00 00 1B 00 46 70 67 61 53 6F 63 6B 65 74 43 6F 6E 66 69 67 00 }
+0xF84: 	Form FormId: 0x47D0, Title: "FPGA Configuration" { 01 86 D0 47 04 00 }
+0xF8A: 		Subtitle Prompt: "FPGA Configuration", Help: "", Flags: 0x0 { 02 87 04 00 00 00 00 }
+0xF91: 		End  { 29 02 }
+0xF93: 		Subtitle Prompt: "--------------------------------------------------", Help: "", Flags: 0x0 { 02 87 02 00 00 00 00 }
+0xF9A: 		End  { 29 02 }
+0xF9C: 		Numeric Prompt: "Sockets Enable Bitmap(Hex)", Help: "0: Disable all Sockets, 0xFF: Enable all Sockets. ", QuestionFlags: 0x10, QuestionId: 0x1, VarStoreId: 0x9A00, VarOffset: 0x0, Flags: 0x20, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x1 { 07 91 26 00 27 00 01 00 00 9A 00 00 10 20 00 FF 01 }
+0xFAD: 			Default DefaultId: 0x0 Value: 3 { 5B 06 00 00 00 03 }
+0xFB3: 			Default DefaultId: 0x1 Value: 3 { 5B 06 01 00 00 03 }
+0xFB9: 		End  { 29 02 }
+0xFBB: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 03 00 00 00 00 }
+0xFC2: 		End  { 29 02 }
+0xFC4: 		OneOf Prompt: "Socket 0 BitStream", Help: "Pick a BitStream to assign to this socket.", QuestionFlags: 0x10, QuestionId: 0x2, VarStoreId: 0x9A00, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 05 91 09 00 0B 00 02 00 00 9A 01 00 10 10 00 FF 00 }
+0xFD5: 			OneOfOption Option: "Auto" Value: 0, Default, MfgDefault { 09 07 0C 00 30 00 00 }
+0xFDC: 			OneOfOption Option: "SKX-PO-BBS" Value: 1 { 09 07 0E 00 00 00 01 }
+0xFE3: 			OneOfOption Option: "None" Value: 255 { 09 07 0D 00 00 00 FF }
+0xFEA: 		End  { 29 02 }
+0xFEC: 		OneOf Prompt: "Socket 1 BitStream", Help: "Pick a BitStream to assign to this socket.", QuestionFlags: 0x10, QuestionId: 0x3, VarStoreId: 0x9A00, VarOffset: 0x2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 05 91 0A 00 0B 00 03 00 00 9A 02 00 10 10 00 FF 00 }
+0xFFD: 			OneOfOption Option: "Auto" Value: 0, Default, MfgDefault { 09 07 0C 00 30 00 00 }
+0x1004: 			OneOfOption Option: "SKX-PO-BBS" Value: 1 { 09 07 0E 00 00 00 01 }
+0x100B: 			OneOfOption Option: "None" Value: 255 { 09 07 0D 00 00 00 FF }
+0x1012: 		End  { 29 02 }
+0x1014: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 03 00 00 00 00 }
+0x101B: 		End  { 29 02 }
+0x101D: 		OneOf Prompt: "Socket 0 Threshold 1", Help: "Select the FPGA Temperature Threshold.", QuestionFlags: 0x10, QuestionId: 0x4, VarStoreId: 0x9A00, VarOffset: 0x5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x67, Step: 0x0 { 05 91 10 00 0F 00 04 00 00 9A 05 00 10 10 00 67 00 }
+0x102E: 			OneOfOption Option: "Disable" Value: 0 { 09 07 06 00 00 00 00 }
+0x1035: 			OneOfOption Option: "60 C" Value: 60 { 09 07 14 00 00 00 3C }
+0x103C: 			OneOfOption Option: "65 C" Value: 65 { 09 07 15 00 00 00 41 }
+0x1043: 			OneOfOption Option: "70 C" Value: 70 { 09 07 16 00 00 00 46 }
+0x104A: 			OneOfOption Option: "75 C" Value: 75 { 09 07 17 00 00 00 4B }
+0x1051: 			OneOfOption Option: "80 C" Value: 80 { 09 07 18 00 00 00 50 }
+0x1058: 			OneOfOption Option: "85 C" Value: 85 { 09 07 19 00 00 00 55 }
+0x105F: 			OneOfOption Option: "90 C" Value: 90, Default, MfgDefault { 09 07 1A 00 30 00 5A }
+0x1066: 			OneOfOption Option: "93 C" Value: 93 { 09 07 1B 00 00 00 5D }
+0x106D: 			OneOfOption Option: "94 C" Value: 94 { 09 07 1C 00 00 00 5E }
+0x1074: 			OneOfOption Option: "95 C" Value: 95 { 09 07 1D 00 00 00 5F }
+0x107B: 			OneOfOption Option: "96 C" Value: 96 { 09 07 1E 00 00 00 60 }
+0x1082: 			OneOfOption Option: "97 C" Value: 97 { 09 07 1F 00 00 00 61 }
+0x1089: 			OneOfOption Option: "98 C" Value: 98 { 09 07 20 00 00 00 62 }
+0x1090: 			OneOfOption Option: "99 C" Value: 99 { 09 07 21 00 00 00 63 }
+0x1097: 			OneOfOption Option: "100 C" Value: 100 { 09 07 22 00 00 00 64 }
+0x109E: 			OneOfOption Option: "101 C" Value: 101 { 09 07 23 00 00 00 65 }
+0x10A5: 			OneOfOption Option: "102 C" Value: 102 { 09 07 24 00 00 00 66 }
+0x10AC: 			OneOfOption Option: "103 C" Value: 103 { 09 07 25 00 00 00 67 }
+0x10B3: 		End  { 29 02 }
+0x10B5: 		OneOf Prompt: "Socket 0 Threshold 2", Help: "Select the FPGA Temperature Threshold.", QuestionFlags: 0x10, QuestionId: 0x5, VarStoreId: 0x9A00, VarOffset: 0x9, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x67, Step: 0x0 { 05 91 11 00 0F 00 05 00 00 9A 09 00 10 10 00 67 00 }
+0x10C6: 			OneOfOption Option: "Disable" Value: 0 { 09 07 06 00 00 00 00 }
+0x10CD: 			OneOfOption Option: "60 C" Value: 60 { 09 07 14 00 00 00 3C }
+0x10D4: 			OneOfOption Option: "65 C" Value: 65 { 09 07 15 00 00 00 41 }
+0x10DB: 			OneOfOption Option: "70 C" Value: 70 { 09 07 16 00 00 00 46 }
+0x10E2: 			OneOfOption Option: "75 C" Value: 75 { 09 07 17 00 00 00 4B }
+0x10E9: 			OneOfOption Option: "80 C" Value: 80 { 09 07 18 00 00 00 50 }
+0x10F0: 			OneOfOption Option: "85 C" Value: 85 { 09 07 19 00 00 00 55 }
+0x10F7: 			OneOfOption Option: "90 C" Value: 90 { 09 07 1A 00 00 00 5A }
+0x10FE: 			OneOfOption Option: "93 C" Value: 93, Default, MfgDefault { 09 07 1B 00 30 00 5D }
+0x1105: 			OneOfOption Option: "94 C" Value: 94 { 09 07 1C 00 00 00 5E }
+0x110C: 			OneOfOption Option: "95 C" Value: 95 { 09 07 1D 00 00 00 5F }
+0x1113: 			OneOfOption Option: "96 C" Value: 96 { 09 07 1E 00 00 00 60 }
+0x111A: 			OneOfOption Option: "97 C" Value: 97 { 09 07 1F 00 00 00 61 }
+0x1121: 			OneOfOption Option: "98 C" Value: 98 { 09 07 20 00 00 00 62 }
+0x1128: 			OneOfOption Option: "99 C" Value: 99 { 09 07 21 00 00 00 63 }
+0x112F: 			OneOfOption Option: "100 C" Value: 100 { 09 07 22 00 00 00 64 }
+0x1136: 			OneOfOption Option: "101 C" Value: 101 { 09 07 23 00 00 00 65 }
+0x113D: 			OneOfOption Option: "102 C" Value: 102 { 09 07 24 00 00 00 66 }
+0x1144: 			OneOfOption Option: "103 C" Value: 103 { 09 07 25 00 00 00 67 }
+0x114B: 		End  { 29 02 }
+0x114D: 		OneOf Prompt: "Socket 1 Threshold 1", Help: "Select the FPGA Temperature Threshold.", QuestionFlags: 0x10, QuestionId: 0x6, VarStoreId: 0x9A00, VarOffset: 0x6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x67, Step: 0x0 { 05 91 12 00 0F 00 06 00 00 9A 06 00 10 10 00 67 00 }
+0x115E: 			OneOfOption Option: "Disable" Value: 0 { 09 07 06 00 00 00 00 }
+0x1165: 			OneOfOption Option: "60 C" Value: 60 { 09 07 14 00 00 00 3C }
+0x116C: 			OneOfOption Option: "65 C" Value: 65 { 09 07 15 00 00 00 41 }
+0x1173: 			OneOfOption Option: "70 C" Value: 70 { 09 07 16 00 00 00 46 }
+0x117A: 			OneOfOption Option: "75 C" Value: 75 { 09 07 17 00 00 00 4B }
+0x1181: 			OneOfOption Option: "80 C" Value: 80 { 09 07 18 00 00 00 50 }
+0x1188: 			OneOfOption Option: "85 C" Value: 85 { 09 07 19 00 00 00 55 }
+0x118F: 			OneOfOption Option: "90 C" Value: 90, Default, MfgDefault { 09 07 1A 00 30 00 5A }
+0x1196: 			OneOfOption Option: "93 C" Value: 93 { 09 07 1B 00 00 00 5D }
+0x119D: 			OneOfOption Option: "94 C" Value: 94 { 09 07 1C 00 00 00 5E }
+0x11A4: 			OneOfOption Option: "95 C" Value: 95 { 09 07 1D 00 00 00 5F }
+0x11AB: 			OneOfOption Option: "96 C" Value: 96 { 09 07 1E 00 00 00 60 }
+0x11B2: 			OneOfOption Option: "97 C" Value: 97 { 09 07 1F 00 00 00 61 }
+0x11B9: 			OneOfOption Option: "98 C" Value: 98 { 09 07 20 00 00 00 62 }
+0x11C0: 			OneOfOption Option: "99 C" Value: 99 { 09 07 21 00 00 00 63 }
+0x11C7: 			OneOfOption Option: "100 C" Value: 100 { 09 07 22 00 00 00 64 }
+0x11CE: 			OneOfOption Option: "101 C" Value: 101 { 09 07 23 00 00 00 65 }
+0x11D5: 			OneOfOption Option: "102 C" Value: 102 { 09 07 24 00 00 00 66 }
+0x11DC: 			OneOfOption Option: "103 C" Value: 103 { 09 07 25 00 00 00 67 }
+0x11E3: 		End  { 29 02 }
+0x11E5: 		OneOf Prompt: "Socket 1 Threshold 2", Help: "Select the FPGA Temperature Threshold.", QuestionFlags: 0x10, QuestionId: 0x7, VarStoreId: 0x9A00, VarOffset: 0xA, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x67, Step: 0x0 { 05 91 13 00 0F 00 07 00 00 9A 0A 00 10 10 00 67 00 }
+0x11F6: 			OneOfOption Option: "Disable" Value: 0 { 09 07 06 00 00 00 00 }
+0x11FD: 			OneOfOption Option: "60 C" Value: 60 { 09 07 14 00 00 00 3C }
+0x1204: 			OneOfOption Option: "65 C" Value: 65 { 09 07 15 00 00 00 41 }
+0x120B: 			OneOfOption Option: "70 C" Value: 70 { 09 07 16 00 00 00 46 }
+0x1212: 			OneOfOption Option: "75 C" Value: 75 { 09 07 17 00 00 00 4B }
+0x1219: 			OneOfOption Option: "80 C" Value: 80 { 09 07 18 00 00 00 50 }
+0x1220: 			OneOfOption Option: "85 C" Value: 85 { 09 07 19 00 00 00 55 }
+0x1227: 			OneOfOption Option: "90 C" Value: 90 { 09 07 1A 00 00 00 5A }
+0x122E: 			OneOfOption Option: "93 C" Value: 93, Default, MfgDefault { 09 07 1B 00 30 00 5D }
+0x1235: 			OneOfOption Option: "94 C" Value: 94 { 09 07 1C 00 00 00 5E }
+0x123C: 			OneOfOption Option: "95 C" Value: 95 { 09 07 1D 00 00 00 5F }
+0x1243: 			OneOfOption Option: "96 C" Value: 96 { 09 07 1E 00 00 00 60 }
+0x124A: 			OneOfOption Option: "97 C" Value: 97 { 09 07 1F 00 00 00 61 }
+0x1251: 			OneOfOption Option: "98 C" Value: 98 { 09 07 20 00 00 00 62 }
+0x1258: 			OneOfOption Option: "99 C" Value: 99 { 09 07 21 00 00 00 63 }
+0x125F: 			OneOfOption Option: "100 C" Value: 100 { 09 07 22 00 00 00 64 }
+0x1266: 			OneOfOption Option: "101 C" Value: 101 { 09 07 23 00 00 00 65 }
+0x126D: 			OneOfOption Option: "102 C" Value: 102 { 09 07 24 00 00 00 66 }
+0x1274: 			OneOfOption Option: "103 C" Value: 103 { 09 07 25 00 00 00 67 }
+0x127B: 		End  { 29 02 }
+0x127D: 	End  { 29 02 }
+0x127F: End  { 29 02 }

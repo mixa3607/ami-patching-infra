@@ -1,0 +1,821 @@
+Program version: 1.6.0, Extraction mode: UEFI
+0x1659C: FormSet Guid: 01239999-FC0E-4B6E-9E79-D54D5DB6CD20, Title: "Server Mgmt", Help: "Press <Enter> to view or change the Server management configuration." { 0E A7 99 99 23 01 0E FC 6E 4B 9E 79 D5 4D 5D B6 CD 20 55 01 56 01 01 71 99 03 93 45 85 04 4B B4 5E 32 EB 83 26 04 0E }
+0x165C3: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Class, Class: 0x14 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 03 14 00 }
+0x165D8: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: SubClass, SubClass: 0x0 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 04 00 00 }
+0x165ED: 	DefaultStore DefaultId: 0x0, Name: "" { 5C 06 00 00 00 00 }
+0x165F3: 	DefaultStore DefaultId: 0x1, Name: "" { 5C 06 4D 01 01 00 }
+0x165F9: 	VarStore Guid: E770BB69-BCB4-4D04-9E97-23FF9456FEAC, VarStoreId: 0xF000, Size: 0x1, Name: "SystemAccess" { 24 23 69 BB 70 E7 B4 BC 04 4D 9E 97 23 FF 94 56 FE AC 00 F0 01 00 53 79 73 74 65 6D 41 63 63 65 73 73 00 }
+0x1661C: 	VarStore Guid: 01239999-FC0E-4B6E-9E79-D54D5DB6CD20, VarStoreId: 0x1, Size: 0x264, Name: "ServerSetup" { 24 22 99 99 23 01 0E FC 6E 4B 9E 79 D5 4D 5D B6 CD 20 01 00 64 02 53 65 72 76 65 72 53 65 74 75 70 00 }
+0x1663E: 	VarStore Guid: ADDEBF82-A560-46B9-A280-78C6AB61AEDA, VarStoreId: 0x2, Size: 0x4, Name: "ErrorManager" { 24 23 82 BF DE AD 60 A5 B9 46 A2 80 78 C6 AB 61 AE DA 02 00 04 00 45 72 72 6F 72 4D 61 6E 61 67 65 72 00 }
+0x16661: 	Form FormId: 0x2711, Title: "Server Mgmt" { 01 86 11 27 55 01 }
+0x16667: 		SuppressIf  { 0A 82 }
+0x16669: 			EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x1666F: 			Text Prompt: "BMC Self Test Status", Help: "", Text: "" { 03 08 5B 01 4D 01 5C 01 }
+0x16677: 			Text Prompt: "BMC Device ID", Help: "", Text: "Unknown" { 03 08 62 01 4D 01 63 01 }
+0x1667F: 			Text Prompt: "BMC Device Revision", Help: "", Text: "Unknown" { 03 08 64 01 4D 01 65 01 }
+0x16687: 			Text Prompt: "BMC Firmware Revision", Help: "", Text: "Unknown" { 03 08 66 01 4D 01 67 01 }
+0x1668F: 			Text Prompt: "IPMI Version", Help: "", Text: "Unknown" { 03 08 68 01 4D 01 69 01 }
+0x16697: 			Text Prompt: "IPMI BMC Interface", Help: "", Text: "Unknown" { 03 08 6C 01 4D 01 6B 01 }
+0x1669F: 			Text Prompt: "", Help: "", Text: "" { 03 08 4D 01 4D 01 4D 01 }
+0x166A7: 		End  { 29 02 }
+0x166A9: 		GrayOutIf  { 19 82 }
+0x166AB: 			EqIdVal QuestionId: 0x24, Value: 0x1 { 12 06 24 00 01 00 }
+0x166B1: 			OneOf Prompt: "BMC Support", Help: "Enable/Disable interfaces to communicate with BMC", QuestionFlags: 0x10, QuestionId: 0x1, VarStoreId: 0x1, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 57 01 58 01 01 00 01 00 00 00 10 10 00 01 00 }
+0x166C2: 				OneOfOption Option: "Enabled" Value: 1 { 09 07 60 00 00 00 01 }
+0x166C9: 				OneOfOption Option: "Disabled" Value: 0 { 09 07 61 00 00 00 00 }
+0x166D0: 				Default DefaultId: 0x0 Value: 1 { 5B 06 00 00 00 01 }
+0x166D6: 				Default DefaultId: 0x1 Value: 1 { 5B 06 01 00 00 01 }
+0x166DC: 			End  { 29 02 }
+0x166DE: 		End  { 29 02 }
+0x166E0: 		SuppressIf  { 0A 82 }
+0x166E2: 			True  { 46 02 }
+0x166E4: 			SuppressIf  { 0A 82 }
+0x166E6: 				EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x166EC: 				GrayOutIf  { 19 82 }
+0x166EE: 					EqIdVal QuestionId: 0x24, Value: 0x1 { 12 06 24 00 01 00 }
+0x166F4: 					OneOf Prompt: "IPMI Interface Type", Help: "Type of Interface to communicate BMC from HOST", QuestionFlags: 0x10, QuestionId: 0x2, VarStoreId: 0x1, VarOffset: 0x16, Flags: 0x10, Size: 8, Min: 0x1, Max: 0x8, Step: 0x0 { 05 91 6A 01 6D 01 02 00 01 00 16 00 10 10 01 08 00 }
+0x16705: 						SuppressIf  { 0A 82 }
+0x16707: 							EqIdVal QuestionId: 0x2B, Value: 0x0 { 12 06 2B 00 00 00 }
+0x1670D: 							OneOfOption Option: "Kcs Interface" Value: 1 { 09 07 4E 01 00 00 01 }
+0x16714: 							SuppressIf  { 0A 82 }
+0x16716: 								EqIdVal QuestionId: 0x2A, Value: 0x0 { 12 06 2A 00 00 00 }
+0x1671C: 								OneOfOption Option: "Bt Interface" Value: 3 { 09 07 4F 01 00 00 03 }
+0x16723: 								SuppressIf  { 0A 82 }
+0x16725: 									EqIdVal QuestionId: 0x29, Value: 0x0 { 12 06 29 00 00 00 }
+0x1672B: 									OneOfOption Option: "Ssif Interface" Value: 4 { 09 07 50 01 00 00 04 }
+0x16732: 									SuppressIf  { 0A 82 }
+0x16734: 										EqIdVal QuestionId: 0x28, Value: 0x0 { 12 06 28 00 00 00 }
+0x1673A: 										OneOfOption Option: "Ipmb Interface" Value: 5 { 09 07 51 01 00 00 05 }
+0x16741: 										SuppressIf  { 0A 82 }
+0x16743: 											EqIdVal QuestionId: 0x27, Value: 0x0 { 12 06 27 00 00 00 }
+0x16749: 											OneOfOption Option: "Usb Interface" Value: 6 { 09 07 52 01 00 00 06 }
+0x16750: 											SuppressIf  { 0A 82 }
+0x16752: 												EqIdVal QuestionId: 0x26, Value: 0x0 { 12 06 26 00 00 00 }
+0x16758: 												OneOfOption Option: "Oem1 Interface" Value: 7 { 09 07 53 01 00 00 07 }
+0x1675F: 												SuppressIf  { 0A 82 }
+0x16761: 													EqIdVal QuestionId: 0x25, Value: 0x0 { 12 06 25 00 00 00 }
+0x16767: 													OneOfOption Option: "Oem2 Interface" Value: 8 { 09 07 54 01 00 00 08 }
+0x1676E: 													Default DefaultId: 0x0 Value: 1 { 5B 06 00 00 00 01 }
+0x16774: 													Default DefaultId: 0x1 Value: 1 { 5B 06 01 00 00 01 }
+0x1677A: 												End  { 29 02 }
+0x1677C: 											End  { 29 02 }
+0x1677E: 										End  { 29 02 }
+0x16780: 									End  { 29 02 }
+0x16782: 								End  { 29 02 }
+0x16784: 							End  { 29 02 }
+0x16786: 						End  { 29 02 }
+0x16788: 					End  { 29 02 }
+0x1678A: 				End  { 29 02 }
+0x1678C: 			End  { 29 02 }
+0x1678E: 		End  { 29 02 }
+0x16790: 		SuppressIf  { 0A 82 }
+0x16792: 			True  { 46 02 }
+0x16794: 			SuppressIf  { 0A 82 }
+0x16796: 				EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x1679C: 				GrayOutIf  { 19 82 }
+0x1679E: 					EqIdVal QuestionId: 0x24, Value: 0x1 { 12 06 24 00 01 00 }
+0x167A4: 					OneOf Prompt: "Wait For BMC", Help: "Wait For BMC response for specified time out. In PILOTII, BMC starts at the same time when BIOS starts during AC power ON. It takes around 30 seconds to initialize Host to BMC interfaces.", QuestionFlags: 0x10, QuestionId: 0x3, VarStoreId: 0x1, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 59 01 5A 01 03 00 01 00 01 00 10 10 00 01 00 }
+0x167B5: 						OneOfOption Option: "Enabled" Value: 1 { 09 07 60 00 00 00 01 }
+0x167BC: 						OneOfOption Option: "Disabled" Value: 0 { 09 07 61 00 00 00 00 }
+0x167C3: 						Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x167C9: 						Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x167CF: 					End  { 29 02 }
+0x167D1: 				End  { 29 02 }
+0x167D3: 			End  { 29 02 }
+0x167D5: 		End  { 29 02 }
+0x167D7: 		SuppressIf  { 0A 82 }
+0x167D9: 			True  { 46 02 }
+0x167DB: 			SuppressIf  { 0A 82 }
+0x167DD: 				EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x167E3: 				GrayOutIf  { 19 82 }
+0x167E5: 					EqIdVal QuestionId: 0x24, Value: 0x1 { 12 06 24 00 01 00 }
+0x167EB: 					OneOf Prompt: "FRB-2 Timer", Help: "Enable or Disable FRB-2 timer(POST timer)", QuestionFlags: 0x10, QuestionId: 0x4, VarStoreId: 0x1, VarOffset: 0x17, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 06 00 07 00 04 00 01 00 17 00 10 10 00 01 00 }
+0x167FC: 						OneOfOption Option: "Enabled" Value: 1 { 09 07 60 00 00 00 01 }
+0x16803: 						OneOfOption Option: "Disabled" Value: 0 { 09 07 61 00 00 00 00 }
+0x1680A: 						Default DefaultId: 0x0 Value: 1 { 5B 06 00 00 00 01 }
+0x16810: 						Default DefaultId: 0x1 Value: 1 { 5B 06 01 00 00 01 }
+0x16816: 					End  { 29 02 }
+0x16818: 				End  { 29 02 }
+0x1681A: 			End  { 29 02 }
+0x1681C: 			SuppressIf  { 0A 82 }
+0x1681E: 				EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x16824: 				GrayOutIf  { 19 82 }
+0x16826: 					EqIdVal QuestionId: 0x24, Value: 0x1 { 12 86 24 00 01 00 }
+0x1682C: 						EqIdVal QuestionId: 0x4, Value: 0x0 { 12 06 04 00 00 00 }
+0x16832: 						Or  { 16 02 }
+0x16834: 					End  { 29 02 }
+0x16836: 					Numeric Prompt: "FRB-2 Timer timeout", Help: "Enter value Between 1 to 30 min for FRB-2 Timer Expiration", QuestionFlags: 0x10, QuestionId: 0x5, VarStoreId: 0x1, VarOffset: 0x18, Flags: 0x10, Size: 8, Min: 0x1, Max: 0x1E, Step: 0x1 { 07 91 08 00 09 00 05 00 01 00 18 00 10 10 01 1E 01 }
+0x16847: 						Default DefaultId: 0x0 Value: 6 { 5B 06 00 00 00 06 }
+0x1684D: 						Default DefaultId: 0x1 Value: 6 { 5B 06 01 00 00 06 }
+0x16853: 					End  { 29 02 }
+0x16855: 				End  { 29 02 }
+0x16857: 			End  { 29 02 }
+0x16859: 			SuppressIf  { 0A 82 }
+0x1685B: 				EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x16861: 				GrayOutIf  { 19 82 }
+0x16863: 					EqIdVal QuestionId: 0x24, Value: 0x1 { 12 86 24 00 01 00 }
+0x16869: 						EqIdVal QuestionId: 0x4, Value: 0x0 { 12 06 04 00 00 00 }
+0x1686F: 						Or  { 16 02 }
+0x16871: 					End  { 29 02 }
+0x16873: 					OneOf Prompt: "FRB-2 Timer Policy", Help: "Configure how the system should respond if the FRB-2 Timer expires. Not available if FRB-2 Timer is disabled.", QuestionFlags: 0x10, QuestionId: 0x6, VarStoreId: 0x1, VarOffset: 0x19, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0 { 05 91 0A 00 0B 00 06 00 01 00 19 00 10 10 00 03 00 }
+0x16884: 						OneOfOption Option: "Do Nothing" Value: 0 { 09 07 04 00 00 00 00 }
+0x1688B: 						OneOfOption Option: "Reset" Value: 1 { 09 07 02 00 00 00 01 }
+0x16892: 						OneOfOption Option: "Power Down" Value: 2 { 09 07 03 00 00 00 02 }
+0x16899: 						OneOfOption Option: "Power Cycle" Value: 3 { 09 07 05 00 00 00 03 }
+0x168A0: 						Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x168A6: 						Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x168AC: 					End  { 29 02 }
+0x168AE: 				End  { 29 02 }
+0x168B0: 			End  { 29 02 }
+0x168B2: 			SuppressIf  { 0A 82 }
+0x168B4: 				EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x168BA: 				GrayOutIf  { 19 82 }
+0x168BC: 					EqIdVal QuestionId: 0x24, Value: 0x1 { 12 06 24 00 01 00 }
+0x168C2: 					OneOf Prompt: "OS Watchdog Timer", Help: "If enabled, starts a BIOS timer which can only be shut off by Management Software after the OS loads.  Helps determine that the OS successfully loaded or follows the OS Boot Watchdog Timer policy.", QuestionFlags: 0x10, QuestionId: 0x7, VarStoreId: 0x1, VarOffset: 0x1A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 0C 00 0D 00 07 00 01 00 1A 00 10 10 00 01 00 }
+0x168D3: 						OneOfOption Option: "Enabled" Value: 1 { 09 07 60 00 00 00 01 }
+0x168DA: 						OneOfOption Option: "Disabled" Value: 0 { 09 07 61 00 00 00 00 }
+0x168E1: 						Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x168E7: 						Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x168ED: 					End  { 29 02 }
+0x168EF: 				End  { 29 02 }
+0x168F1: 			End  { 29 02 }
+0x168F3: 			SuppressIf  { 0A 82 }
+0x168F5: 				EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x168FB: 				GrayOutIf  { 19 82 }
+0x168FD: 					EqIdVal QuestionId: 0x24, Value: 0x1 { 12 86 24 00 01 00 }
+0x16903: 						EqIdVal QuestionId: 0x7, Value: 0x0 { 12 06 07 00 00 00 }
+0x16909: 						Or  { 16 02 }
+0x1690B: 					End  { 29 02 }
+0x1690D: 					Numeric Prompt: "OS Wtd Timer Timeout", Help: "Enter the value Between 1 to 30 min for OS Boot Watchdog Timer Expiration. Not available if OS Boot Watchdog Timer is disabled.", QuestionFlags: 0x10, QuestionId: 0x8, VarStoreId: 0x1, VarOffset: 0x1B, Flags: 0x10, Size: 8, Min: 0x1, Max: 0x1E, Step: 0x1 { 07 91 0E 00 0F 00 08 00 01 00 1B 00 10 10 01 1E 01 }
+0x1691E: 						Default DefaultId: 0x0 Value: 10 { 5B 06 00 00 00 0A }
+0x16924: 						Default DefaultId: 0x1 Value: 10 { 5B 06 01 00 00 0A }
+0x1692A: 					End  { 29 02 }
+0x1692C: 				End  { 29 02 }
+0x1692E: 			End  { 29 02 }
+0x16930: 			SuppressIf  { 0A 82 }
+0x16932: 				EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x16938: 				GrayOutIf  { 19 82 }
+0x1693A: 					EqIdVal QuestionId: 0x24, Value: 0x1 { 12 86 24 00 01 00 }
+0x16940: 						EqIdVal QuestionId: 0x7, Value: 0x0 { 12 06 07 00 00 00 }
+0x16946: 						Or  { 16 02 }
+0x16948: 					End  { 29 02 }
+0x1694A: 					OneOf Prompt: "OS Wtd Timer Policy", Help: "Configure how the system should respond if the OS Boot Watchdog Timer expires. Not available if OS Boot Watchdog Timer is disabled.", QuestionFlags: 0x10, QuestionId: 0x9, VarStoreId: 0x1, VarOffset: 0x1C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0 { 05 91 10 00 11 00 09 00 01 00 1C 00 10 10 00 03 00 }
+0x1695B: 						OneOfOption Option: "Do Nothing" Value: 0 { 09 07 04 00 00 00 00 }
+0x16962: 						OneOfOption Option: "Reset" Value: 1 { 09 07 02 00 00 00 01 }
+0x16969: 						OneOfOption Option: "Power Down" Value: 2 { 09 07 03 00 00 00 02 }
+0x16970: 						OneOfOption Option: "Power Cycle" Value: 3 { 09 07 05 00 00 00 03 }
+0x16977: 						Default DefaultId: 0x0 Value: 1 { 5B 06 00 00 00 01 }
+0x1697D: 						Default DefaultId: 0x1 Value: 1 { 5B 06 01 00 00 01 }
+0x16983: 					End  { 29 02 }
+0x16985: 				End  { 29 02 }
+0x16987: 			End  { 29 02 }
+0x16989: 		End  { 29 02 }
+0x1698B: 		SuppressIf  { 0A 82 }
+0x1698D: 			True  { 46 02 }
+0x1698F: 			SuppressIf  { 0A 82 }
+0x16991: 				EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x16997: 				GrayOutIf  { 19 82 }
+0x16999: 					EqIdVal QuestionId: 0x24, Value: 0x1 { 12 06 24 00 01 00 }
+0x1699F: 					OneOf Prompt: "Serial Mux", Help: "Press <Enter> to enable or disable Serial Mux configuration.", QuestionFlags: 0x10, QuestionId: 0xA, VarStoreId: 0x1, VarOffset: 0x25, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 62 00 63 00 0A 00 01 00 25 00 10 10 00 01 00 }
+0x169B0: 						OneOfOption Option: "Enabled" Value: 1 { 09 07 60 00 00 00 01 }
+0x169B7: 						OneOfOption Option: "Disabled" Value: 0 { 09 07 61 00 00 00 00 }
+0x169BE: 						Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x169C4: 						Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x169CA: 					End  { 29 02 }
+0x169CC: 				End  { 29 02 }
+0x169CE: 			End  { 29 02 }
+0x169D0: 		End  { 29 02 }
+0x169D2: 		SuppressIf  { 0A 82 }
+0x169D4: 			True  { 46 02 }
+0x169D6: 			SuppressIf  { 0A 82 }
+0x169D8: 				EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x169DE: 				GrayOutIf  { 19 82 }
+0x169E0: 					EqIdVal QuestionId: 0x24, Value: 0x1 { 12 06 24 00 01 00 }
+0x169E6: 					Text Prompt: "", Help: "", Text: "" { 03 08 2B 00 4D 01 00 00 }
+0x169EE: 					Ref Prompt: "System Event Log", Help: "Press <Enter> to change the SEL event log configuration.", QuestionFlags: 0x4, QuestionId: 0x2713, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2714 { 0F 0F 13 00 14 00 13 27 00 00 FF FF 04 14 27 }
+0x169FD: 				End  { 29 02 }
+0x169FF: 			End  { 29 02 }
+0x16A01: 		End  { 29 02 }
+0x16A03: 		SuppressIf  { 0A 82 }
+0x16A05: 			True  { 46 02 }
+0x16A07: 			SuppressIf  { 0A 82 }
+0x16A09: 				EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x16A0F: 				GrayOutIf  { 19 82 }
+0x16A11: 					EqIdVal QuestionId: 0x24, Value: 0x1 { 12 06 24 00 01 00 }
+0x16A17: 					Ref Prompt: "Bmc self test log", Help: "logs the report returned by BMC self test command", QuestionFlags: 0x4, QuestionId: 0x2715, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2716 { 0F 0F 2E 00 2F 00 15 27 00 00 FF FF 04 16 27 }
+0x16A26: 				End  { 29 02 }
+0x16A28: 			End  { 29 02 }
+0x16A2A: 		End  { 29 02 }
+0x16A2C: 		SuppressIf  { 0A 82 }
+0x16A2E: 			EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x16A34: 			GrayOutIf  { 19 82 }
+0x16A36: 				EqIdVal QuestionId: 0x24, Value: 0x1 { 12 06 24 00 01 00 }
+0x16A3C: 				Ref Prompt: "BMC network configuration", Help: "Configure BMC network parameters", QuestionFlags: 0x4, QuestionId: 0x2727, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2728 { 0F 0F 65 00 67 00 27 27 00 00 FF FF 04 28 27 }
+0x16A4B: 			End  { 29 02 }
+0x16A4D: 		End  { 29 02 }
+0x16A4F: 		SuppressIf  { 0A 82 }
+0x16A51: 			True  { 46 02 }
+0x16A53: 			SuppressIf  { 0A 82 }
+0x16A55: 				EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x16A5B: 				GrayOutIf  { 19 82 }
+0x16A5D: 					EqIdVal QuestionId: 0x24, Value: 0x1 { 12 06 24 00 01 00 }
+0x16A63: 					Ref Prompt: "View System Event Log", Help: "Press <Enter> to view the System Event Log Records.", QuestionFlags: 0x4, QuestionId: 0x272A, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x272B { 0F 0F F8 00 F9 00 2A 27 00 00 FF FF 04 2B 27 }
+0x16A72: 				End  { 29 02 }
+0x16A74: 			End  { 29 02 }
+0x16A76: 		End  { 29 02 }
+0x16A78: 		SuppressIf  { 0A 82 }
+0x16A7A: 			True  { 46 02 }
+0x16A7C: 			SuppressIf  { 0A 82 }
+0x16A7E: 				EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x16A84: 				GrayOutIf  { 19 82 }
+0x16A86: 					EqIdVal QuestionId: 0x24, Value: 0x1 { 12 06 24 00 01 00 }
+0x16A8C: 					Ref Prompt: "BMC User Settings", Help: "Press <Enter> to Add, Delete and Set Privilege level for users.", QuestionFlags: 0x4, QuestionId: 0x273A, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x273B { 0F 0F 0E 01 0F 01 3A 27 00 00 FF FF 04 3B 27 }
+0x16A9B: 				End  { 29 02 }
+0x16A9D: 			End  { 29 02 }
+0x16A9F: 		End  { 29 02 }
+0x16AA1: 		SuppressIf  { 0A 82 }
+0x16AA3: 			True  { 46 02 }
+0x16AA5: 			SuppressIf  { 0A 82 }
+0x16AA7: 				EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x16AAD: 				GrayOutIf  { 19 82 }
+0x16AAF: 					EqIdVal QuestionId: 0x24, Value: 0x1 { 12 06 24 00 01 00 }
+0x16AB5: 					Action Prompt: "BMC Warm Reset", Help: "Press <Enter> to do Warm Reset BMC.", QuestionFlags: 0x4, QuestionId: 0x2712, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, QuestionConfig: "" { 0C 8F 6F 01 6E 01 12 27 00 00 FF FF 04 00 00 }
+0x16AC4: 					End  { 29 02 }
+0x16AC6: 				End  { 29 02 }
+0x16AC8: 			End  { 29 02 }
+0x16ACA: 		End  { 29 02 }
+0x16ACC: 	End  { 29 02 }
+0x16ACE: 	Form FormId: 0x2714, Title: "System Event Log" { 01 86 14 27 13 00 }
+0x16AD4: 		Subtitle Prompt: "Enabling/Disabling Options", Help: "", Flags: 0x0 { 02 87 12 00 00 00 00 }
+0x16ADB: 		End  { 29 02 }
+0x16ADD: 		SuppressIf  { 0A 82 }
+0x16ADF: 			EqIdVal QuestionId: 0x1, Value: 0x0 { 12 06 01 00 00 00 }
+0x16AE5: 			OneOf Prompt: "SEL Components", Help: "Change this to enable or disable event logging for error/progress codes during boot.", QuestionFlags: 0x10, QuestionId: 0xB, VarStoreId: 0x1, VarOffset: 0x1D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 15 00 16 00 0B 00 01 00 1D 00 10 10 00 01 00 }
+0x16AF6: 				OneOfOption Option: "Disabled" Value: 0 { 09 07 61 00 00 00 00 }
+0x16AFD: 				OneOfOption Option: "Enabled" Value: 1 { 09 07 60 00 00 00 01 }
+0x16B04: 				Default DefaultId: 0x0 Value: 1 { 5B 06 00 00 00 01 }
+0x16B0A: 				Default DefaultId: 0x1 Value: 1 { 5B 06 01 00 00 01 }
+0x16B10: 			End  { 29 02 }
+0x16B12: 		End  { 29 02 }
+0x16B14: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 25 00 00 00 00 }
+0x16B1B: 		End  { 29 02 }
+0x16B1D: 		Subtitle Prompt: "Erasing Settings", Help: "", Flags: 0x0 { 02 87 26 00 00 00 00 }
+0x16B24: 		End  { 29 02 }
+0x16B26: 		GrayOutIf  { 19 82 }
+0x16B28: 			EqIdVal QuestionId: 0xB, Value: 0x0 { 12 06 0B 00 00 00 }
+0x16B2E: 			OneOf Prompt: "Erase SEL", Help: "Choose options for erasing SEL.", QuestionFlags: 0x10, QuestionId: 0xC, VarStoreId: 0x1, VarOffset: 0x1E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0 { 05 91 17 00 18 00 0C 00 01 00 1E 00 10 10 00 02 00 }
+0x16B3F: 				OneOfOption Option: "No" Value: 0 { 09 07 19 00 00 00 00 }
+0x16B46: 				OneOfOption Option: "Yes, On next reset" Value: 1 { 09 07 1A 00 00 00 01 }
+0x16B4D: 				OneOfOption Option: "Yes, On every reset" Value: 2 { 09 07 1B 00 00 00 02 }
+0x16B54: 				Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x16B5A: 				Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x16B60: 			End  { 29 02 }
+0x16B62: 		End  { 29 02 }
+0x16B64: 		GrayOutIf  { 19 82 }
+0x16B66: 			EqIdVal QuestionId: 0xB, Value: 0x0 { 12 06 0B 00 00 00 }
+0x16B6C: 			OneOf Prompt: "When SEL is Full", Help: "Choose options for reactions to a full SEL.", QuestionFlags: 0x10, QuestionId: 0xD, VarStoreId: 0x1, VarOffset: 0x1F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0 { 05 91 1C 00 1D 00 0D 00 01 00 1F 00 10 10 00 02 00 }
+0x16B7D: 				OneOfOption Option: "Do Nothing" Value: 0 { 09 07 1E 00 00 00 00 }
+0x16B84: 				OneOfOption Option: "Erase Immediately" Value: 1 { 09 07 1F 00 00 00 01 }
+0x16B8B: 				SuppressIf  { 0A 82 }
+0x16B8D: 					EqIdVal QuestionId: 0x23, Value: 0x0 { 12 06 23 00 00 00 }
+0x16B93: 					OneOfOption Option: "Delete Oldest Record" Value: 2 { 09 07 20 00 00 00 02 }
+0x16B9A: 					Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x16BA0: 					Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x16BA6: 				End  { 29 02 }
+0x16BA8: 			End  { 29 02 }
+0x16BAA: 		End  { 29 02 }
+0x16BAC: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 25 00 00 00 00 }
+0x16BB3: 		End  { 29 02 }
+0x16BB5: 		Subtitle Prompt: "Custom EFI Logging Options", Help: "", Flags: 0x0 { 02 87 24 00 00 00 00 }
+0x16BBC: 		End  { 29 02 }
+0x16BBE: 		GrayOutIf  { 19 82 }
+0x16BC0: 			EqIdVal QuestionId: 0xB, Value: 0x0 { 12 06 0B 00 00 00 }
+0x16BC6: 			OneOf Prompt: "Log EFI Status Codes", Help: "Disable the logging of EFI Status Codes or log only error code or only progress code or both.", QuestionFlags: 0x10, QuestionId: 0xE, VarStoreId: 0x1, VarOffset: 0x20, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x3, Step: 0x0 { 05 91 29 00 2A 00 0E 00 01 00 20 00 10 10 00 03 00 }
+0x16BD7: 				OneOfOption Option: "Disabled" Value: 0 { 09 07 61 00 00 00 00 }
+0x16BDE: 				OneOfOption Option: "Both" Value: 1 { 09 07 21 00 00 00 01 }
+0x16BE5: 				OneOfOption Option: "Error code" Value: 2 { 09 07 22 00 00 00 02 }
+0x16BEC: 				OneOfOption Option: "Progress code" Value: 3 { 09 07 23 00 00 00 03 }
+0x16BF3: 				Default DefaultId: 0x0 Value: 2 { 5B 06 00 00 00 02 }
+0x16BF9: 				Default DefaultId: 0x1 Value: 2 { 5B 06 01 00 00 02 }
+0x16BFF: 			End  { 29 02 }
+0x16C01: 		End  { 29 02 }
+0x16C03: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 25 00 00 00 00 }
+0x16C0A: 		End  { 29 02 }
+0x16C0C: 		Subtitle Prompt: "NOTE: All values changed here do not take", Help: "", Flags: 0x0 { 02 87 27 00 00 00 00 }
+0x16C13: 		End  { 29 02 }
+0x16C15: 		Subtitle Prompt: "      effect until computer is restarted.", Help: "", Flags: 0x0 { 02 87 28 00 00 00 00 }
+0x16C1C: 		End  { 29 02 }
+0x16C1E: 	End  { 29 02 }
+0x16C20: 	Form FormId: 0x2716, Title: "Bmc self test log" { 01 86 16 27 2E 00 }
+0x16C26: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 38 00 00 00 00 }
+0x16C2D: 		End  { 29 02 }
+0x16C2F: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x16C36: 		End  { 29 02 }
+0x16C38: 		OneOf Prompt: "Erase Log", Help: "Erase Log Options", QuestionFlags: 0x10, QuestionId: 0xF, VarStoreId: 0x1, VarOffset: 0x23, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 30 00 31 00 0F 00 01 00 23 00 10 10 00 01 00 }
+0x16C49: 			OneOfOption Option: "Yes, On every reset" Value: 1 { 09 07 35 00 00 00 01 }
+0x16C50: 			OneOfOption Option: "No" Value: 0 { 09 07 36 00 00 00 00 }
+0x16C57: 			Default DefaultId: 0x0 Value: 1 { 5B 06 00 00 00 01 }
+0x16C5D: 			Default DefaultId: 0x1 Value: 1 { 5B 06 01 00 00 01 }
+0x16C63: 		End  { 29 02 }
+0x16C65: 		OneOf Prompt: "When log is full", Help: "Select the action to be taken when log is full", QuestionFlags: 0x10, QuestionId: 0x10, VarStoreId: 0x1, VarOffset: 0x24, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 32 00 37 00 10 00 01 00 24 00 10 10 00 01 00 }
+0x16C76: 			OneOfOption Option: "Clear Log" Value: 1 { 09 07 33 00 00 00 01 }
+0x16C7D: 			OneOfOption Option: "Do not log any more" Value: 0 { 09 07 34 00 00 00 00 }
+0x16C84: 			Default DefaultId: 0x0 Value: 1 { 5B 06 00 00 00 01 }
+0x16C8A: 			Default DefaultId: 0x1 Value: 1 { 5B 06 01 00 00 01 }
+0x16C90: 		End  { 29 02 }
+0x16C92: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x16C99: 		End  { 29 02 }
+0x16C9B: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x16CA2: 		End  { 29 02 }
+0x16CA4: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 39 00 00 00 00 }
+0x16CAB: 		End  { 29 02 }
+0x16CAD: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 3A 00 00 00 00 }
+0x16CB4: 		End  { 29 02 }
+0x16CB6: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 3B 00 00 00 00 }
+0x16CBD: 		End  { 29 02 }
+0x16CBF: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 3C 00 00 00 00 }
+0x16CC6: 		End  { 29 02 }
+0x16CC8: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 3D 00 00 00 00 }
+0x16CCF: 		End  { 29 02 }
+0x16CD1: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 3E 00 00 00 00 }
+0x16CD8: 		End  { 29 02 }
+0x16CDA: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 3F 00 00 00 00 }
+0x16CE1: 		End  { 29 02 }
+0x16CE3: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 40 00 00 00 00 }
+0x16CEA: 		End  { 29 02 }
+0x16CEC: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 41 00 00 00 00 }
+0x16CF3: 		End  { 29 02 }
+0x16CF5: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 42 00 00 00 00 }
+0x16CFC: 		End  { 29 02 }
+0x16CFE: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 43 00 00 00 00 }
+0x16D05: 		End  { 29 02 }
+0x16D07: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 44 00 00 00 00 }
+0x16D0E: 		End  { 29 02 }
+0x16D10: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 45 00 00 00 00 }
+0x16D17: 		End  { 29 02 }
+0x16D19: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 46 00 00 00 00 }
+0x16D20: 		End  { 29 02 }
+0x16D22: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 47 00 00 00 00 }
+0x16D29: 		End  { 29 02 }
+0x16D2B: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 48 00 00 00 00 }
+0x16D32: 		End  { 29 02 }
+0x16D34: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 49 00 00 00 00 }
+0x16D3B: 		End  { 29 02 }
+0x16D3D: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 4A 00 00 00 00 }
+0x16D44: 		End  { 29 02 }
+0x16D46: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 4B 00 00 00 00 }
+0x16D4D: 		End  { 29 02 }
+0x16D4F: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 4C 00 00 00 00 }
+0x16D56: 		End  { 29 02 }
+0x16D58: 	End  { 29 02 }
+0x16D5A: 	Form FormId: 0x2728, Title: "BMC network configuration" { 01 86 28 27 65 00 }
+0x16D60: 		Subtitle Prompt: "--BMC network configuration--", Help: "", Flags: 0x0 { 02 87 66 00 00 00 00 }
+0x16D67: 		End  { 29 02 }
+0x16D69: 		Subtitle Prompt: "**********************", Help: "", Flags: 0x0 { 02 87 68 00 00 00 00 }
+0x16D70: 		End  { 29 02 }
+0x16D72: 		Subtitle Prompt: "Configure IPv4 support", Help: "", Flags: 0x0 { 02 87 69 00 00 00 00 }
+0x16D79: 		End  { 29 02 }
+0x16D7B: 		Subtitle Prompt: "**********************", Help: "", Flags: 0x0 { 02 87 68 00 00 00 00 }
+0x16D82: 		End  { 29 02 }
+0x16D84: 		SuppressIf  { 0A 82 }
+0x16D86: 			True  { 46 02 }
+0x16D88: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x4, QuestionId: 0x2729, VarStoreId: 0x1, VarOffset: 0x26, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x63, Step: 0x1 { 07 91 4D 01 4D 01 29 27 01 00 26 00 04 10 00 63 01 }
+0x16D99: 				Default DefaultId: 0x0 Value: 60 { 5B 06 00 00 00 3C }
+0x16D9F: 				Refresh RefreshInterval: 0x5 { 1D 03 05 }
+0x16DA2: 			End  { 29 02 }
+0x16DA4: 		End  { 29 02 }
+0x16DA6: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x16DAD: 		End  { 29 02 }
+0x16DAF: 		Subtitle Prompt: "Lan channel 1", Help: "", Flags: 0x0 { 02 87 6F 00 00 00 00 }
+0x16DB6: 		End  { 29 02 }
+0x16DB8: 		OneOf Prompt: "Configuration Address source", Help: "Select to configure LAN channel parameters statically or dynamically(by BIOS or BMC). Unspecified option will not modify any BMC network parameters during BIOS phase", QuestionFlags: 0x10, QuestionId: 0x11, VarStoreId: 0x1, VarOffset: 0x27, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0 { 05 91 72 00 6D 00 11 00 01 00 27 00 10 10 00 04 00 }
+0x16DC9: 			OneOfOption Option: "Unspecified" Value: 0 { 09 07 A1 00 00 00 00 }
+0x16DD0: 			OneOfOption Option: "Static" Value: 1 { 09 07 A2 00 00 00 01 }
+0x16DD7: 			OneOfOption Option: "DynamicBmcDhcp" Value: 2 { 09 07 A3 00 00 00 02 }
+0x16DDE: 			OneOfOption Option: "DynamicBmcNonDhcp" Value: 4 { 09 07 A4 00 00 00 04 }
+0x16DE5: 			Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x16DEB: 			Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x16DF1: 		End  { 29 02 }
+0x16DF3: 		SuppressIf  { 0A 82 }
+0x16DF5: 			EqIdVal QuestionId: 0x11, Value: 0x1 { 12 86 11 00 01 00 }
+0x16DFB: 				Not  { 17 02 }
+0x16DFD: 			End  { 29 02 }
+0x16DFF: 			String Prompt: "Station IP address", Help: "Enter station IP address", QuestionFlags: 0x4, QuestionId: 0x271F, VarStoreId: 0x1, VarStoreInfo: 0x28, MinSize: 0x1, MaxSize: 0xF, Flags: 0x0 { 1C 90 73 00 99 00 1F 27 01 00 28 00 04 01 0F 00 }
+0x16E0F: 				Default DefaultId: 0x0 String: "..." { 5B 07 00 00 07 B6 00 }
+0x16E16: 				Default DefaultId: 0x1 String: "..." { 5B 07 01 00 07 B6 00 }
+0x16E1D: 			End  { 29 02 }
+0x16E1F: 			String Prompt: "Subnet mask", Help: "Enter subnet mask", QuestionFlags: 0x4, QuestionId: 0x2720, VarStoreId: 0x1, VarStoreInfo: 0x46, MinSize: 0x1, MaxSize: 0xF, Flags: 0x0 { 1C 90 74 00 9A 00 20 27 01 00 46 00 04 01 0F 00 }
+0x16E2F: 				Default DefaultId: 0x0 String: "..." { 5B 07 00 00 07 B8 00 }
+0x16E36: 				Default DefaultId: 0x1 String: "..." { 5B 07 01 00 07 B8 00 }
+0x16E3D: 			End  { 29 02 }
+0x16E3F: 			Text Prompt: "Station MAC address", Help: "Station MAC address from BMC", Text: "-" { 03 08 8F 00 AC 00 AA 00 }
+0x16E47: 			String Prompt: "Router IP address", Help: "Enter router IP address", QuestionFlags: 0x4, QuestionId: 0x2721, VarStoreId: 0x1, VarStoreInfo: 0x64, MinSize: 0x1, MaxSize: 0xF, Flags: 0x0 { 1C 90 75 00 9B 00 21 27 01 00 64 00 04 01 0F 00 }
+0x16E57: 				Default DefaultId: 0x0 String: "0.0.0.0" { 5B 07 00 00 07 B7 00 }
+0x16E5E: 				Default DefaultId: 0x1 String: "0.0.0.0" { 5B 07 01 00 07 B7 00 }
+0x16E65: 			End  { 29 02 }
+0x16E67: 			String Prompt: "Router MAC address", Help: "Enter router MAC address", QuestionFlags: 0x4, QuestionId: 0x2722, VarStoreId: 0x1, VarStoreInfo: 0x82, MinSize: 0x11, MaxSize: 0x11, Flags: 0x0 { 1C 90 76 00 9C 00 22 27 01 00 82 00 04 11 11 00 }
+0x16E77: 				Default DefaultId: 0x0 String: "00-00-00-00-00-00" { 5B 07 00 00 07 B9 00 }
+0x16E7E: 				Default DefaultId: 0x1 String: "00-00-00-00-00-00" { 5B 07 01 00 07 B9 00 }
+0x16E85: 			End  { 29 02 }
+0x16E87: 		End  { 29 02 }
+0x16E89: 		SuppressIf  { 0A 82 }
+0x16E8B: 			EqIdVal QuestionId: 0x11, Value: 0x1 { 12 06 11 00 01 00 }
+0x16E91: 			Text Prompt: "Current Configuration Address source", Help: "Current LAN Configuration statically or dynamically(by BIOS or BMC). Unspecified for not Configured address space", Text: "-" { 03 08 8C 00 6E 00 A5 00 }
+0x16E99: 			Text Prompt: "Station IP address", Help: "Station IP address from BMC", Text: "-" { 03 08 8D 00 A9 00 A7 00 }
+0x16EA1: 			Text Prompt: "Subnet mask", Help: "Subnet mask from BMC", Text: "-" { 03 08 8E 00 AF 00 AD 00 }
+0x16EA9: 			Text Prompt: "Station MAC address", Help: "Station MAC address from BMC", Text: "-" { 03 08 8F 00 AC 00 AA 00 }
+0x16EB1: 			Text Prompt: "Router IP address", Help: "Router IP address from BMC", Text: "-" { 03 08 90 00 B2 00 B0 00 }
+0x16EB9: 			Text Prompt: "Router MAC address", Help: "Router MAC address from BMC", Text: "-" { 03 08 91 00 B5 00 B3 00 }
+0x16EC1: 		End  { 29 02 }
+0x16EC3: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x16ECA: 		End  { 29 02 }
+0x16ECC: 		Subtitle Prompt: "**********************", Help: "", Flags: 0x0 { 02 87 68 00 00 00 00 }
+0x16ED3: 		End  { 29 02 }
+0x16ED5: 		Subtitle Prompt: "Configure IPv6 support", Help: "", Flags: 0x0 { 02 87 6A 00 00 00 00 }
+0x16EDC: 		End  { 29 02 }
+0x16EDE: 		Subtitle Prompt: "**********************", Help: "", Flags: 0x0 { 02 87 68 00 00 00 00 }
+0x16EE5: 		End  { 29 02 }
+0x16EE7: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x16EEE: 		End  { 29 02 }
+0x16EF0: 		Subtitle Prompt: "Lan channel 1", Help: "", Flags: 0x0 { 02 87 6F 00 00 00 00 }
+0x16EF7: 		End  { 29 02 }
+0x16EF9: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x16F00: 		End  { 29 02 }
+0x16F02: 		SuppressIf  { 0A 82 }
+0x16F04: 			EqIdVal QuestionId: 0x2717, Value: 0x2 { 12 06 17 27 02 00 }
+0x16F0A: 			OneOf Prompt: "IPv6 Support", Help: "Enable or Disable LAN1 IPv6 Support", QuestionFlags: 0x4, QuestionId: 0x2717, VarStoreId: 0x1, VarOffset: 0xA4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0 { 05 91 7C 00 9F 00 17 27 01 00 A4 00 04 10 00 02 00 }
+0x16F1B: 				SuppressIf  { 0A 82 }
+0x16F1D: 					EqIdVal QuestionId: 0x2717, Value: 0x2 { 12 06 17 27 02 00 }
+0x16F23: 					OneOfOption Option: "Enabled" Value: 1 { 09 07 60 00 00 00 01 }
+0x16F2A: 					OneOfOption Option: "Disabled" Value: 0 { 09 07 61 00 00 00 00 }
+0x16F31: 				End  { 29 02 }
+0x16F33: 				SuppressIf  { 0A 82 }
+0x16F35: 					EqIdVal QuestionId: 0x2717, Value: 0x2 { 12 86 17 27 02 00 }
+0x16F3B: 						Not  { 17 02 }
+0x16F3D: 					End  { 29 02 }
+0x16F3F: 					OneOfOption Option: "Unsupported" Value: 2 { 09 07 E8 00 00 00 02 }
+0x16F46: 				End  { 29 02 }
+0x16F48: 				Default DefaultId: 0x0 Value: 1 { 5B 06 00 00 00 01 }
+0x16F4E: 				Default DefaultId: 0x1 Value: 1 { 5B 06 01 00 00 01 }
+0x16F54: 			End  { 29 02 }
+0x16F56: 		End  { 29 02 }
+0x16F58: 		SuppressIf  { 0A 82 }
+0x16F5A: 			EqIdVal QuestionId: 0x2717, Value: 0x1 { 12 86 17 27 01 00 }
+0x16F60: 				Not  { 17 02 }
+0x16F62: 			End  { 29 02 }
+0x16F64: 			Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x16F6B: 			End  { 29 02 }
+0x16F6D: 			OneOf Prompt: "Configuration Address source", Help: "Select to configure LAN channel parameters statically or dynamically(by BIOS or BMC). Unspecified option will not modify any BMC network parameters during BIOS phase", QuestionFlags: 0x10, QuestionId: 0x12, VarStoreId: 0x1, VarOffset: 0xA6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0 { 05 91 7D 00 6D 00 12 00 01 00 A6 00 10 10 00 02 00 }
+0x16F7E: 				OneOfOption Option: "Unspecified" Value: 0 { 09 07 A1 00 00 00 00 }
+0x16F85: 				OneOfOption Option: "Static" Value: 1 { 09 07 A2 00 00 00 01 }
+0x16F8C: 				OneOfOption Option: "DynamicBmcDhcp" Value: 2 { 09 07 A3 00 00 00 02 }
+0x16F93: 				Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x16F99: 				Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x16F9F: 			End  { 29 02 }
+0x16FA1: 			SuppressIf  { 0A 82 }
+0x16FA3: 				EqIdVal QuestionId: 0x12, Value: 0x1 { 12 86 12 00 01 00 }
+0x16FA9: 					Not  { 17 02 }
+0x16FAB: 				End  { 29 02 }
+0x16FAD: 				String Prompt: "Station IPv6 address", Help: "Enter station IPv6 address", QuestionFlags: 0x4, QuestionId: 0x271D, VarStoreId: 0x1, VarStoreInfo: 0x149, MinSize: 0x1, MaxSize: 0x27, Flags: 0x0 { 1C 90 7E 00 BF 00 1D 27 01 00 49 01 04 01 27 00 }
+0x16FBD: 					Default DefaultId: 0x0 String: ":::::::" { 5B 07 00 00 07 BA 00 }
+0x16FC4: 					Default DefaultId: 0x1 String: ":::::::" { 5B 07 01 00 07 BA 00 }
+0x16FCB: 				End  { 29 02 }
+0x16FCD: 				Numeric Prompt: "Prefix Length", Help: "Change the prefix length", QuestionFlags: 0x0, QuestionId: 0x13, VarStoreId: 0x1, VarOffset: 0xA5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x80, Step: 0x0 { 07 91 7F 00 E9 00 13 00 01 00 A5 00 00 10 00 80 00 }
+0x16FDE: 					Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x16FE4: 					Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x16FEA: 				End  { 29 02 }
+0x16FEC: 			End  { 29 02 }
+0x16FEE: 			SuppressIf  { 0A 82 }
+0x16FF0: 				EqIdVal QuestionId: 0x12, Value: 0x0 { 12 86 12 00 00 00 }
+0x16FF6: 					Not  { 17 02 }
+0x16FF8: 				End  { 29 02 }
+0x16FFA: 				Text Prompt: "Current Configuration Address source", Help: "Current IPv6 LAN Configuration statically or dynamically by BMC). Unspecified for not Configured address space", Text: "-" { 03 08 92 00 9D 00 BB 00 }
+0x17002: 				Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x17009: 				End  { 29 02 }
+0x1700B: 				Subtitle Prompt: "Station IPv6 address", Help: "", Flags: 0x0 { 02 87 94 00 00 00 00 }
+0x17012: 				End  { 29 02 }
+0x17014: 				Subtitle Prompt: "-", Help: "", Flags: 0x0 { 02 87 C0 00 00 00 00 }
+0x1701B: 				End  { 29 02 }
+0x1701D: 				Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x17024: 				End  { 29 02 }
+0x17026: 				Subtitle Prompt: "Prefix Length", Help: "", Flags: 0x0 { 02 87 95 00 00 00 00 }
+0x1702D: 				End  { 29 02 }
+0x1702F: 				Subtitle Prompt: "-", Help: "", Flags: 0x0 { 02 87 EA 00 00 00 00 }
+0x17036: 				End  { 29 02 }
+0x17038: 				Text Prompt: "IPv6 address status", Help: "Status of station IPv6 address to BMC.", Text: "-" { 03 08 C2 00 C3 00 C4 00 }
+0x17040: 				Text Prompt: "IPv6 DHCP Algorithm", Help: "Providing the DHCP method used like DHCPv6 or StateLess Address Auto Configuration(SLAAC).", Text: "-" { 03 08 C6 00 C7 00 CA 00 }
+0x17048: 			End  { 29 02 }
+0x1704A: 			Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x17051: 			End  { 29 02 }
+0x17053: 			OneOf Prompt: "Configuration Router Lan1 Address source", Help: "Select to configure LAN channel parameters statically or dynamically(by BIOS or BMC). Unspecified option will not modify any BMC network parameters during BIOS phase", QuestionFlags: 0x10, QuestionId: 0x14, VarStoreId: 0x1, VarOffset: 0xA7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0 { 05 91 88 00 71 00 14 00 01 00 A7 00 10 10 00 02 00 }
+0x17064: 				OneOfOption Option: "Unspecified" Value: 0 { 09 07 A1 00 00 00 00 }
+0x1706B: 				OneOfOption Option: "Static" Value: 1 { 09 07 A2 00 00 00 01 }
+0x17072: 				OneOfOption Option: "DynamicBmcDhcp" Value: 2 { 09 07 A3 00 00 00 02 }
+0x17079: 				Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x1707F: 				Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x17085: 			End  { 29 02 }
+0x17087: 			SuppressIf  { 0A 82 }
+0x17089: 				EqIdVal QuestionId: 0x14, Value: 0x1 { 12 86 14 00 01 00 }
+0x1708F: 					Not  { 17 02 }
+0x17091: 				End  { 29 02 }
+0x17093: 				String Prompt: "IPv6 Router1 IP Address", Help: "Change the IPv6 Router1 IP Address", QuestionFlags: 0x4, QuestionId: 0x2719, VarStoreId: 0x1, VarStoreInfo: 0xA9, MinSize: 0x1, MaxSize: 0x27, Flags: 0x0 { 1C 90 80 00 EC 00 19 27 01 00 A9 00 04 01 27 00 }
+0x170A3: 					Default DefaultId: 0x0 String: ":::::::" { 5B 07 00 00 07 BA 00 }
+0x170AA: 					Default DefaultId: 0x1 String: ":::::::" { 5B 07 01 00 07 BA 00 }
+0x170B1: 				End  { 29 02 }
+0x170B3: 				Numeric Prompt: "IPv6 Router1 Prefix Length Lan1", Help: "Change the IPv6 Router Prefix Length", QuestionFlags: 0x0, QuestionId: 0x15, VarStoreId: 0x1, VarOffset: 0xA8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x80, Step: 0x0 { 07 91 86 00 F0 00 15 00 01 00 A8 00 00 10 00 80 00 }
+0x170C4: 					Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x170CA: 					Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x170D0: 				End  { 29 02 }
+0x170D2: 				String Prompt: "IPv6 Router1 Prefix Value Lan1", Help: "Change the IPv6 Router Prefix  Value", QuestionFlags: 0x4, QuestionId: 0x271B, VarStoreId: 0x1, VarStoreInfo: 0xF9, MinSize: 0x1, MaxSize: 0x27, Flags: 0x0 { 1C 90 87 00 F4 00 1B 27 01 00 F9 00 04 01 27 00 }
+0x170E2: 					Default DefaultId: 0x0 String: ":::::::" { 5B 07 00 00 07 BA 00 }
+0x170E9: 					Default DefaultId: 0x1 String: ":::::::" { 5B 07 01 00 07 BA 00 }
+0x170F0: 				End  { 29 02 }
+0x170F2: 			End  { 29 02 }
+0x170F4: 			SuppressIf  { 0A 82 }
+0x170F6: 				EqIdVal QuestionId: 0x14, Value: 0x0 { 12 86 14 00 00 00 }
+0x170FC: 					Not  { 17 02 }
+0x170FE: 				End  { 29 02 }
+0x17100: 				Text Prompt: "Current Router Configuration Address source", Help: "Current IPv6 Router LAN Configuration statically or dynamically by BMC). Unspecified for not Configured address space", Text: "-" { 03 08 93 00 9E 00 BD 00 }
+0x17108: 				Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x1710F: 				End  { 29 02 }
+0x17111: 				Subtitle Prompt: "IPv6 Router IP Address", Help: "", Flags: 0x0 { 02 87 96 00 00 00 00 }
+0x17118: 				End  { 29 02 }
+0x1711A: 				Subtitle Prompt: "-", Help: "", Flags: 0x0 { 02 87 ED 00 00 00 00 }
+0x17121: 				End  { 29 02 }
+0x17123: 				Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x1712A: 				End  { 29 02 }
+0x1712C: 				Subtitle Prompt: "IPv6 Router Prefix Length", Help: "", Flags: 0x0 { 02 87 97 00 00 00 00 }
+0x17133: 				End  { 29 02 }
+0x17135: 				Subtitle Prompt: "-", Help: "", Flags: 0x0 { 02 87 F1 00 00 00 00 }
+0x1713C: 				End  { 29 02 }
+0x1713E: 				Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x17145: 				End  { 29 02 }
+0x17147: 				Subtitle Prompt: "IPv6 Router Prefix Value", Help: "", Flags: 0x0 { 02 87 98 00 00 00 00 }
+0x1714E: 				End  { 29 02 }
+0x17150: 				Subtitle Prompt: "-", Help: "", Flags: 0x0 { 02 87 F5 00 00 00 00 }
+0x17157: 				End  { 29 02 }
+0x17159: 				Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x17160: 				End  { 29 02 }
+0x17162: 			End  { 29 02 }
+0x17164: 		End  { 29 02 }
+0x17166: 		SuppressIf  { 0A 82 }
+0x17168: 			EqIdVal QuestionId: 0x2717, Value: 0x2 { 12 86 17 27 02 00 }
+0x1716E: 				Not  { 17 02 }
+0x17170: 			End  { 29 02 }
+0x17172: 			Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x17179: 			End  { 29 02 }
+0x1717B: 			Subtitle Prompt: "IPv6 is not supported in BMC", Help: "", Flags: 0x0 { 02 87 6B 00 00 00 00 }
+0x17182: 			End  { 29 02 }
+0x17184: 		End  { 29 02 }
+0x17186: 		SuppressIf  { 0A 82 }
+0x17188: 			EqIdVal QuestionId: 0x2717, Value: 0x0 { 12 86 17 27 00 00 }
+0x1718E: 				Not  { 17 02 }
+0x17190: 			End  { 29 02 }
+0x17192: 			Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x17199: 			End  { 29 02 }
+0x1719B: 			Subtitle Prompt: "IPV6 Support is Disabled", Help: "", Flags: 0x0 { 02 87 6C 00 00 00 00 }
+0x171A2: 			End  { 29 02 }
+0x171A4: 		End  { 29 02 }
+0x171A6: 	End  { 29 02 }
+0x171A8: 	Form FormId: 0x272B, Title: "View System Event Log" { 01 86 2B 27 F8 00 }
+0x171AE: 		SuppressIf  { 0A 82 }
+0x171B0: 			EqIdValList QuestionId: 0x22, Values: [4] { 14 88 22 00 01 00 04 00 }
+0x171B8: 				Not  { 17 02 }
+0x171BA: 			End  { 29 02 }
+0x171BC: 			Ref Prompt: "View remaining System Event Log", Help: "Press <Enter> to view the remaining System Event Log Records.", QuestionFlags: 0x4, QuestionId: 0x272C, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x272B { 0F 0F FB 00 FC 00 2C 27 00 00 FF FF 04 2B 27 }
+0x171CB: 			Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 4D 01 00 00 00 }
+0x171D2: 			End  { 29 02 }
+0x171D4: 		End  { 29 02 }
+0x171D6: 		SuppressIf  { 0A 82 }
+0x171D8: 			EqIdValList QuestionId: 0x22, Values: [2] { 14 08 22 00 01 00 02 00 }
+0x171E0: 			Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 FD 00 00 00 00 }
+0x171E7: 			End  { 29 02 }
+0x171E9: 			Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 4D 01 00 00 00 }
+0x171F0: 			End  { 29 02 }
+0x171F2: 		End  { 29 02 }
+0x171F4: 		SuppressIf  { 0A 82 }
+0x171F6: 			EqIdValList QuestionId: 0x22, Values: [2] { 14 88 22 00 01 00 02 00 }
+0x171FE: 				Not  { 17 02 }
+0x17200: 			End  { 29 02 }
+0x17202: 			Subtitle Prompt: "Proper components are not found to view the SEL.", Help: "", Flags: 0x0 { 02 87 FF 00 00 00 00 }
+0x17209: 			End  { 29 02 }
+0x1720B: 		End  { 29 02 }
+0x1720D: 		SuppressIf  { 0A 82 }
+0x1720F: 			EqIdValList QuestionId: 0x22, Values: [3] { 14 88 22 00 01 00 03 00 }
+0x17217: 				Not  { 17 02 }
+0x17219: 			End  { 29 02 }
+0x1721B: 			Subtitle Prompt: "<< System Event Log Is Empty >>", Help: "", Flags: 0x0 { 02 87 00 01 00 00 00 }
+0x17222: 			End  { 29 02 }
+0x17224: 		End  { 29 02 }
+0x17226: 		SuppressIf  { 0A 82 }
+0x17228: 			EqIdValList QuestionId: 0x22, Values: [1] { 14 88 22 00 01 00 01 00 }
+0x17230: 				Not  { 17 02 }
+0x17232: 				EqIdValList QuestionId: 0x22, Values: [4] { 14 08 22 00 01 00 04 00 }
+0x1723A: 				Not  { 17 02 }
+0x1723C: 				And  { 15 02 }
+0x1723E: 			End  { 29 02 }
+0x17240: 			Subtitle Prompt: "DATE      TIME       SENSOR TYPE", Help: "", Flags: 0x0 { 02 87 FE 00 00 00 00 }
+0x17247: 			End  { 29 02 }
+0x17249: 			Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 4D 01 00 00 00 }
+0x17250: 			End  { 29 02 }
+0x17252: 		End  { 29 02 }
+0x17254: 		SuppressIf  { 0A 82 }
+0x17256: 			EqIdValList QuestionId: 0x21, Values: [65535] { 14 08 21 00 01 00 FF FF }
+0x1725E: 			Ref Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x16, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x272B { 0F 0F 4D 01 4D 01 16 00 00 00 FF FF 00 2B 27 }
+0x1726D: 		End  { 29 02 }
+0x1726F: 	End  { 29 02 }
+0x17271: 	Form FormId: 0x273B, Title: "BMC User Settings" { 01 86 3B 27 0E 01 }
+0x17277: 		Subtitle Prompt: "BMC User Settings", Help: "", Flags: 0x0 { 02 87 0E 01 00 00 00 }
+0x1727E: 		End  { 29 02 }
+0x17280: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x17287: 		End  { 29 02 }
+0x17289: 		Ref Prompt: "Add User", Help: "Press <Enter> to Add a User.", QuestionFlags: 0x4, QuestionId: 0x273C, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x273F { 0F 0F 10 01 11 01 3C 27 00 00 FF FF 04 3F 27 }
+0x17298: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x1729F: 		End  { 29 02 }
+0x172A1: 		Ref Prompt: "Delete User", Help: "Press <Enter> to Delete a User.", QuestionFlags: 0x4, QuestionId: 0x273D, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2740 { 0F 0F 12 01 13 01 3D 27 00 00 FF FF 04 40 27 }
+0x172B0: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x172B7: 		End  { 29 02 }
+0x172B9: 		Ref Prompt: "Change User Settings", Help: "Press <Enter> to Change User Settings.", QuestionFlags: 0x4, QuestionId: 0x273E, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2741 { 0F 0F 14 01 15 01 3E 27 00 00 FF FF 04 41 27 }
+0x172C8: 	End  { 29 02 }
+0x172CA: 	Form FormId: 0x273F, Title: "BMC Add User Details" { 01 86 3F 27 16 01 }
+0x172D0: 		Subtitle Prompt: "BMC Add User Details", Help: "", Flags: 0x0 { 02 87 16 01 00 00 00 }
+0x172D7: 		End  { 29 02 }
+0x172D9: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x172E0: 		End  { 29 02 }
+0x172E2: 		String Prompt: "User Name", Help: "Enter BMC User Name", QuestionFlags: 0x4, QuestionId: 0x272D, VarStoreId: 0x1, VarStoreInfo: 0x19A, MinSize: 0x0, MaxSize: 0x10, Flags: 0x0 { 1C 90 17 01 26 01 2D 27 01 00 9A 01 04 00 10 00 }
+0x172F2: 			Default DefaultId: 0x0 String: "" { 5B 07 00 00 07 2D 00 }
+0x172F9: 			Default DefaultId: 0x1 String: "" { 5B 07 01 00 07 2D 00 }
+0x17300: 		End  { 29 02 }
+0x17302: 		GrayOutIf  { 19 82 }
+0x17304: 			EqIdVal QuestionId: 0x20, Value: 0x0 { 12 06 20 00 00 00 }
+0x1730A: 			Password Prompt: "User Password", Help: "Enter BMC User Password", QuestionFlags: 0x4, QuestionId: 0x272E, VarStoreId: 0x1, VarStoreInfo: 0x1BC, MinSize: 0x1, MaxSize: 0x14 { 08 91 18 01 27 01 2E 27 01 00 BC 01 04 01 00 14 00 }
+0x1731B: 				Default DefaultId: 0x0 Value: 45 { 5B 07 00 00 01 2D 00 }
+0x17322: 				Default DefaultId: 0x1 Value: 45 { 5B 07 01 00 01 2D 00 }
+0x17329: 			End  { 29 02 }
+0x1732B: 		End  { 29 02 }
+0x1732D: 		GrayOutIf  { 19 82 }
+0x1732F: 			EqIdVal QuestionId: 0x1F, Value: 0x0 { 12 06 1F 00 00 00 }
+0x17335: 			OneOf Prompt: "User Access", Help: "Enable/Disable the BMC User's Access.", QuestionFlags: 0x4, QuestionId: 0x272F, VarStoreId: 0x1, VarOffset: 0x256, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 19 01 2B 01 2F 27 01 00 56 02 04 10 00 01 00 }
+0x17346: 				OneOfOption Option: "Enable" Value: 1 { 09 07 32 01 00 00 01 }
+0x1734D: 				OneOfOption Option: "Disable" Value: 0 { 09 07 33 01 00 00 00 }
+0x17354: 				Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x1735A: 				Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x17360: 			End  { 29 02 }
+0x17362: 			Numeric Prompt: "Channel No", Help: "Enter BMC Channel Number", QuestionFlags: 0x4, QuestionId: 0x2730, VarStoreId: 0x1, VarOffset: 0x254, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0 { 07 91 1A 01 28 01 30 27 01 00 54 02 04 10 00 0F 00 }
+0x17373: 				Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x17379: 				Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x1737F: 			End  { 29 02 }
+0x17381: 			GrayOutIf  { 19 82 }
+0x17383: 				EqIdVal QuestionId: 0x1E, Value: 0x0 { 12 06 1E 00 00 00 }
+0x17389: 				OneOf Prompt: "User Privilege Limit", Help: "Enter BMC User Privilege Limit for Selected Channel", QuestionFlags: 0x4, QuestionId: 0x2731, VarStoreId: 0x1, VarOffset: 0x255, Flags: 0x10, Size: 8, Min: 0x1, Max: 0xF, Step: 0x0 { 05 91 1B 01 29 01 31 27 01 00 55 02 04 10 01 0F 00 }
+0x1739A: 					OneOfOption Option: "No Access" Value: 15 { 09 07 31 01 00 00 0F }
+0x173A1: 					SuppressIf  { 0A 82 }
+0x173A3: 						EqIdVal QuestionId: 0x1D, Value: 0x0 { 12 06 1D 00 00 00 }
+0x173A9: 						OneOfOption Option: "Callback" Value: 1 { 09 07 2C 01 00 00 01 }
+0x173B0: 						SuppressIf  { 0A 82 }
+0x173B2: 							EqIdVal QuestionId: 0x1D, Value: 0x1 { 12 06 1D 00 01 00 }
+0x173B8: 							OneOfOption Option: "User" Value: 2 { 09 07 2D 01 00 00 02 }
+0x173BF: 							SuppressIf  { 0A 82 }
+0x173C1: 								EqIdVal QuestionId: 0x1D, Value: 0x2 { 12 06 1D 00 02 00 }
+0x173C7: 								OneOfOption Option: "Operator" Value: 3 { 09 07 2E 01 00 00 03 }
+0x173CE: 								SuppressIf  { 0A 82 }
+0x173D0: 									EqIdVal QuestionId: 0x1D, Value: 0x3 { 12 06 1D 00 03 00 }
+0x173D6: 									OneOfOption Option: "Administrator" Value: 4 { 09 07 2F 01 00 00 04 }
+0x173DD: 									SuppressIf  { 0A 82 }
+0x173DF: 										EqIdVal QuestionId: 0x1D, Value: 0x4 { 12 06 1D 00 04 00 }
+0x173E5: 										OneOfOption Option: "OEM Proprietary" Value: 5 { 09 07 30 01 00 00 05 }
+0x173EC: 										Default DefaultId: 0x0 Value: 15 { 5B 06 00 00 00 0F }
+0x173F2: 										Default DefaultId: 0x1 Value: 15 { 5B 06 01 00 00 0F }
+0x173F8: 									End  { 29 02 }
+0x173FA: 								End  { 29 02 }
+0x173FC: 							End  { 29 02 }
+0x173FE: 						End  { 29 02 }
+0x17400: 					End  { 29 02 }
+0x17402: 				End  { 29 02 }
+0x17404: 			End  { 29 02 }
+0x17406: 		End  { 29 02 }
+0x17408: 	End  { 29 02 }
+0x1740A: 	Form FormId: 0x2740, Title: "BMC Delete User Details" { 01 86 40 27 1C 01 }
+0x17410: 		Subtitle Prompt: "BMC Delete User Details", Help: "", Flags: 0x0 { 02 87 1C 01 00 00 00 }
+0x17417: 		End  { 29 02 }
+0x17419: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x17420: 		End  { 29 02 }
+0x17422: 		String Prompt: "User Name", Help: "Enter BMC User Name", QuestionFlags: 0x4, QuestionId: 0x2732, VarStoreId: 0x1, VarStoreInfo: 0x1E6, MinSize: 0x0, MaxSize: 0x10, Flags: 0x0 { 1C 90 1D 01 26 01 32 27 01 00 E6 01 04 00 10 00 }
+0x17432: 			Default DefaultId: 0x0 String: "" { 5B 07 00 00 07 2D 00 }
+0x17439: 			Default DefaultId: 0x1 String: "" { 5B 07 01 00 07 2D 00 }
+0x17440: 		End  { 29 02 }
+0x17442: 		GrayOutIf  { 19 82 }
+0x17444: 			EqIdVal QuestionId: 0x1C, Value: 0x0 { 12 06 1C 00 00 00 }
+0x1744A: 			Action Prompt: "User Password", Help: "Enter BMC User Password", QuestionFlags: 0x4, QuestionId: 0x2733, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, QuestionConfig: "" { 0C 8F 1E 01 27 01 33 27 00 00 FF FF 04 00 00 }
+0x17459: 			End  { 29 02 }
+0x1745B: 		End  { 29 02 }
+0x1745D: 	End  { 29 02 }
+0x1745F: 	Form FormId: 0x2741, Title: "BMC Change User Settings" { 01 86 41 27 1F 01 }
+0x17465: 		Subtitle Prompt: "BMC Change User Settings", Help: "", Flags: 0x0 { 02 87 1F 01 00 00 00 }
+0x1746C: 		End  { 29 02 }
+0x1746E: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0x17475: 		End  { 29 02 }
+0x17477: 		String Prompt: "User Name", Help: "Enter BMC User Name", QuestionFlags: 0x4, QuestionId: 0x2734, VarStoreId: 0x1, VarStoreInfo: 0x208, MinSize: 0x0, MaxSize: 0x10, Flags: 0x0 { 1C 90 20 01 26 01 34 27 01 00 08 02 04 00 10 00 }
+0x17487: 			Default DefaultId: 0x0 String: "" { 5B 07 00 00 07 2D 00 }
+0x1748E: 			Default DefaultId: 0x1 String: "" { 5B 07 01 00 07 2D 00 }
+0x17495: 		End  { 29 02 }
+0x17497: 		SuppressIf  { 0A 82 }
+0x17499: 			EqIdVal QuestionId: 0x1B, Value: 0x1 { 12 06 1B 00 01 00 }
+0x1749F: 			GrayOutIf  { 19 82 }
+0x174A1: 				EqIdVal QuestionId: 0x1A, Value: 0x0 { 12 06 1A 00 00 00 }
+0x174A7: 				Action Prompt: "User Password", Help: "Enter BMC User Password", QuestionFlags: 0x4, QuestionId: 0x2735, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, QuestionConfig: "" { 0C 8F 21 01 27 01 35 27 00 00 FF FF 04 00 00 }
+0x174B6: 				End  { 29 02 }
+0x174B8: 			End  { 29 02 }
+0x174BA: 		End  { 29 02 }
+0x174BC: 		GrayOutIf  { 19 82 }
+0x174BE: 			EqIdVal QuestionId: 0x19, Value: 0x0 { 12 06 19 00 00 00 }
+0x174C4: 			Password Prompt: "Change User Password", Help: "Enter New Password to change.", QuestionFlags: 0x4, QuestionId: 0x2738, VarStoreId: 0x1, VarStoreInfo: 0x22A, MinSize: 0x1, MaxSize: 0x14 { 08 91 22 01 2A 01 38 27 01 00 2A 02 04 01 00 14 00 }
+0x174D5: 				Default DefaultId: 0x0 Value: 45 { 5B 07 00 00 01 2D 00 }
+0x174DC: 				Default DefaultId: 0x1 Value: 45 { 5B 07 01 00 01 2D 00 }
+0x174E3: 			End  { 29 02 }
+0x174E5: 			OneOf Prompt: "User Access", Help: "Enable/Disable the BMC User's Access.", QuestionFlags: 0x4, QuestionId: 0x2739, VarStoreId: 0x1, VarOffset: 0x25B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 23 01 2B 01 39 27 01 00 5B 02 04 10 00 01 00 }
+0x174F6: 				OneOfOption Option: "Enable" Value: 1 { 09 07 32 01 00 00 01 }
+0x174FD: 				OneOfOption Option: "Disable" Value: 0 { 09 07 33 01 00 00 00 }
+0x17504: 				Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x1750A: 				Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x17510: 			End  { 29 02 }
+0x17512: 			Numeric Prompt: "Channel No", Help: "Enter BMC Channel Number", QuestionFlags: 0x4, QuestionId: 0x2736, VarStoreId: 0x1, VarOffset: 0x25C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xF, Step: 0x0 { 07 91 24 01 28 01 36 27 01 00 5C 02 04 10 00 0F 00 }
+0x17523: 				Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x17529: 				Default DefaultId: 0x1 Value: 0 { 5B 06 01 00 00 00 }
+0x1752F: 			End  { 29 02 }
+0x17531: 			GrayOutIf  { 19 82 }
+0x17533: 				EqIdVal QuestionId: 0x18, Value: 0x0 { 12 06 18 00 00 00 }
+0x17539: 				OneOf Prompt: "User Privilege Limit", Help: "Enter BMC User Privilege Limit for Selected Channel", QuestionFlags: 0x4, QuestionId: 0x2737, VarStoreId: 0x1, VarOffset: 0x25D, Flags: 0x10, Size: 8, Min: 0x1, Max: 0xF, Step: 0x0 { 05 91 25 01 29 01 37 27 01 00 5D 02 04 10 01 0F 00 }
+0x1754A: 					OneOfOption Option: "No Access" Value: 15 { 09 07 31 01 00 00 0F }
+0x17551: 					SuppressIf  { 0A 82 }
+0x17553: 						EqIdVal QuestionId: 0x17, Value: 0x0 { 12 06 17 00 00 00 }
+0x17559: 						OneOfOption Option: "Callback" Value: 1 { 09 07 2C 01 00 00 01 }
+0x17560: 						SuppressIf  { 0A 82 }
+0x17562: 							EqIdVal QuestionId: 0x17, Value: 0x1 { 12 06 17 00 01 00 }
+0x17568: 							OneOfOption Option: "User" Value: 2 { 09 07 2D 01 00 00 02 }
+0x1756F: 							SuppressIf  { 0A 82 }
+0x17571: 								EqIdVal QuestionId: 0x17, Value: 0x2 { 12 06 17 00 02 00 }
+0x17577: 								OneOfOption Option: "Operator" Value: 3 { 09 07 2E 01 00 00 03 }
+0x1757E: 								SuppressIf  { 0A 82 }
+0x17580: 									EqIdVal QuestionId: 0x17, Value: 0x3 { 12 06 17 00 03 00 }
+0x17586: 									OneOfOption Option: "Administrator" Value: 4 { 09 07 2F 01 00 00 04 }
+0x1758D: 									SuppressIf  { 0A 82 }
+0x1758F: 										EqIdVal QuestionId: 0x17, Value: 0x4 { 12 06 17 00 04 00 }
+0x17595: 										OneOfOption Option: "OEM Proprietary" Value: 5 { 09 07 30 01 00 00 05 }
+0x1759C: 										Default DefaultId: 0x0 Value: 15 { 5B 06 00 00 00 0F }
+0x175A2: 										Default DefaultId: 0x1 Value: 15 { 5B 06 01 00 00 0F }
+0x175A8: 									End  { 29 02 }
+0x175AA: 								End  { 29 02 }
+0x175AC: 							End  { 29 02 }
+0x175AE: 						End  { 29 02 }
+0x175B0: 					End  { 29 02 }
+0x175B2: 				End  { 29 02 }
+0x175B4: 			End  { 29 02 }
+0x175B6: 		End  { 29 02 }
+0x175B8: 		DisableIf  { 1E 82 }
+0x175BA: 			True  { 46 02 }
+0x175BC: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x17, VarStoreId: 0x1, VarOffset: 0x263, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 17 00 01 00 63 02 00 10 00 FF 00 }
+0x175CD: 			End  { 29 02 }
+0x175CF: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x18, VarStoreId: 0x1, VarOffset: 0x25E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 18 00 01 00 5E 02 00 10 00 FF 00 }
+0x175E0: 			End  { 29 02 }
+0x175E2: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x19, VarStoreId: 0x1, VarOffset: 0x261, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 19 00 01 00 61 02 00 10 00 FF 00 }
+0x175F3: 			End  { 29 02 }
+0x175F5: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1A, VarStoreId: 0x1, VarOffset: 0x260, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 1A 00 01 00 60 02 00 10 00 FF 00 }
+0x17606: 			End  { 29 02 }
+0x17608: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1B, VarStoreId: 0x1, VarOffset: 0x25F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 1B 00 01 00 5F 02 00 10 00 FF 00 }
+0x17619: 			End  { 29 02 }
+0x1761B: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1C, VarStoreId: 0x1, VarOffset: 0x25A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 1C 00 01 00 5A 02 00 10 00 FF 00 }
+0x1762C: 			End  { 29 02 }
+0x1762E: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1D, VarStoreId: 0x1, VarOffset: 0x262, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 1D 00 01 00 62 02 00 10 00 FF 00 }
+0x1763F: 			End  { 29 02 }
+0x17641: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1E, VarStoreId: 0x1, VarOffset: 0x259, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 1E 00 01 00 59 02 00 10 00 FF 00 }
+0x17652: 			End  { 29 02 }
+0x17654: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1F, VarStoreId: 0x1, VarOffset: 0x257, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 1F 00 01 00 57 02 00 10 00 FF 00 }
+0x17665: 			End  { 29 02 }
+0x17667: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x20, VarStoreId: 0x1, VarOffset: 0x258, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 20 00 01 00 58 02 00 10 00 FF 00 }
+0x17678: 			End  { 29 02 }
+0x1767A: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x21, VarStoreId: 0x2, VarOffset: 0x0, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0 { 07 94 00 00 00 00 21 00 02 00 00 00 00 11 00 00 FF FF 00 00 }
+0x1768E: 			End  { 29 02 }
+0x17690: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x22, VarStoreId: 0x1, VarOffset: 0x199, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 22 00 01 00 99 01 00 10 00 FF 00 }
+0x176A1: 			End  { 29 02 }
+0x176A3: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x23, VarStoreId: 0x1, VarOffset: 0x21, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0 { 07 94 00 00 00 00 23 00 01 00 21 00 00 11 00 00 FF FF 00 00 }
+0x176B7: 			End  { 29 02 }
+0x176B9: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x24, VarStoreId: 0xF000, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 24 00 00 F0 00 00 00 10 00 FF 00 }
+0x176CA: 			End  { 29 02 }
+0x176CC: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x25, VarStoreId: 0x1, VarOffset: 0x15, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 25 00 01 00 15 00 00 10 00 FF 00 }
+0x176DD: 			End  { 29 02 }
+0x176DF: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x26, VarStoreId: 0x1, VarOffset: 0x14, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 26 00 01 00 14 00 00 10 00 FF 00 }
+0x176F0: 			End  { 29 02 }
+0x176F2: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x27, VarStoreId: 0x1, VarOffset: 0x13, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 27 00 01 00 13 00 00 10 00 FF 00 }
+0x17703: 			End  { 29 02 }
+0x17705: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x28, VarStoreId: 0x1, VarOffset: 0x12, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 28 00 01 00 12 00 00 10 00 FF 00 }
+0x17716: 			End  { 29 02 }
+0x17718: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x29, VarStoreId: 0x1, VarOffset: 0x11, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 29 00 01 00 11 00 00 10 00 FF 00 }
+0x17729: 			End  { 29 02 }
+0x1772B: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x2A, VarStoreId: 0x1, VarOffset: 0x10, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 2A 00 01 00 10 00 00 10 00 FF 00 }
+0x1773C: 			End  { 29 02 }
+0x1773E: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x2B, VarStoreId: 0x1, VarOffset: 0xE, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 2B 00 01 00 0E 00 00 10 00 FF 00 }
+0x1774F: 			End  { 29 02 }
+0x17751: 		End  { 29 02 }
+0x17753: 	End  { 29 02 }
+0x17755: End  { 29 02 }
