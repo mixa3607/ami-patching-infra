@@ -27,7 +27,9 @@ Features:
 - ✅ - работает как задумано
 - ❌ - не работает
 - ❓ - есть вопросы
-``
+
+` `
+
 - Socket Configuration
   - Unicore Configuration
     - Unicore General Configuration
@@ -36,3 +38,4 @@ Features:
   - Memory Configuration
     - ✅ Memory Frequency | но не оверклок частоты (оно и понятно)
     - ✅ Memory Topology
+
