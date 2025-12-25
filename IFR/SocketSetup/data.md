@@ -24,48 +24,48 @@
 |         - IOT Cfg                                                                         | OneOf    | [🟢0x45E9C]                                                                              |
 |         -  Num of OCLA Ways                                                               | Numeric  | [🟢0x45E9C, 🟢0x45ED9]                                                                   |
 |         -  OCLA Tor IDs                                                                   | Numeric  | [🟢0x45E9C, 🟢0x45F02]                                                                   |
-|     - ACM Type                                                                            | Numeric  | [🟢0x4366A]                                                                              |
-|     - Hyper-Threading [ALL]                                                               | OneOf    | [🟢0x4385C, 🟢0x43864]                                                                   |
-|     - IED Trace memory                                                                    | OneOf    | [🟢0x4389B]                                                                              |
-|     - Skip Flex Ratio Override                                                            | OneOf    | [🟢0x4389B]                                                                              |
-|     - Check CPU BIST Result                                                               | OneOf    | [🟢0x4389B]                                                                              |
-|     - Core Failover                                                                       | OneOf    | [🟢0x4389B, 🟢0x4393E]                                                                   |
-|     - 3StrikeTimer                                                                        | OneOf    | [🟢0x4389B]                                                                              |
-|     - Fast String                                                                         | OneOf    | [🟢0x439A0]                                                                              |
-|     - Machine Check                                                                       | OneOf    | [🟢0x439A0]                                                                              |
-|     - Max CPUID Value Limit                                                               | OneOf    | [🟢0x439A0]                                                                              |
-|     - MtoI Workaround                                                                     | OneOf    | [🟢0x439A0, 🟢0x43A0B]                                                                   |
-|     - Hardware Prefetcher                                                                 | OneOf    | [🟢0x439A0]                                                                              |
-|     - L2 RFO Prefetch Disable                                                             | OneOf    | [🟢0x439A0]                                                                              |
-|     - Adjacent Cache Prefetch                                                             | OneOf    | [🟢0x439A0]                                                                              |
-|     - DCU Streamer Prefetcher                                                             | OneOf    | [🟢0x439A0]                                                                              |
-|     - DCU IP Prefetcher                                                                   | OneOf    | [🟢0x439A0]                                                                              |
-|     - LLC Prefetch                                                                        | OneOf    | [🟢0x439A0]                                                                              |
-|     - DCU Mode                                                                            | OneOf    | [🟢0x439A0]                                                                              |
-|     - L1 Next Page Prefetcher                                                             | OneOf    | [🟢0x439A0, 🟢0x43B2B]                                                                   |
-|     - AMP Prefetch                                                                        | OneOf    | [🟢0x439A0, 🟢0x43B62]                                                                   |
-|     - Bsp Selection                                                                       | OneOf    | [🟢0x439A0]                                                                              |
-|     - Extended APIC                                                                       | OneOf    | [🟢0x439A0]                                                                              |
-|     - APIC Physical Mode                                                                  | OneOf    | [🟢0x439A0]                                                                              |
-|     - Down Stream PECI                                                                    | OneOf    | [🟢0x439A0]                                                                              |
-|     - PECI                                                                                | OneOf    | [🟢0x439A0]                                                                              |
-|     - DBP-F                                                                               | OneOf    | [🟢0x439A0, 🟢0x43C71]                                                                   |
+|     - ACM Type                                                                            | Numeric  | [🔘0x4366A]                                                                              |
+|     - Hyper-Threading [ALL]                                                               | OneOf    | [🔘0x4385C, 🔘0x43864]                                                                   |
+|     - IED Trace memory                                                                    | OneOf    | [🔘0x4389B]                                                                              |
+|     - Skip Flex Ratio Override                                                            | OneOf    | [🔘0x4389B]                                                                              |
+|     - Check CPU BIST Result                                                               | OneOf    | [🔘0x4389B]                                                                              |
+|     - Core Failover                                                                       | OneOf    | [🔘0x4389B, 🔘0x4393E]                                                                   |
+|     - 3StrikeTimer                                                                        | OneOf    | [🔘0x4389B]                                                                              |
+|     - Fast String                                                                         | OneOf    | [🔘0x439A0]                                                                              |
+|     - Machine Check                                                                       | OneOf    | [🔘0x439A0]                                                                              |
+|     - Max CPUID Value Limit                                                               | OneOf    | [🔘0x439A0]                                                                              |
+|     - MtoI Workaround                                                                     | OneOf    | [🔘0x439A0, 🔘0x43A0B]                                                                   |
+|     - Hardware Prefetcher                                                                 | OneOf    | [🔘0x439A0]                                                                              |
+|     - L2 RFO Prefetch Disable                                                             | OneOf    | [🔘0x439A0]                                                                              |
+|     - Adjacent Cache Prefetch                                                             | OneOf    | [🔘0x439A0]                                                                              |
+|     - DCU Streamer Prefetcher                                                             | OneOf    | [🔘0x439A0]                                                                              |
+|     - DCU IP Prefetcher                                                                   | OneOf    | [🔘0x439A0]                                                                              |
+|     - LLC Prefetch                                                                        | OneOf    | [🔘0x439A0]                                                                              |
+|     - DCU Mode                                                                            | OneOf    | [🔘0x439A0]                                                                              |
+|     - L1 Next Page Prefetcher                                                             | OneOf    | [🔘0x439A0, 🟢0x43B2B]                                                                   |
+|     - AMP Prefetch                                                                        | OneOf    | [🔘0x439A0, 🟢0x43B62]                                                                   |
+|     - Bsp Selection                                                                       | OneOf    | [🔘0x439A0]                                                                              |
+|     - Extended APIC                                                                       | OneOf    | [🔘0x439A0]                                                                              |
+|     - APIC Physical Mode                                                                  | OneOf    | [🔘0x439A0]                                                                              |
+|     - Down Stream PECI                                                                    | OneOf    | [🔘0x439A0]                                                                              |
+|     - PECI                                                                                | OneOf    | [🔘0x439A0]                                                                              |
+|     - DBP-F                                                                               | OneOf    | [🔘0x439A0, 🟢0x43C71]                                                                   |
 |     - IIO LLC Ways [19:0](Hex)                                                            | Numeric  | [🟢0x43CA8]                                                                              |
 |     - Remote Ways [22:12](Hex)                                                            | Numeric  | [🟢0x43CA8]                                                                              |
-|     - SMM Blocked and Delayed                                                             | OneOf    | [🟢0x43D0E]                                                                              |
-|     - eSMM Save State                                                                     | OneOf    | [🟢0x43D0E]                                                                              |
-|     - Smbus Error Recovery                                                                | OneOf    | [🟢0x43D0E]                                                                              |
-|     - Enable Intel(R) TXT                                                                 | OneOf    | [🟢0x43D0E]                                                                              |
-|     - VMX                                                                                 | OneOf    | [🟢0x43D0E]                                                                              |
-|     - Enable SMX                                                                          | OneOf    | [🟢0x43D0E]                                                                              |
-|     - Lock Chipset                                                                        | OneOf    | [🟢0x43D0E]                                                                              |
-|     - BIOS ACM Error Reset                                                                | OneOf    | [🟢0x43D0E, 🟢0x43E1B]                                                                   |
-|     - MSR Lock Control                                                                    | OneOf    | [🟢0x43D0E]                                                                              |
-|     - PKG CST CONFIG CONTROL MSR Lock                                                     | OneOf    | [🟢0x43D0E]                                                                              |
-|     - PPIN Control                                                                        | OneOf    | [🟢0x43D0E]                                                                              |
-|     - AES-NI                                                                              | OneOf    | [🟢0x43D0E]                                                                              |
-|     - TSC Reset                                                                           | OneOf    | [🟢0x43D0E, 🟢0x43ECA]                                                                   |
-|     - #AC Exception On Split Lock                                                         | OneOf    | [🟢0x43D0E, 🟢0x43F11]                                                                   |
+|     - SMM Blocked and Delayed                                                             | OneOf    | [🔘0x43D0E]                                                                              |
+|     - eSMM Save State                                                                     | OneOf    | [🔘0x43D0E]                                                                              |
+|     - Smbus Error Recovery                                                                | OneOf    | [🔘0x43D0E]                                                                              |
+|     - Enable Intel(R) TXT                                                                 | OneOf    | [🔘0x43D0E]                                                                              |
+|     - VMX                                                                                 | OneOf    | [🔘0x43D0E]                                                                              |
+|     - Enable SMX                                                                          | OneOf    | [🔘0x43D0E]                                                                              |
+|     - Lock Chipset                                                                        | OneOf    | [🔘0x43D0E]                                                                              |
+|     - BIOS ACM Error Reset                                                                | OneOf    | [🔘0x43D0E, 🟢0x43E1B]                                                                   |
+|     - MSR Lock Control                                                                    | OneOf    | [🔘0x43D0E]                                                                              |
+|     - PKG CST CONFIG CONTROL MSR Lock                                                     | OneOf    | [🔘0x43D0E]                                                                              |
+|     - PPIN Control                                                                        | OneOf    | [🔘0x43D0E]                                                                              |
+|     - AES-NI                                                                              | OneOf    | [🔘0x43D0E]                                                                              |
+|     - TSC Reset                                                                           | OneOf    | [🔘0x43D0E, 🟢0x43ECA]                                                                   |
+|     - #AC Exception On Split Lock                                                         | OneOf    | [🔘0x43D0E, 🟢0x43F11]                                                                   |
 |     - Total Memory Encryption (TME)                                                       | OneOf    | [🟢0x43F42, 🟢0x43F56]                                                                   |
 |     - Total Memory Encryption Multi-Tenant(TME-MT)                                        | OneOf    | [🟢0x43F42, 🟢0x43F56, 🟢0x43FA2]                                                        |
 |     - SW Guard Extensions (SGX)                                                           | OneOf    | [🟢0x43F42, 🟢0x43FE3, 🟢0x44022]                                                        |
@@ -85,7 +85,7 @@
 |     - SGXLEPUBKEYHASH3                                                                    | Numeric  | [🟢0x43F42, 🟢0x43FE3, 🟢0x44133, 🟢0x44474]                                             |
 |     - Enable/Disable SGX Auto MP Registration Agent                                       | OneOf    | [🟢0x43F42, 🟢0x43FE3, 🟢0x44133]                                                        |
 |     - Limit CPU PA to 46 bits                                                             | OneOf    | [🟢0x44552, 🟢0x4455A]                                                                   |
-|     - PSMI Configuration:                                                                 | Ref      | [🟢0x44591]                                                                              |
+|     - PSMI Configuration:                                                                 | Ref      | [🔘0x44591]                                                                              |
 |       - Global PSMI Enable                                                                | OneOf    | [🟢0x446B9]                                                                              |
 |       - Socket 0 Configuration:                                                           | Ref      | [🟢0x446EB]                                                                              |
 |         - PSMI Enable                                                                     | OneOf    | [🟢0x4477A]                                                                              |
