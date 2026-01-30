@@ -1,0 +1,10 @@
+{
+  "targetSize": 1048432,
+  "sectionBaseAddress": "0xFFB00090",
+  "microcodeFiles": [
+    //"cpu606A0_plat97_ver0000001F_2019-07-22_PRD_776B0020.bin",
+    "cpu606A4_plat87_ver0B000280_2020-08-17_PRD_5E6AE35E.bin",
+    "cpu606A5_plat87_ver0C0002F0_2021-03-08_PRD_F6B24822.bin",
+    "cpu606A6_plat87_ver0D000421_2025-08-19_PRD_282B901A.bin",
+  ]
+}

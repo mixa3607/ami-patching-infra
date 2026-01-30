@@ -68,6 +68,21 @@ function patch_IFRs {
   $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$SETUPDATA_GUID" 0x18 "$SETUPDATA_FILE" -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
 }
 
+function patch_mcodes {
+  echo "Building microcodes and FIT"
+  pushd "$SOURCES_DIR/MCODES"
+  $uefimodtools  uefi mcodes-combine -t microcodes.json -o $BUILD_DIR/microcodes.bin --output-fit $BUILD_DIR/microcodes-fit.bin
+  popd
+  
+  echo "Injecting microcodes"
+  $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "17088572-377F-44EF-8F4E-B09FFF46A070" 0x01 "$BUILD_DIR/microcodes.bin" -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
+  
+  echo "Injecting FIT"
+  cp "$SOURCES_DIR/MCODES/FIT_table_base.bin" "$BUILD_DIR/fit.bin"
+  dd bs=1 if="$BUILD_DIR/microcodes-fit.bin" skip=0 of="$BUILD_DIR/fit.bin" seek=16
+  $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "B52282EE-9B66-44B9-B1CF-7E5040F787C1" 0x01 "$BUILD_DIR/fit.bin" -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
+}
+
 function patch_dmi {
   echo "Processing DMI table"
   DMI_TABLE_GUID="$(ls "$SOURCES_DIR/DMI" | grep '\.guid$' | sed 's|\.guid$||1')"
@@ -99,19 +114,20 @@ echo "Base BIOS dump: $SOURCES_DIR/$BASE_DUMP"
 echo "Patched BIOS dump: $BUILD_DIR/$PATCHED_DUMP"
 echo
 
-echo "==================== Prepare "====================
+echo "==================== Prepare ===================="
 rm -r "$BUILD_DIR" || true
 mkdir -p "$BUILD_DIR"
 pushd "$BUILD_DIR"
 cp "$SOURCES_DIR/$BASE_DUMP" "$BUILD_DIR/$PATCHED_DUMP"
 echo
 
-echo "==================== Patch "====================
-patch_dmi
-patch_logos
-patch_IFRs
+echo "==================== Patch ===================="
+#patch_dmi
+#patch_logos
+#patch_IFRs
+patch_mcodes
 echo
 
-echo "==================== Final "====================
+echo "==================== Final ===================="
 echo "Final BIOS rom: $BUILD_DIR/$PATCHED_DUMP"
 popd
