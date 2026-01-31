@@ -1,0 +1,43 @@
+{
+  "partitions": [
+    {
+      "fileName": "10_FIT_table.bin",
+      "description": "FPT data",
+      "beginAddress": "0x01FFA200",
+      "endAddress": "0x01FFA2A8",
+    },
+    //{
+    //  "fileName": "20_microcodes_header.bin",
+    //  "description": "197DB236-F856-4924-90F8-CDF12FB875F3 header",
+    //  "beginAddress": "0x01150078",
+    //  "endAddress": "0x01150090",
+    //},
+    //{
+    //  "fileName": "21_microcodes_body.bin",
+    //  "beginAddress": "0x01150090",
+    //  "endAddress": "0x01196490",
+    //},
+    {
+      "fileName": "microcodes_hole-0.bin",
+      "description": "197DB236-F856-4924-90F8-CDF12FB875F3 body",
+      "beginAddress": "0x01150090",
+      "endAddress": "0x01196490",
+    },
+    {
+      "fileName": "microcodes_hole-1.bin",
+      "description": "197DB236-F856-4924-90F8-CDF12FB875F3 next pad space",
+      "beginAddress": "0x01196490",
+      "endAddress": "0x01220000",
+    },
+    //{
+    //  "fileName": "30_empty-space_header.bin",
+    //  "beginAddress": "0x01100000",
+    //  "endAddress": "0x01100074",
+    //},
+    {
+      "fileName": "microcodes_hole-2.bin",
+      "beginAddress": "0x01100078",
+      "endAddress": "0x01150000",
+    },
+  ]
+}
