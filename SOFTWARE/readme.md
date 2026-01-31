@@ -24,7 +24,7 @@ $ tree -I readme.md
 │   ├── uefiextract
 │   ├── uefifind
 │   └── uefitool
-└── uefi-mod-tools_v1.0.1
+└── uefi-mod-tools_v1.3.0
     └── uefi-mod-tools
 
 8 directories, 10 files

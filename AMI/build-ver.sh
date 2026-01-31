@@ -32,8 +32,8 @@ PATCHED_DUMP="IMB760_BIOS_mixa3607_mod-$PATCH_VERSION.rom"
 SOURCES_DIR="$PWD"
 BUILD_DIR="$PWD/build-$PATCH_VERSION"
 
-uefireplace="$PWD/SOFTWARE/UEFITool_0.28.0/UEFIReplace"
-uefimodtools="$PWD/SOFTWARE/uefi-mod-tools_v1.0.1/uefi-mod-tools"
+uefireplace="$PWD/../SOFTWARE/UEFITool_0.28.0/UEFIReplace"
+uefimodtools="$PWD/../SOFTWARE/uefi-mod-tools_v1.3.0/uefi-mod-tools"
 
 function patch_logos {
   # patch big logo
@@ -69,17 +69,22 @@ function patch_IFRs {
 }
 
 function patch_mcodes {
-  echo "Building microcodes and FIT"
-  pushd "$SOURCES_DIR/MCODES"
-  $uefimodtools  uefi mcodes-combine -t microcodes.json -o $BUILD_DIR/microcodes.bin --output-fit $BUILD_DIR/microcodes-fit.bin
-  popd
-  
+  echo "Building microcodes"
+  $uefimodtools uefi mcodes-combine \
+    --input  "$SOURCES_DIR/microcodes_base.bin" \
+    --table  "$SOURCES_DIR/microcodes.json" \
+    --mcodes "$SOURCES_DIR/../MCODES" \
+    --output "$BUILD_DIR/microcodes.bin"
   echo "Injecting microcodes"
   $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "17088572-377F-44EF-8F4E-B09FFF46A070" 0x01 "$BUILD_DIR/microcodes.bin" -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
-  
+
+  echo "Building FIT"
+  $uefimodtools uefi fit-inject-mcodes \
+    --input  "$SOURCES_DIR/FIT_table_base.bin" \
+    --table  "$SOURCES_DIR/microcodes.json" \
+    --mcodes "$SOURCES_DIR/../MCODES" \
+    --output "$BUILD_DIR/fit.bin"
   echo "Injecting FIT"
-  cp "$SOURCES_DIR/MCODES/FIT_table_base.bin" "$BUILD_DIR/fit.bin"
-  dd bs=1 if="$BUILD_DIR/microcodes-fit.bin" skip=0 of="$BUILD_DIR/fit.bin" seek=16
   $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "B52282EE-9B66-44B9-B1CF-7E5040F787C1" 0x01 "$BUILD_DIR/fit.bin" -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
 }
 
@@ -122,9 +127,9 @@ cp "$SOURCES_DIR/$BASE_DUMP" "$BUILD_DIR/$PATCHED_DUMP"
 echo
 
 echo "==================== Patch ===================="
-#patch_dmi
-#patch_logos
-#patch_IFRs
+patch_dmi
+patch_logos
+patch_IFRs
 patch_mcodes
 echo
 
