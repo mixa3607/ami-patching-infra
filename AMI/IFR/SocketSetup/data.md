@@ -3,7 +3,7 @@
 |-------------------------------------------------------------------------------------------|----------|------------------------------------------------------------------------------------------|
 | - Socket Configuration:                                                                   | Menu     |                                                                                          |
 |   - Processor Configuration:                                                              | Ref      |                                                                                          |
-|     - Per-Socket Configuration:                                                           | Ref      | [🔘0x43651]                                                                              |
+|     - Per-Socket Configuration:                                                           | Ref      | [🟢0x43651]                                                                              |
 |       - CPU Socket 0 Configuration:                                                       | Ref      |                                                                                          |
 |         - Core Disable Bitmap(Hex)                                                        | Numeric  | [🟢0x45AE8]                                                                              |
 |         - IOT Cfg                                                                         | OneOf    | [🟢0x45B42]                                                                              |
@@ -24,48 +24,48 @@
 |         - IOT Cfg                                                                         | OneOf    | [🟢0x45E9C]                                                                              |
 |         -  Num of OCLA Ways                                                               | Numeric  | [🟢0x45E9C, 🟢0x45ED9]                                                                   |
 |         -  OCLA Tor IDs                                                                   | Numeric  | [🟢0x45E9C, 🟢0x45F02]                                                                   |
-|     - ACM Type                                                                            | Numeric  | [🔘0x4366A]                                                                              |
-|     - Hyper-Threading [ALL]                                                               | OneOf    | [🔘0x4385C, 🔘0x43864]                                                                   |
-|     - IED Trace memory                                                                    | OneOf    | [🔘0x4389B]                                                                              |
-|     - Skip Flex Ratio Override                                                            | OneOf    | [🔘0x4389B]                                                                              |
-|     - Check CPU BIST Result                                                               | OneOf    | [🔘0x4389B]                                                                              |
-|     - Core Failover                                                                       | OneOf    | [🔘0x4389B, 🔘0x4393E]                                                                   |
-|     - 3StrikeTimer                                                                        | OneOf    | [🔘0x4389B]                                                                              |
-|     - Fast String                                                                         | OneOf    | [🔘0x439A0]                                                                              |
-|     - Machine Check                                                                       | OneOf    | [🔘0x439A0]                                                                              |
-|     - Max CPUID Value Limit                                                               | OneOf    | [🔘0x439A0]                                                                              |
-|     - MtoI Workaround                                                                     | OneOf    | [🔘0x439A0, 🔘0x43A0B]                                                                   |
-|     - Hardware Prefetcher                                                                 | OneOf    | [🔘0x439A0]                                                                              |
-|     - L2 RFO Prefetch Disable                                                             | OneOf    | [🔘0x439A0]                                                                              |
-|     - Adjacent Cache Prefetch                                                             | OneOf    | [🔘0x439A0]                                                                              |
-|     - DCU Streamer Prefetcher                                                             | OneOf    | [🔘0x439A0]                                                                              |
-|     - DCU IP Prefetcher                                                                   | OneOf    | [🔘0x439A0]                                                                              |
-|     - LLC Prefetch                                                                        | OneOf    | [🔘0x439A0]                                                                              |
-|     - DCU Mode                                                                            | OneOf    | [🔘0x439A0]                                                                              |
-|     - L1 Next Page Prefetcher                                                             | OneOf    | [🔘0x439A0, 🟢0x43B2B]                                                                   |
-|     - AMP Prefetch                                                                        | OneOf    | [🔘0x439A0, 🟢0x43B62]                                                                   |
-|     - Bsp Selection                                                                       | OneOf    | [🔘0x439A0]                                                                              |
-|     - Extended APIC                                                                       | OneOf    | [🔘0x439A0]                                                                              |
-|     - APIC Physical Mode                                                                  | OneOf    | [🔘0x439A0]                                                                              |
-|     - Down Stream PECI                                                                    | OneOf    | [🔘0x439A0]                                                                              |
-|     - PECI                                                                                | OneOf    | [🔘0x439A0]                                                                              |
-|     - DBP-F                                                                               | OneOf    | [🔘0x439A0, 🟢0x43C71]                                                                   |
+|     - ACM Type                                                                            | Numeric  | [🟢0x4366A]                                                                              |
+|     - Hyper-Threading [ALL]                                                               | OneOf    | [🟢0x4385C, 🟢0x43864]                                                                   |
+|     - IED Trace memory                                                                    | OneOf    | [🟢0x4389B]                                                                              |
+|     - Skip Flex Ratio Override                                                            | OneOf    | [🟢0x4389B]                                                                              |
+|     - Check CPU BIST Result                                                               | OneOf    | [🟢0x4389B]                                                                              |
+|     - Core Failover                                                                       | OneOf    | [🟢0x4389B, 🟢0x4393E]                                                                   |
+|     - 3StrikeTimer                                                                        | OneOf    | [🟢0x4389B]                                                                              |
+|     - Fast String                                                                         | OneOf    | [🟢0x439A0]                                                                              |
+|     - Machine Check                                                                       | OneOf    | [🟢0x439A0]                                                                              |
+|     - Max CPUID Value Limit                                                               | OneOf    | [🟢0x439A0]                                                                              |
+|     - MtoI Workaround                                                                     | OneOf    | [🟢0x439A0, 🟢0x43A0B]                                                                   |
+|     - Hardware Prefetcher                                                                 | OneOf    | [🟢0x439A0]                                                                              |
+|     - L2 RFO Prefetch Disable                                                             | OneOf    | [🟢0x439A0]                                                                              |
+|     - Adjacent Cache Prefetch                                                             | OneOf    | [🟢0x439A0]                                                                              |
+|     - DCU Streamer Prefetcher                                                             | OneOf    | [🟢0x439A0]                                                                              |
+|     - DCU IP Prefetcher                                                                   | OneOf    | [🟢0x439A0]                                                                              |
+|     - LLC Prefetch                                                                        | OneOf    | [🟢0x439A0]                                                                              |
+|     - DCU Mode                                                                            | OneOf    | [🟢0x439A0]                                                                              |
+|     - L1 Next Page Prefetcher                                                             | OneOf    | [🟢0x439A0, 🟢0x43B2B]                                                                   |
+|     - AMP Prefetch                                                                        | OneOf    | [🟢0x439A0, 🟢0x43B62]                                                                   |
+|     - Bsp Selection                                                                       | OneOf    | [🟢0x439A0]                                                                              |
+|     - Extended APIC                                                                       | OneOf    | [🟢0x439A0]                                                                              |
+|     - APIC Physical Mode                                                                  | OneOf    | [🟢0x439A0]                                                                              |
+|     - Down Stream PECI                                                                    | OneOf    | [🟢0x439A0]                                                                              |
+|     - PECI                                                                                | OneOf    | [🟢0x439A0]                                                                              |
+|     - DBP-F                                                                               | OneOf    | [🟢0x439A0, 🟢0x43C71]                                                                   |
 |     - IIO LLC Ways [19:0](Hex)                                                            | Numeric  | [🟢0x43CA8]                                                                              |
 |     - Remote Ways [22:12](Hex)                                                            | Numeric  | [🟢0x43CA8]                                                                              |
-|     - SMM Blocked and Delayed                                                             | OneOf    | [🔘0x43D0E]                                                                              |
-|     - eSMM Save State                                                                     | OneOf    | [🔘0x43D0E]                                                                              |
-|     - Smbus Error Recovery                                                                | OneOf    | [🔘0x43D0E]                                                                              |
-|     - Enable Intel(R) TXT                                                                 | OneOf    | [🔘0x43D0E]                                                                              |
-|     - VMX                                                                                 | OneOf    | [🔘0x43D0E]                                                                              |
-|     - Enable SMX                                                                          | OneOf    | [🔘0x43D0E]                                                                              |
-|     - Lock Chipset                                                                        | OneOf    | [🔘0x43D0E]                                                                              |
-|     - BIOS ACM Error Reset                                                                | OneOf    | [🔘0x43D0E, 🟢0x43E1B]                                                                   |
-|     - MSR Lock Control                                                                    | OneOf    | [🔘0x43D0E]                                                                              |
-|     - PKG CST CONFIG CONTROL MSR Lock                                                     | OneOf    | [🔘0x43D0E]                                                                              |
-|     - PPIN Control                                                                        | OneOf    | [🔘0x43D0E]                                                                              |
-|     - AES-NI                                                                              | OneOf    | [🔘0x43D0E]                                                                              |
-|     - TSC Reset                                                                           | OneOf    | [🔘0x43D0E, 🟢0x43ECA]                                                                   |
-|     - #AC Exception On Split Lock                                                         | OneOf    | [🔘0x43D0E, 🟢0x43F11]                                                                   |
+|     - SMM Blocked and Delayed                                                             | OneOf    | [🟢0x43D0E]                                                                              |
+|     - eSMM Save State                                                                     | OneOf    | [🟢0x43D0E]                                                                              |
+|     - Smbus Error Recovery                                                                | OneOf    | [🟢0x43D0E]                                                                              |
+|     - Enable Intel(R) TXT                                                                 | OneOf    | [🟢0x43D0E]                                                                              |
+|     - VMX                                                                                 | OneOf    | [🟢0x43D0E]                                                                              |
+|     - Enable SMX                                                                          | OneOf    | [🟢0x43D0E]                                                                              |
+|     - Lock Chipset                                                                        | OneOf    | [🟢0x43D0E]                                                                              |
+|     - BIOS ACM Error Reset                                                                | OneOf    | [🟢0x43D0E, 🟢0x43E1B]                                                                   |
+|     - MSR Lock Control                                                                    | OneOf    | [🟢0x43D0E]                                                                              |
+|     - PKG CST CONFIG CONTROL MSR Lock                                                     | OneOf    | [🟢0x43D0E]                                                                              |
+|     - PPIN Control                                                                        | OneOf    | [🟢0x43D0E]                                                                              |
+|     - AES-NI                                                                              | OneOf    | [🟢0x43D0E]                                                                              |
+|     - TSC Reset                                                                           | OneOf    | [🟢0x43D0E, 🟢0x43ECA]                                                                   |
+|     - #AC Exception On Split Lock                                                         | OneOf    | [🟢0x43D0E, 🟢0x43F11]                                                                   |
 |     - Total Memory Encryption (TME)                                                       | OneOf    | [🟢0x43F42, 🟢0x43F56]                                                                   |
 |     - Total Memory Encryption Multi-Tenant(TME-MT)                                        | OneOf    | [🟢0x43F42, 🟢0x43F56, 🟢0x43FA2]                                                        |
 |     - SW Guard Extensions (SGX)                                                           | OneOf    | [🟢0x43F42, 🟢0x43FE3, 🟢0x44022]                                                        |
@@ -85,7 +85,7 @@
 |     - SGXLEPUBKEYHASH3                                                                    | Numeric  | [🟢0x43F42, 🟢0x43FE3, 🟢0x44133, 🟢0x44474]                                             |
 |     - Enable/Disable SGX Auto MP Registration Agent                                       | OneOf    | [🟢0x43F42, 🟢0x43FE3, 🟢0x44133]                                                        |
 |     - Limit CPU PA to 46 bits                                                             | OneOf    | [🟢0x44552, 🟢0x4455A]                                                                   |
-|     - PSMI Configuration:                                                                 | Ref      | [🔘0x44591]                                                                              |
+|     - PSMI Configuration:                                                                 | Ref      | [🟢0x44591]                                                                              |
 |       - Global PSMI Enable                                                                | OneOf    | [🟢0x446B9]                                                                              |
 |       - Socket 0 Configuration:                                                           | Ref      | [🟢0x446EB]                                                                              |
 |         - PSMI Enable                                                                     | OneOf    | [🟢0x4477A]                                                                              |
@@ -160,7 +160,7 @@
 |         -     Buffer Size                                                                 | OneOf    | [🟢0x455B1, 🟢0x45970, 🟢0x45999]                                                        |
 |         -     Cache Type                                                                  | OneOf    | [🟢0x455B1, 🟢0x45970, 🟢0x45999]                                                        |
 |     - RDT CAT Opportunistic Tuning                                                        | OneOf    | [🟢0x445AA, 🟢0x445CC]                                                                   |
-|   - Common RefCode Configuration:                                                         | Ref      | [🔘0x126D9]                                                                              |
+|   - Common RefCode Configuration:                                                         | Ref      | [🟢0x126D9]                                                                              |
 |     - MMCFG Base                                                                          | OneOf    |                                                                                          |
 |     - MMCFG Size                                                                          | OneOf    |                                                                                          |
 |     - MMIO High Base                                                                      | OneOf    |                                                                                          |
@@ -172,7 +172,7 @@
 |     - Publish SRAT                                                                        | OneOf    |                                                                                          |
 |     - SRAT Memory Hot Plug                                                                | OneOf    | [🟢0x12A27]                                                                              |
 |     - SRAT CPU Hot Plug                                                                   | OneOf    | [🟢0x12A27]                                                                              |
-|   - Uncore Configuration:                                                                 | Ref      | [🔘0x126D9]                                                                              |
+|   - Uncore Configuration:                                                                 | Ref      | [🟢0x126D9]                                                                              |
 |     - Uncore General Configuration:                                                       | Ref      |                                                                                          |
 |       - Uncore Status                                                                     | Ref      |                                                                                          |
 |       - Degrade Precedence                                                                | OneOf    |                                                                                          |
@@ -282,7 +282,7 @@
 |           - Current UPI Link Speed                                                        | OneOf    | [🟢0x13FA0]                                                                              |
 |           - Current UPI Link Speed                                                        | OneOf    | [🟢0x13FF5]                                                                              |
 |         - Bus Resources Allocation Ratio                                                  | Numeric  |                                                                                          |
-|   - Memory Configuration:                                                                 | Ref      | [🔘0x12701]                                                                              |
+|   - Memory Configuration:                                                                 | Ref      | [🟢0x12701]                                                                              |
 |     - Enforce POR                                                                         | OneOf    |                                                                                          |
 |     - Enforce Population POR                                                              | OneOf    | [🟢0x3FA92]                                                                              |
 |     - PPR Type                                                                            | OneOf    |                                                                                          |
@@ -594,18 +594,18 @@
 |       - IOU2 (IIO PCIe Port 3)                                                            | OneOf    | [🟢0x1481D, 🟢0x14862, 🟢0x148B9]                                                        |
 |       - IOU3 (IIO PCIe Port 4)                                                            | OneOf    | [🟢0x1481D, 🟢0x14862, 🟢0x148B9]                                                        |
 |       - IOU4 (IIO PCIe Port 5)                                                            | OneOf    | [🟢0x1481D, 🟢0x14862, 🟢0x148B9]                                                        |
-|       - Enable PCI-E Completion Timeout (Per-Port)                                        | OneOf    | [🟢0x1497E]                                                                              |
-|       - PCI-E Completion Timeout Value                                                    | OneOf    | [🟢0x1497E, 🟢0x149A7]                                                                   |
-|       - Sck0 RP Correctable Err                                                           | OneOf    | [🟢0x14A2D]                                                                              |
-|       - Sck0 RP NonFatal Uncorrectable Err                                                | OneOf    | [🟢0x14A2D]                                                                              |
-|       - Sck0 RP Fatal Uncorrectable Err                                                   | OneOf    | [🟢0x14A2D]                                                                              |
-|       - TraceHub Configuration Menu:                                                      | Ref      | [🟢0x14A9A]                                                                              |
+|       - Enable PCI-E Completion Timeout (Per-Port)                                        | OneOf    | [🔘0x1497E]                                                                              |
+|       - PCI-E Completion Timeout Value                                                    | OneOf    | [🔘0x1497E, 🟢0x149A7]                                                                   |
+|       - Sck0 RP Correctable Err                                                           | OneOf    | [🔘0x14A2D]                                                                              |
+|       - Sck0 RP NonFatal Uncorrectable Err                                                | OneOf    | [🔘0x14A2D]                                                                              |
+|       - Sck0 RP Fatal Uncorrectable Err                                                   | OneOf    | [🔘0x14A2D]                                                                              |
+|       - TraceHub Configuration Menu:                                                      | Ref      | [🔘0x14A9A]                                                                              |
 |         - North Trace Hub Enable Mode                                                     | OneOf    |                                                                                          |
 |         - North TH Mem Buffer Size 0                                                      | OneOf    | [🟢0x180A9]                                                                              |
 |         - North TH Mem Buffer Size 1                                                      | OneOf    | [🟢0x180A9]                                                                              |
 |         - Sierra Peak Memory Region Buffer Size                                           | OneOf    | [🟢0x180A9]                                                                              |
 |       - <empty>                                                                           | CheckBox | [🟢0x14AB3]                                                                              |
-|       - Port 0/DMI:                                                                       | Ref      | [🟢0x14AC9]                                                                              |
+|       - Port 0/DMI:                                                                       | Ref      | [🔘0x14AC9]                                                                              |
 |         - Link Speed                                                                      | OneOf    |                                                                                          |
 |         - Override Max Link Width                                                         | OneOf    | [🟢0x1C6A7]                                                                              |
 |         - PCI-E Port DeEmphasis                                                           | OneOf    | [🟢0x1C6DC]                                                                              |
@@ -635,7 +635,7 @@
 |         - IODC Configuration                                                              | OneOf    | [🟢0x1CA58]                                                                              |
 |         - <empty>                                                                         | CheckBox | [🟢0x1CAA9]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 1A:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14AE0]                                                                   |
+|       - Port 1A:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14AE0]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x1CB2B, 🟢0x1CB33]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x1CB2B, 🟢0x1CB33]                                                                   |
@@ -697,7 +697,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x1D4AC]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 1B:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14AF9]                                                                   |
+|       - Port 1B:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14AF9]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x1D52E, 🟢0x1D536]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x1D52E, 🟢0x1D536]                                                                   |
@@ -735,7 +735,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x1DAA0]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 1C:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B12]                                                                   |
+|       - Port 1C:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B12]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x1DB22, 🟢0x1DB2A]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x1DB22, 🟢0x1DB2A]                                                                   |
@@ -773,7 +773,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x1E09B]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 1D:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B2B]                                                                   |
+|       - Port 1D:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B2B]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x1E11D, 🟢0x1E125]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x1E11D, 🟢0x1E125]                                                                   |
@@ -811,7 +811,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x1E68F]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 2A:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14B5E]                                                        |
+|       - Port 2A:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14B5E]                                                        |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x1E711, 🟢0x1E719]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x1E711, 🟢0x1E719]                                                                   |
@@ -873,7 +873,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x1F092]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 2B:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14B77]                                                        |
+|       - Port 2B:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14B77]                                                        |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x1F114, 🟢0x1F11C]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x1F114, 🟢0x1F11C]                                                                   |
@@ -911,7 +911,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x1F686]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 2C:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14B90]                                                        |
+|       - Port 2C:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14B90]                                                        |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x1F708, 🟢0x1F710]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x1F708, 🟢0x1F710]                                                                   |
@@ -949,7 +949,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x1FC81]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 2D:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14BA9]                                                        |
+|       - Port 2D:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14BA9]                                                        |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x1FD03, 🟢0x1FD0B]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x1FD03, 🟢0x1FD0B]                                                                   |
@@ -987,7 +987,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x20275]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 3A:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14BCA]                                             |
+|       - Port 3A:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14BCA]                                             |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x202F7, 🟢0x202FF]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x202F7, 🟢0x202FF]                                                                   |
@@ -1037,7 +1037,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x20A69]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 3B:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14BE3]                                             |
+|       - Port 3B:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14BE3]                                             |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x20AEB, 🟢0x20AF3]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x20AEB, 🟢0x20AF3]                                                                   |
@@ -1075,7 +1075,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x2105D]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 3C:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14BFC]                                             |
+|       - Port 3C:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14BFC]                                             |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x210DF, 🟢0x210E7]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x210DF, 🟢0x210E7]                                                                   |
@@ -1113,7 +1113,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x21658]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 3D:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14C15]                                             |
+|       - Port 3D:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14C15]                                             |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x216DA, 🟢0x216E2]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x216DA, 🟢0x216E2]                                                                   |
@@ -1151,7 +1151,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x21C4C]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 4A:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14C2E]                                             |
+|       - Port 4A:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14C2E]                                             |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x21CCE, 🟢0x21CD6]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x21CCE, 🟢0x21CD6]                                                                   |
@@ -1213,7 +1213,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x2264F]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 4B:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14C47]                                             |
+|       - Port 4B:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14C47]                                             |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x226D1, 🟢0x226D9]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x226D1, 🟢0x226D9]                                                                   |
@@ -1251,7 +1251,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x22C43]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 4C:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14C60]                                             |
+|       - Port 4C:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14C60]                                             |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x22CC5, 🟢0x22CCD]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x22CC5, 🟢0x22CCD]                                                                   |
@@ -1289,7 +1289,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x2323E]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 4D:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14C79]                                             |
+|       - Port 4D:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14C79]                                             |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x232C0, 🟢0x232C8]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x232C0, 🟢0x232C8]                                                                   |
@@ -1327,7 +1327,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x23832]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 5A:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14C92]                                             |
+|       - Port 5A:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14C92]                                             |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x238B4, 🟢0x238BC]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x238B4, 🟢0x238BC]                                                                   |
@@ -1377,7 +1377,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x24026]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 5B:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14CAB]                                             |
+|       - Port 5B:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14CAB]                                             |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x240A8, 🟢0x240B0]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x240A8, 🟢0x240B0]                                                                   |
@@ -1415,7 +1415,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x2461A]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 5C:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14CC4]                                             |
+|       - Port 5C:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14CC4]                                             |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2469C, 🟢0x246A4]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2469C, 🟢0x246A4]                                                                   |
@@ -1453,7 +1453,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x24C15]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 5D:                                                                          | Ref      | [🟢0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14CDD]                                             |
+|       - Port 5D:                                                                          | Ref      | [🔘0x14AC9, 🟢0x14B44, 🟢0x14BC2, 🟢0x14CDD]                                             |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x24C97, 🟢0x24C9F]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x24C97, 🟢0x24C9F]                                                                   |
@@ -1497,17 +1497,17 @@
 |       - IOU2 (IIO PCIe Port 3)                                                            | OneOf    | [🟢0x14D04]                                                                              |
 |       - IOU3 (IIO PCIe Port 4)                                                            | OneOf    | [🟢0x14D04]                                                                              |
 |       - IOU4 (IIO PCIe Port 5)                                                            | OneOf    | [🟢0x14D04]                                                                              |
-|       - Enable PCI-E Completion Timeout (Per-Port)                                        | OneOf    | [🟢0x14E3F]                                                                              |
-|       - PCI-E Completion Timeout Value                                                    | OneOf    | [🟢0x14E3F, 🟢0x14E68]                                                                   |
-|       - Sck1 RP Correctable Err                                                           | OneOf    | [🟢0x14E3F]                                                                              |
-|       - Sck1 RP NonFatal Uncorrectable Err                                                | OneOf    | [🟢0x14E3F]                                                                              |
-|       - Sck1 RP Fatal Uncorrectable Err                                                   | OneOf    | [🟢0x14E3F]                                                                              |
-|       - TraceHub Configuration Menu:                                                      | Ref      | [🟢0x14E3F]                                                                              |
+|       - Enable PCI-E Completion Timeout (Per-Port)                                        | OneOf    | [🔘0x14E3F]                                                                              |
+|       - PCI-E Completion Timeout Value                                                    | OneOf    | [🔘0x14E3F, 🟢0x14E68]                                                                   |
+|       - Sck1 RP Correctable Err                                                           | OneOf    | [🔘0x14E3F]                                                                              |
+|       - Sck1 RP NonFatal Uncorrectable Err                                                | OneOf    | [🔘0x14E3F]                                                                              |
+|       - Sck1 RP Fatal Uncorrectable Err                                                   | OneOf    | [🔘0x14E3F]                                                                              |
+|       - TraceHub Configuration Menu:                                                      | Ref      | [🔘0x14E3F]                                                                              |
 |         - North Trace Hub Enable Mode                                                     | OneOf    |                                                                                          |
 |         - North TH Mem Buffer Size 0                                                      | OneOf    | [🟢0x181F2]                                                                              |
 |         - North TH Mem Buffer Size 1                                                      | OneOf    | [🟢0x181F2]                                                                              |
 |         - Sierra Peak Memory Region Buffer Size                                           | OneOf    | [🟢0x181F2]                                                                              |
-|       - Port 0/DMI:                                                                       | Ref      | [🟢0x14E3F, 🟢0x14F5E]                                                                   |
+|       - Port 0/DMI:                                                                       | Ref      | [🔘0x14E3F, 🟢0x14F5E]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2528B, 🟢0x25293]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2528B, 🟢0x25293]                                                                   |
@@ -1545,7 +1545,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x257FD]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 1A:                                                                          | Ref      | [🟢0x14E3F, 🟢0x14F77]                                                                   |
+|       - Port 1A:                                                                          | Ref      | [🔘0x14E3F, 🟢0x14F77]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2587F, 🟢0x25887]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2587F, 🟢0x25887]                                                                   |
@@ -1607,7 +1607,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x26200]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 1B:                                                                          | Ref      | [🟢0x14E3F, 🟢0x14F90]                                                                   |
+|       - Port 1B:                                                                          | Ref      | [🔘0x14E3F, 🟢0x14F90]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x26282, 🟢0x2628A]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x26282, 🟢0x2628A]                                                                   |
@@ -1645,7 +1645,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x267F4]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 1C:                                                                          | Ref      | [🟢0x14E3F, 🟢0x14FA9]                                                                   |
+|       - Port 1C:                                                                          | Ref      | [🔘0x14E3F, 🟢0x14FA9]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x26876, 🟢0x2687E]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x26876, 🟢0x2687E]                                                                   |
@@ -1683,7 +1683,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x26DEF]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 1D:                                                                          | Ref      | [🟢0x14E3F, 🟢0x14FC2]                                                                   |
+|       - Port 1D:                                                                          | Ref      | [🔘0x14E3F, 🟢0x14FC2]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x26E71, 🟢0x26E79]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x26E71, 🟢0x26E79]                                                                   |
@@ -1721,7 +1721,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x273E3]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 2A:                                                                          | Ref      | [🟢0x14E3F, 🟢0x14FDB]                                                                   |
+|       - Port 2A:                                                                          | Ref      | [🔘0x14E3F, 🟢0x14FDB]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x27465, 🟢0x2746D]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x27465, 🟢0x2746D]                                                                   |
@@ -1783,7 +1783,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x27DE6]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 2B:                                                                          | Ref      | [🟢0x14E3F, 🟢0x14FF4]                                                                   |
+|       - Port 2B:                                                                          | Ref      | [🔘0x14E3F, 🟢0x14FF4]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x27E68, 🟢0x27E70]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x27E68, 🟢0x27E70]                                                                   |
@@ -1821,7 +1821,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x283DA]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 2C:                                                                          | Ref      | [🟢0x14E3F, 🟢0x1500D]                                                                   |
+|       - Port 2C:                                                                          | Ref      | [🔘0x14E3F, 🟢0x1500D]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2845C, 🟢0x28464]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2845C, 🟢0x28464]                                                                   |
@@ -1859,7 +1859,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x289D5]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 2D:                                                                          | Ref      | [🟢0x14E3F, 🟢0x15026]                                                                   |
+|       - Port 2D:                                                                          | Ref      | [🔘0x14E3F, 🟢0x15026]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x28A57, 🟢0x28A5F]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x28A57, 🟢0x28A5F]                                                                   |
@@ -1897,7 +1897,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x28FC9]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 3A:                                                                          | Ref      | [🟢0x14E3F, 🟢0x1503F]                                                                   |
+|       - Port 3A:                                                                          | Ref      | [🔘0x14E3F, 🟢0x1503F]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2904B, 🟢0x29053]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2904B, 🟢0x29053]                                                                   |
@@ -1947,7 +1947,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x297BD]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 3B:                                                                          | Ref      | [🟢0x14E3F, 🟢0x15058]                                                                   |
+|       - Port 3B:                                                                          | Ref      | [🔘0x14E3F, 🟢0x15058]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2983F, 🟢0x29847]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2983F, 🟢0x29847]                                                                   |
@@ -1985,7 +1985,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x29DB1]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 3C:                                                                          | Ref      | [🟢0x14E3F, 🟢0x15071]                                                                   |
+|       - Port 3C:                                                                          | Ref      | [🔘0x14E3F, 🟢0x15071]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x29E33, 🟢0x29E3B]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x29E33, 🟢0x29E3B]                                                                   |
@@ -2023,7 +2023,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x2A3AC]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 3D:                                                                          | Ref      | [🟢0x14E3F, 🟢0x1508A]                                                                   |
+|       - Port 3D:                                                                          | Ref      | [🔘0x14E3F, 🟢0x1508A]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2A42E, 🟢0x2A436]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2A42E, 🟢0x2A436]                                                                   |
@@ -2061,7 +2061,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x2A9A0]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 4A:                                                                          | Ref      | [🟢0x14E3F, 🟢0x150A3]                                                                   |
+|       - Port 4A:                                                                          | Ref      | [🔘0x14E3F, 🟢0x150A3]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2AA22, 🟢0x2AA2A]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2AA22, 🟢0x2AA2A]                                                                   |
@@ -2123,7 +2123,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x2B3A3]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 4B:                                                                          | Ref      | [🟢0x14E3F, 🟢0x150BC]                                                                   |
+|       - Port 4B:                                                                          | Ref      | [🔘0x14E3F, 🟢0x150BC]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2B425, 🟢0x2B42D]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2B425, 🟢0x2B42D]                                                                   |
@@ -2161,7 +2161,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x2B997]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 4C:                                                                          | Ref      | [🟢0x14E3F, 🟢0x150D5]                                                                   |
+|       - Port 4C:                                                                          | Ref      | [🔘0x14E3F, 🟢0x150D5]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2BA19, 🟢0x2BA21]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2BA19, 🟢0x2BA21]                                                                   |
@@ -2199,7 +2199,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x2BF92]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 4D:                                                                          | Ref      | [🟢0x14E3F, 🟢0x150EE]                                                                   |
+|       - Port 4D:                                                                          | Ref      | [🔘0x14E3F, 🟢0x150EE]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2C014, 🟢0x2C01C]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2C014, 🟢0x2C01C]                                                                   |
@@ -2237,7 +2237,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x2C586]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 5A:                                                                          | Ref      | [🟢0x14E3F, 🟢0x15107]                                                                   |
+|       - Port 5A:                                                                          | Ref      | [🔘0x14E3F, 🟢0x15107]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2C608, 🟢0x2C610]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2C608, 🟢0x2C610]                                                                   |
@@ -2287,7 +2287,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x2CD7A]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 5B:                                                                          | Ref      | [🟢0x14E3F, 🟢0x15120]                                                                   |
+|       - Port 5B:                                                                          | Ref      | [🔘0x14E3F, 🟢0x15120]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2CDFC, 🟢0x2CE04]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2CDFC, 🟢0x2CE04]                                                                   |
@@ -2325,7 +2325,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x2D36E]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 5C:                                                                          | Ref      | [🟢0x14E3F, 🟢0x15139]                                                                   |
+|       - Port 5C:                                                                          | Ref      | [🔘0x14E3F, 🟢0x15139]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2D3F0, 🟢0x2D3F8]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2D3F0, 🟢0x2D3F8]                                                                   |
@@ -2363,7 +2363,7 @@
 |         - Hide Port?                                                                      | OneOf    |                                                                                          |
 |         - <empty>                                                                         | CheckBox | [🟢0x2D969]                                                                              |
 |         - MCTP                                                                            | OneOf    |                                                                                          |
-|       - Port 5D:                                                                          | Ref      | [🟢0x14E3F, 🟢0x15152]                                                                   |
+|       - Port 5D:                                                                          | Ref      | [🔘0x14E3F, 🟢0x15152]                                                                   |
 |         - PCI-E Port                                                                      | OneOf    |                                                                                          |
 |         - Hot Plug Capable                                                                | OneOf    | [🟢0x2D9EB, 🟢0x2D9F3]                                                                   |
 |         - Surprise Hot Plug Capable                                                       | OneOf    | [🟢0x2D9EB, 🟢0x2D9F3]                                                                   |
@@ -4939,7 +4939,7 @@
 |     - PCIe PTM Enable                                                                     | OneOf    | [🟢0x1416A]                                                                              |
 |     - Pcie Relaxed Ordering                                                               | OneOf    | [🟢0x1416A]                                                                              |
 |     - PCIe PHY test mode                                                                  | OneOf    | [🟢0x1416A]                                                                              |
-|   - Advanced Power Management Configuration:                                              | Ref      | [🔘0x12729]                                                                              |
+|   - Advanced Power Management Configuration:                                              | Ref      | [🟢0x12729]                                                                              |
 |     - Pcode Dispatcher Watchdog Timer                                                     | OneOf    |                                                                                          |
 |     - CPU P State Control:                                                                | Ref      |                                                                                          |
 |       - Uncore Freq Scaling                                                               | OneOf    | [🟢0x4633C]                                                                              |
