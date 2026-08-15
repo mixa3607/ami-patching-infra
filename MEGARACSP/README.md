@@ -95,13 +95,16 @@ scripts/build-mac-version-image.sh --native-kvm \
 
 ## Docker Build
 
-BuildKit receives this repository as the primary context and `SOFTWARE` as a
-second context named `soft` (context names must be lowercase). The artifact
-stage exports only the final image:
+BuildKit receives this repository as the primary context, `SOFTWARE` as the
+`soft` context, and the verified JPEG-enabled `videocap.ko` as the `videocap`
+context (context names must be lowercase). The module is checked against the
+known-good SHA-256 before it is packaged. The artifact stage exports only the
+final image:
 
 ```sh
 docker buildx build \
   --build-context soft="$PWD/SOFTWARE" \
+  --build-context videocap=/home/mixa3607/imb760/bmc/fix-flash-bios/source/Core/Modified_OpenSource/videocap-ARM-AST-src \
   --output "type=local,dest=$PWD/dist" \
   .
 ```

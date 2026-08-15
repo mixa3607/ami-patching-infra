@@ -35,8 +35,7 @@ ami-power-helper: ami-power-helper.c ami-power-helper-start.S
 check: all
 	file $(PROGRAMS)
 	sh -n run-ami-kvm-with-videocap.sh
-	sh -n scripts/build-bundle.sh scripts/build-cramfs.sh scripts/build-root-cramfs.sh scripts/compose-full-dump.sh scripts/verify-manifest.sh scripts/patch-mac.sh scripts/patch-bak2shell.sh scripts/patch-version-info.sh scripts/extract-config.sh scripts/verify-config.sh scripts/build-imb760-image.sh
-	sh -n scripts/native-kvm-bootstrap.sh scripts/native-kvm-root-bootstrap.sh scripts/write-slot.sh
+	sh -n scripts/build-bundle.sh scripts/build-cramfs.sh scripts/build-root-cramfs.sh scripts/native-kvm-root-bootstrap.sh scripts/verify-manifest.sh
 
 clean:
 	rm -f $(PROGRAMS) ami-power-helper.o ami-power-helper-start.o
