@@ -47,3 +47,15 @@ main, backup, and failsafe JFFS2 partitions:
 ```sh
 scripts/build-mac-version-image.sh --bak2shell work/IMB760_BMC_mac-version-shell.bin
 ```
+
+### Native KVM
+
+The native-KVM mode also includes `bak2shell`, patches root CramFS with the
+verified bootstrap, writes the 4 MiB payload to slot A, enables it in all three
+configuration copies, and configures Basic Auth as `admin:admin`.
+
+```sh
+scripts/build-mac-version-image.sh --native-kvm \
+  work/native-kvm-root.cramfs work/native-kvm-slot-a.bin \
+  work/IMB760_BMC_native-kvm.bin
+```
