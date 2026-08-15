@@ -1,0 +1,64 @@
+{
+  "partitions": [
+    {
+      "fileName": "01_uboot.bin",
+      "description": "U-Boot",
+      "beginAddress": "0x00000000",
+      "endAddress": "0x00040000"
+    },
+    {
+      "fileName": "02_uboot-env.bin",
+      "description": "U-Boot environment",
+      "beginAddress": "0x00040000",
+      "endAddress": "0x0004FFFC"
+    },
+    {
+      "fileName": "20_conf-main.bin",
+      "description": "Primary writable configuration JFFS2",
+      "beginAddress": "0x00060000",
+      "endAddress": "0x000D0000"
+    },
+    {
+      "fileName": "30_conf-backup.bin",
+      "description": "Backup writable configuration JFFS2",
+      "beginAddress": "0x000E0000",
+      "endAddress": "0x00150000"
+    },
+    {
+      "fileName": "40_conf-failsafe.bin",
+      "description": "Failsafe writable configuration JFFS2",
+      "beginAddress": "0x00160000",
+      "endAddress": "0x001D0000"
+    },
+    {
+      "fileName": "50_root.cramfs",
+      "description": "Root CramFS",
+      "beginAddress": "0x001E0000",
+      "endAddress": "0x01111000"
+    },
+    {
+      "fileName": "60_uimage.bin",
+      "description": "Linux uImage payload",
+      "beginAddress": "0x01120040",
+      "endAddress": "0x014731B8"
+    },
+    {
+      "fileName": "70_web-data.cramfs",
+      "description": "MegaRAC web UI CramFS",
+      "beginAddress": "0x01490000",
+      "endAddress": "0x016CB000"
+    },
+    {
+      "fileName": "80_native-kvm-slot-a.bin",
+      "description": "Reserved native KVM slot A",
+      "beginAddress": "0x016D0000",
+      "endAddress": "0x01AD0000"
+    },
+    {
+      "fileName": "90_firmware-info.bin",
+      "description": "AST2500 firmware information",
+      "beginAddress": "0x01FF0040",
+      "endAddress": "0x01FF00DD"
+    }
+  ]
+}
