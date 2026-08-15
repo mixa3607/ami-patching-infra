@@ -1,0 +1,9 @@
+.git/
+/build-*/
+/partitions/
+/work/
+/*.roundtrip.bin
+/native-kvm/README.md
+/native-kvm/TODO.md
+/native-kvm/tests/
+/native-kvm/native-kvm.users.example

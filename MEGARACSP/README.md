@@ -16,13 +16,12 @@ Build a ready-to-flash IMB760 BMC image with:
 2. Build the final image with Docker:
 
    ```sh
-   docker buildx build \
-     --build-context soft="$PWD/SOFTWARE" \
-     --output "type=local,dest=$PWD/dist" \
-     .
+   ./build-docker.sh
    ```
 
-3. Flash `dist/IMB760_BMC_native-kvm-final.bin` using the established BMC
+   The image is written to `build-<git-tag-or-short-sha>/`.
+
+3. Flash `build-<git-tag-or-short-sha>/IMB760_BMC_mixa3607_mod-<version>-<git-tag-or-short-sha>.bin` using the established BMC
    recovery procedure. Do not interrupt power while SPI flash is being written.
 4. Open the stock BMC UI at `http://BMC-IP/`, SSH as `sysadmin`, or open native
    KVM at the URL above. Native KVM Basic Auth defaults to `admin:admin`; use it
@@ -95,16 +94,13 @@ scripts/build-mac-version-image.sh --native-kvm \
 
 ## Docker Build
 
-BuildKit receives this repository as the primary context, `SOFTWARE` as the
-`soft` context, and the verified JPEG-enabled `videocap.ko` as the `videocap`
-context (context names must be lowercase). The module is checked against the
-known-good SHA-256 before it is packaged. The artifact stage exports only the
-final image:
+Docker downloads checksum-pinned UEFI mod tools and upstream Linux `3.14.17`,
+applies the tracked AMI/AST2500 patch set, and builds the vendored JPEG-enabled
+`videocap.ko` source against the resulting `3.14.17-ami` tree. The artifact
+stage exports only the final image:
 
 ```sh
-docker buildx build \
-  --build-context soft="$PWD/SOFTWARE" \
-  --build-context videocap=/home/mixa3607/imb760/bmc/fix-flash-bios/source/Core/Modified_OpenSource/videocap-ARM-AST-src \
-  --output "type=local,dest=$PWD/dist" \
-  .
+./build-docker.sh
 ```
+
+Set `REPO_GIT_REF` to choose the `build-<version>` directory name explicitly.

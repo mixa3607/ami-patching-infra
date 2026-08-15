@@ -2,4 +2,4 @@ MEGARACSP/*.bin
 MEGARACSP/partitions/
 MEGARACSP/work/
 dist/
-dist-from-source/
+dist-*/
