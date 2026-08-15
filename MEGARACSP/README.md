@@ -59,3 +59,19 @@ scripts/build-mac-version-image.sh --native-kvm \
   work/native-kvm-root.cramfs work/native-kvm-slot-a.bin \
   work/IMB760_BMC_native-kvm.bin
 ```
+
+## Docker build
+
+BuildKit receives this repository as the primary context and `SOFTWARE` as a
+second context named `soft` (context names must be lowercase). The artifact
+stage exports only the final image:
+
+```sh
+docker buildx build \
+  --build-context soft="$PWD/SOFTWARE" \
+  --output "type=local,dest=$PWD/dist" \
+  .
+```
+
+The Docker build compiles `native-kvm/` for ARM and creates root/slot payloads
+from the baseline image; no prebuilt files under `work/` are used.

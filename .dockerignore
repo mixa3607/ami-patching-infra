@@ -1,0 +1,5 @@
+.git/
+dist/
+MEGARACSP/partitions/
+MEGARACSP/work/
+MEGARACSP/*.roundtrip.bin
