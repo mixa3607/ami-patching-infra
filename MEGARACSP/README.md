@@ -1,4 +1,37 @@
-# MegaRAC SP Mod Workspace
+# IMB760 MegaRAC SP Mod
+
+## For Users
+
+Build a ready-to-flash IMB760 BMC image with:
+
+- a configurable BMC MAC address from `eth-mac.txt`;
+- a visible release suffix from `version.txt`;
+- SSH shell access through the `bak2shell` patch;
+- native browser KVM at `http://BMC-IP:8080/novnc/vnc.html?autoconnect=1&path=/websockify&resize=scale`.
+
+### Quick Start
+
+1. Set the MAC address in `eth-mac.txt` and the two-digit release suffix in
+   `version.txt`.
+2. Build the final image with Docker:
+
+   ```sh
+   docker buildx build \
+     --build-context soft="$PWD/SOFTWARE" \
+     --output "type=local,dest=$PWD/dist" \
+     .
+   ```
+
+3. Flash `dist/IMB760_BMC_native-kvm-final.bin` using the established BMC
+   recovery procedure. Do not interrupt power while SPI flash is being written.
+4. Open the stock BMC UI at `http://BMC-IP/`, SSH as `sysadmin`, or open native
+   KVM at the URL above. Native KVM Basic Auth defaults to `admin:admin`; use it
+   only on a management network.
+
+The Docker build compiles native KVM from the included source and exports only
+the final 32 MiB image.
+
+## Build Details
 
 Baseline image: `IMB760_BMC_mixa3607_F8CC6E033B82_zero-boot.bin`
 
@@ -60,7 +93,7 @@ scripts/build-mac-version-image.sh --native-kvm \
   work/IMB760_BMC_native-kvm.bin
 ```
 
-## Docker build
+## Docker Build
 
 BuildKit receives this repository as the primary context and `SOFTWARE` as a
 second context named `soft` (context names must be lowercase). The artifact
@@ -72,6 +105,3 @@ docker buildx build \
   --output "type=local,dest=$PWD/dist" \
   .
 ```
-
-The Docker build compiles `native-kvm/` for ARM and creates root/slot payloads
-from the baseline image; no prebuilt files under `work/` are used.
