@@ -40,3 +40,10 @@ scripts/build-mac-version-image.sh work/IMB760_BMC_mac-version.bin
 The builder verifies both `ethaddr` variables, the firmware-info record, and
 every unchanged named partition before writing the result. It does not flash a
 BMC.
+
+Add `--bak2shell` to also replace `/conf/default_sh` with `/bin/sh` in the
+main, backup, and failsafe JFFS2 partitions:
+
+```sh
+scripts/build-mac-version-image.sh --bak2shell work/IMB760_BMC_mac-version-shell.bin
+```

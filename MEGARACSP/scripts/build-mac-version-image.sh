@@ -6,12 +6,20 @@ BASELINE_SHA256=aa8ae3bf892d18689e9ba7d0089a3abc5b413671aa6673a438f7dbf08df2e68c
 
 usage()
 {
-	printf 'Usage: %s OUTPUT.BIN\n' "$0" >&2
+	printf 'Usage: %s [--bak2shell] OUTPUT.BIN\n' "$0" >&2
 	exit 2
 }
 
-[ "$#" -eq 1 ] || usage
-output=$1
+bak2shell=0
+case "$#" in
+	1) output=$1 ;;
+	2)
+		[ "$1" = --bak2shell ] || usage
+		bak2shell=1
+		output=$2
+		;;
+	*) usage ;;
+esac
 script_dir=$(CDPATH= cd "$(dirname "$0")" && pwd)
 workspace=$(CDPATH= cd "$script_dir/.." && pwd)
 tools_dir=$(CDPATH= cd "$workspace/.." && pwd)
@@ -54,6 +62,12 @@ trap 'rm -rf "$tmp"' EXIT HUP INT TERM
 "$script_dir/patch-mac.sh" "$tmp/partitions/02_uboot-env.bin" "$tmp/uboot-env.bin" "$mac"
 "$script_dir/patch-version-info.sh" "$tmp/partitions/90_firmware-info.bin" \
 	"$tmp/firmware-info.bin" "$version"
+if [ "$bak2shell" -eq 1 ]; then
+	"$script_dir/patch-bak2shell.sh" "$tmp/partitions" "$tmp/config"
+	cp "$tmp/config/20_conf-main.bin" "$tmp/partitions/20_conf-main.bin"
+	cp "$tmp/config/30_conf-backup.bin" "$tmp/partitions/30_conf-backup.bin"
+	cp "$tmp/config/40_conf-failsafe.bin" "$tmp/partitions/40_conf-failsafe.bin"
+fi
 cp "$tmp/uboot-env.bin" "$tmp/partitions/02_uboot-env.bin"
 cp "$tmp/firmware-info.bin" "$tmp/partitions/90_firmware-info.bin"
 "$tool" bin combine --input "$baseline" --table "$table" --partitions "$tmp/partitions" \
@@ -67,13 +81,29 @@ cmp -s "$tmp/firmware-info.bin" "$tmp/verified/90_firmware-info.bin" || {
 	printf '%s\n' 'firmware-info verification failed' >&2
 	exit 1
 }
+if [ "$bak2shell" -eq 1 ]; then
+	for item in 'main:20_conf-main.bin' 'backup:30_conf-backup.bin' 'failsafe:40_conf-failsafe.bin'; do
+		name=${item%%:*}
+		image=${item#*:}
+		jefferson --dest "$tmp/verified-$name" "$tmp/verified/$image" >/dev/null
+		[ "$(cat "$tmp/verified-$name/default_sh")" = "$(printf '%s\n' '[defaultshell]' 'default_shell="/bin/sh"')" ] || {
+			printf 'bak2shell verification failed for %s\n' "$name" >&2
+			exit 1
+		}
+	done
+fi
 for image in 01_uboot.bin 20_conf-main.bin 30_conf-backup.bin 40_conf-failsafe.bin \
 	50_root.cramfs 60_uimage.bin 70_web-data.cramfs 80_native-kvm-slot-a.bin 90_firmware-info.bin; do
 	[ "$image" = 90_firmware-info.bin ] && continue
+	if [ "$bak2shell" -eq 1 ]; then
+		case "$image" in
+			20_conf-main.bin|30_conf-backup.bin|40_conf-failsafe.bin) continue ;;
+		esac
+	fi
 	cmp -s "$tmp/partitions/$image" "$tmp/verified/$image" || {
 		printf 'unexpected change in %s\n' "$image" >&2
 		exit 1
 	}
 done
-printf 'MAC + version image: %s\n' "$output_parent/$output_name"
+printf 'Patched image: %s\n' "$output_parent/$output_name"
 sha256sum "$output_parent/$output_name"
