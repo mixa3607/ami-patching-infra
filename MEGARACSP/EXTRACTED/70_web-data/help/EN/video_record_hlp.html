@@ -1,0 +1,244 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2011-2014        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>Video Recording Help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+</head>
+<body>
+	<h2>
+	<div class="floatRight"><a href="javascript://" class="closeBtn" 
+		onclick="top.closeHelp();">X</a></div>
+	<script type="text/javascript">
+	var opera = (navigator.userAgent.toLowerCase().indexOf("opera") != -1);
+	
+	var frameName;
+	var helpContent = "";
+
+		var AUTO_VIDEO_SUPPORT = false;
+		var SOL_VIDEO_SUPPORT = false;
+		var SOL_REMOTE=false;
+		
+		var hlpAutoVideo = "";
+		var hlpSOLVideo = "";
+		
+		AUTO_VIDEO_SUPPORT = checkProjectCfg("AUTOVDORECORD");
+		SOL_VIDEO_SUPPORT = checkProjectCfg("UARTLOG");
+		SOL_REMOTE= checkProjectCfg("UARTLOG_REMOTE");
+		
+	frameTabName = top.frames["mainFrame"].pageFrame;
+	formname = frameTabName.document.getElementsByTagName("FORM");
+	
+	if (formname.length) {
+		if ("advRemoteVideoFrm" == formname[0].getAttribute("id")) {
+			helpContent = "<div class='helpmainhead'>Advanced Remote " +
+				"Video Settings</div></h2>" +
+				"<div class='subSection'>" +
+				"This page is used to configure the Remote Video " +
+				"Advanced Settings" +
+				"<br>" +
+				"All the trusted domains are supported as well." +
+				"<br>" +
+				"<strong>NOTE: </strong>Configured settings will be reflected " +
+				"during next video recording." +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>Actions</legend>" +
+				"<h4>Remote Video Support</h4>" +
+				"To enable or disable Remote Video support, check or " +
+				"uncheck the 'Enable' checkbox respectively." +
+				"<br>" +
+				"<strong>NOTE: </strong>By default, video files will be " +
+				"stored in local path of BMC. If remote video support is " +
+				"enabled, then the video files will be stored only in remote " +
+				"path, not within BMC." +
+				"<h4>Maximum Duration(Sec)</h4>" +
+				"Maximum Duration should be in range from 1 to 3600 seconds.<br>" +
+				"<h4>Maximum Size(MB)</h4>" +
+				"Maximum Size should be in range from 1 to 500 MB.<br>" +
+				"<h4>Maximum Dumps</h4>" +
+				"Maximum Dumps should be in range from 1 to 100.<br>" +
+				"<h4>Server Address</h4>" +
+				"Server address of the server where remote videos are to be " +
+				"stored.<br>" +
+				"Server address will support the following: " +
+				"<ul>" +
+					"<li>- IP Address (Both IPv4 and IPv6 format).</li> " +
+					"<li>- FQDN (Fully qualified domain name) format.</li> " +
+				"</ul>" +
+				"<h4>Soure Path</h4>" +
+				"Source path to directory where the remote videos " +
+				"will be stored." +
+				"<ul>" +
+					"<li>- Special characters '<'(less than), " +
+					"'>'(greater than), ':'(colon), '*'(asterisk), " +
+					"'|'(vertical bar), '.'(dot), '?'(question mark) " +
+					"are not allowed.</li> " +
+				"</ul>" +
+				"<h4>Share Type</h4>" +
+				"Share Type of the remote video server either NFS or " +
+				"Samba(CIFS)." +
+				"<h4>Username, Password and Domain Name</h4>" +
+				"If share Type is Samba(CIFS), enter the user " +
+				"credentials for server authentication.<br>" +
+				"<strong>NOTE:</strong> Domain Name field is optional." +
+				"</fieldset>" +
+				"</div>";
+		} else if ("advSOLRemoteVideoFrm" == formname[0].getAttribute("id")){
+			helpContent = "<div class='helpmainhead'>Advanced SOL Remote " +
+				"Video Settings</div></h2>" +
+				"<div class='subSection'>" +
+				"This page is used to configure the SOL Remote Video " +
+				"Advanced Settings" +
+				"<br>" +
+				"All the trusted domains are supported as well." +
+				"<br>" +
+				"<strong>NOTE: </strong>Configured settings will be reflected " +
+				"during next video recording." +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>Actions</legend>" +
+				"<h4>Log Size(KB)</h4>" +
+				"Enter the Size of log file in KB's. Value ranges from 1 to 256" +
+				"<br>" +
+				"<h4>Log Files Count</h4>" +
+				"Enter the number of Log files count.Default values ranges from 1 to 10.";
+			if (checkProjectCfg("UARTLOG_REMOTE")) {
+				helpContent += "<br>" +
+				"<h4>Remote Video Support</h4>" +
+				"To enable or disable Remote Video support, check or " +
+				"uncheck the 'Enable' checkbox respectively." +
+				"<br>" +
+				"<strong>NOTE: </strong>By default, video files will be " +
+				"stored in local path of BMC. If remote video support is " +
+				"enabled, then the video files will be stored only in remote " +
+				"path, not within BMC." +
+				"<h4>Server Address</h4>" +
+				"Server address of the server where remote videos are to be " +
+				"stored.<br>" +
+				"Server address will support the following: " +
+				"<ul>" +
+					"<li>- IP Address (Both IPv4 and IPv6 format).</li> " +
+					"<li>- FQDN (Fully qualified domain name) format.</li> " +
+				"</ul>" +
+				"<h4>Soure Path</h4>" +
+				"Source path to directory where the remote videos " +
+				"will be stored." +
+				"<ul>" +
+					"<li>- Special characters '<'(less than), " +
+					"'>'(greater than), ':'(colon), '*'(asterisk), " +
+					"'|'(vertical bar), '.'(dot), '?'(question mark) " +
+					"are not allowed.</li> " +
+				"</ul>" +
+				"<h4>Share Type</h4>" +
+				"Share Type of the remote video server either NFS or " +
+				"Samba(CIFS)." +
+				"<h4>Username, Password and Domain Name</h4>" +
+				"If share Type is Samba(CIFS), enter the user " +
+				"credentials for server authentication.<br>" +
+				"<strong>NOTE:</strong> Domain Name field is optional." +
+				"</fieldset>" +
+				"</div>";
+			}
+		}
+	} else if((frameTabName.document.getElementById("_tabAutoVideo").style. 
+			fontWeight == "bold") || (opera && frameTabName.document.
+			getElementById("_tabAutoVideo").style.fontWeight == 700)) {
+		helpContent = "<div class='helpmainhead'>Auto Video Recording</div></h2>" +
+			"<div class='subSection'>" +
+			"This page displays the list of available recorded video files. " +
+			"The various fields of Recorded Video are given below :- " +
+			"<br/>"+
+			"# : The serial number.<br/> " +
+			"File Name : The video filename.<br/> " +
+			"Video Type : The Type of the video either Pre-Event or Post-Event.<br/> " +
+			"File Information : Day, date and time of video upload. " +
+			/*"<br><strong>NOTE:</strong> Maximum of 5 video files can be " +
+			"recorded.";*/
+			"<br><strong>NOTE:</strong> If remote video support is enabled, " +
+			"3 pre-event videos and maximum configured dump value of post-event videos can be recorded." +
+			"<br> If remote video support is disabled, " +
+			"1 pre-event video and 2 post-event videos can be recorded.";
+			if (checkProjectCfg("AUTOVDORECORD_REMOTE")) {
+				helpContent += "<br>In case of mount failure in remote " +
+					"share, video files will be stored in local path of BMC.";
+			}
+		helpContent += "<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>";
+			if (checkProjectCfg("AUTOVDORECORD_REMOTE")) {
+				helpContent += "<h4>Advanced Settings</h4>" +
+					"Click this option to configure the Remote Video " +
+					"Settings. Options are Enable/Disable Remote Video Support, " +
+					"Server Address, Source Path, Share Type, Username, " +
+					"Password and Domain Name.";
+			}
+		helpContent += "<h4>Play Video</h4>" +
+			"Select a video and click the Play Video button to play the " + 
+			"video file in Java Application. " +
+			"<h4>Download</h4>" +
+			"Select a video and click the Download button to download and " + 
+			"save the video file in the client machine. The video will be " +
+			"downloaded in (.avi) format. " +
+			"<h4>Delete</h4>" +
+			"Click the Delete button to delete the selected video file. " +
+			"</fieldset>" +
+			"</div>";
+	} else if((frameTabName.document.getElementById("_tabSOLVideo").style. 
+		fontWeight == "bold") || (opera && frameTabName.document.
+		getElementById("_tabSOLVideo").style.fontWeight == 700)) {
+		
+		helpContent = "<div class='helpmainhead'>SOL Video Recording</div></h2>" +
+			"<div class='subSection'>" +
+			"This page displays the list of available recorded video files. " +
+			"The various fields of SOL Recorded Video are given below :- " +
+			"<br/>"+
+			"# : The serial number.<br/> " +
+			"File Name : The video filename.<br/> " +
+			"File Information : Day, date and time of video upload. "
+			if (checkProjectCfg("UARTLOG_REMOTE")) {
+				helpContent += "<br>In case of mount failure in remote " +
+					"share, video files will be stored in local path of BMC.";
+			}
+		helpContent += "<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>";
+			if (checkProjectCfg("UARTLOG_REMOTE")) {
+				helpContent += "<h4>Advanced Settings</h4>" +
+					"Click this option to configure the SOL Remote Video " +
+					"Settings. Options are SOL Log Size,Log Files Count, Enable/Disable Remote Video Support, " +
+					"Server Address, Source Path, Share Type, Username, " +
+					"Password and Domain Name.";
+			}
+		}
+	document.write(helpContent);
+</script>
+</body>
+</html>

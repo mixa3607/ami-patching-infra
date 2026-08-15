@@ -1,0 +1,24 @@
+#!/bin/sh 
+# Restart the webserver when the interface comes up
+if [ "$IFACE"  == "lo" ]
+then
+	exit 0
+fi
+
+webpid="0"
+lighttpcheck="1"
+if [ -f /var/run/lighttpd.pid ]; then
+webpid=`cat /var/run/lighttpd.pid`
+fi
+
+if ! [ -z "$webpid" ]; then
+web=`ps ax | grep $webpid`
+lighttpdcheck=`echo $web | awk '{ print $1 }'`
+fi
+
+if [ $webpid == $lighttpdcheck ]; then
+rm -rf /var/run/lighttpd.pid
+/etc/init.d/lighttpd.sh restart
+sleep 1
+fi
+exit 0

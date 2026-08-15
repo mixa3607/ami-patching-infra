@@ -1,0 +1,77 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>虛擬媒體設備說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div>
+	<div class="helpmainhead">虛擬媒體設備</div></h2>
+	<div class="subSection">
+		使用此頁來設定虛擬媒體設備配置。
+		<br/><br/>
+		<fieldset>
+			<legend>用途</legend>
+			<h4>軟碟設備</h4>
+			選擇在 Redirection 時要支援的軟碟設備的數量。 
+			<h4>CD/DVD 設備</h4>
+			選擇在 Redirection 時要支援的 CD/DVD 設備的數量。 
+			<h4>硬碟設備</h4>
+			選擇在 Redirection 時要支援的硬碟設備的數量。 
+			<script type="text/javascript">
+			SINGLE_PORT_APP = checkProjectCfg("SINGLE_PORT_APP");
+			RUNTIME_SINGLEPORT = checkProjectCfg("RUNTIME_SINGLEPORT_SUPPORT");
+			if(checkProjectCfg("VMEDIA_MAX_COUNT_FOR_KVM")){
+				document.write("<h4>遠端 KVM 軟碟設備</h4> " + "選擇在 KVM Redirection 時要支援的軟碟設備的數量。");
+				document.write("<h4>遠端 KVM CD/DVD 設備</h4> " + "選擇在 KVM Redirection 時要支援的 CD/DVD 設備的數量。");
+				document.write("<h4>遠端 KVM 硬碟設備</h4> " + "選擇在 KVM Redirection 時要支援的硬碟設備的數量。");
+			}
+			if (!SINGLE_PORT_APP || (SINGLE_PORT_APP && RUNTIME_SINGLEPORT)) {
+				document.write("<h4>媒體加密</h4> " +
+			"啟用／停用 在下一次 Redirection 時對媒體資料的加密。");
+			}
+			if (checkProjectCfg("SD_SERVER_SUPPORT")) {
+				document.write("<h4>SD 媒體支援</h4> " + "啟用 BMC 對 SD 媒體的支援。");
+			}
+			if (checkProjectCfg("POWER_CONSUMPTION")) {
+				document.write("<h4>省電模式</h4> " + "啟用／停用 虛擬 USB 設備的省電模式。");
+			}
+			</script>
+			<h4>儲存</h4>
+			點選 '儲存' 以儲存變更。
+			<h4>重置</h4>
+			點選 '重置' 以重置變更。
+		</fieldset>
+	</div>
+</body>
+</html>

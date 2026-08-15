@@ -1,0 +1,231 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2012        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>configure_firewall help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+	<script type="text/javascript">
+	var frameName = top.frames["mainFrame"].pageFrame.document.getElementsByTagName("FORM");
+	var titleContent = "" ,bodyContent = "", buttonContent = "";
+	var advbuttonContent = "", helpContent = "";
+	SYSTEM_FIREWALL_TIMEOUT = checkProjectCfg("SYSTEM_FIREWALL_TIMEOUT");
+	if (frameName.length) {
+		buttonContent += "<h4>Save</h4>" +
+			"Click 'Save' to save a configured entry " +
+			"<h4>Cancel</h4>" +
+			"Click 'Cancel' to cancel the modification to the existing settings." +
+			"</fieldset>" +
+			"</div>";
+		if (frameName[0].getAttribute("id").indexOf("advFwallForm") != -1) {
+			bodyContent = "<div class='helpmainhead'>Advanced Firewall Settings</div></h2>" +
+				"<div class='subSection'>" +
+				"This form is used to configure Advanced System Firewall " +
+				"settings. " +
+				"<br><br><fieldset>" +
+				"<legend>Actions</legend>" +
+				"<h4>Block All</h4>" +
+				"This option will block all incoming IPs and Ports." +
+				"<h4>Flush All</h4>" +
+				"This is used to flush all the system firewall rules.";
+			if (SYSTEM_FIREWALL_TIMEOUT) {
+			bodyContent += "<h4>Timeout</h4>" +
+				"This option is used to enable or disable firewall rules with timeout." +
+				"<h4>Start Time</h4>" +
+				"The respective firewall rule effect will start from this time." +
+				"<h4>End Time</h4>" +
+				"The respective firewall rule effect will end from this time.";
+			}
+			helpContent = bodyContent + buttonContent;
+		}
+		else if (frameName[0].getAttribute("id").indexOf("addIPRuleForm") != -1) {
+			bodyContent = "<div class='helpmainhead'>Add New IP Rule</div></h2>" +
+				"<div class='subSection'>" +
+				"This form is used to add a new IP Address or Range of " +
+				"IP Address rule settings. " +
+				"<br><br><fieldset>" +
+				"<legend>Actions</legend>" +
+				"<h4>IP/IP Range</h4>" +
+				"This field is used to configure the IP Address or Range " +
+				"of IP Addresses.<br>" +
+				"IP Address will support IPv4 and IPv6 Address formats:" +
+				"<ul>" +
+					"<li>- IPv4 Address made of 4 numbers separated by " +
+					"dots as in xxx.xxx.xxx.xxx.</li>" +
+					"<li>- Each number ranges from 0 to 255.</li>" +
+					"<li>- First number must not be 0.</li>" +
+				"</ul>" +
+				"<ul>" +
+					"<li>- IPv6 Address made of 8 groups of 4 Hexadecimal digits " +
+					"separated by colon as in xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx.</li>" +
+					"<li>- Hexadecimal digits are expressed as lower-case letters.</li>" +
+				"</ul>";
+			if (SYSTEM_FIREWALL_TIMEOUT) {
+			bodyContent += "<h4>Timeout</h4>" +
+				"This option used to enable or disable firewall rules with timeout." +
+				"<h4>Start Time</h4>" +
+				"The respective firewall rule effect will start from this time." +
+				"<h4>End Time</h4>" +
+				"The respective firewall rule effect will end from this time.";
+			}
+			bodyContent += "<h4>IP Settings</h4>" +
+				"IP Settings are used to dettermine the rule whether block " +
+				"or allow from the configured IP or IP Range."; 
+
+			helpContent = bodyContent + buttonContent;
+
+		} else if (frameName[0].getAttribute("id").indexOf("addPortRuleForm") != -1) {
+			bodyContent = "<div class='helpmainhead'>Add New Port Rule</div></h2>" +
+				"<div class='subSection'>" +
+				"This form is used to add a new Port or Range of " +
+				"Port rule settings. " +
+				"<br><br><fieldset>" +
+				"<legend>Actions</legend>" +
+				"<h4>Port/Port Range</h4>" +
+				"This field is used to configured the Port or Range " +
+				"of Port Addresses." +
+				"<ul>" +
+					"<li>- Port value ranges from 1 to 65535. " +
+				"</ul>" +
+				"<h4>Protocol</h4>" +
+				"This field is used to select the protocol. It may be " +
+				"TCP or UDP or Both." +
+				"<h4>Network Type</h4>" +
+				"This field is used to select the network type. It may be " +
+				"IPv4 or IPv6 or Both.";
+			if (SYSTEM_FIREWALL_TIMEOUT) {
+			bodyContent += "<h4>Timeout</h4>" +
+				"This option used to enable or disable firewall rules with timeout." +
+				"<h4>Start Time</h4>" +
+				"The respective firewall rule effect will start from this time." +
+				"<h4>End Time</h4>" +
+				"The respective firewall rule effect will end from this time.";
+			}
+			bodyContent += "<h4>Port Settings</h4>" +
+				"Port Settings are used to dettermine the rule whether block " +
+				"or allow from the configured Port or Port Range."; 
+
+			helpContent = bodyContent + buttonContent;
+		}
+	} else {
+		titleContent =  "<div class='helpmainhead'>System Firewall</div></h2>" +
+			"<div class='subSection'>" +
+			"This page is used to configure System Firewall support. " +
+			"To view the page, user must at least be an Operator.<br>" +
+			"To add or delete a firewall, user must be an Administrator. " +
+			"<br><br><fieldset>" +
+			"<legend>Actions</legend>";
+		advbuttonContent = "<h4>Advanced Settings</h4>" +
+			"Click this option to configure the Advanced Firewall Settings. " +
+			"Options are Block all and Flush all.";	
+		
+		if (SYSTEM_FIREWALL_TIMEOUT) {			
+			if ((top.frames["mainFrame"].pageFrame.document.getElementById
+				("_fwallSettings").style.fontWeight == "bold") || 
+				(top.frames["mainFrame"].pageFrame.document.getElementById
+				("_fwallSettings").style.fontWeight == 700)) {
+				bodyContent = "<h4>Network Type</h4>" +
+					"The respective firewall rule which applied for the network type(either IPv4/IPv6)." +
+					"<h4>Start Time</h4>" +
+					"The respective firewall rule effect will start from this time." +
+					"<h4>End Time</h4>" +
+					"The respective firewall rule effect will end from this time." +
+					"<h4>Settings</h4>" +
+					"This column indicates the current setting of the firewall rule.";
+				buttonContent = "<h4>Delete</h4>" +
+					"Select the configured slot to be deleted and click 'Delete'. " +
+					"</fieldset>" +
+					"</div>";
+			}
+		}
+		
+		if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_fwallIP").style.fontWeight == "bold") || 
+			(top.frames["mainFrame"].pageFrame.document.getElementById
+			("_fwallIP").style.fontWeight == 700)) {
+			bodyContent = "<h4>IP/IP Address Range</h4>" +
+				"This field is used to show the IP Address or Range of " +
+				"IP Addresses that are already configured.";
+			if (SYSTEM_FIREWALL_TIMEOUT) {
+			bodyContent += "<h4>Start Time</h4>" +
+				"The respective firewall rule effect will start from this time." +
+				"<h4>End Time</h4>" +
+				"The respective firewall rule effect will end from this time.";
+			}
+			bodyContent += "<h4>IP Settings</h4>" +
+				"This column indicates the current setting of the listed " +
+				"IP Address or Range of IP Addresses rules (Allow or Block).";
+			buttonContent = "<h4>Add</h4>" +
+				"Click 'Add' to add a new entry to the firewall rules list." +
+				"<h4>Delete</h4>" +
+				"Select the configured slot to be deleted and click 'Delete'. " +
+				"</fieldset>" +
+				"</div>";
+		}
+		if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_fwallPort").style.fontWeight == "bold") || 
+			(top.frames["mainFrame"].pageFrame.document.getElementById
+			("_fwallPort").style.fontWeight == 700)) {
+			bodyContent = "<h4>Protocol</h4>" +
+				"This field specifies the affected protocol for the " +
+				"particular Port or Port Ranges." +
+				"<h4>Network Type</h4>" +
+				"This field specifies the affected network type for the " +
+				"particular Port or Port Ranges." +
+				"<h4>Port/Port Range</h4>" +
+				"This field is used to show the configured Port Address " +
+				"or Range of Ports.";
+			if (SYSTEM_FIREWALL_TIMEOUT) {
+			bodyContent += "<h4>Start Time</h4>" +
+				"The respective firewall rule effect will start from this time." +
+				"<h4>End Time</h4>" +
+				"The respective firewall rule effect will end from this time.";
+			}
+			bodyContent += "<h4>Port Settings</h4>" +
+				"This column indicates the current setting of the listed " +
+				"Port or Range of Port rules (Allow or Block).";
+			buttonContent = "<h4>Add</h4>" +
+				"Click 'Add' to add a new entry to the firewall rules list." +
+				"<h4>Delete</h4>" +
+				"Select the configured slot to be deleted and click 'Delete'. " +
+				"</fieldset>" +
+				"</div>";
+		}
+	}
+	
+	helpContent = titleContent + advbuttonContent + bodyContent + buttonContent;
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

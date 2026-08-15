@@ -1,0 +1,62 @@
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2013        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+
+// File Name  : configure_dns_str.js
+// Brief      : configure_dns page string table
+// Author Name:
+
+eLang.configure_dns_strings = {};
+eLang.configure_dns_strings["CFG_DNS_SERVER3"] = "DNS Server3";
+eLang.configure_dns_strings["CFG_DNS_SERVER2"] = "DNS Server2";
+eLang.configure_dns_strings["CFG_DNS_SERVER1"] = "DNS Server1";
+eLang.configure_dns_strings["CFG_DNS_DNS_TITLE"] = "網域名稱伺服器配置";
+eLang.configure_dns_strings["CFG_DNS_PRIORITY"] = "IP 優先權";
+eLang.configure_dns_strings["CFG_DNS_TSIG_CURRENT"] = "目前 TSIG 私密檔案";
+eLang.configure_dns_strings["CFG_DNS_HOSTNAME"] = "Host Name";
+eLang.configure_dns_strings["CFG_DNS_TSIG_TITLE"] = "TSIG 配置";
+eLang.configure_dns_strings["CFG_DNS_DOMAIN_NAME"] = "網域名稱";
+eLang.configure_dns_strings["CFG_DNS_MDNSSETTING"] = "mDNS 設定";
+eLang.configure_dns_strings["CFG_DNS_DHCP_FQDN"] = "DHCP 用戶端 FQDN";
+eLang.configure_dns_strings["CFG_DNS_HOST_TITLE"] = "Host 配置";
+eLang.configure_dns_strings["CFG_DNS_BMC_REGISTER"] = "Register BMC";
+eLang.configure_dns_strings["CFG_DNS_NSUPDATE"] = "Nsupdate";
+eLang.configure_dns_strings["CFG_DNS_TSIG_AUTH"] = "TSIG 身份驗證";
+eLang.configure_dns_strings["CFG_DNS_MDNS"] = "Multicast DNS";
+eLang.configure_dns_strings["CFG_DNS_SERVICE"] = "網域名稱伺服器配置";
+eLang.configure_dns_strings["CFG_DNS_V6"] = "IPv6";
+eLang.configure_dns_strings["CFG_DNS_HOST_SETTING"] = "Host 設定";
+eLang.configure_dns_strings["CFG_DNS_TSIG_NEW"] = "新 TSIG 私人檔案";
+eLang.configure_dns_strings["CFG_DNS_DOMAIN_SETTING"] = "網域設定";
+eLang.configure_dns_strings["CFG_DNS_V4"] = "IPv4";
+eLang.configure_dns_strings["CFG_DNS_LAN_INTERFACE"] = "LAN 介面";
+eLang.configure_dns_strings["CFG_DNS_RESET"] = "重置";
+eLang.configure_dns_strings["CFG_DNS_SERVICE_SETTING"] = "DNS 伺服器設定";
+eLang.configure_dns_strings["CFG_DNS_TITLE"] = "DNS 伺服器設定";
+eLang.configure_dns_strings["CFG_DNS_DOMAIN_TITLE"] = "網域名稱設置";
+eLang.configure_dns_strings["CFG_DNS_ENABLE"] = "啟用";
+eLang.configure_dns_strings["CFG_DNS_DESC"] = "管理設備的 DNS 設定。";
+eLang.configure_dns_strings["CFG_DNS_SAVE"] = "儲存";
+eLang.configure_dns_strings["CFG_DNS_HOST_NAME"] = "Host 名稱";

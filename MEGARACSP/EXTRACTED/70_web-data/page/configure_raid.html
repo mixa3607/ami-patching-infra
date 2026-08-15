@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- 
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2012        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+ -->
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+	<link rel="stylesheet" href="../style/page_style.css" type="text/css" />
+	<link rel="stylesheet" href="../lib/listgrid.css" type="text/css" />
+	<script language="javascript" src="../lib/include.js"></script>
+	<script language="javascript" src="../lib/listgrid.js"></script>
+	<script>
+	document.writeln("<script language='javascript' src='../str/"+top.gLangSetting+"/global_str.js'><\/script>");
+	</script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_btnPopup");
+		elmt.setAttribute("value", eLang.getString("configure_raid", "CFG_RAID_ADVANCE_PROPERTIES"));
+		var elmt = document.getElementById("_btnClearLog");
+		elmt.setAttribute("value", eLang.getString("configure_raid", "CFG_RAID_CLEAR_BUTTON"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<style>
+	.toggleBMC {
+		display:"";
+	}
+	.toggleClient {
+		display:none;
+	}
+</style>
+<body oncontextmenu="return false;">
+<h3>
+<script>document.writeln(eLang.getString("configure_raid", "CFG_RAID_TITLE"));</script>
+</h3>
+<p>
+<script>document.writeln(eLang.getString("configure_raid", "CFG_RAID_DESC"));</script>
+</p>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td>
+<label id="_RAIDNameLabel"><strong>&nbsp;&nbsp;
+<script>document.writeln(eLang.getString("configure_raid", "CFG_RAID_NAME"));</script>
+ </strong></label>
+<select id="_lstRAIDController" class="bigclassicComboBox"></select>
+</td></tr>
+<tr><td colspan="2"><br/>
+<script>if(window.ActiveXObject) document.write("<br>");</script>
+</td></tr>
+</table>
+
+<table cellspacing="0" cellpadding="0" border="0"><tbody>
+<tr>
+	<td class="roundedtable_topleft"></td>
+	<td class="roundedtable_top"></td>
+	<td class="roundedtable_topright"></td>
+	<td class="roundedtable_topleft"></td>
+	<td class="roundedtable_top"></td>
+	<td class="roundedtable_topright"></td>
+	<td class="roundedtable_topleft"></td>
+	<td class="roundedtable_top"></td>
+	<td class="roundedtable_topright"></td>
+	<td class="roundedtable_topleft"></td>
+	<td class="roundedtable_top"></td>
+	<td class="roundedtable_topright"></td>
+	<td class="roundedtable_topleft"></td>
+	<td class="roundedtable_top"></td>
+	<td class="roundedtable_topright"></td>
+	<td class="roundedtable_topleft"></td>
+	<td class="roundedtable_top"></td>
+	<td class="roundedtable_topright"></td>
+</tr>
+
+<tr>
+       <td class="roundedtable_left"></td>
+       <td id="_raidInfo" class="classicTab">
+<script>document.writeln(eLang.getString("configure_raid", "CFG_RAID_CONTROLLER"));</script>
+</td>
+       <td class="roundedtable_right"></td>
+       <td class="roundedtable_left"></td>
+       <td id="_storageSummary" class="classicTab">
+<script>document.writeln(eLang.getString("configure_raid", "CFG_RAID_STORAGE"));</script>
+</td>
+       <td class="roundedtable_right"></td>
+       <td class="roundedtable_left"></td>
+       <td id="_physicalInfo" class="classicTab">
+<script>document.writeln(eLang.getString("configure_raid", "CFG_RAID_PHYSICAL"));</script>
+</td>
+       <td class="roundedtable_right"></td>
+       <td class="roundedtable_left"></td>
+       <td id="_virtualInfo" class="classicTab">
+<script>document.writeln(eLang.getString("configure_raid", "CFG_RAID_LOGICAL"));</script>
+</td>
+       <td class="roundedtable_right"></td>
+       <td class="roundedtable_left"></td>
+       <td id="_BBUInfo" class="classicTab">
+<script>document.writeln(eLang.getString("configure_raid", "CFG_RAID_BBU"));</script>
+</td>
+       <td class="roundedtable_right"></td>
+       <td class="roundedtable_left"></td>
+       <td id="_raidEvents" class="classicTab">
+<script>document.writeln(eLang.getString("configure_raid", "CFG_RAID_EVENT"));</script>
+</td>
+       <td class="roundedtable_right"></td>
+</tr>
+</tbody></table>
+
+<table cellspacing="0" cellpadding="10" border="1" id="_tabContainer">
+<tr><td>
+	<table cellspacing="0" cellpadding="0" border="0" width="100%">
+	<tr><td align="right">
+		<input type="button" id="_btnPopup" class="hiddenRow" />
+	</td></tr>
+	<tr id="_trEventLog" class="hiddenRow">
+	<td>
+	<table border="0" width="100%" cellspacing="3" cellpadding="3">
+	<tr>
+		<td><select id="_lstEventType"></select></td>
+		<td><label id="_lblHeader" class="alignRight"></label></td>
+	</tr>
+	<tr>
+		<td><input type="radio" id="_rdoBMCTzone" name="timeZone" checked>
+		<label for="_rdoBMCTzone">
+<script>document.writeln(eLang.getString("configure_raid", "CFG_RAID_BMC_TIME"));</script>
+</label>
+		<input type="radio" id="_rdoClientTzone" name="timeZone">
+		<label for="_rdoClientTzone">
+<script>document.writeln(eLang.getString("configure_raid", "CFG_RAID_CLIENT_TIME"));</script>
+</label>
+		&nbsp;&nbsp;<label id="_lblUTCOffset"></label></td>
+		<td class="alignRight">
+		<input type="button" id="_btnFirst" value="<<" style="width:40px" />
+		<input type="button" id="_btnPrevious" value="<" style="width:40px" />
+		<input type="text" id="_txtPage" maxlength="5" style="width:50px" />
+		<input type="button" id="_btnNext" value=">" style="width:40px" />
+		<input type="button" id="_btnLast" value=">>" style="width:40px" /></td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+	
+	<tr><td colspan="2">
+		<div id="_listGridRAIDHolder"></div>
+	</td><td id="_infoRAIDGraph" width="380" class="hiddenRow" valign="top">
+			<h4 align="center">
+<script>document.writeln(eLang.getString("configure_raid", "CFG_RAID_GRAPH_HEADER"));</script>
+</h4>
+			<span class="pieChartArea"></span>
+			<canvas id="RAIDgraphCanvas" width="200" height="200" class="gCanvas">
+			</canvas>
+		</td></tr>
+	<tr id="_trbtnClearEvent" class="hiddenRow"><td align="right">
+	<script>
+		if (!window.ActiveXObject) {
+			document.write("<br>");
+		}
+	</script>
+
+	<div class="btnTray">
+		<input type="button" id="_btnClearLog" />
+	</div>
+	</td></tr>
+	</table>
+</td></tr>
+</table>
+
+</body>
+</html>

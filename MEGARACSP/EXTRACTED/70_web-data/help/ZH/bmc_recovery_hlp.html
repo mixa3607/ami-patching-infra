@@ -1,0 +1,42 @@
+<html>
+	<head>
+ 	<title>bmc_recovery help</title>
+ 	<link href="../../style/help_style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div><div class="helpmainhead">BMC 回復</div></h2>
+	<div class="subSection">
+		此頁用來配置 BMC 回復設定
+		<br/><br/>
+		<fieldset>
+			<legend>動作</legend>
+			<h4>強制回復</h4>
+			選擇是否 啟用/停用 來決定下次開機是否自動回復.
+			<h4>Boot 重試次數</h4>
+			輸入數目來決定重啟 BMC 的次數,如果BMC Boot 發生錯誤在進入回復程序之前,會根據 Boot 重啟次數來重新啟動.
+			Boot 重啟次數可以在1到5之間.<br>
+			<strong>NOTE:</strong> 默認情況下 Boot 重試次數為 3.
+			<h4>回復重試次數</h4>
+			輸入數目來決定回復韌體映象檔在回復程序中的重試次數. 回復重試次數可以在1到5之間.
+			<br>
+			<strong>NOTE:</strong> 默認情況下回復重試的次數為 3.
+			<h4>伺服器位址</h4>
+			存放韌體映象檔的伺服器位置
+			<ul><li>- IP 位址由四個數目透過點來分開,其格式為 "xxx.xxx.xxx.xxx".
+			</li>
+			<li>- 每一個數字必須要在 0 到 255 之間.</li>
+			<li>- 第一個數字必須不能為 0.</li></ul>
+			<h4>映象檔名稱</h4>
+			進入 映象檔名稱 來編輯在 TFTP server 上自動回復的 映象檔 初始名稱.
+			<strong>NOTE:</strong>  默認情況下 映象檔 名稱為 rom.ima.
+			<h4>儲存</h4>
+			按一下 '儲存' 來儲存配置設定.
+			<h4>重啟</h4>
+			按一下 '重置' 來重啟改變後的配置.
+		</fieldset>
+	</div>
+	</body>
+</html>
+

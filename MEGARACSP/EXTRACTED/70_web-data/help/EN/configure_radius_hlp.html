@@ -1,0 +1,136 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>configure_radius help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+	X</a></div>
+<script type="text/javascript">
+var helpContent = "";
+var frameName = top.frames['mainFrame'].pageFrame;
+frameName = frameName.document.getElementsByTagName("FORM");
+if (frameName.length) {
+	if ("advancedRADIUSPrivFrm" == frameName[0].getAttribute('id')) {
+		helpContent = "<div class='helpmainhead'>Radius " +
+			"Authorization" +
+			"</div></h2>" +
+			"<div class='subSection'>" +
+			"Use this page to Configure Advanced Radius" +
+			" Authorization Setting" +
+			"<br><br>" +
+                                "<fieldset>" +
+                                "<legend>Actions</legend>" +
+                                "<h4>Radius User Authorization </h4>" +
+                                "For Authorization Purpose you should configure " +
+                                "Radius user with Vendor Specific" +
+                                " Attribute in Server side" +
+                                "<h4>Vendor Specific Attribute in Server side</h4>" +
+                                "You have to configure VSA values in Radius server" +
+                                "<ul>" +
+                                "<li>- Example:1</li> " +
+                                "<li>testadmin Auth-Type :=PAP,Cleartext-Password:='admin'</li>" +
+                                "<li>Auth-Type :=PAP, Vendor-Specific='H=4'</li>" +
+                                "</ul>" +
+			"<ul>" +
+			"<li>- Example:2</li>" +
+			"<li>testoperator Auth-Type := PAP,Cleartext-Password := 'operator'</li>" +
+			"<li>Auth-Type :=PAP, Vendor-Specific='H=3'<li>" +
+			"</ul>" +
+			"If you change the Vendor-Specific value then you should change" +
+			"the same values in this page.<br/>" +
+			"<strong>NOTE:</strong> " +
+			"<ul>" +
+			"<li>This fields will not allow more than " +
+			"127 characters." +
+			"<li>'#' is not allowed." +
+			"</ul>" +
+			"<h4>Save</h4>" +
+			"Click 'Save' to save the settings." +
+			"<h4>Cancel</h4>" +
+			"Click 'Cancel' to cancel the modified changes." +
+			"</div>";
+	}
+} else {
+	helpContent ="<div class='helpmainhead'>RADIUS" +
+		"</div></h2>" +
+		"<div class='subSection'>" +
+		"To enable/disable RADIUS, check or uncheck the RADIUS Authentication" +
+		"Enable checkbox respectively." +
+		"<br/>" +
+		"<strong>NOTE: </strong>Generic FreeRADIUS alone is supported." +
+		"<br/><br/>" +
+		"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>RADIUS Authentication </h4>" +
+			"Check the option 'Enable' to enable RADIUS authentication." +
+			"<h4>Port</h4>" +
+            "Specify the RADIUS Port." +
+			"<ul>" +
+				"<li>- Default Port is 1812.</li>" +
+				"<li>- Port value ranges from 1 to 65535.</li>" +
+			"</ul>" +
+			"<h4>Server Address</h4>" +
+			"Enter the 'Server address' of RADIUS server." +
+			"Server address will support the following:" +
+			"<ul>"+
+				"<li>- IP Address (Both IPv4 and IPv6 format).</li>" +
+				"<li>- FQDN (Fully qualified domain name) format.</li>" +
+			"</ul>" +
+			"<h4>Secret</h4>" +
+			"Enter the 'Authentication Secret' for RADIUS server" +
+			"<ul>" +
+				"<li>- Secret must be at least 4 characters long.</li>" +
+				"<li>- White space is not allowed.</li>" +
+			"</ul>" +
+			"<strong>NOTE:</strong> This field will not allow more than 31 " +
+			"characters.";
+		if (checkProjectCfg("EXTENDED_PRIV")) {
+			 helpContent += "<h4>Extended Privileges</h4>" +
+				"This field is used to assign KVM and VMedia " +
+				"privilege for the user.";
+		}
+	helpContent += "<h4>Advanced Setting</h4>" +
+		"Click 'Advanced Settings' to Radius User Authorization." + 
+		"<h4>Save</h4>" +
+		"Click 'Save' to save the settings." +
+		"<h4>Reset</h4>" +
+		"Click 'Reset' to reset the modified changes." +
+		"<br>" +
+		"</fieldset>" +
+		"</div>" ;
+	}
+document.write(helpContent);
+</script>
+</body>
+</html>

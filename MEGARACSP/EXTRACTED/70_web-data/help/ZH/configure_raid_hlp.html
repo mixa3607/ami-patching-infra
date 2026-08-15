@@ -1,0 +1,117 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2012        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+	<head>
+ 	<title>RAID 說明</title>
+ 	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+		<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+<script type="text/javascript">
+	var frameName = top.frames["mainFrame"].pageFrame.document.getElementsByTagName("FORM");
+	var titleContent = "", bodyContent = "", buttonContent = "";
+	var helpContent;
+	
+	//if (frameName.length) {
+		if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_physicalInfo").style.fontWeight == "bold") && 
+			(top.frames["mainFrame"].pageFrame.document.getElementById("tblPhysicalPopup") != null)) {
+			helpContent = "<div class='helpmainhead'>進階屬性</div></h2>" +
+			"<div class='subSection'>" +
+			"此頁用來顯示 RAID 控制器實體設備資訊的進階屬性細節，例如供應商 ID，産品 ID，編號，電源狀態..." +
+			"</div>";
+		} else if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_virtualInfo").style.fontWeight == "bold") && 
+			(top.frames["mainFrame"].pageFrame.document.getElementById
+			("tblLogicalPopup") != null)) {
+			helpContent = "<div class='helpmainhead'>摘要</div></h2>" +
+				"<div class='subSection'>" +
+				"此頁用來顯示所選擇邏輯設備的實體設備資訊細節，例如設備 ID，媒體類型，狀態..." +
+				"</div>";
+		} else 	{
+		helpContent = "<div class='helpmainhead'>RAID 管理</div></h2>" +
+			"<div class='subSection'>" +
+			"此頁用來顯示 RAID 控制器的資訊，存儲摘要，實體設備，邏輯設備，電池備份單元和事件日誌。" +
+			"<br><br><fieldset>" +
+			"<legend>用途</legend>" +
+			"<h4>RAID 控制器</h4>" +
+			"如果您選擇了任一個 RAID 控制器，將會顯示此控制器的相關資訊。" +
+			"將會顯示選擇的 RAID 控制器的資訊細節，例如序列號，Package 版本，擴展溫度，健康狀況..." +
+			"<h4>事件日誌</h4>" +
+			"在 RAID 控制器上所發生的所有事件和佔用／可用的日誌空間將會以圖形表示。如果您點選圖表中的"+ 
+			"顏色矩形便可以只顯示特定事件的列表。" + 
+			"<h4>存儲摘要</h4>" +
+			"此欄位顯示 RAID 控制器上的存儲資訊的細節，例如實體，邏輯，熱備用數量。" +
+			"<h4>實體設備資訊</h4>" +
+			"此欄位顯示實體設備資訊，例如設備 ID ，媒體類型，狀態，插槽，速度，連結速度，容量（GB）和溫度（°C）。";
+			
+			if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_physicalInfo").style.fontWeight == "bold")) {
+				helpContent += "<h4>進階屬性</h4>" +
+			"點選此選項以顯示更多實體設備資訊的細節，例如供應商 ID ，産品 ID ..." ;
+			}
+			
+			helpContent+= "<h4>邏輯設備資訊</h4>" +
+			"此欄位顯示 RAID 控制器上邏輯設備的資訊，例如 LD 名稱，狀態，讀／寫策略，實體編號..."
+			
+			if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_virtualInfo").style.fontWeight == "bold")) {
+				helpContent += "<h4>進階屬性</h4>" +
+			"點選此選項以顯示更多邏輯設備資訊的細節，例如 Stripe 容量，BGI，SSD快取，Progress，損壞區塊表，容量。" ;
+			}
+			
+			helpContent += "<h4>BBU 資訊</h4>" +
+			"此欄位顯示 RAID 控制器上電源備份單元的細節，例如類型，狀態，溫度，電壓..." +
+			"<h4>事件日誌</h4>" +
+			"事件日誌顯示在 RAID 控制器上所發生的事件的列表，在記錄上雙擊則可顯示此記錄的細節。" + 
+			"您也可以點選列標題來排序此列表。 
+			
+			if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_raidEvents").style.fontWeight == "bold")) {
+				helpContent += "<div class='subSection'>"+
+			 "<br/><fieldset>" +
+			"<legend>用途</legend> 您可以使用事件類型篩選器的選項來觀看設備上已記錄的某些特定事件。"+
+			"<h4>BMC 時區</h4> 點選此選項來顯示記錄在 BMC 裡的事件日誌項目的時區值。"+
+			"<h4>客戶端時區</h4> 點選此選項來顯示記錄在客戶端的事件日誌項目的時區值。"+
+			"<h4>UTC 偏移值</h4>顯示基於當前的UTC偏移值，基於此偏移值，事件的時間戳記將會被更新。</br>" +
+			"導航箭頭可被用於選擇性地訪問不同的網頁的事件日誌。"+
+			"<h4>清除全部事件日誌</h4> 此選項將會清除所選的 RAID 控制器上 的所有記錄。"+
+			"</fieldset></div>";
+			}
+			
+		helpContent += "</div>";
+
+	}
+	//}
+	
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

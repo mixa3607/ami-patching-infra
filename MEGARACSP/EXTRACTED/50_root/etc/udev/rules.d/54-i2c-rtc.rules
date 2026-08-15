@@ -1,0 +1,2 @@
+KERNEL=="rtc|rtc0",		MODE="0644"
+KERNEL=="rtc0",			SYMLINK+="rtc"

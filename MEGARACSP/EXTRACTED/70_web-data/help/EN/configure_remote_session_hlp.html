@@ -1,0 +1,115 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>configure_remote_session help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+	</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div>
+	<div class="helpmainhead">Remote Session</div></h2>
+	<div class="subSection">
+	This page is used to configure virtual media settings for the
+	next redirection session.
+	<br/><br/>
+	<fieldset>
+	<legend>Actions</legend>
+	<script type="text/javascript">
+	SINGLE_PORT_APP = checkProjectCfg("SINGLE_PORT_APP");
+	KEYBOARD_LANG = checkProjectCfg("KB_LANG_SELECT_SUPPORT");
+	POWER_CONSUMPTION = checkProjectCfg("POWER_CONSUMPTION");
+	HOSTLOCK = checkProjectCfg("RUNTIME_HOST_LOCK");
+	HOSTLOCKAUTO = checkProjectCfg("HOST_LOCK_AUTO");
+	RUNTIME_SINGLEPORT = checkProjectCfg("RUNTIME_SINGLEPORT_SUPPORT");
+	KVM_SESSION_RECONNECT = checkProjectCfg("KVM_SESSION_RECONNECT");
+
+	if (RUNTIME_SINGLEPORT) {
+		document.write("<h4>Single Port Application</h4> " +
+			"This select box is used to enable the single port application " +
+			"support at runtime.");
+	}
+
+	if (!SINGLE_PORT_APP || (SINGLE_PORT_APP && RUNTIME_SINGLEPORT)) {
+		document.write("<h4>KVM Encryption</h4> " +
+			"Enable/Disable encryption on KVM data for the next redirection " +
+			"session.");
+		/*document.write("<h4>Media Encryption</h4> " +
+			"Enable/Disable encryption on Media data for the next " +
+			"redirection session.");*/
+	}
+
+	if (!SINGLE_PORT_APP || (SINGLE_PORT_APP && RUNTIME_SINGLEPORT)) {
+		document.write("<br><strong>NOTE:</strong> It will automatically close " +
+			"existing remote redirection either KVM or Virtual media " +
+			"sessions, if any.");
+	}
+	
+	if (KEYBOARD_LANG) {
+		document.write("<h4>Keyboard Languages</h4> " +
+			"This select box is used to select the keyboard supported " +
+			"languages.");
+	}
+	if (!POWER_CONSUMPTION) {
+		document.write("<h4>Virtual Media Attach Mode</h4>" +
+			"Two types of VM attach modes are available:" +
+			"<ul><li>Attach - Immediately attaches Virtual Media to the " +
+			"server upon boot up.</li>" +
+			"<li>Auto Attach - Attaches Virtual Media to the server only " +
+			"when a virtual media session is started.</li></ul>");
+	}
+	if (HOSTLOCK) {
+		document.write("<h4>Local Monitor OFF Feature Status</h4> " +
+			"Check this box to enable Local Monitor ON/OFF command.");
+	}
+	if (HOSTLOCKAUTO) {
+		document.write("<h4>Automatically OFF Local Monitor, When JViewer " +
+			"Launches</h4> " +
+			"Check this box to automatically Lock the local monitor, When " +
+			"JViewer launches.");
+	}
+	if (KVM_SESSION_RECONNECT) {
+		document.write("<h4>Retry Count</h4>" +
+			"Number of times to be retried in case a KVM failure occurs." +
+			"<ul><li> - Retry count ranges from 1 to 3</li></ul>" +
+			"<h4>Retry Time Interval</h4>" +
+			"Number of seconds to wait for subsequent retries." +
+			"<ul><li> - Time interval ranges from 5 to 15 seconds.</li></ul>");
+	}
+	</script>
+	<h4>Save</h4>
+	Click 'Save' to save the current changes.
+	<h4>Reset</h4>
+	Click 'Reset' to reset the modified changes.
+	</fieldset>
+	</div>
+</body>
+</html>

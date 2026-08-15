@@ -1,0 +1,76 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>event_log help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>  
+</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div><div class="helpmainhead">Event log</div></h2>
+	<div class="subSection">
+		This page displays the list of events incurred by different sensors 
+		on this device. Double click on a record to see the details of that 
+		entry. You can also sort the list of entries by clicking on any of the 
+		column headers.
+		<br/><br/>
+		<fieldset>
+			<legend>Actions</legend>
+			You can use the sensor type or sensor name filter options to view 
+			those specific events logged in the device.
+			<h4>BMC Time zone</h4>
+			Check this option to display the event log entries logged with the 
+			BMC Time zone value.
+			<h4>Client Time zone</h4>
+			Check this option to display the event log entries logged with the 
+			Client (user's) Time zone value.
+			<h4>UTC Offset</h4>
+			Displays the current UTC Offset value based on which event Time 
+			Stamps will be updated.</br>
+			Navigational arrows can be used to selectively access different 
+			pages of the Event Log.
+			<h4>Clear All Event Logs</h4>
+			Clear All Event Logs option will delete all existing records for 
+			all sensors.
+			
+			<script type="text/javascript">
+				var event_log_help = "<h4>Save Event Logs</h4>Clicking "
+				+"this button will pop-up a Save dialog to save all "
+				+"existing records.";
+				if (checkProjectCfg("SAVE_SELLOG")) {
+					document.write (event_log_help);
+				}
+			</script>
+			
+		</fieldset>
+	</div>
+</body>
+</html>

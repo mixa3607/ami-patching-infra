@@ -1,0 +1,84 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2011-2016        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+
+<html>
+	<head>
+	<title>備份和還原配置</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+	</head>
+	<body>
+	<h2><div class="floatRight"><a href="javascript://" class="closeBtn" 
+		onclick="top.closeHelp();">X</a></div>
+	<script type="text/javascript">
+	var frameName = top.frames['mainFrame'].pageFrame.document.getElementsByTagName("FORM");
+	var titleContent = '', bodyContent = '', buttonContent = '';
+	var helpContent;
+	if ((frameName.length) && ("restoreConfigFileForm" == frameName[0].getAttribute('id'))) {
+		titleContent = "<div class='helpmainhead'>回復配置</div></h2>";
+		bodyContent = "<div class='subSection'>" +
+			"此表格用來回復所儲存的配置。 " +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>用途</legend>" +
+			"<h4>配置檔</h4>" +
+			"使用選擇檔案來選擇配置檔。";
+		buttonContent = "<h4>上傳</h4>" +
+			"點選 '上傳' 按鈕來上傳新的配置檔案並儲存。 " +
+			"<h4>取消</h4>" +
+			"點選 '取消' 按鈕來取消變動並回到上一頁。 " +
+			"</fieldset></div>";
+	} else {
+		titleContent = "<div class='helpmainhead'>備份和還原配置</div></h2>";
+		bodyContent = "<div class='subSection'>" +
+			"檢查需要備份的配置或是在有需要的時候回復原本的配置。 " +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>用途</legend>" +
+			"<h4>回復配置</h4>" +
+			"此按鈕用來回復之前所儲存的配置。 " +
+			"<h4>全選</h4>" +
+			"點選此按鈕來選擇所有的配置。" +
+			"<h4>備份配置項目</h4>" +
+			"點選/取消點選 複選框來選擇要從 BMC 備份到遠端系統的配置項目。 ";
+	
+		buttonContent = "<h4>備份配置</h4>" +
+			"此按鈕用來備份所選取的配置項目。 " +
+			"<h4>儲存</h4>" +
+			"點選 '儲存' 按鈕以儲存變更。" +
+			"<h4>重置</h4>" +
+			"點選 '重置' 按鈕以回復之前的變更。" +
+			"</fieldset>" +
+			"</div>";
+	}
+	helpContent = titleContent + bodyContent + buttonContent;
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

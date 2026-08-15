@@ -1,0 +1,89 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2011-2016        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+
+<html>
+	<head>
+	<title>backup_restore_help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+	</head>
+	<body>
+	<h2><div class="floatRight"><a href="javascript://" class="closeBtn" 
+		onclick="top.closeHelp();">X</a></div>
+	<script type="text/javascript">
+	var frameName = top.frames['mainFrame'].pageFrame.document.getElementsByTagName("FORM");
+	var titleContent = '', bodyContent = '', buttonContent = '';
+	var helpContent;
+	if ((frameName.length) && ("restoreConfigFileForm" == frameName[0].getAttribute('id'))) {
+		titleContent = "<div class='helpmainhead'>Restore Configuration</div></h2>";
+		bodyContent = "<div class='subSection'>" +
+			"This form is used to restore the configurations. " +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>Configuration File</h4>" +
+			"Use Browse button to navigate to the Configuration file.";
+		buttonContent = "<h4>Upload</h4>" +
+			"Click 'Upload' to upload the new configuration file and restore. " +
+			"<h4>Cancel</h4>" +
+			"Click 'Cancel' to cancel the modification and return to configuration " +
+			"list. " +
+			"</fieldset></div>";
+	} else {
+		titleContent = "<div class='helpmainhead'>Backup and Restore Configuration</div></h2>";
+		bodyContent = "<div class='subSection'>" +
+			"Check the configuration that needs to be backup, and used to Restore " +
+			"the configuration, when needed." +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>Restore Configuration</h4>" +
+			"This option is used to restore the configuration items, which was " +
+			"backup earlier." +
+			"<h4>Select All</h4>" +
+			"Check this option to select all the configuration list." +
+			"<h4>Backup Configuration Item</h4>" +
+			"You can either check/uncheck a check box to backup the " +
+			"configuration item from BMC to client system.";
+	
+		buttonContent = "<h4>Backup Configuration</h4>" +
+			"Click option is used to backup configuration items, " +
+			"what are all checked." +
+			"<h4>Save</h4>" +
+			"Click 'Save' to save any changes made." +
+			"<h4>Reset</h4>" +
+			"Click 'Reset' to reset the modified changes." +
+			"</fieldset>" +
+			"</div>";
+	}
+	helpContent = titleContent + bodyContent + buttonContent;
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

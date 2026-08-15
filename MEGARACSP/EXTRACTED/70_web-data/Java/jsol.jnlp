@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jnlp spec="1.0+" codebase="<% JAVA_SOL_PARAMS("$IP_KEY$"); %>/Java">
+     <information>
+        <title>Java SOL</title>
+        <vendor>American Megatrends, Inc.</vendor>
+        <description kind="one-line">Java SOL Application</description>
+        <description kind="tooltip">Java SOL Application</description>
+    </information>
+	<security>
+		<all-permissions/>
+	</security>
+    <resources>
+        <j2se version="1.7+"/>
+        <jar href="SOL/JSOL.jar"/>
+    </resources>
+    <application-desc main-class="com.ami.jsol.JSOL">
+		<% JAVA_SOL_PARAMS("$MAX_TAB_COUNTS$"); %>
+    </application-desc>
+</jnlp>

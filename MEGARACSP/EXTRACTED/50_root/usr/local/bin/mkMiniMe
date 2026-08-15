@@ -1,0 +1,167 @@
+# /usr/local/bin/makeminime: Make ram area for flasher work in $1
+#
+#
+
+WWW_DIR="www"
+IMAGE_1=1
+IMAGE_2=2
+
+# @Section: /usr/local/www
+#no need to copy the www files
+#instead we do this
+# www is already unmounted
+# now dd /dev/mtdblock3(www) into /dev/ram3
+# now /dev/ram3 has a cramfs filesystem
+# now mount this into the regulat /usr/local/www
+
+ShouldBeSkipped()
+{
+    echo $1 | grep "^#" > /dev/null
+    if [ $? == 0 ]
+    then
+        return 1
+    fi
+    if [ "`echo $1`" == "" ]
+    then
+        return 1
+    fi
+
+    return 0
+}
+
+
+if [ -f "/etc/core_features" ]
+then
+        while read line
+        do
+                ShouldBeSkipped $line
+                if [ $? == 1 ]
+                then
+                        continue
+                fi
+
+                line=`echo $line | awk '{ print $1}'`
+                if [ "$line" == "CONFIG_SPX_FEATURE_GLOBAL_DUAL_IMAGE_SUPPORT=DUAL_IMAGE" ]; then
+			DUAL_IMG_SUPPORT='YES'
+		elif [ "$line" == "CONFIG_SPX_FEATURE_COMMON_CONF_SECTION" ]; then
+			COMMON_CONF='YES'
+		elif [ "$line" == "CONFIG_SPX_FEATURE_GLOBAL_ON_LINE_FLASHING_SUPPORT" ]; then
+			ONLINE_FLASH='YES'
+		elif [ "$line" == "CONFIG_SPX_FEATURE_GLOBAL_FAILSAFECONF" ]; then
+			FAILSAFE_CONF='YES'
+		elif [ "$line" == "CONFIG_SPX_FEATURE_EXTENDEDLOG_SUPPORT" ]; then
+			EXTLOG='YES'
+		elif [ "$line" == "CONFIG_SPX_FEATURE_GLOBAL_FAILSAFEEXTLOG" ]; then
+			FAILSAFE_EXTLOG='YES'
+		fi
+        done </etc/core_features
+fi
+
+if [ "$DUAL_IMG_SUPPORT" == "YES" ] && [ "$ONLINE_FLASH" != "YES" ]
+then
+
+        getnumimgsflshd() {
+        #read /proc/mtd and get num of images flashed.
+                while read dev size erasesize name
+                do
+                        dev_name=`echo $name | sed 's/"//g'`
+
+                        if [ $dev_name == $ROOT ] ; then
+                                imgs_flashd=$((imgs_flashd+1))
+            fi
+
+                done < /proc/mtd
+        }
+
+        getimageno() {
+        #read /proc/cmdline and get the imagebooted variable value.
+                CMDLINE=`cat /proc/cmdline`
+                echo $CMDLINE
+                for X in $CMDLINE;
+                do
+                        param=`echo $X | awk -F= '{ print $1}'`
+                        value=`echo $X | awk -F= '{ print $2}'`
+                        if [ $param == "imagebooted" ] ; then
+                        echo $param $value
+                                        imagebooted=$value
+                        fi
+                done
+        }
+
+	getimageno()
+	getnumimgsflshd()
+	FoundWWW=0
+	while read dev size erasesize name
+	do
+		MTD_NUM=`echo $dev | awk -F: '{ print $1 }' | sed 's/mtd//g'`
+        	dev_name=`echo $name | sed 's/"//g'`
+		mtd_dev=`echo $dev | sed 's/://g'`
+        	if [ $dev_name == $WWW_DIR ] ; then
+			FoundWWW=$((FoundWWW+1))
+			if [ $imagebooted == $IMAGE_2 ] && [ $FoundWWW == 1 ] ;then
+				continue
+			fi
+
+			dd if=/dev/$mtd_dev of=/dev/ram3
+			mount -t cramfs /dev/ram3 /usr/local/www
+                	if [ $? == 0 ] ;then
+                		echo "mounting mtd device $dev_name successful..."
+                	else
+                        	echo "mounting mtd device $dev_name failed!!!!"
+                	fi
+			break
+       		fi
+
+	done < /proc/mtd
+elif [ "$DUAL_IMG_SUPPORT" != "YES" ]; then
+	wwwmtd=`cat /proc/mtd | grep www | awk -F : '{ print $1}' | sed s/mtd/mtdblock/`
+	dd if=/dev/$wwwmtd of=/dev/ram3
+	mount -t cramfs /dev/ram3 /usr/local/www
+fi
+
+if [ "$COMMON_CONF" != "YES" ]; then
+	#directories for config files
+	cd $1
+	mkdir oldconf
+	mkdir newconf
+
+	if [ "$FAILSAFE_CONF" == "YES" ]; then
+		mkdir newbkconf
+		if [ "$DUAL_IMG_SUPPORT" != "YES" ]; then
+			umount -l /bkupconf
+		fi
+	fi
+
+	if [ "$EXTLOG" == "YES" ]; then
+		mkdir oldextlog
+                mkdir newextlog
+                if [ "$FAILSAFE_EXTLOG" == "YES" ]; then
+                        mkdir newbkextlog
+                fi
+        fi
+
+	cd $CUR_DIR
+	echo "*******************************************************"
+	echo "Backing up current configuration "
+	echo "*******************************************************"
+	# copy everything from conf to oldconf
+	usr/local/bin/cpConf /conf /mnt/fwupdate/oldconf
+
+	if [ "$EXTLOG" == "YES" ]; then
+		# copy everything from extlog to oldextlog
+		usr/local/bin/cpConf /extlog /mnt/fwupdate/oldextlog
+	fi
+
+        if [ -f "/var/activeimage" ]; then
+                umount -l /conf
+        else
+                umount /bkupconf
+		if [ "$FAILSAFE_EXTLOG" == "YES" ]; then
+                        umount /bkupextlog
+	        fi
+        fi
+
+	echo "done"
+	echo "*******************************************************"
+	exit 0	
+fi

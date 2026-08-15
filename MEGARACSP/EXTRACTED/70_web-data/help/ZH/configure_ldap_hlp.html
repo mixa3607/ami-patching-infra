@@ -1,0 +1,219 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>LDAP 配置說明</title>
+	<link type='text/css' rel='stylesheet' href='../../style/help_style.css'/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+	</head>
+	<body oncontextmenu='return false;'>
+	<h2><div class='floatRight'><a href='javascript://' class='closeBtn' 
+		onclick='top.closeHelp();'>X</a></div>
+	<script type="text/javascript">
+	var helpContent = "";
+	var frameName = top.frames['mainFrame'].pageFrame;
+	frameName = frameName.document.getElementsByTagName("FORM");
+	if (frameName.length)
+	{
+		if ("advancedLDAPFrm" == frameName[0].getAttribute('id'))
+		{
+			helpContent = "<div class='helpmainhead'>進階 " +
+				"LDAP/E-Directory 設定" +
+				"</div></h2>" +
+				"<div class='subSection'>" +
+				"請使用此頁面來配置進階 LDAP/E-Directory 設定。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>LDAP/E-Directory 認證</h4>" +
+				"點選複選框來啟用 LDAP/E-Directory 認證" +
+				"<h4>加密類型</h4>" +
+				"選擇 LDAP/E-Directory 所使用的加密類型。" +
+				"<strong>提醒：</strong> 當 SSL 啟用時請設定正確的埠號。" +
+				"<h4>伺服器位址</h4>" +
+				"LDAP/E-Directory 伺服器的 IP 位址。" +
+				"<ul>" +
+				"<li>- IP 位址是由 4 組數字所組成並以逗點分開，例如：" +
+				"'xxx.xxx.xxx.xxx'。</li>" +
+				"<li>- 每一組數字的範圍由 0 ～ 255。</li>" +
+				"<li>- 第一組數字不能為 0。</li>" +
+				"</ul>" +
+				"LDAP/E-Directory 伺服器位址支援以下格式：" +
+				"<ul><li>- IPv4 位址格式。.</li>" + 
+				"<li>- IPv6 位址格式。</li></ul>" +
+				"<strong>提醒：</strong> 當 FQDN 使用 StartTLS 時，請設定" +
+				"FQDN 位址。" +
+				"<h4>埠號</h4>" +
+				"指定 LDAP/E-Directory 所使用的埠號。" +
+				"<ul><li>- 預設的埠號為 389。</li>" +
+				"<li>- 對於 SSL 連線，預設的埠號為 636。</li>" +
+				"<li>- 埠號的範圍由 1 ～ 65535。</li></ul>" +
+				"<h4>Bind DN</h4>" +
+				"Bind DN 是用在 bind 操作，讓伺服器對客戶端進行身份驗證。" +
+				"<ul>" +
+				"<li>- Bind DN 是由 4 ～ 64 個字母數字所組成的字串。</li>" +
+				"<li>- 開頭必需要是字母。</li>" +
+				"<li>- 可以使用特殊字元，例如點（.），逗號（,），連字符號（-）" +
+				"，底線（_），等號（=）。</li>" +
+				"<li>- 範例：cn=manager,ou=login, dc=domain,dc=com</li>" +
+				"</ul>" +
+				"<h4>密碼</h4>" +
+				"Bind 密碼是用在 bind 操作，讓伺服器對客戶端進行身份驗證。" +
+				"<ul><li>- 密碼的長度至少要有 1 個字元。</li>" +
+				"<li>- 不允許使用空白鍵。</li></ul>" +
+				"<strong>提醒：</strong> 此欄位不允許超過48個字元。" +
+				"<h4>搜索庫</h4>" +
+				"用搜索庫告知 LDAP/E-Directory 伺服器需要搜索外部目錄。" +
+				"的那一個部分。搜索庫可能等同於組織或外部目錄群組。" +
+				"<ul>" +
+				"<li>- 搜索庫是由 4 ～ 64 個字母數字所組成的字串。</li>" +
+				"<li>- 開頭必需要是字母。</li>" +
+				"<li>- 可以使用特殊字元，例如點（.），逗號（,），連字符號（-）" +
+				"，底線（_），等號（=）。</li>" +
+				"<li>- 範例：ou=login,dc=domain,dc=com</li>" +
+				"</ul>" +
+				"<h4>使用者的登入屬性</h4>" +
+				"使用者的登入屬性告知 LDAP/E-Directory 伺服器要用那種屬性來" +
+				"識別用戶。"+
+				"<ul>" +
+				"<li>- 只支援 cn 或 uid</li>" +
+				"</ul>" +
+				"<h4>CA Certificate 檔案</h4>" +
+				"包含可信任的CA證書的檔案。" +
+				"<h4>Certificate 檔案</h4>" +
+				"客戶端 certificate 檔案。" +
+				"<h4>私鑰</h4>" +
+				"客戶端的私鑰檔案。" + 
+				"<br><strong>提醒：</strong> 當啟用 StartTLS 時，這三個檔案是" + 
+				"必需的。</br>" +
+				"<h4>儲存</h4>" +
+				"儲存設定。" +
+				"<h4>取消</h4>" +
+				"取消己變更的設定。" +
+				"<br>"+
+				"</fieldset>" +
+				"</div>";
+		}
+		else if ("addRoleGroup" == frameName[0].getAttribute('id'))
+		{
+			helpContent = "<div class='helpmainhead'>新增分組</div></h2>" +
+				"<div class='subSection'>" +
+				"使用此表格來新增一個分組。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>分組名稱</h4>" +
+				"分組在 LDAP/E-Directory 伺服器裡的識別名稱。" +
+				"<ul><li>- 分組名稱是由 1 ～ 255 個字母數字所組成的字串。" +
+				"<li>- 可以使用特殊字元連字符號（-）和底線（_）。" +
+				"</li></ul>" +
+				"<h4>分組搜索庫</h4>" +
+				"分組在 DN 裡的路徑。" +
+				"<ul><li>- 搜索庫是由 1 ～ 255 個字母數字所組成的字串。" +
+				"<li>- 可以使用特殊字元連字符號（-）,底線（_），點（.）。" +
+				"</li></ul>" +
+				"<h4>分組權限</h4>" +
+				"設定此分組的權限等級。";
+
+			if (checkProjectCfg("EXTENDED_PRIV")) {
+				helpContent += "<h4>擴展的權限</h4>" +
+					"此欄位用來設定分組是否擁有 KVM 和 VMedia 的權限";
+			}
+			helpContent += "<h4>新增</h4>" +
+				"點選 '新增' 以儲存新的分組並回到分組列表。" +
+				"<h4>取消</h4>" +
+				"點選 '取消' 以取消變更並回到分組列表。" +
+				"</fieldset>" +
+				"</div>";
+		}
+		else if ("modRoleGroup" == frameName[0].getAttribute('id'))
+		{
+			helpContent = "<div class='helpmainhead'>修改分組</div>" +
+				"</h2>" +
+				"<div class='subSection'>" +
+				"使用此表格以變更已存在的分組設定。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>分組名稱</h4>" +
+				"已配置的分組名稱。" +
+				"<ul><li>- 分組名稱是由 1 ～ 255 個字母數字所組成的字串。" +
+				"<li>- 可以使用特殊字元連字符號（-）和底線（_）。" +
+				"</li></ul>" +
+				"<h4>分組搜索庫</h4>" +
+				"分組在 DN 裡的路徑。" +
+				"<ul><li>- 搜索庫是由 1 ～ 255 個字母數字所組成的字串。" +
+				"<li>- 可以使用特殊字元連字符號（-）,底線（_），點（.）。" +
+				"</li></ul>" +
+				"<h4>分組權限</h4>" +
+				"設定此分組的權限等級。";
+
+			if (checkProjectCfg("EXTENDED_PRIV")) {
+				helpContent += "<h4>擴展的權限</h4>" +
+					"此欄位用來設定分組是否擁有 KVM 和 VMedia 的權限";
+			}
+			helpContent += "<h4>修改</h4>" +
+				"點選 '修改' 以儲存修改並回到分組列表。 " +
+				"<h4>取消</h4>" +
+				"點選 '取消' 以取消變更並回到分組列表。" +
+				"</fieldset>" +
+				"</div>";
+		}
+	}
+	else
+	{
+		helpContent = "<div class='helpmainhead'>LDAP/E-Directory</div></h2>" +
+			"<div class='subSection'>" +
+			"下面清單列出目前設定的分組和未設定的分組，您可以從這裡變更或" +
+			"新增／刪除分組。<br>組搜索庫可以是分組在 DN 裡的任何路徑。" +
+			"分組名稱必需對應到 LDAP/E-Directory 伺服器裡已存在的分組名稱。" +
+			"要顯示此分組，使用者等級至少必需是 User。" +
+			"<br>要修改或新增一個分組，使用者等級必需是 Administrator。<br>" +
+			"<strong>提醒：</strong> 未設定的分組將會以 \"~\" 標示。" +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>用途</legend>" +
+			"<h4>進階設定</h4>" +
+			"點選此按鈕以配置 LDAP/E-Directory 進階設定。內容為啟用" +
+			" LDAP/E-Directory 認證，IP 位址，埠號，Bind DN，密碼和搜索庫。" +
+			"<h4>新增分組</h4>" +
+			"選擇一個未設定的分組並點選 '新增分組' 來在設備上新增一個分組。" +
+			"或者您也可以雙擊一個未設定的分組來新增一個分組 " +
+			"<h4>修改分組</h4>" +
+			"選擇一個已設定的分組並點選 '修改分組' 來修改分組。或者您也可以 " +
+			"雙擊一個已設定的分組來修改分組。" +
+			"<h4>刪除分組</h4>" +
+			"選擇想要刪除的分組並點選 '刪除分組' 來刪除。" +
+			"</fieldset>" +
+			"</div>";
+	}
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

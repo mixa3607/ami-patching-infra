@@ -1,0 +1,3 @@
+# Creating a symbolic link at /dev/input/keyboard 
+# Applications can use this link to access PS/2 keyboard
+SUBSYSTEM=="input", DRIVERS=="atkbd", SYMLINK+="input/keyboard"

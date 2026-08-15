@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- 
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2012        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+ -->
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+	<link rel="stylesheet" href="../style/page_style.css" type="text/css" />
+	<script src="../lib/include.js" type="text/javascript"></script>
+	<script language="javascript" src="../impl/configure_triggers_imp.js"></script>
+	<script>
+	document.writeln("<script language='javascript' src='../str/"+top.gLangSetting+"/global_str.js'><\/script>");
+	</script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_btnSave");
+		elmt.setAttribute("value", eLang.getString("configure_video_sol_recordings", "CFG_VIDEO_SOL_SAVE"));
+		var elmt = document.getElementById("_btnReset");
+		elmt.setAttribute("value", eLang.getString("configure_video_sol_recordings", "CFG_VIDEO_SOL_RESET"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+<h3>
+<script>document.writeln(eLang.getString("configure_video_sol_recordings", "CFG_VIDEO_SOL_RECORDINGS_TITLE"));</script>
+</h3>
+<p><label id="_lblDescription">
+<script>document.writeln(eLang.getString("configure_video_sol_recordings", "CFG_VIDEO_SOL_RECORDINGS_DESC"));</script>
+</label></p>
+<table cellspacing="0" cellpadding="0" border="0" class="hiddenRow" id="_tblTabs"><tbody>
+<tr>
+	<td class="roundedtable_topleft"></td>
+	<td class="roundedtable_top"></td>
+	<td class="roundedtable_topright"></td>
+	<td class="roundedtable_topleft"></td>
+	<td class="roundedtable_top"></td>
+	<td class="roundedtable_topright"></td>
+</tr>
+<tr>
+	<td class="roundedtable_left"></td>
+	<td id="_autoVideoRecording" class="classicTab">
+<script>document.writeln(eLang.getString("configure_video_sol_recordings", "CFG_VIDEO_SOL_RECORDING_TAB"));</script>
+</td>
+	<td class="roundedtable_right"></td>
+	<td class="roundedtable_left"></td>
+	<td id="_autoSOLRecording" class="classicTab">
+<script>document.writeln(eLang.getString("configure_video_sol_recordings", "CFG_VIDEO_SOL_TAB"));</script>
+</td>
+	<td class="roundedtable_right"></td>
+</tr>
+</tbody></table>
+	<div class="subSection" id="_divMain" style="width:100%;float:left;">
+		<div id="divAutoVideoEvents" style="width:100%;overflow:auto;">
+			<table cellspacing="5" cellpadding="5" border="0" width="1000" id="_tblAutoVideoEvents">
+			</table>
+			<!--  <table cellspacing="5" cellpadding="5" border="0" width="1000" class="hiddenRow" id="_tblAutoSOLVideoEvents">
+			</table>  -->
+		</div>
+		<br/>
+		<div class="btnTray">
+			<input type="button" id="_btnSave" />
+			<input type="button" id="_btnReset" />
+		</div>
+	</div>
+</body>
+</html>

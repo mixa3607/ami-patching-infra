@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<link rel="stylesheet" href="../style/page_style.css" type="text/css" />
+	<link rel="stylesheet" href="../lib/listgrid.css" type="text/css" />
+	<script language="javascript" src="../lib/include.js"></script>
+	<script language="javascript" src="../lib/listgrid.js"></script>
+	<script language="javascript" src="../lib/form.js"></script>
+	<script language="javascript" src="../impl/firewall_port_imp.js"></script>
+	<script language="javascript" src="../impl/firewall_ip_imp.js"></script>
+	<script language="javascript" src="../impl/firewall_settings_imp.js"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_btnAdvSettings");
+		elmt.setAttribute("value", eLang.getString("configure_firewall", "CFG_FWALL_ADV_SETTINGS"));
+		var elmt = document.getElementById("_btnAdd");
+		elmt.setAttribute("value", eLang.getString("configure_firewall", "CFG_FWALL_ADD"));
+		var elmt = document.getElementById("_btnDelete");
+		elmt.setAttribute("value", eLang.getString("configure_firewall", "CFG_FWALL_DELETE"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+	<h3>
+<script>document.writeln(eLang.getString("configure_firewall", "CFG_FWALL_TITLE"));</script>
+</h3>
+	<table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr><td width="85%">
+			<p>
+<script>document.writeln(eLang.getString("configure_firewall", "CFG_FWALL_DESC"));</script>
+</p>
+		</td>
+		<td class="alignRight">
+			<input type="button" id="_btnAdvSettings">
+		</td></tr>
+	</table>
+	<br/>
+
+	<table cellspacing="0" cellpadding="0" border="0" id="_tblTab">
+	<tbody>
+		<tr>
+			<td class="roundedtable_topleft"></td>
+			<td class="roundedtable_top"></td>
+			<td class="roundedtable_topright"></td>
+			<td class="roundedtable_topleft"></td>
+			<td class="roundedtable_top"></td>
+			<td class="roundedtable_topright"></td>
+			<td class="roundedtable_topleft"></td>
+			<td class="roundedtable_top"></td>
+			<td class="roundedtable_topright"></td>
+		</tr>
+		<tr>
+			<td class="roundedtable_left"></td>
+			<td id="_fwallSettings" class="classicTab">
+<script>document.writeln(eLang.getString("configure_firewall", "CFG_FWALL_SETTINGS"));</script>
+</td>
+			<td class="roundedtable_right"></td>
+			<td class="roundedtable_left"></td>
+			<td id="_fwallIP" class="classicTab">
+<script>document.writeln(eLang.getString("configure_firewall", "CFG_FWALL_IP"));</script>
+</td>
+			<td class="roundedtable_right"></td>
+			<td class="roundedtable_left"></td>
+			<td id="_fwallPort" class="classicTab">
+<script>document.writeln(eLang.getString("configure_firewall", "CFG_FWALL_PORT"));</script>
+</td>
+			<td class="roundedtable_right"></td>
+		</tr>
+	</tbody>
+	</table>
+
+	<div id="_divFwallTab" class="classicTabContent">
+		<label id="_lblHeader" class="alignRight"></label>
+		<br style="clear:both" /><br style="clear:both" />
+		<div id="_listGridHolder"></div>
+		<iframe name="hiddenFrame" class="hide"></iframe>
+		<br style="clear:both" />
+		<div class="btnTray">
+			<input type="button" id="_btnAdd" />
+			<input type="button" id="_btnDelete" />
+		</div>
+	</div>
+</body>
+</html>

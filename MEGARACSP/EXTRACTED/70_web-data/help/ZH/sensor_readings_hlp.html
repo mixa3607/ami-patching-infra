@@ -1,0 +1,106 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+ 	<title>感測器讀數說明</title>
+	<link type='text/css' rel='stylesheet' href='../../style/help_style.css'/>
+	</head>
+	<body>
+		<h2><div class='floatRight'><a href='javascript://' class='closeBtn' 
+		onclick='top.closeHelp();'>X</a></div>
+		
+	<script type="text/javascript">
+		var helpContent = "";
+		var frameName = top.frames['mainFrame'].pageFrame;
+		frameName = frameName.document.getElementsByTagName("FORM");
+		if (frameName.length)
+		{
+			if ("advancedThresholdFrm" == frameName[0].getAttribute('id'))
+			{
+				helpContent = "<div class='helpmainhead'>臨界值設定" +
+					"</div></h2>" +
+					"<div class='subSection'>" +
+					"使用此頁來設定臨界值配置。"+
+					"<br><br>" +
+					"<fieldset>" +
+					"<legend>用途</legend>" +
+					"<h4>低不可恢復(LNR) </h4>" +
+					"設定低不可恢復臨界值。" +
+					"<h4>低緊要 (LC) </h4>" +
+					"設定低緊要臨界值。" +
+					"<h4>低非緊要(LNC) </h4>" +
+					"設定低非緊要臨界值。" +
+					"<h4>高不可恢復 (UNR) </h4>" +
+					"設定高不可恢復臨界值。" +
+					"<h4>高緊要(UC) </h4>" +
+					"設定高緊要臨界值。" +
+					"<h4>高非緊要(UNC) </h4>" +
+					"設定高非緊要臨界值。" +
+					"<h4>儲存</h4>" +
+					"儲存設定。" + "<br>" +
+					"所有在文字方塊裡的資料都會被轉換成 IPMI 的資料格式，" +
+					"請參閱 IPMI SPEC. 2.0, chapter 36, Sensor Types and " +
+					"Data Conversion. 以取得更多的資訊。" +
+					"<h4>取消</h4>" +
+					"取消已變更的資料。" +
+					"<br>"+
+					"</fieldset>" +
+					"</div>";
+			}
+		} else {
+			helpContent = "<div class='helpmainhead'>感測器讀數</div>" +
+				"</h2><div class='subSection'>" +
+				"感測器讀數的列表將會顯示在這。點擊記錄可以顯示此感測器的更多細" +
+				"節，包括臨界值以及以圖形所表示的所有相關事件。雙擊記錄可以 開啟／" +
+				"關閉 感測器的即時看板工具。<br/>" +
+				"<strong>提醒：</strong> N/A 表示不適用。" +
+				"<br/><br/>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>臨界值設定</h4>" +
+				"點選此選項來設定臨界值配置，包括：" +
+				"<ul>" +
+				"<li>- 低不可恢復 (LNR)</li>" +
+				"<li>- 低緊要 (LC)</li>" +
+				"<li>- 低非緊要 (LNC)</li>" +
+				"<li>- 高不可恢復 (UNR)</li>" +
+				"<li>- 高緊要 (UC)</li>" +
+				"<li>- 高非緊要 (UNC)</li>" +
+				"</ul>" +
+				"<h4>Live Widget</h4>" +
+				"開啟或關閉感測器的 <a href='widget_page_hlp.html'>即時看板工具" +
+				"</a>。此看板動態顯示感測器讀數。" +
+				"<h4>查看事件日誌</h4>" +
+				"點選此按鈕以查看所選擇的感測器的事件日誌頁面。" +
+				"</fieldset>" +
+				"</div>";
+    	}
+    	document.write(helpContent);
+    </script>
+	</body>
+</html>

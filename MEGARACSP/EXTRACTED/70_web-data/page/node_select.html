@@ -1,0 +1,31 @@
+<html>
+	<head>
+	<title>Node Select Page</title>
+	<link href="../style/node_style.css" type="text/css" rel="stylesheet" />
+	<script src="../lib/include.js" type="text/javascript"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+			doInit();
+		}
+	}
+	</script>
+	</head>
+
+	<body>
+	<h2>
+	<div class='nodemainhead'>Node Select</div></h2>
+	<div class="subSection">
+	<table id="_tblNode" cellspacing="5" cellpadding="5" border="0" width="220">
+	<tr><td>
+		<strong>
+			<script>document.writeln(eLang.getString("node_select", "NODE_SELECT_CURRENTNODE"));</script>
+			 <label id="_lblCurNode" style="text-transform:uppercase"></label>
+		</strong>
+	</td></tr>
+	</table>
+	</div>
+
+	</body>
+</html>

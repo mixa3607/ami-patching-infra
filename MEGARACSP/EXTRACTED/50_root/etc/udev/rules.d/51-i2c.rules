@@ -1,0 +1,5 @@
+# I2C devices
+# Kernel creates I2C device nodes as i2c-*. Our BMC conventionally accesses i2c*.
+# Just renaming 'em for compatibility
+KERNEL=="i2c-[0-9]*",		SYMLINK+="i2c%n"
+

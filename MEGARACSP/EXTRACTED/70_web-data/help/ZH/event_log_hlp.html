@@ -1,0 +1,67 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>事件日誌說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>  
+</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div><div class="helpmainhead">日件日誌</div></h2>
+	<div class="subSection">
+		此頁面顯示設備上所有感測器已發生的事件列表，在記錄上雙擊可以查看事件的 
+		詳細描述。您也可以點選各列標頭來排序事件。
+		<br/><br/>
+		<fieldset>
+			<legend>用途</legend>
+			您可以使用感測器名稱或感測器類型篩選器來查看設備上已記錄的特定事件。 
+			<h4>BMC 時區</h4>
+			點選此選項來查看以 BMC 時區為基準的事件日誌。 
+			<h4>用戶端時區</h4>
+			點選此選項來查看以用戶端時區為基準的事件日誌。 
+			<h4>UTC 偏移值</h4>
+			顯示 UTC 偏移值，事件的時間戳記將會基於上偏移值更新。</br>
+			導航箭頭用於查看不同頁面的事件日誌。 
+			<h4>清除所有事件日誌</h4>
+			清除所有事件日誌將會刪除所有感測器的事件記錄。 
+			
+			<script type="text/javascript">
+				var event_log_help = "<h4>儲存事件記錄</h4>點選此按"
+				+"鈕將會跳出存檔視窗以儲存所有記錄。";
+				if (checkProjectCfg("SAVE_SELLOG")) {
+					document.write (event_log_help);
+				}
+			</script>
+			
+		</fieldset>
+	</div>
+</body>
+</html>

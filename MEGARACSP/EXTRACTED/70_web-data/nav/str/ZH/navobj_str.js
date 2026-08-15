@@ -1,0 +1,85 @@
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2013        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+
+// File Name  : navobj_str.js
+// Brief      : navobj page string table
+// Author Name:
+
+eLang.navobj_strings = {};
+eLang.navobj_strings["STR_TOPNAV_MAINTENANCE"] = "維護";
+eLang.navobj_strings["STR_TOPNAV_FRU_INFORMATION"] = "FRU 資訊";
+eLang.navobj_strings["STR_TOPNAV_AUTOMATION_ENGINE"] = "自動化引擎";
+eLang.navobj_strings["STR_TOPNAV_CONFIGURATION"] = "配置";
+eLang.navobj_strings["STR_TOPNAV_DASHBOARD"] = "儀表板";
+eLang.navobj_strings["STR_TOPNAV_REMOTE_CONTROL"] = "遠端控制";
+eLang.navobj_strings["STR_TOPNAV_SERVER_HEALTH"] = "伺服器健康狀態";
+eLang.navobj_strings["STR_TOPNAV_AUTO_VIDEO_RECORDING"] = "自動影像錄影";
+eLang.navobj_strings["STR_TOPNAV_FIRMWARE_UPDATE"] = "韌體更新";
+eLang.navobj_strings["STR_LN_SERVER_HEALTH_BSOD_SCREEN"] = "藍屏螢幕";
+eLang.navobj_strings["STR_LN_SERVER_HEALTH_EVENT_LOG"] = "事件日誌";
+eLang.navobj_strings["STR_LN_SERVER_HEALTH_SYSTEM_AND_AUDIT_LOG"] = "系統和稽核記錄";
+eLang.navobj_strings["STR_LN_SERVER_HEALTH_SENSOR_READINGS"] = "感應器讀數";
+eLang.navobj_strings["STR_LN_CONFIG_RAID_CONTROLLER"] = "RAID 控制器";
+eLang.navobj_strings["STR_LN_CONFIG_SSL"] = "SSL";
+eLang.navobj_strings["STR_LN_CONFIG_SERVICES"] = "服務";
+eLang.navobj_strings["STR_LN_CONFIG_IMAGES_REDIRECTION"] = "映象檔重定向";
+eLang.navobj_strings["STR_LN_CONFIG_NCSI"] = "NCSI";
+eLang.navobj_strings["STR_LN_CONFIG_NETWORK_BOND"] = "網路合併配置";
+eLang.navobj_strings["STR_LN_CONFIG_SYSTEM_FIREWALL"] = "系統防火牆";
+eLang.navobj_strings["STR_LN_CONFIG_NETWORK_LINK"] = "網路連結配置";
+eLang.navobj_strings["STR_LN_CONFIG_USERS"] = "使用者配置";
+eLang.navobj_strings["STR_LN_CONFIG_REMOTE_SESSION"] = "遠端會話";
+eLang.navobj_strings["STR_LN_CONFIG_PAM_ORDER"] = "PAM 順序";
+eLang.navobj_strings["STR_LN_CONFIG_VIRTUAL_MEDIA"] = "虛擬媒體";
+eLang.navobj_strings["STR_LN_CONFIG_LDAP_E_DIRECTORY"] = "LDAP/E-Directory";
+eLang.navobj_strings["STR_LN_CONFIG_NTP"] = "NTP";
+eLang.navobj_strings["STR_LN_CONFIG_EVENT_LOG"] = "事件日誌";
+eLang.navobj_strings["STR_LN_CONFIG_SYSTEM_AND_AUDIT_LOG"] = "系統和稽核記錄";
+eLang.navobj_strings["STR_LN_CONFIG_SMTP"] = "SMTP";
+eLang.navobj_strings["STR_LN_CONFIG_MOUSE_MODE"] = "滑鼠模式設置";
+eLang.navobj_strings["STR_LN_CONFIG_PEF"] = "PEF";
+eLang.navobj_strings["STR_LN_CONFIG_USB_SWITCH"] = "USB Switch";
+eLang.navobj_strings["STR_LN_CONFIG_LICENSE"] = "授權";
+eLang.navobj_strings["STR_LN_CONFIG_ACTIVE_DIRECTORY"] = "Active Directory";
+eLang.navobj_strings["STR_LN_CONFIG_RADIUS"] = "RADIUS 設定";
+eLang.navobj_strings["STR_LN_CONFIG_DNS"] = "DNS";
+eLang.navobj_strings["STR_LN_CONFIG_NETWORK"] = "網路";
+//Add for ZH-CHT support
+eLang.navobj_strings["STR_LN_CONFIG_LANGUAGE"] = "語言";
+eLang.navobj_strings["STR_LN_REMOTE_CONTROL_JAVA_SOL"] = "JAVA SOL";
+eLang.navobj_strings["STR_LN_REMOTE_CONTROL_SERVER_POWER_CONTROL"] = "伺服器電源控制";
+eLang.navobj_strings["STR_LN_REMOTE_CONTROL_UID_CONTROL"] = "UID 控制";
+eLang.navobj_strings["STR_LN_REMOTE_CONTROL_CONSOLE_REDIRECTION"] = "主控台重定向";
+eLang.navobj_strings["STR_LN_VIDEO_RECORD_VIDEO_RECORDINGS"] = "影像錄影紀錄"
+eLang.navobj_strings["STR_LN_VIDEO_RECORD_RECORDED_VIDEO"] = "影像錄影";
+eLang.navobj_strings["STR_LN_MAINTENANCE_PRESERVE_CONFIGURATION"] = "保存配置";
+eLang.navobj_strings["STR_LN_MAINTENANCE_BACKUP_RESTORE_CONFIGURATION"] = "備份/回復配置";
+eLang.navobj_strings["STR_LN_MAINTENANCE_SYSTEM_ADMINISTRATOR"] = "系統管理員";
+eLang.navobj_strings["STR_LN_MAINTENANCE_BMC_RECOVERY"] = "BMC 回復"; 
+eLang.navobj_strings["STR_LN_MAINTENANCE_RESTORE_CONFIGURATION"] = "回復配置";
+eLang.navobj_strings["STR_LN_FIRMWARE_UPDATE_DUAL_IMAGE_CONFIGURATION"] = "Dual 映象檔配置";
+eLang.navobj_strings["STR_LN_FIRMWARE_UPDATE_FIRMWARE_UPDATE"] = "韌體更新";
+eLang.navobj_strings["STR_LN_FIRMWARE_UPDATE_PROTOCOL_CONFIGURATION"] = "協定配置";

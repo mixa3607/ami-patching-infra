@@ -1,0 +1,3 @@
+# This rule automagically mounts and unmounts whenever a mass storage is plugged in and out. 
+ACTION=="add",      SUBSYSTEMS=="usb", RUN+="/etc/udev/automount.sh %k"
+ACTION=="remove",   SUBSYSTEMS=="usb", RUN+="/etc/udev/autounmount.sh %k"

@@ -1,0 +1,72 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+<head>
+	<title>韌體更新說明</title>
+	<link href="../../style/help_style.css" type="text/css" rel="stylesheet" />
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+</head>
+<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div>
+	<div class="helpmainhead">韌體更新</div></h2>
+	<div class="subSection">
+		該嚮導會引導您完成韌體更新的過程。保留配置將會在此顯示，如果您想要
+		保留任何配置，請在更新的過程中啟用此選項。
+		 
+		<br/><br/>
+		<fieldset>
+		<legend>用途</legend>
+		<script type="text/javascript">
+		if (checkProjectCfg("ENC_IMAGE")) {
+			var signimage_help = "<h4>上傳映象檔簽署公鑰</h4>";
+			signimage_help += "點選此按鈕以上傳韌體加密後的簽署公鑰。";
+			document.write(signimage_help);
+		}
+		if (checkProjectCfg("PRESERVECONF") && !checkProjectCfg("DUAL_IMAGE")) {
+			var preserve_conf = "<h4>進入保存配置</h4>";
+			preserve_conf += "點選此按鈕將會重新導向至保存配置頁面，預設的" +
+				"保存配置將會被覆寫。";
+			document.write(preserve_conf);
+		}
+		</script>
+		<h4>進入更新模式</h4>
+		點選 '進入更新模式' 以更新設備韌體。
+		<script type="text/javascript">
+		if (checkProjectCfg("SECTIONFLASH") && (top.frames["mainFrame"].
+			pageFrame.document.getElementById("_wizardSectionFlash"))) {
+			document.write("<h4>更新韌體模組</h4>" +
+				"這部份將會以上傳映象檔的模組來更新現有的模組。點選需要" +
+				"更新的模組來更新。");
+		}
+		</script>
+		</fieldset>
+	</body>
+</html>

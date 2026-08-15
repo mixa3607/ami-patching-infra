@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>韌體映象說明</title>
+	<link href="../../style/help_style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div><div class="helpmainhead">映象檔傳輸協定</div></h2>
+	<div class="subSection">
+		此頁面用來配置上傳韌體映象檔時所使用的協定。
+		<br/><br/>
+		<fieldset>
+			<legend>用途</legend>
+			<h4>協定類別</h4>
+			上傳韌體映象檔到 BMC 時所要使用的協定。
+			<h4>伺服器位址</h4>
+			儲存韌體映象檔的伺服器位址。同時支援 IPv4 和 IPv6。
+			<ul><li>- IPv4 位址是由 4 組數字所組成並以逗點分開，例如： 
+			"xxx.xxx.xxx.xxx。</li>
+			<li>- 每一組數字的範圍由 0 ～ 255。</li>
+			<li>- 第一組數字不能為 0。</li></ul>
+			<ul><li>- IPv6 位址是由 8 組 16 進位的數字組成 
+			並以分號來分開，例如： "xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx".</li>
+			<li>- Hexadecimal digits are expressed as lower-case letters.</li>
+			</ul>
+			<h4>映象檔名稱</h4>
+			映象檔在 TFTP 伺服器上的檔案名稱。
+			<h4>重試次數</h4>
+			傳輸失敗之後所要重試的次數。
+			重試次數的範圍由 0 ～ 255。
+			<h4>儲存</h4>
+			點選 '儲存' 來儲存設定。
+			<h4>重置</h4>
+			點選 '重置' 來重置已變更的設定。
+		</fieldset>
+	</div>
+</body>
+</html>

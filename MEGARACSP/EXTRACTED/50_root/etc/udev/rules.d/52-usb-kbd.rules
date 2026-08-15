@@ -1,0 +1,3 @@
+# Creating a symbolic link at /dev/input/keyboard 
+# Applications can use this link to access hot-plugged device
+SUBSYSTEM=="input", ATTRS{bInterfaceClass}=="03", ATTRS{bInterfaceSubClass}=="01", ATTRS{bInterfaceProtocol}=="01", SYMLINK+="input/keyboard"

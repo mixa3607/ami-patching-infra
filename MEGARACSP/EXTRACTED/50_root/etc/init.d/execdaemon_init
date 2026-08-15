@@ -1,0 +1,45 @@
+#!/bin/sh
+# /etc/init.d/execdaemon_init
+#
+# chkconfig: 2345 10 90
+#Runlevel : S = S36
+#Runlevel : 6 = K36
+# Restart the service on warm reboot
+#Runlevel : 9 = K36
+#Runlevel : 9 = S31
+
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+
+test -f /usr/local/bin/execdaemon || exit 0
+
+
+# Options for start/restart the daemons
+#
+
+
+#
+
+
+case "$1" in
+  start)
+    echo -n "Starting Execution Daemon"
+    /usr/local/bin/execdaemon &
+    echo "."
+    ;;
+  stop)
+    echo -n "Stopping Execution Daemon"
+    killall execdaemon
+    echo "."
+    ;;
+  restart)
+	echo -n "Restarting Execution Daemon"
+	killall execdaemon
+	/usr/local/bin/execdaemon &
+	echo "."
+	;;
+   *)
+    echo "Usage: /etc/init.d/execdaemon {start|stop|restart}"
+    exit 1
+esac
+
+exit 0

@@ -1,0 +1,111 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2011-2014        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+	<head>
+ 	<title>configure_video_sol_recordings help</title>
+ 	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+ 	<script src="../../lib/common_fn.js" type="text/javascript"></script>
+	<script src="../../lib/ui.js" type="text/javascript" ></script>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+		<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+	<script type="text/javascript">
+	var opera = (navigator.userAgent.toLowerCase().indexOf("opera") != -1);
+	try {
+		var AUTO_VIDEO_SUPPORT = false;
+		var SOL_VIDEO_SUPPORT = false;
+		
+		var hlpAutoVideo = "";
+		var hlpSOLVideo = "";
+		
+		AUTO_VIDEO_SUPPORT = checkProjectCfg("AUTOVDORECORD");
+		SOL_VIDEO_SUPPORT = checkProjectCfg("UARTLOG");
+		
+		if (AUTO_VIDEO_SUPPORT) {
+			hlpAutoVideo = "<div class='helpmainhead'>Video Recording</div></h2>" +
+				"<div class='subSection'>" +
+				"Configure which event on the page will trigger the auto-video recording option to start." +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>Actions</legend>" +
+				"<h4>Event List</h4> "+ 
+				"You can check/uncheck a box to add/remove the trigger for your system." +
+				"<h4>Save</h4>" +
+				"Click 'Save' to save any changes made." +
+				"<br><strong>NOTE:</strong>"+ 
+				"<ul><li>KVM service should be enabled (under 'Configuration -> Services') to perform auto-video recording.</li>"+
+				"<li>The date and time should be in advance to the system date and time.</li></ul>"+
+				"<h4>Reset</h4>" +
+				"Click 'Reset' to reset the modified changes." +
+				"</fieldset>" +
+				"</div>";
+		}
+		if (SOL_VIDEO_SUPPORT) {
+			hlpSOLVideo = "<div class='helpmainhead'>SOL Recording</div></h2>" +
+				"<div class='subSection'>" +
+				"Configure which event on the page will trigger the SOL video recording option to start." +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>Actions</legend>" +
+				"<h4>Event List</h4> "+ 
+				"You can check/uncheck a box to add/remove the trigger for your system." +
+				"<h4>Save</h4>" +
+				"Click 'Save' to save any changes made." +
+				"<br><strong>NOTE:</strong>"+ 
+				"<ul><li>The date and time should be in advance to the system date and time.</li></ul>"+
+				"<h4>Reset</h4>" +
+				"Click 'Reset' to reset the modified changes." +
+				"</fieldset>" +
+				"</div>";
+		}
+		var frameName = top.frames["mainFrame"].pageFrame;
+		var helpContent;
+			if (AUTO_VIDEO_SUPPORT && SOL_VIDEO_SUPPORT) {
+				if ((frameName.document.getElementById("_autoVideoRecording").style. 
+					fontWeight == "bold") || (opera && frameName.document.
+					getElementById("_autoVideoRecording").style.fontWeight == 700)) {
+					helpContent = hlpAutoVideo;
+				} else if ((frameName.document.getElementById("_autoSOLRecording").style. 
+					fontWeight == "bold") || (opera && frameName.document.
+					getElementById("_autoSOLRecording").style.fontWeight == 700)) {
+					helpContent = hlpSOLVideo;
+				}
+			} else if (AUTO_VIDEO_SUPPORT) {
+				helpContent = hlpAutoVideo;
+			} else if (SOL_VIDEO_SUPPORT) {
+				helpContent = hlpSOLVideo;
+			}
+		document.write(helpContent);
+	} catch(e) {
+		alert (e);
+	}
+	</script>
+</body>
+</html>

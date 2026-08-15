@@ -1,0 +1,51 @@
+# /etc/init.d/flasher: start flasher
+#
+# chkconfig: 2345 10 90
+#Runlevel : 3 = S80
+# Restart the service on warm reboot
+#Runlevel : 9 = K80
+#Runlevel : 9 = S34
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+
+PATHFUL_FLASHER="/usr/local/bin/flasher"
+FLASHER_PIPE="/var/pipe/flasher_cmd"
+FLASHER_REPLY_PIPE="/var/pipe/flasher_reply"
+
+
+test -f /usr/local/bin/flasher || exit 0
+
+
+# Options for start/restart the daemons
+#
+
+
+#
+#Removing flasher pipes while stoping the process
+remove_flasher_pipes()
+{
+    test ! -p $FLASHER_PIPE ||rm -f $FLASHER_PIPE
+    test ! -p $FLASHER_REPLY_PIPE ||rm -f $FLASHER_REPLY_PIPE
+}
+
+case "$1" in
+  start)
+    echo "Starting Firmware Upgrade Utility: flasher."
+    start-stop-daemon --start --quiet --exec $PATHFUL_FLASHER 
+    ;;
+  stop)
+    echo "Stopping Firmware Upgrade Utility: flasher."
+    start-stop-daemon --stop --quiet --exec $PATHFUL_FLASHER
+    remove_flasher_pipes
+    ;;
+  restart)
+    echo "Restarting Firmware Upgrade Utility: flasher."
+    start-stop-daemon --stop --quiet --exec $PATHFUL_FLASHER
+    remove_flasher_pipes
+    start-stop-daemon --start --quiet --exec $PATHFUL_FLASHER
+    ;;
+   *)
+    echo "Usage: /etc/init.d/flasher {start|stop|restart}"
+    exit 1
+esac
+
+exit 0

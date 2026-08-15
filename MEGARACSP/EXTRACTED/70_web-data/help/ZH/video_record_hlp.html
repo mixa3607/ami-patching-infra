@@ -1,0 +1,210 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2011-2014        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>Video Recording Help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+</head>
+<body>
+	<h2>
+	<div class="floatRight"><a href="javascript://" class="closeBtn" 
+		onclick="top.closeHelp();">X</a></div>
+	<script type="text/javascript">
+	var opera = (navigator.userAgent.toLowerCase().indexOf("opera") != -1);
+	
+	var frameName;
+	var helpContent = "";
+
+		var AUTO_VIDEO_SUPPORT = false;
+		var SOL_VIDEO_SUPPORT = false;
+		var SOL_REMOTE=false;
+		
+		var hlpAutoVideo = "";
+		var hlpSOLVideo = "";
+		
+		AUTO_VIDEO_SUPPORT = checkProjectCfg("AUTOVDORECORD");
+		SOL_VIDEO_SUPPORT = checkProjectCfg("UARTLOG");
+		SOL_REMOTE= checkProjectCfg("UARTLOG_REMOTE");
+		
+	frameTabName = top.frames["mainFrame"].pageFrame;
+	formname = frameTabName.document.getElementsByTagName("FORM");
+	
+	if (formname.length) {
+		if ("advRemoteVideoFrm" == formname[0].getAttribute("id")) {
+			helpContent = "<div class='helpmainhead'> 進階遠端 " +
+				"影像設定</div></h2>" +
+				"<div class='subSection'>" +
+				"本頁面用來配置進階遠端視訊設定" +
+				"<br>" +
+				"所有信賴的網域皆可支援。" +
+				"<br>" +
+				"<strong>提醒： </strong>所配置的設定會在下一次影像錄製時生效。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>遠端影像支援</h4>" +
+				"點選 'Enable' 以 啟用／停用 遠端視訊支援。<br>" +
+				"<strong>提醒： </strong>初始狀況下,影像檔會被除存在 BMC 的本地路徑。如果遠端影像支援啟用，則影像檔會被儲存在遠端路徑而不在 BMC 內部。" +
+				"<h4>最大間隔(秒)</h4>" +
+				"最大間隔的範圍應該要在 1 到 3600 秒之間。<br>" +
+				"<h4>最大容量(MB)</h4>" +
+				"最大容量應該要在 1 到 500 MB 之間。<br>" +
+				"<h4>最大丟棄值</h4>" +
+				"最大丟棄值應該要在 1 到 100 間。<br>" +
+				"<h4>伺服器位址</h4>" +
+				"用來儲存遠端視訊的伺服器位址。<br>" +
+				"支援以下類型的伺服器位址: " +
+				"<ul>" +
+					"<li>- IP 位址 ( IPv4 和 IPv6 格式皆可).</li> " +
+					"<li>- FQDN (完整網域名稱) 格式。</li> " +
+				"</ul>" +
+				"<h4>來源路徑</h4>" +
+				"儲存遠端影像的目錄的來源路徑" +
+				"<ul>" +
+					"<li>- 不支援特殊字元，小於（<），大於（>），冒號（:）" +
+					"星號（*），垂直線（|），點號（.），問號（?）。</li> " +				
+				"</ul>" +
+				"<h4>分享類型</h4>" +
+				"遠端視訊伺服器的分享類型為 NFS 或 Samba(CIFS)。"+
+				"<h4>使用者名稱，密碼和網域名稱</h4>" +
+				"如果分享類型是 Samba(CIFS)，請輸入使用者憑證以供伺服器驗證。" +
+				"<br><strong>提醒：</strong>網域名稱欄位為可選欄位。" +
+				"</fieldset>" +
+				"</div>";
+		} else if ("advSOLRemoteVideoFrm" == formname[0].getAttribute("id")){
+			helpContent = "<div class='helpmainhead'>進階 SOL 遠端" +
+				"影像設定</div></h2>" +
+				"<div class='subSection'>" +
+				"本頁面用來配置 SOL 遠端影像進階設定" +
+				"<br>" +
+				"所有信賴的網域皆可支援。" +
+				"<br>" +
+				"<strong>提醒： </strong>所配置的設定會在下一次錄影時生效。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>紀錄檔大小(KB)</h4>" +
+				"輸入紀錄檔的大小 (KB)。範圍為 1 到 256" +
+				"<br>" +
+				"<h4>紀錄檔數量</h4>" +
+				"輸入紀錄檔的數量。初始值範圍為 1 到 10。";
+			if (checkProjectCfg("UARTLOG_REMOTE")) {
+				helpContent += "<br>" +
+				"<h4>遠端視訊支援</h4>" +
+				"點選 'Enable' 以 啟用／停用 遠端視訊支援。" +
+				"<br>" +
+				"<strong>提醒： </strong>初始狀況下,視訊檔會被儲存在 BMC 的本地路徑。如果遠端視訊支援啟用，則視訊檔會被儲存在遠端路徑而不在 BMC 內部。" +
+				"<h4>伺服器位址</h4>" +
+				"用來儲存遠端視訊的伺服器位址。" +
+				"<br>" +
+				"伺服器位址支援以下格式:" +
+				"<ul>" +
+					"<li>- IP 位址 (IPv4 和 IPv6 格式皆可).</li> " +
+					"<li>- FQDN (完整網域名稱) 格式。</li> " +
+				"</ul>" +
+				"<h4>來源路徑</h4>" +
+				"儲存遠端視訊的目錄路徑。 " +
+				"<ul>" +
+                                        "<li>- 不支援特殊字元，小於（<），大於（>），冒號（:）" +
+                                        "星號（*），垂直線（|），點號（.），問號（?）。</li> " +
+				"</ul>" +
+				"<h4>分享類型</h4>" +
+				"遠端視訊伺服器的分享類型為 NFS 或 Samba(CIFS)。"+
+				"<h4>使用者名稱，密碼和網域名稱</h4>" +
+				"如果分享類型是 Samba(CIFS)，請輸入使用者憑證以供伺服器驗證。" +
+				"<br><strong>提醒：</strong>網域名稱欄位為可選欄位。" +
+				"</fieldset>" +
+				"</div>";
+			}
+		}
+	} else if((frameTabName.document.getElementById("_tabAutoVideo").style. 
+			fontWeight == "bold") || (opera && frameTabName.document.
+			getElementById("_tabAutoVideo").style.fontWeight == 700)) {
+		helpContent = "<div class='helpmainhead'>自動視頻錄影</div></h2>" +
+			"<div class='subSection'>" +
+			"本頁面用來顯示可用的已視頻檔案清單。" +
+			"錄影檔案的各個欄位如下：" +
+			"<br/>"+
+			"# : 序號。<br/> " +
+			"檔案名稱 : 影像檔案名稱。<br/> " +
+			"影像類型 : 錄影檔案的類型，是 Pre-Event 或是 Post-Event。<br/> " +
+			"檔案資訊 : 日期, 影像上傳日期。" +
+			/*"<br><strong>提醒：</strong> 最大可紀錄五個視訊檔。";*/
+			"<br><strong>提醒：</strong> 如果啟用遠端視訊支援，可以支援 3 個 pre-event 錄影檔案以及最大可丟棄值的 post-event 錄影檔案。 " +
+			"<br> 如果停用遠端視訊支援，可以支援 1 個 pre-event 錄影檔案以及 2個 post-event 錄影檔案。";
+			if (checkProjectCfg("AUTOVDORECORD_REMOTE")) {
+				helpContent += "<br>假如掛載到遠端分享資料夾失敗,影像檔將會存在 BMC 本地端。";
+			}
+		helpContent += "<br><br>" +
+			"<fieldset>" +
+			"<legend>用途</legend>";
+			if (checkProjectCfg("AUTOVDORECORD_REMOTE")) {
+				helpContent += "<h4>進階設定</h4>" +
+					"點擊選項來配置遠端影像設定。選項可以 啟用/停用 遠端影像支援，伺服器位址，分享類型，使用者名稱，密碼，以及網域名稱。";
+			}
+		helpContent += "<h4>播放影像</h4>" +
+			"選擇一個影像並且點選播放影像的按鈕在 Java 應用程式中來播放影像。" + 
+			"<h4>下載</h4>" +
+			"選擇一個影像並且點選下載按鈕來下載並儲存影像在客戶端機器。" + 
+			"影像檔會以 (.avi) 格式來下載" +
+			"<h4>刪除</h4>" +
+			"點選刪除按鈕來刪除所選的影像檔。" +
+			"</fieldset>" +
+			"</div>";
+	} else if((frameTabName.document.getElementById("_tabSOLVideo").style. 
+		fontWeight == "bold") || (opera && frameTabName.document.
+		getElementById("_tabSOLVideo").style.fontWeight == 700)) {
+		
+		helpContent = "<div class='helpmainhead'>SOL 影像錄影</div></h2>" +
+			"<div class='subSection'>" +
+			"本頁面用來顯示可用的已錄影影像檔案清單。 " +
+			"錄影檔案的各個欄位如下：" +
+			"<br/>"+
+			"# : 序號。<br/> " +
+			"檔案名稱 : 影像檔案名稱。<br/> " +
+			"檔案資訊 : 日期, 影像上傳日期。 "
+			if (checkProjectCfg("UARTLOG_REMOTE")) {
+				helpContent += "<br>假如掛載到遠端分享資料夾失敗,影像檔將會存在 BMC 本地端。";
+			}
+		helpContent += "<br><br>" +
+			"<fieldset>" +
+			"<legend>用途</legend>";
+			if (checkProjectCfg("UARTLOG_REMOTE")) {
+				helpContent += "<h4>進階設定</h4>" +
+					"點擊選項來配置 SOL 遠端影像" +
+					"設定。選項有 SOL 紀錄檔大小, 紀錄檔數量, 啟用/停用 遠端影像支援，" +
+					"伺服器位址, 來源路徑, 分享類型, 使用者名稱, " +
+					"密碼 以及網域名稱。";
+			}
+		}
+	document.write(helpContent);
+</script>
+</body>
+</html>

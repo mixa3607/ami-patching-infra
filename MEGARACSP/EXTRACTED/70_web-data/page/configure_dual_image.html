@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- 
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2012-2015        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+ -->
+<html>
+<head>
+	<link href="../style/page_style.css" type="text/css" rel="stylesheet" />
+	<script src="../lib/include.js" type="text/javascript"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_btnSave");
+		elmt.setAttribute("value", eLang.getString("configure_dual_image", "CFG_DUAL_IMG_SAVE"));
+		var elmt = document.getElementById("_btnReset");
+		elmt.setAttribute("value", eLang.getString("configure_dual_image", "CFG_DUAL_IMG_RESET"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+	<h3>
+<script>document.writeln(eLang.getString("configure_dual_image", "CFG_DUAL_IMG_TITLE"));</script>
+</h3>
+	<p> 
+<script>document.writeln(eLang.getString("configure_dual_image", "CFG_DUAL_IMG_DESC"));</script>
+ </p>
+	<div class="subSection">
+		<table cellspacing="0" cellpadding="0" width="75%" border="0"><tbody>
+		<tr>
+			<td class="roundedtable_topleft"></td>
+			<td class="roundedtable_top"></td>
+			<td class="roundedtable_topright"></td>
+		</tr>
+		<tr>
+			<td class="roundedtable_left"></td>
+			<td>
+			<table cellspacing="0" cellpadding="8" border="0" width="100%"><tr>
+			<td width="50%">
+				<table cellspacing="0" cellpadding="0" border="0" width="100%">
+				<tr>
+					<td class="roundedtable_topleft"></td>
+					<td class="roundedtable_top"></td>
+					<td class="roundedtable_topright"></td>
+				</tr>
+				<tr>
+					<td class="roundedtable_left"></td>
+					<td>
+						<table cellspacing="0" cellpadding="5" width="100%">
+						<tr>
+							<th colspan="2">
+<script>document.writeln(eLang.getString("configure_dual_image", "CFG_DUAL_IMG1"));</script>
+</th>
+						</tr>
+						<tr>
+							<td><strong>
+<script>document.writeln(eLang.getString("configure_dual_image", "CFG_DUAL_IMG_FW_VER"));</script>
+</strong></td>
+							<td><label id="_lblFWVer1"></label></td>
+						</tr>
+						<tr>
+							<td><strong>
+<script>document.writeln(eLang.getString("configure_dual_image", "CFG_DUAL_IMG_STATE"));</script>
+</strong></td>
+							<td><label id="_lblState1"></label></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+							<input type="radio" id="_rdoBootImg1" name="rdoBootImg" />
+							<label for="_rdoBootImg1">
+<script>document.writeln(eLang.getString("configure_dual_image", "CFG_DUAL_IMG_BOOT"));</script>
+</label>
+							</td>
+						</tr></table>
+					</td>
+					<td class="roundedtable_right"></td>
+				</tr>
+				<tr>
+					<td class="roundedtable_btmleft"></td>
+					<td class="roundedtable_btm"></td>
+					<td class="roundedtable_btmright"></td>
+				</tr>
+				</table>
+			</td><td width="50%">
+				<table cellspacing="0" cellpadding="0" border="0" width="100%">
+				<tr>
+					<td class="roundedtable_topleft"></td>
+					<td class="roundedtable_top"></td>
+					<td class="roundedtable_topright"></td>
+				</tr>
+				<tr>
+					<td class="roundedtable_left"></td>
+					<td>
+						<table cellspacing="0" cellpadding="5" width="100%">
+						<tr>
+							<th colspan="2">
+<script>document.writeln(eLang.getString("configure_dual_image", "CFG_DUAL_IMG2"));</script>
+</th>
+						</tr>
+						<tr>
+							<td><strong>
+<script>document.writeln(eLang.getString("configure_dual_image", "CFG_DUAL_IMG_FW_VER"));</script>
+</strong></td>
+							<td><label id="_lblFWVer2"></label></td>
+						</tr>
+						<tr>
+							<td><strong>
+<script>document.writeln(eLang.getString("configure_dual_image", "CFG_DUAL_IMG_STATE"));</script>
+</strong></td>
+							<td><label id="_lblState2"></label></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+							<input type="radio" id="_rdoBootImg2" name="rdoBootImg" />
+							<label for="_rdoBootImg2">
+<script>document.writeln(eLang.getString("configure_dual_image", "CFG_DUAL_IMG_BOOT"));</script>
+</label>
+							</td>
+						</tr></table>
+					</td>
+					<td class="roundedtable_right"></td>
+				</tr>
+				<tr>
+					<td class="roundedtable_btmleft"></td>
+					<td class="roundedtable_btm"></td>
+					<td class="roundedtable_btmright"></td>
+				</tr>
+				</table>
+			</td></tr>
+			<tr><td colspan="2" width="100%">
+				<input type="radio" id="_rdoBootImg0" name="rdoBootImg" />
+				<label for="_rdoBootImg0">
+<script>document.writeln(eLang.getString("configure_dual_image", "CFG_DUAL_IMG_HIGH"));</script>
+</label><br>
+			</td></tr>
+			<tr><td colspan="2" width="100%">
+				<input type="radio" id="_rdoBootImg3" name="rdoBootImg" />
+				<label for="_rdoBootImg3">
+<script>document.writeln(eLang.getString("configure_dual_image", "CFG_DUAL_IMG_LOW"));</script>
+</label>
+			</td></tr>
+			<tr><td colspan="2" width="100%">
+				<input type="radio" id="_rdoBootImg4" name="rdoBootImg" />
+				<label for="_rdoBootImg4">
+<script>document.writeln(eLang.getString("configure_dual_image", "CFG_DUAL_IMG_MOST"));</script>
+</label><br>
+			</td></tr>
+			<tr><td colspan="2" width="100%">
+				<input type="radio" id="_rdoBootImg5" name="rdoBootImg" />
+				<label for="_rdoBootImg5">
+<script>document.writeln(eLang.getString("configure_dual_image", "CFG_DUAL_IMG_LEAST"));</script>
+</label><br>
+			</td></tr>
+			</table>
+			</td>
+			<td class="roundedtable_right"></td>
+		</tr>
+		<tr>
+			<td class="roundedtable_btmleft"></td>
+			<td class="roundedtable_btm"></td>
+			<td class="roundedtable_btmright"></td>
+		</tr>
+		</tbody></table>
+	</div>
+
+	<br/>
+	<div class="btnTray">
+		<input type="button" id="_btnSave" />
+		<input type="button" id="_btnReset" />
+	</div>
+</body>
+</html>

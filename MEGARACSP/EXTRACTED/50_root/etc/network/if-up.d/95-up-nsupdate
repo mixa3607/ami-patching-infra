@@ -1,0 +1,102 @@
+#!/bin/sh
+#echo " $0 : IFACE - $IFACE"
+
+if [ "$IFACE" == '' -o "$IFACE" == 'lo' ]; then exit 0; fi
+
+LINK_STATUS=`/sbin/ethtool $IFACE | grep 'Link detected:' | cut -d: -f2 | awk '{ print $1}'`
+if [ "$LINK_STATUS" == "no" ]; then
+    echo "Link status $IFACE:Down."
+    exit 0
+fi
+
+PID_FILE=/var/run/nsupdate.$IFACE.pid
+if [ -e "$PID_FILE" ]; then
+	PID2KILL=`cat $PID_FILE`
+	kill -9 $PID2KILL
+	rm -f $PID_FILE
+fi
+
+NSUPDATE_BINARY=/usr/local/bin/nsupdate
+NSUPDATE_SCRIPT=/usr/local/bin/nsupdate.sh
+METHOD=register
+
+[ -x $NSUPDATE_BINARY ] || exit 0
+[ -f /conf/dns.conf ]   || exit 0
+
+. /conf/dns.conf
+
+if ! [ "$DO_DDNS" == 'yes'  -o "$DO_DDNS" == 'y' ]; then exit 0; fi
+
+HOST_NAME=`hostname`
+if [ "$HOST_NAME" == "" ]; then
+	echo "NSUPDATE: Cannot $METHOD hostname as it is empty"
+    exit 0
+fi
+
+DNS_IP=`grep "nameserver" /etc/resolv.conf | awk '{ print $2}'`
+if [ "$DNS_IP" == "" ]; then
+	echo "NSUPDATE: Skip update as DNS IP is empty"
+    exit 0
+fi
+
+DOMAIN_NAME=`grep "domain" /etc/resolv.conf | awk '{ print $2}' | tail -1`
+if [ "$DOMAIN_NAME" == "" ]; then
+	REGISTER_NAME=$HOST_NAME
+else
+	REGISTER_NAME=$HOST_NAME.$DOMAIN_NAME
+fi
+
+if [ "$TSIG_AUTH" == 'yes' -o "$TSIG_AUTH" == 'y' ]; then
+	TSIG_AUTH=1
+else
+	TSIG_AUTH=0
+fi
+(
+	FLAG_IPV4=`grep "$IFACE inet" /etc/network/interfaces | grep -v "inet6"`
+	FLAG_IPV6=`grep "$IFACE inet6" /etc/network/interfaces`
+
+	nsupdate_ipv4(){
+
+		IP=`/sbin/ifconfig $IFACE |  grep "inet addr:" | cut -d: -f2 | awk '{ print $1}'`
+		if [[ "$IP" ]];	then
+			if ! [ "$SET_FQDN" == 'yes' -o "$SET_FQDN" == 'y' -o "$SET_HOSTNAME" == 'yes' -o "$SET_HOSTNAME" == 'y' ]; then
+				$NSUPDATE_SCRIPT $METHOD $REGISTER_NAME $IP $DOMAIN_NAME $TSIG_AUTH
+			fi
+			FLAG_IPV4=""
+		else
+			FLAG_IPV4=`grep "$IFACE inet" /etc/network/interfaces | grep -v "inet6"`
+		fi
+	}
+
+	nsupdate_ipv6(){
+
+		# Ignoring only Link-local
+		IPv6=`/sbin/ifconfig $IFACE | grep inet6 | grep -v Scope:Link | awk '{print $3}' |cut -d'/' -f1`
+		if [[ "$IPv6" ]]; then
+			for ip in $IPv6; do
+				$NSUPDATE_SCRIPT $METHOD $REGISTER_NAME $ip $DOMAIN_NAME $TSIG_AUTH
+			done
+			FLAG_IPV6=""
+		else
+			FLAG_IPV6=`grep "$IFACE inet6" /etc/network/interfaces`
+		fi
+	}
+
+	while [[ "$FLAG_IPV4" || "$FLAG_IPV6" ]]; do
+
+		if [[ "$FLAG_IPV4" ]]; then
+			nsupdate_ipv4
+		fi
+
+		if [[ "$FLAG_IPV6" ]]; then
+			nsupdate_ipv6
+		fi
+		sleep 1
+	done
+	rm -f $PID_FILE
+) &
+
+PID=$!
+echo $PID > "$PID_FILE"
+
+exit 0

@@ -1,0 +1,123 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>DNS 設定說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div>
+	<div class="helpmainhead">DNS</div></h2>
+	<div class="subSection">
+		此頁面用來設定設備上的主機名稱和網域名稱伺服器。
+		<br/><br/>
+		<fieldset>
+			<legend>用途</legend>
+			<h4>網域名稱伺服器設定</h4>
+			<h4>DNS 服務</h4>
+			點選複選框來啟用 DNS 服務的設定。
+			<h4>主機配置</h4>
+			<h4>主機設定</h4>
+			選擇自動設定主機或手動設定主機。
+			<h4>主機名稱</h4>
+			如果選擇自動設定，此欄位會顯示設備的主機名稱。 
+			如果選擇手動設定，請在此欄位指定設備的主機名稱。 
+			<ul>
+				<li>- 名稱的長度為 1 ～ 63 個字母數字。</li>
+				<li>- 允許使用特殊字元如連字號（-）和底線（_）。</li>
+				<li>- 開頭或結尾不允許使用連字符號'-'。</li>
+			</ul>
+			<strong>提醒：</strong> 如果主機名稱包函任何底線（_）， 
+			IE 瀏覽器功能將會不正常。
+			<h4>註冊 BMC</h4>
+			選擇 BMC 的網路端口來與DNS設置進行註冊。 
+			<br/>
+			點選複選框來啟用選擇 BMC 的網路端口來與DNS設置進行註冊。
+			<br/>
+			<ul>
+				<li><strong>Nsupdate</strong> - 選擇 'Nsupdate'選項來使用 nsupdate 應用程式跟 DNS 伺服器註冊。</li>
+				<li><strong>DHCP Client FQDN</strong> - 選擇 'DHCP Client FQDN'選項來使用 DHCP 選項 81 跟 DNS 伺服器註冊。</li>
+				<li><strong>Hostname</strong> - 選擇 'Hostname' 選項來使用 DHCP 選項 12 跟 DNS 伺服器註冊。</li>
+			</ul>
+			<strong>NOTE:</strong> 如果 DHCP 客戶的 FQDN 選項不支援 DHCP 伺服器,那 Hostname 選項應該要被選。
+			<script type="text/javascript">
+			if (checkProjectCfg("TSIG")) {
+				var tsig_help = "<h4>TSIG 配置</h4>" +
+				"<h4>TSIG 認證</h4>" +
+				"當您透過 Nsupdte 來註皿 DNS，點選複選框來啟用 TSIG 認證。" +
+				"<h4>目前 TSIG 私人文件</h4>" +
+				"此欄位會顯示目前的 TSIG 私人文件和上傳的日期時間（唯讀）。"+
+				"<h4>新 TSIG 私人文件</h4>" +
+				"瀏覽並選擇TSIG私人文件。" +
+				"<ul><li>- TSIG文件應該是私有的類型。</li></ul>";
+				document.write(tsig_help);
+			}
+			</script>
+			<h4>網域名稱設置</h4>
+			<h4>網域設定</h4>
+			如果網域的介面是 multiLAN 通道，此下拉式選單列出了網域的介面
+			是手動， v4 或 v6，
+			<h4>網域名稱</h4>
+			如果選擇自動設定，此欄位會顯示設備的網域名稱。
+			如果網域設定選擇手動設定，請在此欄位指定設備的網域名稱。
+			<h4>網域名稱伺服器配置</h4>
+			<h4>網域名稱伺服器設定</h4>
+			此下拉式選單列出了 DNS 介面為手動或其它 LAN 介面。
+			<h4>IP 優先權</h4>
+			如果 IP 優先權是 IPv4，將會有2個 IPv4 網域名稱伺服器和1個 IPv6
+			網域名稱伺服器。如果 IP 優先權是 IPv6，將會有2個網域名稱伺服器
+			和1個 IPv4 網域名稱伺服器。
+			<br>
+			<strong>提醒：</strong> 此欄位不接受手動設定。
+			<h4>網域名稱伺服器 1, 2 & 3</h4>
+			指定網域名稱伺服器 (Domain Name System) 位址給 BMC.
+			<ul>
+				<li>- IP 位址是由 4 組數字所組成並以逗點分開，例如:
+				 "xxx.xxx.xxx.xxx".</li>
+				<li>- 每一組數字的範圍由 0 ～ 255。</li>
+				<li>- 第一組數字不能為 0。</li></ul>
+			</ul>
+			網域名稱伺服器位址可以支援：
+			<ul>
+				<li>- IPv4 位址的格式。</li> 
+				<li>- IPv6 位址的格式。</li>
+			</ul>
+			<strong>提醒：</strong> 只允許使用 Global IPv6 位址。
+			<h4>儲存</h4>
+			點選 '儲存' 以儲存變更。
+			您將會登出網頁介面並需要再次登入。 
+			<h4>重置</h4>
+			回覆已變更的資料。
+		</fieldset>
+	</div>
+</body>
+</html>

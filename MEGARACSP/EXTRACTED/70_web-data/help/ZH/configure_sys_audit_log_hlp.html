@@ -1,0 +1,70 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>系統和稽核記錄說明</title>
+	<link href="/style/help_style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div><div class="helpmainhead">系統和稽核記錄設置</div></h2>
+	<div class="subSection">
+	此頁用來設定系統和稽核記錄配置。
+	<br/><br/>
+	<fieldset>
+		<legend>用途</legend>
+		<h4>系統日誌</h4>
+		點選 '啟用' 選項以啟用系統日誌。
+		<h4>日誌類型</h4>
+		選擇系統日誌的日誌類型將會儲存在本地檔案或遠端伺服器，如果是本地檔案
+		將會儲存在 /var/log/。
+		<h4>檔案大小</h4>
+		如果選擇本地日誌，請指定檔案大小，以 byte 為單位。
+		<ul><li>- 檔案大小的範圍從 3 到 65535。</li></ul>
+		<h4>Rotate Count</h4>
+		如果日誌資訊超過指定的檔案大小，舊的日誌檔案將會基於 Rotate Count 被
+		移到備份檔案。如果 Rotate Count 為 0，舊的檔案將會被永遠清除。
+		<ul><li>- 範圍從 0 到 255。</li></ul>
+		<h4>伺服器位址</h4>
+		指定遠端伺服器位址來記錄系統事件。
+		伺服器位址支援以下格式：
+		<ul>
+			<li>- IP 位址（IPv4 或 IPv6 格式）。</li>
+			<li>- 完整網域名稱FQDN（Fully qualified domain name）格式。</li>
+		</ul>
+		<h4>稽核記錄</h4>
+		點選 '啟用' 選項以啟用稽核日誌。
+		<h4>儲存</h4>
+		點選 '儲存' 以儲存變更。
+		<h4>重置</h4>
+		點選 '重置' 以重置變更。
+	</fieldset>
+	</div>
+</body>
+</html>

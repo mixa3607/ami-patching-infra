@@ -1,0 +1,111 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2011-2014        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+	<head>
+ 	<title>configure_video_sol_recordings help</title>
+ 	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+ 	<script src="../../lib/common_fn.js" type="text/javascript"></script>
+	<script src="../../lib/ui.js" type="text/javascript" ></script>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+		<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+	<script type="text/javascript">
+	var opera = (navigator.userAgent.toLowerCase().indexOf("opera") != -1);
+	try {
+		var AUTO_VIDEO_SUPPORT = false;
+		var SOL_VIDEO_SUPPORT = false;
+		
+		var hlpAutoVideo = "";
+		var hlpSOLVideo = "";
+		
+		AUTO_VIDEO_SUPPORT = checkProjectCfg("AUTOVDORECORD");
+		SOL_VIDEO_SUPPORT = checkProjectCfg("UARTLOG");
+		
+		if (AUTO_VIDEO_SUPPORT) {
+			hlpAutoVideo = "<div class='helpmainhead'>影像錄影</div></h2>" +
+				"<div class='subSection'>" +
+				"在這個頁面配置一個事件來觸發自動影像錄影。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>動作</legend>" +
+				"<h4>事件清單</h4> "+ 
+				"你可以 選擇/不選 來 新增/移除 你系統上的觸發器。" +
+				"<h4>儲存</h4>" +
+				"點選 '儲存' 來儲存你的改變。" +
+				"<br><strong>NOTE:</strong>"+ 
+				"<ul><li>KVM 服務需要要被開起 (在 '配置 -> 服務' 下面) 來執行自動影像錄影。</li>"+
+				"<li>'日期與時間'在系統跟時間的進階設定中。</li></ul>"+
+				"<h4>重置</h4>" +
+				"點擊 '重置' 來重啟修改後的變更。" +
+				"</fieldset>" +
+				"</div>";
+		}
+		if (SOL_VIDEO_SUPPORT) {
+			hlpSOLVideo = "<div class='helpmainhead'>SOL 錄製</div></h2>" +
+				"<div class='subSection'>" +
+				"配置一個事件來觸發 SOL 影像錄影。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>動作</legend>" +
+				"<h4>事件清單</h4> "+ 
+				"你可以 選擇/不選 來 新增/移除 你系統上的觸發器。" +
+				"<h4>儲存</h4>" +
+				"點選 '儲存' 來儲存你的改變。" +
+				"<br><strong>NOTE:</strong>"+ 
+				"<ul><li>'日期與時間'在系統跟時間的進階設定中。</li></ul>"+
+				"<h4>重置</h4>" +
+				"點擊 '重置' 來重啟修改後的變更。" +
+				"</fieldset>" +
+				"</div>";
+		}
+		var frameName = top.frames["mainFrame"].pageFrame;
+		var helpContent;
+			if (AUTO_VIDEO_SUPPORT && SOL_VIDEO_SUPPORT) {
+				if ((frameName.document.getElementById("_autoVideoRecording").style. 
+					fontWeight == "bold") || (opera && frameName.document.
+					getElementById("_autoVideoRecording").style.fontWeight == 700)) {
+					helpContent = hlpAutoVideo;
+				} else if ((frameName.document.getElementById("_autoSOLRecording").style. 
+					fontWeight == "bold") || (opera && frameName.document.
+					getElementById("_autoSOLRecording").style.fontWeight == 700)) {
+					helpContent = hlpSOLVideo;
+				}
+			} else if (AUTO_VIDEO_SUPPORT) {
+				helpContent = hlpAutoVideo;
+			} else if (SOL_VIDEO_SUPPORT) {
+				helpContent = hlpSOLVideo;
+			}
+		document.write(helpContent);
+	} catch(e) {
+		alert (e);
+	}
+	</script>
+</body>
+</html>

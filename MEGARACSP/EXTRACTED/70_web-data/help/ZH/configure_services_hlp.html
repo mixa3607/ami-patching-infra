@@ -1,0 +1,145 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>服務說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+		<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+	<script type="text/javascript">
+	var frameName = top.frames["mainFrame"].pageFrame.document.getElementsByTagName("FORM");
+	var titleContent = "", bodyContent = "", buttonContent = "";
+	var helpContent;
+	if (frameName.length) {
+		if (frameName[0].getAttribute("id").indexOf("modifyServiceForm") != -1) {
+			titleContent = "<div class='helpmainhead'>修改服務" +
+				"</div></h2><div class='subSection'>" +
+				"使用此表格以設定在 BMC 上執行的服務的配置。";
+
+			bodyContent = "<br><br>" +
+			"<fieldset>" +
+			"<legend>用途</legend>" +
+			"<h4>服務名稱</h4>" +
+			"顯示所選擇的服務名稱（唯讀）。" +
+			"<h4>目前狀態</h4>" +
+			"顯示服務目前的狀態為 active 或 inactive，點選核取方塊來啟用停用的服務。" +
+			"<h4>介面</h4>" +
+			"顯示服務所使用的介面，使用者可以在此選擇任何可以使用的介面。" +
+			"<br><strong>提醒：</strong> " +
+			"<ul>" +
+			"<li>- 服務如果使用已停用的介面將會無法工作。" +
+			"<br>可以從 配置－》網路－》LAN 介面 檢查介面的狀態或啟用介面。" +
+			"</li>" + 
+			"<li>- 當啟用 single prot 時，KVM 和媒體介面為唯讀。" +
+			"</li>" +
+			"</ul>" +
+			"<h4>不安全的埠號</h4>" +
+			"此欄位用來配置服務所使用的不安全的埠號。" +
+			"<ul><li>- 網頁預設的埠號為 80。</li>" +
+			"<li>- KVM 預設的埠號為 7578。</li>" +
+			"<li>- CD 媒體預設的埠號為 5120。</li>" +
+			"<li>- FD 媒體預設的埠號為 5122。</li>" +
+			"<li>- HD 媒體預設的埠號為 5123。</li>" +
+			"<li>- Telnet 預設的埠號為 23。</li>" +
+			"<li>- 埠號的範圍從 1 到 65535。</li></ul>" +
+			"<br><strong>提醒：</strong> " +
+			"SSH 服務不支援不安全的埠號。" +
+			"<h4>安全的埠號</h4>" +
+			"此欄位用來配置服務所使用的安全的埠號。" +
+			"<ul><li>- 網頁預設的埠號為 443。</li>" +
+			"<li>- KVM 預設的埠號為 7582。</li>" +
+			"<li>- CD 媒體預設的埠號為 5124。</li>" +
+			"<li>- FD 媒體預設的埠號為 5126。</li>" +
+			"<li>- HD 媒體預設的埠號為 5127。</li>" +
+			"<li>- SSH 預設的埠號為 22。</li>" +
+			"<li>- 埠號的範圍從 1 到 65535。</li></ul>" +
+			"<br><strong>提醒：</strong> " +
+			"Telnet 服務不支援安全的埠號。" +
+			"<h4>逾時</h4>" +
+			"顯示服務會話的逾時值。" +
+			"使用者可以對網頁，SSH 和 telnet 服務配置逾時值。" +
+			"<ul><li>- 網頁和 KVM 的逾時值範圍從 300 到 1800 秒。</li>" +
+			"<li>- 如果有任何已存在的 KVM 會話，網頁的逾時將會被忽略。</li>" +
+			"<li>- SSH 和 Telnet 逾時值範圍從 60 到 1800 秒。" +
+			"<li>- SSH 和 telnet 的逾時值應該是 60 秒的倍數。" +
+			"<br><strong>提醒：</strong> " +
+			"SSH 和 telnet 服務將會使用相同的逾時值。如果使用者設定 SSH 的" +
+			"逾時值，此值將會被 telnet 服務採用，反之亦然。" +
+			"<h4>最大 Session 數</h4>" +
+			"顯示此服務所允許的最大會話數。" +
+			"<h4>啟用的 Sessions</h4>" +
+			"顯示此服務現在所啟用的會話數。";
+
+			buttonContent = "<h4>修改</h4>" +
+				"點選 '修改' 以儲存變更並回到上一頁。" +
+				"<br><strong>提醒：</strong> " +
+				"服務將會重啟，已開啟的服務會話將會被影響。" +
+				"<h4>取消</h4>" +
+				"點選 '取消' 以取消變更並回到上一頁。" +
+				"</fieldset></div>";
+			helpContent = titleContent + bodyContent + buttonContent;
+		}
+	} else if (top.frames["mainFrame"].pageFrame.document.getElementById("_sessionInfo")) {
+		helpContent = "<div class='helpmainhead'>Active session</div></h2>" +
+				"<div class='subSection'>" +
+				"此頁顯示目前在 BMC 所提供的服務中已啟用服務的基本資訊" +
+				"要終止會話，使用者等級必需是 Administrator。" +
+				"<br><br><fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>終止</h4>" +
+				"選擇一個會話並點選 '終止' 以終止所選擇的會話。" +
+				"<h4>取消 </h4>" +
+				"點選 '取消' 以取消變更並回到上一頁。" +
+				"<br><br><strong>提醒：</strong> " +
+				"各 PAM 模組預設的使用者 ID 如下：" +
+				"<ul>" +
+					"<li>- Active Directory 使用者為 30</li>" +
+					"<li>- LDAP/E-Directory 使用者為 20</li>" +
+					"<li>- RADIUS 使用者為 40</li>" +
+				"</ul>" +
+				"</fieldset></div>";
+	} else {
+		helpContent = "<div class='helpmainhead'>服務</div></h2>" +
+		"<div class='subSection'>" +
+		"此頁顯示 BMC 所提供的各種服務的基本資訊，使用者等級必需是 Administrator，" +
+		"才能修改服務。" +
+		"<br><br><fieldset>" +
+		"<legend>用途</legend>" +
+		"<h4>修改</h4>" +
+		"選擇一種服務並點選 '修改' 以修改服務的配置，或者您也可以雙擊一種服務來修改。" +
+		"<br><strong>提醒：</strong> 服務將會自動重啟不論您何時變更配置。當使用者關閉 " +
+		"現有的會話，所做的變更才會有效。" +
+		"</fieldset></div>";
+	}
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

@@ -1,0 +1,264 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2011-2014        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>images_redirection help</title>
+	<link href="../../style/help_style.css" type="text/css" rel="stylesheet" />
+	<script src="../../lib/common_fn.js" type="text/javascript"></script>
+	<script src="../../lib/ui.js" type="text/javascript" ></script>
+</head>
+<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+		<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+	<script type="text/javascript">
+	var opera = (navigator.userAgent.toLowerCase().indexOf("opera") != -1);
+	try {
+		var LMEDIA_SUPPORT = false;
+		var RMEDIA_SUPPORT = false;
+
+		var hlpAdvMediaCfg = "";
+		var hlpAdvMediaBtnCfg = "";
+		var hlpLMedia = "";
+		var hlpRMedia = "";
+		var hlpAdvLMediaCfg = "";
+		var hlpAdvRMediaCfg = "";
+		var hlpAddLMediaImage = "";
+		var hlpAddRMediaImage = "";
+
+		LMEDIA_SUPPORT = checkProjectCfg("LMEDIA");
+		RMEDIA_SUPPORT = checkProjectCfg("RMEDIA");
+
+		hlpAdvMediaCfg = "<div class='helpmainhead'>Advanced Media " +
+			"Settings</div></h2>" +
+			"<div class='subSection'>" +
+			"This form is used to configure the Advanced Media settings." +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>";
+
+		hlpAdvMediaBtnCfg = "<br>"+
+			"<h4>Save</h4>" +
+			"Click 'Save' to save the settings." +
+			"<h4>Cancel</h4>" +
+			"Click 'Cancel' to cancel the modifications and return to Image " +
+			"list. " +
+			"</fieldset>" +
+			"</div>";
+
+		if (LMEDIA_SUPPORT) {
+			hlpLMedia = "<div class='helpmainhead'>Local Media</div></h2>" +
+				"<div class='subSection'>" +
+				"The displayed table shows available images uploaded on the BMC. " +
+				"You can add or delete new images from here.<br>" +
+				"Any number of image can be uploaded for each image type.<br>" +
+				"To configure the image, You need to enable Local Media support " +
+				"using 'Advanced Settings'.<br>" +
+				"To add or delete an image, you must have Administrator Privileges. " +
+				"<br>" +
+				"<strong>NOTE: </strong>Free slots are denoted by \"~\". " +"<br>"+
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>Actions</legend>";	
+				if (LMEDIA_SUPPORT && RMEDIA_SUPPORT) {
+					hlpLMedia += "<h4>Advanced Settings</h4>" +
+						"Click this option to configure the Local Media and " +
+						"Remote Media Settings. Options are Enable/Disable Local Media Support, " +
+						"Enable/Disable Remote Media Support, Server Address, Source Path, " +
+						"Share Type, Username, Password and Domain Name.";
+				} else {
+					hlpLMedia += "<h4>Advanced Settings</h4>" +
+						"Click this option to Enable/Disable the Local Media " +
+						"Support.";
+				}
+			hlpLMedia += "<h4>Start/Stop Redirection</h4>" +
+				"Select a configured slot and image, then click 'Start Redirection' to start " +
+				"the local media redirection. " +
+				"It is a toggle button. If the image is successfully redirected, " +
+				"then click 'Stop Redirection' button to stop the local media " +
+				"redirection." +
+				"<h4>Add Image</h4>" +
+				"Select any slot and click 'Add Image' to upload a new image " +
+				"to the device. " +
+				"Alternatively, double click on a slot to add an image. " +
+				"<h4>Delete Image</h4>" +
+				"Select the desired image from slot to be deleted and click 'Delete Image'." +
+				"</fieldset>" +
+				"</div>";
+
+			hlpAdvLMediaCfg = "<h4>Local Media Support</h4>" +
+				"To enable or disable Local Media support, check or uncheck the " +
+				"'Enable' checkbox respectively.";
+
+			hlpAddLMediaImage = "<div class='helpmainhead'>Add Image</div></h2>" +
+				"<div class='subSection'>" +
+				"This form is used to add a new image to the Local Media Area. " +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>Actions</legend>" +
+				"<h4>Image File</h4>" +
+				"Use Browse button to navigate to the Image file." +
+				"<ul><li>- Floppy/Harddisk Image file should be of img or ima type.</li>" +
+				"<li>- CD/DVD Image file should be of iso or nrg type.</li></ul>" +
+				"<h4>Upload</h4>" +
+				"Click 'Upload' to upload the new image and return to Image list. " +
+				"<h4>Cancel</h4>" +
+				"Click 'Cancel' to cancel the modification and return to Image " +
+				"list. " +
+				"</fieldset>" +
+				"</div>";
+		}
+
+		if (RMEDIA_SUPPORT) {
+			hlpRMedia = "<div class='helpmainhead'>Remote Media</div></h2>" +
+				"<div class='subSection'>" +
+				"The displayed table shows configured images on BMC. " +
+				"You can start/stop redirection or delete the images from here to remote media.<br>" +
+				"Any number image can be configured for each image type.<br>" +
+				"To configure the image, You need to enable Remote Media support " +
+				"using 'Advanced Settings'.<br>" +
+				"To start/stop redirection or delete an image, you must have Administrator "+
+				"Privileges. <br>" +
+				"<strong>NOTE: </strong>Free slots are denoted by \"~\". " +"<br>"+
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>Actions</legend>";
+				if (LMEDIA_SUPPORT && RMEDIA_SUPPORT) {
+					hlpRMedia += "<h4>Advanced Settings</h4>" +
+						"Click this option to configure the Local Media and " +
+						"Remote Media Settings. Options are Enable/Disable Local Media Support, " +
+						"Enable/Disable Remote Media Support, Server Address, Source Path, " +
+						"Share Type, Username, Password and Domain Name.";
+				} else {
+					hlpRMedia += "<h4>Advanced Settings</h4>" +
+						"Click this option to configure the Remote Media Settings. " +
+						"Options are Enable/Disable Remote Media Support, Server Address, " +
+						"Source Path, Share Type, Username, Password and Domain Name.";
+				}
+			hlpRMedia += "<h4>Start/Stop Redirection</h4>" +
+				"Select a configured slot and click 'Start Redirection' to start " +
+				"the remote media redirection. " +
+				"It is a toggle button. If the image is successfully redirected, " +
+				"then click 'Stop Redirection' button to stop the remote media " +
+				"redirection." +
+				"<h4>Clear</h4>" +
+				"Select the desired image status to be cleared and click 'Clear Image'." +
+				"<br><strong>NOTE:</strong> Redirection needs to be stopped to " +
+				"clear the image." +
+				"</fieldset>" +
+				"</div>";
+
+			hlpAdvRMediaCfg = "<h4>Remote Media Support</h4>" +
+				"To enable or disable Remote Media support, check or uncheck the " +
+				"'Enable' checkbox respectively." +
+				"Based on Remote Media support enabled/disabled,following remote media types will be enabled/disabled." +
+				"<br>"+
+				"<strong>CD/DVD,</strong><strong>Floppy,</strong><strong>Harddisk,</strong><strong>All</strong>" +
+				" Based on selected remote media types,the following fields will be visible." +
+				"If <strong>All</strong> option selected,all the entered configurations will be "+ 
+				" common for all remote media types." +
+				"On selecting individual remote media types will visible the three configuration rows."+
+				"User can configure different settings for different remote media types by enableing corrsponding media type." +
+				"If <strong>All</strong> option used then the entered media type data only will update "+
+				" and the configurations will be same for rest of remote media types." +
+				"<h4>Server Address</h4>" +
+				"Address of the server where the remote media images are stored." +
+				"<h4>Soure Path</h4>" +
+				"Source path to the remote media images." +
+				"<h4>Share Type</h4>" +
+				"Share Type of the remote media server either NFS or Samba(CIFS)." +
+				"<h4>Username, Password and Domain Name</h4>" +
+				"If share Type is Samba(CIFS), then enter user credentials to " +
+				"authenticate on the server.<br>" +
+				"<strong>NOTE:</strong> Domain Name field is optional.";
+
+			hlpAddRMediaImage = "<div class='helpmainhead'>Add Image</div></h2>" +
+				"<div class='subSection'>" +
+				"This form is used to add a new image to the Remote Media Area. " +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>Actions</legend>" +
+				"<h4>Image Type</h4>" +
+				"It displays the type of the image to be uploaded (readonly). " +
+				"<h4>Image File</h4>" +
+				"Image filename of the remote media image." +
+				"<ul><li>- Floppy/Harddisk Image file should be of img type.</li>" +
+				"<li>- CD/DVD Image file should be of iso type.</li>" +
+				"<li>- Same filename is not allowed for different image types." +
+				"</li></ul>" +
+				"<h4>Add</h4>" +
+				"Click 'Add' to save the new image and return to Image list. " +
+				"<h4>Cancel</h4>" +
+				"Click 'Cancel' to cancel the modification and return to Image " +
+				"list. " +
+				"</fieldset>" +
+				"</div>";
+		}
+
+		var frameName = top.frames["mainFrame"].pageFrame;
+		var formName = frameName.document.getElementsByTagName("FORM");
+		var helpContent;
+		if (formName.length) {
+			if ("advancedMediaFrm" == formName[0].getAttribute("id")) {
+				helpContent = hlpAdvMediaCfg;
+				if (LMEDIA_SUPPORT) {
+					helpContent += hlpAdvLMediaCfg;
+				}
+				if (RMEDIA_SUPPORT) {
+					helpContent += hlpAdvRMediaCfg;
+				}
+				helpContent += hlpAdvMediaBtnCfg;
+			} else if ("addLMediaImageForm" == formName[0].getAttribute("id")) {
+				helpContent = hlpAddLMediaImage;
+			} else if ("addRMediaImageForm" == formName[0].getAttribute("id")) {
+				helpContent = hlpAddRMediaImage;
+			}
+		} else {
+			if (LMEDIA_SUPPORT && RMEDIA_SUPPORT) {
+				if ((frameName.document.getElementById("_tabLMedia").style. 
+					fontWeight == "bold") || (opera && frameName.document.
+					getElementById("_tabLMedia").style.fontWeight == 700)) {
+					helpContent = hlpLMedia;
+				} else if ((frameName.document.getElementById("_tabRMedia").style. 
+					fontWeight == "bold") || (opera && frameName.document.
+					getElementById("_tabRMedia").style.fontWeight == 700)) {
+					helpContent = hlpRMedia;
+				}
+			} else if (LMEDIA_SUPPORT) {
+				helpContent = hlpLMedia;
+			} else if (RMEDIA_SUPPORT) {
+				helpContent = hlpRMedia;
+			}
+		}
+		document.write(helpContent);
+	} catch(e) {
+		alert (e);
+	}
+	</script>
+</body>
+</html>

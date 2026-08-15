@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- 
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+ -->
+<html>
+<head>
+	<link href="../style/page_style.css" type="text/css" rel="stylesheet" />
+	<script src="../lib/include.js" type="text/javascript"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_btnSave");
+		elmt.setAttribute("value", eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_SAVE"));
+		var elmt = document.getElementById("_btnReset");
+		elmt.setAttribute("value", eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_RESET"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+	<h3>
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_TITLE"));</script>
+</h3>
+	<p>
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_DESC"));</script>
+ </p>
+	<div class="subSection">
+		<table cellspacing="0" cellpadding="5" border="0" width="450">
+			<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_FLOPPY"));</script>
+</strong></td>
+			<td><select id="_lstFDCount" class="smallclassicTxtBox"></select>
+			</td></tr>
+
+			<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_CD"));</script>
+</strong></td>
+			<td><select id="_lstCDCount" class="smallclassicTxtBox"></select></td></tr>
+
+			<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_HARDDISK"));</script>
+</strong></td>
+			<td><select id="_lstHDCount" class="smallclassicTxtBox"></select></td></tr>
+
+			<tr id="_rowKVMFDSupport" class="hiddenRow"><td><strong>
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_REMOTE_FLOPPY"));</script>
+</strong></td>
+			<td><select id="_lstKVMFDCount" class="smallclassicTxtBox"></select>
+			</td></tr>
+
+			<tr id="_rowKVMCDSupport" class="hiddenRow"><td><strong>
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_REMOTE_CD_DVD"));</script>
+</strong></td>
+			<td><select id="_lstKVMCDCount" class="smallclassicTxtBox"></select></td></tr>
+
+			<tr id="_rowKVMHDSupport" class="hiddenRow"><td><strong>
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_REMOTE_HARDDISK"));</script>
+</strong></td>
+			<td><select id="_lstKVMHDCount" class="smallclassicTxtBox"></select></td></tr>
+
+			<tr id="_rowSDSupport" class="hiddenRow"><td><strong>
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_SDMEDIA"));</script>
+</strong></td>
+			<td><input type="checkbox" id="_chkSDSupport">&nbsp;
+			<label for="_chkSDSupport">
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_ENABLE"));</script>
+</label></td></tr>
+
+			<tr id="_rowMediaEncrypt" class="hiddenRow">
+			<td><strong>
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_MEDIA_ENCRYPTION"));</script>
+</strong></td>
+			<td><input type="checkbox" id="_chkMediaEncrypt" />
+			<label for="_chkMediaEncrypt">
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_ENABLE"));</script>
+</label></td>
+			</tr>
+		
+			<tr id="_rowVirtualDevices" class="hiddenRow">
+			<td><strong>
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_POWER_SAVE"));</script>
+</strong></td>
+			<td><input type="checkbox" id="_chkVirtualDevices">&nbsp;
+			<label for="_chkVirtualDevices">
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_ENABLE"));</script>
+</label></td></tr>
+
+			<tr id="_rowBootOnce" class="hiddenRow">
+			<td><strong>Boot Once</strong></td>
+			<td><input type="checkbox" id="_chkBootOnce">&nbsp;
+			<label for="_chkBootOnce">
+<script>document.writeln(eLang.getString("configure_vmedia_devices", "CFG_VMEDIA_ENABLE"));</script>
+</label></td></tr>
+			
+		</table>
+	</div>
+	<br/>
+	<div class="btnTray">
+		<input type="button" id="_btnSave" />
+		<input type="button" id="_btnReset" />
+	</div>
+</body>
+</html>

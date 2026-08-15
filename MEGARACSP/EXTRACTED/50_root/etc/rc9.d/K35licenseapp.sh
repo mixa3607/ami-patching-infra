@@ -1,0 +1,1 @@
+../init.d/licenseapp.sh

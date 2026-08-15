@@ -1,0 +1,217 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2012        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>系統防火牆說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+	<script type="text/javascript">
+	var frameName = top.frames["mainFrame"].pageFrame.document.getElementsByTagName("FORM");
+	var titleContent = "" ,bodyContent = "", buttonContent = "";
+	var advbuttonContent = "", helpContent = "";
+	SYSTEM_FIREWALL_TIMEOUT = checkProjectCfg("SYSTEM_FIREWALL_TIMEOUT");
+	if (frameName.length) {
+		buttonContent += "<h4>儲存</h4>" +
+			"點選 '儲存' 以儲存設定的項目。" +
+			"<h4>取消</h4>" +
+			"點選 '取消' 以取消對現有設定的變更。" +
+			"</fieldset>" +
+			"</div>";
+		if (frameName[0].getAttribute("id").indexOf("advFwallForm") != -1) {
+			bodyContent = "<div class='helpmainhead'>進階防火牆設定</div></h2>" +
+				"<div class='subSection'>" +
+				"此表格是用來配置進階防火牆的設定。" +
+				"<br><br><fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>全部封鎖</h4>" +
+				"此選項將會封鎖所有傳入的 IP 位址和端口。" +
+				"<h4>全部清除</h4>" +
+				"此選項用來清除所有系統防火牆規則。";
+			if (SYSTEM_FIREWALL_TIMEOUT) {
+			bodyContent += "<h4>逾時</h4>" +
+				"此選項是用來啟用或取消防火牆規則的逾時。" +
+				"<h4>開始時間</h4>" +
+				"防火牆的規則將會從此時間開始生效。" +
+				"<h4>結束時間</h4>" +
+				"防火牆的規則將會從此時間開始失效。";
+			}
+			helpContent = bodyContent + buttonContent;
+		}
+		else if (frameName[0].getAttribute("id").indexOf("addIPRuleForm") != -1) {
+			bodyContent = "<div class='helpmainhead'>新增 IP 規則</div></h2>" +
+				"<div class='subSection'>" +
+				"此表格是用來新增一個 IP 位址或 IP 範圍到規則設定。" +
+				"<br><br><fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>IP/IP 範圍</h4>" +
+				"此欄位是用來設定 IP 位址或 IP 範圍。IP 位址支援 IPv4 及 IPv6 位址格式。" +
+				"<ul>" +
+					"<li>- IPv4 位址是由 4 組數字所組成並以逗點分開，例如：" +
+					"xxx.xxx.xxx.xxx.</li>" +
+					"<li>- 每一組數字的範圍由 0 ～ 255。</li>" +
+					"<li>- 第一組數字不能為 0。</li>" +
+				"</ul>" +
+				"</ul>" +
+                                        "<li>- IPv6 位址 由 8 組 4 個16進位數字來組成 " +
+                                        "並以分號來分開如 xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx.</li>" +
+                                        "<li>- 16進位的數字會以小寫字母來表示。</li>" +
+				"</ul>";
+			if (SYSTEM_FIREWALL_TIMEOUT) {
+			bodyContent += "<h4>逾時</h4>" +
+				"此選項是用來啟用或取消防火牆規則的逾時。" +
+				"<h4>開始時間</h4>" +
+				"防火牆的規則將會從此時間開始生效。" +
+				"<h4>結束時間</h4>" +
+				"防火牆的規則將會從此時間開始失效。";
+			}
+			bodyContent += "<h4>IP 設定</h4>" +
+				"IP 設定用來決定要禁止或允許已設定的 IP 或 IP 範圍的連線。";
+
+			helpContent = bodyContent + buttonContent;
+
+		} else if (frameName[0].getAttribute("id").indexOf("addPortRuleForm") != -1) {
+			bodyContent = "<div class='helpmainhead'>新增 Port 規則</div></h2>" +
+				"<div class='subSection'>" +
+				"此表格是用來新增一個 Port 或 Port 範圍到規則設定。" +
+				"<br><br><fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>Port/Port 範圍</h4>" +
+				"此欄位是用來設定 Port 或 Port 範圍。" +
+				"<ul>" +
+					"<li>- Port 的範圍由 1 ～ 65525。" +
+				"</ul>" +
+				"<h4>協定</h4>" +
+				"此欄位是用來設定所使用的協定。可以是 TCP 或 UDP 或同時使用。";+
+				"<h4>網路類型</h4>" +
+				"此欄位是用來設定所使用的網路類型。可以是 TCP 或 UDP 或同時使用。可以是 " +
+				"IPv4 或 IPv6 或同時使用。";
+
+
+
+			if (SYSTEM_FIREWALL_TIMEOUT) {
+			bodyContent += "<h4>逾時</h4>" +
+				"此選項是用來啟用或取消防火牆規則的逾時。" +
+				"<h4>開始時間</h4>" +
+				"防火牆的規則將會從此時間開始生效。" +
+				"<h4>結束時間</h4>" +
+				"防火牆的規則將會從此時間開始失效。";
+			}
+			bodyContent += "<h4>Port 設定</h4>" +
+				"Port 設定用來決定要禁止或允許已設定的 Port 或 Port 範圍的連線。";
+
+			helpContent = bodyContent + buttonContent;
+		}
+	} else {
+		titleContent =  "<div class='helpmainhead'>系統防火牆</div></h2>" +
+			"<div class='subSection'>" +
+			"此頁面用來設定系統防火牆。" +
+			"您的權限至少要是 Operator 才能顯示此頁面。<br>" +
+			"您的權限必需要是管理員才能新增或修改防火牆規則。" +
+			"<br><br><fieldset>" +
+			"<legend>用途</legend>";
+		advbuttonContent = "<h4>進階設定</h4>" +
+			"點選此按鈕來配置進階防火牆設定。" +
+			"選項有全部封鎖及全部清除。";	
+		
+		if (SYSTEM_FIREWALL_TIMEOUT) {			
+			if ((top.frames["mainFrame"].pageFrame.document.getElementById
+				("_fwallSettings").style.fontWeight == "bold") || 
+				(top.frames["mainFrame"].pageFrame.document.getElementById
+				("_fwallSettings").style.fontWeight == 700)) {
+				bodyContent = "<h4>開始時間</h4>" +
+							  "防火牆的規則將會從此時間開始生效。" +
+							  "<h4>結束時間</h4>" +
+							  "防火牆的規則將會從此時間開始失效。" +
+							  "<h4>設置</h4>" +
+							  "此表格顯示現在的防火牆規則設定。";
+				buttonContent = "<h4>刪除</h4>" +
+					"點選 '刪除' 以刪除己設定的防火牆規則。" +
+					"</fieldset>" +
+					"</div>";
+			}
+		}
+		
+		if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_fwallIP").style.fontWeight == "bold") || 
+			(top.frames["mainFrame"].pageFrame.document.getElementById
+			("_fwallIP").style.fontWeight == 700)) {
+			bodyContent = "<h4>IP/IP 位址範圍</h4>" +
+				"此欄位會顯示己配置的 IP/IP 位址範圍";
+			if (SYSTEM_FIREWALL_TIMEOUT) {
+			bodyContent += "<h4>開始時間</h4>" +
+							  "防火牆的規則將會從此時間開始生效。" +
+							  "<h4>結束時間</h4>" +
+							  "防火牆的規則將會從此時間開始失效。";
+			}
+			bodyContent += "<h4>IP 設定</h4>" +
+				"此欄位顯示已設定的IP/IP 位址範圍狀態為允許或封鎖。";
+			buttonContent = "<h4>新增</h4>" +
+				"點選 '新增' 來新增防火牆規則。" +
+				"<h4>刪除</h4>" +
+				"選則已配置的防火牆規則並點選 '刪除' 來刪除所選擇的防火牆規則。 " +
+				"</fieldset>" +
+				"</div>";
+		}
+		if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_fwallPort").style.fontWeight == "bold") || 
+			(top.frames["mainFrame"].pageFrame.document.getElementById
+			("_fwallPort").style.fontWeight == 700)) {
+			bodyContent = "<h4>協定</h4>" +
+				"此欄位用來顯示 Port 或 Port 範圍將會使用何種協定。" +
+				"<h4>Network Type</h4>" +
+				"此欄位用來顯示受影響的網路類型及其特定的 Port/Port 範圍。 " +
+				"<h4>Port/Port 範圍</h4>" +
+				"此欄位顯示已設定的 Port/Port 範圍。";
+			if (SYSTEM_FIREWALL_TIMEOUT) {
+			bodyContent += "<h4>開始時間</h4>" +
+							  "防火牆的規則將會從此時間開始生效。" +
+							  "<h4>結束時間</h4>" +
+							  "防火牆的規則將會從此時間開始失效。";
+			}
+			bodyContent += "<h4>Port 設定</h4>" +
+				"此欄位顯示已設定的 Port/Port 範圍狀態為允許或封鎖。";
+			buttonContent = "<h4>新增</h4>" +
+				"點選 '新增' 來新增防火牆規則。" +
+				"<h4>刪除</h4>" +
+				"選則已配置的防火牆規則並點選 '刪除' 來刪除所選擇的防火牆規則。 " +
+				"</fieldset>" +
+				"</div>";
+		}
+	}
+	
+	helpContent = titleContent + advbuttonContent + bodyContent + buttonContent;
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

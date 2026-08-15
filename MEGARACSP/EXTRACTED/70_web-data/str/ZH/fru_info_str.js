@@ -1,0 +1,61 @@
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2013        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+
+// File Name  : fru_info_str.js
+// Brief      : fru_info page string table
+// Author Name:
+
+eLang.fru_info_strings = {};
+eLang.fru_info_strings["FRU_FILE_ID"] = "FRU 檔案 ID";
+eLang.fru_info_strings["FRU_BOARD"] = "機板資訊：";
+eLang.fru_info_strings["FRU_ASSET"] = "資產標籤";
+eLang.fru_info_strings["FRU_CI5"] = "額外 Chassis";
+eLang.fru_info_strings["FRU_CI4"] = "Chassis 序號";
+eLang.fru_info_strings["FRU_CI3"] = "Chassis Part Number";
+eLang.fru_info_strings["FRU_MFR_DATE"] = "製造日期時間";
+eLang.fru_info_strings["FRU_CI2"] = "Chassis 類型";
+eLang.fru_info_strings["FRU_PRODUCT"] = "產品資訊：";
+eLang.fru_info_strings["FRU_CI1"] = "Chassis 資訊區域格式版本";
+eLang.fru_info_strings["FRU_PI6"] = "額外產品";
+eLang.fru_info_strings["FRU_MFR_NAME"] = "製造商名稱";
+eLang.fru_info_strings["FRU_PI5"] = "產品序號";
+eLang.fru_info_strings["FRU_PI4"] = "產品版本";
+eLang.fru_info_strings["FRU_PI3"] = "產品部件號碼";
+eLang.fru_info_strings["FRU_PI2"] = "產品名稱";
+eLang.fru_info_strings["FRU_PI1"] = "產品資訊區域格式版本";
+eLang.fru_info_strings["FRU_DEVICEID"] = "FRU 裝置 ID";
+eLang.fru_info_strings["FRU_BI6"] = "額外機板";
+eLang.fru_info_strings["FRU_BI5"] = "機板部件號碼";
+eLang.fru_info_strings["FRU_DESC"] = "此頁面呈現目前系統中詳細的FRU設備資訊。";
+eLang.fru_info_strings["FRU_BI4"] = "機板序號";
+eLang.fru_info_strings["FRU_TITLE"] = "Field Replaceable Unit(FRU)";
+eLang.fru_info_strings["FRU_BI3"] = "機板產品名稱";
+eLang.fru_info_strings["FRU_BI2"] = "機板製造商";
+eLang.fru_info_strings["FRU_BI1"] = "機板資訊區域格式版本";
+eLang.fru_info_strings["FRU_DEVICENAME"] = "FRU 設備名稱";
+eLang.fru_info_strings["FRU_LANG"] = "語言";
+eLang.fru_info_strings["FRU_BASIC"] = "基本資訊：";
+eLang.fru_info_strings["FRU_CHASSIS"] = "Chassis資訊：";

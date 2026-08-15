@@ -1,0 +1,66 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>滑鼠模式說明</title>
+	<link href="/style/help_style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div><div class="helpmainhead">滑鼠模式</div></h2>
+	<div class="subSection">
+	客戶端的 KVM Client (JViewer) 會負青處理從客戶端到遠端系統的滑鼠事件， 
+	滑鼠會使用以下三種模式中的一種。
+	只有 '管理員' 有權限修改這個配置。
+	<ul>
+		<li> - 相對滑鼠模式</li>
+		<li> - 絕對滑鼠模式</li>
+		<li> - 其它滑鼠模式</li>
+	</ul>
+	<br/>
+	<fieldset>
+		<legend>用途</legend>
+		<h4>相對滑鼠模式</h4>
+		相對模式會計算滑鼠的相對位移量並傳送到伺服器，要選擇此模式請點選“
+		將模式設置為相對”選項。
+		<h4>絕對滑鼠模式</h4>
+		絕對模式會將本地端滑鼠的絕對位置傳送到伺服器，要選擇此模式請點選“
+		將模式設置為絕對“，建議伺服器為 Windows 或較新版的 Linux 使用。
+		<h4>其它滑鼠模式</h4>
+		其它模式會計算本地滑鼠在中心位置的位移量並傳送到伺服器。 
+		<br>
+		伺服器為 SLES 11 建議使用此模式。
+		<h4>儲存</h4>
+		點選 '儲存' 以儲存變更。
+		<h4>重置</h4>
+		點選 '重置' 以重置之前的變更。
+	</fieldset>
+	</div>
+</body>
+</html>

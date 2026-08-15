@@ -1,0 +1,356 @@
+#! /bin/sh
+#
+# manage network interfaces and configure some networking options
+# chkconfig: S 41 0
+#
+#Runlevel : S = S41
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+if ! [ -x /sbin/ifup ]; then
+    exit 0
+fi
+
+TMP_IFACE_NAME=""
+TMP_VLAN_ID=0
+TMP_VLAN_PRIORITY=0
+
+VLAN_SETTING_CONF="/conf/vlansetting.conf"
+
+IPV6MODE=""
+IPv6_GLOBAL=""
+LINKADDR=""
+
+if ! [ -f $VLAN_SETTING_CONF ]; then
+    cp -f /etc/defconfig/vlansetting.conf $VLAN_SETTING_CONF
+fi
+
+MAX_NUM=`grep 'index' $VLAN_SETTING_CONF | awk -F= 'END{print $2}'`
+
+
+GetVLANIfaceName()
+{
+    VLAN_SECTION="[vlan$1]"
+
+	if [ -f $VLAN_SETTING_CONF ];
+	then
+		TMP_IFACE_NAME=`cat $VLAN_SETTING_CONF | awk -v val=$VLAN_SECTION '$1 == val, $1 == ""' | 
+								          awk 'BEGIN {FS="="} /interface_name/ {print $2}'      | 
+								          awk 'NR==1 {print $0}'`
+    fi								          
+}
+
+GetVLANID()
+{
+    VLAN_SECTION="[vlan$1]"
+
+	if [ -f $VLAN_SETTING_CONF ];
+	then
+		TMP_VLAN_ID=`cat $VLAN_SETTING_CONF | awk -v val=$VLAN_SECTION '$1 == val, $1 == ""' | 
+								          awk 'BEGIN {FS="="} /vlanid/ {print $2}'           | 
+								          awk 'NR==1 {print $0}'`
+    fi								          
+}
+
+GetVLANPriority()
+{
+    VLAN_SECTION="[vlan$1]"
+
+	if [ -f $VLAN_SETTING_CONF ];
+	then
+		TMP_VLAN_PRIORITY=`cat $VLAN_SETTING_CONF | awk -v val=$VLAN_SECTION '$1 == val, $1 == ""' | 
+								                awk 'BEGIN {FS="="} /vlanpriority/ {print $2}'     | 
+								                awk 'NR==1 {print $0}'`
+    fi								          
+}
+
+#Ifup the bond interface before enabling the VLAN otherwise VLAN interface will not created on bond interface
+UpBondIfc()
+{
+	i=$(echo $1 | sed 's/[0-9]*[0-9]//')
+	if [ $i == "bond" ];
+	then
+		ifup $1
+	fi
+}
+
+#Down the bond interface to remove the bond device completly
+DownBondIfc()
+{
+	i=$(echo $1 | sed 's/[0-9]*[0-9]//')
+	if [ $i == "bond" ];
+	then
+		ifdown $1
+	fi
+}
+
+RemoveIPv6Addr()
+{
+    IFACE=$1	
+
+    IPV6MODE=`cat /etc/network/interfaces | grep $IFACE | grep "inet6" | awk '{print $4}'`
+    if [ "$IPV6MODE" == "autoconf" ] || [ "$IPV6MODE" == "static" ];
+    then   
+        #Remove IPv6 global addresses
+        IPv6_GLOBAL=`ifconfig $IFACE | grep Scope:Global | awk '{print $3}'`
+        for j in $IPv6_GLOBAL; do
+            if [ $j ]; then
+                #echo "Removing Global address $j from $IFACE"
+                ifconfig $IFACE del $j
+            fi
+        done
+        
+        LINKADDR=`ifconfig $IFACE | grep Scope:Link | awk '{print $3}'`
+        ifconfig $IFACE del $LINKADDR
+    else
+    	echo "IPv6 entry is not present in $IFACE"
+    fi        
+}
+
+VLANINTERFACES_FILE=/conf/vlaninterfaces
+
+VLAN_STR=`awk '{print $1}' /proc/net/vlan/config | sed -n '3p'`
+VLAN_STR1=`awk '{print $1}' /proc/net/vlan/config | sed -n '4p'`
+
+if  [ -f  /proc/sys/ractrends/ncsi/Interface ]; then
+NCSIInterface=`cat /proc/sys/ractrends/ncsi/Interface`
+else
+NCSIInterface="NO"
+fi
+
+StartVLAN()
+{
+    GetVLANID $1
+    VLAN_ID=$TMP_VLAN_ID
+    
+    GetVLANPriority $1
+    VLANPriority=$TMP_VLAN_PRIORITY
+    
+    GetVLANIfaceName $1
+    INTERFACE=$TMP_IFACE_NAME
+    
+   	if [ x"$VLAN_ID" != x ]; then
+   		if [ $VLAN_ID != 0 ]; then
+   	        
+   	        echo -n "Configuring vlan interfaces.."
+   			vconfig add $INTERFACE $VLAN_ID 
+   			echo "done."
+   			
+   			if  [ -f  /var/run/udhcpc.$INTERFACE.pid ]; then
+   				kill -9 `cat /var/run/udhcpc.$INTERFACE.pid`
+   			fi
+			if [ -f /var/run/dhcp6c.$INTERFACE.pid ]; then
+				kill -9 `cat /var/run/dhcp6c.$INTERFACE.pid`
+			fi   			
+   			if [ $NCSIInterface == "$INTERFACE" ]; then
+   				echo "$VLAN_ID" > /proc/sys/ractrends/ncsi/VlanID
+   			fi
+   			
+   			if [ x"$VLANPriority" != x ]; then
+   				if [ $VLANPriority != 0 ]; then
+   					vconfig set_egress_map $INTERFACE.$VLAN_ID 0 $VLANPriority
+   				fi
+   			fi
+   		    ifup $INTERFACE.$VLAN_ID -i $VLANINTERFACES_FILE
+   			ifconfig $INTERFACE 0.0.0.0
+   			RemoveIPv6Addr $INTERFACE
+   		
+   		fi
+   	fi
+}
+
+StopVLAN()
+{
+    GetVLANID $1
+    VLAN_ID=$TMP_VLAN_ID
+    
+    GetVLANIfaceName $1
+    INTERFACE=$TMP_IFACE_NAME
+    
+	if [ $VLAN_ID != 0 ]; then
+        	echo -n "Deconfiguring vlan interfaces..."
+	     	echo "0" > /proc/sys/ractrends/ncsi/Enable
+	        ifdown $INTERFACE.$VLAN_ID -i  $VLANINTERFACES_FILE
+        	vconfig rem $INTERFACE.$VLAN_ID
+        	echo "1" > /proc/sys/ractrends/ncsi/Enable
+		echo "done."
+	else
+	    echo -n "VLANID is not enabled...So Exit VLAN network interface start up....."
+	fi
+}
+
+StartVLANIface()
+{
+    GetVLANID $1
+    VLAN_ID=$TMP_VLAN_ID
+    
+    GetVLANPriority $1
+    VLANPriority=$TMP_VLAN_PRIORITY
+    
+    GetVLANIfaceName $1
+    INTERFACE=$TMP_IFACE_NAME
+    
+	if [ $VLAN_ID == 0 ]; then
+	    echo -n "VLANID is not enabled...So Exit VLAN network interface start up....."
+	    exit 0
+	fi
+	UpBondIfc $INTERFACE
+	VLAN="$INTERFACE."
+        VLAN=$VLAN$VLAN_ID
+        if [ x"$VLAN_STR" == x ];
+        then
+        	echo -n "Configuring vlan interfaces.."
+		    vconfig add $INTERFACE $VLAN_ID
+		    echo "done."
+        else if [ $VLAN != $VLAN_STR ];
+        then
+            if [ x"$VLAN_STR1" == x ];
+            then
+        	    echo -n "Configuring vlan interfaces.."
+			    vconfig add $INTERFACE $VLAN_ID
+			    echo "done."
+            else if [ $VLAN != $VLAN_STR1 ];
+            then
+        	    echo -n "Configuring vlan interfaces.."
+				vconfig add $INTERFACE $VLAN_ID
+				echo "done."
+            fi
+            fi
+        fi
+        fi
+	if  [ -f  /var/run/udhcpc.$INTERFACE.pid ]; then
+		kill -9 `cat /var/run/udhcpc.$INTERFACE.pid`
+	fi
+    if [ -f /var/run/dhcp6c.$INTERFACE.pid ]; then
+    	kill -9 `cat /var/run/dhcp6c.$INTERFACE.pid`
+    fi  	
+	if [ x"$VLANPriority" != x ]; then
+		if [ $VLANPriority != 0 ]; then
+			vconfig set_egress_map $INTERFACE.$VLAN_ID 0 $VLANPriority
+		fi
+	fi	
+	
+	ifup $INTERFACE.$VLAN_ID -i $VLANINTERFACES_FILE
+	
+	if [ $NCSIInterface == "$INTERFACE" ]; then
+		echo "$VLAN_ID" > /proc/sys/ractrends/ncsi/VlanID
+	fi
+    
+	ifconfig $INTERFACE 0.0.0.0
+	RemoveIPv6Addr $INTERFACE
+}
+
+StopVLANIface()
+{
+    GetVLANID $1
+    VLAN_ID=$TMP_VLAN_ID
+        
+    GetVLANIfaceName $1
+    INTERFACE=$TMP_IFACE_NAME
+    
+	if [ $VLAN_ID == 0 ]; then
+	    echo -n "VLANID is not enabled...So Exit VLAN network interface start up....."
+	    exit 0
+	fi
+        echo -n "Deconfiguring vlan interfaces..."
+        ifdown $INTERFACE.$VLAN_ID -i  $VLANINTERFACES_FILE
+        DownBondIfc $INTERFACE
+        vconfig rem $INTERFACE.$VLAN_ID 
+        echo "1" > /proc/sys/ractrends/ncsi/Enable
+	echo "done."
+}
+
+DownVLANIface()
+{
+    GetVLANID $1
+    VLAN_ID=$TMP_VLAN_ID
+
+    GetVLANIfaceName $1
+    INTERFACE=$TMP_IFACE_NAME
+    
+	if [ $VLAN_ID == 0 ]; then
+	    echo -n "VLANID is not enabled...So Exit VLAN network interface start up....."
+	    exit 0
+	fi
+        ifdown $INTERFACE.$VLAN_ID -i  $VLANINTERFACES_FILE
+	DownBondIfc $INTERFACE
+}
+
+RestartVLANIface()
+{
+    GetVLANID $1
+    VLAN_ID=$TMP_VLAN_ID
+        
+    GetVLANIfaceName $1
+    INTERFACE=$TMP_IFACE_NAME
+    
+    echo -n "Reconfiguring network interfaces..."
+    if [ $VLAN_ID != 0 ]; then
+        ifdown $INTERFACE.$VLAN_ID -i  $VLANINTERFACES_FILE
+        vconfig rem $INTERFACE.$VLAN_ID
+    fi         
+    vconfig add $INTERFACE $VLAN_ID
+    ifup $INTERFACE.$VLAN_ID -i $VLANINTERFACES_FILE
+    
+        
+    ifdown $INTERFACE.$VLAN_ID -i  $VLANINTERFACES_FILE
+	vconfig rem $INTERFACE.$VLAN_ID 
+	vconfig add $INTERFACE $VLAN_ID 
+	ifup $INTERFACE.$VLAN_ID -i $VLANINTERFACES_FILE
+        
+	echo "done."
+}
+
+
+case "$1" in
+
+    start)
+        i=0
+        while [ $i -le $MAX_NUM ] 
+        do
+            StartVLAN $i
+            i=`expr $i + 1`    
+        done
+    
+    ;;
+    stop)
+        i=0
+        while [ $i -le $MAX_NUM ] 
+        do
+            StopVLAN $i
+            i=`expr $i + 1`    
+        done
+    
+	;;	
+    start[0-$MAX_NUM])
+        i=$(echo $1 | sed 's/start//') 	
+        StartVLANIface $i
+
+	;;
+    stop[0-$MAX_NUM])
+        i=$(echo $1 | sed 's/stop//') 
+        StopVLANIface $i
+    
+	;;
+    downvlan[0-$MAX_NUM])
+        i=$(echo $1 | sed 's/downvlan//')
+        DownVLANIface $i
+    
+	;;
+    force-reload|restart)
+        i=0
+        while [ $i -le $MAX_NUM ] 
+        do
+            RestartVLANIface $i
+            i=`expr $i + 1`    
+        done
+    
+    ;;		
+    *)
+	echo "Usage: /etc/init.d/vlannetworking {start|stop|restart|force-reload}"
+	exit 1
+	;;
+esac
+
+exit 0
+

@@ -1,0 +1,186 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>使用者說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight"><a href="javascript://" class="closeBtn" 
+		onclick="top.closeHelp();">X</a></div>
+	<script type="text/javascript">
+	var frameName = top.frames['mainFrame'].pageFrame.document.getElementsByTagName("FORM");
+	var titleContent = '', bodyContent = '', buttonContent = '';
+	var helpContent;
+	if (frameName.length)
+	{
+		bodyContent = "<h4>密碼長度</h4>" +
+			"可以選擇 16 Bytes 或 20 Bytes 的密碼長度，預設為 16 Bytes。<br>" +
+			"如果選擇 '16 Bytes' 的長度，最長的密碼長度為 16 個字元。" +
+			"如果選擇 '20 Bytes' 的長度，最長的密碼長度為 20 個字元。" +
+			"<br>" +
+			"<strong>提醒：</strong> 當使用 20 Bytes 的密碼時，LAN 會話無法建立。" +
+			"<h4>密碼，確認密碼</h4>" +
+			"在此輸入新密碼和確認密碼。" +
+			"<ul><li>- 密碼至少要有 1 個字元長。</li>" +
+			"<li>- 不允許使用空白鍵。</li></ul>" +
+			"<strong>提醒：</strong> 此欄位長度不允許超過“密碼長度”欄位所選擇的" +
+			"16/20 字元。" +
+			"<h4>使用者存取權限</h4>" +
+			"啟用使用者存取權限將會給予使用者 IPMI messaging 權限。" +
+			"<br>" +
+			"<strong>提醒：</strong> 當透過 IPMI 建立使用者時，建議啟用使用者存取權限。"+
+			"<h4>Network 權限</h4>" +
+			"選擇要給予此使用者的 Network 權限，有四種等級可以選擇： Administrator，" + 
+			"Operator, User 和 No Access。" ;
+
+		if (checkProjectCfg("EXTENDED_PRIV")) {
+			bodyContent += "<h4>擴展的權限</h4>" +
+				"此欄位用來設定使用者是否擁有 KVM 和 VMedia 的權限";
+		}
+		if (checkProjectCfg("SNMP")) {
+			bodyContent += "<h4>SNMP 狀態</h4>" +
+				"點選此選項來啟用使用者對 SNMP 的存取。" +
+				"<br>" +
+				"<strong>提醒：</strong> 當 SNMP 啟用時，密碼欄位為必填欄位而且必需至" +
+				"少 8 個字元長。<br>" +
+				"對於 '匿名' 使用者，將會停用 SNMP 的存取，因為使用者名稱和密碼的長度" +
+				"為 null。" +
+				"<h4>SNMP 存取</h4>" +
+				"選擇使用者的 SNMP 存取等級為唯讀或讀寫。" +
+				"<h4>身份驗證協議</h4>" +
+				"為 SNMP 配置身份驗證協議。" +
+				"<br>" +
+				"<strong>提醒：</strong> 如果變更驗證協議，密碼欄位為必填欄位。" +
+				"<h4>隱私協議</h4>" +
+				"選擇 SNMP 要使用皫加密算法。";
+		}
+		bodyContent += "<h4>電子郵件 ID</h4>" +
+			"輸入使用者的電子郵件地址，如果使用者忘記密碼，新密碼將會寄到已配置的" +
+			"電子郵件地址。" +
+			"<br>" +
+			"<strong>提醒：</strong> 要寄送電子郵件，SMTP 伺服器必需已配置。" +
+			"<h4>電子郵件格式</h4>" +
+			"指定電子郵件的格式。此格式將會在寄送電子郵件時被使用。有兩種電子郵件" +
+			"："+
+			"<ul><li>- AMI-Format:" +
+			"此電子郵件的主題將會是 'Alert from (你的主機名稱)'。郵件內容會包括" +
+			"感應器資訊，例如：感應器類型和描述。</li></ul>" +
+			"<ul><li>- FixedSubject-Format:" +
+			"此格式所顯示的郵件訊息內容將會對應到使用者的設定。您必需為警報郵件" +
+			"設定主題和內容。</li></ul>";
+
+		if ("addUserForm" == frameName[0].getAttribute('id'))
+		{
+			titleContent = "<div class='helpmainhead'>新增使用者</div></h2>" +
+			"<div class='subSection'>" +
+			"使用此表格來新增使用者。" +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>用途</legend>" +
+			"<h4>使用者名稱</h4>" +
+			"輸入新使用者的使用者名稱。" +
+			"<ul><li>- 使用者名稱為長度 1 到 16 個字母數字的字串。</li>" +
+			"<li>- 開頭必需要是字母。</li>" +
+			"<li>- 大小寫不同。</li>" +
+			"<li>- 可以使用特殊字元 '-'（連字符號），'_'（底線）, '@'（at 符" +
+			"號）。</li></ul>";
+
+			buttonContent = "<h4>新的 SSH 金鑰</h4>" +
+			"使用瀏覽按鈕來選擇公共 SSH 金鑰文件。" +
+			"<ul><li>- 公共 SSH 金鑰文件的格式應為 PUB。</li></ul>" +
+			"<h4>新增</h4>" +
+			"點選 '新增' 以儲存新的使用者並回到使用者列表。" +
+			"<h4>取消</h4>" +
+			"點選 '取消' 以取消變更並回到使用者列表。" +
+			"</fieldset></div>";
+		}
+		else if ("modUserForm" == frameName[0].getAttribute('id'))
+		{
+			titleContent = "<div class='helpmainhead'>修改使用者</div></h2>" +
+			"<div class='subSection'>" +
+			"使用此表格來修改已存在的使用者密碼及權限。" +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>用途</legend>" +
+			"<h4>使用者名稱</h4>" +
+			"修改已存在的使用者名稱。" +
+			"<ul><li>- 使用者名稱為長度 1 到 16 個字母數字的字串。</li>" +
+			"<li>- 開頭必需要是字母。</li>" +
+			"<li>- 大小寫不同。</li>" +
+			"<li>- 可以使用特殊字元 '-'（連字符號），'_'（底線）, '@'（at 符" +
+			"號）。</li></ul>";
+			"<h4>Change Password</h4>" +
+			"<p>如果要變更密碼，請點選 'Change Password' 選項，將會啟用密碼欄位。";
+
+			buttonContent = "<h4>已上傳的 SSH 金鑰</h4>" +
+			"顯示已上傳的 SSH 金鑰的資訊（唯讀）。" +
+			"<h4>新的 SSH 金鑰</h4>" +
+			"使用瀏覽按鈕來選擇公共 SSH 金鑰文件。" +
+			"<ul><li>- 公共 SSH 金鑰文件的格式應為 PUB。</li></ul>" +
+			"<h4>修改</h4>" +
+			"點選 '修改' 以儲存修改並回到使用者列表。" +
+			"list. " +
+			"<h4>取消</h4>" +
+			"點選 '取消' 以取消變更並回到使用者列表。" +
+			"</fieldset></div>";
+		}
+		helpContent = titleContent + bodyContent + buttonContent;
+	}
+	else
+	{
+		helpContent = "<div class='helpmainhead'>使用者</div></h2>" +
+		"<div class='subSection'>" +
+		"此表格顯示已配置和未配置的使用者，您可以在此修改或新增使用者。<br>" +
+		"最多可以配置 10 個使用者（包括預設的 admin 和 anonymous）。" +
+		"因為安全考量，建議修改匿名使用者的權限和密碼。要顯示此表格，您的" +
+		"使用者等級必需至少是 Operator。<br>要新增或修改使用者，你的使用者" +
+		"等級必需是 Administrator。" +
+		"<br>" +
+		"<strong>提醒：</strong> 未設定的使用者將會以 \"~\" 標示。" +
+		"<br><br>" +
+		"<fieldset>" +
+		"<legend>用途</legend>" +
+		"<h4>新增使用者</h4>" +
+		"請選擇一個空欄位，然後點選 '新增使用者' 以新增使用者到設備。" +
+		"或者，您也可以雙擊一個空欄位來新增使用者。" +
+		"<h4>修改使用者</h4>" +
+		"請選擇一個已配置的使用者並點選 '修改使用者' 來修改所選擇的使用者，" +
+		"或者，您也可以雙擊一個已配置的使用者來修改。" +
+		"<h4>刪除使用者</h4>" +
+		"請選擇要刪除的使用者並點選 '刪除使用者'。 " +
+		"</fieldset>" +
+		"</div>";
+	}
+	document.write(helpContent);
+	</script>
+
+	</body>
+</html>

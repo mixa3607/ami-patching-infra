@@ -1,0 +1,51 @@
+<html>
+   <head>
+      <title>bmc_recovery help</title>
+      <link href="../../style/help_style.css" type="text/css" rel="stylesheet" />
+   </head>
+   <body>
+      <h2>
+         <div class="floatRight">
+            <a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+         </div>
+         <div class="helpmainhead">BMC Recovery</div>
+      </h2>
+      <div class="subSection">
+         This page is used to configure BMC Recovery settings.
+         <br/><br/>
+         <fieldset>
+            <legend>Actions</legend>
+            <h4>Force Recovery</h4>
+            Choose Enable/Disable to start auto-recovery immediately at next reboot.
+            <h4>Boot Retry Count</h4>
+            Enter the number of retries to reset the BMC, before entering into recovery if BMC Boot failure occurs.
+            Boot Retry count ranges from 1 to 5.<br>
+            <strong>NOTE:</strong> By default the Boot Retry count is mentioned as 2.
+            <h4>Recovery Retry Count</h4>
+            Enter the number of retries to recover firmware image during the recovery process.
+            Recovery Retry count ranges from 1 to 5.<br>
+            <strong>NOTE:</strong> By default the Recovery Retry count is mentioned as 3.
+            <h4>Server Address</h4>
+            Address of the server where the firmware image is stored.
+            <ul>
+               <li>- IP Address made of 4 numbers separated by dots as
+                  in "xxx.xxx.xxx.xxx".
+               </li>
+               <li>- Each number ranges from 0 to 255.</li>
+               <li>- First number must not be 0.</li>
+            </ul>
+            <h4>Image Name</h4>
+            Enter the Image Name to edit the default recovery image name on TFTP server.
+            <strong>NOTE:</strong> By default the image name is mentioned as rom.ima.
+            <ul>
+               <li>- Image name should contain only 5 Alpha numeric characters.</li>
+               <li>- If you enter new filename, enter the filename without extension (.ima)</li>
+            </ul>
+            <h4>Save</h4>
+            Click 'Save' to save the configured settings.
+            <h4>Reset</h4>
+            Click 'Reset' to reset the modified changes.
+         </fieldset>
+      </div>
+   </body>
+</html>

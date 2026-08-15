@@ -1,0 +1,133 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>configure_dns help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div>
+	<div class="helpmainhead">DNS</div></h2>
+	<div class="subSection">
+		This page is used to configure the Host name and Domain Name Server
+		 configuration of the device.
+		<br/><br/>
+		<fieldset>
+			<legend>Actions</legend>
+			<h4>Domain Name Service Configuration</h4>
+			<h4>DNS Service</h4>
+			Check this box to enable all the DNS Service configurations.
+			<h4>Host configuration</h4>
+			<h4>Host Settings</h4>
+			Choose either Automatic or Manual settings.
+			<h4>Host Name</h4>
+			It displays hostname of the device if Auto was selected above. 
+			If the Host setting is chosen as Manual, then specify the hostname 
+			of the device.
+			<ul>
+				<li>- Value ranges from 1 to 63 alpha-numeric characters.</li>
+				<li>- Special characters '-'(hyphen) and '_'(underscore) are allowed.</li>
+				<li>- It must not start or end with a '-'(hyphen).</li>
+			</ul>
+			<strong>NOTE:</strong> IE browsers won't work correctly if any 
+			part of the hostname contain underscore (_) character.
+			<h4>Register BMC</h4>
+			Choose the BMC's network port to register with DNS settings. 
+			<br/>
+			Check the option 'Register BMC' to register with DNS settings.
+			<br/>
+			<ul>
+				<li><strong>Nsupdate</strong> - Choose the option 'Nsupdate' to register with DNS server using nsupdate application.</li>
+				<li><strong>DHCP Client FQDN</strong> - Choose the option 'DHCP Client FQDN' to register with DNS Server using DHCP option 81.</li>
+				<li><strong>Hostname</strong> - Choose the option 'Hostname' to register with DNS server using DHCP option 12.</li>
+			</ul>
+			<strong>NOTE:</strong> Hostname option should be selected 
+			if the DHCP client FQDN option is not supported by DHCP server.
+			<script type="text/javascript">
+			if (checkProjectCfg("TSIG")) {
+				var tsig_help = "<h4>TSIG Configuration</h4>" +
+				"<h4>TSIG Authentication</h4>" +
+				"Check this option to enable TSIG authentication while " +
+				"registering DNS via Nsupdate." +
+				"<h4>Current TSIG Private File</h4>" +
+				"The information as Current TSIG private and uploaded " +
+				"date/time will be displayed (readonly)." +
+				"<h4>New TSIG Private File</h4>" +
+				"Browse and navigate to the TSIG private file." +
+				"<ul><li>- TSIG file should be of private type</li></ul>";
+				document.write(tsig_help);
+			}
+			</script>
+			<h4>Domain Name Configuration </h4>
+			<h4>Domain Settings</h4>
+			It lists the option for domain interface as Manual, v4 or v6 for
+			multiLAN channels. 
+			<h4>Domain Name</h4>
+			It displays the domain name of the device if Auto was selected.
+			If the Domain setting is chosen as Manual, then specify the domain
+			name of the device.
+			<h4>Domain Name Server Configuration </h4>
+			<h4>DNS Server Settings</h4>
+			It lists the option for DNS interface, Manual and available
+			LAN interfaces.
+			<h4>IP Priority</h4>
+			If IP Priority is IPv4, it will have 2 IPv4 DNS servers and 1 IPv6
+			DNS server. If IP Priority is IPv6, it will have 2 IPv6 DNS servers
+			and 1 IPv4 DNS server.
+			<br>
+			<strong>NOTE:</strong> This is not applicable for Manual
+			configuration.
+			<h4>DNS Server 1, 2 & 3</h4>
+			Specify the DNS (Domain Name System) server address to be configured
+			 for the BMC.
+			<ul>
+				<li>- IPv4 Address made of 4 numbers separated by dots as in
+				 "xxx.xxx.xxx.xxx".</li>
+				<li>- Each number ranges from 0 to 255.</li>
+				<li>- First number must not be 0.</li>
+			</ul>
+			DNS Server Address will support the following:
+			<ul>
+				<li>- IPv4 Address format.</li>
+				<li>- IPv6 Address format.</li>
+			</ul>
+			<strong>NOTE:</strong> Only Global IPv6 Addresses are allowed.
+			<h4>Save</h4>
+			Click 'Save' to save any changes made.
+			You will be logged out of current UI session and will need to log 
+			back in.
+			<h4>Reset</h4>
+			Reset the modified changes.
+		</fieldset>
+	</div>
+</body>
+</html>

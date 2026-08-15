@@ -1,0 +1,109 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>儀表板說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div>
+	<div class="helpmainhead">儀表板</div></h2>
+	<div class="subSection">
+	儀表板顯示與設備相關的整體訊息。在此啟動遠端主控台重定向視窗，你的使用者權限必須是Administrator 或是 KVM 權限。
+	<br/><br/>
+	<fieldset>
+		<legend>資訊</legend>
+		<h4>設備資訊</h4>
+		<script type="text/javascript">
+			var DUAL_IMAGE = false;
+			DUAL_IMAGE = checkProjectCfg("DUAL_IMAGE");
+			if(DUAL_IMAGE){
+				document.writeln("顯示正在使用的映象檔，韌體版本及韌體編譯時間（日期和時間）。");
+			}
+			else{
+				document.writeln("顯示韌體版本及韌體編譯時間（日期和時間）。");
+			}
+		
+		</script>
+		
+
+		<h4>網路資訊</h4>
+		顯示設備的網路配置。點選'編輯'連結以顯示完整網路配置。 
+
+		<h4>遠端控制</h4>
+		在此啟動主控台，透過遠端方式重定向主機。 </br>
+		點選 '<img src="/res/java.png" width="15px" height="10px"/> 按鈕將會
+		開始下載 jviewer.jnlp 檔案，下載完成並啟動之後會顯示 Java Redirection
+		（JViewer） 視窗。 
+		<script type="text/javascript">
+		try {
+			var activex_help = "<h4>ActiveX 主控台</h4>";
+			activex_help += "點選 '<img src='/res/activex.png' " +
+				"width='15px' height='10px'/> 按鈕將會下載 activeX，安裝完" +
+				"activeX 之後， activeX Redirection 視窗將會被開啟。";
+			if (top.settings.console.activex.available) {
+				document.write (activex_help);
+			}
+		} catch (e) {
+		}
+		try {
+			var preview_help = "<h4>遠端主控台預覽框</h4>";
+			preview_help += "使用 java 應用程式來顯示遠端伺服器的主控台預覽。" +
+				"點選 'Refresh' 按鈕以重新載入主控台預覽。";
+			if (checkProjectCfg("WEB_PREVIEW")) {
+				document.write (preview_help);
+			}
+		} catch(e) {
+			alert (e);
+		}
+		</script>
+
+		<h4>感測器監測</h4>
+		顯示設備上所以的感測器資訊，例如狀態，名稱，值，和狀態圖示，以及 
+		連接到感測器頁面的連結。目前的讀數會由類比的感測器來顯示，但是事件狀態會由在讀數區的離散感測器來顯示。
+		<br/>
+		感測器有 3 種可能的狀態如下：
+		<ul>
+			<li>- 綠點表示正常狀態。</li>
+			<li>- 黃色感嘆號表示警告狀態。</li>
+			<li>- 紅色的X表示嚴重狀態。</li>
+		</ul>
+	
+		可使用放大鏡進一步了解感測器細部資訊
+
+		<h4>事件日誌</h4>
+		所有已發生的事件和已使用／可用的日誌空間將會以圖形表示。如果您點選圖表中的 
+		顏色矩形便可以只顯示特定事件的列表。 
+	</fieldset>
+	</div>
+</body>
+</html>

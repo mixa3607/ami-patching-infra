@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- 
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+ -->
+<html>
+<head>
+	<link href="../style/page_style.css" type="text/css" rel="stylesheet" />
+	<script src="../lib/include.js" type="text/javascript"></script>
+	<link href="../lib/listgrid.css" type="text/css" rel="stylesheet" />
+	<script src="../lib/listgrid.js" type="text/javascript"></script>
+	<script src="../lib/form.js" type="text/javascript"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_btnPlay");
+		elmt.setAttribute("value", eLang.getString("video_record", "VIDEO_RCRD_PLAY"));
+		var elmt = document.getElementById("_btnDownload");
+		elmt.setAttribute("value", eLang.getString("video_record", "VIDEO_RCRD_DWLD"));
+		var elmt = document.getElementById("_btnDelete");
+		elmt.setAttribute("value", eLang.getString("video_record", "VIDEO_RCRD_DELETE"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+	<h3>
+<script>document.writeln(eLang.getString("video_record", "VIDEO_RCRD_TITLE"));</script>
+</h3>
+	<table border="0" cellspacing="0" cellpadding="0" width="100%" id="_tblRVideo" class="hiddenRow"><tr>
+	<td width="85%"><label id="_lblRVideoDesc"></label></td>
+	<td class="alignRight">
+		<input type="button" id="_btnAdvSettings" value="Advanced Settings">
+	</td>
+	</tr></table>
+	<p>Below is a list of available recorded video files on the BMC. <label id="_lblPlayVideo">Select a video and click the &quot;
+<script>document.writeln(eLang.getString("video_record", "VIDEO_RCRD_PLAY"));</script>
+&quot; button to play the video.</label> Select a video and click the &quot;
+<script>document.writeln(eLang.getString("video_record", "VIDEO_RCRD_DWLD"));</script>
+&quot; button to download and save the video. Click the &quot;Delete&quot; button to delete the selected video.</p>
+	<div class="errorDisplayVideo" style="text-align:center" id="_divMountError"></div>
+	<label id="_lblHeader" class="alignRight"></label>
+	<br style="clear:both" /><br style="clear:both" />
+	<table cellspacing="0" cellpadding="0" border="0" id="_tblTab" class="hiddenRow">
+	<tbody>
+	<tr>
+		<td class="roundedtable_topleft"></td>
+		<td class="roundedtable_top"></td>
+		<td class="roundedtable_topright"></td>
+		<td class="roundedtable_topleft"></td>
+		<td class="roundedtable_top"></td>
+		<td class="roundedtable_topright"></td>
+	</tr>
+	<tr>
+		<td class="roundedtable_left"></td>
+		<td id="_tabAutoVideo" class="classicTab">Auto Recorded Video</td>
+		<td class="roundedtable_right"></td>
+		<td class="roundedtable_left"></td>
+		<td id="_tabSOLVideo" class="classicTab">SOL Recorded Video</td>
+		<td class="roundedtable_right"></td>
+	</tr>
+	</tbody></table>
+	<div id="_divTab">
+	<div id="_lgdVideo"></div>
+	<br>
+
+	<div class="btnTray">
+		<input type="button" id="_btnPlay" />
+		<input type="button" id="_btnDownload" />
+		<input type="button" id="_btnDelete" />
+	</div></div>
+</body>
+</html>

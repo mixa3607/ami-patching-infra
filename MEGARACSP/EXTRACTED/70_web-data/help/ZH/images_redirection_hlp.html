@@ -1,0 +1,239 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2011-2014        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>映象檔重定向說明</title>
+	<link href="../../style/help_style.css" type="text/css" rel="stylesheet" />
+	<script src="../../lib/common_fn.js" type="text/javascript"></script>
+	<script src="../../lib/ui.js" type="text/javascript" ></script>
+</head>
+<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+		<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+	<script type="text/javascript">
+	var opera = (navigator.userAgent.toLowerCase().indexOf("opera") != -1);
+	try {
+		var LMEDIA_SUPPORT = false;
+		var RMEDIA_SUPPORT = false;
+
+		var hlpAdvMediaCfg = "";
+		var hlpAdvMediaBtnCfg = "";
+		var hlpLMedia = "";
+		var hlpRMedia = "";
+		var hlpAdvLMediaCfg = "";
+		var hlpAdvRMediaCfg = "";
+		var hlpAddLMediaImage = "";
+		var hlpAddRMediaImage = "";
+
+		LMEDIA_SUPPORT = checkProjectCfg("LMEDIA");
+		RMEDIA_SUPPORT = checkProjectCfg("RMEDIA");
+
+		hlpAdvMediaCfg = "<div class='helpmainhead'>進階設定</div></h2>" +
+			"<div class='subSection'>" +
+			"此表格用來配置進階媒體設定。" +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>用途</legend>";
+
+		hlpAdvMediaBtnCfg = "<br>"+
+			"<h4>儲存</h4>" +
+			"點選 '儲存' 以儲存設定。" +
+			"<h4>取消</h4>" +
+			"點選 '取消' 以取消變更並回到上一頁。" +
+			"</fieldset>" +
+			"</div>";
+
+		if (LMEDIA_SUPPORT) {
+			hlpLMedia = "<div class='helpmainhead'>本地媒體</div></h2>" +
+				"<div class='subSection'>" +
+				"本表格顯示在 BMC 上所有的映像檔案，您可以在此新增或刪除映像檔案。<br>" +
+				"您可以為每種映像檔格式上傳數個映像檔案。<br>您必需在進階設定裡啟用" +
+				"本地媒體的支援才可以配置映像檔。<br>" +
+				"您的使用者等級必需是 Administrator 才可以新增或刪除映像檔。<br>" +
+				"<strong>提醒：</strong>未配置的插槽將以 \"~\". 標示。" +"<br>"+
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>";	
+				if (LMEDIA_SUPPORT && RMEDIA_SUPPORT) {
+					hlpLMedia += "<h4>進階設定</h4>" +
+						"點選此選項以配置本地媒體和遠端媒體的設定，包括 啟用／停用 本地媒體支援，" +
+						"啟用／停用 遠端媒體支援，伺服器位址，來源路徑，分享類型，使用者名稱，密" +
+						"碼和網域名稱。";
+				} else {
+					hlpLMedia += "<h4>進階設定</h4>" +
+						"點選此選項以 啟用／停用 本地媒體的支援。";
+				}
+			hlpLMedia += "<h4>開始／停止 重定向</h4>" +
+				"選擇一個已配置的映像檔並點選 '開始重定向' 以開始本地媒體的重定向。" +
+				"這是一個切換按鈕，如果映像檔已經成功重定向，點選 '停止重定向' " +
+				"以停止本地媒體的重定向。" +
+				"<h4>新增映象檔</h4>" +
+				"選擇一個插槽並點選 '新增映象檔' 以上傳一個新的映像檔到設備。" +
+				"或者，您也可以雙擊一個插槽以新增一個映像檔。" +
+				"<h4>刪除映象檔</h4>" +
+				"從插槽中選擇一個想要刪除的映像檔並點選 '刪除映象檔'." +
+				"</fieldset>" +
+				"</div>";
+
+			hlpAdvLMediaCfg = "<h4>本地媒體啟動</h4>" +
+				"請點選 'Enable' 來 啟動／停用 本地媒體的支援。";
+
+			hlpAddLMediaImage = "<div class='helpmainhead'>新增映象檔</div></h2>" +
+				"<div class='subSection'>" +
+				"此表格是用來新增一個新的映像檔到本地媒體。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>映象檔</h4>" +
+				"使用瀏覽按鈕來選擇映象檔。" +
+				"<ul><li>- 軟碟/硬碟 映像檔的格式應為 img 或 ima 。</li>" +
+				"<li>- CD/DVD 映像檔的格式應為 iso 或 nrg 。</li></ul>" +
+				"<h4>上傳</h4>" +
+				"點選 '上傳' 來上傳新的映像檔並回到上一頁。" +
+				"<h4>取消</h4>" +
+				"點選 '取消' 來取消變更並回到上一頁。" +
+				"</fieldset>" +
+				"</div>";
+		}
+
+		if (RMEDIA_SUPPORT) {
+			hlpRMedia = "<div class='helpmainhead'>遠端媒體</div></h2>" +
+				"<div class='subSection'>" +
+				"本表格顯示在 BMC 上已配置的映像檔案。您可以在此 開始／停止 重定向或刪除映像檔。<br>" +
+				"您可以為每種映像檔格式上傳數個映像檔案。<br>您必需在進階設定裡啟用" +
+				"本地媒體的支援才可以配置映像檔。<br>" +
+				"您的使用者等級必需是 Administrator 才可以 開始／停止 重定向或刪除映像檔。<br>" +
+				"<strong>提醒：</strong>未配置的插槽將以 \"~\". 標示。" +"<br>"+
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>";
+				if (LMEDIA_SUPPORT && RMEDIA_SUPPORT) {
+					hlpRMedia += "<h4>進階設定</h4>" +
+						"點選此選項以配置本地媒體和遠端媒體的設定，包括 啟用／停用 本地媒體支援，" +
+						"啟用／停用 遠端媒體支援，伺服器位址，來源路徑，分享類型，使用者名稱，密" +
+						"碼和網域名稱。";
+				} else {
+					hlpRMedia += "<h4>進階設定</h4>" +
+						"點選此選項以配置遠端媒體的設定，包括 啟用／停用 遠端媒體支援，伺服器位址" +
+						"，來源路徑，分享類型，使用者名稱，密碼和網域名稱。"; 
+				}
+			hlpRMedia += "<h4>開始／停止 重定向</h4>" +
+				"選擇一個已配置的映像檔並點選 '開始重定向' 以開始遠端媒體的重定向。" +
+				"這是一個切換按鈕，如果映像檔已經成功重定向，點選 '停止重定向' " +
+				"以停止遠端媒體的重定向。" +
+				"<h4>清除</h4>" +
+				"選擇想要清除的映像檔並點選 '清除映象檔'." +
+				"<br><strong>提醒：</strong> 在清除映象檔之前必需先停止重定向。" +
+				"</fieldset>" +
+				"</div>";
+
+			hlpAdvRMediaCfg = "<h4>遠端媒體啟動</h4>" +
+				"請點選 'Enable' 來 啟動／停用 遠端媒體的支援。以下的遠端媒體類別將會根據遠端媒體的 啟動／停止 而啟" +
+				"動／停止。<br>"+
+				"<strong>CD/DVD，</strong><strong>Floppy，</strong><strong>Harddisk，</strong><strong>All</strong>" +
+				"根據遠端媒體支援的類別，將會顯示相關的欄位。" +
+				"如果選擇 <strong>All</strong> 選項，所輸入的配置將適用所有的遠端媒體類別（CD，FD，HD）。如果選擇個別"+ 
+				"的遠端媒體類別將會顯示個別的配置欄位。"+
+				"使用者可以啟用相對的媒體類別來為不同的遠端媒體類別配置不同的設定。" +
+				"如果選擇 <strong>All</strong> 選項，所輸入的配置將會適用所有遠端媒體類別。"+
+				"<h4>伺服器位址</h4>" +
+				"儲存遠端媒體映像檔的伺服器位址。" +
+				"<h4>來源路徑</h4>" +
+				"儲存遠端媒體映像檔的路徑。" +
+				"<h4>分享類型</h4>" +
+				"遠端媒體伺服器的分享類型為 NFS 或是 Samba(CIFS)。" +
+				"<h4>使用者名稱，密碼和網域名稱</h4>" +
+				"如果分享類型為 Samba(CIFS)，請輸入以上資訊來對伺服器認證。<br>" +
+				"<strong>提醒：</strong> 網域名稱欄位為可選欄位。";
+
+			hlpAddRMediaImage = "<div class='helpmainhead'>新增映象檔</div></h2>" +
+				"<div class='subSection'>" +
+				"此表格是用來新增一個新的映像檔到遠端媒體。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>映象檔類型</h4>" +
+				"顯示上傳的映像檔類型（唯讀）。" +
+				"<h4>映象檔檔</h4>" +
+				"遠端媒體映像檔的檔案名稱。" +
+				"<ul><li>- 軟碟/硬碟 映像檔的格式應為 img 。</li>" +
+				"<li>- CD/DVD 映像檔的格式應為 iso 。</li>" +
+				"<li>- 不同的映像檔類型不允許使用相同的檔名。" +
+				"</li></ul>" +
+				"<h4>新增</h4>" +
+				"點選 '新增' 以儲存新映像檔並回到上一頁。" +
+				"<h4>取消</h4>" +
+				"點選 '取消' 以取消變更並回到上一頁。" +
+				"list. " +
+				"</fieldset>" +
+				"</div>";
+		}
+
+		var frameName = top.frames["mainFrame"].pageFrame;
+		var formName = frameName.document.getElementsByTagName("FORM");
+		var helpContent;
+		if (formName.length) {
+			if ("advancedMediaFrm" == formName[0].getAttribute("id")) {
+				helpContent = hlpAdvMediaCfg;
+				if (LMEDIA_SUPPORT) {
+					helpContent += hlpAdvLMediaCfg;
+				}
+				if (RMEDIA_SUPPORT) {
+					helpContent += hlpAdvRMediaCfg;
+				}
+				helpContent += hlpAdvMediaBtnCfg;
+			} else if ("addLMediaImageForm" == formName[0].getAttribute("id")) {
+				helpContent = hlpAddLMediaImage;
+			} else if ("addRMediaImageForm" == formName[0].getAttribute("id")) {
+				helpContent = hlpAddRMediaImage;
+			}
+		} else {
+			if (LMEDIA_SUPPORT && RMEDIA_SUPPORT) {
+				if ((frameName.document.getElementById("_tabLMedia").style. 
+					fontWeight == "bold") || (opera && frameName.document.
+					getElementById("_tabLMedia").style.fontWeight == 700)) {
+					helpContent = hlpLMedia;
+				} else if ((frameName.document.getElementById("_tabRMedia").style. 
+					fontWeight == "bold") || (opera && frameName.document.
+					getElementById("_tabRMedia").style.fontWeight == 700)) {
+					helpContent = hlpRMedia;
+				}
+			} else if (LMEDIA_SUPPORT) {
+				helpContent = hlpLMedia;
+			} else if (RMEDIA_SUPPORT) {
+				helpContent = hlpRMedia;
+			}
+		}
+		document.write(helpContent);
+	} catch(e) {
+		alert (e);
+	}
+	</script>
+</body>
+</html>

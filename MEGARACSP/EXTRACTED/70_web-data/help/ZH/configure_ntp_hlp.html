@@ -1,0 +1,88 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>NTP 說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+	</head>
+	<body>
+	<h2><div class="floatRight"><a href="javascript://" class="closeBtn" 
+		onclick="top.closeHelp();">X</a></div>
+	<div class="helpmainhead">NTP</div></h2>
+	<div class="subSection">
+		此頁面會顯示設備現在的時間和日期並且可以用來調整設備上的時間和日期，
+		或者您也可以使用 NTP(Network Time Protocol) 伺服器來調整設備上的時間
+		和日期。 
+		<br/><br/>
+		<fieldset>
+		<legend>用途</legend>
+		<h4>日期</h4>
+		指定設備現在的日期。
+		<h4>時間</h4>
+		指定設備現在的時間。
+		<br>
+		<strong>提醒：</strong> 因為 2038 年問題的存在， 可接受的日期範圍為： 
+		01-01-2005 到 01-18-2038。
+		<h4>主要 NTP 伺服器 & 次要 NTP 伺服器</h4>
+		指定設備的 NTP 伺服器。
+		NTP 伺服器欄位支援以下格式：
+		<ul>
+			<li>- IP 位址（IPv4 或 IPv6 格式）。
+			<li>- 完整網域名稱 FQDN（Fully qualified domain name）格式。
+			<li>- 完整網域名稱為 1 ～ 128 個字母數字組成。
+		</ul>
+		<strong>提醒：</strong> 次要 NTP 伺服器為可選欄位。
+		<br>如果主要 NTP 伺服器不能正常工作，將會使用次要 NTP 伺服器。 
+		<script type="text/javascript">
+		if (!checkProjectCfg("TIMEZONE_SUPPORT")) {
+			document.write("<h4>時區</h4>" +
+				"時區列表中包含了 NTP 伺服器的 UTC 偏移值，它可以被用於顯示精" +
+				"確的本地時間。<br>");
+			document.write("<strong>提醒：</strong> 在使用 UTC 偏移值時，" +
+				"請注意日光節約時間的調整。");
+		} else {
+			document.write("<h4>時區</h4>" +
+				"時區列表中包含了 UTC 隨著位置的偏移值，或著 NTP 伺服器" +
+				"的 UTC 偏移值， 它可以被用於顯示精確的本地時間。");
+		}
+		</script>
+		<h4>自動同步</h4>
+		點選此選項來自動與 NTP 伺服器同步日期 & 時間。 
+		<h4>刷新</h4>
+		點選 '刷新' 以重新載入現在的日期 & 時間。
+		<h4>儲存</h4>
+		點選 '儲存' 以儲存變更。
+		<h4>重置</h4>
+		點選 '重置' 以重置變更。
+		<br>
+		</fieldset>
+	</div>
+	</body>
+</html>

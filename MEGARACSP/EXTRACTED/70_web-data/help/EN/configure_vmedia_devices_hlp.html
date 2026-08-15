@@ -1,0 +1,81 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>configure_vmedia_devices help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div>
+	<div class="helpmainhead">Virtual Media Devices</div></h2>
+	<div class="subSection">
+		Use this page to configure Virtual Media device settings.
+		<br/><br/>
+		<fieldset>
+			<legend>Actions</legend>
+			<h4>Floppy devices</h4>
+			Select the number of floppy devices that are to be supported 
+			for Virtual Media redirection.
+			<h4>CD/DVD devices</h4>
+			Select the number of CD/DVD devices that are to be supported 
+			for Virtual Media redirection.
+			<h4>Hard disk devices</h4>
+			Select the number of Hard disk devices to be supported 
+			for Virtual Media redirection.
+			<script type="text/javascript">
+			SINGLE_PORT_APP = checkProjectCfg("SINGLE_PORT_APP");
+			RUNTIME_SINGLEPORT = checkProjectCfg("RUNTIME_SINGLEPORT_SUPPORT");
+			if(checkProjectCfg("VMEDIA_MAX_COUNT_FOR_KVM")){
+				document.write("<h4>Remote KVM Floppy devices</h4> " + "Select the number of floppy devices that are to be supported for KVM Virtual Media redirection.");
+				document.write("<h4>Remote KVM CD/DVD devices</h4> " + "Select the number of CD/DVD devices that are to be supported for KVM Virtual Media redirection.");
+				document.write("<h4>Remote KVM Hard disk devices</h4> " + "Select the number of Hard disk devices to be supported for KVM Virtual Media redirection.");
+			}
+			if (!SINGLE_PORT_APP || (SINGLE_PORT_APP && RUNTIME_SINGLEPORT)) {
+				document.write("<h4>Media Encryption</h4> " +
+			"Enable/Disable encryption on Media data for the next " +
+			"redirection session.");
+			}
+			if (checkProjectCfg("SD_SERVER_SUPPORT")) {
+				document.write("<h4>SD Media support</h4> " + "Check this option to enable SD Media support in BMC.");
+			}
+			if (checkProjectCfg("POWER_CONSUMPTION")) {
+				document.write("<h4>Power Save Mode</h4> " + "Enable/Disable virtual USB devices visibility in the host.");
+			}
+			</script>
+			<h4>Save</h4>
+			Click 'Save' to save the configured settings.
+			<h4>Reset</h4>
+			Click 'Reset' to reset the previously-saved values.
+		</fieldset>
+	</div>
+</body>
+</html>

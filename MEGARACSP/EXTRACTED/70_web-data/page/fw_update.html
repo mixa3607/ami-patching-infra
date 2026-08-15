@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- 
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+ -->
+<html>
+<head>
+	<link href="../style/page_style.css" type="text/css" rel="stylesheet" />
+	<script src="../lib/include.js" type="text/javascript"></script>
+	<script src="../lib/form.js" type="text/javascript"></script>
+	<link href="../lib/listgrid.css" type="text/css" rel="stylesheet" />
+	<script src="../lib/listgrid.js" type="text/javascript"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_btnKeyUpload");
+		elmt.setAttribute("value", eLang.getString("fw_update", "FW_UPDATE_SIGNIMG_KEY"));
+		var elmt = document.getElementById("_btnPrsrvCfg");
+		elmt.setAttribute("value", eLang.getString("fw_update", "FW_UPDATE_PRSRV_CFG"));
+		var elmt = document.getElementById("_btnFWUpdate");
+		elmt.setAttribute("value", eLang.getString("fw_update", "FW_UPDATE_UPDATE"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+
+<body oncontextmenu="return false;">
+	<h3>
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_TITLE"));</script>
+</h3>
+	Upgrade firmware of the device.<label id="_lblFlashingType">Press '
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_UPDATE"));</script>
+' to put the device in update mode.</label>
+	<table cellspacing="0" cellpadding="0" width="100%">
+	<tr><td id="_rowProtoCfg" width="50%" height="100%" class="hiddenRow">
+		<table cellspacing="0" cellpadding="0" height="100%">
+		<tr>
+			<td class="roundedtable_topleft"></td>
+			<td class="roundedtable_top"></td>
+			<td class="roundedtable_topright"></td>
+		</tr>
+		<tr>
+			<td class="roundedtable_left"></td>
+			<td valign="top"><div> The protocol information to be used for firmware image transfer during this update is as follows. To configure, choose 'Protocol Configuration' under 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_TITLE"));</script>
+ menu. </div>
+				<table id="_tblFWCfg" cellspacing="5" border="0">
+				<tbody><tr>
+					<td><strong>
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_PROTOCOL"));</script>
+</strong></td>
+					<td><label id="_lblProtoType"></label></td>
+				</tr></tbody></table>
+			</td>
+			<td class="roundedtable_right"></td>
+		</tr>
+		<tr>
+			<td class="roundedtable_btmleft"></td>
+			<td class="roundedtable_btm"></td>
+			<td class="roundedtable_btmright"></td>
+		</tr>
+		</table>
+	</td><td id="_rowDualCfg" width="50%" height="100%" class="hiddenRow">
+		<table cellspacing="0" cellpadding="0" height="100%">
+		<tr>
+			<td class="roundedtable_topleft"></td>
+			<td class="roundedtable_top"></td>
+			<td class="roundedtable_topright"></td>
+		</tr>
+		<tr>
+			<td class="roundedtable_left"></td>
+			<td><div style="padding:0 0 5px"> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_DUAL_DSEC"));</script>
+ </div>
+				<table cellspacing="5" border="0"><tbody>
+					<tr>
+						<td><strong>
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_DUAL_ACTIVE"));</script>
+</strong></td>
+						<td><input type="text" id="_txtActiveImg" class="classicTxtBox" readonly/></td>
+					</tr>
+					<tr>
+						<td><strong>
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_DUAL_FLASH"));</script>
+</strong></td>
+						<td><select id="_lstFlashImg" class="bigclassicTxtBox">
+						</select></td>
+					</tr>
+					<tr><td colspan="2">
+						<input type="checkbox" id="_chkRebootBMC" />
+						<label for="_chkRebootBMC">
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_DUAL_REBOOT"));</script>
+</label>
+					</td></tr>
+				</tbody></table>
+			</td>
+			<td class="roundedtable_right"></td>
+		</tr>
+		<tr>
+			<td class="roundedtable_btmleft"></td>
+			<td class="roundedtable_btm"></td>
+			<td class="roundedtable_btmright"></td>
+		</tr>
+		</table>
+	</td></tr>
+	<tr>
+	<td id="_rowHPM" width="50%" height="100%" class="hiddenRow">
+	<table cellspacing="0" cellpadding="0" width="73%">
+		<tr>
+			<td class="roundedtable_topleft"></td>
+			<td class="roundedtable_top"></td>
+			<td class="roundedtable_topright"></td>
+		</tr>
+		
+		<tr>
+			<td class="roundedtable_left"></td>
+			<td valign="top">
+				<table id="_tblHPMFWUpdate" cellspacing="5" border="0" width="100%">
+				<tbody>
+				<tr>
+				<td>
+				<input type="radio" name="_rdoFirmware" value="1" id="_rdoHPM">HPM
+				</td>
+				<td><input type="radio" name="_rdoFirmware" value="0" id="_rdoAMI">AMI</td>
+				</tr>
+				<tr id="_trHPMFWUpdateChk" class="hiddenRow">
+					<td style="padding-left: 20px;" colspan="2"><input type="checkbox" name="_chkBMCFirmwareUpdate" id="_chkBMCFirmwareUpdate">BMC 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_TITLE"));</script>
+</td>
+				</tr>
+				<tr>
+				<td align="right" colspan="2">
+				<input type="button" id="_btnContinue" value="Continue" />
+				</td>
+				</tr>
+				</tbody></table>
+			</td>
+			<td class="roundedtable_right"></td>
+		</tr>
+		<tr>
+			<td class="roundedtable_btmleft"></td>
+			<td class="roundedtable_btm"></td>
+			<td class="roundedtable_btmright"></td>
+		</tr>
+	</table>
+	</td>
+	</tr>
+	</table>
+	
+	<div style="padding:10px 5px">
+		<strong>
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_WARNING"));</script>
+</strong>Please note that after entering the update 
+		mode, the widgets, other web pages and services will not work. All the 
+		open widgets will be automatically closed. If the upgradation is 
+		cancelled in the middle of the wizard, the device will be reset.<br><br>
+
+		<table cellspacing="0" cellpadding="0" border="0" width="97%">
+		<tr><td id="_wizard" class="hiddenRow" width="500" valign="top">
+			<ul class="wizard">
+			<li id="_clientRequests"><img src="../res/prg_success.png" /> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_DESC2"));</script>
+</li>
+				<li id="_parsingImage" class="hiddenRow"><img src="../res/not_started.png" /> 
+			Browse and Parse HPM firmware image. <span id="_spnUploadStatus"></span>
+			</li>
+			<li id="_prepareDevice"><img src="../res/not_started.png" /> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_DESC3"));</script>
+</li>
+			<li id="_uploadImage"><img src="../res/not_started.png" /> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_UPLOAD"));</script>
+ <span id="_spnUploadStatus"></span>
+			</li>	
+			<ul id="_ulUploadHPM" class="hiddenRow">
+			<li id="_uploadBIOSImage" class="hiddenRow"><img src="../res/not_started.png" /> 
+			BIOS <span id="_spnBIOSUploadPercentage"></span>
+			</li>
+			<li id="_uploadBOOTAPPImage" class="hiddenRow"><img src="../res/not_started.png" /> 
+			BOOT and APP <span id="_spnBOOTAPPUploadPercentage"></span>
+			</li>
+			<li id="_uploadBOOTImage" class="hiddenRow"><img src="../res/not_started.png" /> 
+		 	BOOT <span id="_spnBOOTUploadPercentage"></span>
+			</li>
+			<li id="_uploadAPPImage" class="hiddenRow"><img src="../res/not_started.png" /> 
+			APP <span id="_spnAPPUploadPercentage"></span>
+			</li>
+			</ul>
+			<li id="_verifyImage"><img src="../res/not_started.png" /> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_VERIFY"));</script>
+ </li>
+				<li id="_flashImage"><img src="../res/not_started.png" /> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_FLASH"));</script>
+ <span id="_percentageFlashed"></span>
+				</li>
+				<ul id="_ulFlashHPM" class="hiddenRow">
+				<li id="_flashBIOSImage" class="hiddenRow"><img src="../res/not_started.png" /> 
+				BIOS <span id="_spnFlashBIOSPercentage"></span>
+				</li>
+				<li id="_flashBOOTAPPImage" class="hiddenRow"><img src="../res/not_started.png" /> 
+					BOOT and APP<span id="_spnFlashBOOTAPPPercentage"></span>
+				</li>
+				<li id="_flashBOOTImage" class="hiddenRow"><img src="../res/not_started.png" /> 
+					BOOT
+				</li>
+				<li id="_flashAPPImage" class="hiddenRow"><img src="../res/not_started.png" /> 
+				APP 
+				</li>
+				</ul>
+			<li id="_resetDevice"><img src="../res/not_started.png" /> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_RESET"));</script>
+</li>
+			</ul>
+		</td>
+		<td id="_section" class="section" valign="top"></td></tr>
+		</table>
+		<iframe name="hiddenFrame" class="hide"></iframe>
+	</div>
+
+	<div id="_divPrsrvAll" style="padding:5px 0px">
+	<input type="checkbox" id="_chkPrsrvAll">&nbsp;
+	<label for="_chkPrsrvAll">
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_PRSRV_ALL"));</script>
+ </label> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_PRSRV_ALL_DESC"));</script>
+ <label id="_lblPrsrvAllDesc"></label></div>
+
+	<div id="_divPrsrvCfg">All configuration items below will be preserved as 
+		default during the restore configuration operation.<label id="_lblhpmPreserveDesc">Click &quot;
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_PRSRV_CFG"));</script>
+&quot; to modify the Preserve status settings.</label> 
+		<br><br>
+		<div id="_lgdPrsrvCfg"></div>
+	</div>
+
+	<br><br>
+	<div id="_btnTray" class="btnTray">
+		<input type="button" id="_btnKeyUpload" />
+		<input type="button" id="_btnPrsrvCfg" />
+		<input type="button" id="_btnFWUpdate" />
+	</div>
+</body>
+</html>

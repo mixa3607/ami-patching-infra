@@ -1,0 +1,106 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+		<title>網路說明</title>
+		<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+		<script language="javascript" src="../../lib/common_fn.js"></script>
+		<script language="javascript" src="../../lib/ui.js"></script>
+	</head>
+	<body>
+	<h2><div class="floatRight"><a href="javascript://" class="closeBtn" 
+		onclick="top.closeHelp();">X</a></div>
+	<div class="helpmainhead">網路</div></h2>
+	<div class="subSection">
+	此頁面用來對可使用的 LAN Channel 做配置。
+	<br/><br/>
+	<fieldset>
+	<legend>用途</legend>
+	<h4>LAN 介面</h4>
+	選擇想要設定的 LAN 介面。
+	<h4>LAN 設定</h4>
+	點選此選項來對所選擇的 LAN 介面啟用支援。
+	<h4>MAC 位址</h4>
+	此欄位顯示所選擇的 LAN 介面的 MAC 位址（唯讀）。
+	<h4>IPv4 配置</h4>
+	列出了 IPv4 的配置設置。
+	<h4>IPv4 設定</h4>
+	點選此選項來對所選擇的 LAN 介面啟用 IPv4 支援。
+	<h4>自動取得 IP 位址</h4>
+	啟用 '使用 DHCP' 以使用動態主機設定協定（DHCP）來動態配置 IPv4 位址。 
+	<h4>IPv4 位址，子網路遮罩，預設閘道</h4>
+	如果未啟用動態主機設定協定（DHCP），請為所選擇的介面配置靜態 IPv4 位址，
+	子網路遮罩和預設閘道。 
+	<ul>
+		<li>- IP 位址是由 4 組數字所組成並以逗點分開，例如： 
+			”xxx.xxx.xxx.xxx“。</li>
+		<li>- 每一組數字的範圍由 0 ～ 255。</li>
+		<li>- 第一組數字不能為 0。</li>
+	</ul>
+
+	<h4>IPv6 配置</h4>
+	列出了 IPv6 的配置設置。
+	<h4>IPv6 設定</h4>
+	點選此選項來對所選擇的 LAN 介面啟用 IPv6 支援。
+	<h4>自動取得 IP 位址</h4>
+	啟用 '使用 DHCP' 以使用動態主機設定協定（DHCPv6）來動態配置 IPv6 位址。 
+	<h4>IPv6 位址</h4>
+	對所選擇的網路介面配置靜態 IPv6 位址。
+	<h4>子網路前綴長度</h4>
+	指定 IPv6 的子網路前綴長度。
+	<ul><li>- 子網路前綴長度範圍由 0 ～ 128。</li></ul>
+	<script type="text/javascript">
+	if(!checkProjectCfg("IPV6_COMPLIANCE")){
+	document.write("<h4>預設閘道</h4>");
+	document.write("指定 IPv6 的預設閘道。");
+	}
+	</script>
+	<h4>VLAN 配置</h4>
+	列出了 VLAN 的配置設置。
+	<h4>VLAN 設定</h4>
+	點選此選項來對所選擇的 LAN 介面啟用 VLAN 支援。
+	<h4>VLAN ID</h4>
+	指定 VLAN 的 ID。
+	<ul><li>- VLAN ID 範圍由 2 ～ 4094。</li></ul>
+	<strong>提醒：</strong> 在重置 VLAN 配置之前，VLAN ID 並不會更改。
+	<br>
+	VLAN ID 0, 1, 4095 皆為保留值。
+	<h4>VLAN 優先權</h4>
+	指定 VLAN 的優先權。
+	<ul><li>- 優先權範圍由 0 ～ 7。</li></ul>
+	<strong>提醒：</strong> 7 是最高的優先權。
+
+	<h4>儲存</h4>
+	點選 '儲存' 以儲存變更。
+	系統將會提示您登出目前的 UI，並且在新的 IP 位址重新登入。 
+	<h4>重置</h4>
+	點選 '重置' 以重置所有變更。
+	</fieldset>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,123 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2012        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+	<head>
+ 	<title>configure_raid help</title>
+ 	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+		<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+<script type="text/javascript">
+	var frameName = top.frames["mainFrame"].pageFrame.document.getElementsByTagName("FORM");
+	var titleContent = "", bodyContent = "", buttonContent = "";
+	var helpContent;
+	
+	//if (frameName.length) {
+		if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_physicalInfo").style.fontWeight == "bold") && 
+			(top.frames["mainFrame"].pageFrame.document.getElementById("tblPhysicalPopup") != null)) {
+			helpContent = "<div class='helpmainhead'>Advance Properties</div></h2>" +
+			"<div class='subSection'>" +
+			"This page displays Advance Properties details about the Physical Device Information of RAID Controller like Vendor Id," +
+			"Product Id,Serial Number,Power State,Drive Presence etc.." +
+			"</div>";
+		} else if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_virtualInfo").style.fontWeight == "bold") && 
+			(top.frames["mainFrame"].pageFrame.document.getElementById
+			("tblLogicalPopup") != null)) {
+			helpContent = "<div class='helpmainhead'>View</div></h2>" +
+				"<div class='subSection'>" +
+				"This page displays the Physical Device information details of selected Logical Device." +
+				"The Physical Device Information of selected Logical Device such as Device Id,Media Type,State,Slot etc.. can be viewed." +
+				"</div>";
+		} else 	{
+		helpContent = "<div class='helpmainhead'>RAID Management</div></h2>" +
+			"<div class='subSection'>" +
+			"This page displays information about RAID Controller,Storage Summary,Physical Device,Logical Device,Battery Backup Unit and " +
+			"Event Log." +
+			"<br><br><fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>RAID Controller</h4>" +
+			"On selecting any particular RAID Controller,the corresponding RAID Controller information will be displayed." +
+			"It displays detailed information like Serial Number,Package Version,Expander Temp,Health Status etc.. of the RAID Controller." +
+			"<h4>Event Logs</h4>" +
+			"A graphical representation of all events incurred by the RAID Controller"+ 
+			"and %occupied/available space in logs. If you click on the" + 
+			"color-coded rectangle in the Legend for the chart, you can view a list" +
+			"of those specific events only."+
+			"<h4>Storage Summary</h4>" +
+			"This field displays the storage information such as Physical,Logical and HotSpare count details of the RAID Controller." +
+			"<h4>Physical Device Information</h4>" +
+			"This field displays the Physical Device Information such as Device Id,Media Type,State,Slot,Speed,LinkSpeed,Size(GB) and Temp(°C).";
+			
+			if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_physicalInfo").style.fontWeight == "bold")) {
+				helpContent += "<h4>Advanced Properties</h4>" +
+			"Click this option to view more details of Physical Device information like Vendor Id,Product Id etc.." ;
+			}
+			
+			helpContent+= "<h4>Logical Device Information</h4>" +
+			"This field display the  Logical Device Information such as LD Name,State,Read/Write Policies,No. of Physical etc.. of the RAID Controller."
+			
+			if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_virtualInfo").style.fontWeight == "bold")) {
+				helpContent += "<h4>Advanced Properties</h4>" +
+			"Click this option to view more details of Logical Device information like Stripe Size,BGI,SSD Caching,Progress,Bad Blocks Table,Size." ;
+			}
+			
+			helpContent += "<h4>BBU Information</h4>" +
+			"This field displays Type,Status,Temp,Voltage and Current details about the Battery Backup Unit of RAID Controller." +
+			"<h4>Event Log</h4>" +
+			"Event Log displays the list of events incurred by RAID Controller on this device." + 
+			"Double click on a record to see the details of that entry."+ 
+			"You can also sort the list of entries by clicking on any of the column headers." 
+			
+			if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_raidEvents").style.fontWeight == "bold")) {
+				helpContent += "<div class='subSection'>"+
+			 "<br/><fieldset>" +
+			"<legend>Actions</legend> You can use the Event type filter options to view those specific events logged in the device."+
+			"<h4>BMC Time zone</h4> Check this option to display the event log entries logged with the BMC Time zone value."+
+			"<h4>Client Time zone</h4> Check this option to display the event log entries logged with the Client (user's) Time zone value."+
+			"<h4>UTC Offset</h4> Displays the current UTC Offset value based on which event Time Stamps will be updated.</br>" +
+			"Navigational arrows can be used to selectively access different pages of the Event Log."+
+			"<h4>Clear All Event Logs</h4> Clear All Event Logs option will delete all existing records for all selected RAID Controller."+
+			"</fieldset></div>";
+			}
+			
+		helpContent += "</div>";
+
+	}
+	//}
+	
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

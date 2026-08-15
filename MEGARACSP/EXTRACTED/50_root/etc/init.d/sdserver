@@ -1,0 +1,82 @@
+#!/bin/sh
+#
+# /etc/init.d/sdserver: start/stop SD Server
+#
+# chkconfig: 2345 10 90
+#Runlevel : 3 = S35
+# Restart the service on warm reboot
+#Runlevel : 9 = K35
+#Runlevel : 9 = S35
+
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+
+SDSERVER_PATH=/usr/local/bin/sdserver
+ACTION=$1
+
+
+test -f /usr/local/bin/sdserver || exit 0
+test -f /var/tmp/licstat/vmapp_nolicense && ACTION=stop
+case "$ACTION" in
+start)
+	echo -n "Starting SD Server"
+	start-stop-daemon --start --quiet --exec $SDSERVER_PATH "$2"
+	if [ $? != 0 ]
+	then
+		exit 1
+	fi
+	echo "."
+	;;
+stop)
+	echo -n "Stopping SD Server"
+	start-stop-daemon --stop --quiet --exec $SDSERVER_PATH --signal INT
+	if [ $? != 0 ]
+	then
+		exit 1
+	fi
+	echo "."
+	;;
+restart)
+	echo -n "Restarting SD Redirection Server: sdserver"
+	start-stop-daemon --stop --quiet --retry 5 --oknodo --exec $SDSERVER_PATH --signal INT
+	start-stop-daemon --start --quiet --exec $SDSERVER_PATH "$2"
+	echo "."
+	;;
+
+format)
+	if [ "$SIZE" == "" ]
+	then
+		echo "SDSERVER : Please specify size"
+		exit 0
+	fi
+
+	echo -n "SDSERVER : Format SD DISK to FAT"
+	mkdosfs -s 2 -S 512 $DEV_NODE $SIZE
+	if [ $? != 0 ]
+	then
+		exit 1
+	fi
+	echo "."
+	;;
+free)
+	echo -n "SDSERVER : Free SD DISK"
+	freeramdisk $DEV_NODE
+	echo "."
+	;;
+mount)
+	echo -n "SDSERVER : Mount SD DISK with type FAT"
+	mkdir -p $MOUNT_DIR
+   	mount -t vfat $DEV_NODE $MOUNT_DIR
+	echo "."
+	;;
+umount)
+	echo -n "SDSERVER : Unmount SD DISK"
+	umount -l $DEV_NODE
+	rm -rf $MOUNT_DIR
+	echo "."
+	;;
+*)
+	echo "Usage: /etc/init.d/sdserver {start | stop | format | mount | umount | free}"
+	exit 1
+esac
+
+exit 0

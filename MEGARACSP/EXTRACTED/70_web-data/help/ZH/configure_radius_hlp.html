@@ -1,0 +1,127 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>RADIUS 說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+	X</a></div>
+<script type="text/javascript">
+var helpContent = "";
+var frameName = top.frames['mainFrame'].pageFrame;
+frameName = frameName.document.getElementsByTagName("FORM");
+if (frameName.length) {
+	if ("advancedRADIUSPrivFrm" == frameName[0].getAttribute('id')) {
+		helpContent = "<div class='helpmainhead'>RADIUS 授權" +
+			"</div></h2>" +
+			"<div class='subSection'>" +
+			"使用此表格來配置進階 RADIUS 授權設定" +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>用途</legend>" +
+			"<h4>RADIUS 用戶授權</h4>" +
+			"為了用戶授權，您必需在伺服器端配置 RADIUS 用戶的供應商特定屬性。" +
+			"<h4>在伺服器端的供應商特定屬性</h4>" +
+			"您必需在伺服器端設定 VSA。" +
+			"<ul>" +
+			"<li>- 範例:1</li> " +
+			"<li>testadmin Auth-Type :=PAP,Cleartext-Password:='admin'</li>" +
+			"<li>Auth-Type :=PAP, Vendor-Specific='H=4'</li>" +
+			"</ul>" +
+			"<ul>" +
+			"<li>- 範例:2</li>" +
+			"<li>testoperator Auth-Type := PAP,Cleartext-Password := 'operator'</li>" +
+			"<li>Auth-Type :=PAP, Vendor-Specific='H=3'<li>" +
+			"</ul>" +
+			"如果您在伺服器端改變了供應商特定屬性，您應該在此頁變更相同的值。<br/>" +
+			"<strong>提醒：</strong> " +
+			"<ul>" +
+			"<li>此欄位不允許超過 127 個字元。</li>" +
+			"<li>不允許使用 '#' 符號。</li>" +
+			"</ul>" +
+			"<h4>儲存</h4>" +
+			"點選 '儲存' 以儲存變更。" +
+			"<h4>取消</h4>" +
+			"點選 '取消' 以取消變更。" +
+			"</div>";
+	}
+} else {
+	helpContent ="<div class='helpmainhead'>RADIUS" +
+		"</div></h2>" +
+		"<div class='subSection'>" +
+		"請點選RADIUS 身份驗證來 啟用／停用 RADIUS。" +
+		"<br/>" +
+		"<strong>提醒：</strong>支援通用 FreeRADIUS。" +
+		"<br/><br/>" +
+		"<fieldset>" +
+			"<legend>用途</legend>" +
+			"<h4>RADIUS 身份驗證</h4>" +
+			"點選 'Enable' 以啟用／停用 RADIUS 身份驗證。" +
+			"<h4>PORT</h4>" +
+            "指定 RADIUS 的埠號。" +
+			"<ul>" +
+				"<li>- 預設的埠號為 1812。</li>" +
+				"<li>- 埠號的範圍從 1 ～ 65535。</li>" +
+			"</ul>" +
+			"<h4>伺服器位址</h4>" +
+			"輸入 RADIUS 伺服器的位址。" +
+			"伺服器位址支援以下格式：" +
+			"<ul>"+
+				"<li>- IP 位址（IPv4 或 IPv6 格或）。</li>" +
+				"<li>- 完整網域名稱（Fully qualified domain name）格式。</li>" +
+			"</ul>" +
+			"<h4>密碼</h4>" +
+			"輸入 RADIUS 伺服器的驗證密碼。" +
+			"<ul>" +
+				"<li>- 密碼至少需要 4 個字元長。</li>" +
+				"<li>- 不允許使用空白鍵。</li>" +
+			"</ul>" +
+			"<strong>提醒：</strong> 此欄位不允許超過 31 個字元。";
+		if (checkProjectCfg("EXTENDED_PRIV")) {
+			 helpContent += "<h4>擴展權限</h4>" +
+				"此欄位是用來給予使用者 KVM 和 VMedia 的權限。";
+		}
+	helpContent += "<h4>進階設定</h4>" +
+		"點選 '進階設定' 以設定 Radius 的用戶授權。" + 
+		"<h4>儲存</h4>" +
+		"點選 '儲存' 以儲存變更。" +
+		"<h4>重置</h4>" +
+		"點選 '重置' 以重置變更。" +
+		"<br>" +
+		"</fieldset>" +
+		"</div>" ;
+	}
+document.write(helpContent);
+</script>
+</body>
+</html>

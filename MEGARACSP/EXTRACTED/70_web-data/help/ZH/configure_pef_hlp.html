@@ -1,0 +1,302 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2012        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>PEF 說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+		<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+	<script type="text/javascript">
+	var frameName = top.frames["mainFrame"].pageFrame.document.getElementsByTagName("FORM");
+	var titleContent = "", bodyContent = "", buttonContent = "";
+	var helpContent;
+	if (frameName.length) {
+		if (frameName[0].getAttribute("id").indexOf("EventFilterForm") != -1) {
+			bodyContent = "<h4>篩選器配置</h4>" +
+				"點選 'Enable' 選項以啟用 PEF 設定。" +
+				"<h4>事件嚴重程度</h4>" +
+				"從下拉式選單中選擇一種事件嚴重程度." +
+
+				"<h4><br>篩選器動作配置</h4>" +
+				"<h4>事件篩選器動作</h4>" +
+				"此欄位為一個強制的欄位並且預設為啟用。此欄位會啟用 PEF 的警報" +
+				"（唯讀）。" +
+				"<h4>電源操作</h4>" +
+				"從下拉式選單中選擇一種電源操作，如關閉電源，電源重啟或電源週期。" +
+				"<h4>警報策略編號</h4>" +
+				"從下拉式選單中選擇一種已配置的警報策略編號。" +
+				"<br><strong>提醒：</strong> " +
+				"警報策略可以從 配置－》PEF－》警報策略 做配置。" +
+
+				"<h4><br>Generator ID 配置</h4>" +
+				"<h4>Generator ID 資料</h4>" +
+				"點選此選項讓 Generator ID 為 raw data。" +
+				"<h4>Generator ID 1</h4>" +
+				"輸入 Generator ID1 值。" +
+				"<h4>Generator ID 2</h4>" +
+				"輸入 Generator ID2 值。" +
+				"<br><strong>提醒：</strong> " +
+				"在 RAW data 的欄位，請指定十六進制值的前綴符號'0x'." +
+				"<h4>事件產生器</h4>" +
+				"如果事件是由 IPMB 所産生的，請選擇事件產生器為 Slave，" +
+				"如果事件是由系統軟體所産生的，請選擇 Software。" +
+				"<h4>Slave 位址/Software ID</h4>" +
+				"指定相對的 I<sup>2</sup>C Slave 位址或系統軟體 ID。" +
+				"<h4>Channel 編號</h4>" +
+				"選擇事件訊息會從那一個 Channel 收到。如果事件訊息會從系統介面" +
+				"，主 IPMB 或由 BMC 內部産生，請選擇 '0'。" +
+				"<h4>IPMB Device LUN</h4>" +
+				"如果事件是由 IPMB 所産生，請選擇相對的 IPMB device LUN。" +
+
+				"<h4><br>感應器配置</h4>" +
+				"<h4>感應器類型</h4>" +
+				"請選擇會觸發事件篩選器的感應器類型。" +
+				"<h4>感應器名稱</h4>" +
+				"請從下拉式選單選擇會觸發事件篩選器的感應器。" +
+				"<h4>事件選項</h4>" +
+				"請選擇會觸發事件篩選器的事件為所有事件或感應器事件。" +
+				"<h4>感應器事件</h4>" +
+				"在此列出所選擇的感應器所有可能的事件。" +
+
+				"<h4><br>事件資料配置</h4>" +
+				"<h4>事件觸發器</h4>" +
+				"此欄位用來給予事件種類的數值。" +
+				"<ul><li>- 數值範圍從 1 ~ 255。</li></ul>" +
+				"<h4>Event Data 1 AND Mask</h4>" +
+				"此欄位用來指明通配符（wildcarded）或比較位元。" +
+				"<ul><li>- 數值範圍從 0 ~ 255。</li></ul>" +
+				"<h4>Event Data 1 Compare 1 & Event Data 1 Compare 2</h4>" +
+				"此欄位用來指明是否每一個位元位置的比較為一種精確的比較。" +
+				"<ul><li>- 數值範圍從 0 ~ 255。</li></ul>" +
+
+				"<h4><br>Event Data 2 配置</h4>" +
+				"<h4>Event Data 2 AND Mask</h4>" +
+				"此欄位用來指明通配符（wildcarded）或比較位元。" +
+				"<h4>Event Data 2 Compare 1 & Event Data 2 Compare 2</h4>" +
+				"此欄位用來指明是否每一個位元位置的比較為一種精確的比較。" +
+				"<ul><li>- 數值範圍從 0 ~ 255。</li></ul>" +
+
+				"<h4><br>Event Data 3 配置</h4>" +
+				"<h4>Event Data 3 AND Mask</h4>" +
+				"此欄位用來指明通配符（wildcarded）或比較位元。" +
+				"<h4>Event Data 3 Compare 1 & Event Data 3 Compare 2</h4>" +
+				"此欄位用來指明是否每一個位元位置的比較為一種精確的比較。" +
+				"<ul><li>- 數值範圍從 0 ~ 255。</li></ul>"; 
+
+		if ("addEventFilterForm" == frameName[0].getAttribute("id")) {
+			titleContent = "<div class='helpmainhead'>新增事件篩選</div></h2>" +
+				"<div class='subSection'>" +
+				"使用此表格來新增事件篩選項目。" +
+				"<br><br>請參閱 IPMI Specification，Platform Event " +
+				"Filtering (PEF) 以取得更多相關訊息。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>事件篩選器配置</h4>" +
+				"<h4>PEF ID</h4>" +
+				"顯示新配置的事件篩選器的 ID （唯讀）。";
+
+			buttonContent = "<h4>新增</h4>" +
+				"點選 '新增' 以儲存新的事件篩選器項目並回到上一頁。";
+		} else if ("modifyEventFilterForm" == frameName[0].getAttribute("id")) { 
+			titleContent = "<div class='helpmainhead'>修改事件篩選</div></h2>" +
+				"<div class='subSection'>" +
+				"此表格是用來修改已配置的事件篩選器項目。" +
+				"<br><br>請參閱 IPMI Specification，Platform Event " +
+				"Filtering (PEF) 以取得更多相關訊息。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>事件篩選器配置</h4>" +
+				"<h4>PEF ID</h4>" +
+				"顯示已配置的事件篩選器的 ID （唯讀）。";
+			buttonContent = "<h4>修改</h4>" +
+				"點選 '修改' 以儲存變更並回到上一頁。";
+		}
+		helpContent = titleContent + bodyContent + buttonContent;
+		helpContent += "<h4>取消</h4>" +
+			"點選 '取消' 以取消變更並回到上一頁。" +
+			"</fieldset>" +
+			"</div>";
+		}
+		else if (frameName[0].getAttribute("id").indexOf("AlertPolicyForm") != -1) {
+			bodyContent = "<br><br>請參閱 IPMI Specification，Platform Event " +
+				"Filtering (PEF) 以取得更多相關訊息。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>策略項目 #</h4>" +
+				"此欄位顯示所選擇項目的策略項目編號（唯讀）。" +
+				"<h4>策略編號</h4>" +
+				"請選擇已經在事件篩選器表格裡已配置的策略編號。" +
+				"<h4>策略配置</h4>" +
+				"點選 'Enable' 以啟用策略設定。" +
+				"<h4>策略集合</h4>" +
+				"請在下拉式選單中選擇一種策略集合。.<br>" +
+				"0 - 永遠送出警告到目的地。<br>" +
+				"1 - 如果警告成功的送到之前的目的也，則不發送警告到目的地，" + 
+				"執行此策略集合的下一個項目。<br>" +
+				"2 - 如果警告成功的送到之前的目的也，則不發送警告到目的地，" +
+				"也不執行此策略集合中的任何項目。<br>" +
+				"3 - 如果警告成功的送到之前的目的也，則不發送警告到目的地，" + 
+				"執行此策略集合中下一個傳送到不同 Channel 的項目。<br>" +
+				"4 - 如果警告成功的送到之前的目的也，則不發送警告到目的地， " +
+				"執行此策略集合中下一個傳送到不同目的地的項目。<br>" +
+				"<h4>Channel 編號</h4>" +
+				"從可用的 channel 列表中選擇一個特定的 channel。" +
+				"<h4>目的地選擇器</h4>" +
+				"從已配置的目的地清單中選擇一個等定的目的地。" +
+				"<br><strong>提醒：</strong> " +
+				"LAN 目的地必需要在 配置－》PEF－》LAN 目的地 已經配置。" +
+				"<h4>警報字串</h4>" +
+				"點選以指定一個特定事件警報字符串。" +
+				"<h4>警報字串金鑰</h4>" +
+				"從集合中選擇一個值，所有連結的字串都儲存在 PEF 配置參數裡，" +
+				"請為此警報策略項指定一個要傳送的字串。";
+
+			if ("addAlertPolicyForm" == frameName[0].getAttribute("id")) {
+				titleContent = "<div class='helpmainhead'>新增警報策略" +
+					"</div></h2><div class='subSection'>" +
+					"此表格是用來新增一個警報策略項目。";
+				buttonContent = "<h4>新增</h4>" +
+					"點選 '新增' 以儲存新的警報策略並回到上一頁。";
+			} else if ("modifyAlertPolicyForm" == frameName[0].getAttribute("id")) {
+				titleContent = "<div class='helpmainhead'>修改警報策略"+
+					"</div></h2><div class='subSection'>" +
+					"此表格是用來修改已配置的警報策略項目。";
+				buttonContent = "<h4>修改</h4>" +
+					"點選 '修改' 以儲存變更並回到上一頁。";
+			}
+			helpContent = titleContent + bodyContent + buttonContent;
+			helpContent += "<h4>取消</h4>" +
+			"點選 '取消' 以取消變更並回到上一頁。</fieldset></div>";
+		} else if (frameName[0].getAttribute("id").indexOf("LANDestForm") != -1) {
+			bodyContent = "<br><br>" +
+			"<fieldset>" +
+			"<legend>用途</legend>" +
+			"<h4>LAN Channel Number</h4>" +
+			"顯示所選項目的 LAN Channel Number（唯讀）。" +
+			"<h4>LAN 目的地</h4>" +
+			"顯示所選項目的目的地（唯讀）。" +
+			"<h4>目的地類型</h4>" +
+			"目的地類型可以是一個 SNMP Trap 或電子郵件警報。如果是 SNMP Trap" +
+			" ，必需填寫目的地的 IP 位址。如果是電子郵件警報，必需填寫 3 個" +
+			"位，使用者名稱，主題和訊息。也必需在 配置－》SMTP 加入 SMTP" +
+			"伺服器的相關資訊。" +
+			"<h4>目的地位址</h4>" +
+			"如果目的地為 SNMP Trap，請輸入會接收警報訊息的系統的 IP 位址。" +
+			"目的地位址將支援以下格式：" +
+			"<ul><li>- IPv4 位址格式</li>" +
+			"<li>- IPv6 位址格式</li></ul>" +
+			"<h4>使用者名稱</h4>" +
+			"如果目的地類型為電子郵件警報，請選擇電子郵件警報所要發送的使用者" +
+			"。" +
+			"<br><strong>提醒：</strong> " +
+			"使用者的電子郵件位址必需在 配置－》使用者配置 下設定" +
+			"<h4>主題 &amp; 訊息</h4>" +
+			"如果目的地類型為電子郵件警報，您必需填寫此欄位，如果有任何" +
+			"嚴重事件發生，將會發出一封帶有指定主題和指定訊息到己配置的" +
+			"電子郵件地址。" +
+			"<br><strong>提醒：</strong> " +
+			"如果使用者是使用'AMI-Format'的電子郵件格式，此欄位並不支援。";
+			if ("addLANDestForm" == frameName[0].getAttribute("id")) {
+				titleContent = "<div class='helpmainhead'>新增 LAN 目的地" +
+					"</div></h2><div class='subSection'>" +
+					"使用此表格來新增 LAN 目的地欄位。";
+				buttonContent = "<h4>新增</h4>" +
+					"點選 '新增' 以儲存新的 LAN 目的地並回到上一頁。";
+			} else if ("modifyLANDestForm" == frameName[0].getAttribute("id")) {
+				titleContent = "<div class='helpmainhead'>修改 LAN 目的地" +
+					"</div></h2><div class='subSection'>" +
+					"此表格用來修改已配置的 LAN 目的地。";
+				buttonContent = "<h4>修改</h4>" +
+					"點選 '修改' 來儲存變更並回到上一頁。";
+			}
+			helpContent = titleContent + bodyContent + buttonContent;
+			helpContent += "<h4>取消</h4>" +
+				"點選 '取消' 以取消變更並回到上一頁。" +
+				"</fieldset></div>";
+		}
+	}
+	else
+	{
+		helpContent = "<div class='helpmainhead'>PEF</div></h2>" +
+			"<div class='subSection'>" +
+			"此頁可設定事件篩選、警報策略與 LAN 訊息接收端。要顯示此分組，" +
+			"使用者等級至少必需是 Operator。<br>要修改或新增事件篩選，使用" +
+			"者等級必需是 Administrator。" +
+			"<br><strong>提醒：</strong> 未設定的分組將會以 '~' 標示。" +
+			"<br><br>請參閱 IPMI Specification，Platform Event Filtering " +
+			"(PEF) 以取得更多相關訊息。" +
+			"<br><br><fieldset>" +
+			"<legend>用途</legend>" +
+			"<h4>事件篩選</h4>" +
+			"點選事件篩選分頁以顯示所有已配置和未配置的事件篩選。" +
+			"您可以在此修改或新增事件篩選。<br>在40個可配置的事件篩選之中" +
+			"，預設會有15個事件篩選已配置。" +
+			"<h4>警報策略</h4>" +
+			"點選警報策略分頁以顯示所有已配置和未配置的警報策略。" +
+			"您可以在此修改或新增警報策略。<br>最多可以配置60個警報策略。" +
+			"<h4>LAN 目的地</h4>" +
+			"點選 LAN 目的地分頁以顯示所有已配置和未配置的LAN 目的地。" +
+			"您可以在此修改或新增 LAN 目的地。<br>最多可以配置15個 LAN " +
+			"目的地。";
+
+		if ((top.frames["mainFrame"].pageFrame.document.getElementById
+			("_lanDests").style.fontWeight == "bold") || 
+			(top.frames["mainFrame"].pageFrame.document.getElementById
+			("_lanDests").style.fontWeight == 700)) {
+			helpContent += "<h4>LAN Channel</h4>" +
+				"從選單中選擇想要配置的 LAN Channel。" +
+				"<h4>發送測試警報</h4>" +
+				"在 LAN 目的地分頁中選擇一個已配置的 LAN 目的地並選" +
+				"'發送測試警報' 以發送範例警報到所選擇的目的地。" +
+				"<br><strong>提醒：</strong> " +
+				"測試警報只有在 SNMP 配置已啟動的情況下才能發送。SMTP" +
+				"的支援可以在 配置－》SMTP 下啟用。並請確認 SMTP 伺服器" +
+				"的位址和埠號已被正確的配置。";
+		}
+
+		helpContent += "<h4>新增</h4>" +
+			"選擇一個未設定的位置並點選 '新增' 以新增一個新項目到設備。" +
+			"您也可以雙擊一個未設定的位置來新增。" +
+			"<h4>修改</h4>" +
+			"選擇一個已配置的項目並點選 '修改' 來修改所選擇的項目。" +
+			"或者，您也可以雙擊一個已配置的項目來修改。" +
+			"<h4>刪除</h4>" +
+			"選擇一個已配置的項目並點選 '刪除'來刪除項目。" +
+			"</fieldset>" +
+			"</div>";
+	}
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

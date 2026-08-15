@@ -1,0 +1,1 @@
+../init.d/sdhc_hw.sh

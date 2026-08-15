@@ -1,0 +1,192 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+<head>
+	<title>Active Directory 設定說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+</head>
+<body oncontextmenu="return false;">
+	<h2><div class="floatRight"><a href="javascript://" class="closeBtn" 
+		onclick="top.closeHelp();">X</a></div>
+	<script type="text/javascript">
+	var frameName;
+	var helpContent = "";
+
+	frameName = top.frames["mainFrame"].pageFrame;
+	frameName = frameName.document.getElementsByTagName("FORM");
+	if (frameName.length) {
+		if ("advancedADFrm" == frameName[0].getAttribute("id")) {
+			helpContent = "<div class='helpmainhead'>進階 Active Directory 設定" +
+				"</div></h2>" +
+				"<div class='subSection'>" +
+				"此頁面用來配置進階的 Active Directory 設定並支援" + 
+				"Trusted domains。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>Active Directory 認證</h4>" +
+				"請點選複選框來啟用或停用 Active Directory 認證。<br>" +
+				"如果啟用 Active Directory 認證，請輸入必要的資訊來存取 " +
+				"Active Directory 伺服器。 " +
+				"<h4>使用者名稱</h4>" +
+				"指定 Active Directory 伺服器的使用者名稱。"+
+				"<ul><li>- 使用者名稱是由長度 1 到 64 的字母或數字所組成的" + 
+				"字串。</li>" +
+				"<li>- 使用者名稱的開頭必需為字母。</li>" +
+				"<li>- 字母的大寫與小寫不同。.</li>" +
+				"<li>- 不允許特殊字元，如：逗號，句號，冒號，分號，斜線，" +
+				"反斜線，方括號，尖括號，pipe，等號，加號，星號，問號，" +
+				"&符號，雙引號，空白符號。</li></ul>" +
+				"<strong>提醒：</strong> 如果不需要使用者名稱及密碼，" +
+				"請留下空白即可。" +
+				"<h4>密碼</h4>" +
+				"指定 Active Directory 伺服器的密碼。"+
+				"<ul><li>- 密碼的長度至少需要6個字元。</li>" +
+				"<li>- 不允許空白鍵。</li></ul>" +
+				"<strong>提醒：</strong> 此欄位不允許超過127個字元。" +
+				"<h4>使用者網域名稱</h4>" +
+				"指定此使用者的網域名稱。"+
+				"例如： MyDomain.com" +
+				/*"<h4>Time Out</h4>" +
+				"Specifies the waiting time (in seconds) for Active " +
+				"Directory queries to complete.<br>" +
+				"<ul><li>- Default Time out value: 120 seconds.</li>" +
+				"<li>- Acceptable range: 15 to 300 seconds.</li></ul>" +*/
+				"<h4>Domain Controller 伺服器位址1, Domain Controller " +
+				"伺服器位址2 & Domain Controller 伺服器位址3</h4>" +
+				"輸入 Active Directory 伺服器的 IP 位址。至少要輸入一個" +
+				"Domain Controller 伺服器位址。" +
+				"<ul><li>- IP 位址是由 4 組數字所組成並以逗點分開，例如：" +
+				"\"xxx.xxx.xxx.xxx\".</li>" +
+				"<li>- 每一組數字的範圍由 0 ～ 255。</li>" +
+				"<li>- 第一組數字不能為 0。</li></ul>" +
+				"Domain Controller 伺服器位址可以支援：" +
+				"<ul><li>- IPv4 位址的格式。</li>" + 
+				"<li>- IPv6 位址的格式。</li></ul>" +
+				"<h4>儲存</h4>" +
+				"點選 '儲存' 以儲存設定。" +
+				"<h4>取消</h4>" +
+				"點選 '取消' 以取消變更並回到上一頁。" +
+				"</fieldset>" +
+				"</div>";
+		} else if ("addRoleGroup" == frameName[0].getAttribute("id")) {
+			helpContent = "<div class='helpmainhead'>新增 Role Group</div>" +
+				"</h2><div class='subSection'>" +
+				"此表格用來增加新皫 role group。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>Role Group 名稱</h4>" +
+				"輸入 Role Group 名稱。此名稱用來在 Active Directory 裡識別" +
+				"role group。" +
+				"<ul><li>- Role Group 名稱由64個字母數字所組成。</li>" +
+				"<li>- 允許使用特殊字元如連字號（-）和底線（_）。" +
+				"</li></ul>" +
+				"<h4>Role Group 網域</h4>" +
+				"輸入 Role Group 網域。這是該 role group 所在的網域。" +
+				"<ul><li>- 網域名稱是由 255 個字母數字所組成。</li>" +
+				"<li>- 允許使用特殊字元如連字號（-）和底線（_）。</li></ul>" +
+				"<h4>Role Group 權限</h4>" +
+				"輸入 Role Group 權限。此 role group 所被給予的權限等級。";
+
+			if (checkProjectCfg("EXTENDED_PRIV")) {
+				helpContent += "<h4>擴展的權限</h4>" +
+					"此欄位是用來給予此 role group KVM 和 VMedia 的權限。";
+			}
+			helpContent += "<h4>新增</h4>" +
+				"點選 '新增' 以儲存新的 role group 並回到上一頁。" +
+				"<h4>取消</h4>" +
+				"點選 '取消' 以取消變更並回到上一頁。" +
+				"</fieldset>" +
+				"</div>";
+		} else if ("modRoleGroup" == frameName[0].getAttribute("id")) {
+			helpContent = "<div class='helpmainhead'>修改 Role Group</div>" +
+				"</h2><div class='subSection'>" +
+				"此表格是用來修改己有的 role group 設定。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>Role Group 名稱</h4>" +
+				"此欄位用來顯示已設定的 role group 名稱。" +
+				"<ul><li>- Role Group 名稱由64個字母數字所組成。</li>" +
+				"<li>- 允許使用特殊字元如連字號（-）和底線（_）。" +
+				"</li></ul>" +
+				"<h4>Role Group 網域</h4>" +
+				"此欄位顯示 Role Group 網域。這是該 role group 所在的網域。" +
+				"<ul><li>- 網域名稱是由 255 個字母數字所組成。</li>" +
+				"<li>- 允許使用特殊字元如連字號（-）和底線（_）。</li></ul>" +
+				"<h4>Role Group 權限</h4>" +
+				"此欄位顯示 Role Group 權限。此 role group 所被給予的權限等級。";
+			if (checkProjectCfg("EXTENDED_PRIV")) {
+				helpContent += "<h4>擴展的權限</h4>" +
+					"此欄位是用來給予此 role group KVM 和 VMedia 的權限。";
+			}
+			helpContent += "<h4>修改</h4>" +
+				"需入必要的欄位內容之後並點選 '修改' 以儲存修改並回到上一頁。" +
+				"<h4>取消</h4>" +
+				"點選 '取消' 以取消所做的修改並回到上一頁。" +
+				"</fieldset>" +
+				"</div>";
+		}
+	} else {
+		helpContent = "<div class='helpmainhead'>Active Directory</div></h2>" +
+			"<div class='subSection'>" +
+			"此表格用來顯示所有已設定的 Role Groups 和未設定的 Role Group，" +
+			"您可以在此修改，新增和刪除 Role Groups。<br>" +
+			"分組的網域可以是 AD 的網域或是信任的網域。" +
+			"分組名稱必需對應實際的 AD 分組名稱。" +
+			"您的權限至少要是 USER 才能顯示此表格。<br>" +
+			"您的權限必需要是管理員才能修改或新增分組。" +
+			"<br>" +
+			"<strong>提醒：</strong> 未設定的 Role Group 在表格裡將會以 \"~\"" +
+			"做標記。" +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>用途</legend>" +
+			"<h4>進階設定</h4>" +
+			"點選此按鈕以設定 Active Directory，選項有啟用 Active Directory " +
+			"認證，使用者網域名稱和最多三個 Domain Controller 伺服器位址" +
+			"<h4>新增 Role Group</h4>" +
+			"在表格內選擇一個未設定的 Role Group 並點選'新增 Role Group' 來" +
+			"新增一個新的 role group 到設備上。或者您也可以雙擊一個未設定的" +
+			"role group 來新增 role group。" +
+			"<h4>修改 Role Group</h4>" +
+			"在表格內選擇一個已設定的 role group 並點選 '修改 Role Group' 來" +
+			"修改 role group。" +
+			"另外，您也可以雙擊一個己設定的 role group 來修改。" +
+			"<h4>刪除 Role Group</h4>" +
+			"選擇想要刪除的 role group 點選 '刪除Role Group'。" +
+			"</fieldset>" +
+			"</div>";
+	}
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

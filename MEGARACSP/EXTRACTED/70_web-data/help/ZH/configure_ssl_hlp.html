@@ -1,0 +1,171 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>SSL 說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight"><a href="javascript://" class="closeBtn" 
+	onclick="top.closeHelp();">X</a></div>
+	<script type="text/javascript">
+	var opera = (navigator.userAgent.toLowerCase().indexOf("opera") != -1);
+	var doc = top.frames["mainFrame"].pageFrame.document;
+	var helpContent;
+
+	if ((doc.getElementById("_tabGenerateSSL").style.fontWeight == "bold") || 
+		(opera && doc.getElementById("_tabGenerateSSL").style.
+		fontWeight == 700)) {
+		helpContent = "<div class='helpmainhead'>產生 SSL</div></h2>" +
+		"<div class='subSection'>" +
+		"此頁是用來産生 SSL 證書。" +
+		"<br><br>" +
+		"<fieldset>" +
+		"<legend>用途</legend>" +
+		"<h4>通用名稱（CN）</h4>" +
+		"證書的通用名稱。" +
+		"<ul><li>- 最大的長度為 64 個字元。</li>" +
+			"<li>- 通用名稱為字母數字的字串。" +
+			"<li>- 不允許使用特殊字元 '#' 和 '$'。" +
+			"</li></ul>" +
+		"<h4>組織名稱（O）</h4>" +
+		"證書的組織名稱。" +
+		"<ul><li>- 最大的長度為 64 個字元。</li>" +
+			"<li>- 通用名稱為字母數字的字串。" +
+			"<li>- 不允許使用特殊字元 '#' 和 '$'。" +
+			"</li></ul>" +
+		"<h4>組織單位（OU）</h4>" +
+		"證書的組織單位。" +
+		"<ul><li>- 最大的長度為 64 個字元。</li>" +
+			"<li>- 通用名稱為字母數字的字串。" +
+			"<li>- 不允許使用特殊字元 '#' 和 '$'。" +
+			"</li></ul>" +
+		"<h4>城市或地區（L）</h4>" +
+		"必需給予城市或地區。" +
+		"<ul><li>- 最大的長度為 64 個字元。</li>" +
+			"<li>- 通用名稱為字母數字的字串。" +
+			"<li>- 不允許使用特殊字元 '#' 和 '$'。" +
+			"</li></ul>" +
+		"<h4>州或省（ST）</h4>" +
+		"必需給予州或省。" +
+		"<ul><li>- 最大的長度為 64 個字元。</li>" +
+			"<li>- 通用名稱為字母數字的字串。" +
+			"<li>- 不允許使用特殊字元 '#' 和 '$'。" +
+			"</li></ul>" +
+		"<h4>國家（C）</h4>" +
+		"必需給予國家。" +
+		"<ul><li>- 只允許使用兩個字元。</li>" +
+			"<li>- 不允許使用特殊字元。</li></ul>" +
+		"<h4>電子郵件地址</h4>" +
+		"必需給予組織的電子郵件地址。" +
+		"<h4>有效天數</h4>" +
+		"證書的有效天數。" +
+		"<ul><li>- 有效的範圍從 1 到 3650 天。</li></ul>" +
+		"<h4>金鑰長度</h4>" +
+		"選擇證書的金鑰長度。" +
+		"<h4>産生</h4>" +
+		"點選此選項以産生新的 SSL 證書。" +
+		"<br>" +
+		"<strong>提醒：</strong>" +
+			"<ul><li> - 在成功上傳之後，HTTPs 將會重啟並使用新上傳的 SSL " +
+			"證書。</li>" +
+			"<li> - 使用 512 bits 的 RSA 金鑰，HTTPs 在某些瀏覽器不能正常" +
+			"工作。" +
+		"</fieldset>" +
+		"</div>";
+	} else if ((doc.getElementById("_tabViewSSL").style.fontWeight == "bold") 
+		|| (opera && doc.getElementById("_tabViewSSL").style.
+		fontWeight == 700)) {
+		helpContent = "<div class='helpmainhead'>查看 SSL</div></h2>" +
+		"<div class='subSection'>" +
+		"此分頁以使用者可讀的格式來查看已上傳的 SSL 證書。" +
+		"<br><br>" +
+		"<fieldset>" +
+		"<legend>資訊</legend>" +
+		"<h4>基本資訊</h4>" +
+		"顯示已上傳 SSL 證書的基本資訊。" +
+		"將顯示以下欄位。" +
+		"<ul><li>- 版本</li>" +
+			"<li>- 序號</li>" +
+			"<li>- 簽名演算法</li>" +
+			"<li>- 公共金鑰</li></ul>" +
+		"<h4>發行者</h4>" +
+		"顯示證書發行者的訊息。" +
+		"<ul><li>- 通用名稱（CN）</li>" +
+			"<li>- 組織名稱（O）</li>" +
+			"<li>- 組織單位（OU）</li>" +
+			"<li>- 城市或地區（L）</li>" +
+			"<li>- 州或省（ST）</li>" +
+			"<li>- 國家（C）</li>" +
+			"<li>- 電子郵件地址</li></ul>" +
+		"<h4>有效性信息</h4>" +
+		"顯示已上傳證書的有效期間。" +
+		"<ul><li>- 有效期自" +
+		"<li>- 有效期至</ul>" +
+		"<h4>發給</h4>" +
+		"顯示證書的相關訊息。" +
+		"<ul><li>- 通用名稱（CN）</li>" +
+			"<li>- 組織名稱（O）</li>" +
+			"<li>- 組織單位（OU）</li>" +
+			"<li>- 城市或地區（L）</li>" +
+			"<li>- 州或省（ST）</li>" +
+			"<li>- 國家（C）</li>" +
+			"<li>- 電子郵件地址</li></ul>";
+	} else {
+		helpContent = "<div class='helpmainhead'>上傳 SSL</div></h2>" +
+			"<div class='subSection'>" +
+			"此頁用來上傳 SSL 證書和私密金鑰。" +
+			"<br>" +
+			"<strong>提醒：</strong> 在上傳 SSL 證書時，請在 配置－》NTP " +
+			"檢查 BMC 的時間。" +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>用途</legend>" +
+			"<h4>目前憑證</h4>" +
+			"顯示目前憑證上傳的日期和時間（唯讀）。" +
+			"<h4>新的憑證</h4>" +
+			"瀏覽新的憑證檔案。" +
+			"<ul><li>- 憑證檔案的格式應為 PEM。</li></ul>" +
+			"<h4>目前的私密金鑰</h4>" +
+			"顯示目前私密金鑰上傳的日期和時間（唯讀）。" +
+			"<h4>新的私密金鑰</h4>" +
+			"瀏覽新的私密金鑰。" +
+			"<ul><li>- 私密金鑰的格式應為 PEM。</li></ul>" +
+			"<h4>上傳</h4>" +
+			"點選 '上傳' 以上傳 SSL 證書和私密金鑰到 BMC。" +
+			"<br>" +
+			"<strong>提醒：</strong>在成功上傳之後，HTTPs 將會重啟並使用新" +
+			"上傳的 SSL 證書。" +
+			"</fieldset>" +
+			"</div>";
+	}
+
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

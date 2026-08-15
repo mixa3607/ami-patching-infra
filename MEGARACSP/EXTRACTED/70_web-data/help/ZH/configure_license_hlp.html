@@ -1,0 +1,83 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2014-2017        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>授權說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight"><a href="javascript://" class="closeBtn" 
+	onclick="top.closeHelp();">X</a></div>
+	<script type="text/javascript">
+	var frameName;
+	var helpContent = "";
+
+	frameName = top.frames["mainFrame"].pageFrame;
+	frameName = frameName.document.getElementsByTagName("FORM");
+	if (frameName.length) {
+		if ("uploadLicenseFrm" == frameName[0].getAttribute("id")) {
+			helpContent = "<div class='helpmainhead'>上傳授權金鑰</div></h2>" +
+				"<div class='subSection'>" +
+				"此表格用來上傳新的授權金鑰以啟動所需要的功能。" +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>用途</legend>" +
+				"<h4>授權金鑰</h4>" +
+				"請輸入授權金鑰以啟動所需要的功能。" +
+				"<ul><li>- 授權金鑰是由至少 26 個字母數字所組成的字串。</li>" +
+				"<li>- 除了連字符號（-）之外，不接受任何特殊字元，連字" +
+				"符號（-）並不會包括在長度的計算中。</li>" +
+				"</ul>" +
+				"<h4>上傳</h4>" +
+				"點選 '上傳' 以上傳授權金鑰。" +
+				"<h4>取消</h4>" +
+				"點選 '取消' 以取消變更並回到上一頁。" +
+				"</fieldset>" +
+				"</div>";
+		}
+	} else {
+		helpContent = "<div class='helpmainhead'>授權</div>" +
+			"</h2><div class='subSection'>" +
+			"此清單顯示可使用功能和授權許可有效期限。" +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>用途</legend>" +			
+			"<h4>功能名稱</h4>" +
+			"此欄位會顯示所有可用的功能。" +
+			"<h4>有效性</h4>" +
+			"此欄位顯示各別功能的有效期間。" +
+			"<ul><li>- 有效性的單位為天，最長為255。</li></ul> " +
+			"<h4>上傳授權金鑰</h4>" +
+			"此按鈕用來上傳授權金鑰以啟用個別的功能。" +
+			"</fieldset>" +
+			"</div>";
+	}
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

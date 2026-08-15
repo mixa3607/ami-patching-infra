@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>configure_fw_image help</title>
+	<link href="../../style/help_style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div><div class="helpmainhead">Image Transfer Protocol</div></h2>
+	<div class="subSection">
+		This page is used to configure the firmware image protocol information.
+		<br/><br/>
+		<fieldset>
+			<legend>Actions</legend>
+			<h4>Protocol Type</h4>
+			Protocol to be used to transfer the firmware image into the BMC.
+			<h4>Server Address</h4>
+			Address of the server where the firmware image is stored. It supports both IPv4 and IPv6.
+			
+			<ul><li>- IPv4 Address made of 4 numbers separated by dots as 
+			in "xxx.xxx.xxx.xxx".</li>
+			<li>- Each number ranges from 0 to 255.</li>
+			<li>- First number must not be 0.</li></ul>
+			
+			<ul><li>- IPv6 Address made of 8 groups of 4 Hexadecimal digits 
+			separated by colon as in "xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx".</li>
+			<li>- Hexadecimal digits are expressed as lower-case letters.</li>
+			</ul>
+			<h4>Image Name</h4>
+			Image filename on TFTP server.
+			<h4>Retry Count</h4>
+			Number of times to be retried in case a transfer failure occurs.
+			Retry count ranges from 0 to 255.
+			<h4>Save</h4>
+			Click 'Save' to save the configured settings.
+			<h4>Reset</h4>
+			Click 'Reset' to reset the modified changes.
+		</fieldset>
+	</div>
+</body>
+</html>

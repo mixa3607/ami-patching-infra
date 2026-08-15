@@ -1,0 +1,60 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>回復配置說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+	</head>
+	<body>
+	<h2><div class="floatRight"><a href="javascript://" class="closeBtn" 
+		onclick="top.closeHelp();">X</a></div>
+	<div class='helpmainhead'>回復配置</div></h2>
+	<div class='subSection'>
+		此頁用來回復設備的配置。
+		<br>
+		請注意如果您進入回復配置，widgets，其它的網頁和服務將停用，所有已
+		開啟的 widgets 將會自動關閉。設備將在幾分鐘內重開。
+		<br/><br/>
+		<fieldset>
+		<legend>用途</legend>
+		<script type="text/javascript">
+		if (checkProjectCfg("PRESERVECONF")) {
+			var prsrvcfg_help = "<h4>保存配置</h4>";
+			prsrvcfg_help += "點選此按鈕將會重新導向至保存配置頁面，用" +
+				"來保存個別的配置不要被預設配置覆寫。";
+			document.write(prsrvcfg_help);
+		}
+		</script>
+		<h4>回復配置</h4>
+		點選此按鈕以回復韌體的預設配置。
+		</fieldset>
+	</div>
+	</body>
+</html>

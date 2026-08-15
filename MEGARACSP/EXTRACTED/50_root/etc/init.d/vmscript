@@ -1,0 +1,54 @@
+#!/bin/sh
+# /etc/init.d/vmapp: start Virtual Media Application
+#
+# chkconfig: 2345 10 90
+#Runlevel : 3 = S31
+#Runlevel : 6 = K31
+#Runlevel : 7 = K31
+#Runlevel : 8 = K31
+# Restart the service on warm reboot
+#Runlevel : 9 = K31
+#Runlevel : 9 = S34
+
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+
+PATHFUL_VMAPP=/usr/local/bin/vmapp
+USB_DRIVERNAME=usbe
+ACTION=$1
+
+
+test -f /usr/local/bin/vmapp || exit 0
+
+# Options for start/restart the daemons
+
+test -f /var/tmp/licstat/vmapp_nolicense && ACTION=stop
+case "$ACTION" in
+  start)
+    echo "Starting VM Application: vmapp"
+    start-stop-daemon --start --quiet --exec $PATHFUL_VMAPP
+    ;;
+  stop)
+    echo -n "Stopping VM Application: vmapp"
+    start-stop-daemon --stop --quiet --exec $PATHFUL_VMAPP --signal INT
+    echo "."
+    ;;
+    reload)
+	echo -n "Reloading VM Application: vmapp"
+	start-stop-daemon --stop --quiet --exec $PATHFUL_VMAPP --signal 1
+	echo "."
+	;;
+    force-reload)
+	$0 reload
+	;;
+    restart)
+	echo -n "Restarting VM Application: vmapp"
+	start-stop-daemon --stop --quiet --retry 5 --oknodo --exec $PATHFUL_VMAPP --signal INT
+	start-stop-daemon --start --quiet --exec $PATHFUL_VMAPP
+	echo "."
+	;;
+   *)
+    echo "Usage: /etc/init.d/vmapp {start|stop|reload|restart|force-reload}"
+    exit 1
+esac
+
+exit 0

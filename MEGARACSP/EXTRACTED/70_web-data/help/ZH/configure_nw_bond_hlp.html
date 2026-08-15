@@ -1,0 +1,75 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2011-2014        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>網路合併說明</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+</head>
+<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+		<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+		<div class="helpmainhead">網路合併</div>
+	</h2>
+	<div class="subSection">
+		此頁面是用來為網路介面設定網路合併。預設為啟用網路合併。
+		<br>
+		<strong>提醒：</strong> 設備上至少需要有兩個網路介面才能啟用 
+		網路合併的功能。
+		<br/><br/>
+		<fieldset>
+			<legend>用途</legend>
+			<h4>網路合併</h4>
+			點選此選項以對網路介面啟用網路合併。
+			<br>
+			<strong>提醒：</strong> 如果 VLAN 已經在副網路介面啟用，則 
+			網路合併功能無法啟用， 可以在配置－》網路－》VLAN 取消 VLAN。
+			<h4>合併模式</h4>
+			此欄位顯示網路合併模式。
+			<br>
+			<strong>提醒：</strong> 無法設定此欄位。
+			<h4>預設介面</h4>
+			選擇任何一個合併介面來配置 active slave(s)。
+			<h4>自動設定</h4>
+			點選此選項來自動配置介面。
+			<br>
+			<strong>提醒：</strong> 如果取消自動設定，可以透過 IPMI 指令來 
+			配置介面上的服務。
+			<br>
+			如果啟動自動設定，所有的服務將會自動的重開。 
+			<h4>儲存</h4>
+			點選 '儲存' 以儲存變更。
+			<br>
+			<strong>提醒：</strong> 取消合併將會取消 合併-VLAN 
+			的配置。
+			<h4>重置</h4>
+			點選 '重置' 以重置變更。
+		</fieldset>
+	</div>
+</body>
+</html>

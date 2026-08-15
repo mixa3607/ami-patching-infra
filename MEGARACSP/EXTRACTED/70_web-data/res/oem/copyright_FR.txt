@@ -1,0 +1,3 @@
+Utilitaire de Redirection à distance de console KVM version  <=jviewerversion=>
+Version du Plugin <=socversion=> pour <=soc=>
+Copyright (c) 2015 American Megatrends, Inc.
