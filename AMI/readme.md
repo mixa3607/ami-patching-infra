@@ -3,16 +3,21 @@
 Features:
 - auto patch logo images
 - auto patch DMI/SMBios table
-- auto pack IFR sections
+- auto pack IFR sections (patched from clean data via `uefi-editor-cli`)
+- auto inject microcodes + FIT
 
 ## Flow
+
 - Dump bios with programmer or other way
-- Extract logo images with UEFITool [./LOGO](./LOGO)
-- Extract DMI table section with UEFITool [./DMI](./DMI)
+- Run `./extract-ifr-sections.sh [DUMP]` that pulls all clean IFR sections
+  (setup `.sct`, AMITSE, setupdata, IFR txt) out of the dump into `IFR/`
 - Prepare IFR sections [./IFR](./IFR)
-- Make changes with UEFI-Editor
-- Run `render-ifr-state.sh` that build `data.md` file with menu state in each IFR/*/ directory
-- Run `build-ver.sh` that apply all changes to source BIOS file
+- Make changes with UEFI-Editor (or edit `data.json` directly)
+- Run `render-ifr-state.sh` that builds `data.md` file with menu state in each IFR/*/ directory
+- Run `build-ver.sh` that applies all changes to source BIOS file:
+  - patches each `IFR/*/orig/*.sct` + shared setupdata/AMITSE from `data.json`
+    using `SOFTWARE/uefi-editor-cli` (no browser required)
+  - injects the patched sections with UEFIReplace
 - Flash build-XXXXX/*.rom BIOS
 
 ## IMB760

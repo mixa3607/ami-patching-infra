@@ -32,3 +32,4 @@ TOOLS_DIR="$PWD/../SOFTWARE"
 
 uefireplace="$TOOLS_DIR/UEFITool_0.28.0/UEFIReplace"
 uefimodtools="$TOOLS_DIR/uefi-mod-tools_v1.3.0/uefi-mod-tools"
+uefieditorcli="node $TOOLS_DIR/uefi-editor-cli/index.mjs"

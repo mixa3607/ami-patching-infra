@@ -1,1 +1,38 @@
+# Everything in SOFTWARE/ is ignored by default; only the tools needed to
+# build/patch the AMI BIOS are un-ignored below.
 **/
+*.exe
+
+# keep the docs
+!readme.md
+
+# UEFITool 0.28.0 — UEFIReplace used by build-ver.sh (linux binaries)
+!UEFITool_0.28.0/
+!UEFITool_0.28.0/UEFIReplace
+!UEFITool_0.28.0/UEFIPatch
+!UEFITool_0.28.0/UEFITool
+
+# UEFITool NE — uefiextract/uefifind used by extract-ifr-sections.sh (linux binaries)
+!UEFITool_NE_A72_win64/
+!UEFITool_NE_A72_win64/uefiextract
+!UEFITool_NE_A72_win64/uefifind
+!UEFITool_NE_A72_win64/uefitool
+
+# IFRExtractor-RS — used by extract-ifr-sections.sh
+!IFRExtractor-RS_v1.6.0/
+!IFRExtractor-RS_v1.6.0/ifrextractor
+
+# uefi-mod-tools — used by build-ver.sh
+!uefi-mod-tools_v1.3.0/
+!uefi-mod-tools_v1.3.0/uefi-mod-tools
+
+# uefi-editor-cli — our IFR patching CLI, used by build-ver.sh
+!uefi-editor-cli/
+!uefi-editor-cli/index.mjs
+
+# MCExtractor — MCE.py used by render-mcodes.sh
+!MCExtractor/
+!MCExtractor/MCE.py
+!MCExtractor/MCE.db
+!MCExtractor/README.md
+!MCExtractor/LICENSE

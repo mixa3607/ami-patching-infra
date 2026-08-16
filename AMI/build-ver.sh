@@ -22,18 +22,42 @@ function patch_logos {
 
 function patch_IFRs {
   NO_REPLACEMNT_ERR_CODE=41
-  find "$SOURCES_DIR/IFR" -maxdepth 1 -mindepth 1 -type d | while read IFR_DIR; do
-    echo "Processing IFR $IFR_DIR"
-    IFR_GUID="$(ls "$IFR_DIR" | grep '\.guid$' | sed 's|\.guid$||1')"
-    IFR_FILE="$(ls "$IFR_DIR" | grep '\.sct$')"
-    echo "GUID: $IFR_GUID"
-    echo "FILE: $IFR_FILE"
-    $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$IFR_GUID" 0x10 "$IFR_DIR/$IFR_FILE" -asis -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
+
+  AMITSE_SCT="$(ls "$SOURCES_DIR/IFR" | grep 'AMITSE.*\.sct$' | head -1)"
+  SETUPDATA_BIN="$(find "$SOURCES_DIR/IFR" -maxdepth 1 -mindepth 1 -type f -name '*setupdata*.bin')"
+  echo "AMITSE SCT: $AMITSE_SCT"
+  echo "Setupdata bin: $SETUPDATA_BIN"
+
+  # Build all IFR data.json paths first (setupdata + amitse patching is cumulative
+  # over every form, so it must run once with all data.jsons)
+  IFR_JSONS=()
+  for IFR_DIR in $(find "$SOURCES_DIR/IFR" -maxdepth 1 -mindepth 1 -type d | sort); do
+    if [ -f "$IFR_DIR/data.json" ]; then
+      IFR_JSONS+=("$IFR_DIR/data.json")
+    fi
   done
 
-  SETUPDATA_GUID=FE612B72-203C-47B1-8560-A66D946EB371
-  SETUPDATA_FILE="$(find "$SOURCES_DIR/IFR" -maxdepth 1 -mindepth 1 -type f -name '*setupdata*.bin')"
-  $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$SETUPDATA_GUID" 0x18 "$SETUPDATA_FILE" -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
+  echo "Processing setupdata bin"
+  SETUPDATA_ARGS=()
+  for JSON in "${IFR_JSONS[@]}"; do SETUPDATA_ARGS+=(--data "$JSON"); done
+  $uefieditorcli setupdata --setupdata "$SETUPDATA_BIN" "${SETUPDATA_ARGS[@]}" -o "$BUILD_DIR/setupdata.bin"
+  $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "FE612B72-203C-47B1-8560-A66D946EB371" 0x18 "$BUILD_DIR/setupdata.bin" -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
+
+  # Per-form setup .sct: patch the orig .sct with this form's data.json
+  for IFR_DIR in $(find "$SOURCES_DIR/IFR" -maxdepth 1 -mindepth 1 -type d | sort); do
+    echo "Processing IFR $IFR_DIR"
+    IFR_GUID="$(ls "$IFR_DIR" | grep '\.guid$' | sed 's|\.guid$||1')"
+    ORIG_SCT="$(ls "$IFR_DIR/orig" | grep '_setup\.sct$' | head -1)"
+    if [ -z "$IFR_GUID" ] || [ -z "$ORIG_SCT" ] || [ ! -f "$IFR_DIR/data.json" ]; then
+      echo "SKIP $IFR_DIR (missing guid/sct/data.json)"
+      continue
+    fi
+    IFR_NAME="$(basename "$IFR_DIR")"
+    echo "GUID: $IFR_GUID"
+    echo "ORIG: $ORIG_SCT"
+    $uefieditorcli sct --setup "$IFR_DIR/orig/$ORIG_SCT" --data "$IFR_DIR/data.json" -o "$BUILD_DIR/$IFR_NAME.sct"
+    $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$IFR_GUID" 0x10 "$BUILD_DIR/$IFR_NAME.sct" -asis -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
+  done
 }
 
 function patch_mcodes {
