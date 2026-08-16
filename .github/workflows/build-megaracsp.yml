@@ -1,0 +1,36 @@
+name: Build MegaRAC SP
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'MEGARACSP/**'
+      - '.github/workflows/build-megaracsp.yml'
+    tags:
+      - 'N1_*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # build-docker.sh resolves the version itself: git tag at HEAD (N1_*)
+      # on tag pushes, otherwise the short SHA.
+      - name: Build BMC image
+        run: ./MEGARACSP/build-docker.sh
+
+      - name: Upload BMC image
+        uses: actions/upload-artifact@v4
+        with:
+          name: IMB760_BMC_mixa3607_mod
+          path: MEGARACSP/build-*/IMB760_BMC_mixa3607_mod-*.bin
+          if-no-files-found: error
+          retention-days: 30
