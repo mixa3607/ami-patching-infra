@@ -9,6 +9,12 @@ on:
       - '.github/workflows/build-megaracsp.yml'
     tags:
       - 'N1_*'
+  workflow_dispatch:
+    inputs:
+      mac:
+        description: 'BMC MAC address (overrides MEGARACSP/eth-mac.txt), e.g. DE:AD:BE:EF:EE:EF'
+        required: false
+        default: ''
 
 jobs:
   build:
@@ -21,6 +27,13 @@ jobs:
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
+
+      - name: Override MAC address
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.mac != ''
+        run: |
+          printf '%s\n' "${{ github.event.inputs.mac }}" > MEGARACSP/eth-mac.txt
+          grep -qE '^[[:xdigit:]]{2}(:[[:xdigit:]]{2}){5}$' MEGARACSP/eth-mac.txt \
+            || { echo 'invalid MAC address format' >&2; exit 1; }
 
       # build-docker.sh resolves the version itself: git tag at HEAD (N1_*)
       # on tag pushes, otherwise the short SHA.
