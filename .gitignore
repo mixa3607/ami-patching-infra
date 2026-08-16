@@ -1,4 +1,4 @@
-MEGARACSP/*.bin
+MEGARACSP/*.roundtrip.bin
 MEGARACSP/partitions/
 MEGARACSP/work/
 dist/
