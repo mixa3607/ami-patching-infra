@@ -1,0 +1,50 @@
+name: Build AMI BIOS
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'AMI/**'
+      - 'SOFTWARE/uefi-editor-cli/**'
+      - '.github/workflows/build-ami.yml'
+    tags:
+      - 'A1_*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # build-docker.sh resolves the version itself: git tag at HEAD (A1_*)
+      # on tag pushes, otherwise the short SHA.
+      - name: Build patched BIOS
+        run: ./AMI/build-docker.sh
+
+      - name: Upload BIOS ROM
+        uses: actions/upload-artifact@v4
+        with:
+          name: IMB760_BIOS_AMI_mod
+          path: AMI/build-*/IMB760_BIOS_AMI_mixa3607_mod-*.rom
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Publish release (tags only)
+        if: startsWith(github.ref, 'refs/tags/A1_')
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: IMB760 AMI BIOS ${{ github.ref_name }}
+          body: |
+            Patched IMB760 AMI BIOS (A1_*).
+          files: AMI/build-*/IMB760_BIOS_AMI_mixa3607_mod-*.rom
+          fail_on_unmatched_files: true
