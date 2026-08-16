@@ -14,8 +14,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,14 +35,3 @@ jobs:
           path: AMI/build-*/IMB760_BIOS_AMI_mixa3607_mod-*.rom
           if-no-files-found: error
           retention-days: 30
-
-      - name: Publish release (tags only)
-        if: startsWith(github.ref, 'refs/tags/A1_')
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ github.ref_name }}
-          name: IMB760 AMI BIOS ${{ github.ref_name }}
-          body: |
-            Patched IMB760 AMI BIOS (A1_*).
-          files: AMI/build-*/IMB760_BIOS_AMI_mixa3607_mod-*.rom
-          fail_on_unmatched_files: true
