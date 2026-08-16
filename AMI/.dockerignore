@@ -1,0 +1,7 @@
+/build-*/
+!build-ver.sh
+!build-docker.sh
+!Dockerfile
+/*.dump/
+/*.report.txt
+/*.guids.csv
