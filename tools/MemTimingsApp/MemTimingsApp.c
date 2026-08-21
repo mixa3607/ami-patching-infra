@@ -329,9 +329,9 @@ static VOID ProbeHardware(HW_PROBED_DATA *Data) {
     ProbeSmbios(Data);
 
     UINT8 Found = 0;
-    // Scan all PCIe buses for genuine Intel Memory Controllers (Bus 30/31/0..255)
-    // Strictly exclude Host Bridge (Bus 0 Dev 0)
-    UINT8 ScanBuses[] = { 30, 31, 0, 1, 2, 3, 4, 126, 127, 254, 255 };
+    // On Intel Whitley (Ice Lake-SP), IMC 8 channels reside on Bus 255 (0xFF) / Bus 254 (0xFE), Device 30 (0x1E), Functions 0..7
+    // Device IDs: 0x3458 (Ch A) .. 0x345F (Ch H)
+    UINT8 ScanBuses[] = { 255, 254, 30, 31, 127, 126, 0, 1, 2, 3, 4 };
     UINTN NumScanBuses = sizeof(ScanBuses) / sizeof(ScanBuses[0]);
 
     for (UINTN bi = 0; bi < NumScanBuses; bi++) {
@@ -350,11 +350,12 @@ static VOID ProbeHardware(HW_PROBED_DATA *Data) {
                     UINT8 sub_class = (class_reg >> 16) & 0xFF;
 
                     // Real Memory Controller or Uncore Channel Controller
-                    BOOLEAN IsImc = (base_class == 0x08 && sub_class == 0x80) ||
-                                    (device >= 0x09A3 && device <= 0x09AF) ||
+                    BOOLEAN IsImc = (device >= 0x3458 && device <= 0x345F) ||
                                     (device >= 0x3450 && device <= 0x3465) ||
-                                    (bus == 30 && dev >= 12 && dev <= 15) ||
-                                    (bus == 31 && dev >= 12 && dev <= 15);
+                                    (bus == 255 && dev == 0x1E) ||
+                                    (bus == 254 && dev == 0x1E) ||
+                                    (base_class == 0x08 && sub_class == 0x80);
+
 
                     if (IsImc && Found < 16) {
                         IMC_DEV_PROBE *pImc = &Data->Imc[Found];
