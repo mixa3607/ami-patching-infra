@@ -1,7 +1,6 @@
 #ifndef __MEM_TIMINGS_APP_H__
 #define __MEM_TIMINGS_APP_H__
 
-// Basic types
 typedef unsigned char      UINT8;
 typedef unsigned short     UINT16;
 typedef unsigned int       UINT32;
@@ -46,7 +45,6 @@ typedef VOID*              EFI_EVENT;
 
 #define EFI_ERROR(status) (((INT64)(status)) < 0)
 
-
 // Text Colors
 #define EFI_BLACK                 0x00
 #define EFI_BLUE                  0x01
@@ -83,6 +81,12 @@ typedef struct {
 
 #define SMBIOS3_TABLE_GUID \
     EFI_GUID_INIT(0xf2fd1544, 0x9794, 0x4a2c, 0x99, 0x2e, 0xe5, 0xbb, 0xcf, 0x20, 0xe3, 0x94)
+
+#define ACPI_20_TABLE_GUID \
+    EFI_GUID_INIT(0x8868e871, 0xe4f1, 0x11d3, 0xbc, 0x22, 0x00, 0x80, 0xc7, 0x3c, 0x88, 0x81)
+
+#define ACPI_10_TABLE_GUID \
+    EFI_GUID_INIT(0xeb9d2d30, 0x2d88, 0x11d3, 0x9a, 0x16, 0x00, 0x90, 0x27, 0x3f, 0xc1, 0x4d)
 
 // Simple Text Output Protocol
 typedef struct _EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL;
@@ -138,13 +142,11 @@ struct _EFI_SIMPLE_TEXT_INPUT_PROTOCOL {
     EFI_EVENT           WaitForKey;
 };
 
-// Configuration Table
 typedef struct {
     EFI_GUID VendorGuid;
     VOID     *VendorTable;
 } EFI_CONFIGURATION_TABLE;
 
-// Table header
 typedef struct {
     UINT64 Signature;
     UINT32 Revision;
@@ -153,7 +155,6 @@ typedef struct {
     UINT32 Reserved;
 } EFI_TABLE_HEADER;
 
-// Boot Services
 typedef struct _EFI_BOOT_SERVICES EFI_BOOT_SERVICES;
 struct _EFI_BOOT_SERVICES {
     EFI_TABLE_HEADER Hdr;
@@ -188,7 +189,6 @@ struct _EFI_BOOT_SERVICES {
     EFI_STATUS (EFIAPI *Stall)(IN UINTN Microseconds);
 };
 
-// System Table
 typedef struct {
     EFI_TABLE_HEADER                 Hdr;
     CHAR16                          *FirmwareVendor;
@@ -205,10 +205,48 @@ typedef struct {
     EFI_CONFIGURATION_TABLE         *ConfigurationTable;
 } EFI_SYSTEM_TABLE;
 
-// SMBIOS Types
+// ACPI & SMBIOS Types
 #pragma pack(1)
 typedef struct {
-    UINT8  AnchorString[4]; // "_SM_"
+    CHAR8  Signature[8];
+    UINT8  Checksum;
+    CHAR8  OemId[6];
+    UINT8  Revision;
+    UINT32 RsdtAddress;
+    UINT32 Length;
+    UINT64 XsdtAddress;
+    UINT8  ExtendedChecksum;
+    UINT8  Reserved[3];
+} ACPI_20_RSDP;
+
+typedef struct {
+    CHAR8  Signature[4];
+    UINT32 Length;
+    UINT8  Revision;
+    UINT8  Checksum;
+    CHAR8  OemId[6];
+    CHAR8  OemTableId[8];
+    UINT32 OemRevision;
+    UINT32 CreatorId;
+    UINT32 CreatorRevision;
+} ACPI_DESCRIPTION_HEADER;
+
+typedef struct {
+    UINT64 BaseAddress;
+    UINT16 PciSegmentGroupNumber;
+    UINT8  StartBusNumber;
+    UINT8  EndBusNumber;
+    UINT32 Reserved;
+} ACPI_MCFG_ALLOCATION;
+
+typedef struct {
+    ACPI_DESCRIPTION_HEADER Header;
+    UINT64                  Reserved;
+    ACPI_MCFG_ALLOCATION    Allocations[1];
+} ACPI_MCFG_TABLE;
+
+typedef struct {
+    UINT8  AnchorString[4];
     UINT8  EntryPointStructureChecksum;
     UINT8  EntryPointLength;
     UINT8  MajorVersion;
@@ -216,7 +254,7 @@ typedef struct {
     UINT16 MaxStructureSize;
     UINT8  EntryPointRevision;
     UINT8  FormattedArea[5];
-    UINT8  IntermediateAnchorString[5]; // "_DMI_"
+    UINT8  IntermediateAnchorString[5];
     UINT8  IntermediateChecksum;
     UINT16 TableLength;
     UINT32 TableAddress;
@@ -225,7 +263,7 @@ typedef struct {
 } SMBIOS_TABLE_ENTRY_POINT;
 
 typedef struct {
-    UINT8  AnchorString[5]; // "_SM3_"
+    UINT8  AnchorString[5];
     UINT8  EntryPointStructureChecksum;
     UINT8  EntryPointLength;
     UINT8  MajorVersion;
@@ -243,7 +281,6 @@ typedef struct {
     UINT16 Handle;
 } SMBIOS_HEADER;
 
-// SMBIOS Type 17: Memory Device
 typedef struct {
     SMBIOS_HEADER Hdr;
     UINT16 PhysicalMemoryArrayHandle;
