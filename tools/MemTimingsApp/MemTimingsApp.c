@@ -91,7 +91,6 @@ static VOID PrintHex64(IN UINT64 Value) {
     PrintStr(Buf);
 }
 
-// Legacy I/O Port PCI Read (0x00..0xFF)
 static UINT32 PciIoRead32(UINT8 Bus, UINT8 Dev, UINT8 Func, UINT8 Offset) {
     UINT32 Address = (1U << 31) | ((UINT32)Bus << 16) | ((UINT32)Dev << 11) | ((UINT32)Func << 8) | (Offset & 0xFC);
     __asm__ volatile("outl %0, %1" : : "a"(Address), "Nd"((UINT16)0xCF8));
@@ -100,7 +99,6 @@ static UINT32 PciIoRead32(UINT8 Bus, UINT8 Dev, UINT8 Func, UINT8 Offset) {
     return Data;
 }
 
-// Memory-Mapped PCIe Extended Config Read (0x000..0xFFF)
 static UINT32 MmPciRead32(UINT64 MmBase, UINT8 Bus, UINT8 Dev, UINT8 Func, UINT16 Offset) {
     if (MmBase == 0) return PciIoRead32(Bus, Dev, Func, (UINT8)Offset);
     volatile UINT32 *RegPtr = (volatile UINT32*)(UINTN)(MmBase + ((UINT64)Bus << 20) + ((UINT64)Dev << 15) + ((UINT64)Func << 12) + (Offset & 0xFFC));
@@ -112,7 +110,8 @@ typedef struct {
     UINT8  Dev;
     UINT8  Func;
     UINT16 DeviceId;
-    UINT32 RegData[16];
+    UINT16 TimingRegOffset;
+    UINT32 RegData[32]; // Offsets 0x00..0x7C and 0x100..0x17C
 } IMC_DEV_PROBE;
 
 typedef struct {
@@ -133,6 +132,7 @@ typedef struct {
     BOOLEAN DecodedFromHw;
     UINT8   HwBus, HwDev, HwFunc;
     UINT16  HwDevId;
+    UINT16  HwRegOffset;
     UINT16  tCL;
     UINT16  tRCD;
     UINT16  tRP;
@@ -164,11 +164,11 @@ typedef struct {
 } HW_PROBED_DATA;
 
 static HW_PROBED_DATA gData;
-static UINT8 gCurrentTab = 1; // 1 = Timings, 2 = DIMMs, 3 = Raw PCI/IMC
+static UINT8 gCurrentTab = 1;
+static UINT8 gSelectedImc = 0;
 
-// Locate ACPI MCFG table for PCIe MMCONFIG Base Address
 static UINT64 FindMmConfigBase(VOID) {
-    if (!gST || !gST->ConfigurationTable) return 0;
+    if (!gST || !gST->ConfigurationTable) return 0x80000000ULL;
 
     VOID *RsdpTable = NULL;
     EFI_GUID Acpi20Guid = ACPI_20_TABLE_GUID;
@@ -186,7 +186,7 @@ static UINT64 FindMmConfigBase(VOID) {
         }
     }
 
-    if (!RsdpTable) return 0x80000000ULL; // Standard Whitley base
+    if (!RsdpTable) return 0x80000000ULL;
 
     ACPI_20_RSDP *Rsdp = (ACPI_20_RSDP*)RsdpTable;
     if (Rsdp->Revision >= 2 && Rsdp->XsdtAddress != 0) {
@@ -329,6 +329,8 @@ static VOID ProbeHardware(HW_PROBED_DATA *Data) {
     ProbeSmbios(Data);
 
     UINT8 Found = 0;
+    // Scan all PCIe buses for genuine Intel Memory Controllers (Bus 30/31/0..255)
+    // Strictly exclude Host Bridge (Bus 0 Dev 0)
     UINT8 ScanBuses[] = { 30, 31, 0, 1, 2, 3, 4, 126, 127, 254, 255 };
     UINTN NumScanBuses = sizeof(ScanBuses) / sizeof(ScanBuses[0]);
 
@@ -336,19 +338,23 @@ static VOID ProbeHardware(HW_PROBED_DATA *Data) {
         UINT8 bus = ScanBuses[bi];
         for (UINT8 dev = 0; dev < 32; dev++) {
             for (UINT8 func = 0; func < 8; func++) {
+                if (bus == 0 && dev == 0) continue; // Skip Host Bridge 0:0:0
+
                 UINT32 id_reg = MmPciRead32(Data->MmConfigBase, bus, dev, func, 0x00);
                 UINT16 vendor = id_reg & 0xFFFF;
                 UINT16 device = (id_reg >> 16) & 0xFFFF;
 
-                if (vendor == 0x8086 && device != 0xFFFF) {
+                if (vendor == 0x8086 && device != 0xFFFF && device != 0x09A2) {
                     UINT32 class_reg = MmPciRead32(Data->MmConfigBase, bus, dev, func, 0x08);
                     UINT8 base_class = (class_reg >> 24) & 0xFF;
                     UINT8 sub_class = (class_reg >> 16) & 0xFF;
 
+                    // Real Memory Controller or Uncore Channel Controller
                     BOOLEAN IsImc = (base_class == 0x08 && sub_class == 0x80) ||
-                                    (device >= 0x09A0 && device <= 0x09AF) ||
+                                    (device >= 0x09A3 && device <= 0x09AF) ||
                                     (device >= 0x3450 && device <= 0x3465) ||
-                                    (bus == 30 && dev >= 12 && dev <= 15);
+                                    (bus == 30 && dev >= 12 && dev <= 15) ||
+                                    (bus == 31 && dev >= 12 && dev <= 15);
 
                     if (IsImc && Found < 16) {
                         IMC_DEV_PROBE *pImc = &Data->Imc[Found];
@@ -361,8 +367,8 @@ static VOID ProbeHardware(HW_PROBED_DATA *Data) {
                             pImc->RegData[reg] = MmPciRead32(Data->MmConfigBase, bus, dev, func, reg * 4);
                         }
 
-                        // Extended 4KB PCIe config search for TC_DBP / TC_RAP (0x100..0x400)
-                        for (UINT16 r = 0x80; r < 0x400; r += 4) {
+                        // Search timing registers in PCIe extended space (0x100..0x600)
+                        for (UINT16 r = 0x100; r < 0x600; r += 4) {
                             UINT32 val = MmPciRead32(Data->MmConfigBase, bus, dev, func, r);
                             if (val != 0 && val != 0xFFFFFFFF) {
                                 UINT8 cl = val & 0x3F;
@@ -370,12 +376,14 @@ static VOID ProbeHardware(HW_PROBED_DATA *Data) {
                                 UINT8 rcd = (val >> 16) & 0x3F;
                                 UINT8 rp = (val >> 24) & 0x3F;
 
-                                if (cl >= 9 && cl <= 32 && rcd >= 9 && rcd <= 32 && rp >= 9 && rp <= 32 && !Data->DecodedFromHw) {
+                                // Valid DDR4 timing range (e.g. 10..32)
+                                if (cl >= 10 && cl <= 32 && rcd >= 10 && rcd <= 32 && rp >= 10 && rp <= 32) {
                                     Data->DecodedFromHw = TRUE;
                                     Data->HwBus = bus;
                                     Data->HwDev = dev;
                                     Data->HwFunc = func;
                                     Data->HwDevId = device;
+                                    Data->HwRegOffset = r;
                                     Data->tCL = cl;
                                     Data->tCWL = cwl;
                                     Data->tRCD = rcd;
@@ -402,6 +410,7 @@ static VOID ProbeHardware(HW_PROBED_DATA *Data) {
                                         Data->tWTR_S = (val_misc >> 16) & 0x1F;
                                         Data->tWTR_L = (val_misc >> 24) & 0x1F;
                                     }
+                                    break;
                                 }
                             }
                         }
@@ -415,13 +424,11 @@ static VOID ProbeHardware(HW_PROBED_DATA *Data) {
     Data->FoundImcCount = Found;
 }
 
-// Top Tab Bar (Always exactly 3 lines)
 static VOID RenderTopTabs(VOID) {
     SetColor(EFI_TEXT_ATTR(EFI_WHITE, EFI_BLUE));
     PrintStr(L" ============================================================================== \r\n");
     PrintStr(L"  Axiomtek IMB760 (Intel Whitley Ice Lake-SP) Hardware Memory Monitor          \r\n");
 
-    // Tab buttons
     if (gCurrentTab == 1) SetColor(EFI_TEXT_ATTR(EFI_BLACK, EFI_LIGHTCYAN));
     else SetColor(EFI_TEXT_ATTR(EFI_WHITE, EFI_BLUE));
     PrintStr(L" [1] Active Timings ");
@@ -440,14 +447,12 @@ static VOID RenderTopTabs(VOID) {
     PrintStr(L"\r\n");
 }
 
-// Bottom Footer (Always exactly 2 lines)
 static VOID RenderFooter(VOID) {
     SetColor(EFI_TEXT_ATTR(EFI_WHITE, EFI_BLUE));
     PrintStr(L"  Keys: [1..3/Tab] Switch Tabs | [R] Re-probe | [Q/ESC] Exit                    \r\n");
     SetColor(EFI_TEXT_ATTR(EFI_LIGHTGRAY, EFI_BLACK));
 }
 
-// Tab 1: Timings Overview (Fits 80x25)
 static VOID RenderTab1_Timings(CONST HW_PROBED_DATA *Data) {
     SetColor(EFI_TEXT_ATTR(EFI_YELLOW, EFI_BLACK));
     PrintStr(L" [ MEMORY SYSTEM OVERVIEW ]\r\n");
@@ -490,16 +495,18 @@ static VOID RenderTab1_Timings(CONST HW_PROBED_DATA *Data) {
 
     if (Data->DecodedFromHw) {
         SetColor(EFI_TEXT_ATTR(EFI_DARKGRAY, EFI_BLACK));
-        PrintStr(L"  Source Controller: Bus ");
+        PrintStr(L"  Source: Bus ");
         PrintInt(Data->HwBus, 10);
         PrintStr(L", Dev ");
         PrintInt(Data->HwDev, 10);
         PrintStr(L", Func ");
         PrintInt(Data->HwFunc, 10);
-        PrintStr(L" (DevID: ");
+        PrintStr(L" | DevID: ");
         PrintHex8((UINT8)(Data->HwDevId >> 8));
         PrintHex8((UINT8)(Data->HwDevId & 0xFF));
-        PrintStr(L")\r\n\r\n");
+        PrintStr(L" | Offset: ");
+        PrintHex32(Data->HwRegOffset);
+        PrintStr(L"\r\n\r\n");
 
         SetColor(EFI_TEXT_ATTR(EFI_LIGHTGRAY, EFI_BLACK));
         PrintStr(L"  Primary Timings:\r\n  ");
@@ -535,7 +542,6 @@ static VOID RenderTab1_Timings(CONST HW_PROBED_DATA *Data) {
     }
 }
 
-// Tab 2: 16 DIMM Slots Table (Fits 80x25)
 static VOID RenderTab2_Dimms(CONST HW_PROBED_DATA *Data) {
     SetColor(EFI_TEXT_ATTR(EFI_YELLOW, EFI_BLACK));
     PrintStr(L" [ POPULATED DIMM MODULES (SMBIOS TABLE 17) ]\r\n");
@@ -579,18 +585,18 @@ static VOID RenderTab2_Dimms(CONST HW_PROBED_DATA *Data) {
     PrintStr(L"\r\n");
 }
 
-// Tab 3: Raw PCI / IMC Dump (Fits 80x25)
 static VOID RenderTab3_RawDump(CONST HW_PROBED_DATA *Data) {
     SetColor(EFI_TEXT_ATTR(EFI_YELLOW, EFI_BLACK));
     PrintStr(L" [ DETECTED PCI IMC CONTROLLERS & REGISTERS ]\r\n");
     SetColor(EFI_TEXT_ATTR(EFI_LIGHTCYAN, EFI_BLACK));
-    PrintStr(L"  Bus:Dev:Func  DevID   Vendor   Reg00 (ID)  Reg08(Class)  Reg10(BAR0)\r\n");
+    PrintStr(L"  #  Bus:Dev:Func  DevID   Vendor   Reg00 (ID)  Reg08(Class)  Reg10(BAR0)\r\n");
     SetColor(EFI_TEXT_ATTR(EFI_DARKGRAY, EFI_BLACK));
     PrintStr(L"  ----------------------------------------------------------------------------\r\n");
 
-    for (UINT8 i = 0; i < Data->FoundImcCount && i < 12; i++) {
+    for (UINT8 i = 0; i < Data->FoundImcCount && i < 10; i++) {
         SetColor(EFI_TEXT_ATTR(EFI_WHITE, EFI_BLACK));
-        PrintStr(L"  B"); PrintInt(Data->Imc[i].Bus, 10);
+        PrintStr(L"  "); PrintInt(i, 10); PrintStr(L"  B");
+        PrintInt(Data->Imc[i].Bus, 10);
         PrintStr(L":D"); PrintInt(Data->Imc[i].Dev, 10);
         PrintStr(L":F"); PrintInt(Data->Imc[i].Func, 10);
         PrintStr(L"   ");
@@ -604,7 +610,23 @@ static VOID RenderTab3_RawDump(CONST HW_PROBED_DATA *Data) {
         PrintHex32(Data->Imc[i].RegData[4]);
         PrintStr(L"\r\n");
     }
-    PrintStr(L"\r\n");
+
+    if (Data->FoundImcCount > 0 && gSelectedImc < Data->FoundImcCount) {
+        PrintStr(L"\r\n");
+        SetColor(EFI_TEXT_ATTR(EFI_YELLOW, EFI_BLACK));
+        PrintStr(L" [ SELECTED IMC REGISTERS 0x100..0x13C (Press Up/Down to switch IMC) ]\r\n  ");
+        SetColor(EFI_TEXT_ATTR(EFI_LIGHTGRAY, EFI_BLACK));
+        UINT8 b = Data->Imc[gSelectedImc].Bus;
+        UINT8 d = Data->Imc[gSelectedImc].Dev;
+        UINT8 f = Data->Imc[gSelectedImc].Func;
+        for (UINT16 off = 0x100; off < 0x140; off += 4) {
+            UINT32 val = MmPciRead32(Data->MmConfigBase, b, d, f, off);
+            PrintHex32(val);
+            PrintStr(L" ");
+            if (off == 0x11C) PrintStr(L"\r\n  ");
+        }
+        PrintStr(L"\r\n");
+    }
 }
 
 static VOID RenderScreen(VOID) {
@@ -622,7 +644,6 @@ static VOID RenderScreen(VOID) {
     RenderFooter();
 }
 
-// Entry Point
 EFI_STATUS EFIAPI UefiMain(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *SystemTable) {
     (VOID)ImageHandle;
     if (!SystemTable || !SystemTable->ConOut || !SystemTable->ConIn) return EFI_INVALID_PARAMETER;
@@ -642,12 +663,12 @@ EFI_STATUS EFIAPI UefiMain(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *Syste
         do {
             Status = gIn->ReadKeyStroke(gIn, &Key);
             if (Status == EFI_NOT_READY) {
-                if (gBS && gBS->Stall) gBS->Stall(50000); // 50ms
+                if (gBS && gBS->Stall) gBS->Stall(50000);
             }
         } while (Status == EFI_NOT_READY);
 
         if (!EFI_ERROR(Status)) {
-            if (Key.UnicodeChar == L'q' || Key.UnicodeChar == L'Q' || Key.ScanCode == 0x17) { // ESC / Q
+            if (Key.UnicodeChar == L'q' || Key.UnicodeChar == L'Q' || Key.ScanCode == 0x17) {
                 Clear();
                 break;
             }
@@ -657,10 +678,14 @@ EFI_STATUS EFIAPI UefiMain(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *Syste
                 gCurrentTab = 2;
             } else if (Key.UnicodeChar == L'3') {
                 gCurrentTab = 3;
-            } else if (Key.UnicodeChar == L'\t') { // Tab key
+            } else if (Key.UnicodeChar == L'\t') {
                 gCurrentTab = (gCurrentTab % 3) + 1;
             } else if (Key.UnicodeChar == L'r' || Key.UnicodeChar == L'R') {
                 ProbeHardware(&gData);
+            } else if (Key.ScanCode == 0x01) { // Up arrow
+                if (gSelectedImc > 0) gSelectedImc--;
+            } else if (Key.ScanCode == 0x02) { // Down arrow
+                if (gSelectedImc + 1 < gData.FoundImcCount) gSelectedImc++;
             }
         }
     }
