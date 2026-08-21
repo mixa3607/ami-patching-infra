@@ -4234,8 +4234,8 @@
           ]
         },
         {
-          "name": "Intel® VT for Directed I/O (VT-d)",
-          "description": "Press <Enter> to bring up the Intel® Virtualization for Directed I/O (VT-d) Configuration menu.",
+          "name": "Intel\u00ae VT for Directed I/O (VT-d)",
+          "description": "Press <Enter> to bring up the Intel\u00ae Virtualization for Directed I/O (VT-d) Configuration menu.",
           "type": "Ref",
           "questionId": "0x84",
           "varStoreId": "0x0",
@@ -4255,8 +4255,8 @@
           ]
         },
         {
-          "name": "Intel® VMD technology",
-          "description": "Press <Enter> to bring up the Intel® VMD for Volume Management Device Configuration menu.",
+          "name": "Intel\u00ae VMD technology",
+          "description": "Press <Enter> to bring up the Intel\u00ae VMD for Volume Management Device Configuration menu.",
           "type": "Ref",
           "questionId": "0x85",
           "varStoreId": "0x0",
@@ -4276,8 +4276,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD Technology (non-VMD)",
-          "description": "Press <Enter> to bring up the Intel® AIC Retimer/AIC SSD Configuration menu.",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD Technology (non-VMD)",
+          "description": "Press <Enter> to bring up the Intel\u00ae AIC Retimer/AIC SSD Configuration menu.",
           "type": "Ref",
           "questionId": "0x86",
           "varStoreId": "0x0",
@@ -10007,7 +10007,7 @@
       ]
     },
     {
-      "name": "Intel® VT for Directed I/O (VT-d)",
+      "name": "Intel\u00ae VT for Directed I/O (VT-d)",
       "type": "Form",
       "formId": "0x451",
       "referencedIn": [
@@ -10015,8 +10015,8 @@
       ],
       "children": [
         {
-          "name": "Intel® VT for Directed I/O",
-          "description": "Enable/Disable Intel® Virtualization Technology for Directed I/O (VT-d) by reporting the I/O device assignment to VMM through DMAR ACPI Tables.",
+          "name": "Intel\u00ae VT for Directed I/O",
+          "description": "Enable/Disable Intel\u00ae Virtualization Technology for Directed I/O (VT-d) by reporting the I/O device assignment to VMM through DMAR ACPI Tables.",
           "type": "OneOf",
           "questionId": "0x14A",
           "varStoreId": "0x1",
@@ -10258,7 +10258,7 @@
       ]
     },
     {
-      "name": "Intel® VMD technology",
+      "name": "Intel\u00ae VMD technology",
       "type": "Form",
       "formId": "0x6C0",
       "referencedIn": [
@@ -10266,7 +10266,7 @@
       ],
       "children": [
         {
-          "name": "Intel® VMD for Volume Management Device on Socket 0",
+          "name": "Intel\u00ae VMD for Volume Management Device on Socket 0",
           "description": "",
           "type": "Ref",
           "questionId": "0x152",
@@ -10287,7 +10287,7 @@
           ]
         },
         {
-          "name": "Intel® VMD for Volume Management Device on Socket 1",
+          "name": "Intel\u00ae VMD for Volume Management Device on Socket 1",
           "description": "",
           "type": "Ref",
           "questionId": "0x153",
@@ -10308,7 +10308,7 @@
           ]
         },
         {
-          "name": "Intel® VMD for Volume Management Device on Socket 2",
+          "name": "Intel\u00ae VMD for Volume Management Device on Socket 2",
           "description": "",
           "type": "Ref",
           "questionId": "0x154",
@@ -10329,7 +10329,7 @@
           ]
         },
         {
-          "name": "Intel® VMD for Volume Management Device on Socket 3",
+          "name": "Intel\u00ae VMD for Volume Management Device on Socket 3",
           "description": "",
           "type": "Ref",
           "questionId": "0x155",
@@ -10402,7 +10402,7 @@
       ]
     },
     {
-      "name": "Intel® AIC Retimer/AIC SSD Technology (non-VMD)",
+      "name": "Intel\u00ae AIC Retimer/AIC SSD Technology (non-VMD)",
       "type": "Form",
       "formId": "0x723",
       "referencedIn": [
@@ -10410,7 +10410,7 @@
       ],
       "children": [
         {
-          "name": "Intel® AIC Retimer/AIC SSD on Socket 0",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD on Socket 0",
           "description": "",
           "type": "Ref",
           "questionId": "0x158",
@@ -10431,7 +10431,7 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD on Socket 1",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD on Socket 1",
           "description": "",
           "type": "Ref",
           "questionId": "0x159",
@@ -10452,7 +10452,7 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD on Socket 2",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD on Socket 2",
           "description": "",
           "type": "Ref",
           "questionId": "0x15A",
@@ -10473,7 +10473,7 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD on Socket 3",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD on Socket 3",
           "description": "",
           "type": "Ref",
           "questionId": "0x15B",
@@ -10496,7 +10496,7 @@
       ]
     },
     {
-      "name": "Intel® AIC Retimer/AIC SSD on Socket 0",
+      "name": "Intel\u00ae AIC Retimer/AIC SSD on Socket 0",
       "type": "Form",
       "formId": "0x724",
       "referencedIn": [
@@ -10504,8 +10504,8 @@
       ],
       "children": [
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack1",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack1(Port1A-1D). Override IOU0 bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack1",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack1(Port1A-1D). Override IOU0 bifurcation if required",
           "type": "OneOf",
           "questionId": "0x15C",
           "varStoreId": "0x1",
@@ -10681,8 +10681,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack2",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack2(Port2A-2D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack2",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack2(Port2A-2D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x162",
           "varStoreId": "0x1",
@@ -10858,8 +10858,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack3",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack3(Port3A-3D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack3",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack3(Port3A-3D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x168",
           "varStoreId": "0x1",
@@ -11035,8 +11035,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack4",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack4(Port4A-4D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack4",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack4(Port4A-4D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x16E",
           "varStoreId": "0x1",
@@ -11212,8 +11212,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack5",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack5(Port5A-5D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack5",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack5(Port5A-5D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x174",
           "varStoreId": "0x1",
@@ -11391,7 +11391,7 @@
       ]
     },
     {
-      "name": "Intel® AIC Retimer/AIC SSD on Socket 1",
+      "name": "Intel\u00ae AIC Retimer/AIC SSD on Socket 1",
       "type": "Form",
       "formId": "0x725",
       "referencedIn": [
@@ -11399,8 +11399,8 @@
       ],
       "children": [
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack1",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack1(Port1A-1D). Override IOU0 bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack1",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack1(Port1A-1D). Override IOU0 bifurcation if required",
           "type": "OneOf",
           "questionId": "0x17A",
           "varStoreId": "0x1",
@@ -11576,8 +11576,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack2",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack2(Port2A-2D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack2",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack2(Port2A-2D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x180",
           "varStoreId": "0x1",
@@ -11753,8 +11753,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack3",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack3(Port3A-3D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack3",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack3(Port3A-3D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x186",
           "varStoreId": "0x1",
@@ -11930,8 +11930,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack4",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack4(Port4A-4D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack4",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack4(Port4A-4D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x18C",
           "varStoreId": "0x1",
@@ -12107,8 +12107,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack5",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack5(Port5A-5D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack5",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack5(Port5A-5D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x192",
           "varStoreId": "0x1",
@@ -12286,7 +12286,7 @@
       ]
     },
     {
-      "name": "Intel® AIC Retimer/AIC SSD on Socket 2",
+      "name": "Intel\u00ae AIC Retimer/AIC SSD on Socket 2",
       "type": "Form",
       "formId": "0x726",
       "referencedIn": [
@@ -12294,8 +12294,8 @@
       ],
       "children": [
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack1",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack1(Port1A-1D). Override IOU0 bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack1",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack1(Port1A-1D). Override IOU0 bifurcation if required",
           "type": "OneOf",
           "questionId": "0x198",
           "varStoreId": "0x1",
@@ -12471,8 +12471,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack2",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack2(Port2A-2D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack2",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack2(Port2A-2D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x19E",
           "varStoreId": "0x1",
@@ -12648,8 +12648,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack3",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack3(Port3A-3D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack3",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack3(Port3A-3D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x1A4",
           "varStoreId": "0x1",
@@ -12825,8 +12825,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack4",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack4(Port4A-4D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack4",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack4(Port4A-4D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x1AA",
           "varStoreId": "0x1",
@@ -13002,8 +13002,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack5",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack5(Port5A-5D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack5",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack5(Port5A-5D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x1B0",
           "varStoreId": "0x1",
@@ -13181,7 +13181,7 @@
       ]
     },
     {
-      "name": "Intel® AIC Retimer/AIC SSD on Socket 3",
+      "name": "Intel\u00ae AIC Retimer/AIC SSD on Socket 3",
       "type": "Form",
       "formId": "0x727",
       "referencedIn": [
@@ -13189,8 +13189,8 @@
       ],
       "children": [
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack1",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack1(Port1A-1D). Override IOU0 bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack1",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack1(Port1A-1D). Override IOU0 bifurcation if required",
           "type": "OneOf",
           "questionId": "0x1B6",
           "varStoreId": "0x1",
@@ -13366,8 +13366,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack2",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack2(Port2A-2D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack2",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack2(Port2A-2D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x1BC",
           "varStoreId": "0x1",
@@ -13543,8 +13543,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack3",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack3(Port3A-3D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack3",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack3(Port3A-3D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x1C2",
           "varStoreId": "0x1",
@@ -13720,8 +13720,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack4",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack4(Port4A-4D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack4",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack4(Port4A-4D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x1C8",
           "varStoreId": "0x1",
@@ -13897,8 +13897,8 @@
           ]
         },
         {
-          "name": "Intel® AIC Retimer/AIC SSD HW at Stack5",
-          "description": "Anounce Intel® AIC Retimer/AIC SSD HW at Stack5(Port5A-5D). Override IOUx bifurcation if required",
+          "name": "Intel\u00ae AIC Retimer/AIC SSD HW at Stack5",
+          "description": "Anounce Intel\u00ae AIC Retimer/AIC SSD HW at Stack5(Port5A-5D). Override IOUx bifurcation if required",
           "type": "OneOf",
           "questionId": "0x1CE",
           "varStoreId": "0x1",
@@ -17127,7 +17127,7 @@
       ]
     },
     {
-      "name": "Intel® VMD for Volume Management Device on Socket 0",
+      "name": "Intel\u00ae VMD for Volume Management Device on Socket 0",
       "type": "Form",
       "formId": "0x6C1",
       "referencedIn": [
@@ -18082,7 +18082,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x252",
           "varStoreId": "0x1",
@@ -18112,7 +18112,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x253",
           "varStoreId": "0x1",
@@ -18142,7 +18142,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x254",
           "varStoreId": "0x1",
@@ -18172,7 +18172,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x255",
           "varStoreId": "0x1",
@@ -18493,7 +18493,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x25F",
           "varStoreId": "0x1",
@@ -18524,7 +18524,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x260",
           "varStoreId": "0x1",
@@ -18555,7 +18555,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x261",
           "varStoreId": "0x1",
@@ -18586,7 +18586,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x262",
           "varStoreId": "0x1",
@@ -18913,7 +18913,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x26C",
           "varStoreId": "0x1",
@@ -18943,7 +18943,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x26D",
           "varStoreId": "0x1",
@@ -18969,7 +18969,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x26E",
           "varStoreId": "0x1",
@@ -18999,7 +18999,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x26F",
           "varStoreId": "0x1",
@@ -19317,7 +19317,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x279",
           "varStoreId": "0x1",
@@ -19347,7 +19347,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x27A",
           "varStoreId": "0x1",
@@ -19377,7 +19377,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x27B",
           "varStoreId": "0x1",
@@ -19407,7 +19407,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x27C",
           "varStoreId": "0x1",
@@ -19725,7 +19725,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x286",
           "varStoreId": "0x1",
@@ -19755,7 +19755,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x287",
           "varStoreId": "0x1",
@@ -19785,7 +19785,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x288",
           "varStoreId": "0x1",
@@ -19815,7 +19815,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x289",
           "varStoreId": "0x1",
@@ -20133,7 +20133,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x293",
           "varStoreId": "0x1",
@@ -20163,7 +20163,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x294",
           "varStoreId": "0x1",
@@ -20193,7 +20193,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x295",
           "varStoreId": "0x1",
@@ -20223,7 +20223,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x296",
           "varStoreId": "0x1",
@@ -20515,7 +20515,7 @@
       ]
     },
     {
-      "name": "Intel® VMD for Volume Management Device on Socket 1",
+      "name": "Intel\u00ae VMD for Volume Management Device on Socket 1",
       "type": "Form",
       "formId": "0x6C2",
       "referencedIn": [
@@ -21470,7 +21470,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2BD",
           "varStoreId": "0x1",
@@ -21500,7 +21500,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2BE",
           "varStoreId": "0x1",
@@ -21530,7 +21530,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2BF",
           "varStoreId": "0x1",
@@ -21560,7 +21560,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2C0",
           "varStoreId": "0x1",
@@ -21881,7 +21881,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2CA",
           "varStoreId": "0x1",
@@ -21912,7 +21912,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2CB",
           "varStoreId": "0x1",
@@ -21943,7 +21943,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2CC",
           "varStoreId": "0x1",
@@ -21974,7 +21974,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2CD",
           "varStoreId": "0x1",
@@ -22301,7 +22301,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2D7",
           "varStoreId": "0x1",
@@ -22331,7 +22331,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2D8",
           "varStoreId": "0x1",
@@ -22361,7 +22361,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2D9",
           "varStoreId": "0x1",
@@ -22391,7 +22391,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2DA",
           "varStoreId": "0x1",
@@ -22709,7 +22709,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2E4",
           "varStoreId": "0x1",
@@ -22739,7 +22739,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2E5",
           "varStoreId": "0x1",
@@ -22769,7 +22769,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2E6",
           "varStoreId": "0x1",
@@ -22799,7 +22799,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2E7",
           "varStoreId": "0x1",
@@ -23117,7 +23117,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2F1",
           "varStoreId": "0x1",
@@ -23147,7 +23147,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2F2",
           "varStoreId": "0x1",
@@ -23177,7 +23177,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2F3",
           "varStoreId": "0x1",
@@ -23207,7 +23207,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2F4",
           "varStoreId": "0x1",
@@ -23525,7 +23525,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2FE",
           "varStoreId": "0x1",
@@ -23555,7 +23555,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x2FF",
           "varStoreId": "0x1",
@@ -23585,7 +23585,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x300",
           "varStoreId": "0x1",
@@ -23615,7 +23615,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x301",
           "varStoreId": "0x1",
@@ -23907,7 +23907,7 @@
       ]
     },
     {
-      "name": "Intel® VMD for Volume Management Device on Socket 2",
+      "name": "Intel\u00ae VMD for Volume Management Device on Socket 2",
       "type": "Form",
       "formId": "0x6C3",
       "referencedIn": [
@@ -24862,7 +24862,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x328",
           "varStoreId": "0x1",
@@ -24892,7 +24892,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x329",
           "varStoreId": "0x1",
@@ -24922,7 +24922,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x32A",
           "varStoreId": "0x1",
@@ -24952,7 +24952,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x32B",
           "varStoreId": "0x1",
@@ -25273,7 +25273,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x335",
           "varStoreId": "0x1",
@@ -25304,7 +25304,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x336",
           "varStoreId": "0x1",
@@ -25335,7 +25335,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x337",
           "varStoreId": "0x1",
@@ -25366,7 +25366,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x338",
           "varStoreId": "0x1",
@@ -25693,7 +25693,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x342",
           "varStoreId": "0x1",
@@ -25723,7 +25723,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x343",
           "varStoreId": "0x1",
@@ -25753,7 +25753,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x344",
           "varStoreId": "0x1",
@@ -25783,7 +25783,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x345",
           "varStoreId": "0x1",
@@ -26101,7 +26101,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x34F",
           "varStoreId": "0x1",
@@ -26131,7 +26131,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x350",
           "varStoreId": "0x1",
@@ -26161,7 +26161,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x351",
           "varStoreId": "0x1",
@@ -26191,7 +26191,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x352",
           "varStoreId": "0x1",
@@ -26509,7 +26509,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x35C",
           "varStoreId": "0x1",
@@ -26539,7 +26539,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x35D",
           "varStoreId": "0x1",
@@ -26569,7 +26569,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x35E",
           "varStoreId": "0x1",
@@ -26599,7 +26599,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x35F",
           "varStoreId": "0x1",
@@ -26917,7 +26917,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x369",
           "varStoreId": "0x1",
@@ -26947,7 +26947,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x36A",
           "varStoreId": "0x1",
@@ -26977,7 +26977,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x36B",
           "varStoreId": "0x1",
@@ -27007,7 +27007,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x36C",
           "varStoreId": "0x1",
@@ -27299,7 +27299,7 @@
       ]
     },
     {
-      "name": "Intel® VMD for Volume Management Device on Socket 3",
+      "name": "Intel\u00ae VMD for Volume Management Device on Socket 3",
       "type": "Form",
       "formId": "0x6C4",
       "referencedIn": [
@@ -28254,7 +28254,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x393",
           "varStoreId": "0x1",
@@ -28284,7 +28284,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x394",
           "varStoreId": "0x1",
@@ -28314,7 +28314,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x395",
           "varStoreId": "0x1",
@@ -28344,7 +28344,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x396",
           "varStoreId": "0x1",
@@ -28665,7 +28665,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3A0",
           "varStoreId": "0x1",
@@ -28696,7 +28696,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3A1",
           "varStoreId": "0x1",
@@ -28727,7 +28727,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3A2",
           "varStoreId": "0x1",
@@ -28758,7 +28758,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3A3",
           "varStoreId": "0x1",
@@ -29085,7 +29085,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3AD",
           "varStoreId": "0x1",
@@ -29115,7 +29115,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3AE",
           "varStoreId": "0x1",
@@ -29145,7 +29145,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3AF",
           "varStoreId": "0x1",
@@ -29175,7 +29175,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3B0",
           "varStoreId": "0x1",
@@ -29493,7 +29493,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3BA",
           "varStoreId": "0x1",
@@ -29523,7 +29523,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3BB",
           "varStoreId": "0x1",
@@ -29553,7 +29553,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3BC",
           "varStoreId": "0x1",
@@ -29583,7 +29583,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3BD",
           "varStoreId": "0x1",
@@ -29901,7 +29901,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3C7",
           "varStoreId": "0x1",
@@ -29931,7 +29931,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3C8",
           "varStoreId": "0x1",
@@ -29961,7 +29961,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3C9",
           "varStoreId": "0x1",
@@ -29991,7 +29991,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3CA",
           "varStoreId": "0x1",
@@ -30309,7 +30309,7 @@
         },
         {
           "name": "VMD port A",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3D4",
           "varStoreId": "0x1",
@@ -30339,7 +30339,7 @@
         },
         {
           "name": "VMD port B",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3D5",
           "varStoreId": "0x1",
@@ -30369,7 +30369,7 @@
         },
         {
           "name": "VMD port C",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3D6",
           "varStoreId": "0x1",
@@ -30399,7 +30399,7 @@
         },
         {
           "name": "VMD port D",
-          "description": "Enable/Disable Intel® Volume Management Device Technology on specific root port",
+          "description": "Enable/Disable Intel\u00ae Volume Management Device Technology on specific root port",
           "type": "OneOf",
           "questionId": "0x3D7",
           "varStoreId": "0x1",
@@ -145348,7 +145348,7 @@
         },
         {
           "name": "Non-preferred way mask",
-          "description": "10-bit mask used to control the bias counter ratio:<br><br> Bit 0 applies to 1st miss<br><br> Bit 1 applies to 2nd miss<br><br> ...<br><br> Bit 9 applies to 10th miss and it repeats (Bit 0 applies to 11th miss and so on)<br><br>If bit X of this mask is:<br><br> 0 - (n*10+X+1)th miss should be allocated in preferred way<br><br> 1 – (n*10+X+1)th miss should be allocated in non-preferred way",
+          "description": "10-bit mask used to control the bias counter ratio:<br><br> Bit 0 applies to 1st miss<br><br> Bit 1 applies to 2nd miss<br><br> ...<br><br> Bit 9 applies to 10th miss and it repeats (Bit 0 applies to 11th miss and so on)<br><br>If bit X of this mask is:<br><br> 0 - (n*10+X+1)th miss should be allocated in preferred way<br><br> 1 \u2013 (n*10+X+1)th miss should be allocated in non-preferred way",
           "type": "Numeric",
           "questionId": "0x126C",
           "varStoreId": "0x4",
@@ -171242,19 +171242,19 @@
   "suppressions": [
     {
       "offset": "0x126D9",
-      "active": true,
+      "active": false,
       "start": "0x126E1",
       "end": "0x126FF"
     },
     {
       "offset": "0x12701",
-      "active": true,
+      "active": false,
       "start": "0x12709",
       "end": "0x12718"
     },
     {
       "offset": "0x12729",
-      "active": true,
+      "active": false,
       "start": "0x12731",
       "end": "0x12740"
     },
@@ -179654,19 +179654,19 @@
     },
     {
       "offset": "0x3FA92",
-      "active": true,
+      "active": false,
       "start": "0x3FA9A",
       "end": "0x3FAC2"
     },
     {
       "offset": "0x3FB0D",
-      "active": true,
+      "active": false,
       "start": "0x3FB27",
       "end": "0x3FBF7"
     },
     {
       "offset": "0x3FBF9",
-      "active": true,
+      "active": false,
       "start": "0x3FC15",
       "end": "0x3FCDE"
     },
@@ -179804,13 +179804,13 @@
     },
     {
       "offset": "0x408EE",
-      "active": true,
+      "active": false,
       "start": "0x40910",
       "end": "0x40931"
     },
     {
       "offset": "0x40933",
-      "active": true,
+      "active": false,
       "start": "0x40937",
       "end": "0x40990"
     },
@@ -179834,7 +179834,7 @@
     },
     {
       "offset": "0x40BBB",
-      "active": true,
+      "active": false,
       "start": "0x40BD1",
       "end": "0x40BF9"
     },
@@ -180008,31 +180008,31 @@
     },
     {
       "offset": "0x417C2",
-      "active": true,
+      "active": false,
       "start": "0x417C6",
       "end": "0x417E5"
     },
     {
       "offset": "0x417E7",
-      "active": true,
+      "active": false,
       "start": "0x417F3",
       "end": "0x41814"
     },
     {
       "offset": "0x41816",
-      "active": true,
+      "active": false,
       "start": "0x41822",
       "end": "0x4184A"
     },
     {
       "offset": "0x4184C",
-      "active": true,
+      "active": false,
       "start": "0x41858",
       "end": "0x41887"
     },
     {
       "offset": "0x41889",
-      "active": true,
+      "active": false,
       "start": "0x41891",
       "end": "0x41AA0"
     },
