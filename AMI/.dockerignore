@@ -1,4 +1,4 @@
-/build-*/
+/build/
 !build-ver.sh
 !build-docker.sh
 !Dockerfile
