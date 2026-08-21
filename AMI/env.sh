@@ -30,6 +30,11 @@ SOURCES_DIR="$PWD"
 BUILD_DIR="$PWD/build-$PATCH_VERSION"
 TOOLS_DIR="$PWD/../SOFTWARE"
 
+NODE_BIN="$(ls /home/mixa3607/.nvm/versions/node/*/bin/node 2>/dev/null | tail -1)"
+if [ -f "$NODE_BIN" ]; then
+  export PATH="$(dirname "$NODE_BIN"):$PATH"
+fi
+
 uefireplace="$TOOLS_DIR/UEFITool_0.28.0/UEFIReplace"
 uefimodtools="$TOOLS_DIR/uefi-mod-tools_v1.3.0/uefi-mod-tools"
 uefieditorcli="node $TOOLS_DIR/uefi-editor-cli/index.mjs"

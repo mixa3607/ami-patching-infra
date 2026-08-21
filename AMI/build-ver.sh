@@ -110,6 +110,13 @@ function patch_dmi {
   $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$DMI_TABLE_GUID" 0x18 "$BUILD_DIR/dmi-table.bin" -o "$BUILD_DIR/$PATCHED_DUMP"
 }
 
+function patch_custom_modules {
+  echo "Building custom DXE modules"
+  make -C "$SOURCES_DIR/modules/MemTimingDxe"
+  echo "Injecting MemTimingDxe module into BIOS"
+  $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "BCEA6548-E204-4486-8F2A-36E13C7838CE" 0x10 "$SOURCES_DIR/modules/MemTimingDxe/MemTimingDxe.efi" -asis -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
+}
+
 echo "==================== Ami Aptio BIOS patching ==============="
 echo "Patch version: $PATCH_VERSION"
 echo "Source dir: $SOURCES_DIR"
@@ -130,6 +137,7 @@ patch_dmi
 patch_logos
 patch_IFRs
 patch_mcodes
+patch_custom_modules
 echo
 
 echo "==================== Final ===================="

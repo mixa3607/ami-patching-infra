@@ -12,6 +12,9 @@ RUN apt-get update \
         jq \
         nodejs \
         python3 \
+        clang \
+        lld \
+        make \
         libqt5core5t64 \
         libdouble-conversion3 \
         libglib2.0-0t64 \
