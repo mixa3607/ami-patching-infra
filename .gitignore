@@ -3,3 +3,4 @@ MEGARACSP/partitions/
 MEGARACSP/work/
 dist/
 dist-*/
+/infra.txt
