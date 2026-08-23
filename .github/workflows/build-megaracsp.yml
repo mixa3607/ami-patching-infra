@@ -44,6 +44,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: IMB760_BMC_mixa3607_mod
-          path: MEGARACSP/build-*/IMB760_BMC_mixa3607_mod-*.bin
+          path: MEGARACSP/build/*/IMB760_BMC_mixa3607_mod-*.bin
           if-no-files-found: error
           retention-days: 30

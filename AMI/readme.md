@@ -18,7 +18,7 @@ Features:
   - patches each `IFR/*/orig/*.sct` + shared setupdata/AMITSE from `data.json`
     using `SOFTWARE/uefi-editor-cli` (no browser required)
   - injects the patched sections with UEFIReplace
-- Flash build-XXXXX/*.rom BIOS
+- Flash build/XXXXX/*.rom BIOS
 
 ## IMB760
 ### Known issue

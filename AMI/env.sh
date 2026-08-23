@@ -27,7 +27,7 @@ fi
 BASE_DUMP="IMB760_BIOS.bin"
 PATCHED_DUMP="IMB760_BIOS_AMI_mixa3607_mod-$PATCH_VERSION.rom"
 SOURCES_DIR="$PWD"
-BUILD_DIR="$PWD/build-$PATCH_VERSION"
+BUILD_DIR="$PWD/build/$PATCH_VERSION"
 TOOLS_DIR="$PWD/../SOFTWARE"
 
 NODE_BIN="$(ls /home/mixa3607/.nvm/versions/node/*/bin/node 2>/dev/null | tail -1)"

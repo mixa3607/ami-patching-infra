@@ -19,9 +19,9 @@ Build a ready-to-flash IMB760 BMC image with:
    ./build-docker.sh
    ```
 
-   The image is written to `build-<git-tag-or-short-sha>/`.
+   The image is written to `build/<git-tag-or-short-sha>/`.
 
-3. Flash `build-<git-tag-or-short-sha>/IMB760_BMC_mixa3607_mod-<version>-<git-tag-or-short-sha>.bin` using the established BMC
+3. Flash `build/<git-tag-or-short-sha>/IMB760_BMC_mixa3607_mod-<version>-<git-tag-or-short-sha>.bin` using the established BMC
    recovery procedure. Do not interrupt power while SPI flash is being written.
 4. Open the stock BMC UI at `http://BMC-IP/`, SSH as `sysadmin`, or open native
    KVM at the URL above. Native KVM Basic Auth defaults to `admin:admin`; use it
@@ -103,4 +103,4 @@ stage exports only the final image:
 ./build-docker.sh
 ```
 
-Set `REPO_GIT_REF` to choose the `build-<version>` directory name explicitly.
+Set `REPO_GIT_REF` to choose the `build/<version>` directory name explicitly.

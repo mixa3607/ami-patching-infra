@@ -51,4 +51,4 @@ RUN chmod +x /workspace/AMI/build-ver.sh \
     && REPO_GIT_REF="$REPO_GIT_REF" ./build-ver.sh
 
 FROM scratch AS artifact
-COPY --from=build /workspace/AMI/build-*/IMB760_BIOS_AMI_mixa3607_mod-*.rom /
+COPY --from=build /workspace/AMI/build/*/IMB760_BIOS_AMI_mixa3607_mod-*.rom /

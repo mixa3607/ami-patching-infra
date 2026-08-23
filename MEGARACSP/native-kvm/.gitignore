@@ -1,9 +1,4 @@
-ami-kvm-server
-ami-power-helper
-*.o
-ast2500-jpeg-capture
-iusb-hid-diag
-native-kvm-loop
+build/
 __pycache__/
 native-kvm.users
 out/

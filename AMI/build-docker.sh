@@ -19,7 +19,7 @@ else
     fi
 fi
 
-build_dir="$script_dir/build-$patch_version"
+build_dir="$script_dir/build/$patch_version"
 rm -rf "$build_dir"
 mkdir -p "$build_dir"
 

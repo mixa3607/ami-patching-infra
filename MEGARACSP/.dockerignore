@@ -1,5 +1,5 @@
 .git/
-/build-*/
+/build/
 /partitions/
 /work/
 /*.roundtrip.bin

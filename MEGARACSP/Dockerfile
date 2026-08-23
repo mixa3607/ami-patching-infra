@@ -66,7 +66,7 @@ COPY native-kvm/ /workspace/MEGARACSP/native-kvm/
 RUN make -C /workspace/MEGARACSP/native-kvm ami-kvm-server native-kvm-loop \
     && /workspace/MEGARACSP/native-kvm/scripts/build-root-cramfs.sh \
         /tmp/partitions/50_root.cramfs \
-        /workspace/MEGARACSP/native-kvm/native-kvm-loop \
+        /workspace/MEGARACSP/native-kvm/build/native-kvm-loop \
         /workspace/MEGARACSP/work/native-kvm-root.cramfs \
         --drop-legacy-zoneinfo
 

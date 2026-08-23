@@ -15,7 +15,7 @@ else
     fi
 fi
 
-build_dir="$script_dir/build-$patch_version"
+build_dir="$script_dir/build/$patch_version"
 version="$(tr -d '\r\n' < "$script_dir/version.txt")"
 case "$version" in
     [0-9][0-9]) ;;

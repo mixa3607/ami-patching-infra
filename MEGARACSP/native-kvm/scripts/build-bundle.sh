@@ -29,14 +29,14 @@ cleanup()
 trap cleanup EXIT HUP INT TERM
 
 make -C "$repo_dir" ami-kvm-server
-file "$repo_dir/ami-kvm-server" | grep -q 'statically linked' || {
+file "$repo_dir/build/ami-kvm-server" | grep -q 'statically linked' || {
 	printf '%s\n' 'ami-kvm-server is not statically linked' >&2
 	exit 1
 }
 
 stage=$tmp/root
 mkdir -p "$stage/vendor"
-cp "$repo_dir/ami-kvm-server" "$stage/ami-kvm-server"
+cp "$repo_dir/build/ami-kvm-server" "$stage/ami-kvm-server"
 cp "$repo_dir/run-ami-kvm-with-videocap.sh" "$stage/run-ami-kvm-with-videocap.sh"
 cp "$repo_dir/scripts/verify-manifest.sh" "$stage/verify-manifest.sh"
 cp "$module" "$stage/videocap.ko"

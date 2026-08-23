@@ -32,6 +32,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: IMB760_BIOS_AMI_mod
-          path: AMI/build-*/IMB760_BIOS_AMI_mixa3607_mod-*.rom
+          path: AMI/build/*/IMB760_BIOS_AMI_mixa3607_mod-*.rom
           if-no-files-found: error
           retention-days: 30
