@@ -1,0 +1,8 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: DF354h
+Address: FE0DF354h
+Offset: 284h
+Full size: 50h (80)
+Type: 0h

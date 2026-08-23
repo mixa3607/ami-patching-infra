@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D4D088h
+Header address: FFD4D088h
+Data address: FFD4D08Ch
+Offset: 2D58h
+Type: 15h
+Full size: 20h (32)
+Header size: 4h (4)
+Body size: 1Ch (28)
+Text: RegAccessPeim

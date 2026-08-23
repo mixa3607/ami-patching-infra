@@ -1,0 +1,25 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: DF4BCh
+Address: FE0DF4BCh
+Offset: 3ECh
+Full size: 58h (88)
+Type: 16h
+Partition name: FTPR
+Partition length: 8C000h
+Partition version major: 1000h
+Partition version minor: 0h
+Data format version: 10000h
+Instance ID: 1h
+Hash algorithm: 2h
+Hash size: 20h
+Action on update: 0h
+Support multiple instances: No
+Support API version based update: No
+Obey full update rules: No
+IFR enable only: No
+Allow cross point update: No
+Allow cross hotfix update: No
+Partial update only: No
+Partition hash: 3253dac3225948faefaebcd397b80a15946e1f6ffca772919bf6d32fa8af5ea1

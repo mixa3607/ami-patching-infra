@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D525F4h
+Header address: FFD525F4h
+Data address: FFD525F8h
+Offset: 3F7Ch
+Type: 15h
+Full size: 1Eh (30)
+Header size: 4h (4)
+Body size: 1Ah (26)
+Text: MemCacheInit

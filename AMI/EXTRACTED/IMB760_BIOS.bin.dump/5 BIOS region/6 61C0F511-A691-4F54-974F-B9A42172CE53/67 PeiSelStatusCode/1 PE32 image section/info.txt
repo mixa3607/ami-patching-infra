@@ -1,0 +1,21 @@
+Type: Section
+Subtype: PE32 image
+Fixed: No
+Base: 1DA364Ch
+Header address: FFDA364Ch
+Data address: FFDA3650h
+Offset: 64h
+Type: 10h
+Full size: E04h (3588)
+Header size: 4h (4)
+Body size: E00h (3584)
+DOS signature: 5A4Dh
+PE signature: 00004550h
+Machine type: x86
+Number of sections: 3
+Characteristics: 2102h
+Optional header signature: 010Bh
+Subsystem: 000Bh
+Address of entry point: 27Dh
+Base of code: 220h
+Image base: FFDA3650h

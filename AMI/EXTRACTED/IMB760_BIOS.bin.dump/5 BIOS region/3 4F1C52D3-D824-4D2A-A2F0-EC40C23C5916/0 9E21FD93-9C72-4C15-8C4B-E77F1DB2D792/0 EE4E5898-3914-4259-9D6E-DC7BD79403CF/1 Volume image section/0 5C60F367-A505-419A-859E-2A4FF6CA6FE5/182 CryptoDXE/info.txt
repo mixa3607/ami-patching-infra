@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: CryptoDXE
+Fixed: No
+Offset: 40D458h
+File GUID: 77EB6C06-FD48-488B-A1B3-AE0A70801369
+Type: 07h
+Attributes: 00h
+Full size: EA5Ah (59994)
+Header size: 18h (24)
+Body size: EA42h (59970)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 51h, valid
+Data checksum: AAh, valid

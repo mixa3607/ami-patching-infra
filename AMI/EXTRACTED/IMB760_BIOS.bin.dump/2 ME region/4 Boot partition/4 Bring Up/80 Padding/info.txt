@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 2B9634h
+Address: FE2B9634h
+Offset: 116634h
+Full size: Ch (12)

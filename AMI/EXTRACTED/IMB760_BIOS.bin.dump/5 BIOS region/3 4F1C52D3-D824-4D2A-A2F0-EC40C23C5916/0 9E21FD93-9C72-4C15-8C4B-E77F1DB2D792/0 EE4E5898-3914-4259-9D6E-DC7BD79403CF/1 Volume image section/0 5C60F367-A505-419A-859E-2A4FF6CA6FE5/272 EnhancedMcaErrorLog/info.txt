@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: EnhancedMcaErrorLog
+Fixed: No
+Offset: E101D0h
+File GUID: 2C0974A9-E7A3-4C45-B8B7-3A046E350A50
+Type: 0Ah
+Attributes: 00h
+Full size: 639Eh (25502)
+Header size: 18h (24)
+Body size: 6386h (25478)
+Tail size: 0h (0)
+State: F8h
+Header checksum: DEh, valid
+Data checksum: AAh, valid

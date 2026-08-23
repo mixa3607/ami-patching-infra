@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: Ip6BmcLanConfig
+Fixed: No
+Offset: D9D00h
+File GUID: E5DAFE50-10CB-41B5-9CB5-274E1CF1A8D7
+Type: 07h
+Attributes: 00h
+Full size: 1656h (5718)
+Header size: 18h (24)
+Body size: 163Eh (5694)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 5Dh, valid
+Data checksum: AAh, valid

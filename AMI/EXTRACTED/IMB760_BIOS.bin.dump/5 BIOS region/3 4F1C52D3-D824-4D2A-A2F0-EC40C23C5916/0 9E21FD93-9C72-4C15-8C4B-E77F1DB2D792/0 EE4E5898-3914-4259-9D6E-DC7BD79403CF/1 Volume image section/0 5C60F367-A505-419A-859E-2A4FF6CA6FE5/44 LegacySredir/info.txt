@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: LegacySredir
+Fixed: No
+Offset: 10EE98h
+File GUID: 4A3602BC-1A05-4C82-99B4-588CD2A32CD5
+Type: 07h
+Attributes: 00h
+Full size: 1E8Ah (7818)
+Header size: 18h (24)
+Body size: 1E72h (7794)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 7Fh, valid
+Data checksum: AAh, valid

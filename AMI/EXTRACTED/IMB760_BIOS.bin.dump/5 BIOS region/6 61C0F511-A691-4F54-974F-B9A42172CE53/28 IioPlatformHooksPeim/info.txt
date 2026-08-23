@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: IioPlatformHooksPeim
+Fixed: No
+Base: 1D574E8h
+Header address: FFD574E8h
+Data address: FFD57500h
+Offset: 1574E8h
+File GUID: 54B6C2D3-79A9-400C-A3F6-D737CBEC6368
+Type: 06h
+Attributes: 00h
+Full size: E16h (3606)
+Header size: 18h (24)
+Body size: DFEh (3582)
+Tail size: 0h (0)
+State: F8h
+Header checksum: A0h, valid
+Data checksum: AAh, valid

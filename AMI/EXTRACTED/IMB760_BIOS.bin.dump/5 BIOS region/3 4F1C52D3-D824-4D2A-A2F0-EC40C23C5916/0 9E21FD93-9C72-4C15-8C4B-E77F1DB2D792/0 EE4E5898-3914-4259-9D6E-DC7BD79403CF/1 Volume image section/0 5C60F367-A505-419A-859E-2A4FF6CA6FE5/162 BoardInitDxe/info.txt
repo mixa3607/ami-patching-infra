@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: BoardInitDxe
+Fixed: No
+Offset: 356FD8h
+File GUID: 69E6DD6D-F09E-485F-9627-EB70E9CFC82A
+Type: 07h
+Attributes: 00h
+Full size: DA6h (3494)
+Header size: 18h (24)
+Body size: D8Eh (3470)
+Tail size: 0h (0)
+State: F8h
+Header checksum: B6h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,13 @@
+Type: BPDT partition
+Subtype: 
+Text: Bring Up
+Fixed: Yes
+Base: 1A3000h
+Address: FE1A3000h
+Offset: 37000h
+Full size: 234000h (2310144)
+Type: 2h
+Split sub-partition first part: No
+Split sub-partition second part: No
+Code sub-partition: No
+UMA cacheable: No

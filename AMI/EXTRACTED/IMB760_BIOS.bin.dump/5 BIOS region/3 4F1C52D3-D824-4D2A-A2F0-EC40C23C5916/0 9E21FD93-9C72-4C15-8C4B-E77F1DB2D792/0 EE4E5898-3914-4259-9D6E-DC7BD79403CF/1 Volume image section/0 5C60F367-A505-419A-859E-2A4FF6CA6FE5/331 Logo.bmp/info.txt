@@ -1,0 +1,15 @@
+Type: File
+Subtype: Freeform
+Text: Logo.bmp
+Fixed: No
+Offset: 1993260h
+File GUID: 7BB28B99-61BB-11D5-9A5D-0090273FC14D
+Type: 02h
+Attributes: 00h
+Full size: 3E7Fh (15999)
+Header size: 18h (24)
+Body size: 3E67h (15975)
+Tail size: 0h (0)
+State: F8h
+Header checksum: F3h, valid
+Data checksum: AAh, valid

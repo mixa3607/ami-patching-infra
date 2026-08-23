@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: CsrPseudoOffsetInitDxe
+Fixed: No
+Offset: 388E58h
+File GUID: 41FA68EA-3AF0-458B-AFD5-1EEFE9DD6F66
+Type: 07h
+Attributes: 00h
+Full size: 1076h (4214)
+Header size: 18h (24)
+Body size: 105Eh (4190)
+Tail size: 0h (0)
+State: F8h
+Header checksum: C0h, valid
+Data checksum: AAh, valid

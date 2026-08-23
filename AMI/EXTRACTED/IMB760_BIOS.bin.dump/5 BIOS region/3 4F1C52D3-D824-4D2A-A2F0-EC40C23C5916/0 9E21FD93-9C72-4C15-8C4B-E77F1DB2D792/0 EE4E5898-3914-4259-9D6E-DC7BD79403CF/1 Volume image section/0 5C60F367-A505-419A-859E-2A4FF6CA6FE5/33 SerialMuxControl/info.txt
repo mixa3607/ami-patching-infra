@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SerialMuxControl
+Fixed: No
+Offset: D8048h
+File GUID: 129F6AA7-AB69-4CB8-AED1-40985001115E
+Type: 07h
+Attributes: 00h
+Full size: A3Ah (2618)
+Header size: 18h (24)
+Body size: A22h (2594)
+Tail size: 0h (0)
+State: F8h
+Header checksum: C4h, valid
+Data checksum: AAh, valid

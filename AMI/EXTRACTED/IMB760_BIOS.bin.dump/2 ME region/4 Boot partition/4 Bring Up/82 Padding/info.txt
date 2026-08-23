@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 2C3D70h
+Address: FE2C3D70h
+Offset: 120D70h
+Full size: 10h (16)

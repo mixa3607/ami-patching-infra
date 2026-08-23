@@ -1,0 +1,8 @@
+Type: Region
+Subtype: DevExp1
+Fixed: Yes
+Base: FF0000h
+Address: FEFF0000h
+Offset: FF0000h
+Full size: 10000h (65536)
+State: empty (FFh)

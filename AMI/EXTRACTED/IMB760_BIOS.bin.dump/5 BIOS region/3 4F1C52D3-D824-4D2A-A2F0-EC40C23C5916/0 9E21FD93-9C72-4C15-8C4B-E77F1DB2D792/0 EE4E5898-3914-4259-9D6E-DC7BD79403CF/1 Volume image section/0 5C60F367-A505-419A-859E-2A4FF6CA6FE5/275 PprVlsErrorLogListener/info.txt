@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: PprVlsErrorLogListener
+Fixed: No
+Offset: E1BDD8h
+File GUID: 510FDE31-692D-4D86-8DB7-7F460C0A7B7E
+Type: 0Ah
+Attributes: 00h
+Full size: 75DEh (30174)
+Header size: 18h (24)
+Body size: 75C6h (30150)
+Tail size: 0h (0)
+State: F8h
+Header checksum: B3h, valid
+Data checksum: AAh, valid

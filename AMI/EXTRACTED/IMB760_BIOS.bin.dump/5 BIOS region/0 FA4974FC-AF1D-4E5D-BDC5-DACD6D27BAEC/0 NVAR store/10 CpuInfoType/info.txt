@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: CpuInfoType
+Fixed: Yes
+Base: 100402Bh
+Header address: FF00402Bh
+Data address: FF004042h
+Offset: 3FB3h
+Variable GUID: 5D9A2CCE-6804-479C-888E-6E0FEB791096
+GUID index: 9
+Full size: 1Bh (27)
+Header size: 17h (23)
+Body size: 4h (4)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

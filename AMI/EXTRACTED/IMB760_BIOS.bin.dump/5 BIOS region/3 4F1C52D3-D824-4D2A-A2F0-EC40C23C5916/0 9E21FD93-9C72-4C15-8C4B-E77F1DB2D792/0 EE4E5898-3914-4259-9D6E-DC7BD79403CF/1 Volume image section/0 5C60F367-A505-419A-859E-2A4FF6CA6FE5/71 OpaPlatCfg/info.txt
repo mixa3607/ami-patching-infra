@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: OpaPlatCfg
+Fixed: No
+Offset: 19D748h
+File GUID: F282DD45-CA7B-40EC-9618-99381C08F409
+Type: 07h
+Attributes: 00h
+Full size: 822h (2082)
+Header size: 18h (24)
+Body size: 80Ah (2058)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 28h, valid
+Data checksum: AAh, valid

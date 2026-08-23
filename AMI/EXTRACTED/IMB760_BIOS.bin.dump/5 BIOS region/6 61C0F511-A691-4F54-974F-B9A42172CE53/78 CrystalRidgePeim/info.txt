@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: CrystalRidgePeim
+Fixed: No
+Base: 1DCFA20h
+Header address: FFDCFA20h
+Data address: FFDCFA38h
+Offset: 1CFA20h
+File GUID: 93390241-7D4D-4986-8A06-D46C982F5ECD
+Type: 06h
+Attributes: 00h
+Full size: 291h (657)
+Header size: 18h (24)
+Body size: 279h (633)
+Tail size: 0h (0)
+State: F8h
+Header checksum: FDh, valid
+Data checksum: AAh, valid

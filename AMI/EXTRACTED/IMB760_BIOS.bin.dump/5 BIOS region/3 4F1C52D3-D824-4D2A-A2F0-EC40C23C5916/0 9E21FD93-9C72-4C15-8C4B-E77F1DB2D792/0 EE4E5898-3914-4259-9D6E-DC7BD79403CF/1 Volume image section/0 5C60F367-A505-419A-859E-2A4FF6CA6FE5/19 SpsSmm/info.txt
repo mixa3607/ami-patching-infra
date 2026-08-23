@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: SpsSmm
+Fixed: No
+Offset: 84390h
+File GUID: 921CD783-3E22-4579-A71F-00D74197FCC9
+Type: 0Ah
+Attributes: 00h
+Full size: 3AF6h (15094)
+Header size: 18h (24)
+Body size: 3ADEh (15070)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 66h, valid
+Data checksum: AAh, valid

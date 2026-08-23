@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: SmmAccessPei
+Fixed: No
+Base: 1DCF560h
+Header address: FFDCF560h
+Data address: FFDCF578h
+Offset: 1CF560h
+File GUID: B4E0CDFC-30CD-4B29-A445-B0AA95A532E4
+Type: 06h
+Attributes: 00h
+Full size: 4C0h (1216)
+Header size: 18h (24)
+Body size: 4A8h (1192)
+Tail size: 0h (0)
+State: F8h
+Header checksum: D5h, valid
+Data checksum: AAh, valid

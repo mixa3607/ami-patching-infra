@@ -1,0 +1,15 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: DF3ECh
+Header address: FE0DF3ECh
+Data address: FE0DF420h
+Offset: 31Ch
+Full size: D0h (208)
+Header size: 34h (52)
+Body size: 534h (1332)
+Type: Fh
+Package name: FTPR
+Version control number: 0h
+Security version number: 1h
+Usage bitmap: 01000000000000000000000000000000

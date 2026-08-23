@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: FpgaSocketSetup
+Fixed: No
+Offset: 2556E8h
+File GUID: BCEA6548-E204-4486-8F2A-36E13C7838CE
+Type: 07h
+Attributes: 00h
+Full size: 183Eh (6206)
+Header size: 18h (24)
+Body size: 1826h (6182)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 16h, valid
+Data checksum: AAh, valid

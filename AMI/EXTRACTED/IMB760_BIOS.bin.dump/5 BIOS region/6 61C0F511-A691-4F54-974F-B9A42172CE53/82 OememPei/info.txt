@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: OememPei
+Fixed: No
+Base: 1DD91B0h
+Header address: FFDD91B0h
+Data address: FFDD91C8h
+Offset: 1D91B0h
+File GUID: 0A602C5B-05A0-40C4-9181-EDCD891D0003
+Type: 06h
+Attributes: 00h
+Full size: 92Eh (2350)
+Header size: 18h (24)
+Body size: 916h (2326)
+Tail size: 0h (0)
+State: F8h
+Header checksum: B4h, valid
+Data checksum: AAh, valid

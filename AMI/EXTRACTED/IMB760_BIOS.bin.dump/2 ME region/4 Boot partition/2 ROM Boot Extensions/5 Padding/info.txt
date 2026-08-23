@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 18B000h
+Address: FE18B000h
+Offset: 1C000h
+Full size: 7000h (28672)

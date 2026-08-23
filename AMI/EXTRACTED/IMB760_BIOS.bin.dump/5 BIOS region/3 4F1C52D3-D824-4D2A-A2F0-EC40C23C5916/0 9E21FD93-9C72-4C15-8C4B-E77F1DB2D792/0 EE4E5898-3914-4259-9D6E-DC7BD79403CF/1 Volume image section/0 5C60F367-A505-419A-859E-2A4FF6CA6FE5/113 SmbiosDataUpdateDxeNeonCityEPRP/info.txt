@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SmbiosDataUpdateDxeNeonCityEPRP
+Fixed: No
+Offset: 3142D8h
+File GUID: 7474A4C6-7F30-4DE1-BC68-DA5EFE615B52
+Type: 07h
+Attributes: 00h
+Full size: 2B6Eh (11118)
+Header size: 18h (24)
+Body size: 2B56h (11094)
+Tail size: 0h (0)
+State: F8h
+Header checksum: C9h, valid
+Data checksum: AAh, valid

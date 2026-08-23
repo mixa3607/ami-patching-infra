@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: MktmeCoreInitPeim
+Fixed: No
+Base: 1D702E8h
+Header address: FFD702E8h
+Data address: FFD70300h
+Offset: 1702E8h
+File GUID: A1445693-5659-030E-C256-42A1868A6D9B
+Type: 06h
+Attributes: 00h
+Full size: 104Eh (4174)
+Header size: 18h (24)
+Body size: 1036h (4150)
+Tail size: 0h (0)
+State: F8h
+Header checksum: FBh, valid
+Data checksum: AAh, valid

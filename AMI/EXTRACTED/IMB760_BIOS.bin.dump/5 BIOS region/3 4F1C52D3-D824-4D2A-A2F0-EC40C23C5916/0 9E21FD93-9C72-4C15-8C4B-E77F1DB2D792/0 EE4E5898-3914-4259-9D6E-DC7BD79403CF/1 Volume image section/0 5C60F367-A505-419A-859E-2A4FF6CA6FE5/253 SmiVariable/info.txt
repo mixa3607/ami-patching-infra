@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: SmiVariable
+Fixed: No
+Offset: 640D50h
+File GUID: BE216BA8-38C4-4535-A6CA-5DCA5B43ADDF
+Type: 0Ah
+Attributes: 00h
+Full size: 1E92h (7826)
+Header size: 18h (24)
+Body size: 1E7Ah (7802)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 1Dh, valid
+Data checksum: AAh, valid

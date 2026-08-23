@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: NCT7802YSECPeiInit
+Fixed: No
+Base: 1D4D570h
+Header address: FFD4D570h
+Data address: FFD4D588h
+Offset: 14D570h
+File GUID: FC05A772-8D59-48D0-8CC7-A7B124BB5704
+Type: 06h
+Attributes: 00h
+Full size: 4BEh (1214)
+Header size: 18h (24)
+Body size: 4A6h (1190)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 3Bh, valid
+Data checksum: AAh, valid

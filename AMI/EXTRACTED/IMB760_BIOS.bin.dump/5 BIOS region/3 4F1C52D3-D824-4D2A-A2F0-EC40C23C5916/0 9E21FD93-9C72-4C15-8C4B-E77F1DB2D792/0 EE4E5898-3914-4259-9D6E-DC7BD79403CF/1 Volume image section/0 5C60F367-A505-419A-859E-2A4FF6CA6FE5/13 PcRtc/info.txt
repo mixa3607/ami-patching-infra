@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: PcRtc
+Fixed: No
+Offset: 53E18h
+File GUID: 378D7B65-8DA9-4773-B6E4-A47826A833E1
+Type: 07h
+Attributes: 00h
+Full size: 2A76h (10870)
+Header size: 18h (24)
+Body size: 2A5Eh (10846)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 2Dh, valid
+Data checksum: AAh, valid

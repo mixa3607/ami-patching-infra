@@ -1,0 +1,16 @@
+Type: NVAR entry
+Subtype: Link
+Text: ServerSetup
+Fixed: Yes
+Base: 1083D11h
+Header address: FF083D11h
+Data address: FF083D28h
+Offset: 3C99h
+Variable GUID: 01239999-FC0E-4B6E-9E79-D54D5DB6CD20
+GUID index: 6
+Full size: 27Bh (635)
+Header size: 17h (23)
+Body size: 264h (612)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)
+Next node at offset: A44Dh

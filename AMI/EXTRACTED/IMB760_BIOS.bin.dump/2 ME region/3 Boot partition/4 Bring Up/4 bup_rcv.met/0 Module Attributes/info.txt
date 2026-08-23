@@ -1,0 +1,13 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: DF978h
+Address: FE0DF978h
+Offset: 0h
+Full size: 38h (56)
+Type: Ah
+Compression type: 1h
+Uncompressed size: 45000h (282624)
+Compressed size: 3D5D4h (251348)
+Global module ID: 80860030h
+Image hash: 1237951ee6d7f7fe2ab444c0e837ab8f88aafccfc35e1ea96ed49a748b2185cc

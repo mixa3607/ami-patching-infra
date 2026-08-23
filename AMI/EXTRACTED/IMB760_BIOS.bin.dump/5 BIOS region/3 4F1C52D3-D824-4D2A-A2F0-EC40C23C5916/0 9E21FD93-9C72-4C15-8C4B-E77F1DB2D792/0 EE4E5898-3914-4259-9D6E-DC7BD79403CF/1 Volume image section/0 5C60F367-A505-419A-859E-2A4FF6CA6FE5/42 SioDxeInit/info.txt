@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SioDxeInit
+Fixed: No
+Offset: 10B390h
+File GUID: 4E82091E-32A1-4689-8A00-CDE41ED63CDD
+Type: 07h
+Attributes: 00h
+Full size: 202Eh (8238)
+Header size: 18h (24)
+Body size: 2016h (8214)
+Tail size: 0h (0)
+State: F8h
+Header checksum: CAh, valid
+Data checksum: AAh, valid

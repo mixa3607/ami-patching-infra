@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: AmiCpuPeiPreMem
+Fixed: No
+Base: 1D86450h
+Header address: FFD86450h
+Data address: FFD86468h
+Offset: 186450h
+File GUID: B12BF2D5-05A7-4CAC-8210-0FED4B3CD67D
+Type: 06h
+Attributes: 00h
+Full size: 646h (1606)
+Header size: 18h (24)
+Body size: 62Eh (1582)
+Tail size: 0h (0)
+State: F8h
+Header checksum: FFh, valid
+Data checksum: AAh, valid

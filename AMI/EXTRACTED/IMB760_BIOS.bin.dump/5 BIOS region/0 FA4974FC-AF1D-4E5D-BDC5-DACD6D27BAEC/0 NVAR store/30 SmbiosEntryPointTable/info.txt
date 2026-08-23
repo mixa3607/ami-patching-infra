@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: SmbiosEntryPointTable
+Fixed: Yes
+Base: 100A035h
+Header address: FF00A035h
+Data address: FF00A056h
+Offset: 9FBDh
+Variable GUID: 4B3082A3-80C6-4D7E-9CD0-583917265DF1
+GUID index: 19
+Full size: 29h (41)
+Header size: 21h (33)
+Body size: 8h (8)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

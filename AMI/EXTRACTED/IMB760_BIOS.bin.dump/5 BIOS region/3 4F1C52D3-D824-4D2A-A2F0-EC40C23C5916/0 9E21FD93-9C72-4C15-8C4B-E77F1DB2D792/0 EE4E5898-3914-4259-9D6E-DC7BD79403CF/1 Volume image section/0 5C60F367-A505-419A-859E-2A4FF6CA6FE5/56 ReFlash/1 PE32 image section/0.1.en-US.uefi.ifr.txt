@@ -1,0 +1,143 @@
+Program version: 1.6.0, Extraction mode: UEFI
+0xBC7C: FormSet Guid: 80E1202E-2697-4264-9CC9-80762C3E5863, Title: "Recovery", Help: "" { 0E A7 2E 20 E1 80 97 26 64 42 9C C9 80 76 2C 3E 58 63 03 00 02 00 01 71 99 03 93 45 85 04 4B B4 5E 32 EB 83 26 04 0E }
+0xBCA3: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Class, Class: 0x40 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 03 40 00 }
+0xBCB8: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: SubClass, SubClass: 0x0 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 04 00 00 }
+0xBCCD: 	DefaultStore DefaultId: 0x0, Name: "" { 5C 06 00 00 00 00 }
+0xBCD3: 	DefaultStore DefaultId: 0x1, Name: "" { 5C 06 00 00 01 00 }
+0xBCD9: 	VarStore Guid: 80E1202E-2697-4264-9CC9-80762C3E5863, VarStoreId: 0x1, Size: 0x7, Name: "Setup" { 24 1C 2E 20 E1 80 97 26 64 42 9C C9 80 76 2C 3E 58 63 01 00 07 00 53 65 74 75 70 00 }
+0xBCF5: 	VarStore Guid: 80E1202E-2697-4264-9CC9-80762C3E5863, VarStoreId: 0x2, Size: 0x1, Name: "Setup2" { 24 1D 2E 20 E1 80 97 26 64 42 9C C9 80 76 2C 3E 58 63 02 00 01 00 53 65 74 75 70 32 00 }
+0xBD12: 	VarStore Guid: 9CF0F18E-7C7D-49DE-B5AA-BBBAD6B21007, VarStoreId: 0xF002, Size: 0x2, Name: "AMICallback" { 24 22 8E F1 F0 9C 7D 7C DE 49 B5 AA BB BA D6 B2 10 07 02 F0 02 00 41 4D 49 43 61 6C 6C 62 61 63 6B 00 }
+0xBD34: 	VarStore Guid: E770BB69-BCB4-4D04-9E97-23FF9456FEAC, VarStoreId: 0xF000, Size: 0x1, Name: "SystemAccess" { 24 23 69 BB 70 E7 B4 BC 04 4D 9E 97 23 FF 94 56 FE AC 00 F0 01 00 53 79 73 74 65 6D 41 63 63 65 73 73 00 }
+0xBD57: 	Form FormId: 0x1, Title: "Recovery" { 01 86 01 00 03 00 }
+0xBD5D: 		SuppressIf  { 0A 82 }
+0xBD5F: 			EqIdVal QuestionId: 0x7, Value: 0x0 { 12 06 07 00 00 00 }
+0xBD65: 			Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 37 00 00 00 00 }
+0xBD6C: 			End  { 29 02 }
+0xBD6E: 			Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 38 00 00 00 00 }
+0xBD75: 			End  { 29 02 }
+0xBD77: 			Ref Prompt: "Select Image file", Help: "", QuestionFlags: 0x4, QuestionId: 0x67, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1 { 0F 0F 34 00 02 00 67 00 00 00 FF FF 04 01 00 }
+0xBD86: 			GrayOutIf  { 19 82 }
+0xBD88: 				EqIdVal QuestionId: 0x5, Value: 0x1 { 12 06 05 00 01 00 }
+0xBD8E: 				Ref Prompt: "Update Image", Help: "", QuestionFlags: 0x4, QuestionId: 0x69, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1 { 0F 0F 36 00 02 00 69 00 00 00 FF FF 04 01 00 }
+0xBD9D: 			End  { 29 02 }
+0xBD9F: 		End  { 29 02 }
+0xBDA1: 		SuppressIf  { 0A 82 }
+0xBDA3: 			EqIdVal QuestionId: 0x8, Value: 0x0 { 12 86 08 00 00 00 }
+0xBDA9: 				EqIdVal QuestionId: 0x7, Value: 0x1 { 12 06 07 00 01 00 }
+0xBDAF: 				Or  { 16 02 }
+0xBDB1: 			End  { 29 02 }
+0xBDB3: 			Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 12 00 00 00 00 }
+0xBDBA: 			End  { 29 02 }
+0xBDBC: 			Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 13 00 00 00 00 }
+0xBDC3: 			End  { 29 02 }
+0xBDC5: 			SuppressIf  { 0A 82 }
+0xBDC7: 				EqIdVal QuestionId: 0x4, Value: 0x0 { 12 86 04 00 00 00 }
+0xBDCD: 					Not  { 17 02 }
+0xBDCF: 				End  { 29 02 }
+0xBDD1: 				Ref Prompt: "Yes, I'm sure", Help: "", QuestionFlags: 0x4, QuestionId: 0x66, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1 { 0F 0F 0F 00 02 00 66 00 00 00 FF FF 04 01 00 }
+0xBDE0: 			End  { 29 02 }
+0xBDE2: 		End  { 29 02 }
+0xBDE4: 		SuppressIf  { 0A 82 }
+0xBDE6: 			EqIdVal QuestionId: 0x8, Value: 0x0 { 12 86 08 00 00 00 }
+0xBDEC: 				Not  { 17 02 }
+0xBDEE: 				EqIdVal QuestionId: 0x7, Value: 0x1 { 12 06 07 00 01 00 }
+0xBDF4: 				Or  { 16 02 }
+0xBDF6: 			End  { 29 02 }
+0xBDF8: 			SuppressIf  { 0A 82 }
+0xBDFA: 				EqIdVal QuestionId: 0x5, Value: 0x0 { 12 06 05 00 00 00 }
+0xBE00: 				Text Prompt: "Flash update is", Help: "", Text: "disabled" { 03 08 23 00 02 00 24 00 }
+0xBE08: 				Text Prompt: "Reason", Help: "", Text: "USER access level" { 03 08 25 00 02 00 26 00 }
+0xBE10: 			End  { 29 02 }
+0xBE12: 			SuppressIf  { 0A 82 }
+0xBE14: 				EqIdVal QuestionId: 0x6, Value: 0x0 { 12 86 06 00 00 00 }
+0xBE1A: 					Not  { 17 02 }
+0xBE1C: 				End  { 29 02 }
+0xBE1E: 				Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 2F 00 00 00 00 }
+0xBE25: 				End  { 29 02 }
+0xBE27: 				Subtitle Prompt: "Partial update is not allowed", Help: "", Flags: 0x0 { 02 87 32 00 00 00 00 }
+0xBE2E: 				End  { 29 02 }
+0xBE30: 				Subtitle Prompt: "Only full image can be updated", Help: "", Flags: 0x0 { 02 87 33 00 00 00 00 }
+0xBE37: 				End  { 29 02 }
+0xBE39: 			End  { 29 02 }
+0xBE3B: 			SuppressIf  { 0A 82 }
+0xBE3D: 				EqIdVal QuestionId: 0x6, Value: 0x0 { 12 06 06 00 00 00 }
+0xBE43: 				Subtitle Prompt: "Please select blocks you want to update", Help: "", Flags: 0x0 { 02 87 1C 00 00 00 00 }
+0xBE4A: 				End  { 29 02 }
+0xBE4C: 				GrayOutIf  { 19 82 }
+0xBE4E: 					EqIdVal QuestionId: 0x4, Value: 0x0 { 12 86 04 00 00 00 }
+0xBE54: 						Not  { 17 02 }
+0xBE56: 						EqIdVal QuestionId: 0x5, Value: 0x1 { 12 06 05 00 01 00 }
+0xBE5C: 						Or  { 16 02 }
+0xBE5E: 					End  { 29 02 }
+0xBE60: 					CheckBox Prompt: "Reset NVRAM", Help: "Set this option to reset NVRAM to default values", QuestionFlags: 0x0, QuestionId: 0x1, VarStoreId: 0x1, VarOffset: 0x3, Flags: 0x0, Default: Disabled, MfgDefault: Disabled { 06 8E 04 00 05 00 01 00 01 00 03 00 00 00 }
+0xBE6E: 						Default DefaultId: 0x0 Value: 1 { 5B 06 00 00 00 01 }
+0xBE74: 					End  { 29 02 }
+0xBE76: 					CheckBox Prompt: "Boot Block Update", Help: "Set this option to update boot block area of the firmware", QuestionFlags: 0x0, QuestionId: 0x2, VarStoreId: 0x1, VarOffset: 0x4, Flags: 0x0, Default: Disabled, MfgDefault: Disabled { 06 8E 06 00 07 00 02 00 01 00 04 00 00 00 }
+0xBE84: 						Default DefaultId: 0x0 Value: 1 { 5B 06 00 00 00 01 }
+0xBE8A: 					End  { 29 02 }
+0xBE8C: 					Text Prompt: "", Help: "", Text: "" { 03 08 02 00 02 00 02 00 }
+0xBE94: 				End  { 29 02 }
+0xBE96: 			End  { 29 02 }
+0xBE98: 			SuppressIf  { 0A 82 }
+0xBE9A: 				EqIdVal QuestionId: 0x4, Value: 0x0 { 12 86 04 00 00 00 }
+0xBEA0: 					Not  { 17 02 }
+0xBEA2: 					EqIdVal QuestionId: 0x5, Value: 0x1 { 12 06 05 00 01 00 }
+0xBEA8: 					Or  { 16 02 }
+0xBEAA: 				End  { 29 02 }
+0xBEAC: 				Ref Prompt: "Proceed with flash update", Help: "Select this to start flash update", QuestionFlags: 0x4, QuestionId: 0x65, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2 { 0F 0F 0C 00 0D 00 65 00 00 00 FF FF 04 02 00 }
+0xBEBB: 			End  { 29 02 }
+0xBEBD: 		End  { 29 02 }
+0xBEBF: 	End  { 29 02 }
+0xBEC1: 	Form FormId: 0x2, Title: "Flashing..." { 01 86 02 00 0E 00 }
+0xBEC7: 		SuppressIf  { 0A 82 }
+0xBEC9: 			EqIdVal QuestionId: 0x4, Value: 0x0 { 12 86 04 00 00 00 }
+0xBECF: 				Not  { 17 02 }
+0xBED1: 			End  { 29 02 }
+0xBED3: 			Subtitle Prompt: "WARNING! System firmware is being updated.", Help: "", Flags: 0x0 { 02 87 1D 00 00 00 00 }
+0xBEDA: 			End  { 29 02 }
+0xBEDC: 			Subtitle Prompt: "Keyboard is locked.", Help: "", Flags: 0x0 { 02 87 1E 00 00 00 00 }
+0xBEE3: 			End  { 29 02 }
+0xBEE5: 			Subtitle Prompt: "DO NOT TURN THE POWER OFF !!!", Help: "", Flags: 0x0 { 02 87 1F 00 00 00 00 }
+0xBEEC: 			End  { 29 02 }
+0xBEEE: 			Subtitle Prompt: "Once firmware update is completed", Help: "", Flags: 0x0 { 02 87 20 00 00 00 00 }
+0xBEF5: 			End  { 29 02 }
+0xBEF7: 			Subtitle Prompt: "press any key to reboot the system", Help: "", Flags: 0x0 { 02 87 21 00 00 00 00 }
+0xBEFE: 			End  { 29 02 }
+0xBF00: 		End  { 29 02 }
+0xBF02: 		SuppressIf  { 0A 82 }
+0xBF04: 			EqIdVal QuestionId: 0x4, Value: 0x0 { 12 06 04 00 00 00 }
+0xBF0A: 			Subtitle Prompt: "Flash update failed", Help: "", Flags: 0x0 { 02 87 2C 00 00 00 00 }
+0xBF11: 			End  { 29 02 }
+0xBF13: 			Subtitle Prompt: "Flash image invalid or not found", Help: "", Flags: 0x0 { 02 87 2D 00 00 00 00 }
+0xBF1A: 			End  { 29 02 }
+0xBF1C: 			Subtitle Prompt: "System will reset in 5 seconds", Help: "", Flags: 0x0 { 02 87 2E 00 00 00 00 }
+0xBF23: 			End  { 29 02 }
+0xBF25: 		End  { 29 02 }
+0xBF27: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 02 00 00 00 00 }
+0xBF2E: 		End  { 29 02 }
+0xBF30: 		Text Prompt: "", Help: "Flash update status", Text: "" { 03 08 02 00 15 00 02 00 }
+0xBF38: 		SuppressIf  { 0A 82 }
+0xBF3A: 			True  { 46 02 }
+0xBF3C: 			SuppressIf  { 0A 82 }
+0xBF3E: 				EqIdVal QuestionId: 0x3, Value: 0xB { 12 06 03 00 0B 00 }
+0xBF44: 				Action Prompt: "", Help: "Flash update status", QuestionFlags: 0x4, QuestionId: 0x64, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, QuestionConfig: "" { 0C 8F 02 00 15 00 64 00 00 00 FF FF 04 00 00 }
+0xBF53: 				End  { 29 02 }
+0xBF55: 			End  { 29 02 }
+0xBF57: 		End  { 29 02 }
+0xBF59: 		DisableIf  { 1E 82 }
+0xBF5B: 			True  { 46 02 }
+0xBF5D: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x3, VarStoreId: 0xF002, VarOffset: 0x0, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0 { 07 94 00 00 00 00 03 00 02 F0 00 00 00 11 00 00 FF FF 00 00 }
+0xBF71: 			End  { 29 02 }
+0xBF73: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x4, VarStoreId: 0x1, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 04 00 01 00 01 00 00 10 00 FF 00 }
+0xBF84: 			End  { 29 02 }
+0xBF86: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x5, VarStoreId: 0xF000, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 05 00 00 F0 00 00 00 10 00 FF 00 }
+0xBF97: 			End  { 29 02 }
+0xBF99: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x6, VarStoreId: 0x1, VarOffset: 0x6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 06 00 01 00 06 00 00 10 00 FF 00 }
+0xBFAA: 			End  { 29 02 }
+0xBFAC: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x7, VarStoreId: 0x2, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 07 00 02 00 00 00 00 10 00 FF 00 }
+0xBFBD: 			End  { 29 02 }
+0xBFBF: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x8, VarStoreId: 0x1, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 08 00 01 00 00 00 00 10 00 FF 00 }
+0xBFD0: 			End  { 29 02 }
+0xBFD2: 		End  { 29 02 }
+0xBFD4: 	End  { 29 02 }
+0xBFD6: End  { 29 02 }

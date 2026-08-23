@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SyscfgSyncDxe
+Fixed: No
+Offset: 19DF70h
+File GUID: F34F24D7-7531-4B83-9116-BD03FCF99878
+Type: 07h
+Attributes: 00h
+Full size: C92h (3218)
+Header size: 18h (24)
+Body size: C7Ah (3194)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 3Eh, valid
+Data checksum: AAh, valid

@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: SiliconDataInitPeim
+Fixed: No
+Base: 1D46498h
+Header address: FFD46498h
+Data address: FFD464B0h
+Offset: 146498h
+File GUID: C7D9BAF4-DC9D-4B22-B4E7-7500EAA7B67F
+Type: 06h
+Attributes: 00h
+Full size: B0Eh (2830)
+Header size: 18h (24)
+Body size: AF6h (2806)
+Tail size: 0h (0)
+State: F8h
+Header checksum: D7h, valid
+Data checksum: AAh, valid

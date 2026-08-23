@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: TxtPei
+Fixed: No
+Base: 1D71338h
+Header address: FFD71338h
+Data address: FFD71350h
+Offset: 171338h
+File GUID: CA9D8617-D652-403B-B6C5-BA47570116AD
+Type: 06h
+Attributes: 00h
+Full size: 1A2Ah (6698)
+Header size: 18h (24)
+Body size: 1A12h (6674)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 78h, valid
+Data checksum: AAh, valid

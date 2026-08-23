@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: OpromUpdateDxeWilsonCitySMT
+Fixed: No
+Offset: 34E338h
+File GUID: 46F73036-4FBE-F441-72B9-35A577FBD157
+Type: 07h
+Attributes: 00h
+Full size: EC2h (3778)
+Header size: 18h (24)
+Body size: EAAh (3754)
+Tail size: 0h (0)
+State: F8h
+Header checksum: A5h, valid
+Data checksum: AAh, valid

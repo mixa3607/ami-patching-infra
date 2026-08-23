@@ -1,0 +1,8 @@
+Type: Region
+Subtype: ME
+Fixed: Yes
+Base: 3000h
+Address: FE003000h
+Offset: 3000h
+Full size: FD5000h (16601088)
+Version: 4.4.3.263

@@ -1,0 +1,14 @@
+Type: NVAR entry
+Subtype: Link
+Text: SocketMemoryConfig
+Fixed: Yes
+Base: 100C2FCh
+Header address: FF00C2FCh
+Data address: FF00C306h
+Offset: C284h
+Full size: 2E5h (741)
+Header size: Ah (10)
+Body size: 2DBh (731)
+Tail size: 0h (0)
+Attributes: 88h (DataOnly, Valid)
+Next node at offset: C569h

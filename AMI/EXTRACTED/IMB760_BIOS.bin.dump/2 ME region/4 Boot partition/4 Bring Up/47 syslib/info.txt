@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 1BA280h
+Address: FE1BA280h
+Offset: 17280h
+Full size: 246A8h (149160)
+Huffman compressed: Yes
+Hash: 8af65a198f926cc5d41daae5a6113290f34089e6cb5b1e4f8b48175f9bfc42db

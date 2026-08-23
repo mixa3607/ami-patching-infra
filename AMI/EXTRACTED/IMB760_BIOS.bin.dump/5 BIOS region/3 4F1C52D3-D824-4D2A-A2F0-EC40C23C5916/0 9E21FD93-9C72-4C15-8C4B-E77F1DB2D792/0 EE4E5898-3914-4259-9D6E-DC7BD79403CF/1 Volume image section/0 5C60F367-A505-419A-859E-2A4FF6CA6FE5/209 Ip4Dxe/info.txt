@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: Ip4Dxe
+Fixed: No
+Offset: 4C05C8h
+File GUID: 9FB1A1F3-3B71-4324-B39A-745CBB015FFF
+Type: 07h
+Attributes: 00h
+Full size: 10632h (67122)
+Header size: 18h (24)
+Body size: 1061Ah (67098)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 92h, valid
+Data checksum: AAh, valid

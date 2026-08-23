@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: IioCfgUpdateDxeCooperCityRP
+Fixed: No
+Offset: 34A2E8h
+File GUID: 073018E2-4A0A-3D61-8EA7-B08321C9364B
+Type: 07h
+Attributes: 00h
+Full size: D62h (3426)
+Header size: 18h (24)
+Body size: D4Ah (3402)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 94h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SmbiosDataUpdateDxeWilsonCityRP
+Fixed: No
+Offset: 3274B0h
+File GUID: DC4D8560-1795-4DF9-8DB7-B6F4A45DCFAC
+Type: 07h
+Attributes: 00h
+Full size: 2B6Eh (11118)
+Header size: 18h (24)
+Body size: 2B56h (11094)
+Tail size: 0h (0)
+State: F8h
+Header checksum: F6h, valid
+Data checksum: AAh, valid

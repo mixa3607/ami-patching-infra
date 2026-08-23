@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: SocketProcessorCoreConfig
+Fixed: Yes
+Base: 108B58Eh
+Header address: FF08B58Eh
+Data address: FF08B5B3h
+Offset: B516h
+Variable GUID: 07013588-C789-4E12-A7C3-88FAFAE79F7C
+GUID index: 34
+Full size: 170h (368)
+Header size: 25h (37)
+Body size: 14Bh (331)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

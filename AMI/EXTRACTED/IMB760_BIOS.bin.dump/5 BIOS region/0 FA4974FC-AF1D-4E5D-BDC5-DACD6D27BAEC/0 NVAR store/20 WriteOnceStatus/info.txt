@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: WriteOnceStatus
+Fixed: Yes
+Base: 10064B6h
+Header address: FF0064B6h
+Data address: FF0064D1h
+Offset: 643Eh
+Variable GUID: 4B3082A3-80C6-4D7E-9CD0-583917265DF1
+GUID index: 19
+Full size: 5Bh (91)
+Header size: 1Bh (27)
+Body size: 40h (64)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

@@ -1,0 +1,8 @@
+Type: IFWI partition
+Subtype: Boot
+Fixed: Yes
+Base: A8000h
+Address: FE0A8000h
+Offset: A5000h
+Full size: C4000h (802816)
+

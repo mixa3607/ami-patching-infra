@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: CsmVideo
+Fixed: No
+Offset: 50BBA0h
+File GUID: 29CF55F8-B675-4F5D-8F2F-B87A3ECFD063
+Type: 07h
+Attributes: 00h
+Full size: 4412h (17426)
+Header size: 18h (24)
+Body size: 43FAh (17402)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 57h, valid
+Data checksum: AAh, valid

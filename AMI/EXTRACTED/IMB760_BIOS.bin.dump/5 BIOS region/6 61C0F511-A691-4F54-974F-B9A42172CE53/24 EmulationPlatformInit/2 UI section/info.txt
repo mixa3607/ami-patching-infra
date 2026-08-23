@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D52D80h
+Header address: FFD52D80h
+Data address: FFD52D84h
+Offset: 758h
+Type: 15h
+Full size: 30h (48)
+Header size: 4h (4)
+Body size: 2Ch (44)
+Text: EmulationPlatformInit

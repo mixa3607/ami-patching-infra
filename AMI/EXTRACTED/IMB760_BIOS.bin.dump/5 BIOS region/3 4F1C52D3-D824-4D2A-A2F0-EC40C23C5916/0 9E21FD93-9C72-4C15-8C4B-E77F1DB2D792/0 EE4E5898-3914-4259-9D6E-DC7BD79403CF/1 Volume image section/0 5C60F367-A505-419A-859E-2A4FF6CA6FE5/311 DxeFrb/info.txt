@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: DxeFrb
+Fixed: No
+Offset: 18EEF38h
+File GUID: 9D0CEA63-745B-417D-BBA4-E5193061C907
+Type: 07h
+Attributes: 00h
+Full size: 16A6h (5798)
+Header size: 18h (24)
+Body size: 168Eh (5774)
+Tail size: 0h (0)
+State: F8h
+Header checksum: FCh, valid
+Data checksum: AAh, valid

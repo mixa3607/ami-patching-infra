@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: Boot000B
+Fixed: Yes
+Base: 100BB8Eh
+Header address: FF00BB8Eh
+Data address: FF00BBA2h
+Offset: BB16h
+Variable GUID: 8BE4DF61-93CA-11D2-AA0D-00E098032B8C
+GUID index: 3
+Full size: A6h (166)
+Header size: 14h (20)
+Body size: 92h (146)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

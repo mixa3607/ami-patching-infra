@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: MktmeLateInit
+Fixed: No
+Offset: 2931D8h
+File GUID: 02B92D47-5227-4C18-9FF5-888550C395B9
+Type: 07h
+Attributes: 00h
+Full size: E46h (3654)
+Header size: 18h (24)
+Body size: E2Eh (3630)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 97h, valid
+Data checksum: AAh, valid

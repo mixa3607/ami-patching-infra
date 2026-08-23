@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: BreakpointCallbackDxe
+Fixed: No
+Offset: 19FD28h
+File GUID: 295B1031-F0B5-44F4-A75E-1CD2145C4D18
+Type: 07h
+Attributes: 00h
+Full size: FB2h (4018)
+Header size: 18h (24)
+Body size: F9Ah (3994)
+Tail size: 0h (0)
+State: F8h
+Header checksum: CEh, valid
+Data checksum: AAh, valid

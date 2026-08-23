@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: MrcPlatformHooksPeim
+Fixed: No
+Base: 1D534D0h
+Header address: FFD534D0h
+Data address: FFD534E8h
+Offset: 1534D0h
+File GUID: B894C949-A1F8-41C1-A7C0-DF523AD91C15
+Type: 06h
+Attributes: 00h
+Full size: 39BAh (14778)
+Header size: 18h (24)
+Body size: 39A2h (14754)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 32h, valid
+Data checksum: AAh, valid

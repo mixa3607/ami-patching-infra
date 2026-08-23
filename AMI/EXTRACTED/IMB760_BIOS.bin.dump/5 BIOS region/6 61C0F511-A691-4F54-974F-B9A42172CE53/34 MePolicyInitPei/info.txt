@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: MePolicyInitPei
+Fixed: No
+Base: 1D6D340h
+Header address: FFD6D340h
+Data address: FFD6D358h
+Offset: 16D340h
+File GUID: 12C67BE1-AD2E-4F13-A95F-6EDC2C4392DE
+Type: 06h
+Attributes: 00h
+Full size: 1A4Eh (6734)
+Header size: 18h (24)
+Body size: 1A36h (6710)
+Tail size: 0h (0)
+State: F8h
+Header checksum: F0h, valid
+Data checksum: AAh, valid

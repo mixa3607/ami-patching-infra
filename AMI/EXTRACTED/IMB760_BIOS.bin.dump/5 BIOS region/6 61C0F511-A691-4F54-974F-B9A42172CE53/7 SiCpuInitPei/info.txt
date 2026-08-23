@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: SiCpuInitPei
+Fixed: No
+Base: 1C13F48h
+Header address: FFC13F48h
+Data address: FFC13F60h
+Offset: 13F48h
+File GUID: 0693BAA5-35D0-4360-83F6-1DF26D3C53CE
+Type: 06h
+Attributes: 00h
+Full size: 14F2h (5362)
+Header size: 18h (24)
+Body size: 14DAh (5338)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 02h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SlotDataUpdateDxeWilsonCitySMT
+Fixed: No
+Offset: 34FD50h
+File GUID: BBDB00BE-4C5C-7AD3-D34A-7A979492840D
+Type: 07h
+Attributes: 00h
+Full size: BAAh (2986)
+Header size: 18h (24)
+Body size: B92h (2962)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 16h, valid
+Data checksum: AAh, valid

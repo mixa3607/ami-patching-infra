@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 26C01Ch
+Address: FE26C01Ch
+Offset: C901Ch
+Full size: 24h (36)

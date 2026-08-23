@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: DxeSelStatusCode
+Fixed: No
+Offset: 18F05E0h
+File GUID: AE587172-CC15-48E1-8BE0-29DDF05C6A1F
+Type: 07h
+Attributes: 00h
+Full size: 1A8Eh (6798)
+Header size: 18h (24)
+Body size: 1A76h (6774)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 18h, valid
+Data checksum: AAh, valid

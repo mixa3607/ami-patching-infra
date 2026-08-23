@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 28B71Ch
+Address: FE28B71Ch
+Offset: E871Ch
+Full size: 24h (36)

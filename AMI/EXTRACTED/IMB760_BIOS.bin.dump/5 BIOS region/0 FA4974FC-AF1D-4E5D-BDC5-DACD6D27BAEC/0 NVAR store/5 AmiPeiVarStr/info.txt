@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: AmiPeiVarStr
+Fixed: Yes
+Base: 100366Bh
+Header address: FF00366Bh
+Data address: FF003683h
+Offset: 35F3h
+Variable GUID: 01368881-C4AD-4B1D-B631-D57A8EC8DB6B
+GUID index: 4
+Full size: 682h (1666)
+Header size: 18h (24)
+Body size: 66Ah (1642)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

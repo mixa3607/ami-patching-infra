@@ -1,0 +1,16 @@
+Type: Microcode
+Subtype: Intel
+Fixed: Yes
+Base: 1B42890h
+Address: FFB42890h
+Offset: 42818h
+Full size: 45400h (283648)
+Header size: 0h (0u)
+Body size: 45400h (283648)
+Tail size: 0h (0u)
+Date: 08.03.2021
+CPU signature: 000606A5h
+Revision: 0C0002F0h
+Minimal update revision: 00000000h
+CPU platform Id: 00000087h
+Checksum: F6B24822h, valid

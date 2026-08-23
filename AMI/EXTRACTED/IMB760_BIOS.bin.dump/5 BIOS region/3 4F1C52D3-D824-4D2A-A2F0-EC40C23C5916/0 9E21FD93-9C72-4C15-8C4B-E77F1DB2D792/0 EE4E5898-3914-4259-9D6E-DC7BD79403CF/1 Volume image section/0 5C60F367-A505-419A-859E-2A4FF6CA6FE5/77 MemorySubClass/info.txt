@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: MemorySubClass
+Fixed: No
+Offset: 1B84F8h
+File GUID: 6A3DEF38-0A45-4107-A74E-ABF2B8EAED86
+Type: 07h
+Attributes: 00h
+Full size: 5672h (22130)
+Header size: 18h (24)
+Body size: 565Ah (22106)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 25h, valid
+Data checksum: AAh, valid

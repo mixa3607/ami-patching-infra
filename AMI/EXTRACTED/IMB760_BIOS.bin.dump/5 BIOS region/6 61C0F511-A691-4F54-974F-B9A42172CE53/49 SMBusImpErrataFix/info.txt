@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: SMBusImpErrataFix
+Fixed: No
+Base: 1D892F8h
+Header address: FFD892F8h
+Data address: FFD89310h
+Offset: 1892F8h
+File GUID: 3DFB880C-552C-43F1-A280-4A5E8F122FDE
+Type: 06h
+Attributes: 00h
+Full size: 59Ah (1434)
+Header size: 18h (24)
+Body size: 582h (1410)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 62h, valid
+Data checksum: AAh, valid

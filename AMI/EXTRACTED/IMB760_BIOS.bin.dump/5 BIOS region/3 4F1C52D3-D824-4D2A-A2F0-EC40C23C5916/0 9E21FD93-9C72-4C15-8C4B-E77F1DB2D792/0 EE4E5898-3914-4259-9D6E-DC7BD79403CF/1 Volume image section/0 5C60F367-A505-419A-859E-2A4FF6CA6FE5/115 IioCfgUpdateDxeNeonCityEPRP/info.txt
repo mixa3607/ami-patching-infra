@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: IioCfgUpdateDxeNeonCityEPRP
+Fixed: No
+Offset: 317A30h
+File GUID: 4FA7E1F2-CE8B-4D38-A3F8-342DC4515446
+Type: 07h
+Attributes: 00h
+Full size: D42h (3394)
+Header size: 18h (24)
+Body size: D2Ah (3370)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 58h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: OpromUpdateDxeWilsonCityModular
+Fixed: No
+Offset: 321F30h
+File GUID: AC60C811-F202-48A6-9B30-696049ABBA8F
+Type: 07h
+Attributes: 00h
+Full size: ECAh (3786)
+Header size: 18h (24)
+Body size: EB2h (3762)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 89h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,25 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: 1A47BCh
+Address: FE1A47BCh
+Offset: FFCh
+Full size: 58h (88)
+Type: 16h
+Partition name: OPR
+Partition length: 234000h
+Partition version major: 1000h
+Partition version minor: 0h
+Data format version: 10000h
+Instance ID: 1h
+Hash algorithm: 2h
+Hash size: 20h
+Action on update: 0h
+Support multiple instances: No
+Support API version based update: No
+Obey full update rules: No
+IFR enable only: No
+Allow cross point update: No
+Allow cross hotfix update: No
+Partial update only: No
+Partition hash: bb5310d23b123da951c054fa2b4b4c8adb1b79fe22553ac652605f49789618ff

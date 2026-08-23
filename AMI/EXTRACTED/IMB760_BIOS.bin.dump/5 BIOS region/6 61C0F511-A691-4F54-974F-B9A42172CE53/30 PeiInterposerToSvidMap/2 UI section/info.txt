@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D68EE4h
+Header address: FFD68EE4h
+Data address: FFD68EE8h
+Offset: 734h
+Type: 15h
+Full size: 32h (50)
+Header size: 4h (4)
+Body size: 2Eh (46)
+Text: PeiInterposerToSvidMap

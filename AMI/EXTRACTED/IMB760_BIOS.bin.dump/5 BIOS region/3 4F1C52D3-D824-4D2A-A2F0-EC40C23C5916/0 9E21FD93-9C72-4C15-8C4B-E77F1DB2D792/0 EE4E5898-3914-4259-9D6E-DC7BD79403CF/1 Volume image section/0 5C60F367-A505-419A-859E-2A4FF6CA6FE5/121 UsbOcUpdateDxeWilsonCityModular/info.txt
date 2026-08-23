@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: UsbOcUpdateDxeWilsonCityModular
+Fixed: No
+Offset: 3205B0h
+File GUID: 47682CC8-E9FC-42A4-95CC-3259A500CC88
+Type: 07h
+Attributes: 00h
+Full size: C0Ah (3082)
+Header size: 18h (24)
+Body size: BF2h (3058)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 90h, valid
+Data checksum: AAh, valid

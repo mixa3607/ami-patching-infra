@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D4A2E4h
+Header address: FFD4A2E4h
+Data address: FFD4A2E8h
+Offset: BD4h
+Type: 15h
+Full size: 3Ch (60)
+Header size: 4h (4)
+Body size: 38h (56)
+Text: PcatSingleSegmentPciCfg2Pei

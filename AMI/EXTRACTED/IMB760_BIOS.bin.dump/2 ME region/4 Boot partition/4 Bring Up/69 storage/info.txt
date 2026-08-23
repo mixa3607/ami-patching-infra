@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 274200h
+Address: FE274200h
+Offset: D1200h
+Full size: EC08h (60424)
+Huffman compressed: Yes
+Hash: 0b2e9c8bf1fbe10d5db680ee6fda32639b87410af0702d7cc25821aae1e8a2f1

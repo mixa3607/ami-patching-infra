@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: PartialMirrorHandler
+Fixed: No
+Offset: E18078h
+File GUID: 6626A54F-7E98-4145-8F8F-8DB70D3B04CE
+Type: 0Ah
+Attributes: 00h
+Full size: 3D5Ah (15706)
+Header size: 18h (24)
+Body size: 3D42h (15682)
+Tail size: 0h (0)
+State: F8h
+Header checksum: C7h, valid
+Data checksum: AAh, valid

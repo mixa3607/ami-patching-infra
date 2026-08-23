@@ -1,0 +1,13 @@
+Type: NVAR entry
+Subtype: Data
+Text: SocketIioConfig
+Fixed: Yes
+Base: 100CA68h
+Header address: FF00CA68h
+Data address: FF00CA72h
+Offset: C9F0h
+Full size: 1FC1h (8129)
+Header size: Ah (10)
+Body size: 1FB7h (8119)
+Tail size: 0h (0)
+Attributes: 88h (DataOnly, Valid)

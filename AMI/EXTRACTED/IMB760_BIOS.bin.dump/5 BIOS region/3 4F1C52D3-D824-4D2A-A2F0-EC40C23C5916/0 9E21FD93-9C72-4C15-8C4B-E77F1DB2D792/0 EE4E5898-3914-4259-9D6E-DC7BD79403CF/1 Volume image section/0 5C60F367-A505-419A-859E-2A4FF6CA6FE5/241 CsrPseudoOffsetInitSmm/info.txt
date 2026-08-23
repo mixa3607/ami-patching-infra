@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: CsrPseudoOffsetInitSmm
+Fixed: No
+Offset: 613DC0h
+File GUID: 0393D0C4-6B0C-4B96-B4C3-8C7EB718F348
+Type: 0Ah
+Attributes: 00h
+Full size: 129Ah (4762)
+Header size: 18h (24)
+Body size: 1282h (4738)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 3Dh, valid
+Data checksum: AAh, valid

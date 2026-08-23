@@ -1,0 +1,21 @@
+Type: Section
+Subtype: PE32 image
+Fixed: No
+Base: 1D7033Ch
+Header address: FFD7033Ch
+Data address: FFD70340h
+Offset: 54h
+Type: 10h
+Full size: FC4h (4036)
+Header size: 4h (4)
+Body size: FC0h (4032)
+DOS signature: 5A4Dh
+PE signature: 00004550h
+Machine type: x86
+Number of sections: 3
+Characteristics: 2102h
+Optional header signature: 010Bh
+Subsystem: 000Bh
+Address of entry point: 2F9h
+Base of code: 220h
+Image base: FFD70340h

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SlotDataUpdateDxeNeonCityEPRP
+Fixed: No
+Offset: 31A170h
+File GUID: DE141A05-FA40-432D-9631-5E3E990F44D5
+Type: 07h
+Attributes: 00h
+Full size: BA6h (2982)
+Header size: 18h (24)
+Body size: B8Eh (2958)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 69h, valid
+Data checksum: AAh, valid

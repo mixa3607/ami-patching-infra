@@ -1,0 +1,8 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: DF968h
+Address: FE0DF968h
+Offset: 54h
+Full size: 10h (16)
+Type: Bh

@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 282E40h
+Address: FE282E40h
+Offset: DFE40h
+Full size: 2ACCh (10956)
+Huffman compressed: Yes
+Hash: 2ac60c7abd6171e091d73324f0723e00519a30d1d47719ce5cec0bb0623398d0

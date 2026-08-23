@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1C1DBB0h
+Header address: FFC1DBB0h
+Data address: FFC1DBB4h
+Offset: 3C38h
+Type: 15h
+Full size: 22h (34)
+Header size: 4h (4)
+Body size: 1Eh (30)
+Text: HeciControlPei

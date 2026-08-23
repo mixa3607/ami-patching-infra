@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: CrbSmm
+Fixed: No
+Offset: E8E318h
+File GUID: 221F1D4F-034C-4BEA-B2BB-B7A9672B06D7
+Type: 0Ah
+Attributes: 00h
+Full size: 1CC2h (7362)
+Header size: 18h (24)
+Body size: 1CAAh (7338)
+Tail size: 0h (0)
+State: F8h
+Header checksum: ABh, valid
+Data checksum: AAh, valid

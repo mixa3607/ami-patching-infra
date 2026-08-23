@@ -1,0 +1,15 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: AB2DCh
+Header address: FE0AB2DCh
+Data address: FE0AB310h
+Offset: 284h
+Full size: 68h (104)
+Header size: 34h (52)
+Body size: C0h (192)
+Type: Fh
+Package name: RBEP
+Version control number: 0h
+Security version number: 1h
+Usage bitmap: 00000000000000000000000000000000

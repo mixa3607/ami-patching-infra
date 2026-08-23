@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: IsRecovery
+Fixed: No
+Base: 1D49000h
+Header address: FFD49000h
+Data address: FFD49018h
+Offset: 149000h
+File GUID: 8E199D3F-3A74-492B-8CB3-93D668D87D07
+Type: 06h
+Attributes: 00h
+Full size: 70Eh (1806)
+Header size: 18h (24)
+Body size: 6F6h (1782)
+Tail size: 0h (0)
+State: F8h
+Header checksum: D4h, valid
+Data checksum: AAh, valid

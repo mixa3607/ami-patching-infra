@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 231A10h
+Address: FE231A10h
+Offset: 8EA10h
+Full size: 30h (48)

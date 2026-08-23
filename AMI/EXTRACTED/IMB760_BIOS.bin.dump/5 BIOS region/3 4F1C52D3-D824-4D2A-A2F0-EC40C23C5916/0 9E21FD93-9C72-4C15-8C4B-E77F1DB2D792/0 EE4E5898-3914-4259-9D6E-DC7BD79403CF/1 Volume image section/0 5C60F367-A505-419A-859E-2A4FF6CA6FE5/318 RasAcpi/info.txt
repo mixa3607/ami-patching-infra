@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: RasAcpi
+Fixed: No
+Offset: 19421F0h
+File GUID: 01F7EC2A-8F6E-4C51-94C2-DE0E1C223F73
+Type: 0Ah
+Attributes: 00h
+Full size: 2210h (8720)
+Header size: 18h (24)
+Body size: 21F8h (8696)
+Tail size: 0h (0)
+State: F8h
+Header checksum: EAh, valid
+Data checksum: AAh, valid

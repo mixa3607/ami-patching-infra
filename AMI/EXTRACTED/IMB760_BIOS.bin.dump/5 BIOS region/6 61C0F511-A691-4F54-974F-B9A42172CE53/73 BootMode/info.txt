@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: BootMode
+Fixed: No
+Base: 1DBE738h
+Header address: FFDBE738h
+Data address: FFDBE750h
+Offset: 1BE738h
+File GUID: 1D0CFB9B-EB00-43A6-819C-D218DF8DC4B4
+Type: 06h
+Attributes: 00h
+Full size: 2B62h (11106)
+Header size: 18h (24)
+Body size: 2B4Ah (11082)
+Tail size: 0h (0)
+State: F8h
+Header checksum: EFh, valid
+Data checksum: AAh, valid

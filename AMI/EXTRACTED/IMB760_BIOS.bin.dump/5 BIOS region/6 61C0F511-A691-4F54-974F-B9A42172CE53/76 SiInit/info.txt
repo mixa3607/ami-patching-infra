@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: SiInit
+Fixed: No
+Base: 1DC5E30h
+Header address: FFDC5E30h
+Data address: FFDC5E48h
+Offset: 1C5E30h
+File GUID: 299D6F8B-2EC9-4E40-9EC6-DDAA7EBF5FD9
+Type: 06h
+Attributes: 00h
+Full size: 972Ah (38698)
+Header size: 18h (24)
+Body size: 9712h (38674)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 94h, valid
+Data checksum: AAh, valid

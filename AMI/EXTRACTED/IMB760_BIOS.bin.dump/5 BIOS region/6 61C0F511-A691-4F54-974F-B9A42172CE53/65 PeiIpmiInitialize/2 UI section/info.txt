@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1DA2ED0h
+Header address: FFDA2ED0h
+Data address: FFDA2ED4h
+Offset: 3868h
+Type: 15h
+Full size: 28h (40)
+Header size: 4h (4)
+Body size: 24h (36)
+Text: PeiIpmiInitialize

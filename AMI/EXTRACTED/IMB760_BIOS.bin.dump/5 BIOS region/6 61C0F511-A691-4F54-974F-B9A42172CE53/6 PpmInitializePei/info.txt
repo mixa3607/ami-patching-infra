@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: PpmInitializePei
+Fixed: No
+Base: 1C0F680h
+Header address: FFC0F680h
+Data address: FFC0F698h
+Offset: F680h
+File GUID: 32FAFCA8-0374-49BD-A090-B4B4603A50D6
+Type: 06h
+Attributes: 00h
+Full size: 48C2h (18626)
+Header size: 18h (24)
+Body size: 48AAh (18602)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 4Bh, valid
+Data checksum: AAh, valid

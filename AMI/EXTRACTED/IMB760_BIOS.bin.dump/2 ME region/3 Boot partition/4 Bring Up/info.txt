@@ -1,0 +1,13 @@
+Type: BPDT partition
+Subtype: 
+Text: Bring Up
+Fixed: Yes
+Base: DF000h
+Address: FE0DF000h
+Offset: 37000h
+Full size: 8C000h (573440)
+Type: 2h
+Split sub-partition first part: No
+Split sub-partition second part: No
+Code sub-partition: No
+UMA cacheable: No

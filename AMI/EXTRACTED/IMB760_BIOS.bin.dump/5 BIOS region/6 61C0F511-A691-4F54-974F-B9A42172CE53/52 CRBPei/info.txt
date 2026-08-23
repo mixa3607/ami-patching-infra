@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: CRBPei
+Fixed: No
+Base: 1D8AA90h
+Header address: FFD8AA90h
+Data address: FFD8AAA8h
+Offset: 18AA90h
+File GUID: 0D1ED2F7-E92B-4562-92DD-5C82EC917EAE
+Type: 06h
+Attributes: 00h
+Full size: 986h (2438)
+Header size: 18h (24)
+Body size: 96Eh (2414)
+Tail size: 0h (0)
+State: F8h
+Header checksum: C6h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: 1A3F68h
+Header address: FE1A3F68h
+Data address: FE1A3F9Ch
+Offset: 7A8h
+Full size: 854h (2132)
+Header size: 34h (52)
+Body size: DE0h (3552)
+Type: Fh
+Package name: OPR
+Version control number: 0h
+Security version number: 1h
+Usage bitmap: 00000000000000000000000000000000

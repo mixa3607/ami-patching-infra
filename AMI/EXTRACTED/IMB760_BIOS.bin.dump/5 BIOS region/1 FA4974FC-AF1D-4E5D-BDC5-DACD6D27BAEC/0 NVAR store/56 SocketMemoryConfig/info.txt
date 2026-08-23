@@ -1,0 +1,13 @@
+Type: NVAR entry
+Subtype: Data
+Text: SocketMemoryConfig
+Fixed: Yes
+Base: 108B277h
+Header address: FF08B277h
+Data address: FF08B281h
+Offset: B1FFh
+Full size: 2E5h (741)
+Header size: Ah (10)
+Body size: 2DBh (731)
+Tail size: 0h (0)
+Attributes: 88h (DataOnly, Valid)

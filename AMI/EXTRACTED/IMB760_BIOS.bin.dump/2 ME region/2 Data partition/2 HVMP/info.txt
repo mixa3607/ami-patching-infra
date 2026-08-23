@@ -1,0 +1,9 @@
+Type: FPT partition
+Subtype: Data
+Fixed: Yes
+Base: 6EC0h
+Address: FE006EC0h
+Offset: EC0h
+Full size: Ch (12)
+Partition type: 01h
+

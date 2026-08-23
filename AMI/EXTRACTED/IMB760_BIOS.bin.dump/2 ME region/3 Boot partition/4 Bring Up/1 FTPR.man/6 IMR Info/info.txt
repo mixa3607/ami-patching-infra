@@ -1,0 +1,8 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: DF524h
+Address: FE0DF524h
+Offset: 454h
+Full size: 364h (868)
+Type: 12h

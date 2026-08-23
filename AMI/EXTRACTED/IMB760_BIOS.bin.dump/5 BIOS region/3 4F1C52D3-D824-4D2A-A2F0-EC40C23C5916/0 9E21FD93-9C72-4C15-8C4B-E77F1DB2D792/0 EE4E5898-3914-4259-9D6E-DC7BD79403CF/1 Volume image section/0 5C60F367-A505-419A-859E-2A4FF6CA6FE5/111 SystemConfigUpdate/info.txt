@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SystemConfigUpdate
+Fixed: No
+Offset: 312E88h
+File GUID: 9F048812-A546-4C85-A5CF-A0785423705D
+Type: 07h
+Attributes: 00h
+Full size: B72h (2930)
+Header size: 18h (24)
+Body size: B5Ah (2906)
+Tail size: 0h (0)
+State: F8h
+Header checksum: B3h, valid
+Data checksum: AAh, valid

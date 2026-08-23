@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SmbusSpdAccess
+Fixed: No
+Offset: 9CF40h
+File GUID: E4F5789E-BD21-234F-234D-E43DE231CA00
+Type: 07h
+Attributes: 00h
+Full size: 215Ah (8538)
+Header size: 18h (24)
+Body size: 2142h (8514)
+Tail size: 0h (0)
+State: F8h
+Header checksum: D1h, valid
+Data checksum: AAh, valid

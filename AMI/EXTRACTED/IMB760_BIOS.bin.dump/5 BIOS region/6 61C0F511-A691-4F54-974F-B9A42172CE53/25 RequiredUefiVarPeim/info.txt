@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: RequiredUefiVarPeim
+Fixed: No
+Base: 1D52DC0h
+Header address: FFD52DC0h
+Data address: FFD52DD8h
+Offset: 152DC0h
+File GUID: 35CE663F-292D-4763-80F5-05C933F6EA15
+Type: 06h
+Attributes: 00h
+Full size: 70Eh (1806)
+Header size: 18h (24)
+Body size: 6F6h (1782)
+Tail size: 0h (0)
+State: F8h
+Header checksum: D2h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: ScsiBus
+Fixed: No
+Offset: 516CB0h
+File GUID: 0167CCC4-D0F7-4F21-A3EF-9E64B7CDCE8B
+Type: 07h
+Attributes: 00h
+Full size: 215Eh (8542)
+Header size: 18h (24)
+Body size: 2146h (8518)
+Tail size: 0h (0)
+State: F8h
+Header checksum: DAh, valid
+Data checksum: AAh, valid

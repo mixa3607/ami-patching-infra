@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SpsAcpiHooks
+Fixed: No
+Offset: 2844B0h
+File GUID: 7ADBAD98-7FE1-4774-9260-747327435E6D
+Type: 07h
+Attributes: 00h
+Full size: 101Ah (4122)
+Header size: 18h (24)
+Body size: 1002h (4098)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 0Ch, valid
+Data checksum: AAh, valid

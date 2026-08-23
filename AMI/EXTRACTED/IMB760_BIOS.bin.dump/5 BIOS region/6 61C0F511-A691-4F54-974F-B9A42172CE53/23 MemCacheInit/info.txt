@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: MemCacheInit
+Fixed: No
+Base: 1D4E678h
+Header address: FFD4E678h
+Data address: FFD4E690h
+Offset: 14E678h
+File GUID: 2C878DFE-F92E-4D00-BCED-146AFE099841
+Type: 06h
+Attributes: 00h
+Full size: 3FAAh (16298)
+Header size: 18h (24)
+Body size: 3F92h (16274)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 58h, valid
+Data checksum: AAh, valid

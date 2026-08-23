@@ -1,0 +1,8 @@
+Type: IFWI partition
+Subtype: Boot
+Fixed: Yes
+Base: 16C000h
+Address: FE16C000h
+Offset: 169000h
+Full size: 26C000h (2539520)
+

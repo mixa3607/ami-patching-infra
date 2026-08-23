@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: Legacy8259
+Fixed: No
+Offset: 53298h
+File GUID: 79CA4208-BBA1-4A9A-8456-E1E66A81484E
+Type: 07h
+Attributes: 00h
+Full size: B7Eh (2942)
+Header size: 18h (24)
+Body size: B66h (2918)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 81h, valid
+Data checksum: AAh, valid

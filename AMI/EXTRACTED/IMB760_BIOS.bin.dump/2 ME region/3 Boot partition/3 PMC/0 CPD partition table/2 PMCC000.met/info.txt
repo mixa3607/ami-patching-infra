@@ -1,0 +1,10 @@
+Type: CPD entry
+Subtype: 
+Fixed: Yes
+Base: CE040h
+Address: FE0CE040h
+Offset: 40h
+Full size: 18h (24)
+Entry offset: 39Ch
+Entry length: 38h
+Huffman compressed: No

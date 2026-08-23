@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: CrystalRidge
+Fixed: No
+Offset: 13FD7C8h
+File GUID: C4EB3614-4986-42B9-8C0D-9FE118278908
+Type: 07h
+Attributes: 00h
+Full size: 46114Eh (4591950)
+Header size: 18h (24)
+Body size: 461136h (4591926)
+Tail size: 0h (0)
+State: F8h
+Header checksum: A8h, valid
+Data checksum: AAh, valid

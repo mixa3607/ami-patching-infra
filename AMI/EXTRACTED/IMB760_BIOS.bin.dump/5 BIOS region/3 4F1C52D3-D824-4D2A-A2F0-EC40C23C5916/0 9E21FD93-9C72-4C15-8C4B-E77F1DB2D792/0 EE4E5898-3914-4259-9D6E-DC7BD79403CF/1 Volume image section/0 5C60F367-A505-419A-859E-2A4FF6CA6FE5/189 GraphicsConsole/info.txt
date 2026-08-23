@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: GraphicsConsole
+Fixed: No
+Offset: 42BF30h
+File GUID: 43E7ABDD-E352-4CFB-A230-4CDC1D350E5C
+Type: 07h
+Attributes: 00h
+Full size: 3B2Eh (15150)
+Header size: 18h (24)
+Body size: 3B16h (15126)
+Tail size: 0h (0)
+State: F8h
+Header checksum: ACh, valid
+Data checksum: AAh, valid

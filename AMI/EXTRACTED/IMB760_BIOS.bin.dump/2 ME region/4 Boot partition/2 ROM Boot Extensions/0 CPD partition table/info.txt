@@ -1,0 +1,13 @@
+Type: CPD store
+Subtype: 
+Fixed: Yes
+Base: 16F000h
+Header address: FE16F000h
+Data address: FE16F010h
+Offset: 0h
+Full size: 58h (88)
+Header size: 10h (16)
+Body size: 48h (72)
+Number of entries: 3
+Header version: 1
+Entry version: 1

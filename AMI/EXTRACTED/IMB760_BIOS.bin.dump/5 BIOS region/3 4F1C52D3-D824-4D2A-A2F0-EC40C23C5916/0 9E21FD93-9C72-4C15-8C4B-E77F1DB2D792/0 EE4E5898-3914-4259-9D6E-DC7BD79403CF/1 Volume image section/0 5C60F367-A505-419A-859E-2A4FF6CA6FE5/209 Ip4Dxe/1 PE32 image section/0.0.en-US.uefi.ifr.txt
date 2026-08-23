@@ -1,0 +1,39 @@
+Program version: 1.6.0, Extraction mode: UEFI
+0xEB7C: FormSet Guid: 9B942747-154E-4D29-A436-BF7100C8B53B, Title: "IPv4 Network Configuration", Help: "Configure network parameters." { 0E A7 47 27 94 9B 4E 15 29 4D A4 36 BF 71 00 C8 B5 3B 02 00 03 00 01 71 99 03 93 45 85 04 4B B4 5E 32 EB 83 26 04 0E }
+0xEBA3: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Class, Class: 0x4 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 03 04 00 }
+0xEBB8: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: SubClass, SubClass: 0x3 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 04 03 00 }
+0xEBCD: 	DefaultStore DefaultId: 0x0, Name: "" { 5C 06 00 00 00 00 }
+0xEBD3: 	DefaultStore DefaultId: 0x1, Name: "" { 5C 06 00 00 01 00 }
+0xEBD9: 	VarStore Guid: 9B942747-154E-4D29-A436-BF7100C8B53B, VarStoreId: 0x1, Size: 0x260, Name: "IP4_CONFIG2_IFR_NVDATA" { 24 2D 47 27 94 9B 4E 15 29 4D A4 36 BF 71 00 C8 B5 3B 01 00 60 02 49 50 34 5F 43 4F 4E 46 49 47 32 5F 49 46 52 5F 4E 56 44 41 54 41 00 }
+0xEC06: 	Form FormId: 0x1, Title: "" { 01 86 01 00 04 00 }
+0xEC0C: 		CheckBox Prompt: "Configured", Help: "Indicate whether network address configured successfully or not.", QuestionFlags: 0x4, QuestionId: 0x100, VarStoreId: 0x1, VarOffset: 0x0, Flags: 0x0, Default: Disabled, MfgDefault: Disabled { 06 8E 06 00 07 00 00 01 01 00 00 00 04 00 }
+0xEC1A: 		End  { 29 02 }
+0xEC1C: 		SuppressIf  { 0A 82 }
+0xEC1E: 			EqIdVal QuestionId: 0x100, Value: 0x0 { 12 06 00 01 00 00 }
+0xEC24: 			CheckBox Prompt: "Enable DHCP", Help: "Enable DHCP", QuestionFlags: 0x4, QuestionId: 0x101, VarStoreId: 0x1, VarOffset: 0x1, Flags: 0x0, Default: Disabled, MfgDefault: Disabled { 06 8E 08 00 08 00 01 01 01 00 01 00 04 00 }
+0xEC32: 			End  { 29 02 }
+0xEC34: 		End  { 29 02 }
+0xEC36: 		SuppressIf  { 0A 82 }
+0xEC38: 			EqIdVal QuestionId: 0x101, Value: 0x1 { 12 86 01 01 01 00 }
+0xEC3E: 				EqIdVal QuestionId: 0x100, Value: 0x0 { 12 06 00 01 00 00 }
+0xEC44: 				Or  { 16 02 }
+0xEC46: 			End  { 29 02 }
+0xEC48: 			String Prompt: "Local IP Address", Help: "Enter IP address in dotted-decimal notation. Example: 192.168.10.12
+", QuestionFlags: 0x4, QuestionId: 0x102, VarStoreId: 0x1, VarStoreInfo: 0x2, MinSize: 0x7, MaxSize: 0xF, Flags: 0x0 { 1C 90 09 00 0A 00 02 01 01 00 02 00 04 07 0F 00 }
+0xEC58: 			End  { 29 02 }
+0xEC5A: 			String Prompt: "Local NetMask", Help: "Enter NetMask in dotted-decimal notation. Example: 255.255.255.0
+", QuestionFlags: 0x4, QuestionId: 0x103, VarStoreId: 0x1, VarStoreInfo: 0x22, MinSize: 0x7, MaxSize: 0xF, Flags: 0x0 { 1C 90 0B 00 0C 00 03 01 01 00 22 00 04 07 0F 00 }
+0xEC6A: 			End  { 29 02 }
+0xEC6C: 			String Prompt: "Local Gateway", Help: "Enter Gateway in dotted-decimal notation. Example: 192.168.10.1
+", QuestionFlags: 0x4, QuestionId: 0x104, VarStoreId: 0x1, VarStoreInfo: 0x42, MinSize: 0x7, MaxSize: 0xF, Flags: 0x0 { 1C 90 0D 00 0E 00 04 01 01 00 42 00 04 07 0F 00 }
+0xEC7C: 			End  { 29 02 }
+0xEC7E: 			String Prompt: "Local DNS Servers", Help: "Enter DNS Servers in dotted-decimal notation. Example: 192.168.10.8 192.168.10.9
+", QuestionFlags: 0x4, QuestionId: 0x105, VarStoreId: 0x1, VarStoreInfo: 0x62, MinSize: 0x7, MaxSize: 0xFF, Flags: 0x0 { 1C 90 0F 00 10 00 05 01 01 00 62 00 04 07 FF 00 }
+0xEC8E: 			End  { 29 02 }
+0xEC90: 		End  { 29 02 }
+0xEC92: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 12 00 00 00 00 }
+0xEC99: 		End  { 29 02 }
+0xEC9B: 		Action Prompt: "Save Changes and Exit", Help: "Save Changes and Exit", QuestionFlags: 0x4, QuestionId: 0x106, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, QuestionConfig: "" { 0C 8F 11 00 11 00 06 01 00 00 FF FF 04 00 00 }
+0xECAA: 		End  { 29 02 }
+0xECAC: 	End  { 29 02 }
+0xECAE: End  { 29 02 }

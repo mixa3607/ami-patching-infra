@@ -1,0 +1,16 @@
+Type: NVAR entry
+Subtype: Link
+Text: TerminalSerialVar
+Fixed: Yes
+Base: 10842B2h
+Header address: FF0842B2h
+Data address: FF0842CFh
+Offset: 423Ah
+Variable GUID: 560BF58A-1E0D-4D7E-953F-2980A261E031
+GUID index: 13
+Full size: 27h (39)
+Header size: 1Dh (29)
+Body size: Ah (10)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)
+Next node at offset: A2B6h

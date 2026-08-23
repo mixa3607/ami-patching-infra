@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: OpromUpdateDxeWilsonPointRP
+Fixed: No
+Offset: 341870h
+File GUID: 561BBF67-C6AF-4429-BFFB-40C57A5DDD36
+Type: 07h
+Attributes: 00h
+Full size: EC2h (3778)
+Header size: 18h (24)
+Body size: EAAh (3754)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 07h, valid
+Data checksum: AAh, valid

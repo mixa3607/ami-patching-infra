@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SocketSetup
+Fixed: No
+Offset: 1BDB70h
+File GUID: 6B6FD380-2C55-42C6-98BF-CBBC5A9AA666
+Type: 07h
+Attributes: 00h
+Full size: 97B76h (621430)
+Header size: 18h (24)
+Body size: 97B5Eh (621406)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 6Bh, valid
+Data checksum: AAh, valid

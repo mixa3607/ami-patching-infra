@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: CapsulePei
+Fixed: No
+Base: 1C080B0h
+Header address: FFC080B0h
+Data address: FFC080C8h
+Offset: 80B0h
+File GUID: C779F6D8-7113-4AA1-9648-EB1633C7D53B
+Type: 06h
+Attributes: 00h
+Full size: 20CEh (8398)
+Header size: 18h (24)
+Body size: 20B6h (8374)
+Tail size: 0h (0)
+State: F8h
+Header checksum: A6h, valid
+Data checksum: AAh, valid

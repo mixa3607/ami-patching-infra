@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 3AE540h
+Address: FE3AE540h
+Offset: 20B540h
+Full size: 1408h (5128)
+Huffman compressed: Yes
+Hash: 441d1991b2f1251f253267a38df1b42d6e2cb1e93eba8b6237b32477ae6dfc50

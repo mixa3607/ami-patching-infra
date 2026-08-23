@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: PchGpioUnlockSmm
+Fixed: No
+Offset: E7A2A0h
+File GUID: A11D8F9F-2A52-40BC-9B82-BCCD7D281EEA
+Type: 0Ah
+Attributes: 00h
+Full size: 1ED6h (7894)
+Header size: 18h (24)
+Body size: 1EBEh (7870)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 4Bh, valid
+Data checksum: AAh, valid

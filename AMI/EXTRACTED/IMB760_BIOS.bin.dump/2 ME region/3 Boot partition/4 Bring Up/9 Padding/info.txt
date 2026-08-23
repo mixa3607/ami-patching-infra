@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: F4264h
+Address: FE0F4264h
+Offset: 15264h
+Full size: 1Ch (28)

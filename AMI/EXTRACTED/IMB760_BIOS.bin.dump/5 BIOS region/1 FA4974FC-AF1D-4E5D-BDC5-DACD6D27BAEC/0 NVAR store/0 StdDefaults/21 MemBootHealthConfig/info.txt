@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: MemBootHealthConfig
+Fixed: Yes
+Base: 1082D7Dh
+Header address: FF082D7Dh
+Data address: FF082D9Ch
+Offset: 2CEDh
+Variable GUID: ACD56900-DEFC-4127-DE12-32A0D269462F
+GUID index: 17
+Full size: 32h (50)
+Header size: 1Fh (31)
+Body size: 13h (19)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

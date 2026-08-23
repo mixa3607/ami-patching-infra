@@ -1,0 +1,13 @@
+Type: BPDT partition
+Subtype: 
+Text: OEM Key Manifest
+Fixed: Yes
+Base: 3D7000h
+Address: FE3D7000h
+Offset: 26B000h
+Full size: 1000h (4096)
+Type: 14h
+Split sub-partition first part: No
+Split sub-partition second part: No
+Code sub-partition: No
+UMA cacheable: No

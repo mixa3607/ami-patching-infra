@@ -1,0 +1,15 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: CE2DCh
+Header address: FE0CE2DCh
+Data address: FE0CE310h
+Offset: 284h
+Full size: 68h (104)
+Header size: 34h (52)
+Body size: C0h (192)
+Type: Fh
+Package name: PMCP
+Version control number: 0h
+Security version number: 0h
+Usage bitmap: 04000000000000000000000000000000

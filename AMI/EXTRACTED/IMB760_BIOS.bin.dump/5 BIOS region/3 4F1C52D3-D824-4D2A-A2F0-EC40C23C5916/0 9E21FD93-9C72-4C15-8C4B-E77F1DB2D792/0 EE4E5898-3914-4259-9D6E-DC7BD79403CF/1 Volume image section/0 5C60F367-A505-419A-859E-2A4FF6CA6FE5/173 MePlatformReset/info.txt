@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: MePlatformReset
+Fixed: No
+Offset: 37A338h
+File GUID: 9A9A912B-5F53-4586-8820-704485A29D21
+Type: 07h
+Attributes: 00h
+Full size: 2076h (8310)
+Header size: 18h (24)
+Body size: 205Eh (8286)
+Tail size: 0h (0)
+State: F8h
+Header checksum: B5h, valid
+Data checksum: AAh, valid

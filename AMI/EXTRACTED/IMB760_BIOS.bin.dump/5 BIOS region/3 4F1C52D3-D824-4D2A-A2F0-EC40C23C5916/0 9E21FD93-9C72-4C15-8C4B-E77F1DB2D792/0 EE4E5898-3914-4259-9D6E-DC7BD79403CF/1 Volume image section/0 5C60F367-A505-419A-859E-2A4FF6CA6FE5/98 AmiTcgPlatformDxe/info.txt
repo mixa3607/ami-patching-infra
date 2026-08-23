@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: AmiTcgPlatformDxe
+Fixed: No
+Offset: 2A6B30h
+File GUID: A29A63E3-E4E7-495F-8A6A-07738300CBB3
+Type: 07h
+Attributes: 00h
+Full size: 7D16h (32022)
+Header size: 18h (24)
+Body size: 7CFEh (31998)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 02h, valid
+Data checksum: AAh, valid

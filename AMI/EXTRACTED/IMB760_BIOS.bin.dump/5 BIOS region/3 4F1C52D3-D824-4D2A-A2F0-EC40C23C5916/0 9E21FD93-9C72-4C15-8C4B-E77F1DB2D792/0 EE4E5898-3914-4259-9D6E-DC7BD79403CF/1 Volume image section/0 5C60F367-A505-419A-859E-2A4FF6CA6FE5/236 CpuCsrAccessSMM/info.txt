@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: CpuCsrAccessSMM
+Fixed: No
+Offset: 56F158h
+File GUID: 870E0F5A-1981-45F6-AE26-0391425CC46F
+Type: 0Ah
+Attributes: 00h
+Full size: 34E2h (13538)
+Header size: 18h (24)
+Body size: 34CAh (13514)
+Tail size: 0h (0)
+State: F8h
+Header checksum: D4h, valid
+Data checksum: AAh, valid

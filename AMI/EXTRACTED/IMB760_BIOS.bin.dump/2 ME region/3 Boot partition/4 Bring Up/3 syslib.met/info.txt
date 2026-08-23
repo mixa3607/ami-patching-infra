@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Metadata
+Fixed: Yes
+Base: DF914h
+Address: FE0DF914h
+Offset: 914h
+Full size: 64h (100)
+Huffman compressed: No
+Metadata hash: a52d2e831ab952690f3ce5f8131b5794241da58f978ba09dfb0f2d2d380b6177

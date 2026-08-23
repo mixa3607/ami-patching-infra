@@ -1,0 +1,21 @@
+Type: CPD partition
+Subtype: Manifest
+Fixed: Yes
+Base: 1A37C0h
+Header address: FE1A37C0h
+Data address: FE1A3A44h
+Offset: 7C0h
+Full size: 1064h (4196)
+Header size: 284h (644)
+Body size: DE0h (3552)
+Header type: 4
+Header length: 284h (644)
+Header version: 10000h
+Flags: 00000001h
+Vendor: 8086h
+Date: 20201211h
+Size: 1064h (4196)
+Version: 4.4.3.263
+Security version number: 1
+Modulus size: 100h (256)
+Exponent size: 4h (4)

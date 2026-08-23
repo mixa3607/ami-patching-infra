@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: PlatformLastLangCodes
+Fixed: Yes
+Base: 108A9A1h
+Header address: FF08A9A1h
+Data address: FF08A9C2h
+Offset: A929h
+Variable GUID: EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9
+GUID index: 12
+Full size: 27h (39)
+Header size: 21h (33)
+Body size: 6h (6)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

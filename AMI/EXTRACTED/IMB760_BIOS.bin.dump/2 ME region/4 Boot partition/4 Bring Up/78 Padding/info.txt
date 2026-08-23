@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 291E88h
+Address: FE291E88h
+Offset: EEE88h
+Full size: 38h (56)

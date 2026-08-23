@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: IntelSetup
+Fixed: Yes
+Base: 1084082h
+Header address: FF084082h
+Data address: FF084098h
+Offset: 400Ah
+Variable GUID: EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9
+GUID index: 12
+Full size: 230h (560)
+Header size: 16h (22)
+Body size: 21Ah (538)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

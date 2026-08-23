@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: Heci3Smm
+Fixed: No
+Offset: 5544B0h
+File GUID: 69735520-DA83-444A-93DC-BDDD59E59182
+Type: 0Ah
+Attributes: 00h
+Full size: 26B2h (9906)
+Header size: 18h (24)
+Body size: 269Ah (9882)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 88h, valid
+Data checksum: AAh, valid

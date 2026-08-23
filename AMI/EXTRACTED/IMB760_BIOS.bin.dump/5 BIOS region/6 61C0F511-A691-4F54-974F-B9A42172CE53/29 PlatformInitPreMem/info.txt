@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: PlatformInitPreMem
+Fixed: No
+Base: 1D58300h
+Header address: FFD58300h
+Data address: FFD58318h
+Offset: 158300h
+File GUID: EE685731-CFF3-4EE7-9388-7E63FC5A59B0
+Type: 06h
+Attributes: 00h
+Full size: 104AAh (66730)
+Header size: 18h (24)
+Body size: 10492h (66706)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 1Bh, valid
+Data checksum: AAh, valid

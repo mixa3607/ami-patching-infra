@@ -1,0 +1,12 @@
+Type: Section
+Subtype: Freeform subtype GUID
+Fixed: No
+Base: 1D8CC48h
+Header address: FFD8CC48h
+Data address: FFD8CC5Ch
+Offset: 18h
+Type: 18h
+Full size: 164h (356)
+Header size: 14h (20)
+Body size: 150h (336)
+Subtype GUID: 00781CA1-5DE3-405F-ABB8-379C3C076984

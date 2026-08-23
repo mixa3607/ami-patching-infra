@@ -1,0 +1,37 @@
+Program version: 1.6.0, Extraction mode: UEFI
+0x3DBC: FormSet Guid: 932D37B0-0D4A-11E0-81E0-0800200C9A66, Title: "!!!! PCI Resource ERROR !!!!", Help: "" { 0E A7 B0 37 2D 93 4A 0D E0 11 81 E0 08 00 20 0C 9A 66 03 00 02 00 01 71 99 03 93 45 85 04 4B B4 5E 32 EB 83 26 04 0E }
+0x3DE3: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Class, Class: 0x79 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 03 79 00 }
+0x3DF8: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: SubClass, SubClass: 0x0 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 04 00 00 }
+0x3E0D: 	DefaultStore DefaultId: 0x0, Name: "" { 5C 06 00 00 00 00 }
+0x3E13: 	DefaultStore DefaultId: 0x1, Name: "" { 5C 06 00 00 01 00 }
+0x3E19: 	Form FormId: 0x1, Title: "!!!! PCI Resource ERROR !!!!" { 01 86 01 00 03 00 }
+0x3E1F: 		Subtitle Prompt: "PCI OUT OF RESOURCES CONDITION:", Help: "", Flags: 0x0 { 02 87 04 00 00 00 00 }
+0x3E26: 		End  { 29 02 }
+0x3E28: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 02 00 00 00 00 }
+0x3E2F: 		End  { 29 02 }
+0x3E31: 		Subtitle Prompt: "ERROR: Insufficient PCI Resources Detected!!!", Help: "", Flags: 0x0 { 02 87 05 00 00 00 00 }
+0x3E38: 		End  { 29 02 }
+0x3E3A: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 02 00 00 00 00 }
+0x3E41: 		End  { 29 02 }
+0x3E43: 		Subtitle Prompt: "System is running with Insufficient PCI Resources!", Help: "", Flags: 0x0 { 02 87 06 00 00 00 00 }
+0x3E4A: 		End  { 29 02 }
+0x3E4C: 		Subtitle Prompt: "In order to display this message some", Help: "", Flags: 0x0 { 02 87 07 00 00 00 00 }
+0x3E53: 		End  { 29 02 }
+0x3E55: 		Subtitle Prompt: "PCI devices were set to disabled state!", Help: "", Flags: 0x0 { 02 87 08 00 00 00 00 }
+0x3E5C: 		End  { 29 02 }
+0x3E5E: 		Subtitle Prompt: "It is strongly recommended to Power Off the system ", Help: "", Flags: 0x0 { 02 87 09 00 00 00 00 }
+0x3E65: 		End  { 29 02 }
+0x3E67: 		Subtitle Prompt: "and remove some PCI/PCI Express cards from the system!", Help: "", Flags: 0x0 { 02 87 0A 00 00 00 00 }
+0x3E6E: 		End  { 29 02 }
+0x3E70: 		Subtitle Prompt: "To continue booting, proceed to <Save & Exit> Menu Option ", Help: "", Flags: 0x0 { 02 87 0B 00 00 00 00 }
+0x3E77: 		End  { 29 02 }
+0x3E79: 		Subtitle Prompt: "and select Boot Device or <Discard Changes and Exit>.", Help: "", Flags: 0x0 { 02 87 0C 00 00 00 00 }
+0x3E80: 		End  { 29 02 }
+0x3E82: 		Subtitle Prompt: "", Help: "", Flags: 0x0 { 02 87 02 00 00 00 00 }
+0x3E89: 		End  { 29 02 }
+0x3E8B: 		Subtitle Prompt: "WARNING: If you choose to continue booting some Operating", Help: "", Flags: 0x0 { 02 87 0D 00 00 00 00 }
+0x3E92: 		End  { 29 02 }
+0x3E94: 		Subtitle Prompt: "    Systems might not be able to complete boot correctly!", Help: "", Flags: 0x0 { 02 87 0E 00 00 00 00 }
+0x3E9B: 		End  { 29 02 }
+0x3E9D: 	End  { 29 02 }
+0x3E9F: End  { 29 02 }

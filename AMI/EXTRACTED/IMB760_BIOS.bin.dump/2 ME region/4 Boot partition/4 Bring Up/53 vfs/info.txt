@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 216600h
+Address: FE216600h
+Offset: 73600h
+Full size: 182B4h (98996)
+Huffman compressed: Yes
+Hash: e1053eed56b4e3fb984a220416130d56fdfa962283a96db3ba0cf94237fdb21d

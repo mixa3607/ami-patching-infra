@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 235D54h
+Address: FE235D54h
+Offset: 92D54h
+Full size: 2Ch (44)

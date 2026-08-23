@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SBDXE
+Fixed: No
+Offset: 357D80h
+File GUID: B7D19491-E55A-470D-8508-85A5DFA41974
+Type: 07h
+Attributes: 00h
+Full size: 1F36h (7990)
+Header size: 18h (24)
+Body size: 1F1Eh (7966)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 9Dh, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: AmiDeviceGuardApi
+Fixed: No
+Offset: 18C620h
+File GUID: 95ECB758-627E-4A2E-B7B8-DC863EFE3425
+Type: 07h
+Attributes: 00h
+Full size: 162Eh (5678)
+Header size: 18h (24)
+Body size: 1616h (5654)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 67h, valid
+Data checksum: AAh, valid

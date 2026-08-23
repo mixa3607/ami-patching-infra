@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1C01D7Ch
+Header address: FFC01D7Ch
+Data address: FFC01D80h
+Offset: 1C34h
+Type: 15h
+Full size: 1Eh (30)
+Header size: 4h (4)
+Body size: 1Ah (26)
+Text: RomLayoutPei

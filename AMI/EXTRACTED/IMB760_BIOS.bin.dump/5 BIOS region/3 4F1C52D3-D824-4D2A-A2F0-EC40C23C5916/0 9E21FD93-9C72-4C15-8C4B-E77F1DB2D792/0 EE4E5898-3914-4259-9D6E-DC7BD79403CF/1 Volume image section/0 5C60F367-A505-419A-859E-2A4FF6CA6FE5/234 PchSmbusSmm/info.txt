@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: PchSmbusSmm
+Fixed: No
+Offset: 56AFE8h
+File GUID: 59287178-59B2-49CA-BC63-532B12EA2C53
+Type: 0Ah
+Attributes: 00h
+Full size: 1EB6h (7862)
+Header size: 18h (24)
+Body size: 1E9Eh (7838)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 82h, valid
+Data checksum: AAh, valid

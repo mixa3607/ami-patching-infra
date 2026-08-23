@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: MeUma
+Fixed: No
+Base: 1C15440h
+Header address: FFC15440h
+Data address: FFC15458h
+Offset: 15440h
+File GUID: B6A2AFF3-767C-5658-C37A-D1C82EF76543
+Type: 06h
+Attributes: 00h
+Full size: 2A56h (10838)
+Header size: 18h (24)
+Body size: 2A3Eh (10814)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 3Dh, valid
+Data checksum: AAh, valid

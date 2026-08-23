@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: UsbPortXhciAcpiDxe
+Fixed: No
+Offset: 313A00h
+File GUID: F59DAA23-D5D5-4D16-91FC-D03ABDC12FFF
+Type: 07h
+Attributes: 00h
+Full size: 8D2h (2258)
+Header size: 18h (24)
+Body size: 8BAh (2234)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 70h, valid
+Data checksum: AAh, valid

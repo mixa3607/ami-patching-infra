@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: DxeIpmiInitialize
+Fixed: No
+Offset: 18E7CA8h
+File GUID: 6372357A-06D7-43EF-B55C-1964F3DD6916
+Type: 07h
+Attributes: 00h
+Full size: 728Eh (29326)
+Header size: 18h (24)
+Body size: 7276h (29302)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 89h, valid
+Data checksum: AAh, valid

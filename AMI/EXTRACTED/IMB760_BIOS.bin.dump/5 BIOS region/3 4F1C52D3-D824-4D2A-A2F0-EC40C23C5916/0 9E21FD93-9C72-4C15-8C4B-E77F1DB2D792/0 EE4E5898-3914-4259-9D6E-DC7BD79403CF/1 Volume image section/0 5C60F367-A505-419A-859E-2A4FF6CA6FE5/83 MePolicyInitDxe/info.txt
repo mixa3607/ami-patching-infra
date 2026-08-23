@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: MePolicyInitDxe
+Fixed: No
+Offset: 2813D0h
+File GUID: 24A44CAF-0BF2-4514-90C4-C794B3E778F5
+Type: 07h
+Attributes: 00h
+Full size: 30DAh (12506)
+Header size: 18h (24)
+Body size: 30C2h (12482)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 20h, valid
+Data checksum: AAh, valid

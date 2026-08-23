@@ -1,0 +1,11 @@
+Type: Section
+Subtype: Compressed
+Fixed: No
+Offset: 18h
+Type: 01h
+Full size: 101E4h (66020)
+Header size: 9h (9)
+Body size: 101DBh (66011)
+Compression type: 01h
+Decompressed size: 2BB1Ch (178972)
+Compression algorithm: EFI 1.1

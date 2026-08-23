@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: LegacySmmSredir
+Fixed: No
+Offset: 63B360h
+File GUID: 291E46D4-CA63-4D33-9857-1397C9AD7C0D
+Type: 0Ah
+Attributes: 00h
+Full size: 1C9Ah (7322)
+Header size: 18h (24)
+Body size: 1C82h (7298)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 9Ah, valid
+Data checksum: AAh, valid

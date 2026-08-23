@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: LastBootFailedIoh
+Fixed: Yes
+Base: 108A052h
+Header address: FF08A052h
+Data address: FF08A06Fh
+Offset: 9FDAh
+Variable GUID: 8163179A-F31A-4132-AEDE-89F36AEE43DA
+GUID index: 27
+Full size: 5Dh (93)
+Header size: 1Dh (29)
+Body size: 40h (64)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

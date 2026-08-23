@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 2D7740h
+Address: FE2D7740h
+Offset: 134740h
+Full size: 69A0h (27040)
+Huffman compressed: Yes
+Hash: 7bb187791859e012f98b2bb2ebbea98d913e72df66eefdbd8bf5052ad231c38a

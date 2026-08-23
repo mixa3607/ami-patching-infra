@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: SpdData0
+Fixed: Yes
+Base: 1086573h
+Header address: FF086573h
+Data address: FF086587h
+Offset: 64FBh
+Variable GUID: 1F5D405B-9B66-4336-85E9-52B4EE6ACA51
+GUID index: 22
+Full size: 1B2h (434)
+Header size: 14h (20)
+Body size: 19Eh (414)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

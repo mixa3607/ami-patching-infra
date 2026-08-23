@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: ServerMgmtSetup
+Fixed: No
+Offset: DB358h
+File GUID: 1B08A1DB-F91A-4FA1-A911-255C417F1CF7
+Type: 07h
+Attributes: 00h
+Full size: 1CC7Ah (117882)
+Header size: 18h (24)
+Body size: 1CC62h (117858)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 02h, valid
+Data checksum: AAh, valid

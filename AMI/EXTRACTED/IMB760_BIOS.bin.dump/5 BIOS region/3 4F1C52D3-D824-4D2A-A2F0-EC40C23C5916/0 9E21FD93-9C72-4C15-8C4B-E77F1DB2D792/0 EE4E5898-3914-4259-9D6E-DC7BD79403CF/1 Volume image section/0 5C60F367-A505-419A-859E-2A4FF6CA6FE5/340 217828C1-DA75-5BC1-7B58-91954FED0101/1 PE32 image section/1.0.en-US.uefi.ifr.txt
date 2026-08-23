@@ -1,0 +1,269 @@
+Program version: 1.6.0, Extraction mode: UEFI
+0x17E2C: FormSet Guid: 475FEC41-03E7-4914-ABFC-2F5A0590F26C, Title: "Intel PCIe NVMe SSD", Help: "Intel PCIe NVMe SSD Help" { 0E A7 41 EC 5F 47 E7 03 14 49 AB FC 2F 5A 05 90 F2 6C 19 00 1A 00 01 40 97 8E 5C F7 A5 93 45 AF 1F 66 A8 2A A1 9C B1 }
+0x17E53: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Class, Class: 0x1 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 03 01 00 }
+0x17E68: 	DefaultStore DefaultId: 0x0, Name: "" { 5C 06 00 00 00 00 }
+0x17E6E: 	DefaultStore DefaultId: 0x1, Name: "" { 5C 06 00 00 01 00 }
+0x17E74: 	VarStore Guid: 475FEC41-03E7-4914-ABFC-2F5A0590F26C, VarStoreId: 0x1, Size: 0x2B2, Name: "NVMe_PCIeIfr" { 24 23 41 EC 5F 47 E7 03 14 49 AB FC 2F 5A 05 90 F2 6C 01 00 B2 02 4E 56 4D 65 5F 50 43 49 65 49 66 72 00 }
+0x17E97: 	VarStore Guid: 475FEC41-03E7-4914-ABFC-2F5A0590F26C, VarStoreId: 0x2, Size: 0x188, Name: "NVMe_FwIfr" { 24 21 41 EC 5F 47 E7 03 14 49 AB FC 2F 5A 05 90 F2 6C 02 00 88 01 4E 56 4D 65 5F 46 77 49 66 72 00 }
+0x17EB8: 	VarStore Guid: 475FEC41-03E7-4914-ABFC-2F5A0590F26C, VarStoreId: 0x3, Size: 0x188, Name: "NVMe_UEFIIfr" { 24 23 41 EC 5F 47 E7 03 14 49 AB FC 2F 5A 05 90 F2 6C 03 00 88 01 4E 56 4D 65 5F 55 45 46 49 49 66 72 00 }
+0x17EDB: 	VarStore Guid: 475FEC41-03E7-4914-ABFC-2F5A0590F26C, VarStoreId: 0x4, Size: 0x156, Name: "NVMe_DiskIfr" { 24 23 41 EC 5F 47 E7 03 14 49 AB FC 2F 5A 05 90 F2 6C 04 00 56 01 4E 56 4D 65 5F 44 69 73 6B 49 66 72 00 }
+0x17EFE: 	Form FormId: 0x1, Title: "PCI Generic Information" { 01 86 01 00 1B 00 }
+0x17F04: 		String Prompt: "UUID", Help: "", QuestionFlags: 0x1, QuestionId: 0x1, VarStoreId: 0x1, VarStoreInfo: 0x0, MinSize: 0x20, MaxSize: 0x20, Flags: 0x0 { 1C 90 1D 00 1C 00 01 00 01 00 00 00 01 20 20 00 }
+0x17F14: 		End  { 29 02 }
+0x17F16: 		String Prompt: "Card Name", Help: "", QuestionFlags: 0x1, QuestionId: 0x2, VarStoreId: 0x1, VarStoreInfo: 0x42, MinSize: 0x1, MaxSize: 0x60, Flags: 0x0 { 1C 90 1E 00 1C 00 02 00 01 00 42 00 01 01 60 00 }
+0x17F26: 		End  { 29 02 }
+0x17F28: 		String Prompt: "Manufacturer", Help: "", QuestionFlags: 0x1, QuestionId: 0x3, VarStoreId: 0x1, VarStoreInfo: 0x104, MinSize: 0x1, MaxSize: 0x18, Flags: 0x0 { 1C 90 1F 00 1C 00 03 00 01 00 04 01 01 01 18 00 }
+0x17F38: 		End  { 29 02 }
+0x17F3A: 		String Prompt: "Serial Number", Help: "", QuestionFlags: 0x1, QuestionId: 0x4, VarStoreId: 0x1, VarStoreInfo: 0x136, MinSize: 0x1, MaxSize: 0x10, Flags: 0x0 { 1C 90 20 00 1C 00 04 00 01 00 36 01 01 01 10 00 }
+0x17F4A: 		End  { 29 02 }
+0x17F4C: 		String Prompt: "Part Number", Help: "", QuestionFlags: 0x1, QuestionId: 0x5, VarStoreId: 0x1, VarStoreInfo: 0x158, MinSize: 0x1, MaxSize: 0x10, Flags: 0x0 { 1C 90 21 00 1C 00 05 00 01 00 58 01 01 01 10 00 }
+0x17F5C: 		End  { 29 02 }
+0x17F5E: 		String Prompt: "Model", Help: "", QuestionFlags: 0x1, QuestionId: 0x6, VarStoreId: 0x1, VarStoreInfo: 0x17A, MinSize: 0x1, MaxSize: 0x10, Flags: 0x0 { 1C 90 22 00 1C 00 06 00 01 00 7A 01 01 01 10 00 }
+0x17F6E: 		End  { 29 02 }
+0x17F70: 		String Prompt: "Card SKU", Help: "", QuestionFlags: 0x1, QuestionId: 0x7, VarStoreId: 0x1, VarStoreInfo: 0x1BC, MinSize: 0x1, MaxSize: 0xC, Flags: 0x0 { 1C 90 23 00 1C 00 07 00 01 00 BC 01 01 01 0C 00 }
+0x17F80: 		End  { 29 02 }
+0x17F82: 		String Prompt: "FoD UID", Help: "", QuestionFlags: 0x1, QuestionId: 0x8, VarStoreId: 0x1, VarStoreInfo: 0x1D6, MinSize: 0x1, MaxSize: 0x20, Flags: 0x0 { 1C 90 24 00 1C 00 08 00 01 00 D6 01 01 01 20 00 }
+0x17F92: 		End  { 29 02 }
+0x17F94: 		Numeric Prompt: "Max Data Width", Help: "", QuestionFlags: 0x1, QuestionId: 0x9, VarStoreId: 0x1, VarOffset: 0x218, Flags: 0x11, Size: 16, Min: 0x1, Max: 0xFFFF, Step: 0x0 { 07 94 25 00 1C 00 09 00 01 00 18 02 01 11 01 00 FF FF 00 00 }
+0x17FA8: 		End  { 29 02 }
+0x17FAA: 		OneOf Prompt: "Connector Layout", Help: "", QuestionFlags: 0x0, QuestionId: 0xA, VarStoreId: 0x1, VarOffset: 0x21A, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x8005, Step: 0x0 { 05 94 26 00 1C 00 0A 00 01 00 1A 02 00 11 00 00 05 80 00 00 }
+0x17FBE: 			OneOfOption Option: "Unknown" Value: 0 { 09 08 27 00 01 01 00 00 }
+0x17FC6: 			OneOfOption Option: "RS232" Value: 2 { 09 08 28 00 01 01 02 00 }
+0x17FCE: 			OneOfOption Option: "BNC" Value: 3 { 09 08 29 00 01 01 03 00 }
+0x17FD6: 			OneOfOption Option: "RJ11" Value: 4 { 09 08 2A 00 01 01 04 00 }
+0x17FDE: 			OneOfOption Option: "RJ45" Value: 5 { 09 08 2B 00 01 01 05 00 }
+0x17FE6: 			OneOfOption Option: "DB9" Value: 6 { 09 08 2C 00 01 01 06 00 }
+0x17FEE: 			OneOfOption Option: "Slot" Value: 7 { 09 08 2D 00 01 01 07 00 }
+0x17FF6: 			OneOfOption Option: "SCSI High Density" Value: 8 { 09 08 2E 00 01 01 08 00 }
+0x17FFE: 			OneOfOption Option: "SCSI Low Density" Value: 9 { 09 08 2F 00 01 01 09 00 }
+0x18006: 			OneOfOption Option: "Ribbon" Value: 10 { 09 08 30 00 01 01 0A 00 }
+0x1800E: 			OneOfOption Option: "AUI" Value: 11 { 09 08 31 00 01 01 0B 00 }
+0x18016: 			OneOfOption Option: "Fiber SC" Value: 12 { 09 08 32 00 01 01 0C 00 }
+0x1801E: 			OneOfOption Option: "Fiber ST" Value: 13 { 09 08 33 00 01 01 0D 00 }
+0x18026: 			OneOfOption Option: "FDDI-MIC" Value: 14 { 09 08 34 00 01 01 0E 00 }
+0x1802E: 			OneOfOption Option: "Fiber-RTMJ" Value: 15 { 09 08 35 00 01 01 0F 00 }
+0x18036: 			OneOfOption Option: "PCI" Value: 16 { 09 08 36 00 01 01 10 00 }
+0x1803E: 			OneOfOption Option: "PCI-X" Value: 17 { 09 08 37 00 01 01 11 00 }
+0x18046: 			OneOfOption Option: "PCI-E" Value: 18 { 09 08 38 00 01 01 12 00 }
+0x1804E: 			OneOfOption Option: "PCI-E x1" Value: 19 { 09 08 39 00 01 01 13 00 }
+0x18056: 			OneOfOption Option: "PCI-E x2" Value: 20 { 09 08 3A 00 01 01 14 00 }
+0x1805E: 			OneOfOption Option: "PCI-E x4" Value: 21 { 09 08 3B 00 01 01 15 00 }
+0x18066: 			OneOfOption Option: "PCI-E x8" Value: 22 { 09 08 3C 00 01 01 16 00 }
+0x1806E: 			OneOfOption Option: "PCI-E x16" Value: 23 { 09 08 3D 00 01 01 17 00 }
+0x18076: 			OneOfOption Option: "PCI-E x32" Value: 24 { 09 08 3E 00 01 01 18 00 }
+0x1807E: 			OneOfOption Option: "PCI-E x64" Value: 25 { 09 08 3F 00 01 01 19 00 }
+0x18086: 			OneOfOption Option: "Fiber LC" Value: 26 { 09 08 40 00 01 01 1A 00 }
+0x1808E: 			OneOfOption Option: "FlexSystem Mezzanine Connector" Value: 32768 { 09 08 41 00 01 01 00 80 }
+0x18096: 			OneOfOption Option: "FlexSystem Mid-Mezzanine Connector" Value: 32769 { 09 08 42 00 01 01 01 80 }
+0x1809E: 			OneOfOption Option: "BladeCenter CFFh Connector" Value: 32770 { 09 08 43 00 01 01 02 80 }
+0x180A6: 			OneOfOption Option: "BladeCenter CIOv Connector" Value: 32771 { 09 08 44 00 01 01 03 80 }
+0x180AE: 			OneOfOption Option: "Onboard" Value: 32772 { 09 08 45 00 01 01 04 80 }
+0x180B6: 			OneOfOption Option: "ML2" Value: 32773 { 09 08 46 00 01 01 05 80 }
+0x180BE: 		End  { 29 02 }
+0x180C0: 		OneOf Prompt: "Package Type", Help: "", QuestionFlags: 0x0, QuestionId: 0xB, VarStoreId: 0x1, VarOffset: 0x21C, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x8000, Step: 0x0 { 05 94 47 00 1C 00 0B 00 01 00 1C 02 00 11 00 00 00 80 00 00 }
+0x180D4: 			OneOfOption Option: "Unknown" Value: 0 { 09 08 27 00 01 01 00 00 }
+0x180DC: 			OneOfOption Option: "Other" Value: 1 { 09 08 48 00 01 01 01 00 }
+0x180E4: 			OneOfOption Option: "Rack" Value: 2 { 09 08 49 00 01 01 02 00 }
+0x180EC: 			OneOfOption Option: "Chassis/Frame" Value: 3 { 09 08 4A 00 01 01 03 00 }
+0x180F4: 			OneOfOption Option: "Cross Connect/Backplane" Value: 4 { 09 08 4B 00 01 01 04 00 }
+0x180FC: 			OneOfOption Option: "Container/Frame Slot" Value: 5 { 09 08 4C 00 01 01 05 00 }
+0x18104: 			OneOfOption Option: "Power Supply" Value: 6 { 09 08 4D 00 01 01 06 00 }
+0x1810C: 			OneOfOption Option: "Fan" Value: 7 { 09 08 4E 00 01 01 07 00 }
+0x18114: 			OneOfOption Option: "Sensor" Value: 8 { 09 08 4F 00 01 01 08 00 }
+0x1811C: 			OneOfOption Option: "Module/Card" Value: 9 { 09 08 50 00 01 01 09 00 }
+0x18124: 			OneOfOption Option: "Port/Connector" Value: 10 { 09 08 51 00 01 01 0A 00 }
+0x1812C: 			OneOfOption Option: "Battery" Value: 11 { 09 08 52 00 01 01 0B 00 }
+0x18134: 			OneOfOption Option: "Processor" Value: 12 { 09 08 53 00 01 01 0C 00 }
+0x1813C: 			OneOfOption Option: "Memory" Value: 13 { 09 08 54 00 01 01 0D 00 }
+0x18144: 			OneOfOption Option: "Power Source/Generator" Value: 14 { 09 08 55 00 01 01 0E 00 }
+0x1814C: 			OneOfOption Option: "Storage Media Package" Value: 15 { 09 08 56 00 01 01 0F 00 }
+0x18154: 			OneOfOption Option: "Blade" Value: 16 { 09 08 57 00 01 01 10 00 }
+0x1815C: 			OneOfOption Option: "Blade Expansion" Value: 17 { 09 08 58 00 01 01 11 00 }
+0x18164: 			OneOfOption Option: "Onboard" Value: 32768 { 09 08 45 00 01 01 00 80 }
+0x1816C: 		End  { 29 02 }
+0x1816E: 		String Prompt: "Other Package Type", Help: "", QuestionFlags: 0x1, QuestionId: 0xC, VarStoreId: 0x1, VarStoreInfo: 0x21E, MinSize: 0x0, MaxSize: 0x40, Flags: 0x0 { 1C 90 59 00 1C 00 0C 00 01 00 1E 02 01 00 40 00 }
+0x1817E: 		End  { 29 02 }
+0x18180: 		String Prompt: "AIM Spec Version", Help: "", QuestionFlags: 0x1, QuestionId: 0xD, VarStoreId: 0x1, VarStoreInfo: 0x2A0, MinSize: 0x4, MaxSize: 0x4, Flags: 0x0 { 1C 90 5A 00 1C 00 0D 00 01 00 A0 02 01 04 04 00 }
+0x18190: 		End  { 29 02 }
+0x18192: 		String Prompt: "UCM Spec Version", Help: "", QuestionFlags: 0x1, QuestionId: 0xE, VarStoreId: 0x1, VarStoreInfo: 0x2AA, MinSize: 0x3, MaxSize: 0x3, Flags: 0x0 { 1C 90 5B 00 1C 00 0E 00 01 00 AA 02 01 03 03 00 }
+0x181A2: 		End  { 29 02 }
+0x181A4: 		Ref Prompt: "Firmware Information 1", Help: "", QuestionFlags: 0x0, QuestionId: 0xF, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x2 { 0F 0F 5C 00 1C 00 0F 00 00 00 FF FF 00 02 00 }
+0x181B3: 		Ref Prompt: "Firmware Information 2", Help: "", QuestionFlags: 0x0, QuestionId: 0x10, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x3 { 0F 0F 5D 00 1C 00 10 00 00 00 FF FF 00 03 00 }
+0x181C2: 		Ref Prompt: "Disk Drive Information", Help: "", QuestionFlags: 0x0, QuestionId: 0x11, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x4 { 0F 0F 8C 00 1C 00 11 00 00 00 FF FF 00 04 00 }
+0x181D1: 	End  { 29 02 }
+0x181D3: 	Form FormId: 0x2, Title: "Firmware Information 1" { 01 86 02 00 5C 00 }
+0x181D9: 		String Prompt: "Firmware Name", Help: "", QuestionFlags: 0x1, QuestionId: 0x12, VarStoreId: 0x2, VarStoreInfo: 0x0, MinSize: 0x3, MaxSize: 0x20, Flags: 0x0 { 1C 90 5E 00 1C 00 12 00 02 00 00 00 01 03 20 00 }
+0x181E9: 		End  { 29 02 }
+0x181EB: 		String Prompt: "Version String", Help: "", QuestionFlags: 0x1, QuestionId: 0x13, VarStoreId: 0x2, VarStoreInfo: 0x42, MinSize: 0x3, MaxSize: 0x13, Flags: 0x0 { 1C 90 5F 00 1C 00 13 00 02 00 42 00 01 03 13 00 }
+0x181FB: 		End  { 29 02 }
+0x181FD: 		String Prompt: "Description", Help: "", QuestionFlags: 0x1, QuestionId: 0x14, VarStoreId: 0x2, VarStoreInfo: 0x6A, MinSize: 0x1, MaxSize: 0x60, Flags: 0x0 { 1C 90 60 00 1C 00 14 00 02 00 6A 00 01 01 60 00 }
+0x1820D: 		End  { 29 02 }
+0x1820F: 		String Prompt: "Release Date", Help: "", QuestionFlags: 0x1, QuestionId: 0x15, VarStoreId: 0x2, VarStoreInfo: 0x12C, MinSize: 0x3, MaxSize: 0x3, Flags: 0x0 { 1C 90 61 00 1C 00 15 00 02 00 2C 01 01 03 03 00 }
+0x1821F: 		End  { 29 02 }
+0x18221: 		String Prompt: "Manufacturer", Help: "", QuestionFlags: 0x1, QuestionId: 0x16, VarStoreId: 0x2, VarStoreInfo: 0x142, MinSize: 0x1, MaxSize: 0x18, Flags: 0x0 { 1C 90 62 00 1C 00 16 00 02 00 42 01 01 01 18 00 }
+0x18231: 		End  { 29 02 }
+0x18233: 		OneOf Prompt: "Classification", Help: "", QuestionFlags: 0x0, QuestionId: 0x17, VarStoreId: 0x2, VarOffset: 0x174, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x811F, Step: 0x0 { 05 94 63 00 1C 00 17 00 02 00 74 01 00 11 00 00 1F 81 00 00 }
+0x18247: 			OneOfOption Option: "Unknown" Value: 0 { 09 08 27 00 01 01 00 00 }
+0x1824F: 			OneOfOption Option: "Other" Value: 1 { 09 08 48 00 01 01 01 00 }
+0x18257: 			OneOfOption Option: "Driver" Value: 2 { 09 08 64 00 01 01 02 00 }
+0x1825F: 			OneOfOption Option: "Configuration Software" Value: 3 { 09 08 65 00 01 01 03 00 }
+0x18267: 			OneOfOption Option: "Application Software" Value: 4 { 09 08 66 00 01 01 04 00 }
+0x1826F: 			OneOfOption Option: "Instrumentation" Value: 5 { 09 08 67 00 01 01 05 00 }
+0x18277: 			OneOfOption Option: "Firmware/BIOS" Value: 6 { 09 08 68 00 01 01 06 00 }
+0x1827F: 			OneOfOption Option: "Diagnostic Software" Value: 7 { 09 08 69 00 01 01 07 00 }
+0x18287: 			OneOfOption Option: "Operating System" Value: 8 { 09 08 6A 00 01 01 08 00 }
+0x1828F: 			OneOfOption Option: "Middleware" Value: 9 { 09 08 6B 00 01 01 09 00 }
+0x18297: 			OneOfOption Option: "Firmware" Value: 10 { 09 08 6C 00 01 01 0A 00 }
+0x1829F: 			OneOfOption Option: "BIOS/Fcode" Value: 11 { 09 08 6D 00 01 01 0B 00 }
+0x182A7: 			OneOfOption Option: "Support/Service Pack" Value: 12 { 09 08 6E 00 01 01 0C 00 }
+0x182AF: 			OneOfOption Option: "Software Bundle" Value: 13 { 09 08 6F 00 01 01 0D 00 }
+0x182B7: 			OneOfOption Option: "Driver Firmware" Value: 32768 { 09 08 70 00 01 01 00 80 }
+0x182BF: 			OneOfOption Option: "EFI" Value: 32769 { 09 08 71 00 01 01 01 80 }
+0x182C7: 			OneOfOption Option: "BIOS" Value: 32770 { 09 08 72 00 01 01 02 80 }
+0x182CF: 			OneOfOption Option: "FCODE" Value: 32771 { 09 08 73 00 01 01 03 80 }
+0x182D7: 			OneOfOption Option: "PXE" Value: 32772 { 09 08 74 00 01 01 04 80 }
+0x182DF: 			OneOfOption Option: "Boot ROM" Value: 32773 { 09 08 75 00 01 01 05 80 }
+0x182E7: 			OneOfOption Option: "UEFI" Value: 32774 { 09 08 76 00 01 01 06 80 }
+0x182EF: 			OneOfOption Option: "CIM Provider" Value: 32775 { 09 08 77 00 01 01 07 80 }
+0x182F7: 			OneOfOption Option: "Bundled Driver and Firmware" Value: 32776 { 09 08 78 00 01 01 08 80 }
+0x182FF: 			OneOfOption Option: "VPD-V0. It stores the IBM release string" Value: 33024 { 09 08 79 00 01 01 00 81 }
+0x18307: 			OneOfOption Option: "Bootcode" Value: 33025 { 09 08 7A 00 01 01 01 81 }
+0x1830F: 			OneOfOption Option: "ASF firmware" Value: 33026 { 09 08 7B 00 01 01 02 81 }
+0x18317: 			OneOfOption Option: "Extended VPD" Value: 33027 { 09 08 7C 00 01 01 03 81 }
+0x1831F: 			OneOfOption Option: "FCoE firmware" Value: 33028 { 09 08 7D 00 01 01 04 81 }
+0x18327: 			OneOfOption Option: "FCoE boot driver" Value: 33029 { 09 08 7E 00 01 01 05 81 }
+0x1832F: 			OneOfOption Option: "IPMI firmware" Value: 33030 { 09 08 7F 00 01 01 06 81 }
+0x18337: 			OneOfOption Option: "iSCSI boot driver" Value: 33031 { 09 08 80 00 01 01 07 81 }
+0x1833F: 			OneOfOption Option: "iSCSI boot driver to support IPv6" Value: 33032 { 09 08 81 00 01 01 08 81 }
+0x18347: 			OneOfOption Option: "iSCSI boot driver to support IPv4 and IPv6" Value: 33033 { 09 08 82 00 01 01 09 81 }
+0x1834F: 			OneOfOption Option: "L2 firmware" Value: 33034 { 09 08 83 00 01 01 0A 81 }
+0x18357: 			OneOfOption Option: "Management firmware" Value: 33035 { 09 08 84 00 01 01 0B 81 }
+0x1835F: 			OneOfOption Option: "MBA firmware. Including PXE, UEFI, FCode combinations" Value: 33036 { 09 08 85 00 01 01 0C 81 }
+0x18367: 			OneOfOption Option: "MFW modular firmware" Value: 33037 { 09 08 86 00 01 01 0D 81 }
+0x1836F: 			OneOfOption Option: "NCSI firmware" Value: 33038 { 09 08 87 00 01 01 0E 81 }
+0x18377: 			OneOfOption Option: "UMP firmware" Value: 33039 { 09 08 88 00 01 01 0F 81 }
+0x1837F: 			OneOfOption Option: "User block" Value: 33040 { 09 08 89 00 01 01 10 81 }
+0x18387: 			OneOfOption Option: "User block" Value: 33041 { 09 08 8A 00 01 01 11 81 }
+0x1838F: 			OneOfOption Option: "User block" Value: 33042 { 09 08 8A 00 01 01 12 81 }
+0x18397: 			OneOfOption Option: "User block" Value: 33043 { 09 08 8A 00 01 01 13 81 }
+0x1839F: 			OneOfOption Option: "User block" Value: 33044 { 09 08 8A 00 01 01 14 81 }
+0x183A7: 			OneOfOption Option: "User block" Value: 33045 { 09 08 8A 00 01 01 15 81 }
+0x183AF: 			OneOfOption Option: "User block" Value: 33046 { 09 08 8A 00 01 01 16 81 }
+0x183B7: 			OneOfOption Option: "User block" Value: 33047 { 09 08 8A 00 01 01 17 81 }
+0x183BF: 			OneOfOption Option: "User block" Value: 33048 { 09 08 8A 00 01 01 18 81 }
+0x183C7: 			OneOfOption Option: "User block" Value: 33049 { 09 08 8A 00 01 01 19 81 }
+0x183CF: 			OneOfOption Option: "User block" Value: 33050 { 09 08 8A 00 01 01 1A 81 }
+0x183D7: 			OneOfOption Option: "User block" Value: 33051 { 09 08 8A 00 01 01 1B 81 }
+0x183DF: 			OneOfOption Option: "User block" Value: 33052 { 09 08 8A 00 01 01 1C 81 }
+0x183E7: 			OneOfOption Option: "User block" Value: 33053 { 09 08 8A 00 01 01 1D 81 }
+0x183EF: 			OneOfOption Option: "User block" Value: 33054 { 09 08 8A 00 01 01 1E 81 }
+0x183F7: 			OneOfOption Option: "User block" Value: 33055 { 09 08 8A 00 01 01 1F 81 }
+0x183FF: 		End  { 29 02 }
+0x18401: 		String Prompt: "Software ID", Help: "", QuestionFlags: 0x1, QuestionId: 0x18, VarStoreId: 0x2, VarStoreInfo: 0x176, MinSize: 0x8, MaxSize: 0x8, Flags: 0x0 { 1C 90 8B 00 1C 00 18 00 02 00 76 01 01 08 08 00 }
+0x18411: 		End  { 29 02 }
+0x18413: 	End  { 29 02 }
+0x18415: 	Form FormId: 0x3, Title: "Firmware Information 2" { 01 86 03 00 5D 00 }
+0x1841B: 		String Prompt: "Firmware Name", Help: "", QuestionFlags: 0x1, QuestionId: 0x19, VarStoreId: 0x3, VarStoreInfo: 0x0, MinSize: 0x3, MaxSize: 0x20, Flags: 0x0 { 1C 90 5E 00 1C 00 19 00 03 00 00 00 01 03 20 00 }
+0x1842B: 		End  { 29 02 }
+0x1842D: 		String Prompt: "Version String", Help: "", QuestionFlags: 0x1, QuestionId: 0x1A, VarStoreId: 0x3, VarStoreInfo: 0x42, MinSize: 0x3, MaxSize: 0x13, Flags: 0x0 { 1C 90 5F 00 1C 00 1A 00 03 00 42 00 01 03 13 00 }
+0x1843D: 		End  { 29 02 }
+0x1843F: 		String Prompt: "Description", Help: "", QuestionFlags: 0x1, QuestionId: 0x1B, VarStoreId: 0x3, VarStoreInfo: 0x6A, MinSize: 0x1, MaxSize: 0x60, Flags: 0x0 { 1C 90 60 00 1C 00 1B 00 03 00 6A 00 01 01 60 00 }
+0x1844F: 		End  { 29 02 }
+0x18451: 		String Prompt: "Release Date", Help: "", QuestionFlags: 0x1, QuestionId: 0x1C, VarStoreId: 0x3, VarStoreInfo: 0x12C, MinSize: 0x3, MaxSize: 0x3, Flags: 0x0 { 1C 90 61 00 1C 00 1C 00 03 00 2C 01 01 03 03 00 }
+0x18461: 		End  { 29 02 }
+0x18463: 		String Prompt: "Manufacturer", Help: "", QuestionFlags: 0x1, QuestionId: 0x1D, VarStoreId: 0x3, VarStoreInfo: 0x142, MinSize: 0x1, MaxSize: 0x18, Flags: 0x0 { 1C 90 62 00 1C 00 1D 00 03 00 42 01 01 01 18 00 }
+0x18473: 		End  { 29 02 }
+0x18475: 		OneOf Prompt: "Classification", Help: "", QuestionFlags: 0x0, QuestionId: 0x1E, VarStoreId: 0x3, VarOffset: 0x174, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x811F, Step: 0x0 { 05 94 63 00 1C 00 1E 00 03 00 74 01 00 11 00 00 1F 81 00 00 }
+0x18489: 			OneOfOption Option: "Unknown" Value: 0 { 09 08 27 00 01 01 00 00 }
+0x18491: 			OneOfOption Option: "Other" Value: 1 { 09 08 48 00 01 01 01 00 }
+0x18499: 			OneOfOption Option: "Driver" Value: 2 { 09 08 64 00 01 01 02 00 }
+0x184A1: 			OneOfOption Option: "Configuration Software" Value: 3 { 09 08 65 00 01 01 03 00 }
+0x184A9: 			OneOfOption Option: "Application Software" Value: 4 { 09 08 66 00 01 01 04 00 }
+0x184B1: 			OneOfOption Option: "Instrumentation" Value: 5 { 09 08 67 00 01 01 05 00 }
+0x184B9: 			OneOfOption Option: "Firmware/BIOS" Value: 6 { 09 08 68 00 01 01 06 00 }
+0x184C1: 			OneOfOption Option: "Diagnostic Software" Value: 7 { 09 08 69 00 01 01 07 00 }
+0x184C9: 			OneOfOption Option: "Operating System" Value: 8 { 09 08 6A 00 01 01 08 00 }
+0x184D1: 			OneOfOption Option: "Middleware" Value: 9 { 09 08 6B 00 01 01 09 00 }
+0x184D9: 			OneOfOption Option: "Firmware" Value: 10 { 09 08 6C 00 01 01 0A 00 }
+0x184E1: 			OneOfOption Option: "BIOS/Fcode" Value: 11 { 09 08 6D 00 01 01 0B 00 }
+0x184E9: 			OneOfOption Option: "Support/Service Pack" Value: 12 { 09 08 6E 00 01 01 0C 00 }
+0x184F1: 			OneOfOption Option: "Software Bundle" Value: 13 { 09 08 6F 00 01 01 0D 00 }
+0x184F9: 			OneOfOption Option: "Driver Firmware" Value: 32768 { 09 08 70 00 01 01 00 80 }
+0x18501: 			OneOfOption Option: "EFI" Value: 32769 { 09 08 71 00 01 01 01 80 }
+0x18509: 			OneOfOption Option: "BIOS" Value: 32770 { 09 08 72 00 01 01 02 80 }
+0x18511: 			OneOfOption Option: "FCODE" Value: 32771 { 09 08 73 00 01 01 03 80 }
+0x18519: 			OneOfOption Option: "PXE" Value: 32772 { 09 08 74 00 01 01 04 80 }
+0x18521: 			OneOfOption Option: "Boot ROM" Value: 32773 { 09 08 75 00 01 01 05 80 }
+0x18529: 			OneOfOption Option: "UEFI" Value: 32774 { 09 08 76 00 01 01 06 80 }
+0x18531: 			OneOfOption Option: "CIM Provider" Value: 32775 { 09 08 77 00 01 01 07 80 }
+0x18539: 			OneOfOption Option: "Bundled Driver and Firmware" Value: 32776 { 09 08 78 00 01 01 08 80 }
+0x18541: 			OneOfOption Option: "VPD-V0. It stores the IBM release string" Value: 33024 { 09 08 79 00 01 01 00 81 }
+0x18549: 			OneOfOption Option: "Bootcode" Value: 33025 { 09 08 7A 00 01 01 01 81 }
+0x18551: 			OneOfOption Option: "ASF firmware" Value: 33026 { 09 08 7B 00 01 01 02 81 }
+0x18559: 			OneOfOption Option: "Extended VPD" Value: 33027 { 09 08 7C 00 01 01 03 81 }
+0x18561: 			OneOfOption Option: "FCoE firmware" Value: 33028 { 09 08 7D 00 01 01 04 81 }
+0x18569: 			OneOfOption Option: "FCoE boot driver" Value: 33029 { 09 08 7E 00 01 01 05 81 }
+0x18571: 			OneOfOption Option: "IPMI firmware" Value: 33030 { 09 08 7F 00 01 01 06 81 }
+0x18579: 			OneOfOption Option: "iSCSI boot driver" Value: 33031 { 09 08 80 00 01 01 07 81 }
+0x18581: 			OneOfOption Option: "iSCSI boot driver to support IPv6" Value: 33032 { 09 08 81 00 01 01 08 81 }
+0x18589: 			OneOfOption Option: "iSCSI boot driver to support IPv4 and IPv6" Value: 33033 { 09 08 82 00 01 01 09 81 }
+0x18591: 			OneOfOption Option: "L2 firmware" Value: 33034 { 09 08 83 00 01 01 0A 81 }
+0x18599: 			OneOfOption Option: "Management firmware" Value: 33035 { 09 08 84 00 01 01 0B 81 }
+0x185A1: 			OneOfOption Option: "MBA firmware. Including PXE, UEFI, FCode combinations" Value: 33036 { 09 08 85 00 01 01 0C 81 }
+0x185A9: 			OneOfOption Option: "MFW modular firmware" Value: 33037 { 09 08 86 00 01 01 0D 81 }
+0x185B1: 			OneOfOption Option: "NCSI firmware" Value: 33038 { 09 08 87 00 01 01 0E 81 }
+0x185B9: 			OneOfOption Option: "UMP firmware" Value: 33039 { 09 08 88 00 01 01 0F 81 }
+0x185C1: 			OneOfOption Option: "User block" Value: 33040 { 09 08 89 00 01 01 10 81 }
+0x185C9: 			OneOfOption Option: "User block" Value: 33041 { 09 08 8A 00 01 01 11 81 }
+0x185D1: 			OneOfOption Option: "User block" Value: 33042 { 09 08 8A 00 01 01 12 81 }
+0x185D9: 			OneOfOption Option: "User block" Value: 33043 { 09 08 8A 00 01 01 13 81 }
+0x185E1: 			OneOfOption Option: "User block" Value: 33044 { 09 08 8A 00 01 01 14 81 }
+0x185E9: 			OneOfOption Option: "User block" Value: 33045 { 09 08 8A 00 01 01 15 81 }
+0x185F1: 			OneOfOption Option: "User block" Value: 33046 { 09 08 8A 00 01 01 16 81 }
+0x185F9: 			OneOfOption Option: "User block" Value: 33047 { 09 08 8A 00 01 01 17 81 }
+0x18601: 			OneOfOption Option: "User block" Value: 33048 { 09 08 8A 00 01 01 18 81 }
+0x18609: 			OneOfOption Option: "User block" Value: 33049 { 09 08 8A 00 01 01 19 81 }
+0x18611: 			OneOfOption Option: "User block" Value: 33050 { 09 08 8A 00 01 01 1A 81 }
+0x18619: 			OneOfOption Option: "User block" Value: 33051 { 09 08 8A 00 01 01 1B 81 }
+0x18621: 			OneOfOption Option: "User block" Value: 33052 { 09 08 8A 00 01 01 1C 81 }
+0x18629: 			OneOfOption Option: "User block" Value: 33053 { 09 08 8A 00 01 01 1D 81 }
+0x18631: 			OneOfOption Option: "User block" Value: 33054 { 09 08 8A 00 01 01 1E 81 }
+0x18639: 			OneOfOption Option: "User block" Value: 33055 { 09 08 8A 00 01 01 1F 81 }
+0x18641: 		End  { 29 02 }
+0x18643: 		String Prompt: "Software ID", Help: "", QuestionFlags: 0x1, QuestionId: 0x1F, VarStoreId: 0x3, VarStoreInfo: 0x176, MinSize: 0x8, MaxSize: 0x8, Flags: 0x0 { 1C 90 8B 00 1C 00 1F 00 03 00 76 01 01 08 08 00 }
+0x18653: 		End  { 29 02 }
+0x18655: 	End  { 29 02 }
+0x18657: 	Form FormId: 0x4, Title: "Disk Drive Information" { 01 86 04 00 8C 00 }
+0x1865D: 		String Prompt: "Location", Help: "", QuestionFlags: 0x1, QuestionId: 0x20, VarStoreId: 0x4, VarStoreInfo: 0x0, MinSize: 0x3, MaxSize: 0x8, Flags: 0x0 { 1C 90 8D 00 1C 00 20 00 04 00 00 00 01 03 08 00 }
+0x1866D: 		End  { 29 02 }
+0x1866F: 		OneOf Prompt: "Drive Type", Help: "", QuestionFlags: 0x0, QuestionId: 0x21, VarStoreId: 0x4, VarOffset: 0x12, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x5, Step: 0x0 { 05 94 8E 00 1C 00 21 00 04 00 12 00 00 11 00 00 05 00 00 00 }
+0x18683: 			OneOfOption Option: "Unknown" Value: 0 { 09 08 8F 00 01 01 00 00 }
+0x1868B: 			OneOfOption Option: "SATA" Value: 1 { 09 08 90 00 01 01 01 00 }
+0x18693: 			OneOfOption Option: "SAS" Value: 2 { 09 08 91 00 01 01 02 00 }
+0x1869B: 			OneOfOption Option: "NVMe" Value: 3 { 09 08 92 00 01 01 03 00 }
+0x186A3: 			OneOfOption Option: "M.2 SATA" Value: 4 { 09 08 93 00 01 01 04 00 }
+0x186AB: 			OneOfOption Option: "M.2 NVMe" Value: 5 { 09 08 94 00 01 01 05 00 }
+0x186B3: 		End  { 29 02 }
+0x186B5: 		OneOf Prompt: "Media Type With Rotation Rate", Help: "", QuestionFlags: 0x0, QuestionId: 0x22, VarStoreId: 0x4, VarOffset: 0x14, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFE, Step: 0x0 { 05 94 95 00 1C 00 22 00 04 00 14 00 00 11 00 00 FE FF 00 00 }
+0x186C9: 			OneOfOption Option: "HDD w/o reported RPM value" Value: 0 { 09 08 96 00 01 01 00 00 }
+0x186D1: 			OneOfOption Option: "SSD" Value: 1 { 09 08 97 00 01 01 01 00 }
+0x186D9: 			OneOfOption Option: "HDD w/ reported RPM value" Value: 65534 { 09 08 98 00 01 01 FE FF }
+0x186E1: 		End  { 29 02 }
+0x186E3: 		String Prompt: "Lenovo 8S FRU PN", Help: "", QuestionFlags: 0x1, QuestionId: 0x23, VarStoreId: 0x4, VarStoreInfo: 0x16, MinSize: 0x1, MaxSize: 0xC, Flags: 0x0 { 1C 90 99 00 1C 00 23 00 04 00 16 00 01 01 0C 00 }
+0x186F3: 		End  { 29 02 }
+0x186F5: 		String Prompt: "Lenovo 8S L2 PN", Help: "", QuestionFlags: 0x1, QuestionId: 0x24, VarStoreId: 0x4, VarStoreInfo: 0x30, MinSize: 0x1, MaxSize: 0xC, Flags: 0x0 { 1C 90 9A 00 1C 00 24 00 04 00 30 00 01 01 0C 00 }
+0x18705: 		End  { 29 02 }
+0x18707: 		String Prompt: "Lenovo 8S SN", Help: "", QuestionFlags: 0x1, QuestionId: 0x25, VarStoreId: 0x4, VarStoreInfo: 0x4A, MinSize: 0x1, MaxSize: 0x1E, Flags: 0x0 { 1C 90 9B 00 1C 00 25 00 04 00 4A 00 01 01 1E 00 }
+0x18717: 		End  { 29 02 }
+0x18719: 		String Prompt: "Model Number", Help: "", QuestionFlags: 0x1, QuestionId: 0x26, VarStoreId: 0x4, VarStoreInfo: 0x88, MinSize: 0x1, MaxSize: 0x28, Flags: 0x0 { 1C 90 9C 00 1C 00 26 00 04 00 88 00 01 01 28 00 }
+0x18729: 		End  { 29 02 }
+0x1872B: 		String Prompt: "Universal Identifier", Help: "", QuestionFlags: 0x1, QuestionId: 0x27, VarStoreId: 0x4, VarStoreInfo: 0xDA, MinSize: 0x20, MaxSize: 0x20, Flags: 0x0 { 1C 90 9D 00 1C 00 27 00 04 00 DA 00 01 20 20 00 }
+0x1873B: 		End  { 29 02 }
+0x1873D: 		String Prompt: "Manufacturer", Help: "", QuestionFlags: 0x1, QuestionId: 0x28, VarStoreId: 0x4, VarStoreInfo: 0x11C, MinSize: 0x1, MaxSize: 0x8, Flags: 0x0 { 1C 90 9E 00 1C 00 28 00 04 00 1C 01 01 01 08 00 }
+0x1874D: 		End  { 29 02 }
+0x1874F: 		String Prompt: "FW Version", Help: "", QuestionFlags: 0x1, QuestionId: 0x29, VarStoreId: 0x4, VarStoreInfo: 0x12E, MinSize: 0x1, MaxSize: 0x8, Flags: 0x0 { 1C 90 9F 00 1C 00 29 00 04 00 2E 01 01 01 08 00 }
+0x1875F: 		End  { 29 02 }
+0x18761: 		String Prompt: "Drive Capacity", Help: "", QuestionFlags: 0x1, QuestionId: 0x2A, VarStoreId: 0x4, VarStoreInfo: 0x140, MinSize: 0x0, MaxSize: 0xA, Flags: 0x0 { 1C 90 A0 00 1C 00 2A 00 04 00 40 01 01 00 0A 00 }
+0x18771: 		End  { 29 02 }
+0x18773: 	End  { 29 02 }
+0x18775: End  { 29 02 }

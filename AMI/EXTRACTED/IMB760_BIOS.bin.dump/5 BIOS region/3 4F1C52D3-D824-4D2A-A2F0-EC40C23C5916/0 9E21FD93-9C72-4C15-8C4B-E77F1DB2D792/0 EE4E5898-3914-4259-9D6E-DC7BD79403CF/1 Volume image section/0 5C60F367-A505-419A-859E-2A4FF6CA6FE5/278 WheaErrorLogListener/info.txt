@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: WheaErrorLogListener
+Fixed: No
+Offset: E36F78h
+File GUID: 58094BEC-30FE-459A-B232-3A60D1C78C16
+Type: 0Ah
+Attributes: 00h
+Full size: 43B6h (17334)
+Header size: 18h (24)
+Body size: 439Eh (17310)
+Tail size: 0h (0)
+State: F8h
+Header checksum: A0h, valid
+Data checksum: AAh, valid

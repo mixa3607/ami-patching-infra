@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: PchSetup
+Fixed: Yes
+Base: 1082FDFh
+Header address: FF082FDFh
+Data address: FF082FF3h
+Offset: 2F4Fh
+Variable GUID: 4570B7F1-ADE8-4943-8DC3-406472842384
+GUID index: 18
+Full size: 433h (1075)
+Header size: 14h (20)
+Body size: 41Fh (1055)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

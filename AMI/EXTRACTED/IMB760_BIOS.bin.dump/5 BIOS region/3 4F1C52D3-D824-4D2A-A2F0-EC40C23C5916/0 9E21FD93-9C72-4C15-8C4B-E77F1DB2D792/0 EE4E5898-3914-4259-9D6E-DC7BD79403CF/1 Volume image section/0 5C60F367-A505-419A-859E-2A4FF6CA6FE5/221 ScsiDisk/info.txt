@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: ScsiDisk
+Fixed: No
+Offset: 518E10h
+File GUID: 0A66E322-3740-4CCE-AD62-BD172CECCA35
+Type: 07h
+Attributes: 00h
+Full size: 6C62h (27746)
+Header size: 18h (24)
+Body size: 6C4Ah (27722)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 2Bh, valid
+Data checksum: AAh, valid

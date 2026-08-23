@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: ErrorControl
+Fixed: No
+Offset: DF96E0h
+File GUID: EB317729-1FAA-4931-BF83-31EDBDF61E99
+Type: 0Ah
+Attributes: 00h
+Full size: 493Ah (18746)
+Header size: 18h (24)
+Body size: 4922h (18722)
+Tail size: 0h (0)
+State: F8h
+Header checksum: AAh, valid
+Data checksum: AAh, valid

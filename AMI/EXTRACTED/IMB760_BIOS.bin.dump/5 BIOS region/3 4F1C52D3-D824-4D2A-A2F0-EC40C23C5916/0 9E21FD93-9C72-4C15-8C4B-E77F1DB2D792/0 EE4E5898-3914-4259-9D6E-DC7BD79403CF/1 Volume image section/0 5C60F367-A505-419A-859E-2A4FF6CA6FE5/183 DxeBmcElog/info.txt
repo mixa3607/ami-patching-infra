@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: DxeBmcElog
+Fixed: No
+Offset: 41BEB8h
+File GUID: 43788BEB-638F-434C-8A84-46D33A589E76
+Type: 07h
+Attributes: 00h
+Full size: 146Eh (5230)
+Header size: 18h (24)
+Body size: 1456h (5206)
+Tail size: 0h (0)
+State: F8h
+Header checksum: F8h, valid
+Data checksum: AAh, valid

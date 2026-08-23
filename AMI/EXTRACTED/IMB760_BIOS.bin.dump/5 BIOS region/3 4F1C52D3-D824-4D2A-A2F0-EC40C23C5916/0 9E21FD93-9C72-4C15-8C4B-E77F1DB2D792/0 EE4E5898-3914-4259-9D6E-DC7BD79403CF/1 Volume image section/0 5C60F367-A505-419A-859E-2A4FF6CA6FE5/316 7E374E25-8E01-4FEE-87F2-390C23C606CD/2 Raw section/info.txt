@@ -1,0 +1,8 @@
+Type: Section
+Subtype: Raw
+Fixed: No
+Offset: A4h
+Type: 19h
+Full size: 108ACh (67756)
+Header size: 4h (4)
+Body size: 108A8h (67752)

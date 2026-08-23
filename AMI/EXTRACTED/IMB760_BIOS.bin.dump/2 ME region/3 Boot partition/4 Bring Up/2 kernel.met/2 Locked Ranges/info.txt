@@ -1,0 +1,8 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: DF904h
+Address: FE0DF904h
+Offset: 7Ch
+Full size: 10h (16)
+Type: Bh

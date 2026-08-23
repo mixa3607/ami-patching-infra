@@ -1,0 +1,13 @@
+Type: CPD store
+Subtype: 
+Fixed: Yes
+Base: 1A3000h
+Header address: FE1A3000h
+Data address: FE1A3010h
+Offset: 0h
+Full size: 7C0h (1984)
+Header size: 10h (16)
+Body size: 7B0h (1968)
+Number of entries: 82
+Header version: 1
+Entry version: 1

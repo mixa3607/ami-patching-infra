@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: UsbPei
+Fixed: No
+Base: 1DC12A0h
+Header address: FFDC12A0h
+Data address: FFDC12B8h
+Offset: 1C12A0h
+File GUID: 39E8CA1A-7A69-4A73-834A-D06381933286
+Type: 06h
+Attributes: 00h
+Full size: 4050h (16464)
+Header size: 18h (24)
+Body size: 4038h (16440)
+Tail size: 0h (0)
+State: F8h
+Header checksum: F9h, valid
+Data checksum: AAh, valid

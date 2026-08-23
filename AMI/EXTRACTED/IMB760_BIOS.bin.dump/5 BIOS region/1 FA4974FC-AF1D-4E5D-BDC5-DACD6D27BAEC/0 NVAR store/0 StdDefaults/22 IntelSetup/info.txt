@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: IntelSetup
+Fixed: Yes
+Base: 1082DAFh
+Header address: FF082DAFh
+Data address: FF082DC5h
+Offset: 2D1Fh
+Variable GUID: EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9
+GUID index: 0
+Full size: 230h (560)
+Header size: 16h (22)
+Body size: 21Ah (538)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

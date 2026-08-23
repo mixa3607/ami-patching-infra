@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: SmbiosPeim
+Fixed: No
+Base: 1D72D68h
+Header address: FFD72D68h
+Data address: FFD72D80h
+Offset: 172D68h
+File GUID: 968C1D9F-80C4-43B7-8CAE-668AA56C4E71
+Type: 06h
+Attributes: 00h
+Full size: DA6h (3494)
+Header size: 18h (24)
+Body size: D8Eh (3470)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 31h, valid
+Data checksum: AAh, valid

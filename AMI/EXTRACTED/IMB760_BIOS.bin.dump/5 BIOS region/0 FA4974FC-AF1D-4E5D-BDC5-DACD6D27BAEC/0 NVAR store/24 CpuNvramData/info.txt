@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: CpuNvramData
+Fixed: Yes
+Base: 1009CEDh
+Header address: FF009CEDh
+Data address: FF009D05h
+Offset: 9C75h
+Variable GUID: 184220A2-E14C-4497-85BB-1490A9A1F0D3
+GUID index: 23
+Full size: 50h (80)
+Header size: 18h (24)
+Body size: 38h (56)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

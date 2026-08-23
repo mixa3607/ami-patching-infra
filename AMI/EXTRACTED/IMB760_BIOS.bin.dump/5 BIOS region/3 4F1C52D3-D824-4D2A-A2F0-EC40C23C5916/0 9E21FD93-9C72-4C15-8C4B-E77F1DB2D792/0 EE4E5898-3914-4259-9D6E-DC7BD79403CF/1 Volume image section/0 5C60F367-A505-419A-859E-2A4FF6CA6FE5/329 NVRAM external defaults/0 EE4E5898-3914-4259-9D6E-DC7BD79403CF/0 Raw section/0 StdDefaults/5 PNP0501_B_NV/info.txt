@@ -1,0 +1,12 @@
+Type: NVAR entry
+Subtype: Full
+Text: PNP0501_B_NV
+Fixed: Yes
+Offset: 1D8h
+Variable GUID: 560BF58A-1E0D-4D7E-953F-2980A261E031
+GUID index: 3
+Full size: 1Bh (27)
+Header size: 18h (24)
+Body size: 3h (3)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

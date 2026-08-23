@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: SBPEI
+Fixed: No
+Base: 1D89898h
+Header address: FFD89898h
+Data address: FFD898B0h
+Offset: 189898h
+File GUID: C1FBD624-27EA-40D1-AA48-94C3DC5C7E0D
+Type: 06h
+Attributes: 00h
+Full size: A8Ah (2698)
+Header size: 18h (24)
+Body size: A72h (2674)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 82h, valid
+Data checksum: AAh, valid

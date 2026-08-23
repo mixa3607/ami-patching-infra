@@ -1,0 +1,20 @@
+Type: IFWI header
+Subtype: 
+Fixed: Yes
+Base: 3000h
+Address: FE003000h
+Offset: 0h
+Full size: 48h (72)
+Data  partition offset: 3000h
+Data  partition size:   A2000h
+Boot1 partition offset: A5000h
+Boot1 partition size:   C4000h
+Boot2 partition offset: 169000h
+Boot2 partition size:   26C000h
+Boot3 partition offset: 0h
+Boot3 partition size:   0h
+Boot4 partition offset: 4000h
+Boot4 partition size:   A1000h
+Boot5 partition offset: 0h
+Boot5 partition size:   0h
+Checksum: 0h

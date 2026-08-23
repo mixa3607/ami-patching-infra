@@ -1,0 +1,8 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: 1A48A0h
+Address: FE1A48A0h
+Offset: 7Ch
+Full size: 10h (16)
+Type: Bh

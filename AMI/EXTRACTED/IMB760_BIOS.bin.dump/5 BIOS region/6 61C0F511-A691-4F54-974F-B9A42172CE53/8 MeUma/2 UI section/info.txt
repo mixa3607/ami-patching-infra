@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1C17E78h
+Header address: FFC17E78h
+Data address: FFC17E7Ch
+Offset: 2A38h
+Type: 15h
+Full size: 10h (16)
+Header size: 4h (4)
+Body size: Ch (12)
+Text: MeUma

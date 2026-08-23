@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: AmiTcgPlatformPeiBeforeMem
+Fixed: No
+Base: 1D81310h
+Header address: FFD81310h
+Data address: FFD81328h
+Offset: 181310h
+File GUID: E9312938-E56B-4614-A252-CF7D2F377E26
+Type: 06h
+Attributes: 00h
+Full size: 74Eh (1870)
+Header size: 18h (24)
+Body size: 736h (1846)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 36h, valid
+Data checksum: AAh, valid

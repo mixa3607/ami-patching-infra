@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: OpromUpdateDxeCooperCityRP
+Fixed: No
+Offset: 34B050h
+File GUID: ADF0BA4F-4BF4-6191-9082-018D2A217BD9
+Type: 07h
+Attributes: 00h
+Full size: EA2h (3746)
+Header size: 18h (24)
+Body size: E8Ah (3722)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 33h, valid
+Data checksum: AAh, valid

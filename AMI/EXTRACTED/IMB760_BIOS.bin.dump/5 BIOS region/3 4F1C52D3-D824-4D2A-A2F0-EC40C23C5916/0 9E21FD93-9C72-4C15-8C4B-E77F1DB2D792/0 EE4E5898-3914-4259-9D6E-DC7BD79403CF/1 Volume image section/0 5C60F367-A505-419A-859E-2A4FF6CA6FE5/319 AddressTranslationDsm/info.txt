@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: AddressTranslationDsm
+Fixed: No
+Offset: 1944400h
+File GUID: 8253972C-9CE7-4539-87EC-A248A48084C7
+Type: 0Ah
+Attributes: 00h
+Full size: 605Dh (24669)
+Header size: 18h (24)
+Body size: 6045h (24645)
+Tail size: 0h (0)
+State: F8h
+Header checksum: D4h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: HwpLvtSmm
+Fixed: No
+Offset: 54FF10h
+File GUID: 8F0B5301-C79B-44F1-8FD3-26D73E316700
+Type: 0Ah
+Attributes: 00h
+Full size: 18D6h (6358)
+Header size: 18h (24)
+Body size: 18BEh (6334)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 4Eh, valid
+Data checksum: AAh, valid

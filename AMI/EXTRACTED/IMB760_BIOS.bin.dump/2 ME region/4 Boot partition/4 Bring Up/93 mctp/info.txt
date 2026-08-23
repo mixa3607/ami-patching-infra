@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 2DE100h
+Address: FE2DE100h
+Offset: 13B100h
+Full size: D13Ch (53564)
+Huffman compressed: Yes
+Hash: b69776af389f55619c5aaa39cc9f1bdb63ed30a143fdf09e7d8587a31c942d21

@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: SmbiosV3EntryPointTable
+Fixed: Yes
+Base: 108A13Bh
+Header address: FF08A13Bh
+Data address: FF08A15Eh
+Offset: A0C3h
+Variable GUID: 4B3082A3-80C6-4D7E-9CD0-583917265DF1
+GUID index: 20
+Full size: 2Bh (43)
+Header size: 23h (35)
+Body size: 8h (8)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

@@ -1,0 +1,10 @@
+Type: CPD entry
+Subtype: 
+Fixed: Yes
+Base: 1A33A0h
+Address: FE1A33A0h
+Offset: 3A0h
+Full size: 18h (24)
+Entry offset: 116640h
+Entry length: C000h
+Huffman compressed: Yes

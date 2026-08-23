@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: PlatformVariableInitPei
+Fixed: No
+Base: 1D69B10h
+Header address: FFD69B10h
+Data address: FFD69B28h
+Offset: 169B10h
+File GUID: B88303F6-2E0E-41CC-8510-F5892BF1D9D9
+Type: 06h
+Attributes: 00h
+Full size: 1066h (4198)
+Header size: 18h (24)
+Body size: 104Eh (4174)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 26h, valid
+Data checksum: AAh, valid

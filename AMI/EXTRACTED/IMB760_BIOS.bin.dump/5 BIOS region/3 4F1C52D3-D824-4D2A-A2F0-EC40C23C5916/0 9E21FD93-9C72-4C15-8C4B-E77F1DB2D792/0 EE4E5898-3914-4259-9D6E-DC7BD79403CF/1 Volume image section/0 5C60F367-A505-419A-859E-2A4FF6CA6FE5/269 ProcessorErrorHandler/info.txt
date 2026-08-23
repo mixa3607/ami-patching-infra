@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: ProcessorErrorHandler
+Fixed: No
+Offset: DE1338h
+File GUID: D6476950-2481-4CBB-8400-442542C766C8
+Type: 0Ah
+Attributes: 00h
+Full size: 183A2h (99234)
+Header size: 18h (24)
+Body size: 1838Ah (99210)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 2Ah, valid
+Data checksum: AAh, valid

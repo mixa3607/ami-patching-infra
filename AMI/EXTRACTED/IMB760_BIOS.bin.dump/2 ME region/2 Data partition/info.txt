@@ -1,0 +1,8 @@
+Type: IFWI partition
+Subtype: Data
+Fixed: Yes
+Base: 6000h
+Address: FE006000h
+Offset: 3000h
+Full size: A2000h (663552)
+

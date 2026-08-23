@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 2C8E98h
+Address: FE2C8E98h
+Offset: 125E98h
+Full size: 28h (40)

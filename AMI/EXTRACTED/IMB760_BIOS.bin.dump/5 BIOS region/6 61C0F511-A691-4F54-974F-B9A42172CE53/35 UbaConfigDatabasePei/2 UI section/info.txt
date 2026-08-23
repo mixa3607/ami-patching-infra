@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D702A4h
+Header address: FFD702A4h
+Data address: FFD702A8h
+Offset: 1514h
+Type: 15h
+Full size: 2Eh (46)
+Header size: 4h (4)
+Body size: 2Ah (42)
+Text: UbaConfigDatabasePei

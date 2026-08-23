@@ -1,0 +1,13 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: 1A4D70h
+Address: FE1A4D70h
+Offset: 0h
+Full size: 38h (56)
+Type: Ah
+Compression type: 1h
+Uncompressed size: 9000h (36864)
+Compressed size: 81A4h (33188)
+Global module ID: 8086000Fh
+Image hash: a00707da61050f67cd0c51526d8c9e3672a0597709fb1a3e49bde1dbf7c324b2

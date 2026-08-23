@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: FakeVar
+Fixed: Yes
+Base: 1083484h
+Header address: FF083484h
+Data address: FF083497h
+Offset: 33F4h
+Variable GUID: E57D5CB9-148F-444D-9ECB-9DF86530A0B4
+GUID index: 20
+Full size: 14h (20)
+Header size: 13h (19)
+Body size: 1h (1)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

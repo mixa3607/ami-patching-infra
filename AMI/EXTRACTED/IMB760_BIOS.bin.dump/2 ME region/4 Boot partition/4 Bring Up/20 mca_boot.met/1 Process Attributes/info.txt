@@ -1,0 +1,8 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: 1A510Ch
+Address: FE1A510Ch
+Offset: 38h
+Full size: 44h (68)
+Type: 5h

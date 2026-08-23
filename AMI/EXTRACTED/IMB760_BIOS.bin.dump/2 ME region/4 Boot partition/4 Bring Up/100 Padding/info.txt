@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 34BF60h
+Address: FE34BF60h
+Offset: 1A8F60h
+Full size: 20h (32)

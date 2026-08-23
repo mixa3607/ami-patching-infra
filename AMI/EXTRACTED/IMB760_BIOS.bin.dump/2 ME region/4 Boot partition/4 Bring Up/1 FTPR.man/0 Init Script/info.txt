@@ -1,0 +1,8 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: 1A3A44h
+Address: FE1A3A44h
+Offset: 284h
+Full size: 48Ch (1164)
+Type: 1h

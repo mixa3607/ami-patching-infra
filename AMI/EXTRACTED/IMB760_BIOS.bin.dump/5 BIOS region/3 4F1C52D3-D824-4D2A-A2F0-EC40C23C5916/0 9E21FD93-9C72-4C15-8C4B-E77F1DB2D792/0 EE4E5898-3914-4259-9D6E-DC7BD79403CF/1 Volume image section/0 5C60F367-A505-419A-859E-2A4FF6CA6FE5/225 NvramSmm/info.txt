@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: NvramSmm
+Fixed: No
+Offset: 53AC88h
+File GUID: 447A1B58-8F3E-4658-ABAA-9E7B2280B90A
+Type: 0Ah
+Attributes: 00h
+Full size: FAEAh (64234)
+Header size: 18h (24)
+Body size: FAD2h (64210)
+Tail size: 0h (0)
+State: F8h
+Header checksum: A3h, valid
+Data checksum: AAh, valid

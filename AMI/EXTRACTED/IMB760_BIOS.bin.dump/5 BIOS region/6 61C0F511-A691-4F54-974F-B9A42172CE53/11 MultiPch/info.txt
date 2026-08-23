@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: MultiPch
+Fixed: No
+Base: 1C1DBE8h
+Header address: FFC1DBE8h
+Data address: FFC1DC00h
+Offset: 1DBE8h
+File GUID: 0043A734-CB11-4274-B363-E165F958CB5F
+Type: 06h
+Attributes: 00h
+Full size: 59Ah (1434)
+Header size: 18h (24)
+Body size: 582h (1410)
+Tail size: 0h (0)
+State: F8h
+Header checksum: D4h, valid
+Data checksum: AAh, valid

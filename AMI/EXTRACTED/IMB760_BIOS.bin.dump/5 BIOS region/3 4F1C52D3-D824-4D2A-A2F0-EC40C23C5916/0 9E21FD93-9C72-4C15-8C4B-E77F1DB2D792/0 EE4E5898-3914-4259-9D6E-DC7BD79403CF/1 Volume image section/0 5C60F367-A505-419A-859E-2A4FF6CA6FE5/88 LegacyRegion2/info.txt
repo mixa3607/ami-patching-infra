@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: LegacyRegion2
+Fixed: No
+Offset: 28B940h
+File GUID: AA7B4695-00B4-4468-AD92-99370AC031C5
+Type: 07h
+Attributes: 00h
+Full size: D0Ah (3338)
+Header size: 18h (24)
+Body size: CF2h (3314)
+Tail size: 0h (0)
+State: F8h
+Header checksum: B3h, valid
+Data checksum: AAh, valid

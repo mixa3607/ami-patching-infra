@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: DF9F4h
+Address: FE0DF9F4h
+Offset: 9F4h
+Full size: 60Ch (1548)

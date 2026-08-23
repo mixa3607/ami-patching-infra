@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: TraceHubStatusCodeHandlerSmm
+Fixed: No
+Offset: 6A17E0h
+File GUID: 5C44EAF7-FF0B-462E-87F4-2D46460BF48F
+Type: 0Ah
+Attributes: 00h
+Full size: 12B2h (4786)
+Header size: 18h (24)
+Body size: 129Ah (4762)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 71h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,8 @@
+Type: Section
+Subtype: Raw
+Fixed: No
+Offset: 29AF10h
+Type: 19h
+Full size: 46035h (286773)
+Header size: 4h (4)
+Body size: 46031h (286769)

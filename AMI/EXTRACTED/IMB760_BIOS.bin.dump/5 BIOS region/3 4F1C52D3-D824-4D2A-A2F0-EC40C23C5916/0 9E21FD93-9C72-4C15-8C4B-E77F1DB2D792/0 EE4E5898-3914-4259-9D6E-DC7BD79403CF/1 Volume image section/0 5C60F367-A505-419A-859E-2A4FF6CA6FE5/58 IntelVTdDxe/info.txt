@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: IntelVTdDxe
+Fixed: No
+Offset: 17FD38h
+File GUID: 987555D6-595D-4CFA-B895-59B89368BD4D
+Type: 07h
+Attributes: 00h
+Full size: 53E2h (21474)
+Header size: 18h (24)
+Body size: 53CAh (21450)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 2Dh, valid
+Data checksum: AAh, valid

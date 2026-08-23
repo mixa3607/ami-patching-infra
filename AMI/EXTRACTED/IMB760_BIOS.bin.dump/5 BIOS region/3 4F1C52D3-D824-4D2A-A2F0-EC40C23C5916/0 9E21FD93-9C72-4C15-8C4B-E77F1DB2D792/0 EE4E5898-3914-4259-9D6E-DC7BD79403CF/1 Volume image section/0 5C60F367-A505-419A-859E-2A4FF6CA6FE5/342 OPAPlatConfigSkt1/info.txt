@@ -1,0 +1,15 @@
+Type: File
+Subtype: Freeform
+Text: OPAPlatConfigSkt1
+Fixed: No
+Offset: 1A43758h
+File GUID: 2CAD98FC-1897-4837-B313-E6F095F4F84C
+Type: 02h
+Attributes: 00h
+Full size: 258h (600)
+Header size: 18h (24)
+Body size: 240h (576)
+Tail size: 0h (0)
+State: F8h
+Header checksum: A0h, valid
+Data checksum: AAh, valid

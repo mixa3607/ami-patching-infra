@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: PprAddress
+Fixed: Yes
+Base: 1086330h
+Header address: FF086330h
+Data address: FF086346h
+Offset: 62B8h
+Variable GUID: 6A159D4F-6E6B-4523-AEB5-F7AF1C444B0F
+GUID index: 19
+Full size: 1AAh (426)
+Header size: 16h (22)
+Body size: 194h (404)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

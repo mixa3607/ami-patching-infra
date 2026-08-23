@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: UncoreInitPeim
+Fixed: No
+Base: 1C2C550h
+Header address: FFC2C550h
+Data address: FFC2C568h
+Offset: 2C550h
+File GUID: D71C8BA4-4AF2-4D0D-B1BA-F2409F0C20D3
+Type: 06h
+Attributes: 00h
+Full size: 119F46h (1154886)
+Header size: 18h (24)
+Body size: 119F2Eh (1154862)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 11h, valid
+Data checksum: AAh, valid

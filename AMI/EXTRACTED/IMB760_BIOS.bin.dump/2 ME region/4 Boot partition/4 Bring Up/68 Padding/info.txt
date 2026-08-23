@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 2741E4h
+Address: FE2741E4h
+Offset: D11E4h
+Full size: 1Ch (28)

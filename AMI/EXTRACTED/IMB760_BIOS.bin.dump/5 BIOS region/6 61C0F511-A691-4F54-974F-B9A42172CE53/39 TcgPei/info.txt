@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: TcgPei
+Fixed: No
+Base: 1D73B10h
+Header address: FFD73B10h
+Data address: FFD73B28h
+Offset: 173B10h
+File GUID: 34989D8E-930A-4A95-AB04-2E6CFDFF6631
+Type: 06h
+Attributes: 00h
+Full size: 27BAh (10170)
+Header size: 18h (24)
+Body size: 27A2h (10146)
+Tail size: 0h (0)
+State: F8h
+Header checksum: CAh, valid
+Data checksum: AAh, valid

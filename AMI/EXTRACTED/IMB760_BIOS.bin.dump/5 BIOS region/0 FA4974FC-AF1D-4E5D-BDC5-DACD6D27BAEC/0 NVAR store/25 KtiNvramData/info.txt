@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: KtiNvramData
+Fixed: Yes
+Base: 1009D3Dh
+Header address: FF009D3Dh
+Data address: FF009D55h
+Offset: 9CC5h
+Variable GUID: AC45D3D6-A36E-43A6-AD17-0A45BB47BED6
+GUID index: 24
+Full size: 238h (568)
+Header size: 18h (24)
+Body size: 220h (544)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

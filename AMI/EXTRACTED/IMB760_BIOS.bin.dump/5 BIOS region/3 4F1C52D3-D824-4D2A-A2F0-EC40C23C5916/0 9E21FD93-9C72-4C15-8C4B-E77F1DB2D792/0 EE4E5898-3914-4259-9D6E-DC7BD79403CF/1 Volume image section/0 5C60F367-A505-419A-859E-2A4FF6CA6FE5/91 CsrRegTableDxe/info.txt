@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: CsrRegTableDxe
+Fixed: No
+Offset: 28EB98h
+File GUID: 4A88EC66-0570-4AE2-BBBC-335A5C9BC287
+Type: 07h
+Attributes: 00h
+Full size: 726h (1830)
+Header size: 18h (24)
+Body size: 70Eh (1806)
+Tail size: 0h (0)
+State: F8h
+Header checksum: C3h, valid
+Data checksum: AAh, valid

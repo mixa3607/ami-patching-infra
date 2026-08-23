@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: SpsPei
+Fixed: No
+Base: 1C17E98h
+Header address: FFC17E98h
+Data address: FFC17EB0h
+Offset: 17E98h
+File GUID: 44640C32-33D7-4FB0-B1F9-6C7B232E994D
+Type: 06h
+Attributes: 00h
+Full size: 20DEh (8414)
+Header size: 18h (24)
+Body size: 20C6h (8390)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 45h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: PchSmbusDxe
+Fixed: No
+Offset: 99208h
+File GUID: E052D8A6-224A-4C32-8D37-2E0AE162364D
+Type: 07h
+Attributes: 00h
+Full size: 1EAEh (7854)
+Header size: 18h (24)
+Body size: 1E96h (7830)
+Tail size: 0h (0)
+State: F8h
+Header checksum: D1h, valid
+Data checksum: AAh, valid

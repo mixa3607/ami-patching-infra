@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: MemoryOverwriteRequestControlLock
+Fixed: Yes
+Base: 108A2D6h
+Header address: FF08A2D6h
+Data address: FF08A303h
+Offset: A25Eh
+Variable GUID: BB983CCF-151D-40E1-A07B-4A17BE168292
+GUID index: 29
+Full size: 2Eh (46)
+Header size: 2Dh (45)
+Body size: 1h (1)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

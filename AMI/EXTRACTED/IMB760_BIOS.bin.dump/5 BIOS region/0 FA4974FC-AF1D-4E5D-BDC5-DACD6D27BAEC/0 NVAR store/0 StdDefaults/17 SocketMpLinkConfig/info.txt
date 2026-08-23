@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: SocketMpLinkConfig
+Fixed: Yes
+Base: 1002658h
+Header address: FF002658h
+Data address: FF002676h
+Offset: 25C8h
+Variable GUID: 2B9B22DE-2AD4-4ABC-957D-5F18C504A05C
+GUID index: 13
+Full size: C9h (201)
+Header size: 1Eh (30)
+Body size: ABh (171)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

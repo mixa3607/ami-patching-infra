@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: McBankErrorInjection
+Fixed: No
+Offset: E16570h
+File GUID: 17A8A22C-8365-4540-9866-DAF6DABEABEF
+Type: 0Ah
+Attributes: 00h
+Full size: 1B02h (6914)
+Header size: 18h (24)
+Body size: 1AEAh (6890)
+Tail size: 0h (0)
+State: F8h
+Header checksum: DFh, valid
+Data checksum: AAh, valid

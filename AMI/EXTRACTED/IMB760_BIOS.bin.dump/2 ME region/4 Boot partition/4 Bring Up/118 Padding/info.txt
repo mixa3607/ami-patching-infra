@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 3B5FC8h
+Address: FE3B5FC8h
+Offset: 212FC8h
+Full size: 38h (56)

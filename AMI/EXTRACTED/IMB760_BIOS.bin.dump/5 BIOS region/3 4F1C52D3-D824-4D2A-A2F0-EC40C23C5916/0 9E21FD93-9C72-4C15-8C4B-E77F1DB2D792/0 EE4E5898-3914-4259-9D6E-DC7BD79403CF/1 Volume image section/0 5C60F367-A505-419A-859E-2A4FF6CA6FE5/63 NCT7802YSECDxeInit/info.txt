@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: NCT7802YSECDxeInit
+Fixed: No
+Offset: 188CA0h
+File GUID: 54DBBDC2-E90B-441C-B0FE-F81F6C8CA544
+Type: 07h
+Attributes: 00h
+Full size: BDEh (3038)
+Header size: 18h (24)
+Body size: BC6h (3014)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 68h, valid
+Data checksum: AAh, valid

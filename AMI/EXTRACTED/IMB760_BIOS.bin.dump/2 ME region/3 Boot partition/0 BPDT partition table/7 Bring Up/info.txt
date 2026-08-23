@@ -1,0 +1,14 @@
+Type: BPDT entry
+Subtype: 
+Fixed: Yes
+Base: A806Ch
+Address: FE0A806Ch
+Offset: 6Ch
+Full size: Ch (12)
+Type: 2h
+Partition offset: 37000h
+Partition length: 8C000h
+Split sub-partition first part: No
+Split sub-partition second part: No
+Code sub-partition: No
+UMA cacheable: No

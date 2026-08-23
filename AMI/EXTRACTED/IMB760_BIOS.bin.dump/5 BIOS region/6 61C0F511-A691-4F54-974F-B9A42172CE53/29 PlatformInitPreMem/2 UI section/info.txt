@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D68770h
+Header address: FFD68770h
+Data address: FFD68774h
+Offset: 10470h
+Type: 15h
+Full size: 2Ah (42)
+Header size: 4h (4)
+Body size: 26h (38)
+Text: PlatformInitPreMem

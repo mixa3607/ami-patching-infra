@@ -1,0 +1,718 @@
+Program version: 1.6.0, Extraction mode: UEFI
+0x5B69C: FormSet Guid: 25FD9F0B-A3EF-4788-A40C-81849D178A6C, Title: "Intel PRO/1000 Network Connection", Help: "Configure 10 Gigabit Ethernet device parameters." { 0E B7 0B 9F FD 25 EF A3 88 47 A4 0C 81 84 9D 17 8A 6C 71 00 72 00 02 71 99 03 93 45 85 04 4B B4 5E 32 EB 83 26 04 0E 46 97 8E 5C F7 A5 93 45 AF 1F 66 A8 2A A1 9C B1 }
+0x5B6D3: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Class, Class: 0x4 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 03 04 00 }
+0x5B6E8: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: SubClass, SubClass: 0x0 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 04 00 00 }
+0x5B6FD: 	DefaultStore DefaultId: 0x0, Name: "" { 5C 06 00 00 00 00 }
+0x5B703: 	DefaultStore DefaultId: 0x1, Name: "" { 5C 06 00 00 01 00 }
+0x5B709: 	Guid Guid: F005E403-3A6A-45A0-8AFA-6D45B33B7FEB, Optional data: [4, 1, 0, 0, 2, 0] { 5F 18 03 E4 05 F0 6A 3A A0 45 8A FA 6D 45 B3 3B 7F EB 04 01 00 00 02 00 }
+0x5B721: 	Guid Guid: F005E403-3A6A-45A0-8AFA-6D45B33B7FEB, Optional data: [3, 3, 150, 0] { 5F 16 03 E4 05 F0 6A 3A A0 45 8A FA 6D 45 B3 3B 7F EB 03 03 96 00 }
+0x5B737: 	VarStore Guid: E2C85968-6906-4B27-9D09-3343AF064676, VarStoreId: 0x1234, Size: 0x730, Name: "UndiNVData" { 24 21 68 59 C8 E2 06 69 27 4B 9D 09 33 43 AF 06 46 76 34 12 30 07 55 6E 64 69 4E 56 44 61 74 61 00 }
+0x5B758: 	Form FormId: 0x1, Title: "Main Configuration Page" { 01 86 01 00 73 00 }
+0x5B75E: 		Ref Prompt: "Firmware Image Properties", Help: "View device firmware version information.", QuestionFlags: 0x0, QuestionId: 0x1, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1247 { 0F 0F CD 00 CE 00 01 00 00 00 FF FF 00 47 12 }
+0x5B76D: 		Ref Prompt: "NIC Configuration", Help: "Click to configure the network device port.", QuestionFlags: 0x0, QuestionId: 0x2, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1235 { 0F 0F 8B 00 8C 00 02 00 00 00 FF FF 00 35 12 }
+0x5B77C: 		SuppressIf  { 0A 82 }
+0x5B77E: 			EqIdVal QuestionId: 0x1501, Value: 0x0 { 12 06 01 15 00 00 }
+0x5B784: 			SuppressIf  { 0A 82 }
+0x5B786: 				EqIdVal QuestionId: 0x1406, Value: 0x0 { 12 06 06 14 00 00 }
+0x5B78C: 				Ref Prompt: "FCoE Configuration", Help: "Configure FCoE Boot parameters.", QuestionFlags: 0x0, QuestionId: 0x3, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1236 { 0F 0F E7 00 E8 00 03 00 00 00 FF FF 00 36 12 }
+0x5B79B: 			End  { 29 02 }
+0x5B79D: 		End  { 29 02 }
+0x5B79F: 		SuppressIf  { 0A 82 }
+0x5B7A1: 			EqIdVal QuestionId: 0x1501, Value: 0x0 { 12 06 01 15 00 00 }
+0x5B7A7: 			SuppressIf  { 0A 82 }
+0x5B7A9: 				EqIdVal QuestionId: 0x1405, Value: 0x0 { 12 06 05 14 00 00 }
+0x5B7AF: 				Ref Prompt: "iSCSI Configuration", Help: "Configure general, initiator and target parameters for iSCSI boot.", QuestionFlags: 0x0, QuestionId: 0x4, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1237 { 0F 0F 1C 01 1D 01 04 00 00 00 FF FF 00 37 12 }
+0x5B7BE: 			End  { 29 02 }
+0x5B7C0: 		End  { 29 02 }
+0x5B7C2: 		SuppressIf  { 0A 82 }
+0x5B7C4: 			EqIdVal QuestionId: 0x1501, Value: 0x0 { 12 86 01 15 00 00 }
+0x5B7CA: 				EqIdVal QuestionId: 0x1600, Value: 0x0 { 12 06 00 16 00 00 }
+0x5B7D0: 				And  { 15 02 }
+0x5B7D2: 				EqIdVal QuestionId: 0x14, Value: 0x0 { 12 06 14 00 00 00 }
+0x5B7D8: 				And  { 15 02 }
+0x5B7DA: 				EqIdVal QuestionId: 0x16, Value: 0x0 { 12 06 16 00 00 00 }
+0x5B7E0: 				And  { 15 02 }
+0x5B7E2: 			End  { 29 02 }
+0x5B7E4: 			SuppressIf  { 0A 82 }
+0x5B7E6: 				EqIdVal QuestionId: 0x14, Value: 0x1 { 12 86 14 00 01 00 }
+0x5B7EC: 					EqIdVal QuestionId: 0x17, Value: 0x0 { 12 06 17 00 00 00 }
+0x5B7F2: 					Not  { 17 02 }
+0x5B7F4: 					And  { 15 02 }
+0x5B7F6: 				End  { 29 02 }
+0x5B7F8: 				Ref Prompt: "Device Level Configuration", Help: "View and configure global device level parameters.", QuestionFlags: 0x0, QuestionId: 0x5, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1248 { 0F 0F B3 00 B4 00 05 00 00 00 FF FF 00 48 12 }
+0x5B807: 			End  { 29 02 }
+0x5B809: 		End  { 29 02 }
+0x5B80B: 		SuppressIf  { 0A 82 }
+0x5B80D: 			True  { 46 02 }
+0x5B80F: 			Text Prompt: "PXE Boot Support", Help: "", Text: "                   " { 03 08 51 01 02 02 52 01 }
+0x5B817: 			Text Prompt: "iSCSI Boot Support", Help: "", Text: "                   " { 03 08 4D 01 02 02 4E 01 }
+0x5B81F: 			Text Prompt: "FCoE Boot Support", Help: "", Text: "                   " { 03 08 4F 01 02 02 50 01 }
+0x5B827: 			Text Prompt: "NIC Partitioning Support", Help: "", Text: "                   " { 03 08 53 01 02 02 54 01 }
+0x5B82F: 			Text Prompt: "FlexAddressing", Help: "", Text: "                   " { 03 08 57 01 02 02 58 01 }
+0x5B837: 			Text Prompt: "TOE Support", Help: "", Text: "                   " { 03 08 59 01 02 02 5A 01 }
+0x5B83F: 			Text Prompt: "iSCSI Offload Support", Help: "", Text: "                   " { 03 08 55 01 02 02 56 01 }
+0x5B847: 			Text Prompt: "iSCSI Dual IP Version Support", Help: "", Text: "                   " { 03 08 5B 01 02 02 5C 01 }
+0x5B84F: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1517, VarStoreId: 0x1234, VarOffset: 0x61, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 17 15 34 12 61 00 01 10 00 01 00 }
+0x5B860: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5B865: 					Value  { 5A 82 }
+0x5B867: 						QuestionRef1 QuestionId: 0x1517 { 40 04 17 15 }
+0x5B86B: 					End  { 29 02 }
+0x5B86D: 				End  { 29 02 }
+0x5B86F: 			End  { 29 02 }
+0x5B871: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1405, VarStoreId: 0x1234, VarOffset: 0x62, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 05 14 34 12 62 00 01 10 00 01 00 }
+0x5B882: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5B887: 					Value  { 5A 82 }
+0x5B889: 						QuestionRef1 QuestionId: 0x1405 { 40 04 05 14 }
+0x5B88D: 					End  { 29 02 }
+0x5B88F: 				End  { 29 02 }
+0x5B891: 			End  { 29 02 }
+0x5B893: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1406, VarStoreId: 0x1234, VarOffset: 0x63, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 06 14 34 12 63 00 01 10 00 01 00 }
+0x5B8A4: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5B8A9: 					Value  { 5A 82 }
+0x5B8AB: 						QuestionRef1 QuestionId: 0x1406 { 40 04 06 14 }
+0x5B8AF: 					End  { 29 02 }
+0x5B8B1: 				End  { 29 02 }
+0x5B8B3: 			End  { 29 02 }
+0x5B8B5: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1500, VarStoreId: 0x1234, VarOffset: 0x72B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 00 15 34 12 2B 07 01 10 00 01 00 }
+0x5B8C6: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5B8CB: 					Value  { 5A 82 }
+0x5B8CD: 						QuestionRef1 QuestionId: 0x1500 { 40 04 00 15 }
+0x5B8D1: 					End  { 29 02 }
+0x5B8D3: 				End  { 29 02 }
+0x5B8D5: 			End  { 29 02 }
+0x5B8D7: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1501, VarStoreId: 0x1234, VarOffset: 0x72C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 01 15 34 12 2C 07 01 10 00 01 00 }
+0x5B8E8: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5B8ED: 					Value  { 5A 82 }
+0x5B8EF: 						QuestionRef1 QuestionId: 0x1501 { 40 04 01 15 }
+0x5B8F3: 					End  { 29 02 }
+0x5B8F5: 				End  { 29 02 }
+0x5B8F7: 			End  { 29 02 }
+0x5B8F9: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x140A, VarStoreId: 0x1234, VarOffset: 0x60, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 0A 14 34 12 60 00 01 10 00 01 00 }
+0x5B90A: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5B90F: 					Value  { 5A 82 }
+0x5B911: 						QuestionRef1 QuestionId: 0x140A { 40 04 0A 14 }
+0x5B915: 					End  { 29 02 }
+0x5B917: 				End  { 29 02 }
+0x5B919: 			End  { 29 02 }
+0x5B91B: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1600, VarStoreId: 0x1234, VarOffset: 0x58, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 00 16 34 12 58 00 01 10 00 01 00 }
+0x5B92C: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5B931: 					Value  { 5A 82 }
+0x5B933: 						QuestionRef1 QuestionId: 0x1600 { 40 04 00 16 }
+0x5B937: 					End  { 29 02 }
+0x5B939: 				End  { 29 02 }
+0x5B93B: 			End  { 29 02 }
+0x5B93D: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1601, VarStoreId: 0x1234, VarOffset: 0x5A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 01 16 34 12 5A 00 01 10 00 01 00 }
+0x5B94E: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5B953: 					Value  { 5A 82 }
+0x5B955: 						QuestionRef1 QuestionId: 0x1601 { 40 04 01 16 }
+0x5B959: 					End  { 29 02 }
+0x5B95B: 				End  { 29 02 }
+0x5B95D: 			End  { 29 02 }
+0x5B95F: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1607, VarStoreId: 0x1234, VarOffset: 0x59, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 07 16 34 12 59 00 01 10 00 01 00 }
+0x5B970: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5B975: 					Value  { 5A 82 }
+0x5B977: 						QuestionRef1 QuestionId: 0x1607 { 40 04 07 16 }
+0x5B97B: 					End  { 29 02 }
+0x5B97D: 				End  { 29 02 }
+0x5B97F: 			End  { 29 02 }
+0x5B981: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1608, VarStoreId: 0x1234, VarOffset: 0x5C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 08 16 34 12 5C 00 01 10 00 01 00 }
+0x5B992: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5B997: 					Value  { 5A 82 }
+0x5B999: 						QuestionRef1 QuestionId: 0x1608 { 40 04 08 16 }
+0x5B99D: 					End  { 29 02 }
+0x5B99F: 				End  { 29 02 }
+0x5B9A1: 			End  { 29 02 }
+0x5B9A3: 		End  { 29 02 }
+0x5B9A5: 		Text Prompt: "", Help: "", Text: "" { 03 08 02 02 02 02 02 02 }
+0x5B9AD: 		Numeric Prompt: "Blink LEDs", Help: "Blink LEDs for a duration up to 15 seconds.", QuestionFlags: 0x4, QuestionId: 0x110A, VarStoreId: 0x1234, VarOffset: 0x68, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xF, Step: 0x0 { 07 94 89 00 8A 00 0A 11 34 12 68 00 04 11 00 00 0F 00 00 00 }
+0x5B9C1: 			Default DefaultId: 0x0 Value: 0 { 5B 07 00 00 01 00 00 }
+0x5B9C8: 			Guid Guid: F005E403-3A6A-45A0-8AFA-6D45B33B7FEB, Optional data: [2, 1, 11, 159, 253, 37, 239, 163, 136, 71, 164, 12, 129, 132, 157, 23, 138, 108, 0, 0] { 5F 26 03 E4 05 F0 6A 3A A0 45 8A FA 6D 45 B3 3B 7F EB 02 01 0B 9F FD 25 EF A3 88 47 A4 0C 81 84 9D 17 8A 6C 00 00 }
+0x5B9EE: 		End  { 29 02 }
+0x5B9F0: 		Text Prompt: "", Help: "", Text: "" { 03 08 02 02 02 02 02 02 }
+0x5B9F8: 		SuppressIf  { 0A 82 }
+0x5B9FA: 			EqIdVal QuestionId: 0x1501, Value: 0x1 { 12 06 01 15 01 00 }
+0x5BA00: 			Text Prompt: "UEFI Driver", Help: "UEFI driver name and version number.", Text: "%s" { 03 08 86 00 88 00 87 00 }
+0x5BA08: 		End  { 29 02 }
+0x5BA0A: 		Text Prompt: "Adapter PBA", Help: "A Printed Board Assembly (PBA) number is a unique code used to identify a printed board assembly.", Text: "%s" { 03 08 7C 00 7E 00 7D 00 }
+0x5BA12: 		Text Prompt: "Device Name", Help: "Official product name of this device.", Text: "Intel Fortville device name" { 03 08 FE 01 FD 01 FF 01 }
+0x5BA1A: 		Text Prompt: "Chip Type", Help: "Network controller part number.", Text: "Unknown Controller" { 03 08 7F 00 81 00 80 00 }
+0x5BA22: 		Text Prompt: "PCI Device ID", Help: "PCI Device ID of this device.", Text: "%04x" { 03 08 82 00 85 00 84 00 }
+0x5BA2A: 		Text Prompt: "PCI Address", Help: "PCI device location.", Text: "        " { 03 08 79 00 7B 00 7A 00 }
+0x5BA32: 		Text Prompt: "", Help: "", Text: "" { 03 08 02 02 02 02 02 02 }
+0x5BA3A: 		GrayOutIf  { 19 82 }
+0x5BA3C: 			True  { 46 02 }
+0x5BA3E: 			OneOf Prompt: "Link Status", Help: "Link Status.", QuestionFlags: 0x0, QuestionId: 0x1104, VarStoreId: 0x1234, VarOffset: 0x9, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 AF 00 B0 00 04 11 34 12 09 00 00 10 00 01 00 }
+0x5BA4F: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BA54: 					Value  { 5A 82 }
+0x5BA56: 						QuestionRef1 QuestionId: 0x1104 { 40 04 04 11 }
+0x5BA5A: 					End  { 29 02 }
+0x5BA5C: 				End  { 29 02 }
+0x5BA5E: 				Guid Guid: F005E403-3A6A-45A0-8AFA-6D45B33B7FEB, Optional data: [2, 1, 11, 159, 253, 37, 239, 163, 136, 71, 164, 12, 129, 132, 157, 23, 138, 108, 0, 0] { 5F 26 03 E4 05 F0 6A 3A A0 45 8A FA 6D 45 B3 3B 7F EB 02 01 0B 9F FD 25 EF A3 88 47 A4 0C 81 84 9D 17 8A 6C 00 00 }
+0x5BA84: 				OneOfOption Option: "Disconnected" Value: 0 { 09 07 B1 00 00 00 00 }
+0x5BA8B: 				OneOfOption Option: "Connected" Value: 1 { 09 07 B2 00 00 00 01 }
+0x5BA92: 			End  { 29 02 }
+0x5BA94: 		End  { 29 02 }
+0x5BA96: 		SuppressIf  { 0A 82 }
+0x5BA98: 			True  { 46 02 }
+0x5BA9A: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1408, VarStoreId: 0x1234, VarOffset: 0x57, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 08 14 34 12 57 00 01 10 00 01 00 }
+0x5BAAB: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BAB0: 					Value  { 5A 82 }
+0x5BAB2: 						QuestionRef1 QuestionId: 0x1408 { 40 04 08 14 }
+0x5BAB6: 					End  { 29 02 }
+0x5BAB8: 				End  { 29 02 }
+0x5BABA: 			End  { 29 02 }
+0x5BABC: 		End  { 29 02 }
+0x5BABE: 		SuppressIf  { 0A 82 }
+0x5BAC0: 			EqIdVal QuestionId: 0x1408, Value: 0x0 { 12 06 08 14 00 00 }
+0x5BAC6: 			GrayOutIf  { 19 82 }
+0x5BAC8: 				True  { 46 02 }
+0x5BACA: 				OneOf Prompt: "Link Speed Status", Help: "Link Speed Status.", QuestionFlags: 0x0, QuestionId: 0x110C, VarStoreId: 0x1234, VarOffset: 0x56, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x20, Step: 0x0 { 05 91 CB 00 CC 00 0C 11 34 12 56 00 00 10 00 20 00 }
+0x5BADB: 					Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BAE0: 						Value  { 5A 82 }
+0x5BAE2: 							QuestionRef1 QuestionId: 0x110C { 40 04 0C 11 }
+0x5BAE6: 						End  { 29 02 }
+0x5BAE8: 					End  { 29 02 }
+0x5BAEA: 					OneOfOption Option: "Auto Negotiated" Value: 0 { 09 07 9A 00 00 00 00 }
+0x5BAF1: 					OneOfOption Option: "10 Mbps Half" Value: 1 { 09 07 9B 00 00 00 01 }
+0x5BAF8: 					OneOfOption Option: "10 Mbps Full" Value: 2 { 09 07 9C 00 00 00 02 }
+0x5BAFF: 					OneOfOption Option: "100 Mbps Half" Value: 3 { 09 07 9D 00 00 00 03 }
+0x5BB06: 					OneOfOption Option: "100 Mbps Full" Value: 4 { 09 07 9E 00 00 00 04 }
+0x5BB0D: 					OneOfOption Option: "1000 Mbps Half" Value: 5 { 09 07 A0 00 00 00 05 }
+0x5BB14: 					OneOfOption Option: "1000 Mbps Full" Value: 6 { 09 07 9F 00 00 00 06 }
+0x5BB1B: 					OneOfOption Option: "2500 Mbps" Value: 7 { 09 07 A1 00 00 00 07 }
+0x5BB22: 					OneOfOption Option: "5 Gbps" Value: 8 { 09 07 A2 00 00 00 08 }
+0x5BB29: 					OneOfOption Option: "10 Gbps Half" Value: 9 { 09 07 A3 00 00 00 09 }
+0x5BB30: 					OneOfOption Option: "10 Gbps Full" Value: 10 { 09 07 A4 00 00 00 0A }
+0x5BB37: 					OneOfOption Option: "20 Gbps" Value: 11 { 09 07 A5 00 00 00 0B }
+0x5BB3E: 					OneOfOption Option: "25 Gbps" Value: 12 { 09 07 A6 00 00 00 0C }
+0x5BB45: 					OneOfOption Option: "40 Gbps" Value: 13 { 09 07 A7 00 00 00 0D }
+0x5BB4C: 					OneOfOption Option: "50 Gbps" Value: 14 { 09 07 A8 00 00 00 0E }
+0x5BB53: 					OneOfOption Option: "100 Gbps" Value: 15 { 09 07 A9 00 00 00 0F }
+0x5BB5A: 					OneOfOption Option: "N/A" Value: 32 { 09 07 AE 00 00 00 20 }
+0x5BB61: 				End  { 29 02 }
+0x5BB63: 			End  { 29 02 }
+0x5BB65: 		End  { 29 02 }
+0x5BB67: 		Text Prompt: "", Help: "", Text: "" { 03 08 02 02 02 02 02 02 }
+0x5BB6F: 		Text Prompt: "MAC Address", Help: "Factory default MAC address of Ethernet port.", Text: "%02x:%02x:%02x:%02x:%02x:%02x" { 03 08 74 00 76 00 75 00 }
+0x5BB77: 		SuppressIf  { 0A 82 }
+0x5BB79: 			True  { 46 02 }
+0x5BB7B: 			String Prompt: "MAC Address", Help: "Factory default MAC address of Ethernet port.", QuestionFlags: 0x1, QuestionId: 0x1105, VarStoreId: 0x1234, VarStoreInfo: 0x2E, MinSize: 0x11, MaxSize: 0x11, Flags: 0x0 { 1C 90 97 00 76 00 05 11 34 12 2E 00 01 11 11 00 }
+0x5BB8B: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BB90: 					Value  { 5A 82 }
+0x5BB92: 						QuestionRef1 QuestionId: 0x1105 { 40 04 05 11 }
+0x5BB96: 					End  { 29 02 }
+0x5BB98: 				End  { 29 02 }
+0x5BB9A: 				Guid Guid: F005E403-3A6A-45A0-8AFA-6D45B33B7FEB, Optional data: [1, 4] { 5F 14 03 E4 05 F0 6A 3A A0 45 8A FA 6D 45 B3 3B 7F EB 01 04 }
+0x5BBAE: 			End  { 29 02 }
+0x5BBB0: 		End  { 29 02 }
+0x5BBB2: 		SuppressIf  { 0A 82 }
+0x5BBB4: 			True  { 46 02 }
+0x5BBB6: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1407, VarStoreId: 0x1234, VarOffset: 0x8, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 07 14 34 12 08 00 01 10 00 01 00 }
+0x5BBC7: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BBCC: 					Value  { 5A 82 }
+0x5BBCE: 						QuestionRef1 QuestionId: 0x1407 { 40 04 07 14 }
+0x5BBD2: 					End  { 29 02 }
+0x5BBD4: 				End  { 29 02 }
+0x5BBD6: 			End  { 29 02 }
+0x5BBD8: 		End  { 29 02 }
+0x5BBDA: 		SuppressIf  { 0A 82 }
+0x5BBDC: 			EqIdVal QuestionId: 0x1407, Value: 0x0 { 12 06 07 14 00 00 }
+0x5BBE2: 			GrayOutIf  { 19 82 }
+0x5BBE4: 				True  { 46 02 }
+0x5BBE6: 				String Prompt: "Virtual MAC Address", Help: "Programmatically assignable MAC address for port.", QuestionFlags: 0x0, QuestionId: 0x1106, VarStoreId: 0x1234, VarStoreInfo: 0xA, MinSize: 0x11, MaxSize: 0x11, Flags: 0x0 { 1C 90 77 00 78 00 06 11 34 12 0A 00 00 11 11 00 }
+0x5BBF6: 					Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BBFB: 						Value  { 5A 82 }
+0x5BBFD: 							QuestionRef1 QuestionId: 0x1106 { 40 04 06 11 }
+0x5BC01: 						End  { 29 02 }
+0x5BC03: 					End  { 29 02 }
+0x5BC05: 					Guid Guid: F005E403-3A6A-45A0-8AFA-6D45B33B7FEB, Optional data: [2, 1, 11, 159, 253, 37, 239, 163, 136, 71, 164, 12, 129, 132, 157, 23, 138, 108, 0, 0] { 5F 26 03 E4 05 F0 6A 3A A0 45 8A FA 6D 45 B3 3B 7F EB 02 01 0B 9F FD 25 EF A3 88 47 A4 0C 81 84 9D 17 8A 6C 00 00 }
+0x5BC2B: 				End  { 29 02 }
+0x5BC2D: 			End  { 29 02 }
+0x5BC2F: 		End  { 29 02 }
+0x5BC31: 		SuppressIf  { 0A 82 }
+0x5BC33: 			EqIdVal QuestionId: 0x1406, Value: 0x0 { 12 06 06 14 00 00 }
+0x5BC39: 			Text Prompt: "FIP MAC Address", Help: "FCoE Initialization protocol (FIP) MAC Address for this device. ", Text: "" { 03 08 EB 00 EC 00 ED 00 }
+0x5BC41: 			Text Prompt: "World Wide Node Name", Help: "World Wide Node Name for the boot target.", Text: "" { 03 08 EE 00 EF 00 F0 00 }
+0x5BC49: 			Text Prompt: "World Wide Port Name", Help: "World Wide Port Name for the boot target.", Text: "" { 03 08 F1 00 F2 00 F3 00 }
+0x5BC51: 			GrayOutIf  { 19 82 }
+0x5BC53: 				True  { 46 02 }
+0x5BC55: 				String Prompt: "Virtual FIP MAC Address", Help: "Programmatically assignable FIP-MAC address for FCoE.", QuestionFlags: 0x1, QuestionId: 0x1303, VarStoreId: 0x1234, VarStoreInfo: 0x5C8, MinSize: 0x11, MaxSize: 0x11, Flags: 0x0 { 1C 90 F4 00 F5 00 03 13 34 12 C8 05 01 11 11 00 }
+0x5BC65: 					Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BC6A: 						Value  { 5A 82 }
+0x5BC6C: 							QuestionRef1 QuestionId: 0x1303 { 40 04 03 13 }
+0x5BC70: 						End  { 29 02 }
+0x5BC72: 					End  { 29 02 }
+0x5BC74: 				End  { 29 02 }
+0x5BC76: 			End  { 29 02 }
+0x5BC78: 			String Prompt: "Virtual World Wide Node Name", Help: "Programmatically assignable Fibre Channel World Wide Node Name identifier for FCoE.", QuestionFlags: 0x1, QuestionId: 0x1304, VarStoreId: 0x1234, VarStoreInfo: 0x5EC, MinSize: 0x17, MaxSize: 0x17, Flags: 0x0 { 1C 90 F6 00 F7 00 04 13 34 12 EC 05 01 17 17 00 }
+0x5BC88: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BC8D: 					Value  { 5A 82 }
+0x5BC8F: 						QuestionRef1 QuestionId: 0x1304 { 40 04 04 13 }
+0x5BC93: 					End  { 29 02 }
+0x5BC95: 				End  { 29 02 }
+0x5BC97: 			End  { 29 02 }
+0x5BC99: 			String Prompt: "Virtual World Wide Port Name", Help: "Programmatically assignable Fibre Channel World Wide Port Name identifier for FCoE.", QuestionFlags: 0x1, QuestionId: 0x1305, VarStoreId: 0x1234, VarStoreInfo: 0x61C, MinSize: 0x17, MaxSize: 0x17, Flags: 0x0 { 1C 90 F8 00 F9 00 05 13 34 12 1C 06 01 17 17 00 }
+0x5BCA9: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BCAE: 					Value  { 5A 82 }
+0x5BCB0: 						QuestionRef1 QuestionId: 0x1305 { 40 04 05 13 }
+0x5BCB4: 					End  { 29 02 }
+0x5BCB6: 				End  { 29 02 }
+0x5BCB8: 			End  { 29 02 }
+0x5BCBA: 		End  { 29 02 }
+0x5BCBC: 	End  { 29 02 }
+0x5BCBE: 	Form FormId: 0x1248, Title: "Device Level Configuration" { 01 86 48 12 B5 00 }
+0x5BCC4: 		SuppressIf  { 0A 82 }
+0x5BCC6: 			True  { 46 02 }
+0x5BCC8: 			Text Prompt: "SR-IOV Support", Help: "", Text: "                   " { 03 08 BD 00 02 02 60 01 }
+0x5BCD0: 			Text Prompt: "RDMA Support", Help: "Indicates whether any RDMA protocol is supported by the controller.", Text: "                   " { 03 08 BE 00 C0 00 BF 00 }
+0x5BCD8: 			Numeric Prompt: "Number of Virtual Functions Supported", Help: "Number of virtual functions supported on this port.", QuestionFlags: 0x1, QuestionId: 0x6, VarStoreId: 0x1234, VarOffset: 0x70, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x100, Step: 0x0 { 07 94 C1 00 C2 00 06 00 34 12 70 00 01 11 00 00 00 01 00 00 }
+0x5BCEC: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BCF1: 					Value  { 5A 82 }
+0x5BCF3: 						QuestionRef1 QuestionId: 0x6 { 40 04 06 00 }
+0x5BCF7: 					End  { 29 02 }
+0x5BCF9: 				End  { 29 02 }
+0x5BCFB: 				Guid Guid: F005E403-3A6A-45A0-8AFA-6D45B33B7FEB, Optional data: [2, 1, 11, 159, 253, 37, 239, 163, 136, 71, 164, 12, 129, 132, 157, 23, 138, 108, 0, 0] { 5F 26 03 E4 05 F0 6A 3A A0 45 8A FA 6D 45 B3 3B 7F EB 02 01 0B 9F FD 25 EF A3 88 47 A4 0C 81 84 9D 17 8A 6C 00 00 }
+0x5BD21: 			End  { 29 02 }
+0x5BD23: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1180, VarStoreId: 0x1234, VarOffset: 0x6E, Flags: 0x11, Size: 16, Min: 0x0, Max: 0x80, Step: 0x0 { 07 94 02 02 02 02 80 11 34 12 6E 00 01 11 00 00 80 00 00 00 }
+0x5BD37: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BD3C: 					Value  { 5A 82 }
+0x5BD3E: 						QuestionRef1 QuestionId: 0x1180 { 40 04 80 11 }
+0x5BD42: 					End  { 29 02 }
+0x5BD44: 				End  { 29 02 }
+0x5BD46: 			End  { 29 02 }
+0x5BD48: 			OneOf Prompt: "VF Allocation Basis", Help: "Defines the domain in which Virtual Functions are allocated.", QuestionFlags: 0x1, QuestionId: 0x7, VarStoreId: 0x1234, VarOffset: 0x6B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 C5 00 C6 00 07 00 34 12 6B 00 01 10 00 01 00 }
+0x5BD59: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BD5E: 					Value  { 5A 82 }
+0x5BD60: 						QuestionRef1 QuestionId: 0x7 { 40 04 07 00 }
+0x5BD64: 					End  { 29 02 }
+0x5BD66: 				End  { 29 02 }
+0x5BD68: 				Guid Guid: F005E403-3A6A-45A0-8AFA-6D45B33B7FEB, Optional data: [2, 1, 11, 159, 253, 37, 239, 163, 136, 71, 164, 12, 129, 132, 157, 23, 138, 108, 0, 0] { 5F 26 03 E4 05 F0 6A 3A A0 45 8A FA 6D 45 B3 3B 7F EB 02 01 0B 9F FD 25 EF A3 88 47 A4 0C 81 84 9D 17 8A 6C 00 00 }
+0x5BD8E: 				OneOfOption Option: "Device" Value: 0 { 09 07 C7 00 00 00 00 }
+0x5BD95: 				OneOfOption Option: "Port" Value: 1 { 09 07 C8 00 00 00 01 }
+0x5BD9C: 			End  { 29 02 }
+0x5BD9E: 			Numeric Prompt: "VF Allocation Multiple", Help: "Virtual Functions must be allocated to a port in multiples of this number.", QuestionFlags: 0x1, QuestionId: 0x8, VarStoreId: 0x1234, VarOffset: 0x72, Flags: 0x11, Size: 16, Min: 0x1, Max: 0xFF, Step: 0x0 { 07 94 C9 00 CA 00 08 00 34 12 72 00 01 11 01 00 FF 00 00 00 }
+0x5BDB2: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BDB7: 					Value  { 5A 82 }
+0x5BDB9: 						QuestionRef1 QuestionId: 0x8 { 40 04 08 00 }
+0x5BDBD: 					End  { 29 02 }
+0x5BDBF: 				End  { 29 02 }
+0x5BDC1: 				Guid Guid: F005E403-3A6A-45A0-8AFA-6D45B33B7FEB, Optional data: [2, 1, 11, 159, 253, 37, 239, 163, 136, 71, 164, 12, 129, 132, 157, 23, 138, 108, 0, 0] { 5F 26 03 E4 05 F0 6A 3A A0 45 8A FA 6D 45 B3 3B 7F EB 02 01 0B 9F FD 25 EF A3 88 47 A4 0C 81 84 9D 17 8A 6C 00 00 }
+0x5BDE7: 			End  { 29 02 }
+0x5BDE9: 		End  { 29 02 }
+0x5BDEB: 		GrayOutIf  { 19 82 }
+0x5BDED: 			EqIdVal QuestionId: 0x140A, Value: 0x0 { 12 06 0A 14 00 00 }
+0x5BDF3: 			OneOf Prompt: "Virtualization Mode", Help: "Specifies the virtualization mode setting of the controller.", QuestionFlags: 0x14, QuestionId: 0x111C, VarStoreId: 0x1234, VarOffset: 0x6A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0 { 05 91 B6 00 B7 00 1C 11 34 12 6A 00 14 10 00 02 00 }
+0x5BE04: 				OneOfOption Option: "None" Value: 0, Default { 09 07 B8 00 10 00 00 }
+0x5BE0B: 				SuppressIf  { 0A 82 }
+0x5BE0D: 					EqIdVal QuestionId: 0x140A, Value: 0x0 { 12 06 0A 14 00 00 }
+0x5BE13: 					OneOfOption Option: "SR-IOV" Value: 2 { 09 07 B9 00 00 00 02 }
+0x5BE1A: 				End  { 29 02 }
+0x5BE1C: 			End  { 29 02 }
+0x5BE1E: 		End  { 29 02 }
+0x5BE20: 		SuppressIf  { 0A 82 }
+0x5BE22: 			EqIdVal QuestionId: 0x1601, Value: 0x0 { 12 06 01 16 00 00 }
+0x5BE28: 			OneOf Prompt: "Shared Memory Features", Help: "Disable usage of reserved memory regions to allow direct assignment of device to guest virtual machines.", QuestionFlags: 0x14, QuestionId: 0x1602, VarStoreId: 0x1234, VarOffset: 0x5B, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 6F 00 70 00 02 16 34 12 5B 00 14 10 00 01 00 }
+0x5BE39: 				OneOfOption Option: "Enabled" Value: 1, Default { 09 07 AC 00 10 00 01 }
+0x5BE40: 				OneOfOption Option: "Disabled" Value: 0 { 09 07 AD 00 00 00 00 }
+0x5BE47: 			End  { 29 02 }
+0x5BE49: 		End  { 29 02 }
+0x5BE4B: 		SuppressIf  { 0A 82 }
+0x5BE4D: 			EqIdVal QuestionId: 0x1608, Value: 0x0 { 12 06 08 16 00 00 }
+0x5BE53: 			OneOf Prompt: "Allow 10G link speed", Help: "Allow 10G link speed on this device.", QuestionFlags: 0x10, QuestionId: 0x1609, VarStoreId: 0x1234, VarOffset: 0x5D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 6D 00 6E 00 09 16 34 12 5D 00 10 10 00 01 00 }
+0x5BE64: 				OneOfOption Option: "Enabled" Value: 1, Default { 09 07 AC 00 10 00 01 }
+0x5BE6B: 				OneOfOption Option: "Disabled" Value: 0 { 09 07 AD 00 00 00 00 }
+0x5BE72: 			End  { 29 02 }
+0x5BE74: 		End  { 29 02 }
+0x5BE76: 		SuppressIf  { 0A 82 }
+0x5BE78: 			EqIdVal QuestionId: 0x16, Value: 0x0 { 12 06 16 00 00 00 }
+0x5BE7E: 			OneOf Prompt: "Active Physical Functions", Help: "Specify which physical functions are enabled. Disabled functions will not be exposed and their associated ports will be completely shut down.", QuestionFlags: 0x10, QuestionId: 0x1530, VarStoreId: 0x1234, VarOffset: 0x79, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x7, Step: 0x0 { 05 91 1B 02 1C 02 30 15 34 12 79 00 10 10 00 07 00 }
+0x5BE8F: 				OneOfOption Option: "PF0 only" Value: 0 { 09 07 1D 02 00 00 00 }
+0x5BE96: 				SuppressIf  { 0A 82 }
+0x5BE98: 					EqIdVal QuestionId: 0x15, Value: 0x2 { 12 06 15 00 02 00 }
+0x5BE9E: 					OneOfOption Option: "PF0 and PF1" Value: 1 { 09 07 1E 02 00 00 01 }
+0x5BEA5: 					OneOfOption Option: "PF0, PF1 and PF2" Value: 2 { 09 07 1F 02 00 00 02 }
+0x5BEAC: 					SuppressIf  { 0A 82 }
+0x5BEAE: 						EqIdVal QuestionId: 0x15, Value: 0x4 { 12 06 15 00 04 00 }
+0x5BEB4: 						OneOfOption Option: "PF0, PF1, PF2 and PF3" Value: 3 { 09 07 20 02 00 00 03 }
+0x5BEBB: 						OneOfOption Option: "PF0, PF1, PF2, PF3 and PF4" Value: 4 { 09 07 21 02 00 00 04 }
+0x5BEC2: 						OneOfOption Option: "PF0, PF1, PF2, PF3, PF4 and PF5" Value: 5 { 09 07 22 02 00 00 05 }
+0x5BEC9: 						OneOfOption Option: "PF0, PF1, PF2, PF3, PF4, PF5 and PF6" Value: 6 { 09 07 23 02 00 00 06 }
+0x5BED0: 					End  { 29 02 }
+0x5BED2: 				End  { 29 02 }
+0x5BED4: 				OneOfOption Option: "All" Value: 7, Default { 09 07 24 02 10 00 07 }
+0x5BEDB: 			End  { 29 02 }
+0x5BEDD: 		End  { 29 02 }
+0x5BEDF: 	End  { 29 02 }
+0x5BEE1: 	Form FormId: 0x1235, Title: "NIC Configuration" { 01 86 35 12 8D 00 }
+0x5BEE7: 		Text Prompt: "", Help: "", Text: "" { 03 08 02 02 02 02 02 02 }
+0x5BEEF: 		SuppressIf  { 0A 82 }
+0x5BEF1: 			EqIdVal QuestionId: 0x1501, Value: 0x0 { 12 86 01 15 00 00 }
+0x5BEF7: 				EqIdVal QuestionId: 0x1600, Value: 0x0 { 12 06 00 16 00 00 }
+0x5BEFD: 				And  { 15 02 }
+0x5BEFF: 				EqIdVal QuestionId: 0x14, Value: 0x0 { 12 06 14 00 00 00 }
+0x5BF05: 				And  { 15 02 }
+0x5BF07: 			End  { 29 02 }
+0x5BF09: 			SuppressIf  { 0A 82 }
+0x5BF0B: 				True  { 46 02 }
+0x5BF0D: 				Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x1181, VarStoreId: 0x1234, VarOffset: 0x5F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x80, Step: 0x0 { 07 91 02 02 02 02 81 11 34 12 5F 00 00 10 00 80 00 }
+0x5BF1E: 					Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BF23: 						Value  { 5A 82 }
+0x5BF25: 							QuestionRef1 QuestionId: 0x1181 { 40 04 81 11 }
+0x5BF29: 						End  { 29 02 }
+0x5BF2B: 					End  { 29 02 }
+0x5BF2D: 				End  { 29 02 }
+0x5BF2F: 			End  { 29 02 }
+0x5BF31: 			OneOf Prompt: "Legacy Boot Protocol", Help: "Select a non-UEFI network boot protocol.", QuestionFlags: 0x4, QuestionId: 0x1107, VarStoreId: 0x1234, VarOffset: 0x5E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0 { 05 91 8F 00 90 00 07 11 34 12 5E 00 04 10 00 04 00 }
+0x5BF42: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BF47: 					Value  { 5A 82 }
+0x5BF49: 						QuestionRef1 QuestionId: 0x1181 { 40 04 81 11 }
+0x5BF4D: 					End  { 29 02 }
+0x5BF4F: 				End  { 29 02 }
+0x5BF51: 				OneOfOption Option: "None" Value: 0 { 09 07 95 00 00 00 00 }
+0x5BF58: 				SuppressIf  { 0A 82 }
+0x5BF5A: 					EqIdVal QuestionId: 0x1517, Value: 0x0 { 12 06 17 15 00 00 }
+0x5BF60: 					OneOfOption Option: "PXE" Value: 1 { 09 07 91 00 00 00 01 }
+0x5BF67: 				End  { 29 02 }
+0x5BF69: 				SuppressIf  { 0A 82 }
+0x5BF6B: 					EqIdVal QuestionId: 0x1405, Value: 0x0 { 12 06 05 14 00 00 }
+0x5BF71: 					OneOfOption Option: "iSCSI Primary" Value: 2 { 09 07 92 00 00 00 02 }
+0x5BF78: 					OneOfOption Option: "iSCSI Secondary" Value: 3 { 09 07 93 00 00 00 03 }
+0x5BF7F: 				End  { 29 02 }
+0x5BF81: 				SuppressIf  { 0A 82 }
+0x5BF83: 					EqIdVal QuestionId: 0x1406, Value: 0x0 { 12 06 06 14 00 00 }
+0x5BF89: 					OneOfOption Option: "FCoE" Value: 4 { 09 07 94 00 00 00 04 }
+0x5BF90: 				End  { 29 02 }
+0x5BF92: 			End  { 29 02 }
+0x5BF94: 		End  { 29 02 }
+0x5BF96: 		Text Prompt: "", Help: "", Text: "" { 03 08 02 02 02 02 02 02 }
+0x5BF9E: 		SuppressIf  { 0A 82 }
+0x5BFA0: 			True  { 46 02 }
+0x5BFA2: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x9, VarStoreId: 0x1234, VarOffset: 0x3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 09 00 34 12 03 00 00 10 00 01 00 }
+0x5BFB3: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5BFB8: 					Value  { 5A 82 }
+0x5BFBA: 						QuestionRef1 QuestionId: 0x9 { 40 04 09 00 }
+0x5BFBE: 					End  { 29 02 }
+0x5BFC0: 				End  { 29 02 }
+0x5BFC2: 			End  { 29 02 }
+0x5BFC4: 		End  { 29 02 }
+0x5BFC6: 		GrayOutIf  { 19 82 }
+0x5BFC8: 			EqIdVal QuestionId: 0x9, Value: 0x0 { 12 06 09 00 00 00 }
+0x5BFCE: 			Text Prompt: "", Help: "", Text: "" { 03 08 02 02 02 02 02 02 }
+0x5BFD6: 			OneOf Prompt: "Link Speed", Help: "Specifies the port speed used for the selected boot protocol.", QuestionFlags: 0x0, QuestionId: 0x1108, VarStoreId: 0x1234, VarOffset: 0x4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x6, Step: 0x0 { 05 91 98 00 99 00 08 11 34 12 04 00 00 10 00 06 00 }
+0x5BFE7: 				Guid Guid: F005E403-3A6A-45A0-8AFA-6D45B33B7FEB, Optional data: [2, 1, 11, 159, 253, 37, 239, 163, 136, 71, 164, 12, 129, 132, 157, 23, 138, 108, 0, 0] { 5F 26 03 E4 05 F0 6A 3A A0 45 8A FA 6D 45 B3 3B 7F EB 02 01 0B 9F FD 25 EF A3 88 47 A4 0C 81 84 9D 17 8A 6C 00 00 }
+0x5C00D: 				OneOfOption Option: "Auto Negotiated" Value: 0, Default { 09 07 9A 00 10 00 00 }
+0x5C014: 				SuppressIf  { 0A 82 }
+0x5C016: 					EqIdVal QuestionId: 0x9, Value: 0x0 { 12 06 09 00 00 00 }
+0x5C01C: 					OneOfOption Option: "100 Mbps Full" Value: 4 { 09 07 9E 00 00 00 04 }
+0x5C023: 					OneOfOption Option: "1000 Mbps Full" Value: 6 { 09 07 9F 00 00 00 06 }
+0x5C02A: 				End  { 29 02 }
+0x5C02C: 			End  { 29 02 }
+0x5C02E: 		End  { 29 02 }
+0x5C030: 		SuppressIf  { 0A 82 }
+0x5C032: 			True  { 46 02 }
+0x5C034: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0xA, VarStoreId: 0x1234, VarOffset: 0x5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 0A 00 34 12 05 00 01 10 00 01 00 }
+0x5C045: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5C04A: 					Value  { 5A 82 }
+0x5C04C: 						QuestionRef1 QuestionId: 0xA { 40 04 0A 00 }
+0x5C050: 					End  { 29 02 }
+0x5C052: 				End  { 29 02 }
+0x5C054: 			End  { 29 02 }
+0x5C056: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1182, VarStoreId: 0x1234, VarOffset: 0x7, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0 { 07 91 02 02 02 02 82 11 34 12 07 00 01 10 00 02 00 }
+0x5C067: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5C06C: 					Value  { 5A 82 }
+0x5C06E: 						QuestionRef1 QuestionId: 0x1182 { 40 04 82 11 }
+0x5C072: 					End  { 29 02 }
+0x5C074: 				End  { 29 02 }
+0x5C076: 			End  { 29 02 }
+0x5C078: 		End  { 29 02 }
+0x5C07A: 		GrayOutIf  { 19 82 }
+0x5C07C: 			EqIdVal QuestionId: 0xA, Value: 0x0 { 12 06 0A 00 00 00 }
+0x5C082: 			OneOf Prompt: "Wake On LAN", Help: "Enables power on of the system via LAN. Note that configuring Wake on LAN in the operating system does not change the value of this setting, but does override the behavior of Wake on LAN in OS controlled power states.", QuestionFlags: 0x0, QuestionId: 0x1109, VarStoreId: 0x1234, VarOffset: 0x6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0 { 05 91 AA 00 AB 00 09 11 34 12 06 00 00 10 00 02 00 }
+0x5C093: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5C098: 					Value  { 5A 82 }
+0x5C09A: 						QuestionRef1 QuestionId: 0xA { 40 84 0A 00 }
+0x5C09E: 							Uint64 Value: 0x1 { 45 0A 01 00 00 00 00 00 00 00 }
+0x5C0A8: 							Equal  { 2F 02 }
+0x5C0AA: 							Uint64 Value: 0x2 { 45 0A 02 00 00 00 00 00 00 00 }
+0x5C0B4: 							QuestionRef1 QuestionId: 0x1182 { 40 04 82 11 }
+0x5C0B8: 							Conditional  { 50 02 }
+0x5C0BA: 						End  { 29 02 }
+0x5C0BC: 					End  { 29 02 }
+0x5C0BE: 				End  { 29 02 }
+0x5C0C0: 				SuppressIf  { 0A 82 }
+0x5C0C2: 					EqIdVal QuestionId: 0xA, Value: 0x0 { 12 06 0A 00 00 00 }
+0x5C0C8: 					OneOfOption Option: "Disabled" Value: 0 { 09 07 AD 00 00 00 00 }
+0x5C0CF: 					OneOfOption Option: "Enabled" Value: 1 { 09 07 AC 00 00 00 01 }
+0x5C0D6: 				End  { 29 02 }
+0x5C0D8: 				SuppressIf  { 0A 82 }
+0x5C0DA: 					EqIdVal QuestionId: 0xA, Value: 0x1 { 12 06 0A 00 01 00 }
+0x5C0E0: 					OneOfOption Option: "N/A" Value: 2 { 09 07 AE 00 00 00 02 }
+0x5C0E7: 				End  { 29 02 }
+0x5C0E9: 			End  { 29 02 }
+0x5C0EB: 		End  { 29 02 }
+0x5C0ED: 		SuppressIf  { 0A 82 }
+0x5C0EF: 			True  { 46 02 }
+0x5C0F1: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1409, VarStoreId: 0x1234, VarOffset: 0x64, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 02 02 02 02 09 14 34 12 64 00 01 10 00 01 00 }
+0x5C102: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5C107: 					Value  { 5A 82 }
+0x5C109: 						QuestionRef1 QuestionId: 0x1409 { 40 04 09 14 }
+0x5C10D: 					End  { 29 02 }
+0x5C10F: 				End  { 29 02 }
+0x5C111: 			End  { 29 02 }
+0x5C113: 		End  { 29 02 }
+0x5C115: 		SuppressIf  { 0A 82 }
+0x5C117: 			EqIdVal QuestionId: 0x1409, Value: 0x0 { 12 06 09 14 00 00 }
+0x5C11D: 			Numeric Prompt: "Legacy Virtual LAN ID", Help: "Specifies the VLAN ID used for PXE VLAN Mode. The valid VLAN ID range is from 0 to 4094. PXE VLAN is disabled if the VLAN ID is set to 0. Note that this setting is only applicable when the System ROM boots in Legacy BIOS Mode.", QuestionFlags: 0x4, QuestionId: 0x110D, VarStoreId: 0x1234, VarOffset: 0x66, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFE, Step: 0x0 { 07 94 18 02 19 02 0D 11 34 12 66 00 04 11 00 00 FE 0F 00 00 }
+0x5C131: 				Default DefaultId: 0x0 Value: 0 { 5B 07 00 00 01 00 00 }
+0x5C138: 			End  { 29 02 }
+0x5C13A: 		End  { 29 02 }
+0x5C13C: 		SuppressIf  { 0A 82 }
+0x5C13E: 			EqIdVal QuestionId: 0x1501, Value: 0x0 { 12 06 01 15 00 00 }
+0x5C144: 			Text Prompt: "", Help: "", Text: "" { 03 08 02 02 02 02 02 02 }
+0x5C14C: 			SuppressIf  { 0A 82 }
+0x5C14E: 				EqIdVal QuestionId: 0x140A, Value: 0x0 { 12 06 0A 14 00 00 }
+0x5C154: 				GrayOutIf  { 19 82 }
+0x5C156: 					EqIdVal QuestionId: 0x111C, Value: 0x2 { 12 86 1C 11 02 00 }
+0x5C15C: 						Not  { 17 02 }
+0x5C15E: 					End  { 29 02 }
+0x5C160: 					Numeric Prompt: "PCI Virtual Functions Advertised", Help: "Specify the number of PCI Virtual Functions (VFs) advertised on each port managed by the same controller in non-NPAR mode. Changing this setting changes all ports managed by the controller. Consult the "Mapping Network Ports to Controllers" section of the Intel(R) User Guide for information about which ports are managed by which controller on a multiport device.", QuestionFlags: 0x10, QuestionId: 0xB, VarStoreId: 0x1234, VarOffset: 0x6C, Flags: 0x11, Size: 16, Min: 0x1, Max: 0x40, Step: 0x0 { 07 94 BA 00 BB 00 0B 00 34 12 6C 00 10 11 01 00 40 00 00 00 }
+0x5C174: 						Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x5C179: 							Value  { 5A 82 }
+0x5C17B: 								QuestionRef1 QuestionId: 0x1180 { 40 04 80 11 }
+0x5C17F: 							End  { 29 02 }
+0x5C181: 						End  { 29 02 }
+0x5C183: 						Guid Guid: F005E403-3A6A-45A0-8AFA-6D45B33B7FEB, Optional data: [2, 1, 11, 159, 253, 37, 239, 163, 136, 71, 164, 12, 129, 132, 157, 23, 138, 108, 0, 0] { 5F 26 03 E4 05 F0 6A 3A A0 45 8A FA 6D 45 B3 3B 7F EB 02 01 0B 9F FD 25 EF A3 88 47 A4 0C 81 84 9D 17 8A 6C 00 00 }
+0x5C1A9: 					End  { 29 02 }
+0x5C1AB: 				End  { 29 02 }
+0x5C1AD: 			End  { 29 02 }
+0x5C1AF: 		End  { 29 02 }
+0x5C1B1: 	End  { 29 02 }
+0x5C1B3: 	Form FormId: 0x1247, Title: "Firmware Image Properties" { 01 86 47 12 CF 00 }
+0x5C1B9: 		SuppressIf  { 0A 82 }
+0x5C1BB: 			EqIdVal QuestionId: 0x1501, Value: 0x1 { 12 06 01 15 01 00 }
+0x5C1C1: 			SuppressIf  { 0A 82 }
+0x5C1C3: 				EqIdVal QuestionId: 0x1607, Value: 0x0 { 12 06 07 16 00 00 }
+0x5C1C9: 				Text Prompt: "NVM Image Version:", Help: "NVM Image Version.", Text: "" { 03 08 DC 00 DE 00 DD 00 }
+0x5C1D1: 			End  { 29 02 }
+0x5C1D3: 			SuppressIf  { 0A 82 }
+0x5C1D5: 				EqIdVal QuestionId: 0x1607, Value: 0x1 { 12 06 07 16 01 00 }
+0x5C1DB: 				Text Prompt: "Option ROM version", Help: "Option ROM version number.", Text: "        " { 03 08 D0 00 D2 00 D1 00 }
+0x5C1E3: 				Text Prompt: "Unique NVM/EEPROM ID", Help: "Unique NVM/EEPROM identifier.", Text: "        " { 03 08 D3 00 D5 00 D4 00 }
+0x5C1EB: 				Text Prompt: "NVM Version", Help: "Installed device NVM version information.", Text: "        " { 03 08 D6 00 D8 00 D7 00 }
+0x5C1F3: 			End  { 29 02 }
+0x5C1F5: 		End  { 29 02 }
+0x5C1F7: 		SuppressIf  { 0A 82 }
+0x5C1F9: 			EqIdVal QuestionId: 0x1501, Value: 0x0 { 12 06 01 15 00 00 }
+0x5C1FF: 			Text Prompt: "Family Firmware Version", Help: "Installed device firmware family version information.", Text: "        " { 03 08 DF 00 E1 00 E0 00 }
+0x5C207: 			Text Prompt: "EFI Version", Help: "Installed device EFI driver version information.", Text: "            " { 03 08 E2 00 E4 00 E3 00 }
+0x5C20F: 			SuppressIf  { 0A 82 }
+0x5C211: 				EqIdVal QuestionId: 0x13, Value: 0x0 { 12 06 13 00 00 00 }
+0x5C217: 				Numeric Prompt: "Minimum Security Revision", Help: "Minimum security revision (MinSREV): This is lowest Security revision of the NVM that is allowed to be installed on this device.", QuestionFlags: 0x1, QuestionId: 0xC, VarStoreId: 0x1234, VarOffset: 0x74, Flags: 0x12, Size: 32, Min: 0x0, Max: 0xFFFFFFFF, Step: 0x0 { 07 9A E6 00 E5 00 0C 00 34 12 74 00 01 12 00 00 00 00 FF FF FF FF 00 00 00 00 }
+0x5C231: 				End  { 29 02 }
+0x5C233: 			End  { 29 02 }
+0x5C235: 		End  { 29 02 }
+0x5C237: 	End  { 29 02 }
+0x5C239: 	Form FormId: 0x1236, Title: "FCoE Configuration" { 01 86 36 12 E9 00 }
+0x5C23F: 		Subtitle Prompt: "FCoE CONFIGURATION", Help: "", Flags: 0x0 { 02 87 EA 00 00 00 00 }
+0x5C246: 		End  { 29 02 }
+0x5C248: 		SuppressIf  { 0A 82 }
+0x5C24A: 			EqIdVal QuestionId: 0x1406, Value: 0x0 { 12 06 06 14 00 00 }
+0x5C250: 			String Prompt: "World Wide Port Name Target", Help: "World Wide Port Name of the boot target.", QuestionFlags: 0x4, QuestionId: 0x1311, VarStoreId: 0x1234, VarStoreInfo: 0x64C, MinSize: 0x17, MaxSize: 0x17, Flags: 0x0 { 1C 90 05 01 06 01 11 13 34 12 4C 06 04 17 17 00 }
+0x5C260: 				Default DefaultId: 0x0 String: "" { 5B 07 00 00 07 02 02 }
+0x5C267: 			End  { 29 02 }
+0x5C269: 			Numeric Prompt: "Boot LUN", Help: "The Logical Unit Number to use on the FCoE target. The value of the LUN must be represented in decimal format.", QuestionFlags: 0x0, QuestionId: 0x1312, VarStoreId: 0x1234, VarOffset: 0x70C, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 94 0A 01 0B 01 12 13 34 12 0C 07 00 11 00 00 FF 00 00 00 }
+0x5C27D: 				Default DefaultId: 0x0 Value: 0 { 5B 07 00 00 01 00 00 }
+0x5C284: 			End  { 29 02 }
+0x5C286: 			Numeric Prompt: "Virtual LAN ID", Help: "Specify the VLAN ID for the FCoE Target.", QuestionFlags: 0x0, QuestionId: 0x1313, VarStoreId: 0x1234, VarOffset: 0x714, Flags: 0x11, Size: 16, Min: 0x1, Max: 0xFFE, Step: 0x0 { 07 94 0F 01 10 01 13 13 34 12 14 07 00 11 01 00 FE 0F 00 00 }
+0x5C29A: 				Default DefaultId: 0x0 Value: 1 { 5B 07 00 00 01 01 00 }
+0x5C2A1: 			End  { 29 02 }
+0x5C2A3: 			Numeric Prompt: "Boot Order", Help: "Specify this port's place in the FCoE boot order 1-4 or 0=disabled.", QuestionFlags: 0x4, QuestionId: 0x1314, VarStoreId: 0x1234, VarOffset: 0x71C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0 { 07 91 14 01 15 01 14 13 34 12 1C 07 04 10 00 04 00 }
+0x5C2B4: 				Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x5C2BA: 			End  { 29 02 }
+0x5C2BC: 			SuppressIf  { 0A 82 }
+0x5C2BE: 				True  { 46 02 }
+0x5C2C0: 				Numeric Prompt: "Boot Order", Help: "Specify this port's place in the FCoE boot order 1-4 or 0=disabled.", QuestionFlags: 0x0, QuestionId: 0x1325, VarStoreId: 0x1234, VarOffset: 0x71D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0 { 07 91 17 01 15 01 25 13 34 12 1D 07 00 10 00 04 00 }
+0x5C2D1: 					Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x5C2D7: 				End  { 29 02 }
+0x5C2D9: 				Numeric Prompt: "Boot Order", Help: "Specify this port's place in the FCoE boot order 1-4 or 0=disabled.", QuestionFlags: 0x0, QuestionId: 0x1335, VarStoreId: 0x1234, VarOffset: 0x71E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0 { 07 91 19 01 15 01 35 13 34 12 1E 07 00 10 00 04 00 }
+0x5C2EA: 					Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x5C2F0: 				End  { 29 02 }
+0x5C2F2: 				Numeric Prompt: "Boot Order", Help: "Specify this port's place in the FCoE boot order 1-4 or 0=disabled.", QuestionFlags: 0x0, QuestionId: 0x1345, VarStoreId: 0x1234, VarOffset: 0x71F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0 { 07 91 1B 01 15 01 45 13 34 12 1F 07 00 10 00 04 00 }
+0x5C303: 					Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x5C309: 				End  { 29 02 }
+0x5C30B: 			End  { 29 02 }
+0x5C30D: 			Ref Prompt: "FCoE Second Target Parameters", Help: "FCoE Second Target Parameters", QuestionFlags: 0x0, QuestionId: 0xD, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x4 { 0F 0F FA 00 FA 00 0D 00 00 00 FF FF 00 04 00 }
+0x5C31C: 			Ref Prompt: "FCoE Third Target Parameters", Help: "FCoE Third Target Parameters.", QuestionFlags: 0x0, QuestionId: 0xE, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x5 { 0F 0F FB 00 FC 00 0E 00 00 00 FF FF 00 05 00 }
+0x5C32B: 			Ref Prompt: "FCoE Fourth Target Parameters", Help: "FCoE Fourth Target Parameters.", QuestionFlags: 0x0, QuestionId: 0xF, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x6 { 0F 0F FD 00 FE 00 0F 00 00 00 FF FF 00 06 00 }
+0x5C33A: 		End  { 29 02 }
+0x5C33C: 	End  { 29 02 }
+0x5C33E: 	Form FormId: 0x4, Title: "FCoE Second Target Parameters" { 01 86 04 00 FF 00 }
+0x5C344: 		Text Prompt: "", Help: "", Text: "" { 03 08 02 02 02 02 02 02 }
+0x5C34C: 		Subtitle Prompt: "FCoE SECOND TARGET PARAMETERS", Help: "", Flags: 0x0 { 02 87 02 01 00 00 00 }
+0x5C353: 		End  { 29 02 }
+0x5C355: 		SuppressIf  { 0A 82 }
+0x5C357: 			EqIdVal QuestionId: 0x1406, Value: 0x0 { 12 06 06 14 00 00 }
+0x5C35D: 			String Prompt: "World Wide Port Name Target", Help: "World Wide Port Name of the boot target.", QuestionFlags: 0x4, QuestionId: 0x1321, VarStoreId: 0x1234, VarStoreInfo: 0x67C, MinSize: 0x17, MaxSize: 0x17, Flags: 0x0 { 1C 90 07 01 06 01 21 13 34 12 7C 06 04 17 17 00 }
+0x5C36D: 				Default DefaultId: 0x0 String: "" { 5B 07 00 00 07 02 02 }
+0x5C374: 			End  { 29 02 }
+0x5C376: 			Numeric Prompt: "Boot LUN", Help: "The Logical Unit Number to use on the FCoE target. The value of the LUN must be represented in decimal format.", QuestionFlags: 0x0, QuestionId: 0x1322, VarStoreId: 0x1234, VarOffset: 0x70E, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 94 0C 01 0B 01 22 13 34 12 0E 07 00 11 00 00 FF 00 00 00 }
+0x5C38A: 				Default DefaultId: 0x0 Value: 0 { 5B 07 00 00 01 00 00 }
+0x5C391: 			End  { 29 02 }
+0x5C393: 			Numeric Prompt: "Virtual LAN ID", Help: "Specify the VLAN ID for the FCoE Target.", QuestionFlags: 0x0, QuestionId: 0x1323, VarStoreId: 0x1234, VarOffset: 0x716, Flags: 0x11, Size: 16, Min: 0x1, Max: 0xFFE, Step: 0x0 { 07 94 11 01 10 01 23 13 34 12 16 07 00 11 01 00 FE 0F 00 00 }
+0x5C3A7: 				Default DefaultId: 0x0 Value: 1 { 5B 07 00 00 01 01 00 }
+0x5C3AE: 			End  { 29 02 }
+0x5C3B0: 			Numeric Prompt: "Boot Order", Help: "Specify this port's place in the FCoE boot order 1-4 or 0=disabled.", QuestionFlags: 0x4, QuestionId: 0x1324, VarStoreId: 0x1234, VarOffset: 0x71D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0 { 07 91 16 01 15 01 24 13 34 12 1D 07 04 10 00 04 00 }
+0x5C3C1: 				Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x5C3C7: 			End  { 29 02 }
+0x5C3C9: 		End  { 29 02 }
+0x5C3CB: 	End  { 29 02 }
+0x5C3CD: 	Form FormId: 0x5, Title: "FCoE Third Target Parameters" { 01 86 05 00 00 01 }
+0x5C3D3: 		Text Prompt: "", Help: "", Text: "" { 03 08 02 02 02 02 02 02 }
+0x5C3DB: 		Subtitle Prompt: "FCoE THIRD TARGET PARAMETERS", Help: "", Flags: 0x0 { 02 87 03 01 00 00 00 }
+0x5C3E2: 		End  { 29 02 }
+0x5C3E4: 		SuppressIf  { 0A 82 }
+0x5C3E6: 			EqIdVal QuestionId: 0x1406, Value: 0x0 { 12 06 06 14 00 00 }
+0x5C3EC: 			String Prompt: "World Wide Port Name Target", Help: "World Wide Port Name of the boot target.", QuestionFlags: 0x4, QuestionId: 0x1331, VarStoreId: 0x1234, VarStoreInfo: 0x6AC, MinSize: 0x17, MaxSize: 0x17, Flags: 0x0 { 1C 90 08 01 06 01 31 13 34 12 AC 06 04 17 17 00 }
+0x5C3FC: 				Default DefaultId: 0x0 String: "" { 5B 07 00 00 07 02 02 }
+0x5C403: 			End  { 29 02 }
+0x5C405: 			Numeric Prompt: "Boot LUN", Help: "The Logical Unit Number to use on the FCoE target. The value of the LUN must be represented in decimal format.", QuestionFlags: 0x0, QuestionId: 0x1332, VarStoreId: 0x1234, VarOffset: 0x710, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 94 0D 01 0B 01 32 13 34 12 10 07 00 11 00 00 FF 00 00 00 }
+0x5C419: 				Default DefaultId: 0x0 Value: 0 { 5B 07 00 00 01 00 00 }
+0x5C420: 			End  { 29 02 }
+0x5C422: 			Numeric Prompt: "Virtual LAN ID", Help: "Specify the VLAN ID for the FCoE Target.", QuestionFlags: 0x0, QuestionId: 0x1333, VarStoreId: 0x1234, VarOffset: 0x718, Flags: 0x11, Size: 16, Min: 0x1, Max: 0xFFE, Step: 0x0 { 07 94 12 01 10 01 33 13 34 12 18 07 00 11 01 00 FE 0F 00 00 }
+0x5C436: 				Default DefaultId: 0x0 Value: 1 { 5B 07 00 00 01 01 00 }
+0x5C43D: 			End  { 29 02 }
+0x5C43F: 			Numeric Prompt: "Boot Order", Help: "Specify this port's place in the FCoE boot order 1-4 or 0=disabled.", QuestionFlags: 0x4, QuestionId: 0x1334, VarStoreId: 0x1234, VarOffset: 0x71E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0 { 07 91 18 01 15 01 34 13 34 12 1E 07 04 10 00 04 00 }
+0x5C450: 				Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x5C456: 			End  { 29 02 }
+0x5C458: 		End  { 29 02 }
+0x5C45A: 	End  { 29 02 }
+0x5C45C: 	Form FormId: 0x6, Title: "FCoE Fourth Target Parameters" { 01 86 06 00 01 01 }
+0x5C462: 		Text Prompt: "", Help: "", Text: "" { 03 08 02 02 02 02 02 02 }
+0x5C46A: 		Subtitle Prompt: "FCoE FOURTH TARGET PARAMETERS", Help: "", Flags: 0x0 { 02 87 04 01 00 00 00 }
+0x5C471: 		End  { 29 02 }
+0x5C473: 		SuppressIf  { 0A 82 }
+0x5C475: 			EqIdVal QuestionId: 0x1406, Value: 0x0 { 12 06 06 14 00 00 }
+0x5C47B: 			String Prompt: "World Wide Port Name Target", Help: "World Wide Port Name of the boot target.", QuestionFlags: 0x4, QuestionId: 0x1341, VarStoreId: 0x1234, VarStoreInfo: 0x6DC, MinSize: 0x17, MaxSize: 0x17, Flags: 0x0 { 1C 90 09 01 06 01 41 13 34 12 DC 06 04 17 17 00 }
+0x5C48B: 				Default DefaultId: 0x0 String: "" { 5B 07 00 00 07 02 02 }
+0x5C492: 			End  { 29 02 }
+0x5C494: 			Numeric Prompt: "Boot LUN", Help: "The Logical Unit Number to use on the FCoE target. The value of the LUN must be represented in decimal format.", QuestionFlags: 0x0, QuestionId: 0x1342, VarStoreId: 0x1234, VarOffset: 0x712, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 94 0E 01 0B 01 42 13 34 12 12 07 00 11 00 00 FF 00 00 00 }
+0x5C4A8: 				Default DefaultId: 0x0 Value: 0 { 5B 07 00 00 01 00 00 }
+0x5C4AF: 			End  { 29 02 }
+0x5C4B1: 			Numeric Prompt: "Virtual LAN ID", Help: "Specify the VLAN ID for the FCoE Target.", QuestionFlags: 0x0, QuestionId: 0x1343, VarStoreId: 0x1234, VarOffset: 0x71A, Flags: 0x11, Size: 16, Min: 0x1, Max: 0xFFE, Step: 0x0 { 07 94 13 01 10 01 43 13 34 12 1A 07 00 11 01 00 FE 0F 00 00 }
+0x5C4C5: 				Default DefaultId: 0x0 Value: 1 { 5B 07 00 00 01 01 00 }
+0x5C4CC: 			End  { 29 02 }
+0x5C4CE: 			Numeric Prompt: "Boot Order", Help: "Specify this port's place in the FCoE boot order 1-4 or 0=disabled.", QuestionFlags: 0x4, QuestionId: 0x1344, VarStoreId: 0x1234, VarOffset: 0x71F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0 { 07 91 1A 01 15 01 44 13 34 12 1F 07 04 10 00 04 00 }
+0x5C4DF: 				Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x5C4E5: 			End  { 29 02 }
+0x5C4E7: 		End  { 29 02 }
+0x5C4E9: 	End  { 29 02 }
+0x5C4EB: 	Form FormId: 0x1237, Title: "iSCSI Configuration" { 01 86 37 12 1E 01 }
+0x5C4F1: 		Ref Prompt: "iSCSI General Parameters", Help: "Configure general iSCSI parameters.", QuestionFlags: 0x0, QuestionId: 0x10, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1244 { 0F 0F 1F 01 20 01 10 00 00 00 FF FF 00 44 12 }
+0x5C500: 		Ref Prompt: "iSCSI Initiator Parameters", Help: "Configuration of iSCSI initiator parameters (e.g., IP Address, Subnet Mask).", QuestionFlags: 0x0, QuestionId: 0x11, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1245 { 0F 0F 22 01 23 01 11 00 00 00 FF FF 00 45 12 }
+0x5C50F: 		Ref Prompt: "iSCSI First Target Parameters", Help: "Enable connection and configure communication parameters for the iSCSI target.", QuestionFlags: 0x0, QuestionId: 0x12, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1246 { 0F 0F 25 01 26 01 12 00 00 00 FF FF 00 46 12 }
+0x5C51E: 	End  { 29 02 }
+0x5C520: 	Form FormId: 0x1244, Title: "iSCSI General Parameters" { 01 86 44 12 21 01 }
+0x5C526: 		SuppressIf  { 0A 82 }
+0x5C528: 			EqIdVal QuestionId: 0x1405, Value: 0x0 { 12 06 05 14 00 00 }
+0x5C52E: 			OneOf Prompt: "TCP/IP Parameters via DHCP", Help: "This option is specific to IPv4. Controls the source of the initiator IP address, DHCP or static assignment.", QuestionFlags: 0x10, QuestionId: 0x1200, VarStoreId: 0x1234, VarOffset: 0x7C, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 28 01 29 01 00 12 34 12 7C 00 10 10 00 01 00 }
+0x5C53F: 				OneOfOption Option: "Disabled" Value: 0, Default { 09 07 AD 00 10 00 00 }
+0x5C546: 				OneOfOption Option: "Enabled" Value: 1 { 09 07 AC 00 00 00 01 }
+0x5C54D: 			End  { 29 02 }
+0x5C54F: 			GrayOutIf  { 19 82 }
+0x5C551: 				EqIdVal QuestionId: 0x1200, Value: 0x0 { 12 06 00 12 00 00 }
+0x5C557: 				OneOf Prompt: "iSCSI Parameters via DHCP", Help: "Enables the acquisition of iSCSI target parameters from DHCP.", QuestionFlags: 0x10, QuestionId: 0x1201, VarStoreId: 0x1234, VarOffset: 0x7D, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 2A 01 2B 01 01 12 34 12 7D 00 10 10 00 01 00 }
+0x5C568: 					OneOfOption Option: "Disabled" Value: 0, Default { 09 07 2C 01 10 00 00 }
+0x5C56F: 					SuppressIf  { 0A 82 }
+0x5C571: 						EqIdVal QuestionId: 0x1200, Value: 0x0 { 12 06 00 12 00 00 }
+0x5C577: 						OneOfOption Option: "Enabled" Value: 1 { 09 07 2D 01 00 00 01 }
+0x5C57E: 					End  { 29 02 }
+0x5C580: 				End  { 29 02 }
+0x5C582: 			End  { 29 02 }
+0x5C584: 			OneOf Prompt: "CHAP Authentication", Help: "Enable the ability of the initiator to use CHAP authentication when connecting to the iSCSI target.", QuestionFlags: 0x10, QuestionId: 0x1202, VarStoreId: 0x1234, VarOffset: 0x7E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 2E 01 2F 01 02 12 34 12 7E 00 10 10 00 01 00 }
+0x5C595: 				OneOfOption Option: "Disabled" Value: 0, Default { 09 07 AD 00 10 00 00 }
+0x5C59C: 				OneOfOption Option: "Enabled" Value: 1 { 09 07 AC 00 00 00 01 }
+0x5C5A3: 			End  { 29 02 }
+0x5C5A5: 			GrayOutIf  { 19 82 }
+0x5C5A7: 				EqIdVal QuestionId: 0x1202, Value: 0x0 { 12 06 02 12 00 00 }
+0x5C5AD: 				OneOf Prompt: "CHAP Mutual Authentication", Help: "To use mutual CHAP authentication, specify an initiator secret on the Initiator Parameters page and configure that secret on the target.", QuestionFlags: 0x10, QuestionId: 0x1203, VarStoreId: 0x1234, VarOffset: 0x7F, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 30 01 31 01 03 12 34 12 7F 00 10 10 00 01 00 }
+0x5C5BE: 					OneOfOption Option: "Disabled" Value: 0, Default { 09 07 32 01 10 00 00 }
+0x5C5C5: 					SuppressIf  { 0A 82 }
+0x5C5C7: 						EqIdVal QuestionId: 0x1202, Value: 0x0 { 12 06 02 12 00 00 }
+0x5C5CD: 						OneOfOption Option: "Enabled" Value: 1 { 09 07 33 01 00 00 01 }
+0x5C5D4: 					End  { 29 02 }
+0x5C5D6: 				End  { 29 02 }
+0x5C5D8: 			End  { 29 02 }
+0x5C5DA: 			OneOf Prompt: "IP Version", Help: "Controls whether IPv4 or IPv6 network addressing will be used for iSCSI initiator and targets. Currently only IPv4 is supported.", QuestionFlags: 0x1, QuestionId: 0x1204, VarStoreId: 0x1234, VarOffset: 0x80, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x0, Step: 0x0 { 05 91 34 01 35 01 04 12 34 12 80 00 01 10 00 00 00 }
+0x5C5EB: 				OneOfOption Option: "IPv4" Value: 0, Default { 09 07 36 01 10 00 00 }
+0x5C5F2: 			End  { 29 02 }
+0x5C5F4: 		End  { 29 02 }
+0x5C5F6: 	End  { 29 02 }
+0x5C5F8: 	Form FormId: 0x1245, Title: "iSCSI Initiator Parameters" { 01 86 45 12 24 01 }
+0x5C5FE: 		SuppressIf  { 0A 82 }
+0x5C600: 			EqIdVal QuestionId: 0x1405, Value: 0x0 { 12 06 05 14 00 00 }
+0x5C606: 			GrayOutIf  { 19 82 }
+0x5C608: 				EqIdVal QuestionId: 0x1200, Value: 0x1 { 12 06 00 12 01 00 }
+0x5C60E: 				String Prompt: "IP Address", Help: "Specifies the IP address of the iSCSI initiator.", QuestionFlags: 0x14, QuestionId: 0x1210, VarStoreId: 0x1234, VarStoreInfo: 0x82, MinSize: 0x7, MaxSize: 0xF, Flags: 0x0 { 1C 90 37 01 38 01 10 12 34 12 82 00 14 07 0F 00 }
+0x5C61E: 					Default DefaultId: 0x0 String: "0.0.0.0" { 5B 07 00 00 07 03 02 }
+0x5C625: 				End  { 29 02 }
+0x5C627: 				String Prompt: "Subnet Mask", Help: "Specifies the IPv4 Subnet Mask of the iSCSI initiator.", QuestionFlags: 0x14, QuestionId: 0x1211, VarStoreId: 0x1234, VarStoreInfo: 0xA2, MinSize: 0x7, MaxSize: 0xF, Flags: 0x0 { 1C 90 39 01 3A 01 11 12 34 12 A2 00 14 07 0F 00 }
+0x5C637: 					Default DefaultId: 0x0 String: "0.0.0.0" { 5B 07 00 00 07 03 02 }
+0x5C63E: 				End  { 29 02 }
+0x5C640: 				String Prompt: "Default Gateway", Help: "Specifies the Default Gateway of the iSCSI initiator.", QuestionFlags: 0x14, QuestionId: 0x1212, VarStoreId: 0x1234, VarStoreInfo: 0xC2, MinSize: 0x7, MaxSize: 0xF, Flags: 0x0 { 1C 90 3B 01 3C 01 12 12 34 12 C2 00 14 07 0F 00 }
+0x5C650: 					Default DefaultId: 0x0 String: "0.0.0.0" { 5B 07 00 00 07 03 02 }
+0x5C657: 				End  { 29 02 }
+0x5C659: 			End  { 29 02 }
+0x5C65B: 			String Prompt: "iSCSI Name", Help: "Specifies the initiator iSCSI Qualified Name (IQN).", QuestionFlags: 0x14, QuestionId: 0x1213, VarStoreId: 0x1234, VarStoreInfo: 0xE2, MinSize: 0x0, MaxSize: 0xDF, Flags: 0x0 { 1C 90 3D 01 3E 01 13 12 34 12 E2 00 14 00 DF 00 }
+0x5C66B: 				Default DefaultId: 0x0 String: "" { 5B 07 00 00 07 02 02 }
+0x5C672: 			End  { 29 02 }
+0x5C674: 			GrayOutIf  { 19 82 }
+0x5C676: 				EqIdVal QuestionId: 0x1202, Value: 0x0 { 12 06 02 12 00 00 }
+0x5C67C: 				String Prompt: "CHAP ID", Help: "iSCSI initiator Challenge-Handshake Authentication Protocol (CHAP) ID.", QuestionFlags: 0x14, QuestionId: 0x1214, VarStoreId: 0x1234, VarStoreInfo: 0x2A2, MinSize: 0x0, MaxSize: 0x7F, Flags: 0x0 { 1C 90 3F 01 40 01 14 12 34 12 A2 02 14 00 7F 00 }
+0x5C68C: 					Default DefaultId: 0x0 String: "" { 5B 07 00 00 07 02 02 }
+0x5C693: 				End  { 29 02 }
+0x5C695: 				String Prompt: "CHAP Secret", Help: "iSCSI initiator Challenge-Handshake Authentication Protocol (CHAP) secret (password).", QuestionFlags: 0x14, QuestionId: 0x1215, VarStoreId: 0x1234, VarStoreInfo: 0x3A2, MinSize: 0x0, MaxSize: 0x10, Flags: 0x0 { 1C 90 41 01 42 01 15 12 34 12 A2 03 14 00 10 00 }
+0x5C6A5: 					Default DefaultId: 0x0 String: "" { 5B 07 00 00 07 02 02 }
+0x5C6AC: 				End  { 29 02 }
+0x5C6AE: 			End  { 29 02 }
+0x5C6B0: 		End  { 29 02 }
+0x5C6B2: 	End  { 29 02 }
+0x5C6B4: 	Form FormId: 0x1246, Title: "iSCSI First Target Parameters" { 01 86 46 12 27 01 }
+0x5C6BA: 		SuppressIf  { 0A 82 }
+0x5C6BC: 			EqIdVal QuestionId: 0x1405, Value: 0x0 { 12 06 05 14 00 00 }
+0x5C6C2: 			GrayOutIf  { 19 82 }
+0x5C6C4: 				EqIdVal QuestionId: 0x1201, Value: 0x1 { 12 06 01 12 01 00 }
+0x5C6CA: 				String Prompt: "IP Address", Help: "Specifies the IP address of the iSCSI target.", QuestionFlags: 0x14, QuestionId: 0x1220, VarStoreId: 0x1234, VarStoreInfo: 0x3C4, MinSize: 0x7, MaxSize: 0xF, Flags: 0x0 { 1C 90 43 01 44 01 20 12 34 12 C4 03 14 07 0F 00 }
+0x5C6DA: 					Default DefaultId: 0x0 String: "0.0.0.0" { 5B 07 00 00 07 03 02 }
+0x5C6E1: 				End  { 29 02 }
+0x5C6E3: 				Numeric Prompt: "TCP Port", Help: "Specifies the TCP Port number of the iSCSI target.", QuestionFlags: 0x10, QuestionId: 0x1221, VarStoreId: 0x1234, VarOffset: 0x3E4, Flags: 0x11, Size: 16, Min: 0x400, Max: 0xFFFF, Step: 0x0 { 07 94 45 01 46 01 21 12 34 12 E4 03 10 11 00 04 FF FF 00 00 }
+0x5C6F7: 					Default DefaultId: 0x0 Value: 3260 { 5B 07 00 00 01 BC 0C }
+0x5C6FE: 				End  { 29 02 }
+0x5C700: 				Numeric Prompt: "Boot LUN", Help: "Specifies the iSCSI storage target boot Logical Unit Number (LUN).", QuestionFlags: 0x10, QuestionId: 0x1222, VarStoreId: 0x1234, VarOffset: 0x81, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 47 01 48 01 22 12 34 12 81 00 10 10 00 FF 00 }
+0x5C711: 					Default DefaultId: 0x0 Value: 0 { 5B 06 00 00 00 00 }
+0x5C717: 				End  { 29 02 }
+0x5C719: 				String Prompt: "iSCSI Name", Help: "Specifies the iSCSI Qualified Name (IQN) of the iSCSI storage target.", QuestionFlags: 0x14, QuestionId: 0x1223, VarStoreId: 0x1234, VarStoreInfo: 0x3E6, MinSize: 0x0, MaxSize: 0xDF, Flags: 0x0 { 1C 90 49 01 4A 01 23 12 34 12 E6 03 14 00 DF 00 }
+0x5C729: 					Default DefaultId: 0x0 String: "" { 5B 07 00 00 07 02 02 }
+0x5C730: 				End  { 29 02 }
+0x5C732: 			End  { 29 02 }
+0x5C734: 			GrayOutIf  { 19 82 }
+0x5C736: 				EqIdVal QuestionId: 0x1203, Value: 0x0 { 12 06 03 12 00 00 }
+0x5C73C: 				String Prompt: "CHAP Secret", Help: "Specifies the iSCSI storage target Challenge-Handshake Authentication Protocol (CHAP) secret (target CHAP password).", QuestionFlags: 0x14, QuestionId: 0x1224, VarStoreId: 0x1234, VarStoreInfo: 0x5A6, MinSize: 0x0, MaxSize: 0x10, Flags: 0x0 { 1C 90 4B 01 4C 01 24 12 34 12 A6 05 14 00 10 00 }
+0x5C74C: 					Default DefaultId: 0x0 String: "" { 5B 07 00 00 07 02 02 }
+0x5C753: 				End  { 29 02 }
+0x5C755: 			End  { 29 02 }
+0x5C757: 		End  { 29 02 }
+0x5C759: 		DisableIf  { 1E 82 }
+0x5C75B: 			True  { 46 02 }
+0x5C75D: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x13, VarStoreId: 0x1234, VarOffset: 0x72E, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 13 00 34 12 2E 07 00 10 00 FF 00 }
+0x5C76E: 			End  { 29 02 }
+0x5C770: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x14, VarStoreId: 0x1234, VarOffset: 0x54, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xFFFF, Step: 0x0 { 07 94 00 00 00 00 14 00 34 12 54 00 00 11 00 00 FF FF 00 00 }
+0x5C784: 			End  { 29 02 }
+0x5C786: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x15, VarStoreId: 0x1234, VarOffset: 0x7A, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 15 00 34 12 7A 00 00 10 00 FF 00 }
+0x5C797: 			End  { 29 02 }
+0x5C799: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x16, VarStoreId: 0x1234, VarOffset: 0x78, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 16 00 34 12 78 00 00 10 00 FF 00 }
+0x5C7AA: 			End  { 29 02 }
+0x5C7AC: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x17, VarStoreId: 0x1234, VarOffset: 0x52, Flags: 0x10, Size: 8, Min: 0x0, Max: 0xFF, Step: 0x0 { 07 91 00 00 00 00 17 00 34 12 52 00 00 10 00 FF 00 }
+0x5C7BD: 			End  { 29 02 }
+0x5C7BF: 		End  { 29 02 }
+0x5C7C1: 	End  { 29 02 }
+0x5C7C3: End  { 29 02 }

@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: RTCALARM
+Fixed: Yes
+Base: 1083CEDh
+Header address: FF083CEDh
+Data address: FF083D01h
+Offset: 3C75h
+Variable GUID: 378D7B65-8DA9-4773-B6E4-A47826A833E1
+GUID index: 5
+Full size: 24h (36)
+Header size: 14h (20)
+Body size: 10h (16)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

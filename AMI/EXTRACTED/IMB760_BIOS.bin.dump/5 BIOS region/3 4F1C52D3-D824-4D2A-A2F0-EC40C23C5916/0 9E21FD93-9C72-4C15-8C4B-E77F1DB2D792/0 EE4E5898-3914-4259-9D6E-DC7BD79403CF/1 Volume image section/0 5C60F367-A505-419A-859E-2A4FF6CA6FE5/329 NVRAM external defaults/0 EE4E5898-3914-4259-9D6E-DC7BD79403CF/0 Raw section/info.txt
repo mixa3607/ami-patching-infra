@@ -1,0 +1,8 @@
+Type: Section
+Subtype: Raw
+Fixed: Yes
+Offset: 18h
+Type: 19h
+Full size: 358Ch (13708)
+Header size: 4h (4)
+Body size: 3588h (13704)

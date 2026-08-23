@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: AmiErrorLogListener
+Fixed: No
+Offset: E5A490h
+File GUID: 39D1EDC0-C9ED-4663-90DB-7457FF0548C5
+Type: 0Ah
+Attributes: 00h
+Full size: 859Eh (34206)
+Header size: 18h (24)
+Body size: 8586h (34182)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 76h, valid
+Data checksum: AAh, valid

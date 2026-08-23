@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D8985Ch
+Header address: FFD8985Ch
+Data address: FFD89860h
+Offset: 564h
+Type: 15h
+Full size: 28h (40)
+Header size: 4h (4)
+Body size: 24h (36)
+Text: SMBusImpErrataFix

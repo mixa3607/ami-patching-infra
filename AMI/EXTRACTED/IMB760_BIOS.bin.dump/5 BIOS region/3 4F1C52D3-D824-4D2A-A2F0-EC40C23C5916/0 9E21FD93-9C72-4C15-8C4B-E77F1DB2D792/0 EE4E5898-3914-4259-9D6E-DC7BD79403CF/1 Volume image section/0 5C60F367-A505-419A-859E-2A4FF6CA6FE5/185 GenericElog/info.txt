@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: GenericElog
+Fixed: No
+Offset: 4229B0h
+File GUID: 3B0673A3-5197-454C-BA76-E2D0C8C48EFD
+Type: 07h
+Attributes: 00h
+Full size: 145Eh (5214)
+Header size: 18h (24)
+Body size: 1446h (5190)
+Tail size: 0h (0)
+State: F8h
+Header checksum: BEh, valid
+Data checksum: AAh, valid

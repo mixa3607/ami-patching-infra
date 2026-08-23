@@ -1,0 +1,14 @@
+Type: NVAR entry
+Subtype: Link
+Text: CpuNvramData
+Fixed: Yes
+Base: 108E005h
+Header address: FF08E005h
+Data address: FF08E00Fh
+Offset: DF8Dh
+Full size: 42h (66)
+Header size: Ah (10)
+Body size: 38h (56)
+Tail size: 0h (0)
+Attributes: 88h (DataOnly, Valid)
+Next node at offset: 1164Bh

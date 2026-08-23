@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: CsrPseudoOffsetInitPeim
+Fixed: No
+Base: 1D46FA8h
+Header address: FFD46FA8h
+Data address: FFD46FC0h
+Offset: 146FA8h
+File GUID: 8F7F3D20-9823-42DD-9FF7-53DAC93EF407
+Type: 06h
+Attributes: 00h
+Full size: 12E6h (4838)
+Header size: 18h (24)
+Body size: 12CEh (4814)
+Tail size: 0h (0)
+State: F8h
+Header checksum: F8h, valid
+Data checksum: AAh, valid

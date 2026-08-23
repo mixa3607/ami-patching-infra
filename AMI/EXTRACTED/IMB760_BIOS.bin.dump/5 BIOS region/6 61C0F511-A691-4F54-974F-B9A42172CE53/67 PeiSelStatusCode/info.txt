@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: PeiSelStatusCode
+Fixed: No
+Base: 1DA35E8h
+Header address: FFDA35E8h
+Data address: FFDA3600h
+Offset: 1A35E8h
+File GUID: 2700F72F-E0EA-4767-9A1E-D172F0704778
+Type: 06h
+Attributes: 00h
+Full size: E9Eh (3742)
+Header size: 18h (24)
+Body size: E86h (3718)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 6Fh, valid
+Data checksum: AAh, valid

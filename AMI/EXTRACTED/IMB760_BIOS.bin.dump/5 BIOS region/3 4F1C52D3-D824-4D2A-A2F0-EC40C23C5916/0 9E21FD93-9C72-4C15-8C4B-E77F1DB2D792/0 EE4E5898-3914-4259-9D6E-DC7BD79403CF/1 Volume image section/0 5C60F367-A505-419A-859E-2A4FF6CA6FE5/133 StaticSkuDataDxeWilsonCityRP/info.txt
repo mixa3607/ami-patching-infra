@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: StaticSkuDataDxeWilsonCityRP
+Fixed: No
+Offset: 32DEF0h
+File GUID: F8273C37-5F4B-4993-A378-9D7F307D8BEB
+Type: 07h
+Attributes: 00h
+Full size: 2F52h (12114)
+Header size: 18h (24)
+Body size: 2F3Ah (12090)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 06h, valid
+Data checksum: AAh, valid

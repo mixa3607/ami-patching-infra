@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 34BF80h
+Address: FE34BF80h
+Offset: 1A8F80h
+Full size: B574h (46452)
+Huffman compressed: Yes
+Hash: d341d615b5104ba9aa577f012d328f73d6a2d374b050a29a8efcd262ea794bb2

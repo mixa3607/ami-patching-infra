@@ -1,0 +1,13 @@
+Type: Section
+Subtype: Version
+Fixed: No
+Base: 1C17E88h
+Header address: FFC17E88h
+Data address: FFC17E8Eh
+Offset: 2A48h
+Type: 14h
+Full size: Eh (14)
+Header size: 6h (6)
+Body size: 8h (8)
+Build number: 0
+Version string: 0.0

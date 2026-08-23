@@ -1,0 +1,14 @@
+Type: NVAR entry
+Subtype: Link
+Text: TerminalSerialVar
+Fixed: Yes
+Base: 108A342h
+Header address: FF08A342h
+Data address: FF08A34Ch
+Offset: A2CAh
+Full size: 14h (20)
+Header size: Ah (10)
+Body size: Ah (10)
+Tail size: 0h (0)
+Attributes: 88h (DataOnly, Valid)
+Next node at offset: A2DEh

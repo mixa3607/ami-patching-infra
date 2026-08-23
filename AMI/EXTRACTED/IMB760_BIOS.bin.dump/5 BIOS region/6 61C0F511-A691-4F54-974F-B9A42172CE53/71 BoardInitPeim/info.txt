@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: BoardInitPeim
+Fixed: No
+Base: 1DA9528h
+Header address: FFDA9528h
+Data address: FFDA9540h
+Offset: 1A9528h
+File GUID: 64980BB9-7BA3-4CB0-AA83-FE396A7F6724
+Type: 06h
+Attributes: 00h
+Full size: 147DAh (83930)
+Header size: 18h (24)
+Body size: 147C2h (83906)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 26h, valid
+Data checksum: AAh, valid

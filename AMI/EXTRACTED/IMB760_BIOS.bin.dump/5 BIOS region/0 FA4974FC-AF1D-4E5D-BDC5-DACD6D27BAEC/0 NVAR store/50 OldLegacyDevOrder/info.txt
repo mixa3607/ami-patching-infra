@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: OldLegacyDevOrder
+Fixed: Yes
+Base: 100A97Ch
+Header address: FF00A97Ch
+Data address: FF00A999h
+Offset: A904h
+Variable GUID: A56074DB-65FE-45F7-BD21-2D2BDD8E9652
+GUID index: 30
+Full size: 4Bh (75)
+Header size: 1Dh (29)
+Body size: 2Eh (46)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

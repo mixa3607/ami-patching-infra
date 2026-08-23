@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: UbaConfigDatabasePei
+Fixed: No
+Base: 1D6ED90h
+Header address: FFD6ED90h
+Data address: FFD6EDA8h
+Offset: 16ED90h
+File GUID: 2C181BE1-8BAC-4433-873C-E5074CB5A723
+Type: 06h
+Attributes: 00h
+Full size: 1552h (5458)
+Header size: 18h (24)
+Body size: 153Ah (5434)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 2Bh, valid
+Data checksum: AAh, valid

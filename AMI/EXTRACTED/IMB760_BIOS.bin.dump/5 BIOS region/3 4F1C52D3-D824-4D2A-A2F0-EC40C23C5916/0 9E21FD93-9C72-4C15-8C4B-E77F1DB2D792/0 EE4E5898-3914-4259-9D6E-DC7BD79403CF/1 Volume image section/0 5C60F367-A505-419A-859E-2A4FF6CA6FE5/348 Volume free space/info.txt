@@ -1,0 +1,5 @@
+Type: Free space
+Subtype: 
+Fixed: No
+Offset: 1C1A348h
+Full size: CB8h (3256)

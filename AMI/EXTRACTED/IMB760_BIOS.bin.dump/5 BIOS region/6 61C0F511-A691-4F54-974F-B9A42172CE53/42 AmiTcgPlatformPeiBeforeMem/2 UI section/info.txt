@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D81A14h
+Header address: FFD81A14h
+Data address: FFD81A18h
+Offset: 704h
+Type: 15h
+Full size: 3Ah (58)
+Header size: 4h (4)
+Body size: 36h (54)
+Text: AmiTcgPlatformPeiBeforeMem

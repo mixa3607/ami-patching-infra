@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D8A304h
+Header address: FFD8A304h
+Data address: FFD8A308h
+Offset: A6Ch
+Type: 15h
+Full size: 10h (16)
+Header size: 4h (4)
+Body size: Ch (12)
+Text: SBPEI

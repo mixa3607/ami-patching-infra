@@ -1,0 +1,16 @@
+Type: NVAR entry
+Subtype: Link
+Text: SocketIioConfig
+Fixed: Yes
+Base: 10842D9h
+Header address: FF0842D9h
+Data address: FF0842F4h
+Offset: 4261h
+Variable GUID: DD84017E-7F52-48F9-B16E-50ED9E0DBE27
+GUID index: 14
+Full size: 1FD2h (8146)
+Header size: 1Bh (27)
+Body size: 1FB7h (8119)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)
+Next node at offset: B686h

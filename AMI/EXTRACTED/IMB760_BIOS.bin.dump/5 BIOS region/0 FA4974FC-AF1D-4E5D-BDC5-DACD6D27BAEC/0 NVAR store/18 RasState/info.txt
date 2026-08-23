@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: RasState
+Fixed: Yes
+Base: 10062F6h
+Header address: FF0062F6h
+Data address: FF00630Ah
+Offset: 627Eh
+Variable GUID: 9189541F-AC0C-4368-9062-70E1957C3445
+GUID index: 17
+Full size: 16h (22)
+Header size: 14h (20)
+Body size: 2h (2)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

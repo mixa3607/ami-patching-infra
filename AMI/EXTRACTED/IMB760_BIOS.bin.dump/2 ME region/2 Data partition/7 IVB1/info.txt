@@ -1,0 +1,9 @@
+Type: FPT partition
+Subtype: Data
+Fixed: Yes
+Base: 89000h
+Address: FE089000h
+Offset: 83000h
+Full size: 4000h (16384)
+Partition type: 01h
+

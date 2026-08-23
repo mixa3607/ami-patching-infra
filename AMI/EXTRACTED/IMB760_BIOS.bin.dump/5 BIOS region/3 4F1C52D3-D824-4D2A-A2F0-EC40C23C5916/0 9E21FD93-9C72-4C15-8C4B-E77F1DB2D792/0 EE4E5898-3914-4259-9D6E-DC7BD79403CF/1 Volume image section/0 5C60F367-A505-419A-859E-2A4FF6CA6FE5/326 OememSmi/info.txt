@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: OememSmi
+Fixed: No
+Offset: 1966338h
+File GUID: 0A602C5B-05A0-40C4-9181-EDCD891D0002
+Type: 0Ah
+Attributes: 00h
+Full size: 1AEAh (6890)
+Header size: 18h (24)
+Body size: 1AD2h (6866)
+Tail size: 0h (0)
+State: F8h
+Header checksum: E4h, valid
+Data checksum: AAh, valid

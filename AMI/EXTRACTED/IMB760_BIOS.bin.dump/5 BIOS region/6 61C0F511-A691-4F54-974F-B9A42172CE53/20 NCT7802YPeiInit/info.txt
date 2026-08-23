@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: NCT7802YPeiInit
+Fixed: No
+Base: 1D4D0B8h
+Header address: FFD4D0B8h
+Data address: FFD4D0D0h
+Offset: 14D0B8h
+File GUID: 62547EAC-2878-4342-BB6E-B60F1E0DD3F1
+Type: 06h
+Attributes: 00h
+Full size: 4B6h (1206)
+Header size: 18h (24)
+Body size: 49Eh (1182)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 5Eh, valid
+Data checksum: AAh, valid

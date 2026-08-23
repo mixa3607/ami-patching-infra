@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: UsbOcUpdateDxeWilsonCitySMT
+Fixed: No
+Offset: 3563D0h
+File GUID: 5861D662-4CE8-F72D-B0E4-258B859BF9F5
+Type: 07h
+Attributes: 00h
+Full size: C02h (3074)
+Header size: 18h (24)
+Body size: BEAh (3050)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 50h, valid
+Data checksum: AAh, valid

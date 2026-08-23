@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: SmmBmcElog
+Fixed: No
+Offset: 62FCC8h
+File GUID: 543323CE-9F0C-4DDF-A33C-BC3B3A5AC227
+Type: 0Ah
+Attributes: 00h
+Full size: 1892h (6290)
+Header size: 18h (24)
+Body size: 187Ah (6266)
+Tail size: 0h (0)
+State: F8h
+Header checksum: AAh, valid
+Data checksum: AAh, valid

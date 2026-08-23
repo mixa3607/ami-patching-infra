@@ -1,0 +1,17 @@
+Type: File
+Subtype: Raw
+Fixed: Yes
+Base: 1DD9B68h
+Header address: FFDD9B68h
+Data address: FFDD9B80h
+Offset: 1D9B68h
+File GUID: B52282EE-9B66-44B9-B1CF-7E5040F787C1
+Type: 01h
+Attributes: 10h
+Full size: 190h (400)
+Header size: 18h (24)
+Body size: 178h (376)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 4Ch, valid
+Data checksum: AAh, valid

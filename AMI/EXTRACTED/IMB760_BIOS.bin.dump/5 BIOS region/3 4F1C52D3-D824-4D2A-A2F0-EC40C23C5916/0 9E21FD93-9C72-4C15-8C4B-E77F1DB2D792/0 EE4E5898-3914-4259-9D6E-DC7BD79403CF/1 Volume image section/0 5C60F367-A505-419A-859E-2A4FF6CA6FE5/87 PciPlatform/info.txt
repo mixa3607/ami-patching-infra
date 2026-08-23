@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: PciPlatform
+Fixed: No
+Offset: 2884D0h
+File GUID: E2441B64-7EF4-41FE-B3A3-8CAA7F8D3017
+Type: 07h
+Attributes: 00h
+Full size: 346Ah (13418)
+Header size: 18h (24)
+Body size: 3452h (13394)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 26h, valid
+Data checksum: AAh, valid

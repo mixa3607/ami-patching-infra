@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: TcgDxeplatform
+Fixed: No
+Offset: 2AE848h
+File GUID: 2688B232-9C02-4C12-BE1F-857C0FF2AAE3
+Type: 07h
+Attributes: 00h
+Full size: A9Ah (2714)
+Header size: 18h (24)
+Body size: A82h (2690)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 5Bh, valid
+Data checksum: AAh, valid

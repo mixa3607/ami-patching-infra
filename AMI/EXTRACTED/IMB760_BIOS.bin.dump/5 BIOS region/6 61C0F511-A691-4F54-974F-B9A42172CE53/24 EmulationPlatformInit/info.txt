@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: EmulationPlatformInit
+Fixed: No
+Base: 1D52628h
+Header address: FFD52628h
+Data address: FFD52640h
+Offset: 152628h
+File GUID: BD446386-7F8A-4EE1-A014-8D3BAB92B4E9
+Type: 06h
+Attributes: 00h
+Full size: 796h (1942)
+Header size: 18h (24)
+Body size: 77Eh (1918)
+Tail size: 0h (0)
+State: F8h
+Header checksum: E5h, valid
+Data checksum: AAh, valid

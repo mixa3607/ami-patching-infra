@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 6ECCh
+Address: FE006ECCh
+Offset: ECCh
+Full size: 134h (308)

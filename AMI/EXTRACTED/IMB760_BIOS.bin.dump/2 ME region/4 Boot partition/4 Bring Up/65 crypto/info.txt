@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 23BD80h
+Address: FE23BD80h
+Offset: 98D80h
+Full size: 3029Ch (197276)
+Huffman compressed: Yes
+Hash: 2a6887bd274985534430e4d67bf09e48fe0db6cb7ed17131521f7784d90e34e0

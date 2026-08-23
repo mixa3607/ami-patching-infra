@@ -1,0 +1,16 @@
+Type: NVAR entry
+Subtype: Link
+Text: MeRcConfiguration
+Fixed: Yes
+Base: 1083FDDh
+Header address: FF083FDDh
+Data address: FF083FFAh
+Offset: 3F65h
+Variable GUID: 2B26358D-F899-41C4-9BC2-82A338B993D8
+GUID index: 9
+Full size: 72h (114)
+Header size: 1Dh (29)
+Body size: 55h (85)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)
+Next node at offset: A9CFh

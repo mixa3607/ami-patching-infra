@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: PlatformInfo
+Fixed: No
+Base: 1D86A98h
+Header address: FFD86A98h
+Data address: FFD86AB0h
+Offset: 186A98h
+File GUID: 34CC6167-7AE7-403E-8AB2-23837F398A30
+Type: 06h
+Attributes: 00h
+Full size: 285Ah (10330)
+Header size: 18h (24)
+Body size: 2842h (10306)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 7Dh, valid
+Data checksum: AAh, valid

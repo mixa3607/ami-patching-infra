@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: CpuCsrAccess
+Fixed: No
+Offset: 381D38h
+File GUID: 06D20D84-A032-4E25-969A-346D255E46D1
+Type: 07h
+Attributes: 00h
+Full size: 5EAAh (24234)
+Header size: 18h (24)
+Body size: 5E92h (24210)
+Tail size: 0h (0)
+State: F8h
+Header checksum: D8h, valid
+Data checksum: AAh, valid

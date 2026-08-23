@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 26C040h
+Address: FE26C040h
+Offset: C9040h
+Full size: 81A4h (33188)
+Huffman compressed: Yes
+Hash: 5c306aa0afb3a407ede2318242f80cca5d2959f614dc55db52ccb9edf652651d

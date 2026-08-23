@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: AmiRedFishApi
+Fixed: No
+Offset: 18ABB8h
+File GUID: D4395796-6F4C-4C6B-B9D1-92DAA7199A84
+Type: 07h
+Attributes: 00h
+Full size: 1A66h (6758)
+Header size: 18h (24)
+Body size: 1A4Eh (6734)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 39h, valid
+Data checksum: AAh, valid

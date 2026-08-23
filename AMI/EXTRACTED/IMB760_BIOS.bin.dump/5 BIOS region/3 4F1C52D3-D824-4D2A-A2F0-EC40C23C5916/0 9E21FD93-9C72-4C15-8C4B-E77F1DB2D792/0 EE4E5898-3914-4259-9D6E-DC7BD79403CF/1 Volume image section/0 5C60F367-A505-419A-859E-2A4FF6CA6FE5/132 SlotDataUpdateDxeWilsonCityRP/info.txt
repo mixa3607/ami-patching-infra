@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SlotDataUpdateDxeWilsonCityRP
+Fixed: No
+Offset: 32D348h
+File GUID: 3D0F305F-3E1F-44A9-AFFA-FA01E561385A
+Type: 07h
+Attributes: 00h
+Full size: BA6h (2982)
+Header size: 18h (24)
+Body size: B8Eh (2958)
+Tail size: 0h (0)
+State: F8h
+Header checksum: A7h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Non-empty
+Fixed: Yes
+Base: 1BCDC90h
+Address: FFBCDC90h
+Offset: CDC18h
+Full size: 32370h (205680)

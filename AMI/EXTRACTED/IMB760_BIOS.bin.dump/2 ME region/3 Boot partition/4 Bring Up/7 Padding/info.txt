@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: E0374h
+Address: FE0E0374h
+Offset: 1374h
+Full size: Ch (12)

@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1DC1274h
+Header address: FFDC1274h
+Data address: FFDC1278h
+Offset: 2B3Ch
+Type: 15h
+Full size: 16h (22)
+Header size: 4h (4)
+Body size: 12h (18)
+Text: BootMode

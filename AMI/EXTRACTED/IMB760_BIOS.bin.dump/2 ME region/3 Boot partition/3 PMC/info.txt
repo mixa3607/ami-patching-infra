@@ -1,0 +1,13 @@
+Type: BPDT partition
+Subtype: 
+Text: PMC
+Fixed: Yes
+Base: CE000h
+Address: FE0CE000h
+Offset: 26000h
+Full size: 11000h (69632)
+Type: Eh
+Split sub-partition first part: No
+Split sub-partition second part: No
+Code sub-partition: No
+UMA cacheable: No

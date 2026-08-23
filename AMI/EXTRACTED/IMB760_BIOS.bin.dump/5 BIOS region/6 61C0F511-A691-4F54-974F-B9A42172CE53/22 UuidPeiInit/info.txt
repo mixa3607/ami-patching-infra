@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: UuidPeiInit
+Fixed: No
+Base: 1D4DA30h
+Header address: FFD4DA30h
+Data address: FFD4DA48h
+Offset: 14DA30h
+File GUID: C39B4C90-CB56-49BC-9534-012F69A1C2CC
+Type: 06h
+Attributes: 00h
+Full size: C46h (3142)
+Header size: 18h (24)
+Body size: C2Eh (3118)
+Tail size: 0h (0)
+State: F8h
+Header checksum: B7h, valid
+Data checksum: AAh, valid

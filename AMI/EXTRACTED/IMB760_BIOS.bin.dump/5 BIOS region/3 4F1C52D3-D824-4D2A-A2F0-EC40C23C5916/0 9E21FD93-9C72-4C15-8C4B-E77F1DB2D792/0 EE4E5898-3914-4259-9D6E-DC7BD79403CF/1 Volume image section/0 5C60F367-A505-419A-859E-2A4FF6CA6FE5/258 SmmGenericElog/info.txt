@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: SmmGenericElog
+Fixed: No
+Offset: 679A60h
+File GUID: 935D2F78-3A1F-4DE6-B28D-123A40DD2DEC
+Type: 0Ah
+Attributes: 00h
+Full size: 168Ah (5770)
+Header size: 18h (24)
+Body size: 1672h (5746)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 72h, valid
+Data checksum: AAh, valid

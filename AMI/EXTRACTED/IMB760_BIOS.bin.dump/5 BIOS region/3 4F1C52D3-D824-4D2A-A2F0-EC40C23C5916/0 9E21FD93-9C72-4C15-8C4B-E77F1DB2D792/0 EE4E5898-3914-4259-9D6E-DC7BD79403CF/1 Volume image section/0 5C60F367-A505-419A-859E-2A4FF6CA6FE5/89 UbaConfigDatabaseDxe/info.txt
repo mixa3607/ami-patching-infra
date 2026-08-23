@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: UbaConfigDatabaseDxe
+Fixed: No
+Offset: 28C650h
+File GUID: E0471A15-76DC-4203-8B27-6DB4F8BA644A
+Type: 07h
+Attributes: 00h
+Full size: DB2h (3506)
+Header size: 18h (24)
+Body size: D9Ah (3482)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 1Ah, valid
+Data checksum: AAh, valid

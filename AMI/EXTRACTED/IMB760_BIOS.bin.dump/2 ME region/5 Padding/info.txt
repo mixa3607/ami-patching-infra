@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 3D8000h
+Address: FE3D8000h
+Offset: 3D5000h
+Full size: C00000h (12582912)

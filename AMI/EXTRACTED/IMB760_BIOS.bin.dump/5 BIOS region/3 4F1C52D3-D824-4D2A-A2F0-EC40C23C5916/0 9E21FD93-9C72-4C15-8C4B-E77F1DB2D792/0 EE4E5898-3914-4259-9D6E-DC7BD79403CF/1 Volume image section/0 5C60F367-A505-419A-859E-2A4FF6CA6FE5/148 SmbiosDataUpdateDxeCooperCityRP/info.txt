@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SmbiosDataUpdateDxeCooperCityRP
+Fixed: No
+Offset: 343E38h
+File GUID: 130D3E20-4D42-6951-E84B-C0ABB90CE1DD
+Type: 07h
+Attributes: 00h
+Full size: 2B6Eh (11118)
+Header size: 18h (24)
+Body size: 2B56h (11094)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 78h, valid
+Data checksum: AAh, valid

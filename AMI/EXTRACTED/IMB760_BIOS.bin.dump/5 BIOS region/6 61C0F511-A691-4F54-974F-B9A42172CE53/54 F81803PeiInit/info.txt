@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: F81803PeiInit
+Fixed: No
+Base: 1D8BD00h
+Header address: FFD8BD00h
+Data address: FFD8BD18h
+Offset: 18BD00h
+File GUID: 9029F23E-E1EE-40D1-9382-36DD61A63EAA
+Type: 06h
+Attributes: 00h
+Full size: E86h (3718)
+Header size: 18h (24)
+Body size: E6Eh (3694)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 86h, valid
+Data checksum: AAh, valid

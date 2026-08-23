@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: OA3
+Fixed: No
+Offset: 110D28h
+File GUID: 76D5CF91-0C55-434E-97C2-D2825C82E610
+Type: 07h
+Attributes: 00h
+Full size: A42h (2626)
+Header size: 18h (24)
+Body size: A2Ah (2602)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 8Fh, valid
+Data checksum: AAh, valid

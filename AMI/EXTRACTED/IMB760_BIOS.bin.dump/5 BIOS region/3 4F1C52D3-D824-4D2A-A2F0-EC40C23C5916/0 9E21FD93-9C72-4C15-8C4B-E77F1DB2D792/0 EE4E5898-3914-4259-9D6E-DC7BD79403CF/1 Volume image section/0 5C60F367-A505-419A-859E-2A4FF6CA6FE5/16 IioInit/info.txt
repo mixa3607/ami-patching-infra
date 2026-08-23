@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: IioInit
+Fixed: No
+Offset: 64878h
+File GUID: 63809859-F029-41C3-9F34-EEEB9EA787A5
+Type: 07h
+Attributes: 00h
+Full size: 163D6h (91094)
+Header size: 18h (24)
+Body size: 163BEh (91070)
+Tail size: 0h (0)
+State: F8h
+Header checksum: B1h, valid
+Data checksum: AAh, valid

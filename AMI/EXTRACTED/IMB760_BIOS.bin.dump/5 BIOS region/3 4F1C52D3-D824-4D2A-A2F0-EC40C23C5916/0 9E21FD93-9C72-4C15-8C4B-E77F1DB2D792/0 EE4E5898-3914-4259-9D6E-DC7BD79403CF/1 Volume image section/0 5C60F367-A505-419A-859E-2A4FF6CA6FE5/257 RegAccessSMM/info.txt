@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: RegAccessSMM
+Fixed: No
+Offset: 673BA0h
+File GUID: D96A2393-8790-4BAA-9CEB-42533F016EE9
+Type: 0Ah
+Attributes: 00h
+Full size: 5EBAh (24250)
+Header size: 18h (24)
+Body size: 5EA2h (24226)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 26h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SpsDxe
+Fixed: No
+Offset: 80438h
+File GUID: E8F6A75C-3CDA-4B00-9837-8CA2A1F34EAC
+Type: 07h
+Attributes: 00h
+Full size: 3F56h (16214)
+Header size: 18h (24)
+Body size: 3F3Eh (16190)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 97h, valid
+Data checksum: AAh, valid

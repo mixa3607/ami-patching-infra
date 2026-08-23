@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: PlatformCpuPolicyPei
+Fixed: No
+Base: 1D6AB78h
+Header address: FFD6AB78h
+Data address: FFD6AB90h
+Offset: 16AB78h
+File GUID: 49BA7EEB-49F4-4BB4-85DE-FD4FE7369E58
+Type: 06h
+Attributes: 00h
+Full size: 27C6h (10182)
+Header size: 18h (24)
+Body size: 27AEh (10158)
+Tail size: 0h (0)
+State: F8h
+Header checksum: A3h, valid
+Data checksum: AAh, valid

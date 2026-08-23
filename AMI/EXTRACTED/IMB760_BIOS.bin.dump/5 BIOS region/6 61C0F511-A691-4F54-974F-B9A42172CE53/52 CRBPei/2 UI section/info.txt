@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D8B3F4h
+Header address: FFD8B3F4h
+Data address: FFD8B3F8h
+Offset: 964h
+Type: 15h
+Full size: 12h (18)
+Header size: 4h (4)
+Body size: Eh (14)
+Text: CRBPei

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SetupConfigUpdateDxeNeonCityEPRP
+Fixed: No
+Offset: 319620h
+File GUID: 52C877FD-C27C-4779-B750-7880B28B4306
+Type: 07h
+Attributes: 00h
+Full size: B4Eh (2894)
+Header size: 18h (24)
+Body size: B36h (2870)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 8Fh, valid
+Data checksum: AAh, valid

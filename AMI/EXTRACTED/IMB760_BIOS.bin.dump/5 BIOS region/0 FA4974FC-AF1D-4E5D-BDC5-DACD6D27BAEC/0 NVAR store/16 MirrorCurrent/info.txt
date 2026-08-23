@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: MirrorCurrent
+Fixed: Yes
+Base: 100629Ah
+Header address: FF00629Ah
+Data address: FF0062B3h
+Offset: 6222h
+Variable GUID: 7B9BE2E0-E28A-4197-AD3E-32F062F9462C
+GUID index: 15
+Full size: 1Eh (30)
+Header size: 19h (25)
+Body size: 5h (5)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

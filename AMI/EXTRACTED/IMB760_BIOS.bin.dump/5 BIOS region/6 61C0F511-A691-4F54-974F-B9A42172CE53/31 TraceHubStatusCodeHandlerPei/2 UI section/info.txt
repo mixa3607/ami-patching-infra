@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D69AC0h
+Header address: FFD69AC0h
+Data address: FFD69AC4h
+Offset: B98h
+Type: 15h
+Full size: 3Eh (62)
+Header size: 4h (4)
+Body size: 3Ah (58)
+Text: TraceHubStatusCodeHandlerPei

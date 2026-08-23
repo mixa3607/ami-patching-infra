@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: UpdatePcdPei
+Fixed: No
+Base: 1DBDD08h
+Header address: FFDBDD08h
+Data address: FFDBDD20h
+Offset: 1BDD08h
+File GUID: AB8F1705-7EB6-4D08-A9B3-918BDE24F479
+Type: 06h
+Attributes: 00h
+Full size: A2Ah (2602)
+Header size: 18h (24)
+Body size: A12h (2578)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 00h, valid
+Data checksum: AAh, valid

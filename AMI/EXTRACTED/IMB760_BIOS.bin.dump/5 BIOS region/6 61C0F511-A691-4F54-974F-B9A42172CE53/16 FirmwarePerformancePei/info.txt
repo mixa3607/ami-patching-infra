@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: FirmwarePerformancePei
+Fixed: No
+Base: 1D48290h
+Header address: FFD48290h
+Data address: FFD482A8h
+Offset: 148290h
+File GUID: ADF01BF6-47D6-495D-B95B-687777807214
+Type: 06h
+Attributes: 00h
+Full size: D6Ah (3434)
+Header size: 18h (24)
+Body size: D52h (3410)
+Tail size: 0h (0)
+State: F8h
+Header checksum: A2h, valid
+Data checksum: AAh, valid

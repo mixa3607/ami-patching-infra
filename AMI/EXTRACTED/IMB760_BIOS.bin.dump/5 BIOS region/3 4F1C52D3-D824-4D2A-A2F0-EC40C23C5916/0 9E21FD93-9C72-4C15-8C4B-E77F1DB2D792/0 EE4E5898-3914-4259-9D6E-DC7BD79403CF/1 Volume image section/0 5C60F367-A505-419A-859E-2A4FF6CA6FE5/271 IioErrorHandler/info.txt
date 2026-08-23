@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: IioErrorHandler
+Fixed: No
+Offset: DFE020h
+File GUID: 1BAD4160-CE02-4BDD-9D04-DCF7D7B72E0F
+Type: 0Ah
+Attributes: 00h
+Full size: 121AAh (74154)
+Header size: 18h (24)
+Body size: 12192h (74130)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 8Ah, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: OtaShellCommands
+Fixed: No
+Offset: 1A69A8h
+File GUID: 87837AA2-EEB7-434E-9EAC-9D49639E72A2
+Type: 07h
+Attributes: 00h
+Full size: 11B4Ah (72522)
+Header size: 18h (24)
+Body size: 11B32h (72498)
+Tail size: 0h (0)
+State: F8h
+Header checksum: F2h, valid
+Data checksum: AAh, valid

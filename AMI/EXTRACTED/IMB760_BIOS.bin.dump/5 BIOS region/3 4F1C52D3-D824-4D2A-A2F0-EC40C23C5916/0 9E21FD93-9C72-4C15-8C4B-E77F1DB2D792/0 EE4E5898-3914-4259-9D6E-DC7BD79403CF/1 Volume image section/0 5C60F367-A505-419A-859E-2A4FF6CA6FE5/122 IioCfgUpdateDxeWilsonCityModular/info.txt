@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: IioCfgUpdateDxeWilsonCityModular
+Fixed: No
+Offset: 3211C0h
+File GUID: 0A0E7366-BC46-4A90-9F77-0EA7A3B5CA3A
+Type: 07h
+Attributes: 00h
+Full size: D6Eh (3438)
+Header size: 18h (24)
+Body size: D56h (3414)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 8Ah, valid
+Data checksum: AAh, valid

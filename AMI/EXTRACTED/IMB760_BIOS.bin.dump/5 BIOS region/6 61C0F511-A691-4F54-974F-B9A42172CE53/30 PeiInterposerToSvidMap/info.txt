@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: PeiInterposerToSvidMap
+Fixed: No
+Base: 1D687B0h
+Header address: FFD687B0h
+Data address: FFD687C8h
+Offset: 1687B0h
+File GUID: DF11893B-FAC7-4812-8DD7-F5DD56889040
+Type: 06h
+Attributes: 00h
+Full size: 776h (1910)
+Header size: 18h (24)
+Body size: 75Eh (1886)
+Tail size: 0h (0)
+State: F8h
+Header checksum: CAh, valid
+Data checksum: AAh, valid

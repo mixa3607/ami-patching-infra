@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: JedecNvdimmSMM
+Fixed: No
+Offset: 38AF38h
+File GUID: AAD8B9F8-2C83-4E4B-96E8-C5B8B8AC56BF
+Type: 0Ah
+Attributes: 00h
+Full size: 8251Ah (533786)
+Header size: 18h (24)
+Body size: 82502h (533762)
+Tail size: 0h (0)
+State: F8h
+Header checksum: C0h, valid
+Data checksum: AAh, valid

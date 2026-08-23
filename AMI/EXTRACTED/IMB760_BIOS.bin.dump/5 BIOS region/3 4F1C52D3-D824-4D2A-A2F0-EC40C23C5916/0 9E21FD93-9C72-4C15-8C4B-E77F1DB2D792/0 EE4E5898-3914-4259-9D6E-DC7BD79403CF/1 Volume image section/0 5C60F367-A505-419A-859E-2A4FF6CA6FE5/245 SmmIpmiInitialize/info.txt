@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: SmmIpmiInitialize
+Fixed: No
+Offset: 62C038h
+File GUID: E8C729FE-FB0A-4344-AD7E-48784116C9EF
+Type: 0Ah
+Attributes: 00h
+Full size: 3C8Eh (15502)
+Header size: 18h (24)
+Body size: 3C76h (15478)
+Tail size: 0h (0)
+State: F8h
+Header checksum: D0h, valid
+Data checksum: AAh, valid

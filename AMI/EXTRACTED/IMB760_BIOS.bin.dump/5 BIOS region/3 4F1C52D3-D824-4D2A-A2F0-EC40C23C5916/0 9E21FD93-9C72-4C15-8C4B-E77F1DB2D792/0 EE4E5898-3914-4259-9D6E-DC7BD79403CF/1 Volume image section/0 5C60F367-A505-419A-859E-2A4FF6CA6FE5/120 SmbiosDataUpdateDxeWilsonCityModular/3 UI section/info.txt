@@ -1,0 +1,9 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Offset: 2B1Ch
+Type: 15h
+Full size: 4Eh (78)
+Header size: 4h (4)
+Body size: 4Ah (74)
+Text: SmbiosDataUpdateDxeWilsonCityModular

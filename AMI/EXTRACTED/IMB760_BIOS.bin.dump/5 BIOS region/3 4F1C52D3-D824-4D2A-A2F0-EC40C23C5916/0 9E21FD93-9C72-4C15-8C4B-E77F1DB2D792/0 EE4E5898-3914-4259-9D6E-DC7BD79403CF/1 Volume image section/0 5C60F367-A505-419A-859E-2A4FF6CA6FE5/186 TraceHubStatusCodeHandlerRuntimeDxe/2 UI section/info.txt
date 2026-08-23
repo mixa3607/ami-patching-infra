@@ -1,0 +1,9 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Offset: 1044h
+Type: 15h
+Full size: 4Ch (76)
+Header size: 4h (4)
+Body size: 48h (72)
+Text: TraceHubStatusCodeHandlerRuntimeDxe

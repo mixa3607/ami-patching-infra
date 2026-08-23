@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: PlatformSecureVariableSmm
+Fixed: No
+Offset: 6A9FE8h
+File GUID: B8C45127-8A9D-4362-B20A-6C0012CB1430
+Type: 0Ah
+Attributes: 00h
+Full size: 149Eh (5278)
+Header size: 18h (24)
+Body size: 1486h (5254)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 3Bh, valid
+Data checksum: AAh, valid

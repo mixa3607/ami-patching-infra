@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: FpgaSocketConfig
+Fixed: Yes
+Base: 10005F3h
+Header address: FF0005F3h
+Data address: FF00060Fh
+Offset: 563h
+Variable GUID: 75839B0B-0A99-4233-8AA4-3866F6CEF4B3
+GUID index: 10
+Full size: 37h (55)
+Header size: 1Ch (28)
+Body size: 1Bh (27)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

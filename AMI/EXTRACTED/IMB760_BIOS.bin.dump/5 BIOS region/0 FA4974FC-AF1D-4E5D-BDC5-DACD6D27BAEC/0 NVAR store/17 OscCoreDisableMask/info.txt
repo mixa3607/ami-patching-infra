@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: OscCoreDisableMask
+Fixed: Yes
+Base: 10062B8h
+Header address: FF0062B8h
+Data address: FF0062D6h
+Offset: 6240h
+Variable GUID: CB4AFA36-42BF-400B-8B8F-573941A29F4E
+GUID index: 16
+Full size: 3Eh (62)
+Header size: 1Eh (30)
+Body size: 20h (32)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

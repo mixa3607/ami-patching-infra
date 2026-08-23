@@ -1,0 +1,15 @@
+Type: BPDT store
+Subtype: 
+Fixed: Yes
+Base: 16C000h
+Header address: FE16C000h
+Data address: FE16C018h
+Offset: 0h
+Full size: 9Ch (156)
+Header size: 18h (24)
+Body size: 84h (132)
+Number of entries: 11
+Version: 01h
+RedundancyFlag: 0h
+IFWI version: 0h
+FITC version: 4.4.3.263

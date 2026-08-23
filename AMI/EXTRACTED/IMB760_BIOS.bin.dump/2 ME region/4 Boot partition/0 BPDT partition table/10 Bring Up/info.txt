@@ -1,0 +1,14 @@
+Type: BPDT entry
+Subtype: 
+Fixed: Yes
+Base: 16C090h
+Address: FE16C090h
+Offset: 90h
+Full size: Ch (12)
+Type: 2h
+Partition offset: 37000h
+Partition length: 234000h
+Split sub-partition first part: No
+Split sub-partition second part: No
+Code sub-partition: No
+UMA cacheable: No

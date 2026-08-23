@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: PolicySampleDriver
+Fixed: No
+Offset: DD6FA8h
+File GUID: 94FF8FFA-65BF-4918-95CE-8141E487CA6B
+Type: 0Ah
+Attributes: 00h
+Full size: A38Eh (41870)
+Header size: 18h (24)
+Body size: A376h (41846)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 5Fh, valid
+Data checksum: AAh, valid

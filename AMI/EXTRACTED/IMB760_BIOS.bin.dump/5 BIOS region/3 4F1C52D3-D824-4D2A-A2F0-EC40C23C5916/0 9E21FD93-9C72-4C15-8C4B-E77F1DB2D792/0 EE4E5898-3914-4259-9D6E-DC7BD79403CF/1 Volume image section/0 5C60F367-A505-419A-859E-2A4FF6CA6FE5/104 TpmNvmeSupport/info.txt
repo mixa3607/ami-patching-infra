@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: TpmNvmeSupport
+Fixed: No
+Offset: 2C5188h
+File GUID: ADD70A4D-1067-4FA3-A669-94C82877F106
+Type: 07h
+Attributes: 00h
+Full size: 92Ah (2346)
+Header size: 18h (24)
+Body size: 912h (2322)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 81h, valid
+Data checksum: AAh, valid

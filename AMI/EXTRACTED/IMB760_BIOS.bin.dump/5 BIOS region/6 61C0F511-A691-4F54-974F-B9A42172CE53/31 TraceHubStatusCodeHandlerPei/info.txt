@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: TraceHubStatusCodeHandlerPei
+Fixed: No
+Base: 1D68F28h
+Header address: FFD68F28h
+Data address: FFD68F40h
+Offset: 168F28h
+File GUID: 9AB047AF-C26E-4DBF-B468-27AC6536482E
+Type: 06h
+Attributes: 00h
+Full size: BE2h (3042)
+Header size: 18h (24)
+Body size: BCAh (3018)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 91h, valid
+Data checksum: AAh, valid

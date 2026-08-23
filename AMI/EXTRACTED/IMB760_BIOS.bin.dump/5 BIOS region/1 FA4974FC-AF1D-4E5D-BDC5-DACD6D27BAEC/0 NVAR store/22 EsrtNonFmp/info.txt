@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: EsrtNonFmp
+Fixed: Yes
+Base: 1086535h
+Header address: FF086535h
+Data address: FF08654Bh
+Offset: 64BDh
+Variable GUID: 999BD818-7DF7-4A9A-A502-9B75033E6A0F
+GUID index: 21
+Full size: 3Eh (62)
+Header size: 16h (22)
+Body size: 28h (40)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

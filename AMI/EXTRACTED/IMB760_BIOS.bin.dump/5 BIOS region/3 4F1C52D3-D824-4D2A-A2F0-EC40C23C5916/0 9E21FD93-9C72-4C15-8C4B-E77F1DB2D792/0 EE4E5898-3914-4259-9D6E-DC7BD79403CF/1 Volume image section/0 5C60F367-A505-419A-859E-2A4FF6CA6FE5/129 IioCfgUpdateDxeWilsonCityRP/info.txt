@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: IioCfgUpdateDxeWilsonCityRP
+Fixed: No
+Offset: 32AC08h
+File GUID: 6CE2026B-F558-419E-B5AA-081682879C1C
+Type: 07h
+Attributes: 00h
+Full size: D42h (3394)
+Header size: 18h (24)
+Body size: D2Ah (3370)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 85h, valid
+Data checksum: AAh, valid

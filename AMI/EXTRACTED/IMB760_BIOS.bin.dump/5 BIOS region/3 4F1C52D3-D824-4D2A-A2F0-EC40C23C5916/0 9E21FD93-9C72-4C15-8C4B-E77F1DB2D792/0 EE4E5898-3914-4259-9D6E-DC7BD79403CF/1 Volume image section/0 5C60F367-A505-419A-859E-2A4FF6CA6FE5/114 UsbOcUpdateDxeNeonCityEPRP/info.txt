@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: UsbOcUpdateDxeNeonCityEPRP
+Fixed: No
+Offset: 316E48h
+File GUID: EF0E795C-749A-4B41-B994-7DDC6B594388
+Type: 07h
+Attributes: 00h
+Full size: BE2h (3042)
+Header size: 18h (24)
+Body size: BCAh (3018)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 6Bh, valid
+Data checksum: AAh, valid

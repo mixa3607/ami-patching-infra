@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1C2C520h
+Header address: FFC2C520h
+Data address: FFC2C524h
+Offset: E398h
+Type: 15h
+Full size: 1Eh (30)
+Header size: 4h (4)
+Body size: 1Ah (26)
+Text: SiInitPreMem

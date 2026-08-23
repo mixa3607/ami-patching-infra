@@ -1,0 +1,8 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: 1A4814h
+Address: FE1A4814h
+Offset: 1054h
+Full size: 10h (16)
+Type: 32h

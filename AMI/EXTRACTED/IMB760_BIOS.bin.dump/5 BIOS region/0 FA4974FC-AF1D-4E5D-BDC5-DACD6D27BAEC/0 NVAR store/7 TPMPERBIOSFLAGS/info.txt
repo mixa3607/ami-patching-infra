@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: TPMPERBIOSFLAGS
+Fixed: Yes
+Base: 1003F68h
+Header address: FF003F68h
+Data address: FF003F83h
+Offset: 3EF0h
+Variable GUID: 7D3DCEEE-CBCE-4EA7-8709-6E552F1EDBDE
+GUID index: 6
+Full size: 21h (33)
+Header size: 1Bh (27)
+Body size: 6h (6)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

@@ -1,0 +1,25 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: AB344h
+Address: FE0AB344h
+Offset: 2ECh
+Full size: 58h (88)
+Type: 16h
+Partition name: RBEP
+Partition length: 23000h
+Partition version major: 1000h
+Partition version minor: 0h
+Data format version: 10000h
+Instance ID: 1h
+Hash algorithm: 2h
+Hash size: 20h
+Action on update: 0h
+Support multiple instances: No
+Support API version based update: No
+Obey full update rules: No
+IFR enable only: No
+Allow cross point update: No
+Allow cross hotfix update: No
+Partial update only: No
+Partition hash: 7579d80a05a047f973d578ad0b481d254331235136d6410c1a17ddc15b53fbc8

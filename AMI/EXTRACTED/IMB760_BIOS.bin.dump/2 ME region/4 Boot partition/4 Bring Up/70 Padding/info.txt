@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 282E08h
+Address: FE282E08h
+Offset: DFE08h
+Full size: 38h (56)

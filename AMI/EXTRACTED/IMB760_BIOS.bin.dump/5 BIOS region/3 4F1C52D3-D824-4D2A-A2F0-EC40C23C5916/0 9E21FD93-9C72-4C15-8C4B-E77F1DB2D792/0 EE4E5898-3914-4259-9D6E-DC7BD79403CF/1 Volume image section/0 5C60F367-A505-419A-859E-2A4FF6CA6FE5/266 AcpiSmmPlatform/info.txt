@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: AcpiSmmPlatform
+Fixed: No
+Offset: 6AB488h
+File GUID: BD0ABB5D-A29F-4001-A3CA-98485EF7F224
+Type: 0Ah
+Attributes: 00h
+Full size: 5F4Eh (24398)
+Header size: 18h (24)
+Body size: 5F36h (24374)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 30h, valid
+Data checksum: AAh, valid

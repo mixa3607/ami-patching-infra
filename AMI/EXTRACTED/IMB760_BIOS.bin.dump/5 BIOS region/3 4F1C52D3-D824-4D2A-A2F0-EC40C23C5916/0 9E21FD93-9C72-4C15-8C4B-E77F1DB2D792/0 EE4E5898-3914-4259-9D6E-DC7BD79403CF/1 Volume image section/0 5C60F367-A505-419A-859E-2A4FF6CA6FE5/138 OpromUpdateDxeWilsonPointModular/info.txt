@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: OpromUpdateDxeWilsonPointModular
+Fixed: No
+Offset: 338068h
+File GUID: 87EBC658-4872-4FD0-8B97-2B6C7870E225
+Type: 07h
+Attributes: 00h
+Full size: ECEh (3790)
+Header size: 18h (24)
+Body size: EB6h (3766)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 0Ch, valid
+Data checksum: AAh, valid

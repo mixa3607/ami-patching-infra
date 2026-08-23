@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SetupConfigUpdateDxeWilsonCityRP
+Fixed: No
+Offset: 32C7F8h
+File GUID: FDF7DAD6-E450-4150-AD6A-E4F4B5767424
+Type: 07h
+Attributes: 00h
+Full size: B4Eh (2894)
+Header size: 18h (24)
+Body size: B36h (2870)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 85h, valid
+Data checksum: AAh, valid

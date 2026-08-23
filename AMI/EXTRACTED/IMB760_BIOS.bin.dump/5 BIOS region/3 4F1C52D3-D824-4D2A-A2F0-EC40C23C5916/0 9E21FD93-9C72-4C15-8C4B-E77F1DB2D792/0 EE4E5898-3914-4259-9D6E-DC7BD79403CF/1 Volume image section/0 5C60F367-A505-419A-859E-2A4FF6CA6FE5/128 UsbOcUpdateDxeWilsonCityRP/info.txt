@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: UsbOcUpdateDxeWilsonCityRP
+Fixed: No
+Offset: 32A020h
+File GUID: C92F1DF7-206C-46A7-B7D4-0F9B18E0E70A
+Type: 07h
+Attributes: 00h
+Full size: BE2h (3042)
+Header size: 18h (24)
+Body size: BCAh (3018)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 69h, valid
+Data checksum: AAh, valid

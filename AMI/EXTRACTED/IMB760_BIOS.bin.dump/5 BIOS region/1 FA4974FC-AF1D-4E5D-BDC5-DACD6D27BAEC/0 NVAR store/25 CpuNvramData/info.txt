@@ -1,0 +1,16 @@
+Type: NVAR entry
+Subtype: Link
+Text: CpuNvramData
+Fixed: Yes
+Base: 1089D9Dh
+Header address: FF089D9Dh
+Data address: FF089DB5h
+Offset: 9D25h
+Variable GUID: 184220A2-E14C-4497-85BB-1490A9A1F0D3
+GUID index: 24
+Full size: 50h (80)
+Header size: 18h (24)
+Body size: 38h (56)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)
+Next node at offset: DF8Dh

@@ -1,0 +1,16 @@
+Program version: 1.6.0, Extraction mode: UEFI
+0xC06C: FormSet Guid: 4D20583A-7765-4E7A-8A67-DCDE74EE3EC5, Title: "HTTP Boot Configuration", Help: "Configure HTTP Boot parameters." { 0E A7 3A 58 20 4D 65 77 7A 4E 8A 67 DC DE 74 EE 3E C5 02 00 03 00 01 71 99 03 93 45 85 04 4B B4 5E 32 EB 83 26 04 0E }
+0xC093: 	DefaultStore DefaultId: 0x0, Name: "" { 5C 06 00 00 00 00 }
+0xC099: 	DefaultStore DefaultId: 0x1, Name: "" { 5C 06 00 00 01 00 }
+0xC09F: 	VarStore Guid: 4D20583A-7765-4E7A-8A67-DCDE74EE3EC5, VarStoreId: 0x1, Size: 0x296, Name: "HTTP_BOOT_CONFIG_IFR_NVDATA" { 24 32 3A 58 20 4D 65 77 7A 4E 8A 67 DC DE 74 EE 3E C5 01 00 96 02 48 54 54 50 5F 42 4F 4F 54 5F 43 4F 4E 46 49 47 5F 49 46 52 5F 4E 56 44 41 54 41 00 }
+0xC0D1: 	Form FormId: 0x1, Title: "HTTP Boot Configuration" { 01 86 01 00 02 00 }
+0xC0D7: 		String Prompt: "Input the description", Help: "", QuestionFlags: 0x0, QuestionId: 0x1, VarStoreId: 0x1, VarStoreInfo: 0x2, MinSize: 0x6, MaxSize: 0x4B, Flags: 0x0 { 1C 90 0A 00 0B 00 01 00 01 00 02 00 00 06 4B 00 }
+0xC0E7: 		End  { 29 02 }
+0xC0E9: 		OneOf Prompt: "Internet Protocol", Help: "Select the version of Internet Protocol.", QuestionFlags: 0x0, QuestionId: 0x2, VarStoreId: 0x1, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 04 00 05 00 02 00 01 00 00 00 00 10 00 01 00 }
+0xC0FA: 			OneOfOption Option: "IPv4" Value: 0, Default { 09 07 06 00 10 00 00 }
+0xC101: 			OneOfOption Option: "IPv6" Value: 1 { 09 07 07 00 00 00 01 }
+0xC108: 		End  { 29 02 }
+0xC10A: 		String Prompt: "Boot URI", Help: "A new Boot Option will be created according to this Boot URI.", QuestionFlags: 0x4, QuestionId: 0x101, VarStoreId: 0x1, VarStoreInfo: 0x98, MinSize: 0x0, MaxSize: 0xFF, Flags: 0x0 { 1C 90 08 00 09 00 01 01 01 00 98 00 04 00 FF 00 }
+0xC11A: 		End  { 29 02 }
+0xC11C: 	End  { 29 02 }
+0xC11E: End  { 29 02 }

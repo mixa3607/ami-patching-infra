@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: AmiUsbInterface
+Fixed: No
+Offset: 43F610h
+File GUID: AB6CC986-8D03-400C-9FA3-96609C3B7BD3
+Type: 07h
+Attributes: 00h
+Full size: 102Eh (4142)
+Header size: 18h (24)
+Body size: 1016h (4118)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 1Ch, valid
+Data checksum: AAh, valid

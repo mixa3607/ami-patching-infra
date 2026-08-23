@@ -1,0 +1,13 @@
+Type: NVAR entry
+Subtype: Data
+Text: ServerSetup
+Fixed: Yes
+Base: 108DD83h
+Header address: FF08DD83h
+Data address: FF08DD8Dh
+Offset: DD0Bh
+Full size: 26Eh (622)
+Header size: Ah (10)
+Body size: 264h (612)
+Tail size: 0h (0)
+Attributes: 88h (DataOnly, Valid)

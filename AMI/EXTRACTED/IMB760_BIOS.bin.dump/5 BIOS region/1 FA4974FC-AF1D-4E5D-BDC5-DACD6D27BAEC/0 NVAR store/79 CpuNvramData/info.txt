@@ -1,0 +1,13 @@
+Type: NVAR entry
+Subtype: Data
+Text: CpuNvramData
+Fixed: Yes
+Base: 10916C3h
+Header address: FF0916C3h
+Data address: FF0916CDh
+Offset: 1164Bh
+Full size: 42h (66)
+Header size: Ah (10)
+Body size: 38h (56)
+Tail size: 0h (0)
+Attributes: 88h (DataOnly, Valid)

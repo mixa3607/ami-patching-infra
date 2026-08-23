@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: BstLogVar
+Fixed: Yes
+Base: 108A40Fh
+Header address: FF08A40Fh
+Data address: FF08A424h
+Offset: A397h
+Variable GUID: 01239999-FC0E-4B6E-9E79-D54D5DB6CD20
+GUID index: 6
+Full size: B6h (182)
+Header size: 15h (21)
+Body size: A1h (161)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

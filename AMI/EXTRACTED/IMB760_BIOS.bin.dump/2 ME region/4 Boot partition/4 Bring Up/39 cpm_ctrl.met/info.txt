@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Metadata
+Fixed: Yes
+Base: 1A5A08h
+Address: FE1A5A08h
+Offset: 2A08h
+Full size: 7Ch (124)
+Huffman compressed: No
+Metadata hash: defdc7513f032e9cd0897d6306a28630f053e7d45e8454e82aa96e2de7a514c1

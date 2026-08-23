@@ -1,0 +1,13 @@
+Type: NVAR entry
+Subtype: Data
+Text: MeRcConfiguration
+Fixed: Yes
+Base: 100BDB1h
+Header address: FF00BDB1h
+Data address: FF00BDBBh
+Offset: BD39h
+Full size: 5Fh (95)
+Header size: Ah (10)
+Body size: 55h (85)
+Tail size: 0h (0)
+Attributes: 88h (DataOnly, Valid)

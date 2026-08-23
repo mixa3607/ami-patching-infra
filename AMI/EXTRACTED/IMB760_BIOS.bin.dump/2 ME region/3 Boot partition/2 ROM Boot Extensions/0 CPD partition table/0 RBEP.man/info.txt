@@ -1,0 +1,10 @@
+Type: CPD entry
+Subtype: 
+Fixed: Yes
+Base: AB010h
+Address: FE0AB010h
+Offset: 10h
+Full size: 18h (24)
+Entry offset: 58h
+Entry length: 344h
+Huffman compressed: No

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: StaticSkuDataDxeNeonCityEPRP
+Fixed: No
+Offset: 31AD18h
+File GUID: 45055A79-B385-4705-A3AC-11CE99A1CB47
+Type: 07h
+Attributes: 00h
+Full size: 2D12h (11538)
+Header size: 18h (24)
+Body size: 2CFAh (11514)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 9Fh, valid
+Data checksum: AAh, valid

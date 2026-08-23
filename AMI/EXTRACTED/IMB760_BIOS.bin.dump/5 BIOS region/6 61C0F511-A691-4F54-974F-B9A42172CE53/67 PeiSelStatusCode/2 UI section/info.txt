@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1DA4450h
+Header address: FFDA4450h
+Data address: FFDA4454h
+Offset: E68h
+Type: 15h
+Full size: 26h (38)
+Header size: 4h (4)
+Body size: 22h (34)
+Text: PeiSelStatusCode

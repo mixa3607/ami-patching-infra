@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: BzmDxe
+Fixed: No
+Offset: 9F0A0h
+File GUID: A284AFE0-EDFB-42EE-AB2A-FFBBA24AEC56
+Type: 07h
+Attributes: 00h
+Full size: D7Eh (3454)
+Header size: 18h (24)
+Body size: D66h (3430)
+Tail size: 0h (0)
+State: F8h
+Header checksum: E4h, valid
+Data checksum: AAh, valid

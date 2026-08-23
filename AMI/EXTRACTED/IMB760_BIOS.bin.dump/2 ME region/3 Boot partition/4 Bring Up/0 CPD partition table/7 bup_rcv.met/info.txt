@@ -1,0 +1,10 @@
+Type: CPD entry
+Subtype: 
+Fixed: Yes
+Base: DF0B8h
+Address: FE0DF0B8h
+Offset: B8h
+Full size: 18h (24)
+Entry offset: 978h
+Entry length: 7Ch
+Huffman compressed: No

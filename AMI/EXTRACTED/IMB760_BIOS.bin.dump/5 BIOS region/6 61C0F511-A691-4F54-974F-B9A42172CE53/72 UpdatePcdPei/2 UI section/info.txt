@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1DBE704h
+Header address: FFDBE704h
+Data address: FFDBE708h
+Offset: 9FCh
+Type: 15h
+Full size: 1Eh (30)
+Header size: 4h (4)
+Body size: 1Ah (26)
+Text: UpdatePcdPei

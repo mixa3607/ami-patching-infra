@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: NvdimmCommon
+Fixed: No
+Offset: 389ED0h
+File GUID: 73A54106-8C88-4BA9-B08E-FD879A1682CA
+Type: 07h
+Attributes: 00h
+Full size: 1062h (4194)
+Header size: 18h (24)
+Body size: 104Ah (4170)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 62h, valid
+Data checksum: AAh, valid

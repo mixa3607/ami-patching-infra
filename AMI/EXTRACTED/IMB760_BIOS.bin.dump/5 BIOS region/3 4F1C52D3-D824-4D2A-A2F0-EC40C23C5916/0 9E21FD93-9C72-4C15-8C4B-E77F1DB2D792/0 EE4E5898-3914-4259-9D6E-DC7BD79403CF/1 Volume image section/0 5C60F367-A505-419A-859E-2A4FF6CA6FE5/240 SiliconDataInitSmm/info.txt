@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: SiliconDataInitSmm
+Fixed: No
+Offset: 612B28h
+File GUID: 02BA5CFC-D092-4404-9E52-A1B018525056
+Type: 0Ah
+Attributes: 00h
+Full size: 1292h (4754)
+Header size: 18h (24)
+Body size: 127Ah (4730)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 43h, valid
+Data checksum: AAh, valid

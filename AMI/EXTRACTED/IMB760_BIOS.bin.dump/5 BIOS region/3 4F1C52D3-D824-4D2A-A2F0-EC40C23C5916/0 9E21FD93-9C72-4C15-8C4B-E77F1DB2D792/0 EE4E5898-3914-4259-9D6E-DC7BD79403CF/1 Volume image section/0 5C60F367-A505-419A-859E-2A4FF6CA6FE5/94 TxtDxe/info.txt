@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: TxtDxe
+Fixed: No
+Offset: 294020h
+File GUID: FF917E22-A228-448D-BDAA-68EFCCDDA5D3
+Type: 07h
+Attributes: 00h
+Full size: 404Eh (16462)
+Header size: 18h (24)
+Body size: 4036h (16438)
+Tail size: 0h (0)
+State: F8h
+Header checksum: C1h, valid
+Data checksum: AAh, valid

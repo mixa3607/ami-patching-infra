@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: IioCfgUpdateDxeWilsonCitySMT
+Fixed: No
+Offset: 34D5F0h
+File GUID: 7934B6C8-4090-C8BD-48F5-3C8F1F0E84DA
+Type: 07h
+Attributes: 00h
+Full size: D46h (3398)
+Header size: 18h (24)
+Body size: D2Eh (3374)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 93h, valid
+Data checksum: AAh, valid

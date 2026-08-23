@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: 1GPageTable
+Fixed: Yes
+Base: 108406Ah
+Header address: FF08406Ah
+Data address: FF084081h
+Offset: 3FF2h
+Variable GUID: 59D1C24F-50F1-401A-B101-F33E0DAED443
+GUID index: 11
+Full size: 18h (24)
+Header size: 17h (23)
+Body size: 1h (1)
+Tail size: 0h (0)
+Attributes: 83h (Runtime, AsciiName, Valid)

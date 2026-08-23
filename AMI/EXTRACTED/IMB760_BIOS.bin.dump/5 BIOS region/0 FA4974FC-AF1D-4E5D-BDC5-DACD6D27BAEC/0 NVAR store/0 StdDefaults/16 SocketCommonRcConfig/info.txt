@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: SocketCommonRcConfig
+Fixed: Yes
+Base: 10025FCh
+Header address: FF0025FCh
+Data address: FF00261Ch
+Offset: 256Ch
+Variable GUID: 4402CA38-808F-4279-BCEC-5BAF8D59092F
+GUID index: 12
+Full size: 5Ch (92)
+Header size: 20h (32)
+Body size: 3Ch (60)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

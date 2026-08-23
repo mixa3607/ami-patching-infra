@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SmbiosRpTable
+Fixed: No
+Offset: 3117A8h
+File GUID: 9F606D27-E218-4112-834B-8ABCE950B1FB
+Type: 07h
+Attributes: 00h
+Full size: 7EEh (2030)
+Header size: 18h (24)
+Body size: 7D6h (2006)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 2Bh, valid
+Data checksum: AAh, valid

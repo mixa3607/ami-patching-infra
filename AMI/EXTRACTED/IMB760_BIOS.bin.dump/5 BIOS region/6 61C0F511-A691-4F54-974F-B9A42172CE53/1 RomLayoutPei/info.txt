@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: RomLayoutPei
+Fixed: No
+Base: 1C00148h
+Header address: FFC00148h
+Data address: FFC00160h
+Offset: 148h
+File GUID: 7EB7126D-C45E-4BD0-9357-7F507C5C9CF9
+Type: 06h
+Attributes: 00h
+Full size: 1C62h (7266)
+Header size: 18h (24)
+Body size: 1C4Ah (7242)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 65h, valid
+Data checksum: AAh, valid

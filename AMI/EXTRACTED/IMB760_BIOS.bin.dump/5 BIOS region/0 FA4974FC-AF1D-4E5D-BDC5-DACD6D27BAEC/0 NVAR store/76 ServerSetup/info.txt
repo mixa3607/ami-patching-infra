@@ -1,0 +1,13 @@
+Type: NVAR entry
+Subtype: Data
+Text: ServerSetup
+Fixed: Yes
+Base: 100ED22h
+Header address: FF00ED22h
+Data address: FF00ED2Ch
+Offset: ECAAh
+Full size: 26Eh (622)
+Header size: Ah (10)
+Body size: 264h (612)
+Tail size: 0h (0)
+Attributes: 88h (DataOnly, Valid)

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: PlatformCpuPolicyDxe
+Fixed: No
+Offset: 27A040h
+File GUID: 76A7B4FC-C8D5-462D-A4D2-6E88338A772A
+Type: 07h
+Attributes: 00h
+Full size: 738Ah (29578)
+Header size: 18h (24)
+Body size: 7372h (29554)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 55h, valid
+Data checksum: AAh, valid

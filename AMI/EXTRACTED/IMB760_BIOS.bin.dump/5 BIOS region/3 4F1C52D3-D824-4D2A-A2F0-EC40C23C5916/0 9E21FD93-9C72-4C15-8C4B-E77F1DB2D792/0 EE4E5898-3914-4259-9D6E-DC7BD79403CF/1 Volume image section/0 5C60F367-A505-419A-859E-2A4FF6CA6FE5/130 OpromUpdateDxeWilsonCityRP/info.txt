@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: OpromUpdateDxeWilsonCityRP
+Fixed: No
+Offset: 32B950h
+File GUID: 6ABB0C9F-7462-4902-87B8-DA2546B14354
+Type: 07h
+Attributes: 00h
+Full size: EA2h (3746)
+Header size: 18h (24)
+Body size: E8Ah (3722)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 8Ch, valid
+Data checksum: AAh, valid

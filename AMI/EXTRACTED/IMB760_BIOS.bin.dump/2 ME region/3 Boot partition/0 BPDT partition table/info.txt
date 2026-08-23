@@ -1,0 +1,15 @@
+Type: BPDT store
+Subtype: 
+Fixed: Yes
+Base: A8000h
+Header address: FE0A8000h
+Data address: FE0A8018h
+Offset: 0h
+Full size: 90h (144)
+Header size: 18h (24)
+Body size: 78h (120)
+Number of entries: 10
+Version: 01h
+RedundancyFlag: 0h
+IFWI version: 0h
+FITC version: 4.4.3.263

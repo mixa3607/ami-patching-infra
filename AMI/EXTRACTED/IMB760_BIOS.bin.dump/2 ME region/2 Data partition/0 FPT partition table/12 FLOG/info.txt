@@ -1,0 +1,10 @@
+Type: FPT entry
+Subtype: Valid
+Fixed: Yes
+Base: 61A0h
+Address: FE0061A0h
+Offset: 1A0h
+Full size: 20h (32)
+Partition offset: 8D000h
+Partition length: 1000h
+Partition type: 01h

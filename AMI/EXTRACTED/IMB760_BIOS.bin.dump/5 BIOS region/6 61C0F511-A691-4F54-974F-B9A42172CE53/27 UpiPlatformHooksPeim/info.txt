@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: UpiPlatformHooksPeim
+Fixed: No
+Base: 1D56E90h
+Header address: FFD56E90h
+Data address: FFD56EA8h
+Offset: 156E90h
+File GUID: 5255DFB0-0E7C-47DC-95A7-0B838DA09BB0
+Type: 06h
+Attributes: 00h
+Full size: 652h (1618)
+Header size: 18h (24)
+Body size: 63Ah (1594)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 7Dh, valid
+Data checksum: AAh, valid

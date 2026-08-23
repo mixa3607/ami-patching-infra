@@ -1,0 +1,9 @@
+Type: Region
+Subtype: GbE
+Fixed: Yes
+Base: 1000h
+Address: FE001000h
+Offset: 1000h
+Full size: 2000h (8192)
+MAC: 88:88:88:88:87:88
+Version: 0.2

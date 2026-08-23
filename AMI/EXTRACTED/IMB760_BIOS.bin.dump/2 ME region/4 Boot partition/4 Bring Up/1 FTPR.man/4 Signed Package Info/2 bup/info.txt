@@ -1,0 +1,12 @@
+Type: CPD SPI entry
+Subtype: 
+Fixed: Yes
+Base: 1A3FD0h
+Address: FE1A3FD0h
+Offset: 68h
+Full size: 34h (52)
+Type: 0h
+Hash algorithm: 2h
+Hash size: 20h (32)
+Metadata size: 7Ch (124)
+Metadata hash: 1958a74a601b1381d111a091b99218ba76b7624ce8f48b688b00dbbfda642df4

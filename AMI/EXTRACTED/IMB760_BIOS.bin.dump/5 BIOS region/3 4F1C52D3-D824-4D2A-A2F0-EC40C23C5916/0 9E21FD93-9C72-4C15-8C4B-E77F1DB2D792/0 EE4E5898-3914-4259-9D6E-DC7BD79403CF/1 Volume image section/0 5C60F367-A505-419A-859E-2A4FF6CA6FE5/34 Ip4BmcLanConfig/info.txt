@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: Ip4BmcLanConfig
+Fixed: No
+Offset: D8A88h
+File GUID: BC0B9FB8-97CF-4B17-9A9E-F574E62CBCC4
+Type: 07h
+Attributes: 00h
+Full size: 1276h (4726)
+Header size: 18h (24)
+Body size: 125Eh (4702)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 58h, valid
+Data checksum: AAh, valid

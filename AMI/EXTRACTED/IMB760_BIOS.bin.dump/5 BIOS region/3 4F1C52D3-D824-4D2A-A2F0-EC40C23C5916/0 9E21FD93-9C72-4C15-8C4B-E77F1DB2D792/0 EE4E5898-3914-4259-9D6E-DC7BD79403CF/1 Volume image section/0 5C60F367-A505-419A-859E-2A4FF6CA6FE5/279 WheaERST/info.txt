@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: WheaERST
+Fixed: No
+Offset: E3B330h
+File GUID: B0ADDE44-2985-40FE-9484-1B08772931EE
+Type: 0Ah
+Attributes: 00h
+Full size: 419Eh (16798)
+Header size: 18h (24)
+Body size: 4186h (16774)
+Tail size: 0h (0)
+State: F8h
+Header checksum: B2h, valid
+Data checksum: AAh, valid

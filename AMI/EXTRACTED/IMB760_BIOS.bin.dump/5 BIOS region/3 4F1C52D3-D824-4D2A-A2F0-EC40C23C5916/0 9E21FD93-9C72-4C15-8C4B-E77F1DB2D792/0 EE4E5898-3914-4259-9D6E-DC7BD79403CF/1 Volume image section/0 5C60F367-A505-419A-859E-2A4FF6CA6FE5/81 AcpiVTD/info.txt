@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: AcpiVTD
+Fixed: No
+Offset: 278830h
+File GUID: 64A11188-5B86-4F59-A702-73365896E65E
+Type: 07h
+Attributes: 00h
+Full size: 180Ah (6154)
+Header size: 18h (24)
+Body size: 17F2h (6130)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 2Ch, valid
+Data checksum: AAh, valid

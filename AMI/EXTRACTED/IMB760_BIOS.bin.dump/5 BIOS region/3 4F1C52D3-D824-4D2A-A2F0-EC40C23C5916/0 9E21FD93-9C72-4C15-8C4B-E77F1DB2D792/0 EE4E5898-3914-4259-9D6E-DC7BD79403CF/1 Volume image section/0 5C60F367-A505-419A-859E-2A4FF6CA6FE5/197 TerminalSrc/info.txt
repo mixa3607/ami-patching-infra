@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: TerminalSrc
+Fixed: No
+Offset: 45BC98h
+File GUID: 54891A9E-763E-4377-8841-8D5C90D88CDE
+Type: 07h
+Attributes: 00h
+Full size: 97E2h (38882)
+Header size: 18h (24)
+Body size: 97CAh (38858)
+Tail size: 0h (0)
+State: F8h
+Header checksum: F9h, valid
+Data checksum: AAh, valid

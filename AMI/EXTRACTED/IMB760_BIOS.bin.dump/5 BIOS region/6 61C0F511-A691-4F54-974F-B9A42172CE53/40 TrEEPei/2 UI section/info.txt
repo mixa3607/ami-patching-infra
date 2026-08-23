@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D80B98h
+Header address: FFD80B98h
+Data address: FFD80B9Ch
+Offset: A8C8h
+Type: 15h
+Full size: 14h (20)
+Header size: 4h (4)
+Body size: 10h (16)
+Text: TrEEPei

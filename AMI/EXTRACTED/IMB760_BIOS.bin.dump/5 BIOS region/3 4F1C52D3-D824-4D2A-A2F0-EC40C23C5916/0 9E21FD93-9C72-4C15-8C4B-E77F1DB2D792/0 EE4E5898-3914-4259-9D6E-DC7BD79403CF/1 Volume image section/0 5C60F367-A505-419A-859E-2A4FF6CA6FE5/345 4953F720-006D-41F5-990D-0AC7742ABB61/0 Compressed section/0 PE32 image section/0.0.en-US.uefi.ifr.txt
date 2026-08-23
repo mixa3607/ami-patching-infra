@@ -1,0 +1,99 @@
+Program version: 1.6.0, Extraction mode: UEFI
+0x1DDBC: FormSet Guid: 77F2EA2F-4312-4569-85C4-583ACD8DB7E2, Title: "Intel PRO/1000 Network Connection", Help: "Configure Gigabit Ethernet device parameters" { 0E A7 2F EA F2 77 12 43 69 45 85 C4 58 3A CD 8D B7 E2 02 00 03 00 01 71 99 03 93 45 85 04 4B B4 5E 32 EB 83 26 04 0E }
+0x1DDE3: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Class, Class: 0x4 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 03 04 00 }
+0x1DDF8: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: SubClass, SubClass: 0x0 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 04 00 00 }
+0x1DE0D: 	DefaultStore DefaultId: 0x0, Name: "" { 5C 06 00 00 00 00 }
+0x1DE13: 	DefaultStore DefaultId: 0x1, Name: "" { 5C 06 00 00 01 00 }
+0x1DE19: 	VarStore Guid: A31ABB16-C627-475B-988E-7EE0776740F3, VarStoreId: 0x1234, Size: 0x2E, Name: "UndiNVData" { 24 21 16 BB 1A A3 27 C6 5B 47 98 8E 7E E0 77 67 40 F3 34 12 2E 00 55 6E 64 69 4E 56 44 61 74 61 00 }
+0x1DE3A: 	Form FormId: 0x1, Title: "Main Configuration Page" { 01 86 01 00 04 00 }
+0x1DE40: 		Ref Prompt: "NIC Configuration", Help: "Click to configure the network device port.", QuestionFlags: 0x0, QuestionId: 0x1, VarStoreId: 0x0, VarStoreInfo: 0xFFFF, FormId: 0x1235 { 0F 0F 1B 00 1C 00 01 00 00 00 FF FF 00 35 12 }
+0x1DE4F: 		Text Prompt: "", Help: "", Text: "" { 03 08 31 00 31 00 31 00 }
+0x1DE57: 		Numeric Prompt: "Blink LEDs", Help: "Identify the physical network port by blinking the associated LED.", QuestionFlags: 0x4, QuestionId: 0x110A, VarStoreId: 0x1234, VarOffset: 0x2C, Flags: 0x11, Size: 16, Min: 0x0, Max: 0xF, Step: 0x0 { 07 94 19 00 1A 00 0A 11 34 12 2C 00 04 11 00 00 0F 00 00 00 }
+0x1DE6B: 			Default DefaultId: 0x0 Value: 0 { 5B 07 00 00 01 00 00 }
+0x1DE72: 		End  { 29 02 }
+0x1DE74: 		Text Prompt: "", Help: "", Text: "" { 03 08 31 00 31 00 31 00 }
+0x1DE7C: 		Text Prompt: "UEFI Driver", Help: "UEFI driver name and version number", Text: "%s" { 03 08 16 00 18 00 17 00 }
+0x1DE84: 		Text Prompt: "Adapter PBA", Help: "A Printed Board Assembly (PBA) number is a unique code used to identify a printed board assembly.", Text: "%s" { 03 08 0D 00 0F 00 0E 00 }
+0x1DE8C: 		Text Prompt: "Device Name", Help: "Official product name of this device.", Text: "Intel Fortville device name" { 03 08 2F 00 2E 00 30 00 }
+0x1DE94: 		Text Prompt: "Chip Type", Help: "Network controller part number.", Text: "Unknown Controller" { 03 08 10 00 12 00 11 00 }
+0x1DE9C: 		Text Prompt: "PCI Device ID", Help: "PCI Device ID of this device", Text: "%04x" { 03 08 13 00 15 00 14 00 }
+0x1DEA4: 		Text Prompt: "PCI Address", Help: "PCI device location.", Text: "        " { 03 08 0A 00 0C 00 0B 00 }
+0x1DEAC: 		Text Prompt: "", Help: "", Text: "" { 03 08 31 00 31 00 31 00 }
+0x1DEB4: 		GrayOutIf  { 19 82 }
+0x1DEB6: 			True  { 46 02 }
+0x1DEB8: 			OneOf Prompt: "Link Status", Help: "Link Status", QuestionFlags: 0x0, QuestionId: 0x1104, VarStoreId: 0x1234, VarOffset: 0x6, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 05 91 2A 00 2B 00 04 11 34 12 06 00 00 10 00 01 00 }
+0x1DEC9: 				OneOfOption Option: "Disconnected" Value: 0 { 09 07 2C 00 00 00 00 }
+0x1DED0: 				OneOfOption Option: "Connected" Value: 1 { 09 07 2D 00 00 00 01 }
+0x1DED7: 			End  { 29 02 }
+0x1DED9: 		End  { 29 02 }
+0x1DEDB: 		Text Prompt: "", Help: "", Text: "" { 03 08 31 00 31 00 31 00 }
+0x1DEE3: 		Text Prompt: "MAC Address", Help: "Factory default MAC address of Ethernet port.", Text: "%02x:%02x:%02x:%02x:%02x:%02x" { 03 08 05 00 07 00 06 00 }
+0x1DEEB: 		SuppressIf  { 0A 82 }
+0x1DEED: 			True  { 46 02 }
+0x1DEEF: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1407, VarStoreId: 0x1234, VarOffset: 0x5, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 31 00 31 00 07 14 34 12 05 00 01 10 00 01 00 }
+0x1DF00: 			End  { 29 02 }
+0x1DF02: 		End  { 29 02 }
+0x1DF04: 		SuppressIf  { 0A 82 }
+0x1DF06: 			EqIdVal QuestionId: 0x1407, Value: 0x0 { 12 06 07 14 00 00 }
+0x1DF0C: 			GrayOutIf  { 19 82 }
+0x1DF0E: 				True  { 46 02 }
+0x1DF10: 				String Prompt: "Virtual MAC Address", Help: "Programmatically assignable MAC address for port.", QuestionFlags: 0x0, QuestionId: 0x1106, VarStoreId: 0x1234, VarStoreInfo: 0x8, MinSize: 0x11, MaxSize: 0x11, Flags: 0x0 { 1C 90 08 00 09 00 06 11 34 12 08 00 00 11 11 00 }
+0x1DF20: 				End  { 29 02 }
+0x1DF22: 			End  { 29 02 }
+0x1DF24: 		End  { 29 02 }
+0x1DF26: 	End  { 29 02 }
+0x1DF28: 	Form FormId: 0x1235, Title: "NIC Configuration" { 01 86 35 12 1D 00 }
+0x1DF2E: 		Text Prompt: "", Help: "", Text: "" { 03 08 31 00 31 00 31 00 }
+0x1DF36: 		Text Prompt: "", Help: "", Text: "" { 03 08 31 00 31 00 31 00 }
+0x1DF3E: 		SuppressIf  { 0A 82 }
+0x1DF40: 			True  { 46 02 }
+0x1DF42: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x0, QuestionId: 0x2, VarStoreId: 0x1234, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 31 00 31 00 02 00 34 12 00 00 00 10 00 01 00 }
+0x1DF53: 			End  { 29 02 }
+0x1DF55: 		End  { 29 02 }
+0x1DF57: 		GrayOutIf  { 19 82 }
+0x1DF59: 			EqIdVal QuestionId: 0x2, Value: 0x0 { 12 06 02 00 00 00 }
+0x1DF5F: 			OneOf Prompt: "Link Speed", Help: "Specifies the port speed used for the selected boot protocol.", QuestionFlags: 0x0, QuestionId: 0x1108, VarStoreId: 0x1234, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x4, Step: 0x0 { 05 91 1E 00 1F 00 08 11 34 12 01 00 00 10 00 04 00 }
+0x1DF70: 				OneOfOption Option: "Auto Negotiated" Value: 0, Default { 09 07 20 00 10 00 00 }
+0x1DF77: 				SuppressIf  { 0A 82 }
+0x1DF79: 					EqIdVal QuestionId: 0x2, Value: 0x0 { 12 06 02 00 00 00 }
+0x1DF7F: 					OneOfOption Option: "10 Mbps Half" Value: 1 { 09 07 21 00 00 00 01 }
+0x1DF86: 					OneOfOption Option: "10 Mbps Full" Value: 2 { 09 07 22 00 00 00 02 }
+0x1DF8D: 					OneOfOption Option: "100 Mbps Half" Value: 3 { 09 07 23 00 00 00 03 }
+0x1DF94: 					OneOfOption Option: "100 Mbps Full" Value: 4 { 09 07 24 00 00 00 04 }
+0x1DF9B: 				End  { 29 02 }
+0x1DF9D: 			End  { 29 02 }
+0x1DF9F: 		End  { 29 02 }
+0x1DFA1: 		SuppressIf  { 0A 82 }
+0x1DFA3: 			True  { 46 02 }
+0x1DFA5: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x3, VarStoreId: 0x1234, VarOffset: 0x2, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { 07 91 31 00 31 00 03 00 34 12 02 00 01 10 00 01 00 }
+0x1DFB6: 			End  { 29 02 }
+0x1DFB8: 			Numeric Prompt: "", Help: "", QuestionFlags: 0x1, QuestionId: 0x1182, VarStoreId: 0x1234, VarOffset: 0x4, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0 { 07 91 31 00 31 00 82 11 34 12 04 00 01 10 00 02 00 }
+0x1DFC9: 			End  { 29 02 }
+0x1DFCB: 		End  { 29 02 }
+0x1DFCD: 		GrayOutIf  { 19 82 }
+0x1DFCF: 			EqIdVal QuestionId: 0x3, Value: 0x0 { 12 06 03 00 00 00 }
+0x1DFD5: 			OneOf Prompt: "Wake On LAN", Help: "Enables power on of the system via LAN. Note that configuring Wake on LAN in the operating system does not change the value of this setting, but does override the behavior of Wake on LAN in OS controlled power states.", QuestionFlags: 0x0, QuestionId: 0x1109, VarStoreId: 0x1234, VarOffset: 0x3, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x2, Step: 0x0 { 05 91 25 00 26 00 09 11 34 12 03 00 00 10 00 02 00 }
+0x1DFE6: 				Default DefaultId: 0x0 Value: Other { 5B 85 00 00 08 }
+0x1DFEB: 					Value  { 5A 82 }
+0x1DFED: 						QuestionRef1 QuestionId: 0x3 { 40 84 03 00 }
+0x1DFF1: 							Uint64 Value: 0x1 { 45 0A 01 00 00 00 00 00 00 00 }
+0x1DFFB: 							Equal  { 2F 02 }
+0x1DFFD: 							Uint64 Value: 0x2 { 45 0A 02 00 00 00 00 00 00 00 }
+0x1E007: 							QuestionRef1 QuestionId: 0x1182 { 40 04 82 11 }
+0x1E00B: 							Conditional  { 50 02 }
+0x1E00D: 						End  { 29 02 }
+0x1E00F: 					End  { 29 02 }
+0x1E011: 				End  { 29 02 }
+0x1E013: 				SuppressIf  { 0A 82 }
+0x1E015: 					EqIdVal QuestionId: 0x3, Value: 0x0 { 12 06 03 00 00 00 }
+0x1E01B: 					OneOfOption Option: "Disabled" Value: 0 { 09 07 28 00 00 00 00 }
+0x1E022: 					OneOfOption Option: "Enabled" Value: 1 { 09 07 27 00 00 00 01 }
+0x1E029: 				End  { 29 02 }
+0x1E02B: 				SuppressIf  { 0A 82 }
+0x1E02D: 					EqIdVal QuestionId: 0x3, Value: 0x1 { 12 06 03 00 01 00 }
+0x1E033: 					OneOfOption Option: "N/A" Value: 2 { 09 07 29 00 00 00 02 }
+0x1E03A: 				End  { 29 02 }
+0x1E03C: 			End  { 29 02 }
+0x1E03E: 		End  { 29 02 }
+0x1E040: 	End  { 29 02 }
+0x1E042: End  { 29 02 }

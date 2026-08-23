@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: ImcErrorHandler
+Fixed: No
+Offset: 6B13D8h
+File GUID: A8CEC941-CD87-4AB7-980C-4C77C33BF3BA
+Type: 0Ah
+Attributes: 00h
+Full size: 725BCEh (7494606)
+Header size: 18h (24)
+Body size: 725BB6h (7494582)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 74h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,14 @@
+Type: BPDT entry
+Subtype: 
+Fixed: Yes
+Base: A8018h
+Address: FE0A8018h
+Offset: 18h
+Full size: Ch (12)
+Type: 9h
+Partition offset: 0h
+Partition length: 0h
+Split sub-partition first part: No
+Split sub-partition second part: No
+Code sub-partition: No
+UMA cacheable: No

@@ -1,0 +1,14 @@
+Type: BPDT entry
+Subtype: 
+Fixed: Yes
+Base: 16C060h
+Address: FE16C060h
+Offset: 60h
+Full size: Ch (12)
+Type: 14h
+Partition offset: 26B000h
+Partition length: 1000h
+Split sub-partition first part: No
+Split sub-partition second part: No
+Code sub-partition: No
+UMA cacheable: No

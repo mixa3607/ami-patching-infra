@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: KbcEmul
+Fixed: No
+Offset: 67B0F0h
+File GUID: 3B24F79D-91A0-46FF-BE29-458AE211FAC5
+Type: 0Ah
+Attributes: 00h
+Full size: 3EC2h (16066)
+Header size: 18h (24)
+Body size: 3EAAh (16042)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 25h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: SocketMemoryConfig
+Fixed: Yes
+Base: 1082721h
+Header address: FF082721h
+Data address: FF08273Fh
+Offset: 2691h
+Variable GUID: 98CF19ED-4109-4681-B79D-9196757C7824
+GUID index: 14
+Full size: 2F9h (761)
+Header size: 1Eh (30)
+Body size: 2DBh (731)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

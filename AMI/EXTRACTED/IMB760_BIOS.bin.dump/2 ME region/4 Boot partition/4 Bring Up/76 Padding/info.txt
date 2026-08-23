@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 290C58h
+Address: FE290C58h
+Offset: EDC58h
+Full size: 28h (40)

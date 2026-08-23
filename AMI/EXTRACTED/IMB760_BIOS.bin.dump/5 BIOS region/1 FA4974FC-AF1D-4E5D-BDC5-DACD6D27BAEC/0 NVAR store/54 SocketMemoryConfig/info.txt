@@ -1,0 +1,16 @@
+Type: NVAR entry
+Subtype: Link
+Text: SocketMemoryConfig
+Fixed: Yes
+Base: 108AC99h
+Header address: FF08AC99h
+Data address: FF08ACB7h
+Offset: AC21h
+Variable GUID: 98CF19ED-4109-4681-B79D-9196757C7824
+GUID index: 32
+Full size: 2F9h (761)
+Header size: 1Eh (30)
+Body size: 2DBh (731)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)
+Next node at offset: AF1Ah

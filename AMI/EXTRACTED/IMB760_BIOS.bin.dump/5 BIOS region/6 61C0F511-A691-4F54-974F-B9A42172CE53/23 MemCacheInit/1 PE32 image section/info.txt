@@ -1,0 +1,21 @@
+Type: Section
+Subtype: PE32 image
+Fixed: No
+Base: 1D4E6F0h
+Header address: FFD4E6F0h
+Data address: FFD4E6F4h
+Offset: 78h
+Type: 10h
+Full size: 3F04h (16132)
+Header size: 4h (4)
+Body size: 3F00h (16128)
+DOS signature: 5A4Dh
+PE signature: 00004550h
+Machine type: x86
+Number of sections: 3
+Characteristics: 2102h
+Optional header signature: 010Bh
+Subsystem: 000Bh
+Address of entry point: 2D5h
+Base of code: 220h
+Image base: FFD4E6F4h

@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: Recovery
+Fixed: No
+Base: 1DA4488h
+Header address: FFDA4488h
+Data address: FFDA44A0h
+Offset: 1A4488h
+File GUID: DACF705C-71DF-497D-AABE-10186B2E1DDE
+Type: 06h
+Attributes: 00h
+Full size: 777h (1911)
+Header size: 18h (24)
+Body size: 75Fh (1887)
+Tail size: 0h (0)
+State: F8h
+Header checksum: CDh, valid
+Data checksum: AAh, valid

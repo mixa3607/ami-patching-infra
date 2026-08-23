@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: OpromUpdateDxeNeonCityEPRP
+Fixed: No
+Offset: 318778h
+File GUID: 3137130C-D0A7-467E-9E8F-513816F159D8
+Type: 07h
+Attributes: 00h
+Full size: EA2h (3746)
+Header size: 18h (24)
+Body size: E8Ah (3722)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 99h, valid
+Data checksum: AAh, valid

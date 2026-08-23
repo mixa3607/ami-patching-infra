@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 2F6480h
+Address: FE2F6480h
+Offset: 153480h
+Full size: 7E64h (32356)
+Huffman compressed: Yes
+Hash: 3941a73f10d81c1de86725d7901a9bcd203e281f15bb61ee5040f82ff59e8f9b

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SmbiosDataUpdateDxeWilsonPointRP
+Fixed: No
+Offset: 33A690h
+File GUID: 09813137-B2A5-4462-8A2A-48F77ECA31BF
+Type: 07h
+Attributes: 00h
+Full size: 2B72h (11122)
+Header size: 18h (24)
+Body size: 2B5Ah (11098)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 42h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,30 @@
+Program version: 1.6.0, Extraction mode: UEFI
+0x165EC: FormSet Guid: E9603D31-DD7B-4BF9-A389-61D6D105691B, Title: "NVME SSD", Help: "Displays NVME information." { 0E A7 31 3D 60 E9 7B DD F9 4B A3 89 61 D6 D1 05 69 1B A1 00 A3 00 01 71 99 03 93 45 85 04 4B B4 5E 32 EB 83 26 04 0E }
+0x16613: 	Guid Guid: 0F0B1735-87A0-4193-B266-538C38AF48CE, ExtendedOpCode: Class, Class: 0x1 { 5F 15 35 17 0B 0F A0 87 93 41 B2 66 53 8C 38 AF 48 CE 03 01 00 }
+0x16628: 	DefaultStore DefaultId: 0x0, Name: "" { 5C 06 00 00 00 00 }
+0x1662E: 	DefaultStore DefaultId: 0x1, Name: "" { 5C 06 00 00 01 00 }
+0x16634: 	Form FormId: 0x1, Title: "NVME SSD" { 01 86 01 00 A2 00 }
+0x1663A: 		Subtitle Prompt: "PCI Generic Information", Help: "", Flags: 0x0 { 02 87 A4 00 00 00 00 }
+0x16641: 		End  { 29 02 }
+0x16643: 		Text Prompt: "UUID", Help: "", Text: "" { 03 08 A5 00 18 00 A6 00 }
+0x1664B: 		Text Prompt: "Card Name", Help: "", Text: "" { 03 08 A7 00 18 00 A8 00 }
+0x16653: 		Text Prompt: "Manufacturer", Help: "", Text: "" { 03 08 A9 00 18 00 AA 00 }
+0x1665B: 		Text Prompt: "Serial Number", Help: "", Text: "" { 03 08 AB 00 18 00 AC 00 }
+0x16663: 		Text Prompt: "Part Number", Help: "", Text: "" { 03 08 AD 00 18 00 AE 00 }
+0x1666B: 		Text Prompt: "Model", Help: "", Text: "" { 03 08 AF 00 18 00 B0 00 }
+0x16673: 		Text Prompt: "Card SKU (FRU)", Help: "", Text: "" { 03 08 B1 00 18 00 B2 00 }
+0x1667B: 		Text Prompt: "Max Data Width", Help: "", Text: "" { 03 08 B3 00 18 00 B4 00 }
+0x16683: 		Text Prompt: "PCIe Maximum Speed", Help: "", Text: "" { 03 08 B5 00 18 00 B6 00 }
+0x1668B: 		Text Prompt: "Vendor ID", Help: "", Text: "" { 03 08 B7 00 18 00 B8 00 }
+0x16693: 		Text Prompt: "Device ID", Help: "", Text: "" { 03 08 B9 00 18 00 BA 00 }
+0x1669B: 		Text Prompt: "Subsystem Vendor ID", Help: "", Text: "" { 03 08 BB 00 18 00 BC 00 }
+0x166A3: 		Text Prompt: "Subsystem ID", Help: "", Text: "" { 03 08 BD 00 18 00 BE 00 }
+0x166AB: 		Subtitle Prompt: "Drive Information", Help: "", Flags: 0x0 { 02 87 BF 00 00 00 00 }
+0x166B2: 		End  { 29 02 }
+0x166B4: 		Text Prompt: "Drive Type", Help: "", Text: "" { 03 08 C0 00 18 00 C1 00 }
+0x166BC: 		Text Prompt: "Lenovo 8S SN", Help: "", Text: "" { 03 08 C2 00 18 00 C3 00 }
+0x166C4: 		Text Prompt: "Firmware Version", Help: "", Text: "" { 03 08 C4 00 18 00 C5 00 }
+0x166CC: 		Text Prompt: "Option ROM Version", Help: "", Text: "" { 03 08 C6 00 18 00 C7 00 }
+0x166D4: 		Text Prompt: "Capacity", Help: "", Text: "" { 03 08 C8 00 18 00 C9 00 }
+0x166DC: 	End  { 29 02 }
+0x166DE: End  { 29 02 }

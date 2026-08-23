@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: InfoVarNvramData
+Fixed: Yes
+Base: 1009F75h
+Header address: FF009F75h
+Data address: FF009F91h
+Offset: 9EFDh
+Variable GUID: 0E5AD476-E47D-4E50-AE9D-38DFE2716796
+GUID index: 25
+Full size: 2Dh (45)
+Header size: 1Ch (28)
+Body size: 11h (17)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

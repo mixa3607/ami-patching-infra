@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: UsbInt13
+Fixed: No
+Offset: 1612A0h
+File GUID: 4C006CD9-19BA-4617-8483-609194A1ACFC
+Type: 07h
+Attributes: 00h
+Full size: 14DEh (5342)
+Header size: 18h (24)
+Body size: 14C6h (5318)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 71h, valid
+Data checksum: AAh, valid

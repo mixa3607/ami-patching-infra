@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: NvramPei
+Fixed: No
+Base: 1D93188h
+Header address: FFD93188h
+Data address: FFD931A0h
+Offset: 193188h
+File GUID: 838DCF34-907B-4D55-9A4B-A0EF7167B5F4
+Type: 06h
+Attributes: 00h
+Full size: 283Eh (10302)
+Header size: 18h (24)
+Body size: 2826h (10278)
+Tail size: 0h (0)
+State: F8h
+Header checksum: DFh, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SlotDataUpdateDxeWilsonPointModular
+Fixed: No
+Offset: 339AB8h
+File GUID: 4E385C3C-ACC8-4A84-89F5-A8BD7305288F
+Type: 07h
+Attributes: 00h
+Full size: BD2h (3026)
+Header size: 18h (24)
+Body size: BBAh (3002)
+Tail size: 0h (0)
+State: F8h
+Header checksum: AAh, valid
+Data checksum: AAh, valid

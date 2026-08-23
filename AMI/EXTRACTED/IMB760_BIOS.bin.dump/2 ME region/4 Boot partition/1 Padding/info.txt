@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Non-empty
+Fixed: Yes
+Base: 16C09Ch
+Address: FE16C09Ch
+Offset: 9Ch
+Full size: 2F64h (12132)

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: JedecNvdimm
+Fixed: No
+Offset: 185E918h
+File GUID: DEB0EE00-18DF-415C-AF03-74D09B0AAD87
+Type: 07h
+Attributes: 00h
+Full size: 892F2h (561906)
+Header size: 18h (24)
+Body size: 892DAh (561882)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 8Eh, valid
+Data checksum: AAh, valid

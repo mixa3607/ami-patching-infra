@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: SocketPowerManagementConfig
+Fixed: Yes
+Base: 1002A1Ah
+Header address: FF002A1Ah
+Data address: FF002A41h
+Offset: 298Ah
+Variable GUID: A1047342-BDBA-4DAE-A67A-40979B65C7F8
+GUID index: 15
+Full size: 1F3h (499)
+Header size: 27h (39)
+Body size: 1CCh (460)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

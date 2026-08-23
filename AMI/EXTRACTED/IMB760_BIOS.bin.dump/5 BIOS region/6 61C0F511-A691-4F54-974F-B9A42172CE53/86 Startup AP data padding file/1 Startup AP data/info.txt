@@ -1,0 +1,7 @@
+Type: Startup AP data
+Subtype: X86 128K
+Fixed: Yes
+Base: 1FF9000h
+Address: FFFF9000h
+Offset: 21BD60h
+Full size: 298h (664)

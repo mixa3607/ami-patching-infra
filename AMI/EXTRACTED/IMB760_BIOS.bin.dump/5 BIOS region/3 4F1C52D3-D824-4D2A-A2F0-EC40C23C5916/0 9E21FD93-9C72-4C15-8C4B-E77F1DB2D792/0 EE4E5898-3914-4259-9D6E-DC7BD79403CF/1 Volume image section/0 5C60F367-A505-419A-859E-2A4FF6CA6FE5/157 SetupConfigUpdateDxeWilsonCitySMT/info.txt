@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SetupConfigUpdateDxeWilsonCitySMT
+Fixed: No
+Offset: 34F200h
+File GUID: 94D6C0CF-4D46-7C43-C926-F28A46E9AE83
+Type: 07h
+Attributes: 00h
+Full size: B4Eh (2894)
+Header size: 18h (24)
+Body size: B36h (2870)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 8Ah, valid
+Data checksum: AAh, valid

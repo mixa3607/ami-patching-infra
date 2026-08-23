@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 28590Ch
+Address: FE28590Ch
+Offset: E290Ch
+Full size: 34h (52)

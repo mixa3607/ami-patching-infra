@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SiliconDataInitDxe
+Fixed: No
+Offset: 387BE8h
+File GUID: FE9AF6AA-17F9-4A67-B009-E37579385DE5
+Type: 07h
+Attributes: 00h
+Full size: 126Eh (4718)
+Header size: 18h (24)
+Body size: 1256h (4694)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 7Ch, valid
+Data checksum: AAh, valid

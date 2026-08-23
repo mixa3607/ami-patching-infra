@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: IioCfgUpdateDxeWilsonPointModular
+Fixed: No
+Offset: 3372F8h
+File GUID: 4976228F-5EB2-41B8-9BB3-24F450BEBB5B
+Type: 07h
+Attributes: 00h
+Full size: D6Eh (3438)
+Header size: 18h (24)
+Body size: D56h (3414)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 7Bh, valid
+Data checksum: AAh, valid

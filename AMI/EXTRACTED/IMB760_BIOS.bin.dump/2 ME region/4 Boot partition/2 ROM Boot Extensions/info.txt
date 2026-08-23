@@ -1,0 +1,13 @@
+Type: BPDT partition
+Subtype: 
+Text: ROM Boot Extensions
+Fixed: Yes
+Base: 16F000h
+Address: FE16F000h
+Offset: 3000h
+Full size: 23000h (143360)
+Type: 1h
+Split sub-partition first part: No
+Split sub-partition second part: No
+Code sub-partition: No
+UMA cacheable: No

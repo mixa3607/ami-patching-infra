@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 290C80h
+Address: FE290C80h
+Offset: EDC80h
+Full size: 1208h (4616)
+Huffman compressed: Yes
+Hash: 81b04e6c78b4b65a5b94f53610032bbf21d4bc68881b1dca8523f766f8735481

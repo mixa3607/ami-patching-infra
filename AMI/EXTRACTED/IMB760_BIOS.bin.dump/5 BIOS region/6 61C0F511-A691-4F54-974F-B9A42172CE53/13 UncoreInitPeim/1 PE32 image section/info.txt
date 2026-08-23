@@ -1,0 +1,21 @@
+Type: Section
+Subtype: PE32 image
+Fixed: No
+Base: 1C2C620h
+Header address: FFC2C620h
+Data address: FFC2C624h
+Offset: D0h
+Type: 10h
+Full size: 119E44h (1154628)
+Header size: 4h (4)
+Body size: 119E40h (1154624)
+DOS signature: 5A4Dh
+PE signature: 00004550h
+Machine type: x86
+Number of sections: 3
+Characteristics: 2102h
+Optional header signature: 010Bh
+Subsystem: 000Bh
+Address of entry point: 446h
+Base of code: 240h
+Image base: FFC2C624h

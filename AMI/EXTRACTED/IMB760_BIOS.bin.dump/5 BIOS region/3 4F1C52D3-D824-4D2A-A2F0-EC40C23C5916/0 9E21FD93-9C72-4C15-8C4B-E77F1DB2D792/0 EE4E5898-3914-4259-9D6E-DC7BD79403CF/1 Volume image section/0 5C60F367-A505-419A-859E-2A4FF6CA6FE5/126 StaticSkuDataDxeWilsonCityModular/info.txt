@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: StaticSkuDataDxeWilsonCityModular
+Fixed: No
+Offset: 324550h
+File GUID: 1FF21739-CF29-4345-9E8F-BDE713779B71
+Type: 07h
+Attributes: 00h
+Full size: 2F5Ah (12122)
+Header size: 18h (24)
+Body size: 2F42h (12098)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 28h, valid
+Data checksum: AAh, valid

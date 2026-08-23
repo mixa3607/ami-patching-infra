@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: RASMiscDriver
+Fixed: No
+Offset: E233B8h
+File GUID: 702100AD-3964-49CB-8511-E8627B384AD0
+Type: 0Ah
+Attributes: 00h
+Full size: 81CAh (33226)
+Header size: 18h (24)
+Body size: 81B2h (33202)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 0Fh, valid
+Data checksum: AAh, valid

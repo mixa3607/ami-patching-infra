@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Metadata
+Fixed: Yes
+Base: DF978h
+Address: FE0DF978h
+Offset: 978h
+Full size: 7Ch (124)
+Huffman compressed: No
+Metadata hash: 238833373e3e9848c4db7115efb5ca7406c2b45f3d60a903a948bd51909ac4f3

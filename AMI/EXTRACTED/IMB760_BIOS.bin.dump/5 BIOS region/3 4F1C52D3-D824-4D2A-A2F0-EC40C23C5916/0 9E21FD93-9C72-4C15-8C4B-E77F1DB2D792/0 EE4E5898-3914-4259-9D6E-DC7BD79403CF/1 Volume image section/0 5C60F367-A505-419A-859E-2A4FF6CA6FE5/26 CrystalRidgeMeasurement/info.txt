@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: CrystalRidgeMeasurement
+Fixed: No
+Offset: 9BF60h
+File GUID: 0471BC5B-64BE-43BF-8FA1-435AF1161384
+Type: 07h
+Attributes: 00h
+Full size: FDEh (4062)
+Header size: 18h (24)
+Body size: FC6h (4038)
+Tail size: 0h (0)
+State: F8h
+Header checksum: F1h, valid
+Data checksum: AAh, valid

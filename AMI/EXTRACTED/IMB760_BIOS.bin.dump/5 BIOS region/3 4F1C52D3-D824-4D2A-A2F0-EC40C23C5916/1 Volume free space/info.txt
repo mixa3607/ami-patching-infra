@@ -1,0 +1,7 @@
+Type: Free space
+Subtype: 
+Fixed: No
+Base: 1440B68h
+Address: FF440B68h
+Offset: 330B68h
+Full size: 67E498h (6808728)

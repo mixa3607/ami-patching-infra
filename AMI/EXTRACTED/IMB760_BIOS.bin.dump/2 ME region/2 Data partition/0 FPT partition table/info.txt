@@ -1,0 +1,21 @@
+Type: FPT store
+Subtype: 
+Fixed: Yes
+Base: 6000h
+Header address: FE006000h
+Data address: FE006020h
+Offset: 0h
+Full size: 200h (512)
+Header size: 20h (32)
+Body size: 1E0h (480)
+ROM bypass vector: absent
+Number of entries: 15
+Header version: 20h
+Entry version: 10h
+Header length: 20h
+Flash cycle life: FFFFh
+Flash cycle limit: FFFFh
+UMA size: 200413h
+Flags: 0h
+FITC version: 4.4.3.263
+Checksum: 4Dh

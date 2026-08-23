@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: PeiFrb
+Fixed: No
+Base: 1DA2F08h
+Header address: FFDA2F08h
+Data address: FFDA2F20h
+Offset: 1A2F08h
+File GUID: 0EF53039-3A38-42D1-BCEC-CE966E87061A
+Type: 06h
+Attributes: 00h
+Full size: 6DAh (1754)
+Header size: 18h (24)
+Body size: 6C2h (1730)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 08h, valid
+Data checksum: AAh, valid

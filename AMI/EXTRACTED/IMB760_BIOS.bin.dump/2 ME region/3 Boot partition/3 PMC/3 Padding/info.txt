@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: CE3D4h
+Address: FE0CE3D4h
+Offset: 3D4h
+Full size: 2Ch (44)

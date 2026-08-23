@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 39F900h
+Address: FE39F900h
+Offset: 1FC900h
+Full size: CDBCh (52668)
+Huffman compressed: Yes
+Hash: 96b08d70b83ba9fa94b5c82c5e0d874c7adec657d7095613caa919bd8715e3af

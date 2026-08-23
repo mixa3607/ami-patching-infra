@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: SocketIioConfig
+Fixed: Yes
+Base: 108062Ah
+Header address: FF08062Ah
+Data address: FF080645h
+Offset: 59Ah
+Variable GUID: DD84017E-7F52-48F9-B16E-50ED9E0DBE27
+GUID index: 11
+Full size: 1FD2h (8146)
+Header size: 1Bh (27)
+Body size: 1FB7h (8119)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

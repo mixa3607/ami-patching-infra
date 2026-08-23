@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: NewOptionPolicy
+Fixed: Yes
+Base: 1000344h
+Header address: FF000344h
+Data address: FF00035Fh
+Offset: 2B4h
+Variable GUID: 69ECC1BE-A981-446D-8EB6-AF0E53D06CE8
+GUID index: 7
+Full size: 1Ch (28)
+Header size: 1Bh (27)
+Body size: 1h (1)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

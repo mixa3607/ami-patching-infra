@@ -1,0 +1,8 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: DF94Ch
+Address: FE0DF94Ch
+Offset: 38h
+Full size: 1Ch (28)
+Type: 4h

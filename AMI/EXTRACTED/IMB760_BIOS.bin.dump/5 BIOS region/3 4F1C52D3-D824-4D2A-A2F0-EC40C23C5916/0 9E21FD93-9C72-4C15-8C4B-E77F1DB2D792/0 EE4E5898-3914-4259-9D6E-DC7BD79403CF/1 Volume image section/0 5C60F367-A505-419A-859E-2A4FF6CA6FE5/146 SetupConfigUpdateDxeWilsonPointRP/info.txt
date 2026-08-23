@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SetupConfigUpdateDxeWilsonPointRP
+Fixed: No
+Offset: 342738h
+File GUID: 226D28E1-7672-48D5-ADDC-E5F91F398A3E
+Type: 07h
+Attributes: 00h
+Full size: B4Eh (2894)
+Header size: 18h (24)
+Body size: B36h (2870)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 7Ch, valid
+Data checksum: AAh, valid

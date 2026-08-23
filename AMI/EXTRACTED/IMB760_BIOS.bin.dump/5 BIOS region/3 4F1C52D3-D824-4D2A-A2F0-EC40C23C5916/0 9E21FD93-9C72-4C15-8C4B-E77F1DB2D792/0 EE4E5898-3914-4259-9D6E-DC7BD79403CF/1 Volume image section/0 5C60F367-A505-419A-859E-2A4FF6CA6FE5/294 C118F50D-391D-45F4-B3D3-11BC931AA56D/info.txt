@@ -1,0 +1,14 @@
+Type: File
+Subtype: Freeform
+Fixed: No
+Offset: FAC920h
+File GUID: C118F50D-391D-45F4-B3D3-11BC931AA56D
+Type: 02h
+Attributes: 00h
+Full size: 67C14h (424980)
+Header size: 18h (24)
+Body size: 67BFCh (424956)
+Tail size: 0h (0)
+State: F8h
+Header checksum: ECh, valid
+Data checksum: AAh, valid

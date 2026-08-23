@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: CrystalRidgeSMM
+Fixed: No
+Offset: 572640h
+File GUID: 056BCA18-2F19-41EE-84EA-83746CB5069A
+Type: 0Ah
+Attributes: 00h
+Full size: 9DDAAh (646570)
+Header size: 18h (24)
+Body size: 9DD92h (646546)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 77h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,13 @@
+Type: Section
+Subtype: Version
+Fixed: No
+Base: 1D6AB68h
+Header address: FFD6AB68h
+Data address: FFD6AB6Eh
+Offset: 1058h
+Type: 14h
+Full size: Eh (14)
+Header size: 6h (6)
+Body size: 8h (8)
+Build number: 0
+Version string: 0.0

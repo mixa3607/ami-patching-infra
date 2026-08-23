@@ -1,0 +1,13 @@
+Type: NVAR entry
+Subtype: Data
+Text: TerminalSerialVar
+Fixed: Yes
+Base: 109172Dh
+Header address: FF09172Dh
+Data address: FF091737h
+Offset: 116B5h
+Full size: 14h (20)
+Header size: Ah (10)
+Body size: Ah (10)
+Tail size: 0h (0)
+Attributes: 88h (DataOnly, Valid)

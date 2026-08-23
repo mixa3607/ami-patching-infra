@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SmbiosDataUpdateDxeWilsonCitySMT
+Fixed: No
+Offset: 350900h
+File GUID: 687E0993-4326-D0EB-E8EA-43979249E8CD
+Type: 07h
+Attributes: 00h
+Full size: 2B72h (11122)
+Header size: 18h (24)
+Body size: 2B5Ah (11098)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 7Ah, valid
+Data checksum: AAh, valid

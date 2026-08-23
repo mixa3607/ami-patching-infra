@@ -1,0 +1,7 @@
+Type: Region
+Subtype: PTT
+Fixed: Yes
+Base: FD8000h
+Address: FEFD8000h
+Offset: FD8000h
+Full size: 18000h (98304)

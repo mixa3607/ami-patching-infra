@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 1A6380h
+Address: FE1A6380h
+Offset: 3380h
+Full size: 13EE4h (81636)
+Huffman compressed: Yes
+Hash: 59fcb47a616f7690c0c22ec2776898204cadf4139392d1ae301eeaea2f33f656

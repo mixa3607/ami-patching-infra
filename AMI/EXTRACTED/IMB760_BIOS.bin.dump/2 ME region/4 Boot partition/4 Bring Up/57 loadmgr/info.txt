@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 231A40h
+Address: FE231A40h
+Offset: 8EA40h
+Full size: 4314h (17172)
+Huffman compressed: Yes
+Hash: a09d80d03fc333a6a36c4c50fef958c07eb872b525f4e0861742dee5ce6a03bc

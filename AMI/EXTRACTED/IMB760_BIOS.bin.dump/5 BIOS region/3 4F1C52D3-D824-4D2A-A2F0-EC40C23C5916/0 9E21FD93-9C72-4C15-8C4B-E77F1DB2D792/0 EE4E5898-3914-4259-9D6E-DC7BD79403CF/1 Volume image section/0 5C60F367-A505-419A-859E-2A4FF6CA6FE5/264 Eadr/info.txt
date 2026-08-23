@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: Eadr
+Fixed: No
+Offset: 6A2A98h
+File GUID: 0C3178B2-A09D-4B6E-9A62-9A5EE50A0514
+Type: 0Ah
+Attributes: 00h
+Full size: 754Eh (30030)
+Header size: 18h (24)
+Body size: 7536h (30006)
+Tail size: 0h (0)
+State: F8h
+Header checksum: DAh, valid
+Data checksum: AAh, valid

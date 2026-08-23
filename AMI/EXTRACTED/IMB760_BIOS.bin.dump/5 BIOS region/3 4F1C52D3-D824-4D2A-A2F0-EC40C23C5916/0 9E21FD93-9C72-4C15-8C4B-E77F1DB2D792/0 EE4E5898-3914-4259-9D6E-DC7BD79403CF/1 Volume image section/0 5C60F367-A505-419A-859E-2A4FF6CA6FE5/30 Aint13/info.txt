@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: Aint13
+Fixed: No
+Offset: A16C0h
+File GUID: 67820532-7613-4DD3-9ED7-3D9BE3A7DA63
+Type: 07h
+Attributes: 00h
+Full size: 1756h (5974)
+Header size: 18h (24)
+Body size: 173Eh (5950)
+Tail size: 0h (0)
+State: F8h
+Header checksum: AFh, valid
+Data checksum: AAh, valid

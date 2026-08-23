@@ -1,0 +1,8 @@
+Type: NVAR GUID store
+Subtype: 
+Fixed: Yes
+Base: 10FFD90h
+Address: FF0FFD90h
+Offset: 7FD18h
+Full size: 270h (624)
+GUIDs in store: 39

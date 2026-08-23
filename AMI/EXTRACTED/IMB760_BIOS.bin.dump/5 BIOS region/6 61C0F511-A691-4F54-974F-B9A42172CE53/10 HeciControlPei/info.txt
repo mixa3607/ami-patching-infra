@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: HeciControlPei
+Fixed: No
+Base: 1C19F78h
+Header address: FFC19F78h
+Data address: FFC19F90h
+Offset: 19F78h
+File GUID: 850CBAD8-5CF2-4B46-8FF6-ACED339EDDB0
+Type: 06h
+Attributes: 00h
+Full size: 3C6Ah (15466)
+Header size: 18h (24)
+Body size: 3C52h (15442)
+Tail size: 0h (0)
+State: F8h
+Header checksum: D6h, valid
+Data checksum: AAh, valid

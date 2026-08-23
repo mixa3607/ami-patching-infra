@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D6D300h
+Header address: FFD6D300h
+Data address: FFD6D304h
+Offset: 2788h
+Type: 15h
+Full size: 2Eh (46)
+Header size: 4h (4)
+Body size: 2Ah (42)
+Text: PlatformCpuPolicyPei

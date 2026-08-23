@@ -1,0 +1,14 @@
+Type: NVAR entry
+Subtype: Link
+Text: ServerSetup
+Fixed: Yes
+Base: 108A733h
+Header address: FF08A733h
+Data address: FF08A73Dh
+Offset: A6BBh
+Full size: 26Eh (622)
+Header size: Ah (10)
+Body size: 264h (612)
+Tail size: 0h (0)
+Attributes: 88h (DataOnly, Valid)
+Next node at offset: D6D2h

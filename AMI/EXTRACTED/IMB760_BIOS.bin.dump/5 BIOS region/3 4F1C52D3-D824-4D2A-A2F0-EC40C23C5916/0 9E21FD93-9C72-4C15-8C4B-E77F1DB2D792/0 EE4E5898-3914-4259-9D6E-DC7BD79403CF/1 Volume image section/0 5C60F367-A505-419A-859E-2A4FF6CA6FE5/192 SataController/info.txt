@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SataController
+Fixed: No
+Offset: 4356D8h
+File GUID: BB65942B-521F-4EC3-BAF9-A92540CF60D2
+Type: 07h
+Attributes: 00h
+Full size: 19BEh (6590)
+Header size: 18h (24)
+Body size: 19A6h (6566)
+Tail size: 0h (0)
+State: F8h
+Header checksum: FFh, valid
+Data checksum: AAh, valid

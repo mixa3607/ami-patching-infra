@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D9988Ch
+Header address: FFD9988Ch
+Data address: FFD99890h
+Offset: 914h
+Type: 15h
+Full size: 1Ch (28)
+Header size: 4h (4)
+Body size: 18h (24)
+Text: FwKeyHobPei

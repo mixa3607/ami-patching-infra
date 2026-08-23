@@ -1,0 +1,9 @@
+Type: CPD partition
+Subtype: Code
+Fixed: Yes
+Base: 28B740h
+Address: FE28B740h
+Offset: E8740h
+Full size: 5518h (21784)
+Huffman compressed: Yes
+Hash: cc0aef0d4997cc1a92c900bb405c89b3bf7e11be640405fec51999728c73981a

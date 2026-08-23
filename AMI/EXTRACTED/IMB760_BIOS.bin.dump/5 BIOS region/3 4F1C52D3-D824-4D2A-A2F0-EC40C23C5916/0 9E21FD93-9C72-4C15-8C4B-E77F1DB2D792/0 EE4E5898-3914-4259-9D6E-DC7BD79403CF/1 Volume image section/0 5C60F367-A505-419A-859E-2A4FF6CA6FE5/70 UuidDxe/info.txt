@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: UuidDxe
+Fixed: No
+Offset: 19CFA0h
+File GUID: 536DF136-BD96-4E1E-ADF5-6B637C139063
+Type: 07h
+Attributes: 00h
+Full size: 7A6h (1958)
+Header size: 18h (24)
+Body size: 78Eh (1934)
+Tail size: 0h (0)
+State: F8h
+Header checksum: B4h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: PcRtcSmm
+Fixed: No
+Offset: 54DA58h
+File GUID: 378D7B65-8DA9-4773-B6E4-A47826A833E2
+Type: 0Ah
+Attributes: 00h
+Full size: 24B2h (9394)
+Header size: 18h (24)
+Body size: 249Ah (9370)
+Tail size: 0h (0)
+State: F8h
+Header checksum: F3h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,13 @@
+Type: NVAR entry
+Subtype: Data
+Text: SocketMemoryConfig
+Fixed: Yes
+Base: 100C5E1h
+Header address: FF00C5E1h
+Data address: FF00C5EBh
+Offset: C569h
+Full size: 2E5h (741)
+Header size: Ah (10)
+Body size: 2DBh (731)
+Tail size: 0h (0)
+Attributes: 88h (DataOnly, Valid)

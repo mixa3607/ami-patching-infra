@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: TcgLegacy
+Fixed: No
+Offset: 2AF2E8h
+File GUID: 858EBE6F-360F-415B-B7DC-463AAEB03412
+Type: 07h
+Attributes: 00h
+Full size: 11BEh (4542)
+Header size: 18h (24)
+Body size: 11A6h (4518)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 52h, valid
+Data checksum: AAh, valid

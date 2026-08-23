@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: RegAccessPeim
+Fixed: No
+Base: 1D4A330h
+Header address: FFD4A330h
+Data address: FFD4A348h
+Offset: 14A330h
+File GUID: 2C6CACC6-6C3C-4AA7-B2DE-384DAE2B0352
+Type: 06h
+Attributes: 00h
+Full size: 2D86h (11654)
+Header size: 18h (24)
+Body size: 2D6Eh (11630)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 61h, valid
+Data checksum: AAh, valid

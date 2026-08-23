@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SiCpuInitDxe
+Fixed: No
+Offset: 5DB00h
+File GUID: ACD28235-075B-48B5-98A1-DA04FCAF84F3
+Type: 07h
+Attributes: 00h
+Full size: 6D72h (28018)
+Header size: 18h (24)
+Body size: 6D5Ah (27994)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 4Dh, valid
+Data checksum: AAh, valid

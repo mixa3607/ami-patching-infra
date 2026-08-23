@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SlotDataUpdateDxeCooperCityRP
+Fixed: No
+Offset: 34CA48h
+File GUID: 3C26C91F-4CEB-E798-59EC-05B15E9C5919
+Type: 07h
+Attributes: 00h
+Full size: BA6h (2982)
+Header size: 18h (24)
+Body size: B8Eh (2958)
+Tail size: 0h (0)
+State: F8h
+Header checksum: E1h, valid
+Data checksum: AAh, valid

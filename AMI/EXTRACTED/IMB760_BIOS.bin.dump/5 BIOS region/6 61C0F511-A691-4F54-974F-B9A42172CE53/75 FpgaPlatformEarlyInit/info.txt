@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: FpgaPlatformEarlyInit
+Fixed: No
+Base: 1DC52F0h
+Header address: FFDC52F0h
+Data address: FFDC5308h
+Offset: 1C52F0h
+File GUID: 0C85DF8A-4212-4CC1-A4AA-1A7A36E8DA97
+Type: 06h
+Attributes: 00h
+Full size: B3Ch (2876)
+Header size: 18h (24)
+Body size: B24h (2852)
+Tail size: 0h (0)
+State: F8h
+Header checksum: E7h, valid
+Data checksum: AAh, valid

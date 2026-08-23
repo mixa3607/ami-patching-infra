@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Empty (FFh)
+Fixed: Yes
+Base: 1DE928h
+Address: FE1DE928h
+Offset: 3B928h
+Full size: 18h (24)

@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: PeiIpmiInitialize
+Fixed: No
+Base: 1D9F668h
+Header address: FFD9F668h
+Data address: FFD9F680h
+Offset: 19F668h
+File GUID: 7942EDD0-C023-4357-93ED-F6626D711E9E
+Type: 06h
+Attributes: 00h
+Full size: 389Eh (14494)
+Header size: 18h (24)
+Body size: 3886h (14470)
+Tail size: 0h (0)
+State: F8h
+Header checksum: BDh, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: WheaErrorInj2
+Fixed: No
+Offset: E2B588h
+File GUID: A2BCE73D-5B22-4FC7-80F5-F1A9D26ED758
+Type: 0Ah
+Attributes: 00h
+Full size: B9EEh (47598)
+Header size: 18h (24)
+Body size: B9D6h (47574)
+Tail size: 0h (0)
+State: F8h
+Header checksum: BCh, valid
+Data checksum: AAh, valid

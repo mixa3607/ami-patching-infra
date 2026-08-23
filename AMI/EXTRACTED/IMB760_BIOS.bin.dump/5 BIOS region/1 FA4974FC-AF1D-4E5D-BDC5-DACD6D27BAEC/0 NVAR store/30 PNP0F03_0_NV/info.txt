@@ -1,0 +1,15 @@
+Type: NVAR entry
+Subtype: Full
+Text: PNP0F03_0_NV
+Fixed: Yes
+Base: 108A0CAh
+Header address: FF08A0CAh
+Data address: FF08A0E2h
+Offset: A052h
+Variable GUID: 560BF58A-1E0D-4D7E-953F-2980A261E031
+GUID index: 13
+Full size: 1Bh (27)
+Header size: 18h (24)
+Body size: 3h (3)
+Tail size: 0h (0)
+Attributes: 82h (AsciiName, Valid)

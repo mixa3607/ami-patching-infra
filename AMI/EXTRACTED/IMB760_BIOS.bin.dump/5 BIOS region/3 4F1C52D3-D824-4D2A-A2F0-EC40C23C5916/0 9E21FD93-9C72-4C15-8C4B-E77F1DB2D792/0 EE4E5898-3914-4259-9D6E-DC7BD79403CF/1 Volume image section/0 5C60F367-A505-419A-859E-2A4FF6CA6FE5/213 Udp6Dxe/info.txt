@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: Udp6Dxe
+Fixed: No
+Offset: 4F0F70h
+File GUID: D912C7BC-F098-4367-92BA-E911083C7B0E
+Type: 07h
+Attributes: 00h
+Full size: 6D7Eh (28030)
+Header size: 18h (24)
+Body size: 6D66h (28006)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 5Bh, valid
+Data checksum: AAh, valid

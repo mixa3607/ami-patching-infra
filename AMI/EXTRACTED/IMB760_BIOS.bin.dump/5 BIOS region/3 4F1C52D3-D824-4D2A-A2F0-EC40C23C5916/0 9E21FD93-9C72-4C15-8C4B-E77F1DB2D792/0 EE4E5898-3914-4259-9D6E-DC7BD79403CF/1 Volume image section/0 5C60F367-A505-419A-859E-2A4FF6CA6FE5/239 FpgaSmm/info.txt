@@ -1,0 +1,15 @@
+Type: File
+Subtype: SMM module
+Text: FpgaSmm
+Fixed: No
+Offset: 611688h
+File GUID: 355FBDA9-4572-49BC-95B9-545E71DEF9F9
+Type: 0Ah
+Attributes: 00h
+Full size: 149Eh (5278)
+Header size: 18h (24)
+Body size: 1486h (5254)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 4Dh, valid
+Data checksum: AAh, valid

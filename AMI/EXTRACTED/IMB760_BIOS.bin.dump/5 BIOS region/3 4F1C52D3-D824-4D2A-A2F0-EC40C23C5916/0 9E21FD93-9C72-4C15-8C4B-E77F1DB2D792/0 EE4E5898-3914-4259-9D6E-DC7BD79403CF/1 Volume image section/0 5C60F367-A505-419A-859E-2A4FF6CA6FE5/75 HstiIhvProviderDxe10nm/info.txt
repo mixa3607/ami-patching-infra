@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: HstiIhvProviderDxe10nm
+Fixed: No
+Offset: 1A0CE0h
+File GUID: 9836ADF3-1072-692A-903D-19B8188019FD
+Type: 07h
+Attributes: 00h
+Full size: 5CC6h (23750)
+Header size: 18h (24)
+Body size: 5CAEh (23726)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 08h, valid
+Data checksum: AAh, valid

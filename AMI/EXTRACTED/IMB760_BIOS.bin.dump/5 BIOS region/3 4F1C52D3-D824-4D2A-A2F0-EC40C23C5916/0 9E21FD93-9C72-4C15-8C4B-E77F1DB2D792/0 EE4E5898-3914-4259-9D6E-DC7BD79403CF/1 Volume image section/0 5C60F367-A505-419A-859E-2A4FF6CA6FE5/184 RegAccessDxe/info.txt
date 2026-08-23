@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: RegAccessDxe
+Fixed: No
+Offset: 41D328h
+File GUID: 56D60EE4-5CCF-485C-BBBB-FEDAE2B24146
+Type: 07h
+Attributes: 00h
+Full size: 5686h (22150)
+Header size: 18h (24)
+Body size: 566Eh (22126)
+Tail size: 0h (0)
+State: F8h
+Header checksum: C7h, valid
+Data checksum: AAh, valid

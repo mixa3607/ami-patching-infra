@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: StaticSkuDataDxeCooperCityRP
+Fixed: No
+Offset: 3469A8h
+File GUID: 0E8F7963-4DB2-1C86-254B-4FBA4175804E
+Type: 07h
+Attributes: 00h
+Full size: 2D32h (11570)
+Header size: 18h (24)
+Body size: 2D1Ah (11546)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 83h, valid
+Data checksum: AAh, valid

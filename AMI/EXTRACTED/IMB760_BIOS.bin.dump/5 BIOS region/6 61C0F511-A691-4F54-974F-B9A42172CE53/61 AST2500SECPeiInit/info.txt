@@ -1,0 +1,18 @@
+Type: File
+Subtype: PEI module
+Text: AST2500SECPeiInit
+Fixed: No
+Base: 1D959C8h
+Header address: FFD959C8h
+Data address: FFD959E0h
+Offset: 1959C8h
+File GUID: 71224824-6C22-45D7-9C1A-9E7CBFF18924
+Type: 06h
+Attributes: 00h
+Full size: FCEh (4046)
+Header size: 18h (24)
+Body size: FB6h (4022)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 47h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: S3NvramSave
+Fixed: No
+Offset: 196D40h
+File GUID: 62DC08AC-A651-4EE9-AF81-EAA9261E9780
+Type: 07h
+Attributes: 00h
+Full size: 625Ah (25178)
+Header size: 18h (24)
+Body size: 6242h (25154)
+Tail size: 0h (0)
+State: F8h
+Header checksum: FFh, valid
+Data checksum: AAh, valid

@@ -1,0 +1,12 @@
+Type: Section
+Subtype: UI
+Fixed: No
+Base: 1D4D9F4h
+Header address: FFD4D9F4h
+Data address: FFD4D9F8h
+Offset: 484h
+Type: 15h
+Full size: 2Ah (42)
+Header size: 4h (4)
+Body size: 26h (38)
+Text: NCT7802YSECPeiInit

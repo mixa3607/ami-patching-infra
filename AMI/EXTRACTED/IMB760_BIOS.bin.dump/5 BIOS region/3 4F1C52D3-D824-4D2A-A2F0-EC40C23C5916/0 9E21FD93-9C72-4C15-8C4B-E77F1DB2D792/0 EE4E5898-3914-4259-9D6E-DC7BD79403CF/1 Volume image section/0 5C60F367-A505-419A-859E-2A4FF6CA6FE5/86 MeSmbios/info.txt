@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: MeSmbios
+Fixed: No
+Offset: 286BE0h
+File GUID: E764500B-E398-4AB7-BBBC-99A8E683681F
+Type: 07h
+Attributes: 00h
+Full size: 18EEh (6382)
+Header size: 18h (24)
+Body size: 18D6h (6358)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 29h, valid
+Data checksum: AAh, valid

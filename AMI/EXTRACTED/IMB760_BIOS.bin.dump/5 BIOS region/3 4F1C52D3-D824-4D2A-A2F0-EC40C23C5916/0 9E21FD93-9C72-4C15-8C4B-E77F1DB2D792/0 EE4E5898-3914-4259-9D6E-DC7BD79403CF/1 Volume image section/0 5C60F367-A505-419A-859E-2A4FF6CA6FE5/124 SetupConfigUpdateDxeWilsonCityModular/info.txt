@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SetupConfigUpdateDxeWilsonCityModular
+Fixed: No
+Offset: 322E00h
+File GUID: FEE0FC54-7A30-4EF6-A0A3-48375B586089
+Type: 07h
+Attributes: 00h
+Full size: B76h (2934)
+Header size: 18h (24)
+Body size: B5Eh (2910)
+Tail size: 0h (0)
+State: F8h
+Header checksum: FEh, valid
+Data checksum: AAh, valid

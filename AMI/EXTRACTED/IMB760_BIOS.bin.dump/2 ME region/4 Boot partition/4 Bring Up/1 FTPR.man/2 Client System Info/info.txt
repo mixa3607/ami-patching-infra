@@ -1,0 +1,8 @@
+Type: CPD extension
+Subtype: 
+Fixed: Yes
+Base: 1A3F20h
+Address: FE1A3F20h
+Offset: 760h
+Full size: 30h (48)
+Type: Ch

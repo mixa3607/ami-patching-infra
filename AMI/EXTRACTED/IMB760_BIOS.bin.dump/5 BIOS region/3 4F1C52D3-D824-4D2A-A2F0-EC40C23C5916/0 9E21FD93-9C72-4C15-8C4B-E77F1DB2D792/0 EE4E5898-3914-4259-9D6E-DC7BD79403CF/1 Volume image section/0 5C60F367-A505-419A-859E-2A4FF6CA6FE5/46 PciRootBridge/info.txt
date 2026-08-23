@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: PciRootBridge
+Fixed: No
+Offset: 111770h
+File GUID: 80E66E0A-CCD1-43FA-A7B1-2D5EE0F13910
+Type: 07h
+Attributes: 00h
+Full size: D452h (54354)
+Header size: 18h (24)
+Body size: D43Ah (54330)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 1Eh, valid
+Data checksum: AAh, valid

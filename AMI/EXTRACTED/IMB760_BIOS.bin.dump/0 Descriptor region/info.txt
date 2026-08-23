@@ -1,0 +1,53 @@
+Type: Region
+Subtype: Descriptor
+Fixed: Yes
+Base: 0h
+Address: FE000000h
+Offset: 0h
+ReservedVector:
+FF FF FF FF FF FF FF FF
+FF FF FF FF FF FF FF FF
+Full size: 1000h (4096)
+GbE region offset: 1000h
+ME region offset: 3000h
+PTT region offset: FD8000h
+DevExp1 region offset: FF0000h
+BIOS region offset: 1000000h
+Region access settings:
+BIOS: 0DBh 05Ah
+ME:   02Dh 00Ch
+GbE:  008h 008h
+EC:   100h 100h
+BIOS access table:
+      Read  Write
+Desc  Yes   No  
+BIOS  Yes   Yes
+ME    No    No  
+GbE   Yes   Yes 
+PDR   Yes   Yes 
+EC    No    No  
+Flash chips in VSCC table:
+1F4700 (Atmel AT25DF321)
+EF3016 (Winbond W25X32)
+BF2541 (Microchip SST25VF016B)
+1F4700 (Atmel AT25DF321)
+1F4501 (Atmel AT26DF081A)
+1F4600 (Atmel AT26DF161)
+C22014 (Macronix MX25L80)
+C22015 (Macronix MX25L16)
+C22016 (Macronix MX25U16)
+C22017 (Macronix MX25L64)
+C22018 (Macronix MX25L128)
+C2201A (Macronix MX66L512)
+9D7F7A (Unknown 009D7F7Ah)
+BF258E (Microchip SST25VF080B)
+BF2541 (Microchip SST25VF016B)
+208015 (Micron M25PE16)
+EF3014 (Winbond W25X80)
+EF3016 (Winbond W25X32)
+EF3017 (Winbond W25X64)
+EF4017 (Winbond W25Q64)
+EF4018 (Winbond W25Q128)
+EF4019 (Winbond W25Q256)
+EF6017 (Winbond W25Q64)
+EF6018 (Winbond W25Q128)

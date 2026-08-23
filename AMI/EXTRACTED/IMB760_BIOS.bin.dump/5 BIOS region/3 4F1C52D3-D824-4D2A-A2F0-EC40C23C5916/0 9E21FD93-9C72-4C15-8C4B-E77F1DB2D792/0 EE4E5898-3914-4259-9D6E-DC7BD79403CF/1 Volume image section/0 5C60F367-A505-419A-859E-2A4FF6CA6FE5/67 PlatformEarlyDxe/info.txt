@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: PlatformEarlyDxe
+Fixed: No
+Offset: 18DC50h
+File GUID: 7F8D35BD-0CE3-4654-B5D3-73FC4B38AABF
+Type: 07h
+Attributes: 00h
+Full size: 6E52h (28242)
+Header size: 18h (24)
+Body size: 6E3Ah (28218)
+Tail size: 0h (0)
+State: F8h
+Header checksum: CFh, valid
+Data checksum: AAh, valid

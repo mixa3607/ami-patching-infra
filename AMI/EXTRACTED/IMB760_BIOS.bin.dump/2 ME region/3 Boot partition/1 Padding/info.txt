@@ -1,0 +1,7 @@
+Type: Padding
+Subtype: Non-empty
+Fixed: Yes
+Base: A8090h
+Address: FE0A8090h
+Offset: 90h
+Full size: 2F70h (12144)

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SetupConfigUpdateDxeCooperCityRP
+Fixed: No
+Offset: 34BEF8h
+File GUID: BBBE7D9C-4510-D620-74CB-2F812ABD0FC4
+Type: 07h
+Attributes: 00h
+Full size: B4Eh (2894)
+Header size: 18h (24)
+Body size: B36h (2870)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 1Ah, valid
+Data checksum: AAh, valid

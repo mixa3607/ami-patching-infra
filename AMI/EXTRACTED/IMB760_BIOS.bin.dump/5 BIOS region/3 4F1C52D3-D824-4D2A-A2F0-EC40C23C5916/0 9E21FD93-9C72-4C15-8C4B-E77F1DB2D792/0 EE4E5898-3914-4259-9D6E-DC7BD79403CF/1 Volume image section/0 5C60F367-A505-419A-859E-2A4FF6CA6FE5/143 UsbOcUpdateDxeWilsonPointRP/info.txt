@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: UsbOcUpdateDxeWilsonPointRP
+Fixed: No
+Offset: 33FF20h
+File GUID: C95F8AB0-1BC2-417C-8377-9815F578A9EE
+Type: 07h
+Attributes: 00h
+Full size: C02h (3074)
+Header size: 18h (24)
+Body size: BEAh (3050)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 44h, valid
+Data checksum: AAh, valid

@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: SmbiosDataUpdateDxeWilsonCityModular
+Fixed: No
+Offset: 31DA30h
+File GUID: 2649998F-185F-4548-A646-145B2D7710B3
+Type: 07h
+Attributes: 00h
+Full size: 2B7Ah (11130)
+Header size: 18h (24)
+Body size: 2B62h (11106)
+Tail size: 0h (0)
+State: F8h
+Header checksum: F7h, valid
+Data checksum: AAh, valid

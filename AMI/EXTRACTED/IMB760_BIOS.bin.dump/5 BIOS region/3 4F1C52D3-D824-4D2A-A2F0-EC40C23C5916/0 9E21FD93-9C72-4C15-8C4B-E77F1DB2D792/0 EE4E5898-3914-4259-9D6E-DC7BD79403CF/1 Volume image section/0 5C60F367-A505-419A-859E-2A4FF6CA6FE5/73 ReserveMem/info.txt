@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: ReserveMem
+Fixed: No
+Offset: 19EC08h
+File GUID: 2A537C0E-5D9C-45D3-A6CE-3AD02D3E3B53
+Type: 07h
+Attributes: 00h
+Full size: 111Ah (4378)
+Header size: 18h (24)
+Body size: 1102h (4354)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 3Fh, valid
+Data checksum: AAh, valid

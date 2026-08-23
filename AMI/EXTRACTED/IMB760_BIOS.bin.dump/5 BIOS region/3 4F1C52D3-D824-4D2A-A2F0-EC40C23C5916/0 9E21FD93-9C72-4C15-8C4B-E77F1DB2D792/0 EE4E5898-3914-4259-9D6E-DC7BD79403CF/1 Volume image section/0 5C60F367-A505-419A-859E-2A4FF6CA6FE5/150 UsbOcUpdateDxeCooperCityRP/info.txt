@@ -1,0 +1,15 @@
+Type: File
+Subtype: DXE driver
+Text: UsbOcUpdateDxeCooperCityRP
+Fixed: No
+Offset: 3496E0h
+File GUID: 001EE0B2-4F5B-59A9-6CDB-F893FBC4D029
+Type: 07h
+Attributes: 00h
+Full size: C02h (3074)
+Header size: 18h (24)
+Body size: BEAh (3050)
+Tail size: 0h (0)
+State: F8h
+Header checksum: 05h, valid
+Data checksum: AAh, valid
