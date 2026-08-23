@@ -18,6 +18,8 @@ EFIVARS = Path("/sys/firmware/efi/efivars")
 QUESTION_TYPES = "OneOf|Numeric|Checkbox|String|OrderedList|Date|Time|Action|Ref"
 BRIDGE_NAME = "BiosStateLabState"
 BRIDGE_GUID = "3f143cec-91e2-4b9a-90f3-ce93556a1d42"
+REQUEST_NAME = "BiosStateLabRequest"
+RESULT_NAME = "BiosStateLabResult"
 
 
 def write_json(path, value):
@@ -361,6 +363,74 @@ def apply_profile(args):
     print(f"Profile: {len(applied)} changes -> {args.output}")
 
 
+def make_request(args):
+    registry = json.loads(Path(args.registry).read_text())
+    profile = json.loads(Path(args.profile).read_text())
+    questions = {
+        question["key"]: question
+        for source in registry["sources"] for question in source["questions"]
+    }
+    entries = []
+    seen = set()
+    for change in profile.get("changes", []):
+        key, value = change.get("key"), change.get("value")
+        if key in seen or key not in questions or not isinstance(value, int):
+            raise SystemExit(f"Invalid profile change: {change}")
+        seen.add(key)
+        question = questions[key]
+        store = question["varstore"]
+        if not store or question["offset"] is None or not question["width"]:
+            raise SystemExit(f"Question has no writable varstore field: {key}")
+        if not args.unsafe:
+            if question["min"] is not None and value < question["min"]:
+                raise SystemExit(f"Value below IFR minimum for {key}")
+            if question["max"] is not None and value > question["max"]:
+                raise SystemExit(f"Value above IFR maximum for {key}")
+        width = question["width"]
+        if value < 0 or value >= 1 << (width * 8):
+            raise SystemExit(f"Value does not fit {width} bytes: {key}")
+        name = store["name"].encode("utf-16-le")
+        data = value.to_bytes(width, "little")
+        entries.append(struct.pack("<16sIII", uuid.UUID(store["guid"]).bytes_le, len(name), question["offset"], len(data)) + name + data)
+    body = b"".join(entries)
+    payload = struct.pack("<8sIIII", b"BSLREQ01", 1, len(entries), 24 + len(body), 0) + body
+    write_json(args.output, {
+        "format": 1,
+        "source": "BiosStateLabBridgeDxe",
+        "variables": [{
+            "name": REQUEST_NAME,
+            "guid": BRIDGE_GUID,
+            "attributes": 7,
+            "data_b64": base64.b64encode(payload).decode(),
+        }],
+        "profile_queued": profile.get("changes", []),
+    })
+    print(f"Bridge request: {len(entries)} changes -> {args.output}")
+
+
+def bridge_result(args):
+    snapshot_data = json.loads(Path(args.snapshot).read_text())
+    result = next(
+        (item for item in snapshot_data["variables"]
+         if item["name"] == RESULT_NAME and item["guid"].lower() == BRIDGE_GUID),
+        None,
+    )
+    if result is None:
+        raise SystemExit(f"Bridge variable {RESULT_NAME}-{BRIDGE_GUID} is absent")
+    raw = base64.b64decode(result["data_b64"])
+    if len(raw) < 32:
+        raise SystemExit("Bridge result is shorter than its header")
+    magic, version, count, total_size, _, overall = struct.unpack_from("<8sIIIIQ", raw)
+    if magic != b"BSLRES01" or version != 1 or total_size > len(raw) or total_size != 32 + count * 12:
+        raise SystemExit("Bridge result has an unsupported header")
+    entries = [
+        {"request_index": index, "status": status}
+        for index, status in (struct.unpack_from("<IQ", raw, 32 + offset * 12) for offset in range(count))
+    ]
+    write_json(args.output, {"format": 1, "overall_status": overall, "entries": entries})
+    print(f"Bridge result: {count} entries, overall EFI status {overall:#x} -> {args.output}")
+
+
 def evaluate(ops, values):
     stack = []
     for op in ops:
@@ -468,6 +538,16 @@ def main():
     command.add_argument("output")
     command.add_argument("--unsafe", action="store_true", help="Ignore IFR min/max constraints")
     command.set_defaults(func=apply_profile)
+    command = sub.add_parser("make-request", help="Build a runtime bridge request from an IFR profile")
+    command.add_argument("registry")
+    command.add_argument("profile")
+    command.add_argument("output")
+    command.add_argument("--unsafe", action="store_true", help="Ignore IFR min/max constraints")
+    command.set_defaults(func=make_request)
+    command = sub.add_parser("bridge-result", help="Decode bridge write statuses from a snapshot")
+    command.add_argument("snapshot")
+    command.add_argument("output")
+    command.set_defaults(func=bridge_result)
     command = sub.add_parser("state", help="Evaluate static IFR conditions against a snapshot")
     command.add_argument("registry")
     command.add_argument("snapshot")

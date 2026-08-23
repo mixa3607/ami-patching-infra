@@ -19,7 +19,11 @@ typedef VOID *EFI_EVENT;
 #define CONST const
 
 #define EFI_SUCCESS 0ULL
+#define EFI_INVALID_PARAMETER 0x8000000000000002ULL
+#define EFI_BAD_BUFFER_SIZE 0x8000000000000004ULL
 #define EFI_BUFFER_TOO_SMALL 0x8000000000000005ULL
+#define EFI_NOT_FOUND 0x800000000000000EULL
+#define EFI_ACCESS_DENIED 0x800000000000000FULL
 #define EFI_VARIABLE_NON_VOLATILE 0x00000001U
 #define EFI_VARIABLE_BOOTSERVICE_ACCESS 0x00000002U
 #define EFI_VARIABLE_RUNTIME_ACCESS 0x00000004U
@@ -101,6 +105,35 @@ typedef struct {
     UINT32 DataBytes;
     EFI_STATUS Status;
 } BSL_STATE_ENTRY;
+
+typedef struct {
+    UINT8 Magic[8];
+    UINT32 Version;
+    UINT32 EntryCount;
+    UINT32 TotalSize;
+    UINT32 Reserved;
+} BSL_REQUEST_HEADER;
+
+typedef struct {
+    EFI_GUID Guid;
+    UINT32 NameBytes;
+    UINT32 Offset;
+    UINT32 DataBytes;
+} BSL_REQUEST_ENTRY;
+
+typedef struct {
+    UINT8 Magic[8];
+    UINT32 Version;
+    UINT32 EntryCount;
+    UINT32 TotalSize;
+    UINT32 Reserved;
+    EFI_STATUS OverallStatus;
+} BSL_RESULT_HEADER;
+
+typedef struct {
+    UINT32 RequestIndex;
+    EFI_STATUS Status;
+} BSL_RESULT_ENTRY;
 #pragma pack(pop)
 
 #endif

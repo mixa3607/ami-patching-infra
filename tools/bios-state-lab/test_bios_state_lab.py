@@ -60,6 +60,12 @@ class BiosStateLabTest(unittest.TestCase):
             ))
             self.assertEqual(base64.b64decode(json.loads(desired_path.read_text())["variables"][0]["data_b64"]), b"\x01\x00")
 
+            request_path = root / "request.json"
+            lab.make_request(SimpleNamespace(registry=registry_path, profile=profile_path, output=request_path, unsafe=False))
+            request = json.loads(request_path.read_text())
+            request_payload = base64.b64decode(request["variables"][0]["data_b64"])
+            self.assertEqual(struct.unpack_from("<8sIIII", request_payload)[:3], (b"BSLREQ01", 1, 1))
+
     def test_bridge_state_decode(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -84,6 +90,22 @@ class BiosStateLabTest(unittest.TestCase):
             decoded = json.loads(decoded_path.read_text())
             self.assertEqual(decoded["variables"][0]["name"], "TestSetup")
             self.assertEqual(base64.b64decode(decoded["variables"][0]["data_b64"]), b"\x01\x02")
+
+            result_payload = struct.pack("<8sIIIIQIQ", b"BSLRES01", 1, 1, 44, 0, 0, 0, 0)
+            result_snapshot = {
+                "format": 1,
+                "variables": [{
+                    "name": lab.RESULT_NAME,
+                    "guid": lab.BRIDGE_GUID,
+                    "attributes": 7,
+                    "data_b64": base64.b64encode(result_payload).decode(),
+                }],
+            }
+            result_snapshot_path = root / "result-raw.json"
+            result_path = root / "result.json"
+            result_snapshot_path.write_text(json.dumps(result_snapshot))
+            lab.bridge_result(SimpleNamespace(snapshot=result_snapshot_path, output=result_path))
+            self.assertEqual(json.loads(result_path.read_text())["entries"][0]["status"], 0)
 
 
 if __name__ == "__main__":

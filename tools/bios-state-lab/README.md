@@ -104,8 +104,28 @@ python3 bios_state_lab.py apply-profile \
   registry.json ami-setup.json profile.json desired-ami-setup.json
 ```
 
-This only creates a desired snapshot. The current read-only bridge cannot yet
-apply it to firmware; the next bridge milestone will consume the delta at boot.
+This creates a desired snapshot for review. To apply changes, queue the
+corresponding runtime request for the write-capable bridge below.
+
+## Write bridge
+
+The write-capable bridge accepts a short, allowlisted request containing only
+the changed field ranges. Build it from a profile, then write its single
+runtime variable with `restore`:
+
+```sh
+python3 bios_state_lab.py make-request registry.json profile.json request.json
+sudo python3 bios_state_lab.py restore request.json
+```
+
+At the next boot the DXE bridge applies each request entry before
+`ExitBootServices`, writes `BiosStateLabResult`, and deletes the request. After
+the host boots, capture and decode the result:
+
+```sh
+sudo python3 bios_state_lab.py snapshot after.json
+python3 bios_state_lab.py bridge-result after.json result.json
+```
 
 `restore` restores variables that exist in the snapshot. It intentionally does
 not delete variables absent from the snapshot. `write` reuses the existing EFI

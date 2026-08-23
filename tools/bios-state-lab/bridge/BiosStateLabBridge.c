@@ -1,6 +1,9 @@
 #include "bridge.h"
 
 #define BSL_STATE_CAPACITY (32U * 1024U)
+#define BSL_REQUEST_CAPACITY (4U * 1024U)
+#define BSL_RESULT_CAPACITY (4U * 1024U)
+#define BSL_WORK_CAPACITY (16U * 1024U)
 
 typedef struct {
     CHAR16 *Name;
@@ -8,6 +11,8 @@ typedef struct {
 } VARIABLE_TARGET;
 
 static CHAR16 gStateName[] = L"BiosStateLabState";
+static CHAR16 gRequestName[] = L"BiosStateLabRequest";
+static CHAR16 gResultName[] = L"BiosStateLabResult";
 static EFI_GUID gBridgeGuid = EFI_GUID_INIT(
     0x3f143cec, 0x91e2, 0x4b9a, 0x90, 0xf3, 0xce, 0x93, 0x55, 0x6a, 0x1d, 0x42
 );
@@ -27,6 +32,9 @@ static VARIABLE_TARGET gTargets[] = {
 };
 
 static UINT8 gState[BSL_STATE_CAPACITY];
+static UINT8 gRequest[BSL_REQUEST_CAPACITY];
+static UINT8 gResult[BSL_RESULT_CAPACITY];
+static UINT8 gWork[BSL_WORK_CAPACITY];
 
 static VOID CopyBytes(VOID *Destination, CONST VOID *Source, UINTN Count) {
     UINT8 *DestinationBytes = Destination;
@@ -45,6 +53,130 @@ static UINTN StringBytes(CONST CHAR16 *String) {
     return Length * sizeof(CHAR16);
 }
 
+static UINT8 EqualBytes(CONST VOID *Left, CONST VOID *Right, UINTN Count) {
+    CONST UINT8 *LeftBytes = Left;
+    CONST UINT8 *RightBytes = Right;
+    while (Count-- != 0) {
+        if (*LeftBytes++ != *RightBytes++) return 0;
+    }
+    return 1;
+}
+
+static VARIABLE_TARGET *FindTarget(CONST EFI_GUID *Guid, CONST UINT8 *Name, UINTN NameBytes) {
+    UINTN Index;
+    for (Index = 0; Index < sizeof(gTargets) / sizeof(gTargets[0]); Index++) {
+        if (NameBytes == StringBytes(gTargets[Index].Name) &&
+            EqualBytes(Guid, &gTargets[Index].Guid, sizeof(*Guid)) &&
+            EqualBytes(Name, gTargets[Index].Name, NameBytes)) {
+            return &gTargets[Index];
+        }
+    }
+    return 0;
+}
+
+static VOID InitializeResult(BSL_RESULT_HEADER *Header) {
+    ZeroBytes(gResult, sizeof(gResult));
+    CopyBytes(Header->Magic, "BSLRES01", 8);
+    Header->Version = 1;
+    Header->TotalSize = sizeof(*Header);
+    Header->OverallStatus = EFI_SUCCESS;
+}
+
+static VOID AddResult(BSL_RESULT_HEADER *Header, UINT32 RequestIndex, EFI_STATUS Status) {
+    BSL_RESULT_ENTRY *Entry;
+    if (Header->TotalSize + sizeof(*Entry) > sizeof(gResult)) {
+        Header->OverallStatus = EFI_BUFFER_TOO_SMALL;
+        return;
+    }
+    Entry = (BSL_RESULT_ENTRY *)(gResult + Header->TotalSize);
+    Entry->RequestIndex = RequestIndex;
+    Entry->Status = Status;
+    Header->EntryCount++;
+    Header->TotalSize += sizeof(*Entry);
+    if (Status != EFI_SUCCESS && Header->OverallStatus == EFI_SUCCESS) Header->OverallStatus = Status;
+}
+
+static VOID ProcessRequest(EFI_RUNTIME_SERVICES *Runtime) {
+    BSL_RESULT_HEADER *Result = (BSL_RESULT_HEADER *)gResult;
+    UINTN RequestSize = 0;
+    UINT32 RequestAttributes = 0;
+    EFI_STATUS Status;
+    UINTN Position;
+    UINT32 Index;
+
+    Status = Runtime->GetVariable(gRequestName, &gBridgeGuid, &RequestAttributes, &RequestSize, 0);
+    if (Status == EFI_NOT_FOUND) return;
+    InitializeResult(Result);
+    if (Status != EFI_BUFFER_TOO_SMALL || RequestSize > sizeof(gRequest)) {
+        AddResult(Result, 0xFFFFFFFFU, Status);
+        Runtime->SetVariable(gResultName, &gBridgeGuid,
+            EFI_VARIABLE_NON_VOLATILE | EFI_VARIABLE_BOOTSERVICE_ACCESS | EFI_VARIABLE_RUNTIME_ACCESS,
+            Result->TotalSize, gResult);
+        return;
+    }
+    Status = Runtime->GetVariable(gRequestName, &gBridgeGuid, &RequestAttributes, &RequestSize, gRequest);
+    if (Status != EFI_SUCCESS || RequestSize < sizeof(BSL_REQUEST_HEADER)) {
+        AddResult(Result, 0xFFFFFFFFU, Status);
+        goto publish;
+    }
+
+    {
+        BSL_REQUEST_HEADER *Header = (BSL_REQUEST_HEADER *)gRequest;
+        if (!EqualBytes(Header->Magic, "BSLREQ01", 8) || Header->Version != 1 ||
+            Header->TotalSize != RequestSize || Header->TotalSize < sizeof(*Header)) {
+            AddResult(Result, 0xFFFFFFFFU, EFI_INVALID_PARAMETER);
+            goto publish;
+        }
+        Position = sizeof(*Header);
+        for (Index = 0; Index < Header->EntryCount; Index++) {
+            BSL_REQUEST_ENTRY *Entry;
+            VARIABLE_TARGET *Target;
+            UINTN TargetSize = 0;
+            UINT32 TargetAttributes = 0;
+            EFI_STATUS EntryStatus;
+            if (Position + sizeof(*Entry) > Header->TotalSize) {
+                AddResult(Result, Index, EFI_INVALID_PARAMETER);
+                break;
+            }
+            Entry = (BSL_REQUEST_ENTRY *)(gRequest + Position);
+            Position += sizeof(*Entry);
+            if (Entry->NameBytes == 0 || (Entry->NameBytes & 1) != 0 || Entry->DataBytes == 0 ||
+                Position + Entry->NameBytes + Entry->DataBytes > Header->TotalSize) {
+                AddResult(Result, Index, EFI_INVALID_PARAMETER);
+                break;
+            }
+            Target = FindTarget(&Entry->Guid, gRequest + Position, Entry->NameBytes);
+            Position += Entry->NameBytes;
+            if (!Target) {
+                AddResult(Result, Index, EFI_ACCESS_DENIED);
+                Position += Entry->DataBytes;
+                continue;
+            }
+            EntryStatus = Runtime->GetVariable(Target->Name, &Target->Guid, &TargetAttributes, &TargetSize, 0);
+            if (EntryStatus != EFI_BUFFER_TOO_SMALL || TargetSize > sizeof(gWork) ||
+                Entry->Offset > TargetSize || Entry->DataBytes > TargetSize - Entry->Offset) {
+                AddResult(Result, Index, EntryStatus == EFI_BUFFER_TOO_SMALL ? EFI_BAD_BUFFER_SIZE : EntryStatus);
+                Position += Entry->DataBytes;
+                continue;
+            }
+            EntryStatus = Runtime->GetVariable(Target->Name, &Target->Guid, &TargetAttributes, &TargetSize, gWork);
+            if (EntryStatus == EFI_SUCCESS) {
+                CopyBytes(gWork + Entry->Offset, gRequest + Position, Entry->DataBytes);
+                EntryStatus = Runtime->SetVariable(Target->Name, &Target->Guid, TargetAttributes, TargetSize, gWork);
+            }
+            AddResult(Result, Index, EntryStatus);
+            Position += Entry->DataBytes;
+        }
+        if (Position != Header->TotalSize) AddResult(Result, 0xFFFFFFFFU, EFI_INVALID_PARAMETER);
+    }
+
+publish:
+    Runtime->SetVariable(gResultName, &gBridgeGuid,
+        EFI_VARIABLE_NON_VOLATILE | EFI_VARIABLE_BOOTSERVICE_ACCESS | EFI_VARIABLE_RUNTIME_ACCESS,
+        Result->TotalSize, gResult);
+    Runtime->SetVariable(gRequestName, &gBridgeGuid, 0, 0, 0);
+}
+
 EFI_STATUS EFIAPI BridgeEntry(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *SystemTable) {
     EFI_RUNTIME_SERVICES *Runtime = SystemTable->RuntimeServices;
     BSL_STATE_HEADER *Header = (BSL_STATE_HEADER *)gState;
@@ -52,6 +184,7 @@ EFI_STATUS EFIAPI BridgeEntry(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *Sy
     UINTN Index;
 
     (void)ImageHandle;
+    ProcessRequest(Runtime);
     ZeroBytes(gState, sizeof(gState));
     CopyBytes(Header->Magic, "BSLSTATE", 8);
     Header->Version = 1;
