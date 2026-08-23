@@ -69,6 +69,15 @@ python3 bios_state_lab.py snapshot after-write.json
 python3 bios_state_lab.py restore before.json
 ```
 
+After flashing the read-only bridge and rebooting, decode its runtime variable
+into a normal snapshot before evaluating IFR state:
+
+```sh
+python3 bios_state_lab.py snapshot bridge-raw.json
+python3 bios_state_lab.py bridge-state bridge-raw.json ami-setup.json
+python3 bios_state_lab.py state registry.json ami-setup.json > ami-state.json
+```
+
 `restore` restores variables that exist in the snapshot. It intentionally does
 not delete variables absent from the snapshot. `write` reuses the existing EFI
 attributes unless `--attrs` is supplied.

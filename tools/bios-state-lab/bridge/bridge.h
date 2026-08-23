@@ -85,6 +85,7 @@ typedef struct {
     VOID *BootServices;
 } EFI_SYSTEM_TABLE;
 
+#pragma pack(push, 1)
 typedef struct {
     UINT8 Magic[8];
     UINT32 Version;
@@ -100,5 +101,6 @@ typedef struct {
     UINT32 DataBytes;
     EFI_STATUS Status;
 } BSL_STATE_ENTRY;
+#pragma pack(pop)
 
 #endif

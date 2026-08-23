@@ -7,13 +7,17 @@ import hashlib
 import json
 import os
 import re
+import struct
 import subprocess
 import sys
+import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
 EFIVARS = Path("/sys/firmware/efi/efivars")
 QUESTION_TYPES = "OneOf|Numeric|Checkbox|String|OrderedList|Date|Time|Action|Ref"
+BRIDGE_NAME = "BiosStateLabState"
+BRIDGE_GUID = "3f143cec-91e2-4b9a-90f3-ce93556a1d42"
 
 
 def write_json(path, value):
@@ -206,6 +210,51 @@ def restore(args):
     print(f"Restored {len(snapshot_data['variables'])} variables from {args.snapshot}")
 
 
+def bridge_state(args):
+    snapshot_data = json.loads(Path(args.snapshot).read_text())
+    bridge = next(
+        (item for item in snapshot_data["variables"]
+         if item["name"] == BRIDGE_NAME and item["guid"].lower() == BRIDGE_GUID),
+        None,
+    )
+    if bridge is None:
+        raise SystemExit(f"Bridge variable {BRIDGE_NAME}-{BRIDGE_GUID} is absent")
+    raw = base64.b64decode(bridge["data_b64"])
+    if len(raw) < 24:
+        raise SystemExit("Bridge state is shorter than its header")
+    magic, version, entry_count, total_size, _ = struct.unpack_from("<8sIIII", raw)
+    if magic != b"BSLSTATE" or version != 1 or total_size > len(raw):
+        raise SystemExit("Bridge state has an unsupported header")
+    position = 24
+    variables = []
+    for _ in range(entry_count):
+        if position + 36 > total_size:
+            raise SystemExit("Bridge state has a truncated entry header")
+        guid_raw, attrs, name_bytes, data_bytes, status = struct.unpack_from("<16sIIIQ", raw, position)
+        position += 36
+        end = position + name_bytes + data_bytes
+        if name_bytes % 2 or end > total_size:
+            raise SystemExit("Bridge state has an invalid entry length")
+        name = raw[position:position + name_bytes].decode("utf-16-le")
+        position += name_bytes
+        data = raw[position:end]
+        position = end
+        if status == 0:
+            variables.append({
+                "name": name,
+                "guid": str(uuid.UUID(bytes_le=guid_raw)),
+                "attributes": attrs,
+                "data_b64": base64.b64encode(data).decode(),
+            })
+    write_json(args.output, {
+        "format": 1,
+        "created_at": snapshot_data.get("created_at"),
+        "source": "BiosStateLabBridgeDxe",
+        "variables": variables,
+    })
+    print(f"Bridge state: {len(variables)}/{entry_count} variables -> {args.output}")
+
+
 def read_snapshot_values(snapshot_data):
     return {
         (item["name"], item["guid"].lower()): base64.b64decode(item["data_b64"])
@@ -304,6 +353,10 @@ def main():
     command.add_argument("snapshot")
     command.add_argument("--efivars", default=EFIVARS)
     command.set_defaults(func=restore)
+    command = sub.add_parser("bridge-state", help="Decode a read-only bridge variable from a snapshot")
+    command.add_argument("snapshot")
+    command.add_argument("output")
+    command.set_defaults(func=bridge_state)
     command = sub.add_parser("state", help="Evaluate static IFR conditions against a snapshot")
     command.add_argument("registry")
     command.add_argument("snapshot")

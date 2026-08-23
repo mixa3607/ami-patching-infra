@@ -1,6 +1,8 @@
 import contextlib
 import io
 import json
+import base64
+import struct
 import tempfile
 import unittest
 from pathlib import Path
@@ -44,6 +46,31 @@ class BiosStateLabTest(unittest.TestCase):
             self.assertEqual(state["coverage"]["missing_varstores"], [])
             child = next(item for item in state["questions"] if item["question"]["prompt"] == "Child")
             self.assertTrue(child["state"]["hidden"])
+
+    def test_bridge_state_decode(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            name = "TestSetup".encode("utf-16-le")
+            # UUID fields in EFI are little-endian for the first three fields.
+            guid = __import__("uuid").UUID("aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee").bytes_le
+            entry = struct.pack("<16sIIIQ", guid, 3, len(name), 2, 0) + name + b"\x01\x02"
+            payload = struct.pack("<8sIIII", b"BSLSTATE", 1, 1, 24 + len(entry), 0) + entry
+            raw_snapshot = {
+                "format": 1,
+                "variables": [{
+                    "name": lab.BRIDGE_NAME,
+                    "guid": lab.BRIDGE_GUID,
+                    "attributes": 7,
+                    "data_b64": base64.b64encode(payload).decode(),
+                }],
+            }
+            raw_path = root / "raw.json"
+            decoded_path = root / "decoded.json"
+            raw_path.write_text(json.dumps(raw_snapshot))
+            lab.bridge_state(SimpleNamespace(snapshot=raw_path, output=decoded_path))
+            decoded = json.loads(decoded_path.read_text())
+            self.assertEqual(decoded["variables"][0]["name"], "TestSetup")
+            self.assertEqual(base64.b64decode(decoded["variables"][0]["data_b64"]), b"\x01\x02")
 
 
 if __name__ == "__main__":
