@@ -47,6 +47,19 @@ class BiosStateLabTest(unittest.TestCase):
             child = next(item for item in state["questions"] if item["question"]["prompt"] == "Child")
             self.assertTrue(child["state"]["hidden"])
 
+            values_path = root / "values.json"
+            lab.values(SimpleNamespace(registry=registry_path, snapshot=snapshot_path, output=values_path))
+            exported = json.loads(values_path.read_text())
+            controller = next(item for item in exported["parameters"] if item["prompt"] == "Controller")
+            profile_path = root / "profile.json"
+            profile_path.write_text(json.dumps({"changes": [{"key": controller["key"], "value": 1}]}))
+            desired_path = root / "desired.json"
+            lab.apply_profile(SimpleNamespace(
+                registry=registry_path, snapshot=snapshot_path, profile=profile_path,
+                output=desired_path, unsafe=False,
+            ))
+            self.assertEqual(base64.b64decode(json.loads(desired_path.read_text())["variables"][0]["data_b64"]), b"\x01\x00")
+
     def test_bridge_state_decode(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

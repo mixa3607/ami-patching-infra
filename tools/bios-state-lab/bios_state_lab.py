@@ -42,6 +42,7 @@ def match_field(line, name):
 
 def parse_ifr(path, root):
     text = path.read_text(errors="replace").splitlines()
+    source_path = str(path.relative_to(root))
     formset = None
     stores = {}
     questions = []
@@ -95,7 +96,7 @@ def parse_ifr(path, root):
             offset = match_field(line, "VarStoreInfo")
         bits = match_field(line, "Size")
         storage = stores.get(store_id)
-        questions.append({
+        question = {
             "id": f"{formset['guid'] if formset else 'unknown'}:{question_id:#x}",
             "formset_guid": formset["guid"] if formset else None,
             "formset_title": formset["title"] if formset else None,
@@ -106,14 +107,21 @@ def parse_ifr(path, root):
             "varstore": storage,
             "offset": offset,
             "width": max(1, bits // 8) if bits else None,
+            "min": match_field(line, "Min"),
+            "max": match_field(line, "Max"),
+            "step": match_field(line, "Step"),
             "conditions": [
                 {"kind": item["kind"], "ops": item["ops"][:]}
                 for item in active
             ],
-        })
+        }
+        store_key = storage["name"] if storage else "no-varstore"
+        offset_key = f"{offset:#x}" if offset is not None else "no-offset"
+        question["key"] = f"{source_path}:{question['id']}:{store_key}:{offset_key}"
+        questions.append(question)
 
     return {
-        "path": str(path.relative_to(root)),
+        "path": source_path,
         "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
         "formset": formset,
         "varstores": stores,
@@ -262,6 +270,97 @@ def read_snapshot_values(snapshot_data):
     }
 
 
+def iter_parameters(registry, snapshot_data):
+    variables = read_snapshot_values(snapshot_data)
+    for source in registry["sources"]:
+        for question in source["questions"]:
+            store = question["varstore"]
+            if not store or question["offset"] is None or not question["width"]:
+                continue
+            data = variables.get((store["name"], store["guid"]))
+            start = question["offset"]
+            end = start + question["width"]
+            if data is None or end > len(data):
+                continue
+            yield source["path"], question, int.from_bytes(data[start:end], "little")
+
+
+def values(args):
+    registry = json.loads(Path(args.registry).read_text())
+    snapshot_data = json.loads(Path(args.snapshot).read_text())
+    parameters = []
+    for source, question, value in iter_parameters(registry, snapshot_data):
+        parameters.append({
+            "key": question["key"],
+            "source": source,
+            "prompt": question["prompt"],
+            "type": question["type"],
+            "value": value,
+            "storage": {
+                "name": question["varstore"]["name"],
+                "guid": question["varstore"]["guid"],
+                "offset": question["offset"],
+                "width": question["width"],
+            },
+            "limits": {key: question[key] for key in ("min", "max", "step") if question[key] is not None},
+        })
+    write_json(args.output, {"format": 1, "source": snapshot_data.get("source"), "parameters": parameters})
+    print(f"Values: {len(parameters)} parameters -> {args.output}")
+
+
+def apply_profile(args):
+    registry = json.loads(Path(args.registry).read_text())
+    snapshot_data = json.loads(Path(args.snapshot).read_text())
+    profile = json.loads(Path(args.profile).read_text())
+    questions = {
+        question["key"]: question
+        for source in registry["sources"] for question in source["questions"]
+    }
+    payloads = {
+        (item["name"], item["guid"].lower()): bytearray(base64.b64decode(item["data_b64"]))
+        for item in snapshot_data["variables"]
+    }
+    applied = []
+    seen = set()
+    for change in profile.get("changes", []):
+        key = change.get("key")
+        value = change.get("value")
+        if key in seen:
+            raise SystemExit(f"Profile changes {key} more than once")
+        seen.add(key)
+        if key not in questions or not isinstance(value, int):
+            raise SystemExit(f"Invalid profile change: {change}")
+        question = questions[key]
+        store = question["varstore"]
+        if not store or question["offset"] is None or not question["width"]:
+            raise SystemExit(f"Question has no writable varstore field: {key}")
+        if not args.unsafe:
+            if question["min"] is not None and value < question["min"]:
+                raise SystemExit(f"Value below IFR minimum for {key}")
+            if question["max"] is not None and value > question["max"]:
+                raise SystemExit(f"Value above IFR maximum for {key}")
+        limit = 1 << (question["width"] * 8)
+        if value < 0 or value >= limit:
+            raise SystemExit(f"Value does not fit {question['width']} bytes: {key}")
+        payload_key = (store["name"], store["guid"])
+        payload = payloads.get(payload_key)
+        start = question["offset"]
+        end = start + question["width"]
+        if payload is None or end > len(payload):
+            raise SystemExit(f"Snapshot lacks storage for {key}")
+        old_value = int.from_bytes(payload[start:end], "little")
+        payload[start:end] = value.to_bytes(question["width"], "little")
+        applied.append({"key": key, "old_value": old_value, "new_value": value})
+    result = dict(snapshot_data)
+    result["variables"] = [
+        dict(item, data_b64=base64.b64encode(payloads[(item["name"], item["guid"].lower())]).decode())
+        for item in snapshot_data["variables"]
+    ]
+    result["profile_applied"] = applied
+    write_json(args.output, result)
+    print(f"Profile: {len(applied)} changes -> {args.output}")
+
+
 def evaluate(ops, values):
     stack = []
     for op in ops:
@@ -357,6 +456,18 @@ def main():
     command.add_argument("snapshot")
     command.add_argument("output")
     command.set_defaults(func=bridge_state)
+    command = sub.add_parser("values", help="Export IFR-addressed values from a snapshot")
+    command.add_argument("registry")
+    command.add_argument("snapshot")
+    command.add_argument("output")
+    command.set_defaults(func=values)
+    command = sub.add_parser("apply-profile", help="Apply integer field changes to a copy of a snapshot")
+    command.add_argument("registry")
+    command.add_argument("snapshot")
+    command.add_argument("profile")
+    command.add_argument("output")
+    command.add_argument("--unsafe", action="store_true", help="Ignore IFR min/max constraints")
+    command.set_defaults(func=apply_profile)
     command = sub.add_parser("state", help="Evaluate static IFR conditions against a snapshot")
     command.add_argument("registry")
     command.add_argument("snapshot")

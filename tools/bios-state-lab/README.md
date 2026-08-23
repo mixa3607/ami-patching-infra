@@ -78,6 +78,35 @@ python3 bios_state_lab.py bridge-state bridge-raw.json ami-setup.json
 python3 bios_state_lab.py state registry.json ami-setup.json > ami-state.json
 ```
 
+Export field values with their exact binary location:
+
+```sh
+python3 bios_state_lab.py values registry.json ami-setup.json values.json
+```
+
+`values.json` provides a stable `key` per IFR question. Use that key in a
+profile; the tool changes only the specified little-endian fields and preserves
+every other byte in the source variable:
+
+```json
+{
+  "changes": [
+    {
+      "key": "<key copied from values.json>",
+      "value": 1
+    }
+  ]
+}
+```
+
+```sh
+python3 bios_state_lab.py apply-profile \
+  registry.json ami-setup.json profile.json desired-ami-setup.json
+```
+
+This only creates a desired snapshot. The current read-only bridge cannot yet
+apply it to firmware; the next bridge milestone will consume the delta at boot.
+
 `restore` restores variables that exist in the snapshot. It intentionally does
 not delete variables absent from the snapshot. `write` reuses the existing EFI
 attributes unless `--attrs` is supplied.
