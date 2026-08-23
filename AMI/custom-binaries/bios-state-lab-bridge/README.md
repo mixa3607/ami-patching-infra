@@ -17,7 +17,7 @@ then deletes the request. The result contains one EFI status per request entry.
 Build and inject a ROM with:
 
 ```sh
-../../../../AMI/build-bridge.sh ../../../../AMI/IMB760_BIOS.bin bridge.rom
+../../build-bridge.sh ../../IMB760_BIOS.bin bridge.rom
 ```
 
 The builder replaces the PE32 section of `AmiRedFishApi`

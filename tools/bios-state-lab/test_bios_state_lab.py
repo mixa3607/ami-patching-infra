@@ -15,10 +15,13 @@ IFR = '''Program version: 1.6.0, Extraction mode: UEFI
 0x0: FormSet Guid: 11111111-2222-3333-4444-555555555555, Title: "Test", Help: "" { }
 0x1: \tVarStoreEfi Guid: AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE, VarStoreId: 0x1, Attributes: 0x3, Size: 0x2, Name: "TestSetup" { }
 0x2: \tOneOf Prompt: "Controller", Help: "", QuestionFlags: 0x10, QuestionId: 0x1, VarStoreId: 0x1, VarOffset: 0x0, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { }
-0x3: \tSuppressIf { }
-0x4: \t\tEqIdVal QuestionId: 0x1, Value: 0x0 { }
-0x5: \t\tOneOf Prompt: "Child", Help: "", QuestionFlags: 0x10, QuestionId: 0x2, VarStoreId: 0x1, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { }
-0x6: \tEnd { }
+0x3: \t\tOneOfOption Option: "Disabled" Value: 0, Default, MfgDefault { }
+0x4: \t\tOneOfOption Option: "Enabled" Value: 1 { }
+0x5: \tEnd { }
+0x6: \tSuppressIf { }
+0x7: \t\tEqIdVal QuestionId: 0x1, Value: 0x0 { }
+0x8: \t\tOneOf Prompt: "Child", Help: "", QuestionFlags: 0x10, QuestionId: 0x2, VarStoreId: 0x1, VarOffset: 0x1, Flags: 0x10, Size: 8, Min: 0x0, Max: 0x1, Step: 0x0 { }
+0x9: \tEnd { }
 '''
 
 
@@ -51,6 +54,8 @@ class BiosStateLabTest(unittest.TestCase):
             lab.values(SimpleNamespace(registry=registry_path, snapshot=snapshot_path, output=values_path))
             exported = json.loads(values_path.read_text())
             controller = next(item for item in exported["parameters"] if item["prompt"] == "Controller")
+            self.assertEqual(controller["selected_option"]["label"], "Disabled")
+            self.assertEqual(controller["options"][1]["label"], "Enabled")
             profile_path = root / "profile.json"
             profile_path.write_text(json.dumps({"changes": [{"key": controller["key"], "value": 1}]}))
             desired_path = root / "desired.json"
@@ -65,6 +70,12 @@ class BiosStateLabTest(unittest.TestCase):
             request = json.loads(request_path.read_text())
             request_payload = base64.b64decode(request["variables"][0]["data_b64"])
             self.assertEqual(struct.unpack_from("<8sIIII", request_payload)[:3], (b"BSLREQ01", 1, 1))
+
+            profile_path.write_text(json.dumps({"changes": [{"key": controller["key"], "value": 2}]}))
+            with self.assertRaisesRegex(SystemExit, "not a OneOf option"):
+                lab.make_request(SimpleNamespace(
+                    registry=registry_path, profile=profile_path, output=request_path, unsafe=False,
+                ))
 
     def test_bridge_state_decode(self):
         with tempfile.TemporaryDirectory() as directory:

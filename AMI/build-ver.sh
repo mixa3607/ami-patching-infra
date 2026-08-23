@@ -87,6 +87,17 @@ function patch_mcodes {
   $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "B52282EE-9B66-44B9-B1CF-7E5040F787C1" 0x01 "$BUILD_DIR/fit.bin" -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
 }
 
+function patch_bios_state_lab_bridge {
+  BRIDGE_DIR="$SOURCES_DIR/custom-binaries/bios-state-lab-bridge"
+  RED_FISH_GUID="D4395796-6F4C-4C6B-B9D1-92DAA7199A84"
+
+  echo "Building BIOS state lab bridge"
+  make -C "$BRIDGE_DIR" clean all
+  echo "Injecting BIOS state lab bridge"
+  $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$RED_FISH_GUID" 0x10 \
+    "$BRIDGE_DIR/build/BiosStateLabBridge.efi" -o "$BUILD_DIR/$PATCHED_DUMP"
+}
+
 function patch_dmi {
   echo "Processing DMI table"
   DMI_TABLE_GUID="$(ls "$SOURCES_DIR/DMI" | grep '\.guid$' | sed 's|\.guid$||1')"
@@ -122,6 +133,7 @@ patch_dmi
 patch_logos
 patch_IFRs
 patch_mcodes
+patch_bios_state_lab_bridge
 echo
 
 echo "==================== Final ===================="

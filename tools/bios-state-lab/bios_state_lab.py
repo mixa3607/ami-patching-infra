@@ -50,6 +50,7 @@ def parse_ifr(path, root):
     questions = []
     conditions = []
     active = []
+    active_oneof = None
 
     for line in text:
         depth = indent(line)
@@ -79,8 +80,20 @@ def parse_ifr(path, root):
             continue
 
         if re.search(r'\sEnd\s', line):
+            if active_oneof and depth == active_oneof["depth"]:
+                active_oneof = None
             active = [item for item in active if item["depth"] != depth]
             continue
+
+        if active_oneof and depth > active_oneof["depth"]:
+            option = re.search(r'\sOneOfOption Option: "(.*?)" Value: (0x[0-9A-Fa-f]+|\d+)(.*)', line)
+            if option:
+                active_oneof["question"]["options"].append({
+                    "label": option.group(1),
+                    "value": parse_int(option.group(2)),
+                    "default": bool(re.search(r', Default(?:,|\s| \{)', option.group(3))),
+                    "mfg_default": "MfgDefault" in option.group(3),
+                })
 
         # Operators within an active condition are emitted in IFR stack order.
         if active and depth > active[-1]["depth"]:
@@ -121,6 +134,9 @@ def parse_ifr(path, root):
         offset_key = f"{offset:#x}" if offset is not None else "no-offset"
         question["key"] = f"{source_path}:{question['id']}:{store_key}:{offset_key}"
         questions.append(question)
+        if question["type"] == "OneOf":
+            question["options"] = []
+            active_oneof = {"depth": depth, "question": question}
 
     return {
         "path": source_path,
@@ -287,6 +303,18 @@ def iter_parameters(registry, snapshot_data):
             yield source["path"], question, int.from_bytes(data[start:end], "little")
 
 
+def validate_question_value(question, value, unsafe):
+    if unsafe:
+        return
+    options = question.get("options")
+    if options and value not in {option["value"] for option in options}:
+        raise SystemExit(f"Value is not a OneOf option: {question['key']}")
+    if question["min"] is not None and value < question["min"]:
+        raise SystemExit(f"Value below IFR minimum for {question['key']}")
+    if question["max"] is not None and value > question["max"]:
+        raise SystemExit(f"Value above IFR maximum for {question['key']}")
+
+
 def values(args):
     registry = json.loads(Path(args.registry).read_text())
     snapshot_data = json.loads(Path(args.snapshot).read_text())
@@ -306,6 +334,11 @@ def values(args):
             },
             "limits": {key: question[key] for key in ("min", "max", "step") if question[key] is not None},
         })
+        if question.get("options"):
+            parameters[-1]["options"] = question["options"]
+            parameters[-1]["selected_option"] = next(
+                (option for option in question["options"] if option["value"] == value), None,
+            )
     write_json(args.output, {"format": 1, "source": snapshot_data.get("source"), "parameters": parameters})
     print(f"Values: {len(parameters)} parameters -> {args.output}")
 
@@ -336,11 +369,7 @@ def apply_profile(args):
         store = question["varstore"]
         if not store or question["offset"] is None or not question["width"]:
             raise SystemExit(f"Question has no writable varstore field: {key}")
-        if not args.unsafe:
-            if question["min"] is not None and value < question["min"]:
-                raise SystemExit(f"Value below IFR minimum for {key}")
-            if question["max"] is not None and value > question["max"]:
-                raise SystemExit(f"Value above IFR maximum for {key}")
+        validate_question_value(question, value, args.unsafe)
         limit = 1 << (question["width"] * 8)
         if value < 0 or value >= limit:
             raise SystemExit(f"Value does not fit {question['width']} bytes: {key}")
@@ -381,11 +410,7 @@ def make_request(args):
         store = question["varstore"]
         if not store or question["offset"] is None or not question["width"]:
             raise SystemExit(f"Question has no writable varstore field: {key}")
-        if not args.unsafe:
-            if question["min"] is not None and value < question["min"]:
-                raise SystemExit(f"Value below IFR minimum for {key}")
-            if question["max"] is not None and value > question["max"]:
-                raise SystemExit(f"Value above IFR maximum for {key}")
+        validate_question_value(question, value, args.unsafe)
         width = question["width"]
         if value < 0 or value >= 1 << (width * 8):
             raise SystemExit(f"Value does not fit {width} bytes: {key}")

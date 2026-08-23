@@ -3,6 +3,9 @@
 Experimental Linux-first toolkit for Axiomtek IMB760 BIOS research. It treats
 the setup UI as a view over UEFI variables, not as the configuration API.
 
+See [EXAMPLES.md](EXAMPLES.md) for the tested end-to-end workflow, including
+the IMB760 `Memory Frequency` OneOf example.
+
 ## Goals
 
 - rebuild a parameter registry from *new* verbose IFR extraction results;
@@ -87,6 +90,10 @@ python3 bios_state_lab.py values registry.json ami-setup.json values.json
 `values.json` provides a stable `key` per IFR question. Use that key in a
 profile; the tool changes only the specified little-endian fields and preserves
 every other byte in the source variable:
+
+For a `OneOf` question it also includes `options` (the IFR value-to-label
+table) and `selected_option`. Profiles still use the numeric option value; an
+out-of-list value is rejected unless `--unsafe` is explicitly supplied.
 
 ```json
 {

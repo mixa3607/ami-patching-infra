@@ -8,7 +8,7 @@ fi
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_DIR="$(dirname "$SCRIPT_DIR")"
-BRIDGE_DIR="$REPO_DIR/tools/bios-state-lab/bridge"
+BRIDGE_DIR="$SCRIPT_DIR/custom-binaries/bios-state-lab-bridge"
 UEFI_REPLACE="$REPO_DIR/SOFTWARE/UEFITool_0.28.0/UEFIReplace"
 RED_FISH_GUID="D4395796-6F4C-4C6B-B9D1-92DAA7199A84"
 
