@@ -109,10 +109,7 @@ static VOID ProcessRequest(EFI_RUNTIME_SERVICES *Runtime) {
     InitializeResult(Result);
     if (Status != EFI_BUFFER_TOO_SMALL || RequestSize > sizeof(gRequest)) {
         AddResult(Result, 0xFFFFFFFFU, Status);
-        Runtime->SetVariable(gResultName, &gBridgeGuid,
-            EFI_VARIABLE_NON_VOLATILE | EFI_VARIABLE_BOOTSERVICE_ACCESS | EFI_VARIABLE_RUNTIME_ACCESS,
-            Result->TotalSize, gResult);
-        return;
+        goto publish;
     }
     Status = Runtime->GetVariable(gRequestName, &gBridgeGuid, &RequestAttributes, &RequestSize, gRequest);
     if (Status != EFI_SUCCESS || RequestSize < sizeof(BSL_REQUEST_HEADER)) {
