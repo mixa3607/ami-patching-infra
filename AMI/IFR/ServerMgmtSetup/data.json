@@ -250,8 +250,8 @@
             }
           ],
           "accessLevel": "09",
-          "failsafe": "00",
-          "optimal": "00",
+          "failsafe": "03",
+          "optimal": "03",
           "offsets": {
             "accessLevel": "0x18784",
             "failsafe": "0x187A8",
