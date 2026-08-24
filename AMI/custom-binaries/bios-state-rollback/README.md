@@ -10,18 +10,27 @@ but the mechanism is simple and requires no SPI surgery.
 
 ## How it works
 
-Two modules + the already-patched BIOS defaults.
+Two modules + the patched BIOS defaults.
 
-### BIOS defaults (already committed in `../IFR/*/data.json`)
+### BIOS defaults (authoritative: the flashed NVAR store)
 
-So a failed boot *resets instead of dead-halting*:
+The ROM is a full flash dump that already contains a POPULATED NVAR variable
+store (SPI `0x1000000`/`0x1080000`, banks FA4974FC + embedded `StdDefaults`).
+AMI reads the live setup variables straight from this store; the
+setupdata/external-defaults/IFR sources are only consulted when a variable is
+MISSING, so on a valid store they never apply. `patch-nvar-store.py` edits the
+store directly (both banks + StdDefaults), and `patch-nvar-defaults.py` /
+`patch-ifr-defaults.py` patch the other sources as defense-in-depth.
+
+Applied so a failed boot *resets instead of dead-halting*:
 
 - `SocketMemoryConfig` "Halt on mem Training Error": Enable -> **Disable**
-  (MRC no longer dead-halts on a training failure, it takes the reset path).
 - `MemBootHealthConfig` "Memory Boot Health Check": Disable -> **Auto**,
   "Reboot On Critical Failure" stays Enable.
 - `ServerMgmtSetup` "FRB-2 Timer Policy": Do Nothing -> **Power Cycle**
-  (BMC auto power-cycles a POST hang; FRB-2 is on by default, timeout 6 min).
+- `Setup` "Boot option filter": UEFI and Legacy -> **UEFI only** (0x02)
+
+Full history/lessons: `AMI/MEMORY_OC_RECOVERY.md`.
 
 ### PEI watchdog (`BiosStateRollbackPei.c`)
 

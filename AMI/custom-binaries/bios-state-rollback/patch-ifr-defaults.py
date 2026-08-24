@@ -59,7 +59,8 @@ def patch_oneof_option_flags(data, question_id, var_store, var_offset, make_defa
     begin = oneof_options_end(data, start)
     made = cleared = 0
     pos = begin
-    # iterate the option opcodes (0x09) following the OneOf header
+    # iterate the option opcodes (0x09) following the OneOf header; skip any
+    # EFI_IFR_DEFAULT (5B 06) opcodes that sit between the header and options
     while pos + 6 < len(data):
         if data[pos] == 0x09 and data[pos + 1] == 0x07:
             # 09 07 <stringid2> <flags1> <type1> <value1>
@@ -74,8 +75,10 @@ def patch_oneof_option_flags(data, question_id, var_store, var_offset, make_defa
                     data[flags_off] &= ~(OPTION_DEFAULT | OPTION_DEFAULT_MFG)
                     cleared += 1
             pos += data[pos + 1]
+        elif data[pos] == 0x5B and data[pos + 1] == 0x06:
+            pos += 6
         else:
-            # stop at the first non-option opcode (End 0x29 / default 0x5B / etc.)
+            # stop at the first non-option opcode (End 0x29 / etc.)
             break
     return made, cleared
 
@@ -123,6 +126,13 @@ def main():
         print('FRB-2 Policy defaults set to Power Cycle: %d opcode(s)' % n)
         if n < 2:
             raise SystemExit('ServerMgmtSetup patch incomplete')
+    elif which == 'Setup':
+        # Boot option filter: Q0x12A, varstore 0x1, offset 0xEF
+        m, c = patch_oneof_option_flags(data, 0x012A, 0x0001, 0x00EF,
+                                        make_default=(2, 0x038B), clear_default=(0, 0x0389))
+        print('Boot option filter: made-default=%d cleared-default=%d' % (m, c))
+        if not (m and c):
+            raise SystemExit('Setup patch incomplete')
     else:
         raise SystemExit('unknown target %s' % which)
 

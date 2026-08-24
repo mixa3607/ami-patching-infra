@@ -32,6 +32,10 @@ MBHC_0x01 = [
     0x100C8E6, 0x1002D9D,   # bank0 live + StdDefaults
     0x108B57C, 0x1082D9D,   # bank1 live + StdDefaults
 ]
+SETUP_BOOTFILTER_0xEF = [
+    0x100A1FB, 0x10001A7,   # bank0 live + StdDefaults data[0xEF]
+    0x108A2AB, 0x10801A7,   # bank1 live + StdDefaults data[0xEF]
+]
 
 
 def apply(data, offsets, old, new, label):
@@ -56,6 +60,7 @@ def main():
     total += apply(data, SMC_0xC8, 0x01, 0x00, 'HaltOnMemTrainError')
     total += apply(data, SERVER_0x19, 0x00, 0x03, 'FRB-2 Policy')
     total += apply(data, MBHC_0x01, 0x02, 0x00, 'MemBootHealthCheck')
+    total += apply(data, SETUP_BOOTFILTER_0xEF, 0x00, 0x02, 'Boot option filter (UEFI only)')
     open(dst, 'wb').write(data)
     print('patched %d bytes -> %s' % (total, dst))
 
