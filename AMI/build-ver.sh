@@ -63,6 +63,9 @@ function patch_IFRs {
     echo "GUID: $IFR_GUID"
     echo "ORIG: $ORIG_SCT"
     $uefieditorcli sct --setup "$IFR_DIR/orig/$ORIG_SCT" --data "$IFR_DIR/data.json" -o "$BUILD_DIR/$IFR_NAME.sct"
+    if [ "$IFR_NAME" == "SocketSetup" ] || [ "$IFR_NAME" == "ServerMgmtSetup" ]; then
+      python3 "$SOURCES_DIR/custom-binaries/bios-state-rollback/patch-ifr-defaults.py" "$BUILD_DIR/$IFR_NAME.sct" "$IFR_NAME"
+    fi
     $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$IFR_GUID" 0x10 "$BUILD_DIR/$IFR_NAME.sct" -asis -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
   done
 }
