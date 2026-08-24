@@ -107,5 +107,8 @@ UEFIExtract output.rom all
 - If no snapshot exists (e.g., the very first hang ever), the PEI watchdog
   does nothing and the board stays in the reset loop until a manual CMOS
   clear.
-- Enable the `DEBUG_POST` define to get port-80 POST codes: `0xE0` entry,
-  `0xE1` var-service notified, `0xE2` rollback triggered.
+- Debug POST codes on port 0x80 are enabled by default (`-DDEBUG_POST` in the
+  Makefile; remove it for a clean build):
+  - PEI: `0xE0` watchdog dispatched, `0xE1` var service notified,
+    `0xE2` rollback triggered (shadow PPI installed);
+  - DXE: `0xE3` driver ran, `0xE4` rollback committed, `0xE5` snapshot taken.

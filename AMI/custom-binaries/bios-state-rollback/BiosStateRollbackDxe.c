@@ -67,6 +67,14 @@ typedef struct {
 static CHAR16 gGoldenName[] = L"BslRollbackGolden";
 static EFI_GUID gGoldenGuid = GOLDEN_VENDOR_GUID;
 
+#if defined(DEBUG_POST)
+static inline VOID PostCode(UINT8 Code) {
+    __asm__ volatile ("outb %0, %1" : : "a"(Code), "Nd"((UINT16)0x80) : "memory");
+}
+#else
+#define PostCode(Code) ((VOID)0)
+#endif
+
 static UINT8 gGolden[GOLDEN_CAPACITY];
 
 static UINT8 RtcInit(VOID) {
@@ -166,15 +174,18 @@ EFI_STATUS EFIAPI RollbackDxeEntry(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABL
     EFI_RUNTIME_SERVICES *RT = SystemTable->RuntimeServices;
 
     (void)ImageHandle;
+    PostCode(0xE3);
     RtcInit();
 
     if (RtcRead(RTC_REG_PENDING) == 1) {
         CommitGolden(RT);
         RtcWrite(RTC_REG_PENDING, 0);
+        PostCode(0xE4);
     }
 
     SnapshotToGolden(RT);
     RtcWrite(RTC_REG_DONE, 1);
+    PostCode(0xE5);
 
     return EFI_SUCCESS;
 }
