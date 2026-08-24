@@ -25,8 +25,12 @@ So a failed boot *resets instead of dead-halting*:
 
 ### PEI watchdog (`BiosStateRollbackPei.c`)
 
-Injected over `PeiInterposerToSvidMap` (disposable early PEIM). Runs before
-the memory reference code (`UncoreInitPeim`):
+Injected over `OememPei` (disposable OEM module, last PEIM in the PEI
+volume - growing it only eats the trailing free space, so no other PEIM
+moves). Its depex is replaced with the single-early-PPI depex
+(`{01F34D25-4DE2-23AD-3FF3-36353FF323F1}`) so it dispatches on the first FV
+scan pass, i.e. before the memory reference code (`UncoreInitPeim`, which
+waits for the variable service and only dispatches on a later pass).
 
 - state lives in battery-backed RTC SRAM: magic (`0x34`), failure counter
   (`0x35`), "boot completed" marker (`0x36`), "rollback pending" (`0x37`);
@@ -82,9 +86,11 @@ recovery-capable procedure).
 
 ```sh
 UEFIExtract output.rom all
-# .../30 PeiInterposerToSvidMap/1 PE32 image section/body.bin   (12384 B, MZ)
+# .../82 OememPei/1 PE32 image section/body.bin          (12384 B, MZ)
+# .../82 OememPei/0 PEI dependency section/body.bin      (18 B, PUSH {01F34D25...} END)
 # .../114 UsbOcUpdateDxeNeonCityEPRP/1 PE32 image section/body.bin (4096 B, MZ)
-# both contain the UTF-16 string "BslRollbackGolden"
+# both PE32 bodies contain the UTF-16 string "BslRollbackGolden"
+# all other PEI modules are byte-identical to the base image
 ```
 
 ## Limitations / knobs
