@@ -121,6 +121,13 @@ function patch_dmi {
   $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$DMI_TABLE_GUID" 0x18 "$BUILD_DIR/dmi-table.bin" -o "$BUILD_DIR/$PATCHED_DUMP"
 }
 
+function patch_rollback {
+  echo "Building rollback modules"
+  ROLLBACK_ROM="$BUILD_DIR/$PATCHED_DUMP.rollback"
+  "$SOURCES_DIR/custom-binaries/bios-state-rollback/build-rollback.sh" "$BUILD_DIR/$PATCHED_DUMP" "$ROLLBACK_ROM"
+  mv "$ROLLBACK_ROM" "$BUILD_DIR/$PATCHED_DUMP"
+}
+
 echo "==================== Prepare ===================="
 rm -r "$BUILD_DIR" || true
 mkdir -p "$BUILD_DIR"
@@ -134,6 +141,7 @@ patch_logos
 patch_IFRs
 patch_mcodes
 patch_bios_state_lab_bridge
+patch_rollback
 echo
 
 echo "==================== Final ===================="
