@@ -128,6 +128,16 @@ function patch_rollback {
   mv "$ROLLBACK_ROM" "$BUILD_DIR/$PATCHED_DUMP"
 }
 
+function patch_nvar_defaults {
+  echo "Patching NVRAM external defaults (AF516361)"
+  NVAR_EDITOR="$SOURCES_DIR/custom-binaries/bios-state-rollback/nvar-defaults-editor.py"
+  NVAR_OUT="$BUILD_DIR/$PATCHED_DUMP.nvar"
+  python3 "$NVAR_EDITOR" patch \
+    --rom "$BUILD_DIR/$PATCHED_DUMP" --out "$NVAR_OUT" \
+    --set SocketMemoryConfig:0xC8=0x00,ServerSetup:0x19=0x03,MemBootHealthConfig:0x01=0x00
+  mv "$NVAR_OUT" "$BUILD_DIR/$PATCHED_DUMP"
+}
+
 echo "==================== Prepare ===================="
 rm -r "$BUILD_DIR" || true
 mkdir -p "$BUILD_DIR"
@@ -141,7 +151,12 @@ patch_logos
 patch_IFRs
 patch_mcodes
 patch_bios_state_lab_bridge
-patch_rollback
+if [ "${WITHOUT_ROLLBACK:-0}" != "1" ]; then
+  patch_rollback
+else
+  echo "SKIP rollback modules (WITHOUT_ROLLBACK=1)"
+fi
+patch_nvar_defaults
 echo
 
 echo "==================== Final ===================="
