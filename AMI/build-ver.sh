@@ -141,6 +141,14 @@ function patch_nvar_defaults {
   mv "$NVAR_OUT" "$BUILD_DIR/$PATCHED_DUMP"
 }
 
+function patch_nvar_store {
+  echo "Patching flashed NVAR store (authoritative live vars)"
+  NVAR_STORE_EDITOR="$SOURCES_DIR/custom-binaries/bios-state-rollback/patch-nvar-store.py"
+  NVAR_STORE_OUT="$BUILD_DIR/$PATCHED_DUMP.store"
+  python3 "$NVAR_STORE_EDITOR" "$BUILD_DIR/$PATCHED_DUMP" "$NVAR_STORE_OUT"
+  mv "$NVAR_STORE_OUT" "$BUILD_DIR/$PATCHED_DUMP"
+}
+
 echo "==================== Prepare ===================="
 rm -r "$BUILD_DIR" || true
 mkdir -p "$BUILD_DIR"
@@ -160,6 +168,7 @@ else
   echo "SKIP rollback modules (WITHOUT_ROLLBACK=1)"
 fi
 patch_nvar_defaults
+patch_nvar_store
 echo
 
 echo "==================== Final ===================="
