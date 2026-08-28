@@ -1,17 +1,15 @@
 #!/usr/bin/env python3
 """Erase the populated NVAR variable store out of a BIOS ROM.
 
-Alternative to patch-nvar-store.py: instead of editing the store's bytes at
-hardcoded SPI offsets, this blanks (0xFF) the whole store region. On the next
-boot AMI's variable service finds no valid store and rebuilds it from the
-'NVRAM external defaults' blob (AF516361-B4C5-436E-A7E3-A149A31B1461), so the
-defaults patched by nvar-defaults-editor.py become the authoritative source.
+The flashed image ships with a filled-in variable store (two mirrored banks).
+The firmware reads the live setup variables straight from this store; the
+external-defaults / setupdata / IFR sources are only consulted when a variable
+is MISSING. Blanking the whole store makes every variable missing, so on the
+next boot the variable service rebuilds the store from the patched
+external-defaults blob (AF516361-B4C5-436E-A7E3-A149A31B1461), which is what
+actually changes the defaults.
 
-Why this works / what it costs (see AMI/MEMORY_OC_RECOVERY.md):
-  - The store is what the firmware actually reads on every boot; the
-    external-defaults sources are only consulted when a variable is MISSING.
-    With the whole store erased, every variable is missing -> the patched
-    AF516361 blob (and setupdata/IFR) populate the fresh store.
+Consequences to be aware of:
   - StdDefaults inside the rebuilt store comes from the same blob, so F9 /
     CMOS-clear also restore the patched values.
   - Anything not covered by the external defaults (BootOrder/Boot####,

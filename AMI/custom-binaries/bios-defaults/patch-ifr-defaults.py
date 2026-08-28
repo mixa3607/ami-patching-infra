@@ -1,19 +1,23 @@
 #!/usr/bin/env python3
-"""Flip AMI IFR default markers so a 'Restore Defaults' (F9) selects the
-reset-not-hang options, matching the setupdata / NVRAM-external-defaults
-patches:
+"""Flip AMI IFR default markers in a generated setup .sct.
+
+After the .sct is generated (uefieditor-cli sct --data), moves the
+Default / MfgDefault markers so 'Restore Defaults' (F9) selects the values
+patched into the external defaults and setupdata:
 
   SocketSetup_setup.sct
     HaltOnMemTrainError (Q 0x1186):  Disable becomes Default, Enable loses it
     MemBootHealthConfig (Q 0x1506):  Auto     becomes Default, Disable loses it
   ServerMgmtSetup_setup.sct
     FRB-2 Timer Policy  (Q 0x0006):  DefaultId 0x0/0x1 values -> 3 (Power Cycle)
+  Setup_setup.sct
+    Boot option filter  (Q 0x012A):  UEFI only becomes Default, UEFI+Legacy loses it
 
 Operates on the already-unsuppressed .sct (i.e. after `uefieditor-cli sct`),
-locating the OneOf by its questionid+varstoreid+varoffset signature so the
+locating each OneOf by its questionid+varstoreid+varoffset signature so the
 patch is robust to offset shifts from unsuppression.
 
-Usage: patch-ifr-defaults.py SCT [SocketSetup|ServerMgmtSetup]
+Usage: patch-ifr-defaults.py SCT [SocketSetup|ServerMgmtSetup|Setup]
 """
 
 import sys
