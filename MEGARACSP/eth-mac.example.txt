@@ -1,0 +1,4 @@
+# Example BMC MAC address. The build uses this file ONLY when the real
+# eth-mac.txt (gitignored) is missing, and prints an explicit warning.
+# Copy to eth-mac.txt and set your actual BMC MAC there.
+aa:bb:cc:dd:ee:ff

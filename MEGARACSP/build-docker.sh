@@ -26,5 +26,5 @@ rm -rf "$build_dir"
 mkdir -p "$build_dir"
 
 docker buildx build --output "type=local,dest=$build_dir" .
-mv "$build_dir/IMB760_BMC_native-kvm-final.bin" "$build_dir/$image_name"
+mv "$build_dir/IMB760_BMC_payload-final.bin" "$build_dir/$image_name"
 sha256sum "$build_dir/$image_name"

@@ -49,10 +49,10 @@
       "endAddress": "0x016CB000"
     },
     {
-      "fileName": "80_native-kvm-slot-a.bin",
-      "description": "Reserved native KVM slot A",
+      "fileName": "80_payload-slot-a.bin",
+      "description": "Generic CramFS payload slot A",
       "beginAddress": "0x016D0000",
-      "endAddress": "0x01AD0000"
+      "endAddress": "0x01ED0000"
     },
     {
       "fileName": "90_firmware-info.bin",

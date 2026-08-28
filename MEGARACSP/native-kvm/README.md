@@ -214,31 +214,23 @@ The binaries are statically linked ARM EABI executables by default. If the
 installed cross libc cannot link statically, use `make LDFLAGS=` and deploy the
 matching runtime loader/libc with the binaries.
 
-## Development bundles
+## Payload packaging
 
-Build a self-contained directory using the exact firmware-specific
-`videocap.ko`. The builder runs `make`, rejects a dynamically linked server,
-and refuses to replace an existing output path:
-
-```sh
-scripts/build-bundle.sh /path/to/firmware/videocap.ko out/native-kvm
-```
-
-The bundle contains `ami-kvm-server`, the module-swap wrapper, `videocap.ko`,
-`vendor/novnc`, and version, provenance, SHA-256, and target-compatible `sum`
-manifest files. It contains
-no configuration, adoption records, passwords, keys, or other credentials.
-
-Build a flashable CramFS slot image with host `mkfs.cramfs` (or `mkcramfs`):
+native-kvm is packaged as one payload in the generic CramFS slot
+(`80_payload-slot-a.bin`, mounted at `/var/payload`). The Docker build
+materializes this payload directory (`init.sh`, `ami-kvm-server`, the module
+swap wrapper, `videocap.ko`, `vendor/novnc`) and packs it into the slot with
+the generic bundler:
 
 ```sh
-scripts/build-cramfs.sh /path/to/firmware/videocap.ko out/native-kvm-A.img
+scripts/build-payload-slot.sh out/payload-slot.cramfs out/payloads/native-kvm out/payloads/dio
 ```
 
-The builder requests little-endian CramFS when supported, verifies the
-filesystem when `fsck.cramfs` is installed, checks that it fits, and pads the
-image with erased-NOR bytes (`0xff`) to exactly `0x400000` bytes. It prints the
-image SHA-256. `SOURCE_DATE_EPOCH` may be set for reproducible provenance.
+The slot root carries `verify-manifest.sh`, `payloads.list`, `provenance`, and
+`manifest.*` files. At boot the generic `payload-bootstrap` mounts the slot
+early and runs each payload's `init.sh` for the `mount` stage (rcS) and the
+`adviserd` stage (adviserd hook, where native-kvm performs its HID handoff).
+
 
 ## Known limitations
 

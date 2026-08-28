@@ -56,8 +56,11 @@ Build a patched image by injecting selected files from `partitions`:
   --table partitions.json --partitions partitions --output patched.bin
 ```
 
-`80_native-kvm-slot-a.bin` is the only native KVM payload slot. It starts at
-`0x016d0000`, is 4 MiB, and is erased in the baseline image.
+`80_payload-slot-a.bin` is the generic CramFS payload slot. It starts at
+`0x016d0000`, is 8 MiB, and is erased in the baseline image. It is mounted
+early in boot at `/var/payload`; any payload directory listed in
+`payloads.list` is enabled and may provide a stage-aware `init.sh`
+(`mount` / `adviserd`).
 
 ## MAC and version test image
 
@@ -80,16 +83,17 @@ main, backup, and failsafe JFFS2 partitions:
 scripts/build-mac-version-image.sh --bak2shell work/IMB760_BMC_mac-version-shell.bin
 ```
 
-### Native KVM
+### Payload image
 
-The native-KVM mode also includes `bak2shell`, patches root CramFS with the
-verified bootstrap, writes the 4 MiB payload to slot A, enables it in all three
-configuration copies, and configures Basic Auth as `admin:admin`.
+The payload mode also includes `bak2shell`, patches root CramFS with the
+generic payload bootstrap (`payload-loop` + `payload-bootstrap`, early rcS
+mount, adviserd hook), writes the payload slot CramFS to slot A, and configures
+native-KVM Basic Auth as `admin:admin`.
 
 ```sh
-scripts/build-mac-version-image.sh --native-kvm \
-  work/native-kvm-root.cramfs work/native-kvm-slot-a.bin \
-  work/IMB760_BMC_native-kvm.bin
+scripts/build-mac-version-image.sh --payload \
+  work/payload-root.cramfs work/payload-slot.cramfs \
+  work/IMB760_BMC_payload.bin
 ```
 
 ## Docker Build

@@ -51,8 +51,7 @@ RUN mkdir -p /workspace/MEGARACSP/work \
     && /workspace/SOFTWARE/uefi-mod-tools_v1.3.0/uefi-mod-tools bin split \
         --input /workspace/MEGARACSP/IMB760_BMC_mixa3607_F8CC6E033B82_zero-boot.bin \
         --table /workspace/MEGARACSP/partitions.json \
-        --output /tmp/partitions \
-    && fsck.cramfs --extract=/tmp/root /tmp/partitions/50_root.cramfs
+        --output /tmp/partitions
 
 COPY native-kvm/videocap-src/ /workspace/MEGARACSP/native-kvm/videocap-src/
 
@@ -62,24 +61,58 @@ RUN make -C /workspace/linux M=/workspace/MEGARACSP/native-kvm/videocap-src ARCH
         CROSS_COMPILE=arm-linux-gnueabi- modules
 
 COPY native-kvm/ /workspace/MEGARACSP/native-kvm/
+COPY scripts/ /workspace/MEGARACSP/scripts/
+COPY payload/ /workspace/MEGARACSP/payload/
 
-RUN make -C /workspace/MEGARACSP/native-kvm ami-kvm-server native-kvm-loop \
-    && /workspace/MEGARACSP/native-kvm/scripts/build-root-cramfs.sh \
+RUN make -C /workspace/MEGARACSP/native-kvm ami-kvm-server \
+    && arm-linux-gnueabi-gcc -Os -ffreestanding -fno-builtin -fno-stack-protector \
+        -fno-unwind-tables -fno-asynchronous-unwind-tables -nostdlib -static -s \
+        -Wl,-e,_start -o /tmp/payload-loop \
+        /workspace/MEGARACSP/scripts/payload-loop-start.S \
+        /workspace/MEGARACSP/scripts/payload-loop.c \
+    && arm-linux-gnueabi-gcc -Os -ffreestanding -fno-stack-protector -nostdlib -static -s \
+        -Wl,-e,_start -o /tmp/dio \
+        /workspace/MEGARACSP/payload/dio/dio.c
+
+RUN mkdir -p /workspace/MEGARACSP/work/payloads/native-kvm/vendor /workspace/MEGARACSP/work/payloads/dio \
+    && cp /workspace/MEGARACSP/payload/native-kvm/init.sh \
+        /workspace/MEGARACSP/work/payloads/native-kvm/init.sh \
+    && cp /workspace/MEGARACSP/native-kvm/build/ami-kvm-server \
+        /workspace/MEGARACSP/work/payloads/native-kvm/ami-kvm-server \
+    && cp /workspace/MEGARACSP/native-kvm/run-ami-kvm-with-videocap.sh \
+        /workspace/MEGARACSP/work/payloads/native-kvm/run-ami-kvm-with-videocap.sh \
+    && cp /workspace/MEGARACSP/native-kvm/videocap-src/videocap.ko \
+        /workspace/MEGARACSP/work/payloads/native-kvm/videocap.ko \
+    && cp -R /workspace/MEGARACSP/native-kvm/vendor/novnc \
+        /workspace/MEGARACSP/work/payloads/native-kvm/vendor/novnc \
+    && cp /workspace/MEGARACSP/payload/dio/dio.c \
+        /workspace/MEGARACSP/payload/dio/dio.sh \
+        /workspace/MEGARACSP/payload/dio/README.md \
+        /workspace/MEGARACSP/work/payloads/dio/ \
+    && cp /tmp/dio /workspace/MEGARACSP/work/payloads/dio/dio \
+    && chmod 755 /workspace/MEGARACSP/work/payloads/native-kvm/init.sh \
+        /workspace/MEGARACSP/work/payloads/native-kvm/ami-kvm-server \
+        /workspace/MEGARACSP/work/payloads/native-kvm/run-ami-kvm-with-videocap.sh \
+        /workspace/MEGARACSP/work/payloads/dio/dio \
+        /workspace/MEGARACSP/work/payloads/dio/dio.sh
+
+RUN /workspace/MEGARACSP/scripts/build-payload-slot.sh \
+        /workspace/MEGARACSP/work/payload-slot.cramfs \
+        /workspace/MEGARACSP/work/payloads/native-kvm \
+        /workspace/MEGARACSP/work/payloads/dio \
+    && /workspace/MEGARACSP/scripts/build-root-cramfs.sh \
         /tmp/partitions/50_root.cramfs \
-        /workspace/MEGARACSP/native-kvm/build/native-kvm-loop \
-        /workspace/MEGARACSP/work/native-kvm-root.cramfs \
+        /tmp/payload-loop \
+        /workspace/MEGARACSP/scripts/payload-bootstrap.sh \
+        /workspace/MEGARACSP/work/payload-root.cramfs \
         --drop-legacy-zoneinfo
 
-COPY eth-mac.txt version.txt /workspace/MEGARACSP/
-COPY scripts/ /workspace/MEGARACSP/scripts/
+COPY eth-mac*.txt version.txt /workspace/MEGARACSP/
 
-RUN /workspace/MEGARACSP/native-kvm/scripts/build-cramfs.sh \
-        /workspace/MEGARACSP/native-kvm/videocap-src/videocap.ko \
-        /workspace/MEGARACSP/work/native-kvm-slot-a.bin \
-    && /workspace/MEGARACSP/scripts/build-mac-version-image.sh --native-kvm \
-        /workspace/MEGARACSP/work/native-kvm-root.cramfs \
-        /workspace/MEGARACSP/work/native-kvm-slot-a.bin \
-        /workspace/MEGARACSP/work/IMB760_BMC_native-kvm-final.bin
+RUN /workspace/MEGARACSP/scripts/build-mac-version-image.sh --payload \
+        /workspace/MEGARACSP/work/payload-root.cramfs \
+        /workspace/MEGARACSP/work/payload-slot.cramfs \
+        /workspace/MEGARACSP/work/IMB760_BMC_payload-final.bin
 
 FROM scratch AS artifact
-COPY --from=build /workspace/MEGARACSP/work/IMB760_BMC_native-kvm-final.bin /
+COPY --from=build /workspace/MEGARACSP/work/IMB760_BMC_payload-final.bin /
