@@ -1,0 +1,15 @@
+#!/bin/sh
+# AMI BMC login shell: prefer our busybox/busybox applets, then real bash.
+# Lives in /conf (persistent JFFS2); falls back to /bin/sh when tools are
+# absent so SSH can never be locked out by a missing payload.
+_tools=/var/payload/tools
+[ -d "$_tools" ] || _tools=/var/tools
+if [ -x "$_tools/bash" ] && [ -x "$_tools/busybox" ]; then
+    mkdir -p /var/applets 2>/dev/null
+    [ -x /var/applets/seq ] || "$_tools/busybox" --install -s /var/applets
+    export TOOLS_DIR="$_tools"
+    export PATH="/var/applets:$_tools:$PATH"
+    [ -r "$_tools/etc/bashrc" ] && . "$_tools/etc/bashrc"
+    exec "$_tools/bash" --rcfile "$_tools/etc/bashrc" "$@"
+fi
+exec /bin/sh "$@"

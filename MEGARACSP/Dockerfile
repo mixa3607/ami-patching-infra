@@ -34,6 +34,17 @@ RUN mkdir -p /workspace/SOFTWARE/uefi-mod-tools_v1.3.0 \
     && unzip -q /tmp/uefi-mod-tools.zip -d /workspace/SOFTWARE/uefi-mod-tools_v1.3.0 \
     && chmod +x /workspace/SOFTWARE/uefi-mod-tools_v1.3.0/uefi-mod-tools
 
+RUN wget -q -O /tmp/busybox.tar.bz2 https://busybox.net/downloads/busybox-1.36.1.tar.bz2 \
+    && test "$(sha256sum /tmp/busybox.tar.bz2 | cut -d ' ' -f 1)" = \
+        b8cc24c9574d809e7279c3be349795c5d5ceb6fdf19ca709f80cde50e47de314 \
+    && tar -xjf /tmp/busybox.tar.bz2 -C /workspace \
+    && mv /workspace/busybox-1.36.1 /workspace/busybox-src \
+    && wget -q -O /tmp/bash.tar.gz https://ftp.gnu.org/gnu/bash/bash-5.3.tar.gz \
+    && test "$(sha256sum /tmp/bash.tar.gz | cut -d ' ' -f 1)" = \
+        0d5cd86965f869a26cf64f4b71be7b96f90a3ba8b3d74e27e8e9d9d5550f31ba \
+    && tar -xzf /tmp/bash.tar.gz -C /workspace \
+    && mv /workspace/bash-5.3 /workspace/bash-src
+
 COPY kernel/patches/ami-ast2500.patch /tmp/kernel-patches/
 
 RUN wget -q -O /tmp/linux-3.14.17.tar.xz https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.14.17.tar.xz \
@@ -63,6 +74,10 @@ RUN make -C /workspace/linux M=/workspace/MEGARACSP/native-kvm/videocap-src ARCH
 COPY native-kvm/ /workspace/MEGARACSP/native-kvm/
 COPY scripts/ /workspace/MEGARACSP/scripts/
 COPY payload/ /workspace/MEGARACSP/payload/
+
+RUN /workspace/MEGARACSP/payload/tools/build.sh \
+        /workspace/busybox-src /workspace/bash-src \
+        /workspace/MEGARACSP/work/payloads/tools
 
 RUN make -C /workspace/MEGARACSP/native-kvm ami-kvm-server \
     && arm-linux-gnueabi-gcc -Os -ffreestanding -fno-builtin -fno-stack-protector \
@@ -100,6 +115,7 @@ RUN /workspace/MEGARACSP/scripts/build-payload-slot.sh \
         /workspace/MEGARACSP/work/payload-slot.cramfs \
         /workspace/MEGARACSP/work/payloads/native-kvm \
         /workspace/MEGARACSP/work/payloads/dio \
+        /workspace/MEGARACSP/work/payloads/tools \
     && /workspace/MEGARACSP/scripts/build-root-cramfs.sh \
         /tmp/partitions/50_root.cramfs \
         /tmp/payload-loop \

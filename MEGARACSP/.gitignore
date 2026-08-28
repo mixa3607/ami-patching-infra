@@ -1,2 +1,4 @@
 /build/
 eth-mac.txt
+__pycache__/
+*.pyc

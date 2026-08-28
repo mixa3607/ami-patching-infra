@@ -1,0 +1,7 @@
+# AMI BMC: prefer our busybox tooling (TOOLS_DIR set by login-shell)
+: "${TOOLS_DIR:=/var/payload/tools}"
+case ":$PATH:" in
+  *":/var/applets:"*) ;;
+  *) export PATH="/var/applets:$TOOLS_DIR:$PATH" ;;
+esac
+export PS1="\u@\h:\w\$ "

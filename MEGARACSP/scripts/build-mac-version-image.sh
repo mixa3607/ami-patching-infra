@@ -93,13 +93,16 @@ trap 'rm -rf "$tmp"' EXIT HUP INT TERM
 "$script_dir/patch-version-info.sh" "$tmp/partitions/90_firmware-info.bin" \
 	"$tmp/firmware-info.bin" "$version"
 if [ "$bak2shell" -eq 1 ]; then
-	printf '%s\n' '[defaultshell]' 'default_shell="/bin/sh"' > "$tmp/default_sh"
 	if [ "$payload" -eq 1 ]; then
+		printf '%s\n' '[defaultshell]' 'default_shell="/conf/login-shell"' > "$tmp/default_sh"
 		printf '%s\n' 'admin:admin' > "$tmp/native-kvm.users"
 		chmod 600 "$tmp/native-kvm.users"
 		"$script_dir/patch-config.sh" "$tmp/partitions" "$tmp/config" \
-			"$tmp/default_sh=default_sh" "$tmp/native-kvm.users=native-kvm.users"
+			"$tmp/default_sh=default_sh" \
+			"$workspace/payload/tools/login-shell=login-shell" \
+			"$tmp/native-kvm.users=native-kvm.users"
 	else
+		printf '%s\n' '[defaultshell]' 'default_shell="/bin/sh"' > "$tmp/default_sh"
 		"$script_dir/patch-config.sh" "$tmp/partitions" "$tmp/config" \
 			"$tmp/default_sh=default_sh"
 	fi
@@ -126,11 +129,15 @@ if [ "$bak2shell" -eq 1 ]; then
 		name=${item%%:*}
 		image=${item#*:}
 		jefferson --dest "$tmp/verified-$name" "$tmp/verified/$image" >/dev/null
-		[ "$(cat "$tmp/verified-$name/default_sh")" = "$(printf '%s\n' '[defaultshell]' 'default_shell="/bin/sh"')" ] || {
-			printf 'bak2shell verification failed for %s\n' "$name" >&2
+		cmp -s "$tmp/default_sh" "$tmp/verified-$name/default_sh" || {
+			printf 'default_sh verification failed for %s\n' "$name" >&2
 			exit 1
 		}
 		if [ "$payload" -eq 1 ]; then
+			cmp -s "$workspace/payload/tools/login-shell" "$tmp/verified-$name/login-shell" || {
+				printf 'login-shell verification failed for %s\n' "$name" >&2
+				exit 1
+			}
 			[ "$(cat "$tmp/verified-$name/native-kvm.users")" = 'admin:admin' ] || {
 				printf 'native KVM auth file invalid in %s config\n' "$name" >&2
 				exit 1
