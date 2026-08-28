@@ -63,6 +63,9 @@ function patch_IFRs {
     echo "GUID: $IFR_GUID"
     echo "ORIG: $ORIG_SCT"
     $uefieditorcli sct --setup "$IFR_DIR/orig/$ORIG_SCT" --data "$IFR_DIR/data.json" -o "$BUILD_DIR/$IFR_NAME.sct"
+    if [ "$IFR_NAME" == "SocketSetup" ] || [ "$IFR_NAME" == "ServerMgmtSetup" ] || [ "$IFR_NAME" == "Setup" ]; then
+      python3 "$SOURCES_DIR/custom-binaries/bios-state-rollback/patch-ifr-defaults.py" "$BUILD_DIR/$IFR_NAME.sct" "$IFR_NAME"
+    fi
     $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$IFR_GUID" 0x10 "$BUILD_DIR/$IFR_NAME.sct" -asis -o "$BUILD_DIR/$PATCHED_DUMP" || (($?==$NO_REPLACEMNT_ERR_CODE ? 1 : 0))
   done
 }
@@ -121,6 +124,24 @@ function patch_dmi {
   $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$DMI_TABLE_GUID" 0x18 "$BUILD_DIR/dmi-table.bin" -o "$BUILD_DIR/$PATCHED_DUMP"
 }
 
+function patch_nvar_defaults {
+  echo "Patching NVRAM external defaults (AF516361)"
+  NVAR_EDITOR="$SOURCES_DIR/custom-binaries/bios-state-rollback/nvar-defaults-editor.py"
+  NVAR_OUT="$BUILD_DIR/$PATCHED_DUMP.nvar"
+  python3 "$NVAR_EDITOR" patch \
+    --rom "$BUILD_DIR/$PATCHED_DUMP" --out "$NVAR_OUT" \
+    --set SocketMemoryConfig:0xC8=0x00,ServerSetup:0x19=0x03,MemBootHealthConfig:0x01=0x00
+  mv "$NVAR_OUT" "$BUILD_DIR/$PATCHED_DUMP"
+}
+
+function patch_erase_nvar_store {
+  echo "Erasing NVAR store (rebuilds from patched AF516361 defaults)"
+  NVAR_ERASE="$SOURCES_DIR/custom-binaries/bios-state-rollback/nvar-store-erase.py"
+  NVAR_ERASE_OUT="$BUILD_DIR/$PATCHED_DUMP.erased"
+  python3 "$NVAR_ERASE" "$BUILD_DIR/$PATCHED_DUMP" "$NVAR_ERASE_OUT"
+  mv "$NVAR_ERASE_OUT" "$BUILD_DIR/$PATCHED_DUMP"
+}
+
 echo "==================== Prepare ===================="
 rm -r "$BUILD_DIR" || true
 mkdir -p "$BUILD_DIR"
@@ -134,6 +155,8 @@ patch_logos
 patch_IFRs
 patch_mcodes
 patch_bios_state_lab_bridge
+patch_nvar_defaults
+patch_erase_nvar_store
 echo
 
 echo "==================== Final ===================="

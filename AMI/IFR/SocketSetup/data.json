@@ -137986,8 +137986,8 @@
             }
           ],
           "accessLevel": "09",
-          "failsafe": "01",
-          "optimal": "01",
+          "failsafe": "00",
+          "optimal": "00",
           "offsets": {
             "accessLevel": "0x793FC",
             "failsafe": "0x79420",
@@ -168277,8 +168277,8 @@
             }
           ],
           "accessLevel": "09",
-          "failsafe": "02",
-          "optimal": "02",
+          "failsafe": "00",
+          "optimal": "00",
           "offsets": {
             "accessLevel": "0x8F5B4",
             "failsafe": "0x8F5D8",
