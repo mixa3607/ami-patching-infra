@@ -16,3 +16,11 @@ mcodes:
   container_guid: 17088572-377F-44EF-8F4E-B09FFF46A070
   fit_guid: B52282EE-9B66-44B9-B1CF-7E5040F787C1
   section_type: "0x01"
+dmi:
+  table: dmi/SMBiosStaticData_body.bin
+  file_guid: DAF4BF89-CE71-4917-B522-C89D32FBC59F
+  section_type: "0x18"
+  vendor_suffix: "; patched by mixa3607"
+  version_suffix: "; patch {version}"
+ifr:
+  manifest: sections.yaml

@@ -33,13 +33,18 @@ def sha256(path: Path) -> str:
 
 
 def load_profile(path: Path) -> dict[str, object]:
-    require_file(path, "board profile")
-    profile = yaml.safe_load(path.read_text())
-    if not isinstance(profile, dict):
-        raise ValueError("board profile must be a YAML mapping")
-    for key in ("board_root", "base_dump", "rom_prefix", "logos", "mcodes"):
+    profile = load_yaml(path, "board profile")
+    for key in ("board_root", "base_dump", "rom_prefix", "logos", "mcodes", "dmi", "ifr"):
         if key not in profile:
             raise ValueError(f"board profile is missing '{key}'")
+    return profile
+
+
+def load_yaml(path: Path, description: str) -> dict[str, object]:
+    require_file(path, description)
+    profile = yaml.safe_load(path.read_text())
+    if not isinstance(profile, dict):
+        raise ValueError(f"{description} must be a YAML mapping")
     return profile
 
 
@@ -67,10 +72,19 @@ def write_manifest(context: BuildContext) -> None:
     (context.build_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
 
 
-def uefi_replace(context: BuildContext, rom: Path, guid: str, section_type: str, replacement: Path) -> None:
+def section_type(value: object) -> str:
+    return f"0x{value:02X}" if isinstance(value, int) else str(value)
+
+
+def uefi_replace(
+    context: BuildContext, rom: Path, guid: str, section: str, replacement: Path, *, as_is: bool = False
+) -> None:
     tool = context.repo_root / "SOFTWARE" / "UEFITool_0.28.0" / "UEFIReplace"
     require_file(tool, "UEFIReplace")
-    command = [str(tool), str(rom), guid, section_type, str(replacement), "-o", str(rom)]
+    command = [str(tool), str(rom), guid, section, str(replacement)]
+    if as_is:
+        command.append("-asis")
+    command.extend(("-o", str(rom)))
     print("+", " ".join(command))
     if context.dry_run:
         return
