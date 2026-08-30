@@ -24,6 +24,13 @@ IFRExtractor-RS-structured/*
 !uefi-mod-tools_v1.3.0/
 !uefi-mod-tools_v1.3.0/uefi-mod-tools
 
+# uefi-mod-tools development binary and source submodule
+!uefi-mod-tools/
+uefi-mod-tools/*
+!uefi-mod-tools/uefi-mod-tools
+!uefi-mod-tools/sources
+!uefi-mod-tools/sources/
+
 # uefi-editor-cli — our IFR patching CLI, used by build-ver.sh
 !uefi-editor-cli/
 !uefi-editor-cli/index.mjs

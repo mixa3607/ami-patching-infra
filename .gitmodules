@@ -10,3 +10,7 @@
 [submodule "SOFTWARE/UEFITool_NE_A72_win64/sources"]
 	path = SOFTWARE/UEFITool_NE_A72_win64/sources
 	url = https://github.com/LongSoft/UEFITool.git
+[submodule "SOFTWARE/uefi-mod-tools/sources"]
+	path = SOFTWARE/uefi-mod-tools/sources
+	url = https://github.com/mixa3607/uefi-mod-tools.git
+	branch = feat/ifr-react-viewer-mvp
