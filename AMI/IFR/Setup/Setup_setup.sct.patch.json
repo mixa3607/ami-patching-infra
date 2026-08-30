@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "suppressIfPatches": [
+    {
+      "disable": true,
+      "offset": 83873
+    },
+    {
+      "disable": true,
+      "offset": 83973
+    },
+    {
+      "disable": true,
+      "offset": 84013
+    }
+  ]
+}

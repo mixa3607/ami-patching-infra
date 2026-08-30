@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "suppressIfPatches": [
+    {
+      "disable": true,
+      "offset": 91876
+    },
+    {
+      "disable": true,
+      "offset": 91872
+    },
+    {
+      "disable": true,
+      "offset": 92052
+    },
+    {
+      "disable": true,
+      "offset": 92048
+    },
+    {
+      "disable": true,
+      "offset": 92123
+    },
+    {
+      "disable": true,
+      "offset": 92119
+    },
+    {
+      "disable": true,
+      "offset": 92559
+    },
+    {
+      "disable": true,
+      "offset": 92555
+    },
+    {
+      "disable": true,
+      "offset": 92630
+    },
+    {
+      "disable": true,
+      "offset": 92626
+    },
+    {
+      "disable": true,
+      "offset": 92679
+    },
+    {
+      "disable": true,
+      "offset": 92675
+    },
+    {
+      "disable": true,
+      "offset": 92755
+    },
+    {
+      "disable": true,
+      "offset": 92751
+    },
+    {
+      "disable": true,
+      "offset": 92796
+    },
+    {
+      "disable": true,
+      "offset": 92792
+    }
+  ]
+}

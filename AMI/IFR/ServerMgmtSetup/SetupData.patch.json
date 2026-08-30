@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "beginAddress": "0x00018774",
+      "endAddress": "0x000187AA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 6,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 11,
+        "promptStringId": 10,
+        "failsafe": 3,
+        "optimal": 3
+      }
+    }
+  ]
+}
