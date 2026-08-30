@@ -10,7 +10,7 @@
     "offset": 75032,
     "used_strings": 2680
   },
-  "input_sha256": "d0d4c688c9e41263f67e68f11cb1a0aa677f9d4ad08caf6cfae3af655cc1c4cc",
+  "input_sha256": "6c9c096e595c357abdfa8aeca18e9b24d493ef340caaa486a607dd927c9bac16",
   "operations": [
     {
       "depth": 0,
@@ -259,16 +259,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 75489,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "device_path_id": null,
         "form_id": 1297,
@@ -289,13 +280,13 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 75491,
+      "offset": 75489,
       "opcode": "Ref",
       "raw_hex": "7D0E7E0E02000000FFFF001105",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "device_path_id": null,
         "form_id": 1298,
@@ -316,9 +307,18 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 75506,
+      "offset": 75504,
       "opcode": "Ref",
       "raw_hex": "2E002F0003000000FFFF001205",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 75519,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -343,16 +343,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 75529,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "device_path_id": null,
         "form_id": 1344,
@@ -373,9 +364,18 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 75531,
+      "offset": 75529,
       "opcode": "Ref",
       "raw_hex": "BC09BD0904000000FFFF004005",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 75544,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -427,16 +427,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 75569,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "device_path_id": null,
         "form_id": 1311,
@@ -457,9 +448,18 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 75571,
+      "offset": 75569,
       "opcode": "Ref",
       "raw_hex": "7110721006000000FFFF001F05",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 75584,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -23454,16 +23454,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 84358,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -23487,13 +23478,13 @@
         "varstore_id": 1
       },
       "length": 17,
-      "offset": 84360,
+      "offset": 84358,
       "opcode": "OneOf",
       "raw_hex": "EC07ED07B60001004D011010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -23508,13 +23499,13 @@
         }
       },
       "length": 7,
-      "offset": 84377,
+      "offset": 84375,
       "opcode": "OneOfOption",
       "raw_hex": "3C10000001",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -23529,43 +23520,43 @@
         }
       },
       "length": 7,
-      "offset": 84384,
+      "offset": 84382,
       "opcode": "OneOfOption",
       "raw_hex": "3B10300000",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 84391,
+      "offset": 84389,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 84393,
+      "offset": 84391,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 182,
         "value": 0
       },
       "length": 6,
-      "offset": 84395,
+      "offset": 84393,
       "opcode": "EqIdVal",
       "raw_hex": "B6000000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -23589,13 +23580,13 @@
         "varstore_id": 1
       },
       "length": 17,
-      "offset": 84401,
+      "offset": 84399,
       "opcode": "OneOf",
       "raw_hex": "EF07F007B700010051011010000E00",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -23610,22 +23601,22 @@
         }
       },
       "length": 7,
-      "offset": 84418,
+      "offset": 84416,
       "opcode": "OneOfOption",
       "raw_hex": "F107000000",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 84425,
+      "offset": 84423,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 5402,
         "values": [
@@ -23636,13 +23627,13 @@
         ]
       },
       "length": 14,
-      "offset": 84427,
+      "offset": 84425,
       "opcode": "EqIdValList",
       "raw_hex": "1A1504000000010002000300",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "default": false,
         "flags": 0,
@@ -23657,13 +23648,13 @@
         }
       },
       "length": 7,
-      "offset": 84441,
+      "offset": 84439,
       "opcode": "OneOfOption",
       "raw_hex": "F207000001",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "default": false,
         "flags": 0,
@@ -23678,22 +23669,22 @@
         }
       },
       "length": 7,
-      "offset": 84448,
+      "offset": 84446,
       "opcode": "OneOfOption",
       "raw_hex": "F307000002",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 84455,
+      "offset": 84453,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -23708,13 +23699,13 @@
         }
       },
       "length": 7,
-      "offset": 84457,
+      "offset": 84455,
       "opcode": "OneOfOption",
       "raw_hex": "F407000005",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -23729,13 +23720,13 @@
         }
       },
       "length": 7,
-      "offset": 84464,
+      "offset": 84462,
       "opcode": "OneOfOption",
       "raw_hex": "F507000006",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 48,
@@ -23750,13 +23741,13 @@
         }
       },
       "length": 7,
-      "offset": 84471,
+      "offset": 84469,
       "opcode": "OneOfOption",
       "raw_hex": "F607300009",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -23771,22 +23762,22 @@
         }
       },
       "length": 7,
-      "offset": 84478,
+      "offset": 84476,
       "opcode": "OneOfOption",
       "raw_hex": "F70700000A",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 84485,
+      "offset": 84483,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 5402,
         "values": [
@@ -23797,31 +23788,31 @@
         ]
       },
       "length": 14,
-      "offset": 84487,
+      "offset": 84485,
       "opcode": "EqIdValList",
       "raw_hex": "1A1504000000010002000300",
       "scope_start": true
+    },
+    {
+      "depth": 7,
+      "fields": {},
+      "length": 2,
+      "offset": 84499,
+      "opcode": "Not",
+      "raw_hex": null,
+      "scope_start": false
     },
     {
       "depth": 6,
       "fields": {},
       "length": 2,
       "offset": 84501,
-      "opcode": "Not",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 5,
-      "fields": {},
-      "length": 2,
-      "offset": 84503,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "default": false,
         "flags": 0,
@@ -23836,13 +23827,13 @@
         }
       },
       "length": 7,
-      "offset": 84505,
+      "offset": 84503,
       "opcode": "OneOfOption",
       "raw_hex": "F80700000D",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "default": false,
         "flags": 0,
@@ -23857,9 +23848,18 @@
         }
       },
       "length": 7,
-      "offset": 84512,
+      "offset": 84510,
       "opcode": "OneOfOption",
       "raw_hex": "F90700000E",
+      "scope_start": false
+    },
+    {
+      "depth": 5,
+      "fields": {},
+      "length": 2,
+      "offset": 84517,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -23911,16 +23911,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 84533,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -23944,13 +23935,13 @@
         "varstore_id": 1
       },
       "length": 17,
-      "offset": 84535,
+      "offset": 84533,
       "opcode": "OneOf",
       "raw_hex": "A903B103B800010060011010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -23965,13 +23956,13 @@
         }
       },
       "length": 7,
-      "offset": 84552,
+      "offset": 84550,
       "opcode": "OneOfOption",
       "raw_hex": "3B10300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -23986,22 +23977,22 @@
         }
       },
       "length": 7,
-      "offset": 84559,
+      "offset": 84557,
       "opcode": "OneOfOption",
       "raw_hex": "3C10000001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 84566,
+      "offset": 84564,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -24025,13 +24016,13 @@
         "varstore_id": 1
       },
       "length": 17,
-      "offset": 84568,
+      "offset": 84566,
       "opcode": "OneOf",
       "raw_hex": "B203BA03B900010064011010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -24046,13 +24037,13 @@
         }
       },
       "length": 7,
-      "offset": 84585,
+      "offset": 84583,
       "opcode": "OneOfOption",
       "raw_hex": "3B10300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -24067,22 +24058,22 @@
         }
       },
       "length": 7,
-      "offset": 84592,
+      "offset": 84590,
       "opcode": "OneOfOption",
       "raw_hex": "3C10000001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 84599,
+      "offset": 84597,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -24106,13 +24097,13 @@
         "varstore_id": 1
       },
       "length": 17,
-      "offset": 84601,
+      "offset": 84599,
       "opcode": "OneOf",
       "raw_hex": "BB03C303BA00010068011010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -24127,13 +24118,13 @@
         }
       },
       "length": 7,
-      "offset": 84618,
+      "offset": 84616,
       "opcode": "OneOfOption",
       "raw_hex": "3B10300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -24148,9 +24139,18 @@
         }
       },
       "length": 7,
-      "offset": 84625,
+      "offset": 84623,
       "opcode": "OneOfOption",
       "raw_hex": "3C10000001",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {},
+      "length": 2,
+      "offset": 84630,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -24184,16 +24184,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 84642,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "device_path_id": null,
         "form_id": 1832,
@@ -24214,9 +24205,18 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 84644,
+      "offset": 84642,
       "opcode": "Ref",
       "raw_hex": "1A021B02BB000000FFFF002807",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 84657,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -24303,16 +24303,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 84689,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "device_path_id": null,
         "form_id": 1107,
@@ -24333,34 +24324,34 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 84691,
+      "offset": 84689,
       "opcode": "Ref",
       "raw_hex": "5A036F03BD000000FFFF005304",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 84706,
+      "offset": 84704,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 1080,
         "value": 1
       },
       "length": 6,
-      "offset": 84708,
+      "offset": 84706,
       "opcode": "EqIdVal",
       "raw_hex": "38040100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1108,
@@ -24381,43 +24372,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 84714,
+      "offset": 84712,
       "opcode": "Ref",
       "raw_hex": "5B036F03BE000000FFFF005404",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 84729,
+      "offset": 84727,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 84731,
+      "offset": 84729,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 1117,
         "value": 1
       },
       "length": 6,
-      "offset": 84733,
+      "offset": 84731,
       "opcode": "EqIdVal",
       "raw_hex": "5D040100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1109,
@@ -24438,43 +24429,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 84739,
+      "offset": 84737,
       "opcode": "Ref",
       "raw_hex": "5C036F03BF000000FFFF005504",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 84754,
+      "offset": 84752,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 84756,
+      "offset": 84754,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 1154,
         "value": 1
       },
       "length": 6,
-      "offset": 84758,
+      "offset": 84756,
       "opcode": "EqIdVal",
       "raw_hex": "82040100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1110,
@@ -24495,43 +24486,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 84764,
+      "offset": 84762,
       "opcode": "Ref",
       "raw_hex": "5D036F03C0000000FFFF005604",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 84779,
+      "offset": 84777,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 84781,
+      "offset": 84779,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 1191,
         "value": 1
       },
       "length": 6,
-      "offset": 84783,
+      "offset": 84781,
       "opcode": "EqIdVal",
       "raw_hex": "A7040100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1111,
@@ -24552,71 +24543,80 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 84789,
+      "offset": 84787,
       "opcode": "Ref",
       "raw_hex": "5E036F03C1000000FFFF005704",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 84804,
+      "offset": 84802,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 84806,
+      "offset": 84804,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 5402,
         "value": 3
       },
       "length": 6,
-      "offset": 84808,
+      "offset": 84806,
       "opcode": "EqIdVal",
       "raw_hex": "1A150300",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "question_id": 5402,
         "value": 5
       },
       "length": 6,
-      "offset": 84814,
+      "offset": 84812,
       "opcode": "EqIdVal",
       "raw_hex": "1A150500",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "question_id": 5464,
         "value": 0
       },
       "length": 6,
-      "offset": 84820,
+      "offset": 84818,
       "opcode": "EqIdVal",
       "raw_hex": "58150000",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
+      "fields": {},
+      "length": 2,
+      "offset": 84824,
+      "opcode": "And",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 5,
       "fields": {},
       "length": 2,
       "offset": 84826,
-      "opcode": "And",
+      "opcode": "Or",
       "raw_hex": null,
       "scope_start": false
     },
@@ -24625,42 +24625,33 @@
       "fields": {},
       "length": 2,
       "offset": 84828,
-      "opcode": "Or",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 3,
-      "fields": {},
-      "length": 2,
-      "offset": 84830,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {},
       "length": 2,
-      "offset": 84832,
+      "offset": 84830,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "question_id": 1252,
         "value": 1
       },
       "length": 6,
-      "offset": 84834,
+      "offset": 84832,
       "opcode": "EqIdVal",
       "raw_hex": "E4040100",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "device_path_id": null,
         "form_id": 1112,
@@ -24681,43 +24672,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 84840,
+      "offset": 84838,
       "opcode": "Ref",
       "raw_hex": "5F036F03C2000000FFFF005804",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {},
       "length": 2,
-      "offset": 84855,
+      "offset": 84853,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {},
       "length": 2,
-      "offset": 84857,
+      "offset": 84855,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "question_id": 1289,
         "value": 1
       },
       "length": 6,
-      "offset": 84859,
+      "offset": 84857,
       "opcode": "EqIdVal",
       "raw_hex": "09050100",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "device_path_id": null,
         "form_id": 1113,
@@ -24738,43 +24729,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 84865,
+      "offset": 84863,
       "opcode": "Ref",
       "raw_hex": "60036F03C3000000FFFF005904",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {},
       "length": 2,
-      "offset": 84880,
+      "offset": 84878,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {},
       "length": 2,
-      "offset": 84882,
+      "offset": 84880,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "question_id": 1326,
         "value": 1
       },
       "length": 6,
-      "offset": 84884,
+      "offset": 84882,
       "opcode": "EqIdVal",
       "raw_hex": "2E050100",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "device_path_id": null,
         "form_id": 1114,
@@ -24795,43 +24786,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 84890,
+      "offset": 84888,
       "opcode": "Ref",
       "raw_hex": "61036F03C4000000FFFF005A04",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {},
       "length": 2,
-      "offset": 84905,
+      "offset": 84903,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {},
       "length": 2,
-      "offset": 84907,
+      "offset": 84905,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "question_id": 1363,
         "value": 1
       },
       "length": 6,
-      "offset": 84909,
+      "offset": 84907,
       "opcode": "EqIdVal",
       "raw_hex": "53050100",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "device_path_id": null,
         "form_id": 1115,
@@ -24852,64 +24843,64 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 84915,
+      "offset": 84913,
       "opcode": "Ref",
       "raw_hex": "62036F03C5000000FFFF005B04",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {},
       "length": 2,
-      "offset": 84930,
+      "offset": 84928,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {},
       "length": 2,
-      "offset": 84932,
+      "offset": 84930,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "question_id": 5402,
         "value": 5
       },
       "length": 6,
-      "offset": 84934,
+      "offset": 84932,
       "opcode": "EqIdVal",
       "raw_hex": "1A150500",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 84940,
+      "offset": 84938,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 1412,
         "value": 1
       },
       "length": 6,
-      "offset": 84942,
+      "offset": 84940,
       "opcode": "EqIdVal",
       "raw_hex": "84050100",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "device_path_id": null,
         "form_id": 1116,
@@ -24930,43 +24921,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 84948,
+      "offset": 84946,
       "opcode": "Ref",
       "raw_hex": "63036F03C6000000FFFF005C04",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 84963,
+      "offset": 84961,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 84965,
+      "offset": 84963,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 1449,
         "value": 1
       },
       "length": 6,
-      "offset": 84967,
+      "offset": 84965,
       "opcode": "EqIdVal",
       "raw_hex": "A9050100",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "device_path_id": null,
         "form_id": 1117,
@@ -24987,43 +24978,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 84973,
+      "offset": 84971,
       "opcode": "Ref",
       "raw_hex": "64036F03C7000000FFFF005D04",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 84988,
+      "offset": 84986,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 84990,
+      "offset": 84988,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 1486,
         "value": 1
       },
       "length": 6,
-      "offset": 84992,
+      "offset": 84990,
       "opcode": "EqIdVal",
       "raw_hex": "CE050100",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "device_path_id": null,
         "form_id": 1118,
@@ -25044,43 +25035,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 84998,
+      "offset": 84996,
       "opcode": "Ref",
       "raw_hex": "65036F03C8000000FFFF005E04",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85013,
+      "offset": 85011,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85015,
+      "offset": 85013,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 1523,
         "value": 1
       },
       "length": 6,
-      "offset": 85017,
+      "offset": 85015,
       "opcode": "EqIdVal",
       "raw_hex": "F3050100",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "device_path_id": null,
         "form_id": 1119,
@@ -25101,43 +25092,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85023,
+      "offset": 85021,
       "opcode": "Ref",
       "raw_hex": "66036F03C9000000FFFF005F04",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85038,
+      "offset": 85036,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85040,
+      "offset": 85038,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 1584,
         "value": 1
       },
       "length": 6,
-      "offset": 85042,
+      "offset": 85040,
       "opcode": "EqIdVal",
       "raw_hex": "30060100",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "device_path_id": null,
         "form_id": 1120,
@@ -25158,43 +25149,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85048,
+      "offset": 85046,
       "opcode": "Ref",
       "raw_hex": "67036F03CA000000FFFF006004",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85063,
+      "offset": 85061,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85065,
+      "offset": 85063,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 1621,
         "value": 1
       },
       "length": 6,
-      "offset": 85067,
+      "offset": 85065,
       "opcode": "EqIdVal",
       "raw_hex": "55060100",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "device_path_id": null,
         "form_id": 1121,
@@ -25215,43 +25206,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85073,
+      "offset": 85071,
       "opcode": "Ref",
       "raw_hex": "68036F03CB000000FFFF006104",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85088,
+      "offset": 85086,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85090,
+      "offset": 85088,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 1658,
         "value": 1
       },
       "length": 6,
-      "offset": 85092,
+      "offset": 85090,
       "opcode": "EqIdVal",
       "raw_hex": "7A060100",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "device_path_id": null,
         "form_id": 1160,
@@ -25272,43 +25263,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85098,
+      "offset": 85096,
       "opcode": "Ref",
       "raw_hex": "69036F03CC000000FFFF008804",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85113,
+      "offset": 85111,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85115,
+      "offset": 85113,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 1695,
         "value": 1
       },
       "length": 6,
-      "offset": 85117,
+      "offset": 85115,
       "opcode": "EqIdVal",
       "raw_hex": "9F060100",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "device_path_id": null,
         "form_id": 1161,
@@ -25329,43 +25320,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85123,
+      "offset": 85121,
       "opcode": "Ref",
       "raw_hex": "6A036F03CD000000FFFF008904",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85138,
+      "offset": 85136,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85140,
+      "offset": 85138,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 1744,
         "value": 1
       },
       "length": 6,
-      "offset": 85142,
+      "offset": 85140,
       "opcode": "EqIdVal",
       "raw_hex": "D0060100",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "device_path_id": null,
         "form_id": 1162,
@@ -25386,43 +25377,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85148,
+      "offset": 85146,
       "opcode": "Ref",
       "raw_hex": "6B036F03CE000000FFFF008A04",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85163,
+      "offset": 85161,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85165,
+      "offset": 85163,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 1781,
         "value": 1
       },
       "length": 6,
-      "offset": 85167,
+      "offset": 85165,
       "opcode": "EqIdVal",
       "raw_hex": "F5060100",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "device_path_id": null,
         "form_id": 1163,
@@ -25443,43 +25434,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85173,
+      "offset": 85171,
       "opcode": "Ref",
       "raw_hex": "6C036F03CF000000FFFF008B04",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85188,
+      "offset": 85186,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85190,
+      "offset": 85188,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 1818,
         "value": 1
       },
       "length": 6,
-      "offset": 85192,
+      "offset": 85190,
       "opcode": "EqIdVal",
       "raw_hex": "1A070100",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "device_path_id": null,
         "form_id": 1164,
@@ -25500,43 +25491,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85198,
+      "offset": 85196,
       "opcode": "Ref",
       "raw_hex": "6D036F03D0000000FFFF008C04",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85213,
+      "offset": 85211,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85215,
+      "offset": 85213,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 1855,
         "value": 1
       },
       "length": 6,
-      "offset": 85217,
+      "offset": 85215,
       "opcode": "EqIdVal",
       "raw_hex": "3F070100",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "device_path_id": null,
         "form_id": 1165,
@@ -25557,9 +25548,18 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85223,
+      "offset": 85221,
       "opcode": "Ref",
       "raw_hex": "6E036F03D1000000FFFF008D04",
+      "scope_start": false
+    },
+    {
+      "depth": 5,
+      "fields": {},
+      "length": 2,
+      "offset": 85236,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -26490,16 +26490,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 85575,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -26523,13 +26514,13 @@
         "varstore_id": 1
       },
       "length": 17,
-      "offset": 85577,
+      "offset": 85575,
       "opcode": "OneOf",
       "raw_hex": "EC07ED07D70001004E011010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -26544,13 +26535,13 @@
         }
       },
       "length": 7,
-      "offset": 85594,
+      "offset": 85592,
       "opcode": "OneOfOption",
       "raw_hex": "3C10300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -26565,43 +26556,43 @@
         }
       },
       "length": 7,
-      "offset": 85601,
+      "offset": 85599,
       "opcode": "OneOfOption",
       "raw_hex": "3B10000001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85608,
+      "offset": 85606,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85610,
+      "offset": 85608,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 215,
         "value": 1
       },
       "length": 6,
-      "offset": 85612,
+      "offset": 85610,
       "opcode": "EqIdVal",
       "raw_hex": "D7000100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -26625,13 +26616,13 @@
         "varstore_id": 1
       },
       "length": 17,
-      "offset": 85618,
+      "offset": 85616,
       "opcode": "OneOf",
       "raw_hex": "EF07F007D800010052011010000E00",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -26646,22 +26637,22 @@
         }
       },
       "length": 7,
-      "offset": 85635,
+      "offset": 85633,
       "opcode": "OneOfOption",
       "raw_hex": "F107000000",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85642,
+      "offset": 85640,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 5402,
         "values": [
@@ -26672,13 +26663,13 @@
         ]
       },
       "length": 14,
-      "offset": 85644,
+      "offset": 85642,
       "opcode": "EqIdValList",
       "raw_hex": "1A1504000000010002000300",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "default": false,
         "flags": 0,
@@ -26693,13 +26684,13 @@
         }
       },
       "length": 7,
-      "offset": 85658,
+      "offset": 85656,
       "opcode": "OneOfOption",
       "raw_hex": "F207000001",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "default": false,
         "flags": 0,
@@ -26714,22 +26705,22 @@
         }
       },
       "length": 7,
-      "offset": 85665,
+      "offset": 85663,
       "opcode": "OneOfOption",
       "raw_hex": "F307000002",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85672,
+      "offset": 85670,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -26744,13 +26735,13 @@
         }
       },
       "length": 7,
-      "offset": 85674,
+      "offset": 85672,
       "opcode": "OneOfOption",
       "raw_hex": "F407000005",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -26765,13 +26756,13 @@
         }
       },
       "length": 7,
-      "offset": 85681,
+      "offset": 85679,
       "opcode": "OneOfOption",
       "raw_hex": "F507000006",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 48,
@@ -26786,13 +26777,13 @@
         }
       },
       "length": 7,
-      "offset": 85688,
+      "offset": 85686,
       "opcode": "OneOfOption",
       "raw_hex": "F607300009",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -26807,22 +26798,22 @@
         }
       },
       "length": 7,
-      "offset": 85695,
+      "offset": 85693,
       "opcode": "OneOfOption",
       "raw_hex": "F70700000A",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 85702,
+      "offset": 85700,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "question_id": 5402,
         "values": [
@@ -26833,31 +26824,31 @@
         ]
       },
       "length": 14,
-      "offset": 85704,
+      "offset": 85702,
       "opcode": "EqIdValList",
       "raw_hex": "1A1504000000010002000300",
       "scope_start": true
+    },
+    {
+      "depth": 7,
+      "fields": {},
+      "length": 2,
+      "offset": 85716,
+      "opcode": "Not",
+      "raw_hex": null,
+      "scope_start": false
     },
     {
       "depth": 6,
       "fields": {},
       "length": 2,
       "offset": 85718,
-      "opcode": "Not",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 5,
-      "fields": {},
-      "length": 2,
-      "offset": 85720,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "default": false,
         "flags": 0,
@@ -26872,13 +26863,13 @@
         }
       },
       "length": 7,
-      "offset": 85722,
+      "offset": 85720,
       "opcode": "OneOfOption",
       "raw_hex": "F80700000D",
       "scope_start": false
     },
     {
-      "depth": 5,
+      "depth": 6,
       "fields": {
         "default": false,
         "flags": 0,
@@ -26893,9 +26884,18 @@
         }
       },
       "length": 7,
-      "offset": 85729,
+      "offset": 85727,
       "opcode": "OneOfOption",
       "raw_hex": "F90700000E",
+      "scope_start": false
+    },
+    {
+      "depth": 5,
+      "fields": {},
+      "length": 2,
+      "offset": 85734,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -26917,16 +26917,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 85740,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -26950,13 +26941,13 @@
         "varstore_id": 1
       },
       "length": 17,
-      "offset": 85742,
+      "offset": 85740,
       "opcode": "OneOf",
       "raw_hex": "AA03B103D900010061011010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -26971,13 +26962,13 @@
         }
       },
       "length": 7,
-      "offset": 85759,
+      "offset": 85757,
       "opcode": "OneOfOption",
       "raw_hex": "3B10300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -26992,22 +26983,22 @@
         }
       },
       "length": 7,
-      "offset": 85766,
+      "offset": 85764,
       "opcode": "OneOfOption",
       "raw_hex": "3C10000001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85773,
+      "offset": 85771,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -27031,13 +27022,13 @@
         "varstore_id": 1
       },
       "length": 17,
-      "offset": 85775,
+      "offset": 85773,
       "opcode": "OneOf",
       "raw_hex": "B303BA03DA00010065011010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -27052,13 +27043,13 @@
         }
       },
       "length": 7,
-      "offset": 85792,
+      "offset": 85790,
       "opcode": "OneOfOption",
       "raw_hex": "3B10300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -27073,22 +27064,22 @@
         }
       },
       "length": 7,
-      "offset": 85799,
+      "offset": 85797,
       "opcode": "OneOfOption",
       "raw_hex": "3C10000001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85806,
+      "offset": 85804,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -27112,13 +27103,13 @@
         "varstore_id": 1
       },
       "length": 17,
-      "offset": 85808,
+      "offset": 85806,
       "opcode": "OneOf",
       "raw_hex": "BC03C303DB00010069011010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -27133,13 +27124,13 @@
         }
       },
       "length": 7,
-      "offset": 85825,
+      "offset": 85823,
       "opcode": "OneOfOption",
       "raw_hex": "3B10300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -27154,22 +27145,22 @@
         }
       },
       "length": 7,
-      "offset": 85832,
+      "offset": 85830,
       "opcode": "OneOfOption",
       "raw_hex": "3C10000001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85839,
+      "offset": 85837,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "device_path_id": null,
         "form_id": 1833,
@@ -27190,34 +27181,34 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85841,
+      "offset": 85839,
       "opcode": "Ref",
       "raw_hex": "1A021B02DC000000FFFF002907",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85856,
+      "offset": 85854,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 1892,
         "value": 1
       },
       "length": 6,
-      "offset": 85858,
+      "offset": 85856,
       "opcode": "EqIdVal",
       "raw_hex": "64070100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1122,
@@ -27238,43 +27229,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85864,
+      "offset": 85862,
       "opcode": "Ref",
       "raw_hex": "5A036F03DD000000FFFF006204",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85879,
+      "offset": 85877,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85881,
+      "offset": 85879,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 1953,
         "value": 1
       },
       "length": 6,
-      "offset": 85883,
+      "offset": 85881,
       "opcode": "EqIdVal",
       "raw_hex": "A1070100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1123,
@@ -27295,43 +27286,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85889,
+      "offset": 85887,
       "opcode": "Ref",
       "raw_hex": "5B036F03DE000000FFFF006304",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85904,
+      "offset": 85902,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85906,
+      "offset": 85904,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 1990,
         "value": 1
       },
       "length": 6,
-      "offset": 85908,
+      "offset": 85906,
       "opcode": "EqIdVal",
       "raw_hex": "C6070100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1129,
@@ -27352,43 +27343,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85914,
+      "offset": 85912,
       "opcode": "Ref",
       "raw_hex": "5C036F03DF000000FFFF006904",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85929,
+      "offset": 85927,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85931,
+      "offset": 85929,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2027,
         "value": 1
       },
       "length": 6,
-      "offset": 85933,
+      "offset": 85931,
       "opcode": "EqIdVal",
       "raw_hex": "EB070100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1130,
@@ -27409,43 +27400,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85939,
+      "offset": 85937,
       "opcode": "Ref",
       "raw_hex": "5D036F03E0000000FFFF006A04",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85954,
+      "offset": 85952,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85956,
+      "offset": 85954,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2064,
         "value": 1
       },
       "length": 6,
-      "offset": 85958,
+      "offset": 85956,
       "opcode": "EqIdVal",
       "raw_hex": "10080100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1131,
@@ -27466,43 +27457,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85964,
+      "offset": 85962,
       "opcode": "Ref",
       "raw_hex": "5E036F03E1000000FFFF006B04",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85979,
+      "offset": 85977,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 85981,
+      "offset": 85979,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2125,
         "value": 1
       },
       "length": 6,
-      "offset": 85983,
+      "offset": 85981,
       "opcode": "EqIdVal",
       "raw_hex": "4D080100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1132,
@@ -27523,43 +27514,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 85989,
+      "offset": 85987,
       "opcode": "Ref",
       "raw_hex": "5F036F03E2000000FFFF006C04",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86004,
+      "offset": 86002,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86006,
+      "offset": 86004,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2162,
         "value": 1
       },
       "length": 6,
-      "offset": 86008,
+      "offset": 86006,
       "opcode": "EqIdVal",
       "raw_hex": "72080100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1133,
@@ -27580,43 +27571,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86014,
+      "offset": 86012,
       "opcode": "Ref",
       "raw_hex": "60036F03E3000000FFFF006D04",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86029,
+      "offset": 86027,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86031,
+      "offset": 86029,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2199,
         "value": 1
       },
       "length": 6,
-      "offset": 86033,
+      "offset": 86031,
       "opcode": "EqIdVal",
       "raw_hex": "97080100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1134,
@@ -27637,43 +27628,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86039,
+      "offset": 86037,
       "opcode": "Ref",
       "raw_hex": "61036F03E4000000FFFF006E04",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86054,
+      "offset": 86052,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86056,
+      "offset": 86054,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2236,
         "value": 1
       },
       "length": 6,
-      "offset": 86058,
+      "offset": 86056,
       "opcode": "EqIdVal",
       "raw_hex": "BC080100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1135,
@@ -27694,43 +27685,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86064,
+      "offset": 86062,
       "opcode": "Ref",
       "raw_hex": "62036F03E5000000FFFF006F04",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86079,
+      "offset": 86077,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86081,
+      "offset": 86079,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2285,
         "value": 1
       },
       "length": 6,
-      "offset": 86083,
+      "offset": 86081,
       "opcode": "EqIdVal",
       "raw_hex": "ED080100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1136,
@@ -27751,43 +27742,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86089,
+      "offset": 86087,
       "opcode": "Ref",
       "raw_hex": "63036F03E6000000FFFF007004",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86104,
+      "offset": 86102,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86106,
+      "offset": 86104,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2322,
         "value": 1
       },
       "length": 6,
-      "offset": 86108,
+      "offset": 86106,
       "opcode": "EqIdVal",
       "raw_hex": "12090100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1141,
@@ -27808,43 +27799,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86114,
+      "offset": 86112,
       "opcode": "Ref",
       "raw_hex": "64036F03E7000000FFFF007504",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86129,
+      "offset": 86127,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86131,
+      "offset": 86129,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2359,
         "value": 1
       },
       "length": 6,
-      "offset": 86133,
+      "offset": 86131,
       "opcode": "EqIdVal",
       "raw_hex": "37090100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1142,
@@ -27865,43 +27856,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86139,
+      "offset": 86137,
       "opcode": "Ref",
       "raw_hex": "65036F03E8000000FFFF007604",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86154,
+      "offset": 86152,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86156,
+      "offset": 86154,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2396,
         "value": 1
       },
       "length": 6,
-      "offset": 86158,
+      "offset": 86156,
       "opcode": "EqIdVal",
       "raw_hex": "5C090100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1143,
@@ -27922,43 +27913,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86164,
+      "offset": 86162,
       "opcode": "Ref",
       "raw_hex": "66036F03E9000000FFFF007704",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86179,
+      "offset": 86177,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86181,
+      "offset": 86179,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2457,
         "value": 1
       },
       "length": 6,
-      "offset": 86183,
+      "offset": 86181,
       "opcode": "EqIdVal",
       "raw_hex": "99090100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1144,
@@ -27979,43 +27970,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86189,
+      "offset": 86187,
       "opcode": "Ref",
       "raw_hex": "67036F03EA000000FFFF007804",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86204,
+      "offset": 86202,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86206,
+      "offset": 86204,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2494,
         "value": 1
       },
       "length": 6,
-      "offset": 86208,
+      "offset": 86206,
       "opcode": "EqIdVal",
       "raw_hex": "BE090100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1145,
@@ -28036,43 +28027,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86214,
+      "offset": 86212,
       "opcode": "Ref",
       "raw_hex": "68036F03EB000000FFFF007904",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86229,
+      "offset": 86227,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86231,
+      "offset": 86229,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2531,
         "value": 1
       },
       "length": 6,
-      "offset": 86233,
+      "offset": 86231,
       "opcode": "EqIdVal",
       "raw_hex": "E3090100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1166,
@@ -28093,43 +28084,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86239,
+      "offset": 86237,
       "opcode": "Ref",
       "raw_hex": "69036F03EC000000FFFF008E04",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86254,
+      "offset": 86252,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86256,
+      "offset": 86254,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2568,
         "value": 1
       },
       "length": 6,
-      "offset": 86258,
+      "offset": 86256,
       "opcode": "EqIdVal",
       "raw_hex": "080A0100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1167,
@@ -28150,43 +28141,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86264,
+      "offset": 86262,
       "opcode": "Ref",
       "raw_hex": "6A036F03ED000000FFFF008F04",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86279,
+      "offset": 86277,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86281,
+      "offset": 86279,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2617,
         "value": 1
       },
       "length": 6,
-      "offset": 86283,
+      "offset": 86281,
       "opcode": "EqIdVal",
       "raw_hex": "390A0100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1168,
@@ -28207,43 +28198,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86289,
+      "offset": 86287,
       "opcode": "Ref",
       "raw_hex": "6B036F03EE000000FFFF009004",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86304,
+      "offset": 86302,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86306,
+      "offset": 86304,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2654,
         "value": 1
       },
       "length": 6,
-      "offset": 86308,
+      "offset": 86306,
       "opcode": "EqIdVal",
       "raw_hex": "5E0A0100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1169,
@@ -28264,43 +28255,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86314,
+      "offset": 86312,
       "opcode": "Ref",
       "raw_hex": "6C036F03EF000000FFFF009104",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86329,
+      "offset": 86327,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86331,
+      "offset": 86329,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2691,
         "value": 1
       },
       "length": 6,
-      "offset": 86333,
+      "offset": 86331,
       "opcode": "EqIdVal",
       "raw_hex": "830A0100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1170,
@@ -28321,43 +28312,43 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86339,
+      "offset": 86337,
       "opcode": "Ref",
       "raw_hex": "6D036F03F0000000FFFF009204",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86354,
+      "offset": 86352,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 86356,
+      "offset": 86354,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 2728,
         "value": 1
       },
       "length": 6,
-      "offset": 86358,
+      "offset": 86356,
       "opcode": "EqIdVal",
       "raw_hex": "A80A0100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "device_path_id": null,
         "form_id": 1171,
@@ -28378,9 +28369,18 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 86364,
+      "offset": 86362,
       "opcode": "Ref",
       "raw_hex": "6E036F03F1000000FFFF009304",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {},
+      "length": 2,
+      "offset": 86377,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -513034,16 +513034,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 276057,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "device_path_id": null,
         "form_id": 768,
@@ -513064,9 +513055,18 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 276059,
+      "offset": 276057,
       "opcode": "Ref",
       "raw_hex": "FE0FFF0FAD120000FFFF000003",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 276072,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -513088,16 +513088,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 276078,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -513121,13 +513112,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 276080,
+      "offset": 276078,
       "opcode": "Numeric",
       "raw_hex": "2C002D00F5DF06002900041000FF01",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default_id": 0,
         "value": {
@@ -513136,13 +513127,13 @@
         }
       },
       "length": 6,
-      "offset": 276097,
+      "offset": 276095,
       "opcode": "Default",
       "raw_hex": "00000000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default_id": 1,
         "value": {
@@ -513151,9 +513142,18 @@
         }
       },
       "length": 6,
-      "offset": 276103,
+      "offset": 276101,
       "opcode": "Default",
       "raw_hex": "01000000",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {},
+      "length": 2,
+      "offset": 276107,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -514454,45 +514454,45 @@
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
       "offset": 276580,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 276582,
       "opcode": "SuppressIf",
       "raw_hex": null,
-      "scope_start": true
-    },
-    {
-      "depth": 3,
-      "fields": {
-        "question_id": 5402,
-        "value": 3
-      },
-      "length": 6,
-      "offset": 276584,
-      "opcode": "EqIdVal",
-      "raw_hex": "1A150300",
       "scope_start": true
     },
     {
       "depth": 4,
       "fields": {
         "question_id": 5402,
+        "value": 3
+      },
+      "length": 6,
+      "offset": 276582,
+      "opcode": "EqIdVal",
+      "raw_hex": "1A150300",
+      "scope_start": true
+    },
+    {
+      "depth": 5,
+      "fields": {
+        "question_id": 5402,
         "value": 7
       },
       "length": 6,
-      "offset": 276590,
+      "offset": 276588,
       "opcode": "EqIdVal",
       "raw_hex": "1A150700",
+      "scope_start": false
+    },
+    {
+      "depth": 5,
+      "fields": {},
+      "length": 2,
+      "offset": 276594,
+      "opcode": "Or",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -514500,30 +514500,12 @@
       "fields": {},
       "length": 2,
       "offset": 276596,
-      "opcode": "Or",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 3,
-      "fields": {},
-      "length": 2,
-      "offset": 276598,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 276600,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -514547,13 +514529,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 276602,
+      "offset": 276598,
       "opcode": "OneOf",
       "raw_hex": "490F4A0F7F5D060001001410000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -514568,13 +514550,13 @@
         }
       },
       "length": 7,
-      "offset": 276619,
+      "offset": 276615,
       "opcode": "OneOfOption",
       "raw_hex": "1601000001",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 48,
@@ -514589,9 +514571,27 @@
         }
       },
       "length": 7,
-      "offset": 276626,
+      "offset": 276622,
       "opcode": "OneOfOption",
       "raw_hex": "4508300000",
+      "scope_start": false
+    },
+    {
+      "depth": 4,
+      "fields": {},
+      "length": 2,
+      "offset": 276629,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {},
+      "length": 2,
+      "offset": 276631,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -514625,16 +514625,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 276643,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -514658,13 +514649,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 276645,
+      "offset": 276643,
       "opcode": "OneOf",
       "raw_hex": "2F0F300FAE1206000F001010000900",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -514679,13 +514670,13 @@
         }
       },
       "length": 7,
-      "offset": 276662,
+      "offset": 276660,
       "opcode": "OneOfOption",
       "raw_hex": "1601300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -514700,13 +514691,13 @@
         }
       },
       "length": 7,
-      "offset": 276669,
+      "offset": 276667,
       "opcode": "OneOfOption",
       "raw_hex": "150F000001",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -514721,13 +514712,13 @@
         }
       },
       "length": 7,
-      "offset": 276676,
+      "offset": 276674,
       "opcode": "OneOfOption",
       "raw_hex": "160F000002",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -514742,13 +514733,13 @@
         }
       },
       "length": 7,
-      "offset": 276683,
+      "offset": 276681,
       "opcode": "OneOfOption",
       "raw_hex": "170F000003",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -514763,13 +514754,13 @@
         }
       },
       "length": 7,
-      "offset": 276690,
+      "offset": 276688,
       "opcode": "OneOfOption",
       "raw_hex": "180F000004",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -514784,13 +514775,13 @@
         }
       },
       "length": 7,
-      "offset": 276697,
+      "offset": 276695,
       "opcode": "OneOfOption",
       "raw_hex": "190F000005",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -514805,13 +514796,13 @@
         }
       },
       "length": 7,
-      "offset": 276704,
+      "offset": 276702,
       "opcode": "OneOfOption",
       "raw_hex": "1A0F000006",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -514826,13 +514817,13 @@
         }
       },
       "length": 7,
-      "offset": 276711,
+      "offset": 276709,
       "opcode": "OneOfOption",
       "raw_hex": "1B0F000007",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -514847,13 +514838,13 @@
         }
       },
       "length": 7,
-      "offset": 276718,
+      "offset": 276716,
       "opcode": "OneOfOption",
       "raw_hex": "1C0F000008",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -514868,22 +514859,22 @@
         }
       },
       "length": 7,
-      "offset": 276725,
+      "offset": 276723,
       "opcode": "OneOfOption",
       "raw_hex": "830E000009",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 276732,
+      "offset": 276730,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -514907,13 +514898,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 276734,
+      "offset": 276732,
       "opcode": "OneOf",
       "raw_hex": "DF0FE00FAF12060011001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -514928,13 +514919,13 @@
         }
       },
       "length": 7,
-      "offset": 276751,
+      "offset": 276749,
       "opcode": "OneOfOption",
       "raw_hex": "2100300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -514949,22 +514940,22 @@
         }
       },
       "length": 7,
-      "offset": 276758,
+      "offset": 276756,
       "opcode": "OneOfOption",
       "raw_hex": "2200000001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 276765,
+      "offset": 276763,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -514988,13 +514979,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 276767,
+      "offset": 276765,
       "opcode": "OneOf",
       "raw_hex": "E30FE40FB012060012001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -515009,13 +515000,13 @@
         }
       },
       "length": 7,
-      "offset": 276784,
+      "offset": 276782,
       "opcode": "OneOfOption",
       "raw_hex": "2100000000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -515030,80 +515021,89 @@
         }
       },
       "length": 7,
-      "offset": 276791,
+      "offset": 276789,
       "opcode": "OneOfOption",
       "raw_hex": "2200300001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 276798,
+      "offset": 276796,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 276800,
+      "offset": 276798,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 5402,
         "value": 4
       },
       "length": 6,
-      "offset": 276802,
+      "offset": 276800,
       "opcode": "EqIdVal",
       "raw_hex": "1A150400",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "question_id": 5402,
         "value": 6
       },
       "length": 6,
-      "offset": 276808,
+      "offset": 276806,
       "opcode": "EqIdVal",
       "raw_hex": "1A150600",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 276814,
+      "offset": 276812,
       "opcode": "Or",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "question_id": 4784,
         "value": 1
       },
       "length": 6,
-      "offset": 276816,
+      "offset": 276814,
       "opcode": "EqIdVal",
       "raw_hex": "B0120100",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
+      "fields": {},
+      "length": 2,
+      "offset": 276820,
+      "opcode": "And",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 5,
       "fields": {},
       "length": 2,
       "offset": 276822,
-      "opcode": "And",
+      "opcode": "Not",
       "raw_hex": null,
       "scope_start": false
     },
@@ -515112,30 +515112,12 @@
       "fields": {},
       "length": 2,
       "offset": 276824,
-      "opcode": "Not",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 3,
-      "fields": {},
-      "length": 2,
-      "offset": 276826,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 276828,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -515159,13 +515141,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 276830,
+      "offset": 276826,
       "opcode": "OneOf",
       "raw_hex": "E50FE60FB112060013001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -515180,13 +515162,13 @@
         }
       },
       "length": 7,
-      "offset": 276847,
+      "offset": 276843,
       "opcode": "OneOfOption",
       "raw_hex": "2100000000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 48,
@@ -515201,22 +515183,31 @@
         }
       },
       "length": 7,
-      "offset": 276854,
+      "offset": 276850,
       "opcode": "OneOfOption",
       "raw_hex": "2200300001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 4,
       "fields": {},
       "length": 2,
-      "offset": 276861,
+      "offset": 276857,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
+      "fields": {},
+      "length": 2,
+      "offset": 276859,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -515240,13 +515231,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 276863,
+      "offset": 276861,
       "opcode": "OneOf",
       "raw_hex": "510F520FB212060005001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -515261,13 +515252,13 @@
         }
       },
       "length": 7,
-      "offset": 276880,
+      "offset": 276878,
       "opcode": "OneOfOption",
       "raw_hex": "4508300001",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -515282,9 +515273,18 @@
         }
       },
       "length": 7,
-      "offset": 276887,
+      "offset": 276885,
       "opcode": "OneOfOption",
       "raw_hex": "1601000000",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {},
+      "length": 2,
+      "offset": 276892,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -515318,16 +515318,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 276904,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -515351,13 +515342,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 276906,
+      "offset": 276904,
       "opcode": "OneOf",
       "raw_hex": "4D0F4E0FB312060006001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -515372,13 +515363,13 @@
         }
       },
       "length": 7,
-      "offset": 276923,
+      "offset": 276921,
       "opcode": "OneOfOption",
       "raw_hex": "1601000000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -515393,22 +515384,22 @@
         }
       },
       "length": 7,
-      "offset": 276930,
+      "offset": 276928,
       "opcode": "OneOfOption",
       "raw_hex": "4508300001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 276937,
+      "offset": 276935,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -515432,13 +515423,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 276939,
+      "offset": 276937,
       "opcode": "OneOf",
       "raw_hex": "4F0F500FB412060007001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -515453,13 +515444,13 @@
         }
       },
       "length": 7,
-      "offset": 276956,
+      "offset": 276954,
       "opcode": "OneOfOption",
       "raw_hex": "1601000000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -515474,22 +515465,22 @@
         }
       },
       "length": 7,
-      "offset": 276963,
+      "offset": 276961,
       "opcode": "OneOfOption",
       "raw_hex": "4508300001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 276970,
+      "offset": 276968,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -515513,13 +515504,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 276972,
+      "offset": 276970,
       "opcode": "OneOf",
       "raw_hex": "4B0F4C0FB512060000001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -515534,13 +515525,13 @@
         }
       },
       "length": 7,
-      "offset": 276989,
+      "offset": 276987,
       "opcode": "OneOfOption",
       "raw_hex": "1601300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -515555,52 +515546,43 @@
         }
       },
       "length": 7,
-      "offset": 276996,
+      "offset": 276994,
       "opcode": "OneOfOption",
       "raw_hex": "4508000001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277003,
+      "offset": 277001,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277005,
+      "offset": 277003,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 5418,
         "value": 0
       },
       "length": 6,
-      "offset": 277007,
+      "offset": 277005,
       "opcode": "EqIdVal",
       "raw_hex": "2A150000",
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 277013,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -515624,13 +515606,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277015,
+      "offset": 277011,
       "opcode": "OneOf",
       "raw_hex": "6D106E10B612060020001010000300",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -515645,13 +515627,13 @@
         }
       },
       "length": 7,
-      "offset": 277032,
+      "offset": 277028,
       "opcode": "OneOfOption",
       "raw_hex": "1601000000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 48,
@@ -515666,13 +515648,13 @@
         }
       },
       "length": 7,
-      "offset": 277039,
+      "offset": 277035,
       "opcode": "OneOfOption",
       "raw_hex": "240C300001",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -515687,13 +515669,13 @@
         }
       },
       "length": 7,
-      "offset": 277046,
+      "offset": 277042,
       "opcode": "OneOfOption",
       "raw_hex": "250C000002",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -515708,22 +515690,31 @@
         }
       },
       "length": 7,
-      "offset": 277053,
+      "offset": 277049,
       "opcode": "OneOfOption",
       "raw_hex": "2300000003",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 4,
       "fields": {},
       "length": 2,
-      "offset": 277060,
+      "offset": 277056,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
+      "fields": {},
+      "length": 2,
+      "offset": 277058,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -515747,13 +515738,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277062,
+      "offset": 277060,
       "opcode": "OneOf",
       "raw_hex": "B30FB40FB712060008001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -515768,13 +515759,13 @@
         }
       },
       "length": 7,
-      "offset": 277079,
+      "offset": 277077,
       "opcode": "OneOfOption",
       "raw_hex": "4508300001",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -515789,22 +515780,22 @@
         }
       },
       "length": 7,
-      "offset": 277086,
+      "offset": 277084,
       "opcode": "OneOfOption",
       "raw_hex": "1601000000",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277093,
+      "offset": 277091,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -515828,13 +515819,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277095,
+      "offset": 277093,
       "opcode": "OneOf",
       "raw_hex": "B50FB60FB812060041011010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -515849,13 +515840,13 @@
         }
       },
       "length": 7,
-      "offset": 277112,
+      "offset": 277110,
       "opcode": "OneOfOption",
       "raw_hex": "1601300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -515870,22 +515861,22 @@
         }
       },
       "length": 7,
-      "offset": 277119,
+      "offset": 277117,
       "opcode": "OneOfOption",
       "raw_hex": "4508000001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277126,
+      "offset": 277124,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -515909,13 +515900,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277128,
+      "offset": 277126,
       "opcode": "OneOf",
       "raw_hex": "B70FB80FB912060009001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -515930,13 +515921,13 @@
         }
       },
       "length": 7,
-      "offset": 277145,
+      "offset": 277143,
       "opcode": "OneOfOption",
       "raw_hex": "4508300001",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -515951,22 +515942,22 @@
         }
       },
       "length": 7,
-      "offset": 277152,
+      "offset": 277150,
       "opcode": "OneOfOption",
       "raw_hex": "1601000000",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277159,
+      "offset": 277157,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -515990,13 +515981,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277161,
+      "offset": 277159,
       "opcode": "OneOf",
       "raw_hex": "B90FBA0FBA1206000A001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -516011,13 +516002,13 @@
         }
       },
       "length": 7,
-      "offset": 277178,
+      "offset": 277176,
       "opcode": "OneOfOption",
       "raw_hex": "4508300001",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516032,22 +516023,22 @@
         }
       },
       "length": 7,
-      "offset": 277185,
+      "offset": 277183,
       "opcode": "OneOfOption",
       "raw_hex": "1601000000",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277192,
+      "offset": 277190,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -516071,13 +516062,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277194,
+      "offset": 277192,
       "opcode": "OneOf",
       "raw_hex": "BB0FBC0FBB1206000B001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -516092,13 +516083,13 @@
         }
       },
       "length": 7,
-      "offset": 277211,
+      "offset": 277209,
       "opcode": "OneOfOption",
       "raw_hex": "4508300001",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516113,22 +516104,22 @@
         }
       },
       "length": 7,
-      "offset": 277218,
+      "offset": 277216,
       "opcode": "OneOfOption",
       "raw_hex": "1601000000",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277225,
+      "offset": 277223,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -516152,13 +516143,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277227,
+      "offset": 277225,
       "opcode": "OneOf",
       "raw_hex": "D30FD40FBC1206001F001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516173,13 +516164,13 @@
         }
       },
       "length": 7,
-      "offset": 277244,
+      "offset": 277242,
       "opcode": "OneOfOption",
       "raw_hex": "1601000000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -516194,22 +516185,22 @@
         }
       },
       "length": 7,
-      "offset": 277251,
+      "offset": 277249,
       "opcode": "OneOfOption",
       "raw_hex": "4508300001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277258,
+      "offset": 277256,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -516233,13 +516224,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277260,
+      "offset": 277258,
       "opcode": "OneOf",
       "raw_hex": "DB0FDC0FBD1206000C001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -516254,13 +516245,13 @@
         }
       },
       "length": 7,
-      "offset": 277277,
+      "offset": 277275,
       "opcode": "OneOfOption",
       "raw_hex": "DD0F300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516275,59 +516266,68 @@
         }
       },
       "length": 7,
-      "offset": 277284,
+      "offset": 277282,
       "opcode": "OneOfOption",
       "raw_hex": "DE0F000001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277291,
+      "offset": 277289,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277293,
+      "offset": 277291,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 5402,
         "value": 3
       },
       "length": 6,
-      "offset": 277295,
+      "offset": 277293,
       "opcode": "EqIdVal",
       "raw_hex": "1A150300",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "question_id": 5402,
         "value": 7
       },
       "length": 6,
-      "offset": 277301,
+      "offset": 277299,
       "opcode": "EqIdVal",
       "raw_hex": "1A150700",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
+      "fields": {},
+      "length": 2,
+      "offset": 277305,
+      "opcode": "Or",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 5,
       "fields": {},
       "length": 2,
       "offset": 277307,
-      "opcode": "Or",
+      "opcode": "Not",
       "raw_hex": null,
       "scope_start": false
     },
@@ -516336,21 +516336,12 @@
       "fields": {},
       "length": 2,
       "offset": 277309,
-      "opcode": "Not",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 3,
-      "fields": {},
-      "length": 2,
-      "offset": 277311,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -516374,13 +516365,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277313,
+      "offset": 277311,
       "opcode": "OneOf",
       "raw_hex": "BD0FBE0FBE120600F8001010000100",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 48,
@@ -516395,13 +516386,13 @@
         }
       },
       "length": 7,
-      "offset": 277330,
+      "offset": 277328,
       "opcode": "OneOfOption",
       "raw_hex": "4508300000",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516416,9 +516407,18 @@
         }
       },
       "length": 7,
-      "offset": 277337,
+      "offset": 277335,
       "opcode": "OneOfOption",
       "raw_hex": "1601000001",
+      "scope_start": false
+    },
+    {
+      "depth": 4,
+      "fields": {},
+      "length": 2,
+      "offset": 277342,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -516431,55 +516431,46 @@
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
       "offset": 277346,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 277348,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 5402,
         "value": 6
       },
       "length": 6,
-      "offset": 277350,
+      "offset": 277348,
       "opcode": "EqIdVal",
       "raw_hex": "1A150600",
       "scope_start": true
+    },
+    {
+      "depth": 5,
+      "fields": {},
+      "length": 2,
+      "offset": 277354,
+      "opcode": "Not",
+      "raw_hex": null,
+      "scope_start": false
     },
     {
       "depth": 4,
       "fields": {},
       "length": 2,
       "offset": 277356,
-      "opcode": "Not",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 3,
-      "fields": {},
-      "length": 2,
-      "offset": 277358,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -516503,13 +516494,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277360,
+      "offset": 277358,
       "opcode": "OneOf",
       "raw_hex": "BF0FC00FBF12060042011010000100",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516524,13 +516515,13 @@
         }
       },
       "length": 7,
-      "offset": 277377,
+      "offset": 277375,
       "opcode": "OneOfOption",
       "raw_hex": "4508000001",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 48,
@@ -516545,9 +516536,18 @@
         }
       },
       "length": 7,
-      "offset": 277384,
+      "offset": 277382,
       "opcode": "OneOfOption",
       "raw_hex": "1601300000",
+      "scope_start": false
+    },
+    {
+      "depth": 4,
+      "fields": {},
+      "length": 2,
+      "offset": 277389,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -516560,16 +516560,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 277393,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -516593,13 +516584,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277395,
+      "offset": 277393,
       "opcode": "OneOf",
       "raw_hex": "A90FAA0FC01206000E00101000FF00",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516614,13 +516605,13 @@
         }
       },
       "length": 7,
-      "offset": 277412,
+      "offset": 277410,
       "opcode": "OneOfOption",
       "raw_hex": "AB0F000000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516635,13 +516626,13 @@
         }
       },
       "length": 7,
-      "offset": 277419,
+      "offset": 277417,
       "opcode": "OneOfOption",
       "raw_hex": "AC0F000001",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516656,13 +516647,13 @@
         }
       },
       "length": 7,
-      "offset": 277426,
+      "offset": 277424,
       "opcode": "OneOfOption",
       "raw_hex": "AD0F000002",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516677,13 +516668,13 @@
         }
       },
       "length": 7,
-      "offset": 277433,
+      "offset": 277431,
       "opcode": "OneOfOption",
       "raw_hex": "AE0F000003",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516698,13 +516689,13 @@
         }
       },
       "length": 7,
-      "offset": 277440,
+      "offset": 277438,
       "opcode": "OneOfOption",
       "raw_hex": "AF0F000004",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516719,13 +516710,13 @@
         }
       },
       "length": 7,
-      "offset": 277447,
+      "offset": 277445,
       "opcode": "OneOfOption",
       "raw_hex": "B00F000005",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516740,13 +516731,13 @@
         }
       },
       "length": 7,
-      "offset": 277454,
+      "offset": 277452,
       "opcode": "OneOfOption",
       "raw_hex": "B10F000006",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516761,13 +516752,13 @@
         }
       },
       "length": 7,
-      "offset": 277461,
+      "offset": 277459,
       "opcode": "OneOfOption",
       "raw_hex": "B20F000007",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -516782,43 +516773,43 @@
         }
       },
       "length": 7,
-      "offset": 277468,
+      "offset": 277466,
       "opcode": "OneOfOption",
       "raw_hex": "44083000FF",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277475,
+      "offset": 277473,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277477,
+      "offset": 277475,
       "opcode": "GrayOutIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 5417,
         "value": 1
       },
       "length": 6,
-      "offset": 277479,
+      "offset": 277477,
       "opcode": "EqIdVal",
       "raw_hex": "29150100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -516842,13 +516833,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277485,
+      "offset": 277483,
       "opcode": "OneOf",
       "raw_hex": "550F560F815D06000D001410000100",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 48,
@@ -516863,13 +516854,13 @@
         }
       },
       "length": 7,
-      "offset": 277502,
+      "offset": 277500,
       "opcode": "OneOfOption",
       "raw_hex": "1601300000",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516884,9 +516875,18 @@
         }
       },
       "length": 7,
-      "offset": 277509,
+      "offset": 277507,
       "opcode": "OneOfOption",
       "raw_hex": "4508000001",
+      "scope_start": false
+    },
+    {
+      "depth": 4,
+      "fields": {},
+      "length": 2,
+      "offset": 277514,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -516899,16 +516899,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 277518,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -516932,13 +516923,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277520,
+      "offset": 277518,
       "opcode": "OneOf",
       "raw_hex": "D50FD60FC11206001E001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -516953,13 +516944,13 @@
         }
       },
       "length": 7,
-      "offset": 277537,
+      "offset": 277535,
       "opcode": "OneOfOption",
       "raw_hex": "1601300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -516974,22 +516965,22 @@
         }
       },
       "length": 7,
-      "offset": 277544,
+      "offset": 277542,
       "opcode": "OneOfOption",
       "raw_hex": "4508000001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277551,
+      "offset": 277549,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -517013,13 +517004,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277553,
+      "offset": 277551,
       "opcode": "OneOf",
       "raw_hex": "D70FD80FC2120600EB001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 16,
@@ -517034,13 +517025,13 @@
         }
       },
       "length": 7,
-      "offset": 277570,
+      "offset": 277568,
       "opcode": "OneOfOption",
       "raw_hex": "1601100000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 32,
@@ -517055,22 +517046,22 @@
         }
       },
       "length": 7,
-      "offset": 277577,
+      "offset": 277575,
       "opcode": "OneOfOption",
       "raw_hex": "4508200001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277584,
+      "offset": 277582,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -517094,13 +517085,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277586,
+      "offset": 277584,
       "opcode": "OneOf",
       "raw_hex": "D90FDA0FC3120600EE001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -517115,13 +517106,13 @@
         }
       },
       "length": 7,
-      "offset": 277603,
+      "offset": 277601,
       "opcode": "OneOfOption",
       "raw_hex": "1601000000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -517136,51 +517127,60 @@
         }
       },
       "length": 7,
-      "offset": 277610,
+      "offset": 277608,
       "opcode": "OneOfOption",
       "raw_hex": "4508300001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277617,
+      "offset": 277615,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277619,
+      "offset": 277617,
       "opcode": "SuppressIf",
       "raw_hex": null,
-      "scope_start": true
-    },
-    {
-      "depth": 3,
-      "fields": {
-        "question_id": 5402,
-        "value": 0
-      },
-      "length": 6,
-      "offset": 277621,
-      "opcode": "EqIdVal",
-      "raw_hex": "1A150000",
       "scope_start": true
     },
     {
       "depth": 4,
       "fields": {
         "question_id": 5402,
+        "value": 0
+      },
+      "length": 6,
+      "offset": 277619,
+      "opcode": "EqIdVal",
+      "raw_hex": "1A150000",
+      "scope_start": true
+    },
+    {
+      "depth": 5,
+      "fields": {
+        "question_id": 5402,
         "value": 1
       },
       "length": 6,
-      "offset": 277627,
+      "offset": 277625,
       "opcode": "EqIdVal",
       "raw_hex": "1A150100",
+      "scope_start": false
+    },
+    {
+      "depth": 5,
+      "fields": {},
+      "length": 2,
+      "offset": 277631,
+      "opcode": "Or",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -517188,21 +517188,12 @@
       "fields": {},
       "length": 2,
       "offset": 277633,
-      "opcode": "Or",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 3,
-      "fields": {},
-      "length": 2,
-      "offset": 277635,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -517226,13 +517217,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277637,
+      "offset": 277635,
       "opcode": "OneOf",
       "raw_hex": "C10FC20FC4120600FB001010000100",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -517247,13 +517238,13 @@
         }
       },
       "length": 7,
-      "offset": 277654,
+      "offset": 277652,
       "opcode": "OneOfOption",
       "raw_hex": "4508000001",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 48,
@@ -517268,9 +517259,18 @@
         }
       },
       "length": 7,
-      "offset": 277661,
+      "offset": 277659,
       "opcode": "OneOfOption",
       "raw_hex": "1601300000",
+      "scope_start": false
+    },
+    {
+      "depth": 4,
+      "fields": {},
+      "length": 2,
+      "offset": 277666,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -517481,16 +517481,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 277782,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -517514,13 +517505,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277784,
+      "offset": 277782,
       "opcode": "OneOf",
       "raw_hex": "F20FF30FC7120600EC001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -517535,13 +517526,13 @@
         }
       },
       "length": 7,
-      "offset": 277801,
+      "offset": 277799,
       "opcode": "OneOfOption",
       "raw_hex": "1601300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -517556,22 +517547,22 @@
         }
       },
       "length": 7,
-      "offset": 277808,
+      "offset": 277806,
       "opcode": "OneOfOption",
       "raw_hex": "4508000001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277815,
+      "offset": 277813,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -517595,13 +517586,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277817,
+      "offset": 277815,
       "opcode": "OneOf",
       "raw_hex": "F40FF50FC8120600ED001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -517616,13 +517607,13 @@
         }
       },
       "length": 7,
-      "offset": 277834,
+      "offset": 277832,
       "opcode": "OneOfOption",
       "raw_hex": "1601300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -517637,22 +517628,22 @@
         }
       },
       "length": 7,
-      "offset": 277841,
+      "offset": 277839,
       "opcode": "OneOfOption",
       "raw_hex": "4508000001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277848,
+      "offset": 277846,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -517676,13 +517667,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277850,
+      "offset": 277848,
       "opcode": "OneOf",
       "raw_hex": "F60FF70FC9120600F7001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -517697,13 +517688,13 @@
         }
       },
       "length": 7,
-      "offset": 277867,
+      "offset": 277865,
       "opcode": "OneOfOption",
       "raw_hex": "1601000000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -517718,22 +517709,22 @@
         }
       },
       "length": 7,
-      "offset": 277874,
+      "offset": 277872,
       "opcode": "OneOfOption",
       "raw_hex": "4508300001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277881,
+      "offset": 277879,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -517757,13 +517748,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277883,
+      "offset": 277881,
       "opcode": "OneOf",
       "raw_hex": "3B0F3C0FCA12060004001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -517778,13 +517769,13 @@
         }
       },
       "length": 7,
-      "offset": 277900,
+      "offset": 277898,
       "opcode": "OneOfOption",
       "raw_hex": "1601300000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -517799,43 +517790,43 @@
         }
       },
       "length": 7,
-      "offset": 277907,
+      "offset": 277905,
       "opcode": "OneOfOption",
       "raw_hex": "4508000001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277914,
+      "offset": 277912,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 277916,
+      "offset": 277914,
       "opcode": "GrayOutIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 4810,
         "value": 1
       },
       "length": 6,
-      "offset": 277918,
+      "offset": 277916,
       "opcode": "EqIdVal",
       "raw_hex": "CA120100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -517859,13 +517850,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277924,
+      "offset": 277922,
       "opcode": "OneOf",
       "raw_hex": "3D0F3E0FCB12060002001010000100",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 32,
@@ -517880,13 +517871,13 @@
         }
       },
       "length": 7,
-      "offset": 277941,
+      "offset": 277939,
       "opcode": "OneOfOption",
       "raw_hex": "1601200000",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 16,
@@ -517901,9 +517892,18 @@
         }
       },
       "length": 7,
-      "offset": 277948,
+      "offset": 277946,
       "opcode": "OneOfOption",
       "raw_hex": "4508100001",
+      "scope_start": false
+    },
+    {
+      "depth": 4,
+      "fields": {},
+      "length": 2,
+      "offset": 277953,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -517916,37 +517916,28 @@
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
       "offset": 277957,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 277959,
       "opcode": "GrayOutIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 4810,
         "value": 1
       },
       "length": 6,
-      "offset": 277961,
+      "offset": 277959,
       "opcode": "EqIdVal",
       "raw_hex": "CA120100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -517970,13 +517961,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 277967,
+      "offset": 277965,
       "opcode": "OneOf",
       "raw_hex": "3F0F400FCC12060003001010000100",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 48,
@@ -517991,13 +517982,13 @@
         }
       },
       "length": 7,
-      "offset": 277984,
+      "offset": 277982,
       "opcode": "OneOfOption",
       "raw_hex": "1601300000",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -518012,9 +518003,18 @@
         }
       },
       "length": 7,
-      "offset": 277991,
+      "offset": 277989,
       "opcode": "OneOfOption",
       "raw_hex": "4508000001",
+      "scope_start": false
+    },
+    {
+      "depth": 4,
+      "fields": {},
+      "length": 2,
+      "offset": 277996,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -518027,37 +518027,28 @@
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
       "offset": 278000,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 278002,
       "opcode": "GrayOutIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 4810,
         "value": 1
       },
       "length": 6,
-      "offset": 278004,
+      "offset": 278002,
       "opcode": "EqIdVal",
       "raw_hex": "CA120100",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -518081,13 +518072,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 278010,
+      "offset": 278008,
       "opcode": "OneOf",
       "raw_hex": "430F440FCD12060027001010000100",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -518102,13 +518093,13 @@
         }
       },
       "length": 7,
-      "offset": 278027,
+      "offset": 278025,
       "opcode": "OneOfOption",
       "raw_hex": "1601000000",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 48,
@@ -518123,9 +518114,18 @@
         }
       },
       "length": 7,
-      "offset": 278034,
+      "offset": 278032,
       "opcode": "OneOfOption",
       "raw_hex": "4508300001",
+      "scope_start": false
+    },
+    {
+      "depth": 4,
+      "fields": {},
+      "length": 2,
+      "offset": 278039,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -518138,37 +518138,28 @@
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
       "offset": 278043,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 278045,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 57333,
         "value": 0
       },
       "length": 6,
-      "offset": 278047,
+      "offset": 278045,
       "opcode": "EqIdVal",
       "raw_hex": "F5DF0000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -518192,13 +518183,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 278053,
+      "offset": 278051,
       "opcode": "OneOf",
       "raw_hex": "450F460FCE12060028001010000100",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 48,
@@ -518213,13 +518204,13 @@
         }
       },
       "length": 7,
-      "offset": 278070,
+      "offset": 278068,
       "opcode": "OneOfOption",
       "raw_hex": "1601300000",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -518234,9 +518225,18 @@
         }
       },
       "length": 7,
-      "offset": 278077,
+      "offset": 278075,
       "opcode": "OneOfOption",
       "raw_hex": "4508000001",
+      "scope_start": false
+    },
+    {
+      "depth": 4,
+      "fields": {},
+      "length": 2,
+      "offset": 278082,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -518249,16 +518249,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 278086,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -518282,13 +518273,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 278088,
+      "offset": 278086,
       "opcode": "OneOf",
       "raw_hex": "A30FA40FCF12060022001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 32,
@@ -518303,13 +518294,13 @@
         }
       },
       "length": 7,
-      "offset": 278105,
+      "offset": 278103,
       "opcode": "OneOfOption",
       "raw_hex": "1601200000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 16,
@@ -518324,22 +518315,22 @@
         }
       },
       "length": 7,
-      "offset": 278112,
+      "offset": 278110,
       "opcode": "OneOfOption",
       "raw_hex": "4508100001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 278119,
+      "offset": 278117,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -518363,13 +518354,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 278121,
+      "offset": 278119,
       "opcode": "OneOf",
       "raw_hex": "A50FA60FD012060023001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -518384,13 +518375,13 @@
         }
       },
       "length": 7,
-      "offset": 278138,
+      "offset": 278136,
       "opcode": "OneOfOption",
       "raw_hex": "2100000000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -518405,22 +518396,22 @@
         }
       },
       "length": 7,
-      "offset": 278145,
+      "offset": 278143,
       "opcode": "OneOfOption",
       "raw_hex": "2200300001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 278152,
+      "offset": 278150,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -518444,13 +518435,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 278154,
+      "offset": 278152,
       "opcode": "OneOf",
       "raw_hex": "410F420FD112060026001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -518465,13 +518456,13 @@
         }
       },
       "length": 7,
-      "offset": 278171,
+      "offset": 278169,
       "opcode": "OneOfOption",
       "raw_hex": "480F000000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -518486,22 +518477,22 @@
         }
       },
       "length": 7,
-      "offset": 278178,
+      "offset": 278176,
       "opcode": "OneOfOption",
       "raw_hex": "470F300001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 278185,
+      "offset": 278183,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "flags": 16,
         "help": {
@@ -518525,13 +518516,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 278187,
+      "offset": 278185,
       "opcode": "OneOf",
       "raw_hex": "570F580FD212060025001010000100",
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": false,
         "flags": 0,
@@ -518546,13 +518537,13 @@
         }
       },
       "length": 7,
-      "offset": 278204,
+      "offset": 278202,
       "opcode": "OneOfOption",
       "raw_hex": "1601000000",
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "default": true,
         "flags": 48,
@@ -518567,101 +518558,110 @@
         }
       },
       "length": 7,
-      "offset": 278211,
+      "offset": 278209,
       "opcode": "OneOfOption",
       "raw_hex": "4508300001",
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 278218,
+      "offset": 278216,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
-      "offset": 278220,
+      "offset": 278218,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 5402,
         "value": 4
       },
       "length": 6,
-      "offset": 278222,
+      "offset": 278220,
       "opcode": "EqIdVal",
       "raw_hex": "1A150400",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "question_id": 5402,
         "value": 5
       },
       "length": 6,
-      "offset": 278228,
+      "offset": 278226,
       "opcode": "EqIdVal",
       "raw_hex": "1A150500",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 278234,
+      "offset": 278232,
       "opcode": "Or",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "question_id": 5402,
         "value": 3
       },
       "length": 6,
-      "offset": 278236,
+      "offset": 278234,
       "opcode": "EqIdVal",
       "raw_hex": "1A150300",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {},
       "length": 2,
-      "offset": 278242,
+      "offset": 278240,
       "opcode": "Or",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "question_id": 5402,
         "value": 7
       },
       "length": 6,
-      "offset": 278244,
+      "offset": 278242,
       "opcode": "EqIdVal",
       "raw_hex": "1A150700",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
+      "fields": {},
+      "length": 2,
+      "offset": 278248,
+      "opcode": "Or",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 5,
       "fields": {},
       "length": 2,
       "offset": 278250,
-      "opcode": "Or",
+      "opcode": "Not",
       "raw_hex": null,
       "scope_start": false
     },
@@ -518670,21 +518670,12 @@
       "fields": {},
       "length": 2,
       "offset": 278252,
-      "opcode": "Not",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 3,
-      "fields": {},
-      "length": 2,
-      "offset": 278254,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -518708,13 +518699,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 278256,
+      "offset": 278254,
       "opcode": "OneOf",
       "raw_hex": "61106210D312060043011010000100",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 48,
@@ -518729,13 +518720,13 @@
         }
       },
       "length": 7,
-      "offset": 278273,
+      "offset": 278271,
       "opcode": "OneOfOption",
       "raw_hex": "1601300000",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -518750,9 +518741,18 @@
         }
       },
       "length": 7,
-      "offset": 278280,
+      "offset": 278278,
       "opcode": "OneOfOption",
       "raw_hex": "4508000001",
+      "scope_start": false
+    },
+    {
+      "depth": 4,
+      "fields": {},
+      "length": 2,
+      "offset": 278285,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -518765,55 +518765,46 @@
       "scope_start": false
     },
     {
-      "depth": 2,
+      "depth": 3,
       "fields": {},
       "length": 2,
       "offset": 278289,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 278291,
       "opcode": "SuppressIf",
       "raw_hex": null,
       "scope_start": true
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "question_id": 5402,
         "value": 5
       },
       "length": 6,
-      "offset": 278293,
+      "offset": 278291,
       "opcode": "EqIdVal",
       "raw_hex": "1A150500",
       "scope_start": true
+    },
+    {
+      "depth": 5,
+      "fields": {},
+      "length": 2,
+      "offset": 278297,
+      "opcode": "Not",
+      "raw_hex": null,
+      "scope_start": false
     },
     {
       "depth": 4,
       "fields": {},
       "length": 2,
       "offset": 278299,
-      "opcode": "Not",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 3,
-      "fields": {},
-      "length": 2,
-      "offset": 278301,
       "opcode": "End",
       "raw_hex": null,
       "scope_start": false
     },
     {
-      "depth": 3,
+      "depth": 4,
       "fields": {
         "flags": 16,
         "help": {
@@ -518837,13 +518828,13 @@
         "varstore_id": 6
       },
       "length": 17,
-      "offset": 278303,
+      "offset": 278301,
       "opcode": "OneOf",
       "raw_hex": "6F107010D412060044011010000100",
       "scope_start": true
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": true,
         "flags": 48,
@@ -518858,13 +518849,13 @@
         }
       },
       "length": 7,
-      "offset": 278320,
+      "offset": 278318,
       "opcode": "OneOfOption",
       "raw_hex": "1601300000",
       "scope_start": false
     },
     {
-      "depth": 4,
+      "depth": 5,
       "fields": {
         "default": false,
         "flags": 0,
@@ -518879,9 +518870,18 @@
         }
       },
       "length": 7,
-      "offset": 278327,
+      "offset": 278325,
       "opcode": "OneOfOption",
       "raw_hex": "4508000001",
+      "scope_start": false
+    },
+    {
+      "depth": 4,
+      "fields": {},
+      "length": 2,
+      "offset": 278332,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -522393,16 +522393,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 279961,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "device_path_id": null,
         "form_id": 1041,
@@ -522423,9 +522414,18 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 279963,
+      "offset": 279961,
       "opcode": "Ref",
       "raw_hex": "40104110DA120000FFFF001104",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 279976,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {

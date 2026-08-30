@@ -1,0 +1,2289 @@
+{
+  "canonical": true,
+  "canonical_scope": "package_list",
+  "extraction_mode": "UEFI",
+  "form_package": {
+    "index": 0,
+    "length": 905,
+    "max_string_id": 39,
+    "min_string_id": 0,
+    "offset": 3832,
+    "used_strings": 39
+  },
+  "input_sha256": "4a51ac0dadfbeecbd8a2e899e1934667456740337c65890523ca263fb3f1a83d",
+  "operations": [
+    {
+      "depth": 0,
+      "fields": {
+        "class_guids": [
+          "93039971-8545-4B04-B45E-32EB8326040E"
+        ],
+        "flags": 1,
+        "guid": "22819110-7F6F-4852-B4BB-13A770149B0C",
+        "help": {
+          "id": 5,
+          "text": "Displays and provides option to change the FPGA Settings"
+        },
+        "title": {
+          "id": 4,
+          "text": "FPGA Configuration"
+        }
+      },
+      "length": 39,
+      "offset": 3836,
+      "opcode": "FormSet",
+      "raw_hex": "109181226F7F5248B4BB13A770149B0C0400050001719903934585044BB45E32EB8326040E",
+      "scope_start": true
+    },
+    {
+      "depth": 1,
+      "fields": {},
+      "length": 21,
+      "offset": 3875,
+      "opcode": "Guid",
+      "raw_hex": "35170B0FA0879341B266538C38AF48CE032C00",
+      "scope_start": false
+    },
+    {
+      "depth": 1,
+      "fields": {},
+      "length": 21,
+      "offset": 3896,
+      "opcode": "Guid",
+      "raw_hex": "35170B0FA0879341B266538C38AF48CE040000",
+      "scope_start": false
+    },
+    {
+      "depth": 1,
+      "fields": {
+        "default_id": 0,
+        "name": {
+          "id": 7,
+          "text": "Standard Default"
+        }
+      },
+      "length": 6,
+      "offset": 3917,
+      "opcode": "DefaultStore",
+      "raw_hex": "07000000",
+      "scope_start": false
+    },
+    {
+      "depth": 1,
+      "fields": {
+        "default_id": 1,
+        "name": {
+          "id": 8,
+          "text": "Manufacture Default"
+        }
+      },
+      "length": 6,
+      "offset": 3923,
+      "opcode": "DefaultStore",
+      "raw_hex": "08000100",
+      "scope_start": false
+    },
+    {
+      "depth": 1,
+      "fields": {
+        "attributes": 3,
+        "guid": "75839B0B-0A99-4233-8AA4-3866F6CEF4B3",
+        "kind": "efi",
+        "name": "FpgaSocketConfig",
+        "size": 27,
+        "varstore_id": 39424
+      },
+      "length": 43,
+      "offset": 3929,
+      "opcode": "VarStoreEfi",
+      "raw_hex": "009A0B9B8375990A33428AA43866F6CEF4B3030000001B0046706761536F636B6574436F6E66696700",
+      "scope_start": false
+    },
+    {
+      "depth": 1,
+      "fields": {
+        "form_id": 18384,
+        "title": {
+          "id": 4,
+          "text": "FPGA Configuration"
+        }
+      },
+      "length": 6,
+      "offset": 3972,
+      "opcode": "Form",
+      "raw_hex": "D0470400",
+      "scope_start": true
+    },
+    {
+      "depth": 2,
+      "fields": {
+        "flags": 0,
+        "help": {
+          "id": 0,
+          "text": ""
+        },
+        "prompt": {
+          "id": 4,
+          "text": "FPGA Configuration"
+        }
+      },
+      "length": 7,
+      "offset": 3978,
+      "opcode": "Subtitle",
+      "raw_hex": "0400000000",
+      "scope_start": true
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 3985,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {
+        "flags": 0,
+        "help": {
+          "id": 0,
+          "text": ""
+        },
+        "prompt": {
+          "id": 2,
+          "text": "--------------------------------------------------"
+        }
+      },
+      "length": 7,
+      "offset": 3987,
+      "opcode": "Subtitle",
+      "raw_hex": "0200000000",
+      "scope_start": true
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 3994,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {
+        "flags": 32,
+        "help": {
+          "id": 39,
+          "text": "0: Disable all Sockets, 0xFF: Enable all Sockets. "
+        },
+        "kind": "numeric",
+        "min_max_step": {
+          "max": 255,
+          "min": 0,
+          "size_bits": 8,
+          "step": 1
+        },
+        "prompt": {
+          "id": 38,
+          "text": "Sockets Enable Bitmap(Hex)"
+        },
+        "question_flags": 16,
+        "question_id": 1,
+        "var_offset": 0,
+        "varstore_id": 39424
+      },
+      "length": 17,
+      "offset": 3996,
+      "opcode": "Numeric",
+      "raw_hex": "260027000100009A0000102000FF01",
+      "scope_start": true
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default_id": 0,
+        "value": {
+          "type": "u8",
+          "value": 3
+        }
+      },
+      "length": 6,
+      "offset": 4013,
+      "opcode": "Default",
+      "raw_hex": "00000003",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default_id": 1,
+        "value": {
+          "type": "u8",
+          "value": 3
+        }
+      },
+      "length": 6,
+      "offset": 4019,
+      "opcode": "Default",
+      "raw_hex": "01000003",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 4025,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {
+        "flags": 0,
+        "help": {
+          "id": 0,
+          "text": ""
+        },
+        "prompt": {
+          "id": 3,
+          "text": ""
+        }
+      },
+      "length": 7,
+      "offset": 4027,
+      "opcode": "Subtitle",
+      "raw_hex": "0300000000",
+      "scope_start": true
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 4034,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {
+        "flags": 16,
+        "help": {
+          "id": 11,
+          "text": "Pick a BitStream to assign to this socket."
+        },
+        "kind": "oneof",
+        "min_max_step": {
+          "max": 255,
+          "min": 0,
+          "size_bits": 8,
+          "step": 0
+        },
+        "prompt": {
+          "id": 9,
+          "text": "Socket 0 BitStream"
+        },
+        "question_flags": 16,
+        "question_id": 2,
+        "var_offset": 1,
+        "varstore_id": 39424
+      },
+      "length": 17,
+      "offset": 4036,
+      "opcode": "OneOf",
+      "raw_hex": "09000B000200009A0100101000FF00",
+      "scope_start": true
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": true,
+        "flags": 48,
+        "mfg_default": true,
+        "option": {
+          "id": 12,
+          "text": "Auto"
+        },
+        "value": {
+          "type": "u8",
+          "value": 0
+        }
+      },
+      "length": 7,
+      "offset": 4053,
+      "opcode": "OneOfOption",
+      "raw_hex": "0C00300000",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 14,
+          "text": "SKX-PO-BBS"
+        },
+        "value": {
+          "type": "u8",
+          "value": 1
+        }
+      },
+      "length": 7,
+      "offset": 4060,
+      "opcode": "OneOfOption",
+      "raw_hex": "0E00000001",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 13,
+          "text": "None"
+        },
+        "value": {
+          "type": "u8",
+          "value": 255
+        }
+      },
+      "length": 7,
+      "offset": 4067,
+      "opcode": "OneOfOption",
+      "raw_hex": "0D000000FF",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 4074,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {
+        "flags": 16,
+        "help": {
+          "id": 11,
+          "text": "Pick a BitStream to assign to this socket."
+        },
+        "kind": "oneof",
+        "min_max_step": {
+          "max": 255,
+          "min": 0,
+          "size_bits": 8,
+          "step": 0
+        },
+        "prompt": {
+          "id": 10,
+          "text": "Socket 1 BitStream"
+        },
+        "question_flags": 16,
+        "question_id": 3,
+        "var_offset": 2,
+        "varstore_id": 39424
+      },
+      "length": 17,
+      "offset": 4076,
+      "opcode": "OneOf",
+      "raw_hex": "0A000B000300009A0200101000FF00",
+      "scope_start": true
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": true,
+        "flags": 48,
+        "mfg_default": true,
+        "option": {
+          "id": 12,
+          "text": "Auto"
+        },
+        "value": {
+          "type": "u8",
+          "value": 0
+        }
+      },
+      "length": 7,
+      "offset": 4093,
+      "opcode": "OneOfOption",
+      "raw_hex": "0C00300000",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 14,
+          "text": "SKX-PO-BBS"
+        },
+        "value": {
+          "type": "u8",
+          "value": 1
+        }
+      },
+      "length": 7,
+      "offset": 4100,
+      "opcode": "OneOfOption",
+      "raw_hex": "0E00000001",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 13,
+          "text": "None"
+        },
+        "value": {
+          "type": "u8",
+          "value": 255
+        }
+      },
+      "length": 7,
+      "offset": 4107,
+      "opcode": "OneOfOption",
+      "raw_hex": "0D000000FF",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 4114,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {
+        "flags": 0,
+        "help": {
+          "id": 0,
+          "text": ""
+        },
+        "prompt": {
+          "id": 3,
+          "text": ""
+        }
+      },
+      "length": 7,
+      "offset": 4116,
+      "opcode": "Subtitle",
+      "raw_hex": "0300000000",
+      "scope_start": true
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 4123,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {
+        "flags": 16,
+        "help": {
+          "id": 15,
+          "text": "Select the FPGA Temperature Threshold."
+        },
+        "kind": "oneof",
+        "min_max_step": {
+          "max": 103,
+          "min": 0,
+          "size_bits": 8,
+          "step": 0
+        },
+        "prompt": {
+          "id": 16,
+          "text": "Socket 0 Threshold 1"
+        },
+        "question_flags": 16,
+        "question_id": 4,
+        "var_offset": 5,
+        "varstore_id": 39424
+      },
+      "length": 17,
+      "offset": 4125,
+      "opcode": "OneOf",
+      "raw_hex": "10000F000400009A05001010006700",
+      "scope_start": true
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 6,
+          "text": "Disable"
+        },
+        "value": {
+          "type": "u8",
+          "value": 0
+        }
+      },
+      "length": 7,
+      "offset": 4142,
+      "opcode": "OneOfOption",
+      "raw_hex": "0600000000",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 20,
+          "text": "60 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 60
+        }
+      },
+      "length": 7,
+      "offset": 4149,
+      "opcode": "OneOfOption",
+      "raw_hex": "140000003C",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 21,
+          "text": "65 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 65
+        }
+      },
+      "length": 7,
+      "offset": 4156,
+      "opcode": "OneOfOption",
+      "raw_hex": "1500000041",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 22,
+          "text": "70 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 70
+        }
+      },
+      "length": 7,
+      "offset": 4163,
+      "opcode": "OneOfOption",
+      "raw_hex": "1600000046",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 23,
+          "text": "75 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 75
+        }
+      },
+      "length": 7,
+      "offset": 4170,
+      "opcode": "OneOfOption",
+      "raw_hex": "170000004B",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 24,
+          "text": "80 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 80
+        }
+      },
+      "length": 7,
+      "offset": 4177,
+      "opcode": "OneOfOption",
+      "raw_hex": "1800000050",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 25,
+          "text": "85 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 85
+        }
+      },
+      "length": 7,
+      "offset": 4184,
+      "opcode": "OneOfOption",
+      "raw_hex": "1900000055",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": true,
+        "flags": 48,
+        "mfg_default": true,
+        "option": {
+          "id": 26,
+          "text": "90 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 90
+        }
+      },
+      "length": 7,
+      "offset": 4191,
+      "opcode": "OneOfOption",
+      "raw_hex": "1A0030005A",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 27,
+          "text": "93 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 93
+        }
+      },
+      "length": 7,
+      "offset": 4198,
+      "opcode": "OneOfOption",
+      "raw_hex": "1B0000005D",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 28,
+          "text": "94 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 94
+        }
+      },
+      "length": 7,
+      "offset": 4205,
+      "opcode": "OneOfOption",
+      "raw_hex": "1C0000005E",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 29,
+          "text": "95 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 95
+        }
+      },
+      "length": 7,
+      "offset": 4212,
+      "opcode": "OneOfOption",
+      "raw_hex": "1D0000005F",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 30,
+          "text": "96 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 96
+        }
+      },
+      "length": 7,
+      "offset": 4219,
+      "opcode": "OneOfOption",
+      "raw_hex": "1E00000060",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 31,
+          "text": "97 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 97
+        }
+      },
+      "length": 7,
+      "offset": 4226,
+      "opcode": "OneOfOption",
+      "raw_hex": "1F00000061",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 32,
+          "text": "98 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 98
+        }
+      },
+      "length": 7,
+      "offset": 4233,
+      "opcode": "OneOfOption",
+      "raw_hex": "2000000062",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 33,
+          "text": "99 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 99
+        }
+      },
+      "length": 7,
+      "offset": 4240,
+      "opcode": "OneOfOption",
+      "raw_hex": "2100000063",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 34,
+          "text": "100 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 100
+        }
+      },
+      "length": 7,
+      "offset": 4247,
+      "opcode": "OneOfOption",
+      "raw_hex": "2200000064",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 35,
+          "text": "101 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 101
+        }
+      },
+      "length": 7,
+      "offset": 4254,
+      "opcode": "OneOfOption",
+      "raw_hex": "2300000065",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 36,
+          "text": "102 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 102
+        }
+      },
+      "length": 7,
+      "offset": 4261,
+      "opcode": "OneOfOption",
+      "raw_hex": "2400000066",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 37,
+          "text": "103 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 103
+        }
+      },
+      "length": 7,
+      "offset": 4268,
+      "opcode": "OneOfOption",
+      "raw_hex": "2500000067",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 4275,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {
+        "flags": 16,
+        "help": {
+          "id": 15,
+          "text": "Select the FPGA Temperature Threshold."
+        },
+        "kind": "oneof",
+        "min_max_step": {
+          "max": 103,
+          "min": 0,
+          "size_bits": 8,
+          "step": 0
+        },
+        "prompt": {
+          "id": 17,
+          "text": "Socket 0 Threshold 2"
+        },
+        "question_flags": 16,
+        "question_id": 5,
+        "var_offset": 9,
+        "varstore_id": 39424
+      },
+      "length": 17,
+      "offset": 4277,
+      "opcode": "OneOf",
+      "raw_hex": "11000F000500009A09001010006700",
+      "scope_start": true
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 6,
+          "text": "Disable"
+        },
+        "value": {
+          "type": "u8",
+          "value": 0
+        }
+      },
+      "length": 7,
+      "offset": 4294,
+      "opcode": "OneOfOption",
+      "raw_hex": "0600000000",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 20,
+          "text": "60 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 60
+        }
+      },
+      "length": 7,
+      "offset": 4301,
+      "opcode": "OneOfOption",
+      "raw_hex": "140000003C",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 21,
+          "text": "65 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 65
+        }
+      },
+      "length": 7,
+      "offset": 4308,
+      "opcode": "OneOfOption",
+      "raw_hex": "1500000041",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 22,
+          "text": "70 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 70
+        }
+      },
+      "length": 7,
+      "offset": 4315,
+      "opcode": "OneOfOption",
+      "raw_hex": "1600000046",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 23,
+          "text": "75 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 75
+        }
+      },
+      "length": 7,
+      "offset": 4322,
+      "opcode": "OneOfOption",
+      "raw_hex": "170000004B",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 24,
+          "text": "80 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 80
+        }
+      },
+      "length": 7,
+      "offset": 4329,
+      "opcode": "OneOfOption",
+      "raw_hex": "1800000050",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 25,
+          "text": "85 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 85
+        }
+      },
+      "length": 7,
+      "offset": 4336,
+      "opcode": "OneOfOption",
+      "raw_hex": "1900000055",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 26,
+          "text": "90 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 90
+        }
+      },
+      "length": 7,
+      "offset": 4343,
+      "opcode": "OneOfOption",
+      "raw_hex": "1A0000005A",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": true,
+        "flags": 48,
+        "mfg_default": true,
+        "option": {
+          "id": 27,
+          "text": "93 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 93
+        }
+      },
+      "length": 7,
+      "offset": 4350,
+      "opcode": "OneOfOption",
+      "raw_hex": "1B0030005D",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 28,
+          "text": "94 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 94
+        }
+      },
+      "length": 7,
+      "offset": 4357,
+      "opcode": "OneOfOption",
+      "raw_hex": "1C0000005E",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 29,
+          "text": "95 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 95
+        }
+      },
+      "length": 7,
+      "offset": 4364,
+      "opcode": "OneOfOption",
+      "raw_hex": "1D0000005F",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 30,
+          "text": "96 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 96
+        }
+      },
+      "length": 7,
+      "offset": 4371,
+      "opcode": "OneOfOption",
+      "raw_hex": "1E00000060",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 31,
+          "text": "97 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 97
+        }
+      },
+      "length": 7,
+      "offset": 4378,
+      "opcode": "OneOfOption",
+      "raw_hex": "1F00000061",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 32,
+          "text": "98 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 98
+        }
+      },
+      "length": 7,
+      "offset": 4385,
+      "opcode": "OneOfOption",
+      "raw_hex": "2000000062",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 33,
+          "text": "99 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 99
+        }
+      },
+      "length": 7,
+      "offset": 4392,
+      "opcode": "OneOfOption",
+      "raw_hex": "2100000063",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 34,
+          "text": "100 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 100
+        }
+      },
+      "length": 7,
+      "offset": 4399,
+      "opcode": "OneOfOption",
+      "raw_hex": "2200000064",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 35,
+          "text": "101 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 101
+        }
+      },
+      "length": 7,
+      "offset": 4406,
+      "opcode": "OneOfOption",
+      "raw_hex": "2300000065",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 36,
+          "text": "102 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 102
+        }
+      },
+      "length": 7,
+      "offset": 4413,
+      "opcode": "OneOfOption",
+      "raw_hex": "2400000066",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 37,
+          "text": "103 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 103
+        }
+      },
+      "length": 7,
+      "offset": 4420,
+      "opcode": "OneOfOption",
+      "raw_hex": "2500000067",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 4427,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {
+        "flags": 16,
+        "help": {
+          "id": 15,
+          "text": "Select the FPGA Temperature Threshold."
+        },
+        "kind": "oneof",
+        "min_max_step": {
+          "max": 103,
+          "min": 0,
+          "size_bits": 8,
+          "step": 0
+        },
+        "prompt": {
+          "id": 18,
+          "text": "Socket 1 Threshold 1"
+        },
+        "question_flags": 16,
+        "question_id": 6,
+        "var_offset": 6,
+        "varstore_id": 39424
+      },
+      "length": 17,
+      "offset": 4429,
+      "opcode": "OneOf",
+      "raw_hex": "12000F000600009A06001010006700",
+      "scope_start": true
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 6,
+          "text": "Disable"
+        },
+        "value": {
+          "type": "u8",
+          "value": 0
+        }
+      },
+      "length": 7,
+      "offset": 4446,
+      "opcode": "OneOfOption",
+      "raw_hex": "0600000000",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 20,
+          "text": "60 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 60
+        }
+      },
+      "length": 7,
+      "offset": 4453,
+      "opcode": "OneOfOption",
+      "raw_hex": "140000003C",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 21,
+          "text": "65 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 65
+        }
+      },
+      "length": 7,
+      "offset": 4460,
+      "opcode": "OneOfOption",
+      "raw_hex": "1500000041",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 22,
+          "text": "70 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 70
+        }
+      },
+      "length": 7,
+      "offset": 4467,
+      "opcode": "OneOfOption",
+      "raw_hex": "1600000046",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 23,
+          "text": "75 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 75
+        }
+      },
+      "length": 7,
+      "offset": 4474,
+      "opcode": "OneOfOption",
+      "raw_hex": "170000004B",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 24,
+          "text": "80 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 80
+        }
+      },
+      "length": 7,
+      "offset": 4481,
+      "opcode": "OneOfOption",
+      "raw_hex": "1800000050",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 25,
+          "text": "85 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 85
+        }
+      },
+      "length": 7,
+      "offset": 4488,
+      "opcode": "OneOfOption",
+      "raw_hex": "1900000055",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": true,
+        "flags": 48,
+        "mfg_default": true,
+        "option": {
+          "id": 26,
+          "text": "90 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 90
+        }
+      },
+      "length": 7,
+      "offset": 4495,
+      "opcode": "OneOfOption",
+      "raw_hex": "1A0030005A",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 27,
+          "text": "93 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 93
+        }
+      },
+      "length": 7,
+      "offset": 4502,
+      "opcode": "OneOfOption",
+      "raw_hex": "1B0000005D",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 28,
+          "text": "94 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 94
+        }
+      },
+      "length": 7,
+      "offset": 4509,
+      "opcode": "OneOfOption",
+      "raw_hex": "1C0000005E",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 29,
+          "text": "95 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 95
+        }
+      },
+      "length": 7,
+      "offset": 4516,
+      "opcode": "OneOfOption",
+      "raw_hex": "1D0000005F",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 30,
+          "text": "96 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 96
+        }
+      },
+      "length": 7,
+      "offset": 4523,
+      "opcode": "OneOfOption",
+      "raw_hex": "1E00000060",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 31,
+          "text": "97 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 97
+        }
+      },
+      "length": 7,
+      "offset": 4530,
+      "opcode": "OneOfOption",
+      "raw_hex": "1F00000061",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 32,
+          "text": "98 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 98
+        }
+      },
+      "length": 7,
+      "offset": 4537,
+      "opcode": "OneOfOption",
+      "raw_hex": "2000000062",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 33,
+          "text": "99 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 99
+        }
+      },
+      "length": 7,
+      "offset": 4544,
+      "opcode": "OneOfOption",
+      "raw_hex": "2100000063",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 34,
+          "text": "100 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 100
+        }
+      },
+      "length": 7,
+      "offset": 4551,
+      "opcode": "OneOfOption",
+      "raw_hex": "2200000064",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 35,
+          "text": "101 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 101
+        }
+      },
+      "length": 7,
+      "offset": 4558,
+      "opcode": "OneOfOption",
+      "raw_hex": "2300000065",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 36,
+          "text": "102 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 102
+        }
+      },
+      "length": 7,
+      "offset": 4565,
+      "opcode": "OneOfOption",
+      "raw_hex": "2400000066",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 37,
+          "text": "103 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 103
+        }
+      },
+      "length": 7,
+      "offset": 4572,
+      "opcode": "OneOfOption",
+      "raw_hex": "2500000067",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 4579,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {
+        "flags": 16,
+        "help": {
+          "id": 15,
+          "text": "Select the FPGA Temperature Threshold."
+        },
+        "kind": "oneof",
+        "min_max_step": {
+          "max": 103,
+          "min": 0,
+          "size_bits": 8,
+          "step": 0
+        },
+        "prompt": {
+          "id": 19,
+          "text": "Socket 1 Threshold 2"
+        },
+        "question_flags": 16,
+        "question_id": 7,
+        "var_offset": 10,
+        "varstore_id": 39424
+      },
+      "length": 17,
+      "offset": 4581,
+      "opcode": "OneOf",
+      "raw_hex": "13000F000700009A0A001010006700",
+      "scope_start": true
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 6,
+          "text": "Disable"
+        },
+        "value": {
+          "type": "u8",
+          "value": 0
+        }
+      },
+      "length": 7,
+      "offset": 4598,
+      "opcode": "OneOfOption",
+      "raw_hex": "0600000000",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 20,
+          "text": "60 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 60
+        }
+      },
+      "length": 7,
+      "offset": 4605,
+      "opcode": "OneOfOption",
+      "raw_hex": "140000003C",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 21,
+          "text": "65 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 65
+        }
+      },
+      "length": 7,
+      "offset": 4612,
+      "opcode": "OneOfOption",
+      "raw_hex": "1500000041",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 22,
+          "text": "70 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 70
+        }
+      },
+      "length": 7,
+      "offset": 4619,
+      "opcode": "OneOfOption",
+      "raw_hex": "1600000046",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 23,
+          "text": "75 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 75
+        }
+      },
+      "length": 7,
+      "offset": 4626,
+      "opcode": "OneOfOption",
+      "raw_hex": "170000004B",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 24,
+          "text": "80 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 80
+        }
+      },
+      "length": 7,
+      "offset": 4633,
+      "opcode": "OneOfOption",
+      "raw_hex": "1800000050",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 25,
+          "text": "85 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 85
+        }
+      },
+      "length": 7,
+      "offset": 4640,
+      "opcode": "OneOfOption",
+      "raw_hex": "1900000055",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 26,
+          "text": "90 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 90
+        }
+      },
+      "length": 7,
+      "offset": 4647,
+      "opcode": "OneOfOption",
+      "raw_hex": "1A0000005A",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": true,
+        "flags": 48,
+        "mfg_default": true,
+        "option": {
+          "id": 27,
+          "text": "93 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 93
+        }
+      },
+      "length": 7,
+      "offset": 4654,
+      "opcode": "OneOfOption",
+      "raw_hex": "1B0030005D",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 28,
+          "text": "94 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 94
+        }
+      },
+      "length": 7,
+      "offset": 4661,
+      "opcode": "OneOfOption",
+      "raw_hex": "1C0000005E",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 29,
+          "text": "95 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 95
+        }
+      },
+      "length": 7,
+      "offset": 4668,
+      "opcode": "OneOfOption",
+      "raw_hex": "1D0000005F",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 30,
+          "text": "96 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 96
+        }
+      },
+      "length": 7,
+      "offset": 4675,
+      "opcode": "OneOfOption",
+      "raw_hex": "1E00000060",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 31,
+          "text": "97 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 97
+        }
+      },
+      "length": 7,
+      "offset": 4682,
+      "opcode": "OneOfOption",
+      "raw_hex": "1F00000061",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 32,
+          "text": "98 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 98
+        }
+      },
+      "length": 7,
+      "offset": 4689,
+      "opcode": "OneOfOption",
+      "raw_hex": "2000000062",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 33,
+          "text": "99 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 99
+        }
+      },
+      "length": 7,
+      "offset": 4696,
+      "opcode": "OneOfOption",
+      "raw_hex": "2100000063",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 34,
+          "text": "100 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 100
+        }
+      },
+      "length": 7,
+      "offset": 4703,
+      "opcode": "OneOfOption",
+      "raw_hex": "2200000064",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 35,
+          "text": "101 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 101
+        }
+      },
+      "length": 7,
+      "offset": 4710,
+      "opcode": "OneOfOption",
+      "raw_hex": "2300000065",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 36,
+          "text": "102 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 102
+        }
+      },
+      "length": 7,
+      "offset": 4717,
+      "opcode": "OneOfOption",
+      "raw_hex": "2400000066",
+      "scope_start": false
+    },
+    {
+      "depth": 3,
+      "fields": {
+        "default": false,
+        "flags": 0,
+        "mfg_default": false,
+        "option": {
+          "id": 37,
+          "text": "103 C"
+        },
+        "value": {
+          "type": "u8",
+          "value": 103
+        }
+      },
+      "length": 7,
+      "offset": 4724,
+      "opcode": "OneOfOption",
+      "raw_hex": "2500000067",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 4731,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 1,
+      "fields": {},
+      "length": 2,
+      "offset": 4733,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    },
+    {
+      "depth": 0,
+      "fields": {},
+      "length": 2,
+      "offset": 4735,
+      "opcode": "End",
+      "raw_hex": null,
+      "scope_start": false
+    }
+  ],
+  "package_list": {
+    "guid": "BCEA6548-E204-4486-8F2A-36E13C7838CE",
+    "index": 0,
+    "length": 2177,
+    "offset": 3812
+  },
+  "program_version": "1.6.1",
+  "string_package": {
+    "coverage": 39,
+    "index": 0,
+    "language": "en-US",
+    "length": 1248,
+    "offset": 4737,
+    "total_strings": 40,
+    "unresolved_strings": 0
+  }
+}

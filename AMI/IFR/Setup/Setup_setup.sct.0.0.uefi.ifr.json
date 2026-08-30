@@ -10,7 +10,7 @@
     "offset": 81368,
     "used_strings": 870
   },
-  "input_sha256": "7278e992b975f2890f5658e77bb701cbc1bd825aa5980415519d4205d90e890b",
+  "input_sha256": "29a8e3ce918338b0b9f8001c17b683f10530981ccab7c8ff8bd1dba5f2d99697",
   "operations": [
     {
       "depth": 0,
@@ -2286,16 +2286,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 83881,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "device_path_id": null,
         "form_id": 10011,
@@ -2316,9 +2307,18 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 83883,
+      "offset": 83881,
       "opcode": "Ref",
       "raw_hex": "9B009C000D000000FFFF001B27",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 83896,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -2478,16 +2478,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 83981,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "device_path_id": null,
         "form_id": 10041,
@@ -2508,9 +2499,18 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 83983,
+      "offset": 83981,
       "opcode": "Ref",
       "raw_hex": "8400850013000000FFFF003927",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 83996,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
@@ -2562,16 +2562,7 @@
       "scope_start": false
     },
     {
-      "depth": 2,
-      "fields": {},
-      "length": 2,
-      "offset": 84021,
-      "opcode": "End",
-      "raw_hex": null,
-      "scope_start": false
-    },
-    {
-      "depth": 2,
+      "depth": 3,
       "fields": {
         "device_path_id": null,
         "form_id": 10061,
@@ -2592,9 +2583,18 @@
         "varstore_id": 0
       },
       "length": 15,
-      "offset": 84023,
+      "offset": 84021,
       "opcode": "Ref",
       "raw_hex": "AD00AE0015000000FFFF004D27",
+      "scope_start": false
+    },
+    {
+      "depth": 2,
+      "fields": {},
+      "length": 2,
+      "offset": 84036,
+      "opcode": "End",
+      "raw_hex": null,
       "scope_start": false
     },
     {
