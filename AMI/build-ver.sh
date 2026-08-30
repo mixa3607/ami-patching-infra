@@ -73,8 +73,8 @@ function patch_IFRs {
 function patch_mcodes {
   echo "Building microcodes"
   $uefimodtools uefi mcodes-combine \
-    --input  "$SOURCES_DIR/microcodes_base.bin" \
-    --table  "$SOURCES_DIR/microcodes.json" \
+    --input  "$SOURCES_DIR/MCODES/microcodes_base.bin" \
+    --table  "$SOURCES_DIR/MCODES/microcodes.json" \
     --mcodes "$SOURCES_DIR/../MCODES" \
     --output "$BUILD_DIR/microcodes.bin"
   echo "Injecting microcodes"
@@ -82,8 +82,8 @@ function patch_mcodes {
 
   echo "Building FIT"
   $uefimodtools uefi fit-inject-mcodes \
-    --input  "$SOURCES_DIR/FIT_table_base.bin" \
-    --table  "$SOURCES_DIR/microcodes.json" \
+    --input  "$SOURCES_DIR/MCODES/FIT_table_base.bin" \
+    --table  "$SOURCES_DIR/MCODES/microcodes.json" \
     --mcodes "$SOURCES_DIR/../MCODES" \
     --output "$BUILD_DIR/fit.bin"
   echo "Injecting FIT"

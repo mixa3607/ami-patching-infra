@@ -1,0 +1,43 @@
+version: 1
+sections:
+  - name: FpgaSocketSetup
+    output: FpgaSocketSetup/FpgaSocketSetup_setup.sct
+    fileGuid: BCEA6548-E204-4486-8F2A-36E13C7838CE
+    sectionType: 0x10
+    outputMode: section
+    expectedCount: 1
+    ifrJson: FpgaSocketSetup/FpgaSocketSetup_setup.sct.0.0.uefi.ifr.json
+  - name: Platform
+    output: Platform/Platform_setup.sct
+    fileGuid: ABBCE13D-E25A-4D9F-A1F9-2F7710786892
+    sectionType: 0x10
+    outputMode: section
+    expectedCount: 1
+    ifrJson: Platform/Platform_setup.sct.0.0.uefi.ifr.json
+  - name: ServerMgmtSetup
+    output: ServerMgmtSetup/ServerMgmtSetup_setup.sct
+    fileGuid: 1B08A1DB-F91A-4FA1-A911-255C417F1CF7
+    sectionType: 0x10
+    outputMode: section
+    expectedCount: 1
+    ifrJson: ServerMgmtSetup/ServerMgmtSetup_setup.sct.0.0.uefi.ifr.json
+  - name: Setup
+    output: Setup/Setup_setup.sct
+    fileGuid: 899407D7-99FE-43D8-9A21-79EC328CAC21
+    sectionType: 0x10
+    outputMode: section
+    expectedCount: 1
+    ifrJson: Setup/Setup_setup.sct.0.0.uefi.ifr.json
+  - name: SocketSetup
+    output: SocketSetup/SocketSetup_setup.sct
+    fileGuid: 6B6FD380-2C55-42C6-98BF-CBBC5A9AA666
+    sectionType: 0x10
+    outputMode: section
+    expectedCount: 1
+    ifrJson: SocketSetup/SocketSetup_setup.sct.0.0.uefi.ifr.json
+  - name: SetupData
+    output: SetupData.bin
+    fileGuid: FE612B72-203C-47B1-8560-A66D946EB371
+    sectionType: 0x18
+    outputMode: body
+    expectedCount: 1
