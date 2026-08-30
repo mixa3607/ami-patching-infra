@@ -1,7 +1,7 @@
 CC = clang
 LD = lld-link
 
-BUILD_DIR = build
+BUILD_DIR ?= build
 TARGET = $(BUILD_DIR)/BiosStateLabBridge.efi
 CFLAGS = -target x86_64-unknown-windows -ffreestanding -fno-builtin -fno-stack-protector -fshort-wchar -mno-red-zone -Wall -Wextra -Werror -Os
 LDFLAGS = -subsystem:efi_runtime_driver -entry:BridgeEntry -nodefaultlib -safeseh:no

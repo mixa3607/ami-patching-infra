@@ -91,7 +91,7 @@ function patch_mcodes {
 }
 
 function patch_bios_state_lab_bridge {
-  BRIDGE_DIR="$SOURCES_DIR/custom-binaries/bios-state-lab-bridge"
+  BRIDGE_DIR="$SOURCES_DIR/components/bios-state-lab-bridge"
   RED_FISH_GUID="D4395796-6F4C-4C6B-B9D1-92DAA7199A84"
 
   echo "Building BIOS state lab bridge"

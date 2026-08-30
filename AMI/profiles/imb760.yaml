@@ -24,3 +24,8 @@ dmi:
   version_suffix: "; patch {version}"
 ifr:
   manifest: sections.yaml
+bridge:
+  component: components/bios-state-lab-bridge
+  efi: BiosStateLabBridge.efi
+  file_guid: D4395796-6F4C-4C6B-B9D1-92DAA7199A84
+  section_type: "0x10"
