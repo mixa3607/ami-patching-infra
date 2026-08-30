@@ -1,3 +1,6 @@
 [submodule "SOFTWARE/IFRExtractor-RS-structured/sources"]
 	path = SOFTWARE/IFRExtractor-RS-structured/sources
 	url = https://github.com/134ARG/IFRExtractor-RS-structured.git
+[submodule "SOFTWARE/MCExtractor/sources"]
+	path = SOFTWARE/MCExtractor/sources
+	url = https://github.com/platomav/MCExtractor.git

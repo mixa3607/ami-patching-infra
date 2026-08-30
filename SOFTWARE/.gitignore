@@ -39,10 +39,3 @@ IFRExtractor-RS-structured/*
 # uefi-editor-cli — our IFR patching CLI, used by build-ver.sh
 !uefi-editor-cli/
 !uefi-editor-cli/index.mjs
-
-# MCExtractor — MCE.py used by render-mcodes.sh
-!MCExtractor/
-!MCExtractor/MCE.py
-!MCExtractor/MCE.db
-!MCExtractor/README.md
-!MCExtractor/LICENSE

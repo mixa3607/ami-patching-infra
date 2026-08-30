@@ -4,10 +4,10 @@
 """
 MC Extractor
 Intel, AMD, VIA & Freescale Microcode Extractor
-Copyright (C) 2016-2025 Plato Mavropoulos
+Copyright (C) 2016-2026 Plato Mavropoulos
 """
 
-title = 'MC Extractor v1.103.0'
+title = 'MC Extractor v1.104.0'
 
 import sys
 
@@ -88,7 +88,7 @@ def mce_help() :
           '-blob   : Builds a Microcode Blob (MCB) from input'
           )
     
-    print(col_g + '\nCopyright (C) 2016-2025 Plato Mavropoulos' + col_e)
+    print(col_g + '\nCopyright (C) 2016-2026 Plato Mavropoulos' + col_e)
     
     if getattr(sys, 'frozen', False) : print(col_c + '\nRunning in frozen state!' + col_e)
     
@@ -1235,14 +1235,14 @@ if param.get_last :
     
     mce_exit(0)
 
-# Intel - HeaderType 01-02, Year 1993-2026, Day 01-31, Month 01-12, CPUID xxxxxx00, LoaderRev 00-01, PlatformIDs 000000xx, DataSize xxxxxx00, TotalSize xxxxxx00, MetaSize xxxxxx00
-pat_int = re.compile(br'[\x01\x02]\x00{3}.{4}(([\x00-\x09\x10-\x19\x20-\x26]\x20)|([\x93-\x99]\x19))[\x01-\x09\x10-\x19\x20-\x29\x30-\x31][\x01-\x09\x10-\x12].{3}\x00.{4}[\x01\x00]\x00{3}.\x00{3}.{3}\x00.{3}\x00.{3}\x00', re.DOTALL)
+# Intel - HeaderType 01-02, Year 1993-2027, Day 01-31, Month 01-12, CPUID xxxxxx00, LoaderRev 00-01, PlatformIDs 000000xx, DataSize xxxxxx00, TotalSize xxxxxx00, MetaSize xxxxxx00
+pat_int = re.compile(br'[\x01\x02]\x00{3}.{4}(([\x00-\x09\x10-\x19\x20-\x27]\x20)|([\x93-\x99]\x19))[\x01-\x09\x10-\x19\x20-\x29\x30-\x31][\x01-\x09\x10-\x12].{3}\x00.{4}[\x01\x00]\x00{3}.\x00{3}.{3}\x00.{3}\x00.{3}\x00', re.DOTALL)
 
 # AMD - Year 20xx, Day 01-31, Month 01-13, NorthBridgeVEN_ID 0000|1022, SouthBridgeVEN_ID 0000|1022, BiosApiRevision 00-01, LoadControl 00-0F|AA
 pat_amd = re.compile(br'\x20[\x01-\x09\x10-\x19\x20-\x29\x30-\x31][\x01-\x09\x10-\x13].{5}\x80.{6}((\x00{2})|(\x22\x10)).{2}((\x00{2})|(\x22\x10)).{6}[\x00\x01]([\x00-\x0F]|\xAA)', re.DOTALL)
 
-# VIA - Signature RRAS, Year 2006-2026 (0x07D6-0x07EA), Day 01-31 (0x01-0x1F), Month 01-12 (0x01-0x0C), LoaderRev 01, Reserved, DataSize xxxxxx00, TotalSize xxxxxx00
-pat_via = re.compile(br'\x52\x52\x41\x53.{4}[\xD6-\xEA]\x07[\x01-\x1F][\x01-\x0C].{3}\x00.{4}\x01\x00{3}.{7}\x00.{3}\x00', re.DOTALL)
+# VIA - Signature RRAS, Year 2006-2027 (0x07D6-0x07EB), Day 01-31 (0x01-0x1F), Month 01-12 (0x01-0x0C), LoaderRev 01, Reserved, DataSize xxxxxx00, TotalSize xxxxxx00
+pat_via = re.compile(br'\x52\x52\x41\x53.{4}[\xD6-\xEB]\x07[\x01-\x1F][\x01-\x0C].{3}\x00.{4}\x01\x00{3}.{7}\x00.{3}\x00', re.DOTALL)
 
 # Freescale - Signature QEF, HeaderRev 01, IRAM 00-01, Reserved0, Reserved1
 pat_fsl = re.compile(br'\x51\x45\x46\x01.{62}[\x00\x01].{5}\x00{4}.{40}\x00{4}', re.DOTALL)
@@ -1677,7 +1677,7 @@ for in_file in source :
         full_date = "%s-%s-%s" % (year, month, day)
         
         # Remove false results, based on Date (1st MC from 1999 but 2001+ for K7 Erratum, performance and pattern strength)
-        if any(h in year[2:4] for h in ['A','B','C','D','E','F']) or not date_check(year, month, day) or not (2000 < int(year) < 2026):
+        if any(h in year[2:4] for h in ['A','B','C','D','E','F']) or not date_check(year, month, day) or not (2000 < int(year) <= 2027):
             total -= 1
 
             continue # Next microcode
