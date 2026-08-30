@@ -27,6 +27,11 @@
 !ifr-extractor/extract.cs
 !ifr-extractor/README.md
 
+# IFRExtractor-RS-structured source submodule
+!IFRExtractor-RS-structured/
+IFRExtractor-RS-structured/*
+!IFRExtractor-RS-structured/sources/
+
 # uefi-mod-tools — used by build-ver.sh
 !uefi-mod-tools_v1.3.0/
 !uefi-mod-tools_v1.3.0/uefi-mod-tools
