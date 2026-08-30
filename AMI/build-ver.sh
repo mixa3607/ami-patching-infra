@@ -15,14 +15,14 @@ function patch_logos {
   echo "Processing big logo"
   TEXT_INFO="Patched by mixa3607\n$PATCH_VERSION"
   BIG_LOGO_GUID="7BB28B99-61BB-11D5-9A5D-0090273FC14D"
-  convert "$SOURCES_DIR/LOGO/$BIG_LOGO_GUID.bmp" -gravity NorthWest -pointsize 30 -fill white "${FONT_ARGS[@]}" -annotate -0-3 "$TEXT_INFO" BMP3:"$BUILD_DIR/$BIG_LOGO_GUID.bmp"
+  convert "$BOARD_DIR/logos/$BIG_LOGO_GUID.bmp" -gravity NorthWest -pointsize 30 -fill white "${FONT_ARGS[@]}" -annotate -0-3 "$TEXT_INFO" BMP3:"$BUILD_DIR/$BIG_LOGO_GUID.bmp"
   $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$BIG_LOGO_GUID" 0x19 "$BUILD_DIR/$BIG_LOGO_GUID.bmp" -o "$BUILD_DIR/$PATCHED_DUMP"
   #$uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$BIG_LOGO_GUID" 0x19 "$SOURCES_DIR/$BIG_LOGO_GUID.bmp" -o "$BUILD_DIR/$PATCHED_DUMP"
   
   # patch small logo
   echo "Processing small logo"
   SMALL_LOGO_GUID="63819805-67BB-46EF-AA8D-1524A19A01E4"
-  convert "$SOURCES_DIR/LOGO/$SMALL_LOGO_GUID.bmp" -gravity NorthWest -pointsize 20 -fill white "${FONT_ARGS[@]}" -annotate -0-3 "$TEXT_INFO" BMP3:"$BUILD_DIR/$SMALL_LOGO_GUID.bmp"
+  convert "$BOARD_DIR/logos/$SMALL_LOGO_GUID.bmp" -gravity NorthWest -pointsize 20 -fill white "${FONT_ARGS[@]}" -annotate -0-3 "$TEXT_INFO" BMP3:"$BUILD_DIR/$SMALL_LOGO_GUID.bmp"
   $uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$SMALL_LOGO_GUID" 0x19 "$BUILD_DIR/$SMALL_LOGO_GUID.bmp" -o "$BUILD_DIR/$PATCHED_DUMP"
   #$uefireplace "$BUILD_DIR/$PATCHED_DUMP" "$SMALL_LOGO_GUID" 0x19 "$SOURCES_DIR/$SMALL_LOGO_GUID.bmp" -o "$BUILD_DIR/$PATCHED_DUMP"
 }
@@ -73,8 +73,8 @@ function patch_IFRs {
 function patch_mcodes {
   echo "Building microcodes"
   $uefimodtools uefi mcodes-combine \
-    --input  "$SOURCES_DIR/MCODES/microcodes_base.bin" \
-    --table  "$SOURCES_DIR/MCODES/microcodes.json" \
+    --input  "$BOARD_DIR/mcodes/microcodes_base.bin" \
+    --table  "$BOARD_DIR/mcodes/microcodes.json" \
     --mcodes "$SOURCES_DIR/../MCODES" \
     --output "$BUILD_DIR/microcodes.bin"
   echo "Injecting microcodes"
@@ -82,8 +82,8 @@ function patch_mcodes {
 
   echo "Building FIT"
   $uefimodtools uefi fit-inject-mcodes \
-    --input  "$SOURCES_DIR/MCODES/FIT_table_base.bin" \
-    --table  "$SOURCES_DIR/MCODES/microcodes.json" \
+    --input  "$BOARD_DIR/mcodes/FIT_table_base.bin" \
+    --table  "$BOARD_DIR/mcodes/microcodes.json" \
     --mcodes "$SOURCES_DIR/../MCODES" \
     --output "$BUILD_DIR/fit.bin"
   echo "Injecting FIT"

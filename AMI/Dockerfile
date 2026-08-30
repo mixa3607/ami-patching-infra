@@ -12,6 +12,7 @@ RUN apt-get update \
         jq \
         nodejs \
         python3 \
+        python3-yaml \
         clang \
         lld \
         make \
@@ -36,19 +37,12 @@ COPY . /workspace/AMI/
 COPY --from=sw / /workspace/SOFTWARE/
 COPY --from=mc / /workspace/MCODES/
 
-# Version is passed explicitly; env.sh falls back to git tag/sha if unset.
+# Version is passed explicitly; build.py falls back to git tag/sha if unset.
 ARG REPO_GIT_REF=build
 
-RUN chmod +x /workspace/AMI/build-ver.sh \
-              /workspace/AMI/env.sh \
-              /workspace/SOFTWARE/UEFITool_0.28.0/UEFIReplace \
-              /workspace/SOFTWARE/UEFITool_NE_A72_win64/uefiextract \
-              /workspace/SOFTWARE/UEFITool_NE_A72_win64/uefifind \
-              /workspace/SOFTWARE/UEFITool_NE_A72_win64/uefitool \
-              /workspace/SOFTWARE/IFRExtractor-RS_v1.6.0/ifrextractor \
-              /workspace/SOFTWARE/uefi-mod-tools_v1.3.0/uefi-mod-tools \
+RUN chmod +x /workspace/SOFTWARE/UEFITool_0.28.0/UEFIReplace \
     && cd /workspace/AMI \
-    && REPO_GIT_REF="$REPO_GIT_REF" ./build-ver.sh
+    && REPO_GIT_REF="$REPO_GIT_REF" python3 ./build.py
 
 FROM scratch AS artifact
 COPY --from=build /workspace/AMI/build/*/IMB760_BIOS_AMI_mixa3607_mod-*.rom /

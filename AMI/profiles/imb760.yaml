@@ -1,0 +1,18 @@
+board_root: boards/imb760
+base_dump: base/IMB760_BIOS.bin
+rom_prefix: IMB760_BIOS_AMI_mixa3607_mod
+logos:
+  - guid: 7BB28B99-61BB-11D5-9A5D-0090273FC14D
+    source: logos/7BB28B99-61BB-11D5-9A5D-0090273FC14D.bmp
+    point_size: 30
+  - guid: 63819805-67BB-46EF-AA8D-1524A19A01E4
+    source: logos/63819805-67BB-46EF-AA8D-1524A19A01E4.bmp
+    point_size: 20
+mcodes:
+  base: mcodes/microcodes_base.bin
+  table: mcodes/microcodes.json
+  fit: mcodes/FIT_table_base.bin
+  catalog: MCODES
+  container_guid: 17088572-377F-44EF-8F4E-B09FFF46A070
+  fit_guid: B52282EE-9B66-44B9-B1CF-7E5040F787C1
+  section_type: "0x01"
