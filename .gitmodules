@@ -4,3 +4,9 @@
 [submodule "SOFTWARE/MCExtractor/sources"]
 	path = SOFTWARE/MCExtractor/sources
 	url = https://github.com/platomav/MCExtractor.git
+[submodule "SOFTWARE/UEFITool_0.28.0/sources"]
+	path = SOFTWARE/UEFITool_0.28.0/sources
+	url = https://github.com/LongSoft/UEFITool.git
+[submodule "SOFTWARE/UEFITool_NE_A72_win64/sources"]
+	path = SOFTWARE/UEFITool_NE_A72_win64/sources
+	url = https://github.com/LongSoft/UEFITool.git
