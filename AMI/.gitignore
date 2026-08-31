@@ -2,3 +2,4 @@
 /*.dump/
 /*.report.txt
 /*.guids.csv
+*.pyc

@@ -6,10 +6,6 @@
 # keep the docs
 !readme.md
 
-# IFRExtractor-RS — used by extract-ifr-sections.sh
-!IFRExtractor-RS_v1.6.0/
-!IFRExtractor-RS_v1.6.0/ifrextractor
-
 # C# file-based IFR section extractor
 !ifr-extractor/
 !ifr-extractor/extract.cs

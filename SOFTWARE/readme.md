@@ -13,8 +13,6 @@ $ tree -I readme.md
 .
 ├── AMIBCP_5.02.0034
 │   └── AMIBCP 5.02.0034.exe
-├── IFRExtractor-RS_v1.6.0
-│   └── ifrextractor
 ├── UEFITool_0.28.0
 │   ├── UEFIReplace
 │   ├── UEFITool

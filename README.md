@@ -149,8 +149,7 @@ python3 bios_state_lab.py build-registry ../../AMI/EXTRACTED registry.json
 
 GitHub Actions автоматически собирает артефакты:
 
-- AMI BIOS при изменениях в `AMI/` или `SOFTWARE/uefi-editor-cli/`, а также по
-  тегам `A1_*`;
+- AMI BIOS при изменениях в `AMI/` или по тегам `A1_*`;
 - MegaRAC SP BMC при изменениях в `MEGARACSP/`, по тегам `N1_*` или вручную.
 
 Workflow MegaRAC SP при ручном запуске принимает необязательный MAC-адрес и

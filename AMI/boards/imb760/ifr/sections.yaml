@@ -41,3 +41,9 @@ sections:
     sectionType: 0x18
     outputMode: body
     expectedCount: 1
+  - name: AF516361-BiosDefaults
+    output: AF516361-BiosDefaults.bin
+    fileGuid: AF516361-B4C5-436E-A7E3-A149A31B1461
+    sectionType: 0x19
+    outputMode: body
+    expectedCount: 1

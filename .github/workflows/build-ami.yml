@@ -6,7 +6,6 @@ on:
       - master
     paths:
       - 'AMI/**'
-      - 'SOFTWARE/uefi-editor-cli/**'
       - '.github/workflows/build-ami.yml'
     tags:
       - 'A1_*'

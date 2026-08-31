@@ -3,25 +3,19 @@
 Features:
 - auto patch logo images
 - auto patch DMI/SMBios table
-- auto pack IFR sections (patched from clean data via `uefi-editor-cli`)
+- auto patch IFR sections from versioned clean inputs and patch JSON
 - auto inject microcodes + FIT
 - auto compile and inject custom BIOS State Lab bridge binary
 
 ## Flow
 
-- Dump bios with programmer or other way
-- Run `./extract-ifr-sections.sh [DUMP]` that pulls all clean IFR sections
-  (setup `.sct`, AMITSE, setupdata, IFR txt) out of the dump into `IFR/`
-- Prepare IFR sections [./IFR](./IFR)
-- Make changes with UEFI-Editor (or edit `data.json` directly)
-- Run `render-ifr-state.sh` that builds `data.md` file with menu state in each IFR/*/ directory
-- Run `build-ver.sh` that applies all changes to source BIOS file:
-  - patches each `IFR/*/orig/*.sct` + shared setupdata/AMITSE from `data.json`
-    using `SOFTWARE/uefi-editor-cli` (no browser required)
-   - injects the patched sections with UEFIReplace
-   - builds `custom-binaries/bios-state-lab-bridge` and replaces the unused
-     `AmiRedFishApi` PE32 section with the BIOS State Lab bridge
-- Flash build/XXXXX/*.rom BIOS
+- Extract board-local IFR sources with `./01.extract-ifr.sh` when updating the
+  base BIOS dump.
+- Edit form patches under `boards/imb760/ifr/`; `99.run-ifr-editor.sh FORM`
+  serves a form in the current IFR renderer.
+- Run `python3 build.py` to create checkpoints for DMI, logos, IFR, microcodes,
+  and the BIOS State Lab bridge under `build/<version>/`.
+- Flash the final ROM from `build/<version>/`.
 
 ## IMB760
 

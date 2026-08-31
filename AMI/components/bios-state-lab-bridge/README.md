@@ -17,7 +17,7 @@ then deletes the request. The result contains one EFI status per request entry.
 Build and inject a ROM with:
 
 ```sh
-../../build-bridge.sh ../../IMB760_BIOS.bin bridge.rom
+python3 ../../build.py --scopes bridge --input INPUT_ROM --build-dir BUILD_DIR
 ```
 
 The builder replaces the PE32 section of `AmiRedFishApi`
