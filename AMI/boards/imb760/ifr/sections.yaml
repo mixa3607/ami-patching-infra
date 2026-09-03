@@ -47,3 +47,11 @@ sections:
     sectionType: 0x19
     outputMode: body
     expectedCount: 1
+    defaults: true
+  - name: 9221315B-BiosDefaults
+    output: 9221315B-BiosDefaults.bin
+    fileGuid: 9221315B-30BB-46B5-813E-1B1BF4712BD3
+    sectionType: 0x19
+    outputMode: body
+    expectedCount: 1
+    defaults: true

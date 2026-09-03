@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "type": "AF516361-BiosDefaults-Store-Patch",
+  "varPatches": [
+    {
+      "id": "0006-ServerSetup-0019-00000318",
+      "value": "3"
+    }
+  ]
+}
