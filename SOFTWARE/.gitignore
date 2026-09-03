@@ -1,32 +1,3 @@
-# Everything in SOFTWARE/ is ignored by default; only the tools needed to
-# build/patch the AMI BIOS are un-ignored below.
-**/
-*.exe
-
-# keep the docs
-!readme.md
-
-# C# file-based IFR section extractor
-!ifr-extractor/
-!ifr-extractor/extract.cs
-!ifr-extractor/README.md
-
-# IFRExtractor-RS-structured source submodule
-!IFRExtractor-RS-structured/
-IFRExtractor-RS-structured/*
-!IFRExtractor-RS-structured/sources/
-
-# uefi-mod-tools — used by build-ver.sh
-!uefi-mod-tools_v1.3.0/
-!uefi-mod-tools_v1.3.0/uefi-mod-tools
-
-# uefi-mod-tools development binary and source submodule
-!uefi-mod-tools/
-uefi-mod-tools/*
-!uefi-mod-tools/uefi-mod-tools
-!uefi-mod-tools/sources
-!uefi-mod-tools/sources/
-
-# uefi-editor-cli — our IFR patching CLI, used by build-ver.sh
-!uefi-editor-cli/
-!uefi-editor-cli/index.mjs
+/UEFI-Editor_f28cf86
+/UEFI-Updater-Tool
+/ifr-extractor
