@@ -93,23 +93,24 @@ uefitool-cli extract IMAGE MANIFEST.yaml OUTPUT_DIR
 ```
 
 The manifest format is deliberately explicit. Each output has a structured path
-with all four segments. `index` is zero-based among siblings matching the other
-fields. `subtype` is the preferred symbolic selector; numeric `type` is also
-accepted as an alternative selector. `guid` selects a file GUID and `fsGuid`
-selects a filesystem volume GUID (the parser exposes these as `guid` in inspect).
+array with ordered segments. `index` is zero-based among matching descendants.
+Copy each `subtype` value from `inspect`: `extract` compares it as text and does
+not accept numeric section types or abbreviated names. `guid` selects a file GUID
+and `fsGuid` selects a filesystem volume GUID (the parser exposes these as `guid`
+in inspect).
 
 ```json
 {
   "schema_version": 2,
   "outputs": [
     {
-      "source": {
-        "region": {"subtype": "bios"},
-        "volume": {"fsGuid": "01234567-89AB-CDEF-0123-456789ABCDEF", "index": 0},
-        "file": {"guid": "89ABCDEF-0123-4567-89AB-CDEF01234567"},
-        "section": {"subtype": "raw", "index": 0}
-      },
-      "path": "payload/module.bin",
+      "path": [
+        {"kind": "region", "subtype": "bios"},
+        {"kind": "volume", "fsGuid": "01234567-89AB-CDEF-0123-456789ABCDEF", "index": 0},
+        {"kind": "file", "guid": "89ABCDEF-0123-4567-89AB-CDEF01234567"},
+        {"kind": "section", "subtype": "raw", "index": 0}
+      ],
+      "output": "payload/module.bin",
       "outputMode": "body"
     }
   ]
@@ -122,6 +123,11 @@ body. Tails are never included. An unresolved or ambiguous segment is an error.
 Output paths must be relative, cannot contain `..` or backslashes, and parent
 directories are created under the output directory. Extraction is binary only;
 it does not execute or interpret IFR and does not add decompression semantics.
+
+`file.subtype` and `section.subtype` name different UEFI objects. For example,
+an executable driver can be selected with `subtype: dxe driver` on its file
+segment and `subtype: pe32 image` on its section segment. The latter must match
+the `subtype` text emitted for that section by `inspect`.
 
 ## JSON Shape
 

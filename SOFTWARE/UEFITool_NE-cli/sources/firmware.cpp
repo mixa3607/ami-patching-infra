@@ -52,9 +52,12 @@ static std::string collect(TreeModel *model, const UModelIndex &index,
     node.id = makeId(node.kind, node.offset, nodeSize(node));
     node.parent = parent;
     node.index = index;
-    for (int i = 0; i < model->rowCount(index); ++i)
-        node.children.push_back(collect(model, model->index(i, 0, index), node.id, nodes));
     nodes.push_back(node);
+    const std::size_t nodePosition = nodes.size() - 1;
+    for (int i = 0; i < model->rowCount(index); ++i) {
+        const std::string child = collect(model, model->index(i, 0, index), node.id, nodes);
+        nodes[nodePosition].children.push_back(child);
+    }
     return node.id;
 }
 
@@ -70,6 +73,5 @@ void FirmwareImage::parse(const std::string &path)
     if (model.rowCount() > 0) {
         std::string root = collect(&model, model.index(0, 0), "", nodes);
         (void)root;
-        std::reverse(nodes.begin(), nodes.end());
     }
 }

@@ -32,8 +32,26 @@ std::vector<Extraction> readManifest(const std::string &path)
         throw std::runtime_error("manifest must contain schema_version: 1 and a non-empty outputs array");
     std::vector<Extraction> result;
     for (json::const_iterator i = document["outputs"].begin(); i != document["outputs"].end(); ++i) {
-        if (!i->is_object() || !i->contains("source") || !i->contains("path")) throw std::runtime_error("each output needs source and path");
-        Extraction item; item.source = (*i)["source"]; item.path = (*i)["path"].get<std::string>(); item.outputMode = i->value("outputMode", "body");
+        if (!i->is_object() || !i->contains("path") || !i->contains("output"))
+            throw std::runtime_error("each output needs path and output");
+        if (!(*i)["path"].is_array() || (*i)["path"].empty())
+            throw std::runtime_error("path must be a non-empty array");
+        Extraction item;
+        for (json::const_iterator segment = (*i)["path"].begin(); segment != (*i)["path"].end(); ++segment) {
+            if (!segment->is_object() || !segment->contains("kind") || !segment->at("kind").is_string())
+                throw std::runtime_error("each path segment needs a string kind");
+            PathSegment value;
+            value.kind = lowerString(segment->at("kind").get<std::string>());
+            if (value.kind == "section" && segment->contains("type"))
+                throw std::runtime_error("section selectors use string subtype from inspect, not type");
+            if (value.kind == "section" && (!segment->contains("subtype") || !segment->at("subtype").is_string()))
+                throw std::runtime_error("section selectors need string subtype from inspect");
+            value.selector = *segment;
+            value.selector.erase("kind");
+            item.path.push_back(value);
+        }
+        item.output = (*i)["output"].get<std::string>();
+        item.outputMode = i->value("outputMode", "body");
         if (item.outputMode != "body" && item.outputMode != "section") throw std::runtime_error("outputMode must be body or section");
         result.push_back(item);
     }

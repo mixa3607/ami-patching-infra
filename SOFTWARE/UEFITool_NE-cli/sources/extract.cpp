@@ -7,16 +7,19 @@
 static std::string selectorName(std::string value)
 {
     value = lowerString(value);
+    std::string normalized;
+    bool separator = false;
     for (std::size_t i = 0; i < value.size(); ++i) {
-        if (value[i] == '-' || value[i] == ' ')
-            value[i] = '_';
+        if (value[i] == '-' || value[i] == '_' || value[i] == ' ') {
+            separator = !normalized.empty();
+        }
+        else {
+            if (separator) normalized += ' ';
+            normalized += value[i];
+            separator = false;
+        }
     }
-    if (value == "pe32_image") return "pe32";
-    if (value == "pic_image") return "pic";
-    if (value == "te_image") return "te";
-    if (value == "raw_section") return "raw";
-    if (value == "dxe_driver") return "dxe_driver";
-    return value;
+    return normalized;
 }
 
 static bool equals(const FirmwareNode &n, const std::string &kind, const nlohmann::json &selector)
@@ -26,7 +29,7 @@ static bool equals(const FirmwareNode &n, const std::string &kind, const nlohman
         && selectorName(n.subtype) != selectorName(selector["subtype"].get<std::string>())) return false;
     if (selector.contains("type") && selector["type"].is_number()) {
         const unsigned selectedType = selector["type"].get<unsigned>();
-        if ((n.kind == "section" ? n.subtypeValue : n.type) != selectedType) return false;
+        if (n.type != selectedType) return false;
     }
     if (selector.contains("guid") && lowerString(n.name) != lowerString(selector["guid"].get<std::string>())) return false;
     if (selector.contains("fsGuid") && lowerString(n.name) != lowerString(selector["fsGuid"].get<std::string>())) return false;
@@ -59,26 +62,23 @@ void extractManifest(const FirmwareImage &image, const std::vector<Extraction> &
 {
     makeDirectory(outputDir);
     for (std::vector<Extraction>::const_iterator item = items.begin(); item != items.end(); ++item) {
-        const char *kinds[] = {"region", "volume", "file", "section"};
         std::string parent;
         for (std::vector<FirmwareNode>::const_iterator n = image.nodes.begin(); n != image.nodes.end(); ++n)
             if (n->kind == "image") { parent = n->id; break; }
         const FirmwareNode *match = 0;
-        for (int level = 0; level < 4; ++level) {
-            std::string key = kinds[level];
-            if (!item->source.contains(key)) throw std::runtime_error("source is missing " + key);
+        for (std::vector<PathSegment>::const_iterator segment = item->path.begin(); segment != item->path.end(); ++segment) {
             std::vector<const FirmwareNode *> found;
             for (std::vector<FirmwareNode>::const_iterator n = image.nodes.begin(); n != image.nodes.end(); ++n) {
                 const bool parentMatch = n->parent == parent || below(*n, parent, image.nodes);
-                if (parentMatch && equals(*n, key, item->source[key])) found.push_back(&*n);
+                if (parentMatch && equals(*n, segment->kind, segment->selector)) found.push_back(&*n);
             }
-            if (item->source[key].contains("index")) { unsigned index = item->source[key]["index"].get<unsigned>(); if (index >= found.size()) found.clear(); else { const FirmwareNode *chosen = found[index]; found.clear(); found.push_back(chosen); } }
-            if (found.size() != 1) throw std::runtime_error("source segment " + key + " resolved to " + std::to_string(found.size()) + " nodes");
+            if (segment->selector.contains("index")) { unsigned index = segment->selector["index"].get<unsigned>(); if (index >= found.size()) found.clear(); else { const FirmwareNode *chosen = found[index]; found.clear(); found.push_back(chosen); } }
+            if (found.size() != 1) throw std::runtime_error("path segment " + segment->kind + " resolved to " + std::to_string(found.size()) + " nodes");
             match = found[0]; parent = match->id;
         }
-        if (item->path.empty() || item->path[0] == '/' || item->path.find("..") != std::string::npos || item->path.find('\\') != std::string::npos)
-            throw std::runtime_error("output path must be relative and cannot contain .. or backslashes: " + item->path);
-        std::string destination = outputDir + "/" + item->path;
+        if (item->output.empty() || item->output[0] == '/' || item->output.find("..") != std::string::npos || item->output.find('\\') != std::string::npos)
+            throw std::runtime_error("output path must be relative and cannot contain .. or backslashes: " + item->output);
+        std::string destination = outputDir + "/" + item->output;
         std::size_t slash = destination.find_last_of('/'); if (slash != std::string::npos) makeDirectory(destination.substr(0, slash));
         UByteArray bytes = image.model.body(match->index);
         if (item->outputMode == "section") bytes = image.model.header(match->index) + bytes;
