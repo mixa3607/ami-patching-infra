@@ -2,7 +2,9 @@
 
 Small read-only CLI around the parser from `UEFITool_NE_A72_win64`.
 The upstream UEFIExtract sources are used as libraries and are not modified.
-Command-line parsing uses CLI11 and JSON serialization uses nlohmann/json.
+Command-line parsing uses CLI11, JSON serialization uses nlohmann/json, and YAML
+manifests use pinned yaml-cpp. The upstream parser is wrapped by small firmware,
+inspection, manifest, extraction, and CLI application modules.
 
 ## Requirements
 
@@ -10,7 +12,7 @@ Command-line parsing uses CLI11 and JSON serialization uses nlohmann/json.
 - CMake 3.16 or newer
 - GCC or Clang with C++11 support
 - zlib development package
-- network access on the first configure, to download pinned CLI11 and nlohmann/json
+- network access on the first configure, to download pinned CLI11, nlohmann/json, and yaml-cpp
 
 On Debian/Ubuntu:
 
@@ -80,6 +82,47 @@ SOFTWARE/UEFITool_NE-cli/uefitool-cli \
 
 The command is read-only and never modifies the input image.
 
+## Extract
+
+`extract` parses the image once, resolves every source against that one tree, and
+writes binary data below the requested output directory:
+
+```bash
+uefitool-cli extract IMAGE MANIFEST.json OUTPUT_DIR
+uefitool-cli extract IMAGE MANIFEST.yaml OUTPUT_DIR
+```
+
+The manifest format is deliberately explicit. Each output has a structured path
+with all four segments. `index` is zero-based among siblings matching the other
+fields. `subtype` is the preferred symbolic selector; numeric `type` is also
+accepted as an alternative selector. `guid` selects a file GUID and `fsGuid`
+selects a filesystem volume GUID (the parser exposes these as `guid` in inspect).
+
+```json
+{
+  "schema_version": 2,
+  "outputs": [
+    {
+      "source": {
+        "region": {"subtype": "bios"},
+        "volume": {"fsGuid": "01234567-89AB-CDEF-0123-456789ABCDEF", "index": 0},
+        "file": {"guid": "89ABCDEF-0123-4567-89AB-CDEF01234567"},
+        "section": {"subtype": "raw", "index": 0}
+      },
+      "path": "payload/module.bin",
+      "outputMode": "body"
+    }
+  ]
+}
+```
+
+YAML has the same mapping and sequence shape. `outputMode: body` writes only
+the section body; `outputMode: section` writes its complete header followed by
+body. Tails are never included. An unresolved or ambiguous segment is an error.
+Output paths must be relative, cannot contain `..` or backslashes, and parent
+directories are created under the output directory. Extraction is binary only;
+it does not execute or interpret IFR and does not add decompression semantics.
+
 ## JSON Shape
 
 The output is a normalized tree:
@@ -92,12 +135,19 @@ The output is a normalized tree:
   "entities": {
     "volume:0x01000000:0x80000": {
       "kind": "volume",
+      "type": 65,
+      "type_hex": "0x41",
       "subtype": "nvram",
+      "subtype_value": 113,
+      "subtype_hex": "0x71",
       "name": "FA4974FC-AF1D-4E5D-BDC5-DACD6D27BAEC",
       "offset": 16777216,
       "offset_hex": "0x01000000",
       "size": 524288,
       "size_hex": "0x80000",
+      "header_size": 72,
+      "body_size": 524216,
+      "tail_size": 0,
       "parent": "region:0x01000000:0x01000000",
       "children": []
     }

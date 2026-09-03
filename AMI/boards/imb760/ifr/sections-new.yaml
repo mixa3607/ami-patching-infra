@@ -1,0 +1,100 @@
+schema_version: 1
+
+outputs:
+  - name: FpgaSocketSetup
+    source:
+      region:
+        subtype: bios
+      volume:
+        fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+      file:
+        guid: BCEA6548-E204-4486-8F2A-36E13C7838CE
+        subtype: dxe_driver
+      section:
+        subtype: pe32
+    path: FpgaSocketSetup/FpgaSocketSetup_setup.sct
+    outputMode: section
+
+  - name: Platform
+    source:
+      region:
+        subtype: bios
+      volume:
+        fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+      file:
+        guid: ABBCE13D-E25A-4D9F-A1F9-2F7710786892
+        subtype: dxe_driver
+      section:
+        subtype: pe32
+    path: Platform/Platform_setup.sct
+    outputMode: section
+
+  - name: ServerMgmtSetup
+    source:
+      region:
+        subtype: bios
+      volume:
+        fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+      file:
+        guid: 1B08A1DB-F91A-4FA1-A911-255C417F1CF7
+        subtype: dxe_driver
+      section:
+        subtype: pe32
+    path: ServerMgmtSetup/ServerMgmtSetup_setup.sct
+    outputMode: section
+
+  - name: Setup
+    source:
+      region:
+        subtype: bios
+      volume:
+        fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+      file:
+        guid: 899407D7-99FE-43D8-9A21-79EC328CAC21
+        subtype: dxe_driver
+      section:
+        subtype: pe32
+    path: Setup/Setup_setup.sct
+    outputMode: section
+
+  - name: SocketSetup
+    source:
+      region:
+        subtype: bios
+      volume:
+        fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+      file:
+        guid: 6B6FD380-2C55-42C6-98BF-CBBC5A9AA666
+        subtype: dxe_driver
+      section:
+        subtype: pe32
+    path: SocketSetup/SocketSetup_setup.sct
+    outputMode: section
+
+  - name: SetupData
+    source:
+      region:
+        subtype: bios
+      volume:
+        fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+      file:
+        guid: FE612B72-203C-47B1-8560-A66D946EB371
+        subtype: freeform
+      section:
+        subtype: freeform_subtype_guid
+    path: SetupData.bin
+    outputMode: body
+
+  - name: AF516361-BiosDefaults
+    source:
+      region:
+        subtype: bios
+      volume:
+        fsGuid: 61C0F511-A691-4F54-974F-B9A42172CE53
+      file:
+        guid: AF516361-B4C5-436E-A7E3-A149A31B1461
+        subtype: freeform
+      section:
+        subtype: raw
+    path: AF516361-BiosDefaults.bin
+    outputMode: body
