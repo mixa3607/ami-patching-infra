@@ -12,7 +12,7 @@ import sys
 from pipeline.context import BuildContext
 from pipeline.helpers import git_version, load_profile, sha256, write_manifest
 from pipeline.plan import Stage, parse_scopes, select_stages
-from pipeline.stages import bridge, dmi, ifr, logos, mcodes, nvar_defaults, nvar_erase, prepare, validate
+from pipeline.stages import bridge, dmi, ifr, logos, mcodes, prepare, validate
 
 
 AMI_DIR = Path(__file__).resolve().parent
@@ -25,8 +25,6 @@ STAGES = {
     "ifr": Stage("ifr", ("prepare",), ifr.run, ready=True),
     "mcodes": Stage("mcodes", ("prepare",), mcodes.run, ready=True),
     "bridge": Stage("bridge", ("prepare",), bridge.run, ready=True),
-    "nvar-defaults": Stage("nvar-defaults", ("prepare",), nvar_defaults.run, ready=False),
-    "nvar-erase": Stage("nvar-erase", ("prepare",), nvar_erase.run, ready=False, dangerous=True),
     "validate": Stage("validate", (), validate.run, ready=False),
 }
 
