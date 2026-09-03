@@ -1,47 +1,24 @@
 {
   "version": 1,
+  "type": "AMI-SetupData-Patch",
   "questions": [
     {
-      "beginAddress": "0x0000CB14",
-      "endAddress": "0x0000CB4A",
-      "type": "Ref",
-      "question": {
-        "questionId": 13,
-        "pageId": 7,
-        "accessLevel": 5,
-        "helpStringId": 156,
-        "promptStringId": 155,
-        "failsafe": 0,
-        "optimal": 0
-      }
+      "id": "Ref-000D",
+      "accessLevel": 5,
+      "failsafe": 0,
+      "optimal": 0
     },
     {
-      "beginAddress": "0x0000CC94",
-      "endAddress": "0x0000CCCA",
-      "type": "Ref",
-      "question": {
-        "questionId": 19,
-        "pageId": 19,
-        "accessLevel": 5,
-        "helpStringId": 133,
-        "promptStringId": 132,
-        "failsafe": 0,
-        "optimal": 0
-      }
+      "id": "Ref-0013",
+      "accessLevel": 5,
+      "failsafe": 0,
+      "optimal": 0
     },
     {
-      "beginAddress": "0x0000CD14",
-      "endAddress": "0x0000CD4A",
-      "type": "Ref",
-      "question": {
-        "questionId": 21,
-        "pageId": 26,
-        "accessLevel": 5,
-        "helpStringId": 174,
-        "promptStringId": 173,
-        "failsafe": 0,
-        "optimal": 0
-      }
+      "id": "Ref-0015",
+      "accessLevel": 5,
+      "failsafe": 0,
+      "optimal": 0
     }
   ]
 }

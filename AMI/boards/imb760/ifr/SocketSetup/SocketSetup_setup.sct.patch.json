@@ -1,5 +1,6 @@
 {
   "version": 1,
+  "type": "AMI-IFR-SCT-Patch",
   "suppressIfPatches": [
     {
       "disable": true,
