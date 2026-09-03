@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "type": "AF516361-BiosDefaults-Store-Patch",
+  "varPatches": [
+    {
+      "id": "1186-SocketMemoryConfig-00C8-00002777",
+      "value": "0"
+    },
+    {
+      "id": "1506-MemBootHealthConfig-0001-00002D0D",
+      "value": "0"
+    }
+  ]
+}

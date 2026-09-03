@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "type": "AF516361-BiosDefaults-Store-Patch",
+  "varPatches": [
+    {
+      "id": "012A-Setup-00EF-00000117",
+      "value": "2"
+    }
+  ]
+}
