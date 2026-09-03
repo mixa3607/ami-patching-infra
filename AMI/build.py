@@ -12,18 +12,19 @@ import sys
 from pipeline.context import BuildContext
 from pipeline.helpers import git_version, load_profile, sha256, write_manifest
 from pipeline.plan import Stage, parse_scopes, select_stages
-from pipeline.stages import bridge, dmi, logos, mcodes, prepare, sct, setup_data, validate
+from pipeline.stages import bridge, dmi, logos, mcodes, nvar_defaults, prepare, sct, setup_data, validate
 
 
 AMI_DIR = Path(__file__).resolve().parent
 REPO_ROOT = AMI_DIR.parent
-DEFAULT_SCOPES = ("prepare", "dmi", "logos", "setup-data", "sct", "mcodes", "bridge")
+DEFAULT_SCOPES = ("prepare", "dmi", "logos", "setup-data", "sct", "nvar-defaults", "mcodes", "bridge")
 STAGES = {
     "prepare": Stage("prepare", (), prepare.run, ready=True),
     "dmi": Stage("dmi", ("prepare",), dmi.run, ready=True),
     "logos": Stage("logos", ("prepare",), logos.run, ready=True),
     "setup-data": Stage("setup-data", ("prepare",), setup_data.run, ready=True),
     "sct": Stage("sct", ("setup-data",), sct.run, ready=True),
+    "nvar-defaults": Stage("nvar-defaults", ("sct",), nvar_defaults.run, ready=True),
     "mcodes": Stage("mcodes", ("prepare",), mcodes.run, ready=True),
     "bridge": Stage("bridge", ("prepare",), bridge.run, ready=True),
     "validate": Stage("validate", (), validate.run, ready=False),
@@ -32,7 +33,7 @@ STAGES = {
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--scopes", action="append", help="Comma-separated stages to run (default: prepare,dmi,logos,setup-data,sct,mcodes,bridge)")
+    parser.add_argument("--scopes", action="append", help="Comma-separated stages to run (default: prepare,dmi,logos,setup-data,sct,nvar-defaults,mcodes,bridge)")
     parser.add_argument("--input", type=Path, help="Base ROM; defaults to the profile base_dump")
     parser.add_argument("--profile", type=Path, default=AMI_DIR / "profiles" / "imb760.yaml")
     parser.add_argument("--version", help="Build version; defaults to REPO_GIT_REF, tag, or commit SHA")
