@@ -14,3 +14,6 @@
 	path = SOFTWARE/uefi-mod-tools/sources
 	url = https://github.com/mixa3607/uefi-mod-tools.git
 	branch = feat/ifr-react-viewer-mvp
+[submodule "SOFTWARE/CPUMicrocodes/sources"]
+	path = SOFTWARE/CPUMicrocodes/sources
+	url = https://github.com/platomav/CPUMicrocodes.git
