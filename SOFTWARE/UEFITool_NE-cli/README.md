@@ -33,13 +33,13 @@ cd SOFTWARE/UEFITool_NE-cli
 The build output is:
 
 ```text
-SOFTWARE/UEFITool_NE-cli/uefitool-cli
+SOFTWARE/UEFITool_NE-cli/uefitool-ne-cli
 ```
 
 To use another build directory or compiler:
 
 ```bash
-BUILD_DIR=/tmp/uefitool-cli-build CXX=clang++ ./build.sh
+BUILD_DIR=/tmp/uefitool-ne-cli-build CXX=clang++ ./build.sh
 ```
 
 To select the build parallelism:
@@ -60,13 +60,13 @@ cmake --build SOFTWARE/UEFITool_NE-cli/.build --parallel 2
 ## Inspect
 
 ```bash
-SOFTWARE/UEFITool_NE-cli/uefitool-cli inspect IMAGE
+SOFTWARE/UEFITool_NE-cli/uefitool-ne-cli inspect IMAGE
 ```
 
 Pretty JSON to stdout:
 
 ```bash
-SOFTWARE/UEFITool_NE-cli/uefitool-cli \
+SOFTWARE/UEFITool_NE-cli/uefitool-ne-cli \
   inspect AMI/boards/imb760/base/IMB760_BIOS.bin \
   --pretty
 ```
@@ -74,7 +74,7 @@ SOFTWARE/UEFITool_NE-cli/uefitool-cli \
 Write JSON to a file:
 
 ```bash
-SOFTWARE/UEFITool_NE-cli/uefitool-cli \
+SOFTWARE/UEFITool_NE-cli/uefitool-ne-cli \
   inspect AMI/boards/imb760/base/IMB760_BIOS.bin \
   --pretty \
   --output /tmp/imb760.inspect.json
@@ -88,8 +88,8 @@ The command is read-only and never modifies the input image.
 writes binary data below the requested output directory:
 
 ```bash
-uefitool-cli extract IMAGE MANIFEST.json OUTPUT_DIR
-uefitool-cli extract IMAGE MANIFEST.yaml OUTPUT_DIR
+uefitool-ne-cli extract IMAGE MANIFEST.json OUTPUT_DIR
+uefitool-ne-cli extract IMAGE MANIFEST.yaml OUTPUT_DIR
 ```
 
 The manifest format is deliberately explicit. Each output has a structured path
@@ -180,7 +180,7 @@ volume:0x01000000:0x80000
 ## IMB760 Check
 
 ```bash
-SOFTWARE/UEFITool_NE-cli/uefitool-cli \
+SOFTWARE/UEFITool_NE-cli/uefitool-ne-cli \
   inspect AMI/boards/imb760/base/IMB760_BIOS.bin \
   --output /tmp/imb760.inspect.json
 

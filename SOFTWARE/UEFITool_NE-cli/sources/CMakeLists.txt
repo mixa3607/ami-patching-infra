@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(uefitool-cli LANGUAGES C CXX)
+project(uefitool-ne-cli LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -72,15 +72,15 @@ set(YAML_CPP_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(YAML_CPP_BUILD_TOOLS OFF CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(CLI11 nlohmann_json yaml_cpp)
 
-add_executable(uefitool-cli main.cpp firmware.cpp inspect.cpp manifest.cpp extract.cpp ${COMMON_SOURCES})
-target_include_directories(uefitool-cli PRIVATE "${UEFIToolCommon}")
-target_compile_definitions(uefitool-cli PRIVATE
+add_executable(uefitool-ne-cli main.cpp firmware.cpp inspect.cpp manifest.cpp extract.cpp ${COMMON_SOURCES})
+target_include_directories(uefitool-ne-cli PRIVATE "${UEFIToolCommon}")
+target_compile_definitions(uefitool-ne-cli PRIVATE
     U_ENABLE_NVRAM_PARSING_SUPPORT
     U_ENABLE_ME_PARSING_SUPPORT
     U_ENABLE_FIT_PARSING_SUPPORT
     U_ENABLE_GUID_DATABASE_SUPPORT
 )
-target_link_libraries(uefitool-cli PRIVATE
+target_link_libraries(uefitool-ne-cli PRIVATE
     ZLIB::ZLIB
     CLI11::CLI11
     nlohmann_json::nlohmann_json

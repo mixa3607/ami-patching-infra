@@ -8,5 +8,5 @@ cmake -S "${ROOT_DIR}/sources" -B "${BUILD_DIR}" \
     -DCMAKE_BUILD_TYPE="${CMAKE_BUILD_TYPE:-Release}"
 cmake --build "${BUILD_DIR}" --parallel "${JOBS:-2}"
 
-cp "${BUILD_DIR}/uefitool-cli" "${ROOT_DIR}/uefitool-cli"
-printf 'binary: %s\n' "${ROOT_DIR}/uefitool-cli"
+cp "${BUILD_DIR}/uefitool-ne-cli" "${ROOT_DIR}/uefitool-ne-cli"
+printf 'binary: %s\n' "${ROOT_DIR}/uefitool-ne-cli"
