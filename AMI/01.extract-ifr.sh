@@ -24,3 +24,10 @@ for D in $(find "$ifr_dir" -maxdepth 1 -mindepth 1 -type d -printf '%P\n'); do
     -s "$ifr_dir/${D}/${D}_setup.sct.0.0.uefi.ifr.json" \
     -o "$ifr_dir/${D}/${D}_setup.sct.render.json"
 done
+
+for D in $(find "$ifr_dir" -maxdepth 1 -mindepth 1 -type d -printf '%P\n'); do
+  "$uefi_mod_tools" uefi setup-data map-ifr \
+    -i "$ifr_dir/SetupData.bin" \
+    --ifr "$ifr_dir/${D}/${D}_setup.sct.0.0.uefi.ifr.json" \
+    -o "$ifr_dir/${D}/SetupData.map.json"
+done

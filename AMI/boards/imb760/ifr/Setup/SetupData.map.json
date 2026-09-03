@@ -1,0 +1,5558 @@
+{
+  "version": 1,
+  "type": "AMI-SetupData-IFR-Map",
+  "setupDataSha256": "d3832581d0d43d014d3611f975b03363dee4fef1047aa035632f209e92db8365",
+  "ifrSha256": "29a8e3ce918338b0b9f8001c17b683f10530981ccab7c8ff8bd1dba5f2d99697",
+  "questions": [
+    {
+      "id": "Ref-0001",
+      "beginAddress": "0x0000C284",
+      "endAddress": "0x0000C2BA",
+      "type": "Ref",
+      "question": {
+        "questionId": 1,
+        "pageId": 2,
+        "accessLevel": 1,
+        "helpStringId": 2,
+        "promptStringId": 9,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0002",
+      "beginAddress": "0x0000C2C4",
+      "endAddress": "0x0000C2FA",
+      "type": "Ref",
+      "question": {
+        "questionId": 2,
+        "pageId": 3,
+        "accessLevel": 1,
+        "helpStringId": 2,
+        "promptStringId": 30,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0003",
+      "beginAddress": "0x0000C304",
+      "endAddress": "0x0000C33A",
+      "type": "Ref",
+      "question": {
+        "questionId": 3,
+        "pageId": 36,
+        "accessLevel": 1,
+        "helpStringId": 2,
+        "promptStringId": 31,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0004",
+      "beginAddress": "0x0000C344",
+      "endAddress": "0x0000C37A",
+      "type": "Ref",
+      "question": {
+        "questionId": 4,
+        "pageId": 37,
+        "accessLevel": 1,
+        "helpStringId": 2,
+        "promptStringId": 57,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0005",
+      "beginAddress": "0x0000C384",
+      "endAddress": "0x0000C3BA",
+      "type": "Ref",
+      "question": {
+        "questionId": 5,
+        "pageId": 42,
+        "accessLevel": 1,
+        "helpStringId": 2,
+        "promptStringId": 32,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0006",
+      "beginAddress": "0x0000C3C4",
+      "endAddress": "0x0000C3FA",
+      "type": "Ref",
+      "question": {
+        "questionId": 6,
+        "pageId": 44,
+        "accessLevel": 1,
+        "helpStringId": 2,
+        "promptStringId": 76,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0007",
+      "beginAddress": "0x0000C944",
+      "endAddress": "0x0000C97A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 7,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 10,
+        "promptStringId": 11,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-000A",
+      "beginAddress": "0x0000CA54",
+      "endAddress": "0x0000CA8A",
+      "type": "Ref",
+      "question": {
+        "questionId": 10,
+        "pageId": 5,
+        "accessLevel": 1,
+        "helpStringId": 1196,
+        "promptStringId": 1195,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-000B",
+      "beginAddress": "0x0000CA94",
+      "endAddress": "0x0000CACA",
+      "type": "Ref",
+      "question": {
+        "questionId": 11,
+        "pageId": 6,
+        "accessLevel": 1,
+        "helpStringId": 1196,
+        "promptStringId": 1195,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-000D",
+      "beginAddress": "0x0000CB14",
+      "endAddress": "0x0000CB4A",
+      "type": "Ref",
+      "question": {
+        "questionId": 13,
+        "pageId": 7,
+        "accessLevel": 1,
+        "helpStringId": 156,
+        "promptStringId": 155,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-000E",
+      "beginAddress": "0x0000CB54",
+      "endAddress": "0x0000CB8A",
+      "type": "Ref",
+      "question": {
+        "questionId": 14,
+        "pageId": 8,
+        "accessLevel": 1,
+        "helpStringId": 105,
+        "promptStringId": 104,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-000F",
+      "beginAddress": "0x0000CB94",
+      "endAddress": "0x0000CBCA",
+      "type": "Ref",
+      "question": {
+        "questionId": 15,
+        "pageId": 11,
+        "accessLevel": 1,
+        "helpStringId": 946,
+        "promptStringId": 945,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0010",
+      "beginAddress": "0x0000CBD4",
+      "endAddress": "0x0000CC0A",
+      "type": "Ref",
+      "question": {
+        "questionId": 16,
+        "pageId": 13,
+        "accessLevel": 1,
+        "helpStringId": 1014,
+        "promptStringId": 1013,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0011",
+      "beginAddress": "0x0000CC14",
+      "endAddress": "0x0000CC4A",
+      "type": "Ref",
+      "question": {
+        "questionId": 17,
+        "pageId": 15,
+        "accessLevel": 1,
+        "helpStringId": 1358,
+        "promptStringId": 1357,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0012",
+      "beginAddress": "0x0000CC54",
+      "endAddress": "0x0000CC8A",
+      "type": "Ref",
+      "question": {
+        "questionId": 18,
+        "pageId": 17,
+        "accessLevel": 1,
+        "helpStringId": 1376,
+        "promptStringId": 1375,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0013",
+      "beginAddress": "0x0000CC94",
+      "endAddress": "0x0000CCCA",
+      "type": "Ref",
+      "question": {
+        "questionId": 19,
+        "pageId": 19,
+        "accessLevel": 1,
+        "helpStringId": 133,
+        "promptStringId": 132,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0014",
+      "beginAddress": "0x0000CCD4",
+      "endAddress": "0x0000CD0A",
+      "type": "Ref",
+      "question": {
+        "questionId": 20,
+        "pageId": 20,
+        "accessLevel": 1,
+        "helpStringId": 525,
+        "promptStringId": 525,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0015",
+      "beginAddress": "0x0000CD14",
+      "endAddress": "0x0000CD4A",
+      "type": "Ref",
+      "question": {
+        "questionId": 21,
+        "pageId": 26,
+        "accessLevel": 1,
+        "helpStringId": 174,
+        "promptStringId": 173,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0016",
+      "beginAddress": "0x0000CD54",
+      "endAddress": "0x0000CD8A",
+      "type": "Ref",
+      "question": {
+        "questionId": 22,
+        "pageId": 27,
+        "accessLevel": 1,
+        "helpStringId": 382,
+        "promptStringId": 376,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0017",
+      "beginAddress": "0x0000CD94",
+      "endAddress": "0x0000CDCA",
+      "type": "Ref",
+      "question": {
+        "questionId": 23,
+        "pageId": 30,
+        "accessLevel": 1,
+        "helpStringId": 765,
+        "promptStringId": 764,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0018",
+      "beginAddress": "0x0000CDD4",
+      "endAddress": "0x0000CE0A",
+      "type": "Ref",
+      "question": {
+        "questionId": 24,
+        "pageId": 31,
+        "accessLevel": 1,
+        "helpStringId": 865,
+        "promptStringId": 864,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0019",
+      "beginAddress": "0x0000CE14",
+      "endAddress": "0x0000CE4A",
+      "type": "Ref",
+      "question": {
+        "questionId": 25,
+        "pageId": 32,
+        "accessLevel": 1,
+        "helpStringId": 881,
+        "promptStringId": 880,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-001A",
+      "beginAddress": "0x0000CE54",
+      "endAddress": "0x0000CE8A",
+      "type": "Ref",
+      "question": {
+        "questionId": 26,
+        "pageId": 33,
+        "accessLevel": 1,
+        "helpStringId": 928,
+        "promptStringId": 927,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-001B",
+      "beginAddress": "0x0000CED4",
+      "endAddress": "0x0000CF0A",
+      "type": "Ref",
+      "question": {
+        "questionId": 27,
+        "pageId": 3,
+        "accessLevel": 1,
+        "helpStringId": 2,
+        "promptStringId": 2,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-001C",
+      "beginAddress": "0x0000CF54",
+      "endAddress": "0x0000CF8A",
+      "type": "Ref",
+      "question": {
+        "questionId": 28,
+        "pageId": 34,
+        "accessLevel": 1,
+        "helpStringId": 103,
+        "promptStringId": 102,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-001D",
+      "beginAddress": "0x0000CFD4",
+      "endAddress": "0x0000D00A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 29,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1233,
+        "promptStringId": 1199,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-001E",
+      "beginAddress": "0x0000D01C",
+      "endAddress": "0x0000D052",
+      "type": "OneOf",
+      "question": {
+        "questionId": 30,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1286,
+        "promptStringId": 1285,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-001F",
+      "beginAddress": "0x0000D0E4",
+      "endAddress": "0x0000D11A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 31,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1233,
+        "promptStringId": 1199,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0020",
+      "beginAddress": "0x0000D12C",
+      "endAddress": "0x0000D162",
+      "type": "OneOf",
+      "question": {
+        "questionId": 32,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1202,
+        "promptStringId": 1197,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-0021",
+      "beginAddress": "0x0000D174",
+      "endAddress": "0x0000D1AA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 33,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1232,
+        "promptStringId": 1210,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0022",
+      "beginAddress": "0x0000D1BC",
+      "endAddress": "0x0000D1F2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 34,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1233,
+        "promptStringId": 1200,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0023",
+      "beginAddress": "0x0000D204",
+      "endAddress": "0x0000D23A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 35,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1202,
+        "promptStringId": 1198,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-0024",
+      "beginAddress": "0x0000D24C",
+      "endAddress": "0x0000D282",
+      "type": "OneOf",
+      "question": {
+        "questionId": 36,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1232,
+        "promptStringId": 1210,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0025",
+      "beginAddress": "0x0000D294",
+      "endAddress": "0x0000D2CA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 37,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1260,
+        "promptStringId": 1256,
+        "failsafe": 2,
+        "optimal": 2
+      }
+    },
+    {
+      "id": "OneOf-0026",
+      "beginAddress": "0x0000D61C",
+      "endAddress": "0x0000D652",
+      "type": "OneOf",
+      "question": {
+        "questionId": 38,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1233,
+        "promptStringId": 1199,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0027",
+      "beginAddress": "0x0000D724",
+      "endAddress": "0x0000D75A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 39,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1268,
+        "promptStringId": 1267,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-0028",
+      "beginAddress": "0x0000D774",
+      "endAddress": "0x0000D7AA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 40,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1270,
+        "promptStringId": 1269,
+        "failsafe": 2,
+        "optimal": 2
+      }
+    },
+    {
+      "id": "OneOf-0029",
+      "beginAddress": "0x0000D7C4",
+      "endAddress": "0x0000D7FA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 41,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1272,
+        "promptStringId": 1271,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-002A",
+      "beginAddress": "0x0000D814",
+      "endAddress": "0x0000D84A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 42,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1274,
+        "promptStringId": 1273,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-002B",
+      "beginAddress": "0x0000D864",
+      "endAddress": "0x0000D89A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 43,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1276,
+        "promptStringId": 1275,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-002C",
+      "beginAddress": "0x0000D8F4",
+      "endAddress": "0x0000D92A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 44,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1232,
+        "promptStringId": 1211,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-002D",
+      "beginAddress": "0x0000D93C",
+      "endAddress": "0x0000D972",
+      "type": "OneOf",
+      "question": {
+        "questionId": 45,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1243,
+        "promptStringId": 1242,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-002E",
+      "beginAddress": "0x0000D984",
+      "endAddress": "0x0000D9BA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 46,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1245,
+        "promptStringId": 1244,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-002F",
+      "beginAddress": "0x0000D9CC",
+      "endAddress": "0x0000DA02",
+      "type": "OneOf",
+      "question": {
+        "questionId": 47,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1247,
+        "promptStringId": 1246,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-0030",
+      "beginAddress": "0x0000DA14",
+      "endAddress": "0x0000DA4A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 48,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1238,
+        "promptStringId": 1237,
+        "failsafe": 2,
+        "optimal": 2
+      }
+    },
+    {
+      "id": "OneOf-0031",
+      "beginAddress": "0x0000DA5C",
+      "endAddress": "0x0000DA92",
+      "type": "OneOf",
+      "question": {
+        "questionId": 49,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1278,
+        "promptStringId": 1277,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-0032",
+      "beginAddress": "0x0000DAA4",
+      "endAddress": "0x0000DADA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 50,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1249,
+        "promptStringId": 1248,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0033",
+      "beginAddress": "0x0000DAEC",
+      "endAddress": "0x0000DB22",
+      "type": "OneOf",
+      "question": {
+        "questionId": 51,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1260,
+        "promptStringId": 1256,
+        "failsafe": 2,
+        "optimal": 2
+      }
+    },
+    {
+      "id": "OneOf-0034",
+      "beginAddress": "0x0000DB34",
+      "endAddress": "0x0000DB6A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 52,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1286,
+        "promptStringId": 1285,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "CheckBox-0035",
+      "beginAddress": "0x0000DBFC",
+      "endAddress": "0x0000DC32",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 53,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 167,
+        "promptStringId": 166,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0036",
+      "beginAddress": "0x0000DD4C",
+      "endAddress": "0x0000DD82",
+      "type": "Ref",
+      "question": {
+        "questionId": 54,
+        "pageId": 9,
+        "accessLevel": 1,
+        "helpStringId": 109,
+        "promptStringId": 108,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0037",
+      "beginAddress": "0x0000DD8C",
+      "endAddress": "0x0000DDC2",
+      "type": "Ref",
+      "question": {
+        "questionId": 55,
+        "pageId": 10,
+        "accessLevel": 1,
+        "helpStringId": 111,
+        "promptStringId": 110,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "CheckBox-0038",
+      "beginAddress": "0x0000DE4C",
+      "endAddress": "0x0000DE82",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 56,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 117,
+        "promptStringId": 116,
+        "failsafe": 0,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-0039",
+      "beginAddress": "0x0000DF14",
+      "endAddress": "0x0000DF4A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 57,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 252,
+        "promptStringId": 253,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "CheckBox-003A",
+      "beginAddress": "0x0000DFDC",
+      "endAddress": "0x0000E012",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 58,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 117,
+        "promptStringId": 116,
+        "failsafe": 0,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-003B",
+      "beginAddress": "0x0000E0A4",
+      "endAddress": "0x0000E0DA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 59,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 252,
+        "promptStringId": 253,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-003C",
+      "beginAddress": "0x0000E16C",
+      "endAddress": "0x0000E1A2",
+      "type": "Ref",
+      "question": {
+        "questionId": 60,
+        "pageId": 12,
+        "accessLevel": 1,
+        "helpStringId": 980,
+        "promptStringId": 979,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-003D",
+      "beginAddress": "0x0000E62C",
+      "endAddress": "0x0000E662",
+      "type": "OneOf",
+      "question": {
+        "questionId": 61,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 982,
+        "promptStringId": 981,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-003E",
+      "beginAddress": "0x0000E674",
+      "endAddress": "0x0000E6AA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 62,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 990,
+        "promptStringId": 989,
+        "failsafe": 0,
+        "optimal": 255
+      }
+    },
+    {
+      "id": "Numeric-003F",
+      "beginAddress": "0x0000E6BC",
+      "endAddress": "0x0000E6F2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 63,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 992,
+        "failsafe": 0,
+        "optimal": 20
+      }
+    },
+    {
+      "id": "Numeric-0040",
+      "beginAddress": "0x0000E704",
+      "endAddress": "0x0000E73A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 64,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 996,
+        "failsafe": 0,
+        "optimal": 120
+      }
+    },
+    {
+      "id": "Numeric-0041",
+      "beginAddress": "0x0000E74C",
+      "endAddress": "0x0000E782",
+      "type": "Numeric",
+      "question": {
+        "questionId": 65,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1012,
+        "promptStringId": 1006,
+        "failsafe": 0,
+        "optimal": 40
+      }
+    },
+    {
+      "id": "Numeric-0042",
+      "beginAddress": "0x0000E794",
+      "endAddress": "0x0000E7CA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 66,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1012,
+        "promptStringId": 1009,
+        "failsafe": 0,
+        "optimal": 160
+      }
+    },
+    {
+      "id": "Numeric-0043",
+      "beginAddress": "0x0000E7DC",
+      "endAddress": "0x0000E812",
+      "type": "Numeric",
+      "question": {
+        "questionId": 67,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1012,
+        "promptStringId": 1007,
+        "failsafe": 0,
+        "optimal": 70
+      }
+    },
+    {
+      "id": "Numeric-0044",
+      "beginAddress": "0x0000E824",
+      "endAddress": "0x0000E85A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 68,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1012,
+        "promptStringId": 1010,
+        "failsafe": 0,
+        "optimal": 192
+      }
+    },
+    {
+      "id": "Numeric-0045",
+      "beginAddress": "0x0000E86C",
+      "endAddress": "0x0000E8A2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 69,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1012,
+        "promptStringId": 1008,
+        "failsafe": 0,
+        "optimal": 80
+      }
+    },
+    {
+      "id": "Numeric-0046",
+      "beginAddress": "0x0000E8B4",
+      "endAddress": "0x0000E8EA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 70,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1012,
+        "promptStringId": 1011,
+        "failsafe": 0,
+        "optimal": 255
+      }
+    },
+    {
+      "id": "Numeric-0047",
+      "beginAddress": "0x0000E8FC",
+      "endAddress": "0x0000E932",
+      "type": "Numeric",
+      "question": {
+        "questionId": 71,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1003,
+        "promptStringId": 1000,
+        "failsafe": 0,
+        "optimal": 85
+      }
+    },
+    {
+      "id": "OneOf-0048",
+      "beginAddress": "0x0000E984",
+      "endAddress": "0x0000E9BA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 72,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 984,
+        "promptStringId": 983,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0049",
+      "beginAddress": "0x0000E9CC",
+      "endAddress": "0x0000EA02",
+      "type": "Numeric",
+      "question": {
+        "questionId": 73,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 990,
+        "promptStringId": 989,
+        "failsafe": 0,
+        "optimal": 255
+      }
+    },
+    {
+      "id": "Numeric-004A",
+      "beginAddress": "0x0000EA14",
+      "endAddress": "0x0000EA4A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 74,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 992,
+        "failsafe": 0,
+        "optimal": 20
+      }
+    },
+    {
+      "id": "Numeric-004B",
+      "beginAddress": "0x0000EA5C",
+      "endAddress": "0x0000EA92",
+      "type": "Numeric",
+      "question": {
+        "questionId": 75,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 996,
+        "failsafe": 0,
+        "optimal": 40
+      }
+    },
+    {
+      "id": "Numeric-004C",
+      "beginAddress": "0x0000EAA4",
+      "endAddress": "0x0000EADA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 76,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 993,
+        "failsafe": 0,
+        "optimal": 40
+      }
+    },
+    {
+      "id": "Numeric-004D",
+      "beginAddress": "0x0000EAEC",
+      "endAddress": "0x0000EB22",
+      "type": "Numeric",
+      "question": {
+        "questionId": 77,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 997,
+        "failsafe": 0,
+        "optimal": 100
+      }
+    },
+    {
+      "id": "Numeric-004E",
+      "beginAddress": "0x0000EB34",
+      "endAddress": "0x0000EB6A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 78,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 994,
+        "failsafe": 0,
+        "optimal": 60
+      }
+    },
+    {
+      "id": "Numeric-004F",
+      "beginAddress": "0x0000EB7C",
+      "endAddress": "0x0000EBB2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 79,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 998,
+        "failsafe": 0,
+        "optimal": 144
+      }
+    },
+    {
+      "id": "Numeric-0050",
+      "beginAddress": "0x0000EBC4",
+      "endAddress": "0x0000EBFA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 80,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 995,
+        "failsafe": 0,
+        "optimal": 80
+      }
+    },
+    {
+      "id": "Numeric-0051",
+      "beginAddress": "0x0000EC0C",
+      "endAddress": "0x0000EC42",
+      "type": "Numeric",
+      "question": {
+        "questionId": 81,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 999,
+        "failsafe": 0,
+        "optimal": 180
+      }
+    },
+    {
+      "id": "Numeric-0052",
+      "beginAddress": "0x0000EC54",
+      "endAddress": "0x0000EC8A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 82,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1004,
+        "promptStringId": 1001,
+        "failsafe": 0,
+        "optimal": 100
+      }
+    },
+    {
+      "id": "OneOf-0053",
+      "beginAddress": "0x0000ECDC",
+      "endAddress": "0x0000ED12",
+      "type": "OneOf",
+      "question": {
+        "questionId": 83,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 986,
+        "promptStringId": 985,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0054",
+      "beginAddress": "0x0000ED24",
+      "endAddress": "0x0000ED5A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 84,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 990,
+        "promptStringId": 989,
+        "failsafe": 0,
+        "optimal": 255
+      }
+    },
+    {
+      "id": "Numeric-0055",
+      "beginAddress": "0x0000ED6C",
+      "endAddress": "0x0000EDA2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 85,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 992,
+        "failsafe": 0,
+        "optimal": 20
+      }
+    },
+    {
+      "id": "Numeric-0056",
+      "beginAddress": "0x0000EDB4",
+      "endAddress": "0x0000EDEA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 86,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 996,
+        "failsafe": 0,
+        "optimal": 40
+      }
+    },
+    {
+      "id": "Numeric-0057",
+      "beginAddress": "0x0000EDFC",
+      "endAddress": "0x0000EE32",
+      "type": "Numeric",
+      "question": {
+        "questionId": 87,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 993,
+        "failsafe": 0,
+        "optimal": 40
+      }
+    },
+    {
+      "id": "Numeric-0058",
+      "beginAddress": "0x0000EE44",
+      "endAddress": "0x0000EE7A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 88,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 997,
+        "failsafe": 0,
+        "optimal": 100
+      }
+    },
+    {
+      "id": "Numeric-0059",
+      "beginAddress": "0x0000EE8C",
+      "endAddress": "0x0000EEC2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 89,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 994,
+        "failsafe": 0,
+        "optimal": 60
+      }
+    },
+    {
+      "id": "Numeric-005A",
+      "beginAddress": "0x0000EED4",
+      "endAddress": "0x0000EF0A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 90,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 998,
+        "failsafe": 0,
+        "optimal": 144
+      }
+    },
+    {
+      "id": "Numeric-005B",
+      "beginAddress": "0x0000EF1C",
+      "endAddress": "0x0000EF52",
+      "type": "Numeric",
+      "question": {
+        "questionId": 91,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 995,
+        "failsafe": 0,
+        "optimal": 80
+      }
+    },
+    {
+      "id": "Numeric-005C",
+      "beginAddress": "0x0000EF64",
+      "endAddress": "0x0000EF9A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 92,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 991,
+        "promptStringId": 999,
+        "failsafe": 0,
+        "optimal": 180
+      }
+    },
+    {
+      "id": "Numeric-005D",
+      "beginAddress": "0x0000EFAC",
+      "endAddress": "0x0000EFE2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 93,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1005,
+        "promptStringId": 1002,
+        "failsafe": 0,
+        "optimal": 100
+      }
+    },
+    {
+      "id": "Ref-005E",
+      "beginAddress": "0x0000F074",
+      "endAddress": "0x0000F0AA",
+      "type": "Ref",
+      "question": {
+        "questionId": 94,
+        "pageId": 14,
+        "accessLevel": 1,
+        "helpStringId": 1047,
+        "promptStringId": 1046,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-005F",
+      "beginAddress": "0x0000F534",
+      "endAddress": "0x0000F56A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 95,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1049,
+        "promptStringId": 1048,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0060",
+      "beginAddress": "0x0000F57C",
+      "endAddress": "0x0000F5B2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 96,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1057,
+        "promptStringId": 1056,
+        "failsafe": 0,
+        "optimal": 255
+      }
+    },
+    {
+      "id": "Numeric-0061",
+      "beginAddress": "0x0000F5C4",
+      "endAddress": "0x0000F5FA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 97,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1059,
+        "failsafe": 0,
+        "optimal": 20
+      }
+    },
+    {
+      "id": "Numeric-0062",
+      "beginAddress": "0x0000F60C",
+      "endAddress": "0x0000F642",
+      "type": "Numeric",
+      "question": {
+        "questionId": 98,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1063,
+        "failsafe": 0,
+        "optimal": 120
+      }
+    },
+    {
+      "id": "Numeric-0063",
+      "beginAddress": "0x0000F654",
+      "endAddress": "0x0000F68A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 99,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1079,
+        "promptStringId": 1073,
+        "failsafe": 0,
+        "optimal": 40
+      }
+    },
+    {
+      "id": "Numeric-0064",
+      "beginAddress": "0x0000F69C",
+      "endAddress": "0x0000F6D2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 100,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1079,
+        "promptStringId": 1076,
+        "failsafe": 0,
+        "optimal": 160
+      }
+    },
+    {
+      "id": "Numeric-0065",
+      "beginAddress": "0x0000F6E4",
+      "endAddress": "0x0000F71A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 101,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1079,
+        "promptStringId": 1074,
+        "failsafe": 0,
+        "optimal": 70
+      }
+    },
+    {
+      "id": "Numeric-0066",
+      "beginAddress": "0x0000F72C",
+      "endAddress": "0x0000F762",
+      "type": "Numeric",
+      "question": {
+        "questionId": 102,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1079,
+        "promptStringId": 1077,
+        "failsafe": 0,
+        "optimal": 192
+      }
+    },
+    {
+      "id": "Numeric-0067",
+      "beginAddress": "0x0000F774",
+      "endAddress": "0x0000F7AA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 103,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1079,
+        "promptStringId": 1075,
+        "failsafe": 0,
+        "optimal": 80
+      }
+    },
+    {
+      "id": "Numeric-0068",
+      "beginAddress": "0x0000F7BC",
+      "endAddress": "0x0000F7F2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 104,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1079,
+        "promptStringId": 1078,
+        "failsafe": 0,
+        "optimal": 255
+      }
+    },
+    {
+      "id": "Numeric-0069",
+      "beginAddress": "0x0000F804",
+      "endAddress": "0x0000F83A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 105,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1070,
+        "promptStringId": 1067,
+        "failsafe": 0,
+        "optimal": 85
+      }
+    },
+    {
+      "id": "OneOf-006A",
+      "beginAddress": "0x0000F88C",
+      "endAddress": "0x0000F8C2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 106,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1051,
+        "promptStringId": 1050,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-006B",
+      "beginAddress": "0x0000F8D4",
+      "endAddress": "0x0000F90A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 107,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1057,
+        "promptStringId": 1056,
+        "failsafe": 0,
+        "optimal": 255
+      }
+    },
+    {
+      "id": "Numeric-006C",
+      "beginAddress": "0x0000F91C",
+      "endAddress": "0x0000F952",
+      "type": "Numeric",
+      "question": {
+        "questionId": 108,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1059,
+        "failsafe": 0,
+        "optimal": 20
+      }
+    },
+    {
+      "id": "Numeric-006D",
+      "beginAddress": "0x0000F964",
+      "endAddress": "0x0000F99A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 109,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1063,
+        "failsafe": 0,
+        "optimal": 40
+      }
+    },
+    {
+      "id": "Numeric-006E",
+      "beginAddress": "0x0000F9AC",
+      "endAddress": "0x0000F9E2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 110,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1060,
+        "failsafe": 0,
+        "optimal": 40
+      }
+    },
+    {
+      "id": "Numeric-006F",
+      "beginAddress": "0x0000F9F4",
+      "endAddress": "0x0000FA2A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 111,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1064,
+        "failsafe": 0,
+        "optimal": 100
+      }
+    },
+    {
+      "id": "Numeric-0070",
+      "beginAddress": "0x0000FA3C",
+      "endAddress": "0x0000FA72",
+      "type": "Numeric",
+      "question": {
+        "questionId": 112,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1061,
+        "failsafe": 0,
+        "optimal": 60
+      }
+    },
+    {
+      "id": "Numeric-0071",
+      "beginAddress": "0x0000FA84",
+      "endAddress": "0x0000FABA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 113,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1065,
+        "failsafe": 0,
+        "optimal": 144
+      }
+    },
+    {
+      "id": "Numeric-0072",
+      "beginAddress": "0x0000FACC",
+      "endAddress": "0x0000FB02",
+      "type": "Numeric",
+      "question": {
+        "questionId": 114,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1062,
+        "failsafe": 0,
+        "optimal": 80
+      }
+    },
+    {
+      "id": "Numeric-0073",
+      "beginAddress": "0x0000FB14",
+      "endAddress": "0x0000FB4A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 115,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1066,
+        "failsafe": 0,
+        "optimal": 180
+      }
+    },
+    {
+      "id": "Numeric-0074",
+      "beginAddress": "0x0000FB5C",
+      "endAddress": "0x0000FB92",
+      "type": "Numeric",
+      "question": {
+        "questionId": 116,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1071,
+        "promptStringId": 1068,
+        "failsafe": 0,
+        "optimal": 100
+      }
+    },
+    {
+      "id": "OneOf-0075",
+      "beginAddress": "0x0000FBE4",
+      "endAddress": "0x0000FC1A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 117,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1053,
+        "promptStringId": 1052,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0076",
+      "beginAddress": "0x0000FC2C",
+      "endAddress": "0x0000FC62",
+      "type": "Numeric",
+      "question": {
+        "questionId": 118,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1057,
+        "promptStringId": 1056,
+        "failsafe": 0,
+        "optimal": 255
+      }
+    },
+    {
+      "id": "Numeric-0077",
+      "beginAddress": "0x0000FC74",
+      "endAddress": "0x0000FCAA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 119,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1059,
+        "failsafe": 0,
+        "optimal": 20
+      }
+    },
+    {
+      "id": "Numeric-0078",
+      "beginAddress": "0x0000FCBC",
+      "endAddress": "0x0000FCF2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 120,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1063,
+        "failsafe": 0,
+        "optimal": 40
+      }
+    },
+    {
+      "id": "Numeric-0079",
+      "beginAddress": "0x0000FD04",
+      "endAddress": "0x0000FD3A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 121,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1060,
+        "failsafe": 0,
+        "optimal": 40
+      }
+    },
+    {
+      "id": "Numeric-007A",
+      "beginAddress": "0x0000FD4C",
+      "endAddress": "0x0000FD82",
+      "type": "Numeric",
+      "question": {
+        "questionId": 122,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1064,
+        "failsafe": 0,
+        "optimal": 100
+      }
+    },
+    {
+      "id": "Numeric-007B",
+      "beginAddress": "0x0000FD94",
+      "endAddress": "0x0000FDCA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 123,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1061,
+        "failsafe": 0,
+        "optimal": 60
+      }
+    },
+    {
+      "id": "Numeric-007C",
+      "beginAddress": "0x0000FDDC",
+      "endAddress": "0x0000FE12",
+      "type": "Numeric",
+      "question": {
+        "questionId": 124,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1065,
+        "failsafe": 0,
+        "optimal": 144
+      }
+    },
+    {
+      "id": "Numeric-007D",
+      "beginAddress": "0x0000FE24",
+      "endAddress": "0x0000FE5A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 125,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1062,
+        "failsafe": 0,
+        "optimal": 80
+      }
+    },
+    {
+      "id": "Numeric-007E",
+      "beginAddress": "0x0000FE6C",
+      "endAddress": "0x0000FEA2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 126,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1058,
+        "promptStringId": 1066,
+        "failsafe": 0,
+        "optimal": 180
+      }
+    },
+    {
+      "id": "Numeric-007F",
+      "beginAddress": "0x0000FEB4",
+      "endAddress": "0x0000FEEA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 127,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1072,
+        "promptStringId": 1069,
+        "failsafe": 0,
+        "optimal": 100
+      }
+    },
+    {
+      "id": "Ref-0080",
+      "beginAddress": "0x0000FFBC",
+      "endAddress": "0x0000FFF2",
+      "type": "Ref",
+      "question": {
+        "questionId": 128,
+        "pageId": 16,
+        "accessLevel": 1,
+        "helpStringId": 185,
+        "promptStringId": 184,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "CheckBox-0081",
+      "beginAddress": "0x0001007C",
+      "endAddress": "0x000100B2",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 129,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 204,
+        "promptStringId": 192,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-0082",
+      "beginAddress": "0x0001014C",
+      "endAddress": "0x00010182",
+      "type": "OneOf",
+      "question": {
+        "questionId": 130,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 252,
+        "promptStringId": 260,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0083",
+      "beginAddress": "0x0001019C",
+      "endAddress": "0x000101D2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 131,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1362,
+        "promptStringId": 1361,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "CheckBox-0084",
+      "beginAddress": "0x000101E4",
+      "endAddress": "0x0001021A",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 132,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1367,
+        "promptStringId": 1366,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0085",
+      "beginAddress": "0x000102A4",
+      "endAddress": "0x000102DA",
+      "type": "Ref",
+      "question": {
+        "questionId": 133,
+        "pageId": 18,
+        "accessLevel": 1,
+        "helpStringId": 1382,
+        "promptStringId": 1381,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0086",
+      "beginAddress": "0x000102E4",
+      "endAddress": "0x0001031A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 134,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1439,
+        "promptStringId": 1438,
+        "failsafe": 0,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-0087",
+      "beginAddress": "0x0001066C",
+      "endAddress": "0x000106A2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 135,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1385,
+        "promptStringId": 1383,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0088",
+      "beginAddress": "0x000106B4",
+      "endAddress": "0x000106EA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 136,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1390,
+        "promptStringId": 1388,
+        "failsafe": 0,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-0089",
+      "beginAddress": "0x000106FC",
+      "endAddress": "0x00010732",
+      "type": "OneOf",
+      "question": {
+        "questionId": 137,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1396,
+        "promptStringId": 1395,
+        "failsafe": 0,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "Numeric-008A",
+      "beginAddress": "0x00010744",
+      "endAddress": "0x0001077A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 138,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1406,
+        "promptStringId": 1405,
+        "failsafe": 0,
+        "optimal": 85
+      }
+    },
+    {
+      "id": "Numeric-008B",
+      "beginAddress": "0x0001078C",
+      "endAddress": "0x000107C2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 139,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1408,
+        "promptStringId": 1407,
+        "failsafe": 0,
+        "optimal": 70
+      }
+    },
+    {
+      "id": "Numeric-008C",
+      "beginAddress": "0x000107D4",
+      "endAddress": "0x0001080A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 140,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1410,
+        "promptStringId": 1409,
+        "failsafe": 0,
+        "optimal": 55
+      }
+    },
+    {
+      "id": "Numeric-008D",
+      "beginAddress": "0x0001081C",
+      "endAddress": "0x00010852",
+      "type": "Numeric",
+      "question": {
+        "questionId": 141,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1412,
+        "promptStringId": 1411,
+        "failsafe": 0,
+        "optimal": 40
+      }
+    },
+    {
+      "id": "Numeric-008E",
+      "beginAddress": "0x00010864",
+      "endAddress": "0x0001089A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 142,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1431,
+        "promptStringId": 1425,
+        "failsafe": 0,
+        "optimal": 100
+      }
+    },
+    {
+      "id": "Numeric-008F",
+      "beginAddress": "0x000108AC",
+      "endAddress": "0x000108E2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 143,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1431,
+        "promptStringId": 1421,
+        "failsafe": 0,
+        "optimal": 85
+      }
+    },
+    {
+      "id": "Numeric-0090",
+      "beginAddress": "0x000108F4",
+      "endAddress": "0x0001092A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 144,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1431,
+        "promptStringId": 1422,
+        "failsafe": 0,
+        "optimal": 70
+      }
+    },
+    {
+      "id": "Numeric-0091",
+      "beginAddress": "0x0001093C",
+      "endAddress": "0x00010972",
+      "type": "Numeric",
+      "question": {
+        "questionId": 145,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1431,
+        "promptStringId": 1423,
+        "failsafe": 0,
+        "optimal": 55
+      }
+    },
+    {
+      "id": "Numeric-0092",
+      "beginAddress": "0x00010984",
+      "endAddress": "0x000109BA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 146,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1431,
+        "promptStringId": 1424,
+        "failsafe": 0,
+        "optimal": 40
+      }
+    },
+    {
+      "id": "Numeric-0093",
+      "beginAddress": "0x000109CC",
+      "endAddress": "0x00010A02",
+      "type": "Numeric",
+      "question": {
+        "questionId": 147,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1436,
+        "promptStringId": 1432,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0094",
+      "beginAddress": "0x00010A14",
+      "endAddress": "0x00010A4A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 148,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1437,
+        "promptStringId": 1433,
+        "failsafe": 0,
+        "optimal": 50
+      }
+    },
+    {
+      "id": "OneOf-0095",
+      "beginAddress": "0x00010A9C",
+      "endAddress": "0x00010AD2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 149,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1385,
+        "promptStringId": 1384,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0096",
+      "beginAddress": "0x00010AE4",
+      "endAddress": "0x00010B1A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 150,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1390,
+        "promptStringId": 1389,
+        "failsafe": 0,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-0097",
+      "beginAddress": "0x00010B2C",
+      "endAddress": "0x00010B62",
+      "type": "OneOf",
+      "question": {
+        "questionId": 151,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1398,
+        "promptStringId": 1397,
+        "failsafe": 0,
+        "optimal": 2
+      }
+    },
+    {
+      "id": "Numeric-0098",
+      "beginAddress": "0x00010B74",
+      "endAddress": "0x00010BAA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 152,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1414,
+        "promptStringId": 1413,
+        "failsafe": 0,
+        "optimal": 85
+      }
+    },
+    {
+      "id": "Numeric-0099",
+      "beginAddress": "0x00010BBC",
+      "endAddress": "0x00010BF2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 153,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1416,
+        "promptStringId": 1415,
+        "failsafe": 0,
+        "optimal": 70
+      }
+    },
+    {
+      "id": "Numeric-009A",
+      "beginAddress": "0x00010C04",
+      "endAddress": "0x00010C3A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 154,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1418,
+        "promptStringId": 1417,
+        "failsafe": 0,
+        "optimal": 55
+      }
+    },
+    {
+      "id": "Numeric-009B",
+      "beginAddress": "0x00010C4C",
+      "endAddress": "0x00010C82",
+      "type": "Numeric",
+      "question": {
+        "questionId": 155,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1420,
+        "promptStringId": 1419,
+        "failsafe": 0,
+        "optimal": 40
+      }
+    },
+    {
+      "id": "Numeric-009C",
+      "beginAddress": "0x00010C94",
+      "endAddress": "0x00010CCA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 156,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1431,
+        "promptStringId": 1430,
+        "failsafe": 0,
+        "optimal": 100
+      }
+    },
+    {
+      "id": "Numeric-009D",
+      "beginAddress": "0x00010CDC",
+      "endAddress": "0x00010D12",
+      "type": "Numeric",
+      "question": {
+        "questionId": 157,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1431,
+        "promptStringId": 1426,
+        "failsafe": 0,
+        "optimal": 85
+      }
+    },
+    {
+      "id": "Numeric-009E",
+      "beginAddress": "0x00010D24",
+      "endAddress": "0x00010D5A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 158,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1431,
+        "promptStringId": 1427,
+        "failsafe": 0,
+        "optimal": 70
+      }
+    },
+    {
+      "id": "Numeric-009F",
+      "beginAddress": "0x00010D6C",
+      "endAddress": "0x00010DA2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 159,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1431,
+        "promptStringId": 1428,
+        "failsafe": 0,
+        "optimal": 55
+      }
+    },
+    {
+      "id": "Numeric-00A0",
+      "beginAddress": "0x00010DB4",
+      "endAddress": "0x00010DEA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 160,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1431,
+        "promptStringId": 1429,
+        "failsafe": 0,
+        "optimal": 40
+      }
+    },
+    {
+      "id": "Numeric-00A1",
+      "beginAddress": "0x00010DFC",
+      "endAddress": "0x00010E32",
+      "type": "Numeric",
+      "question": {
+        "questionId": 161,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1436,
+        "promptStringId": 1434,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-00A2",
+      "beginAddress": "0x00010E44",
+      "endAddress": "0x00010E7A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 162,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1437,
+        "promptStringId": 1435,
+        "failsafe": 0,
+        "optimal": 50
+      }
+    },
+    {
+      "id": "OneOf-00A3",
+      "beginAddress": "0x00010E8C",
+      "endAddress": "0x00010EC2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 163,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 137,
+        "promptStringId": 136,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "CheckBox-00A4",
+      "beginAddress": "0x00010F9C",
+      "endAddress": "0x00010FD2",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 164,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 545,
+        "promptStringId": 531,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-00A5",
+      "beginAddress": "0x00010FEC",
+      "endAddress": "0x00011022",
+      "type": "Ref",
+      "question": {
+        "questionId": 165,
+        "pageId": 25,
+        "accessLevel": 1,
+        "helpStringId": 527,
+        "promptStringId": 526,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-00A6",
+      "beginAddress": "0x000110AC",
+      "endAddress": "0x000110E2",
+      "type": "Ref",
+      "question": {
+        "questionId": 166,
+        "pageId": 22,
+        "accessLevel": 1,
+        "helpStringId": 761,
+        "promptStringId": 761,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "CheckBox-00A7",
+      "beginAddress": "0x0001112C",
+      "endAddress": "0x00011162",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 167,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 545,
+        "promptStringId": 544,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-00A8",
+      "beginAddress": "0x0001117C",
+      "endAddress": "0x000111B2",
+      "type": "Ref",
+      "question": {
+        "questionId": 168,
+        "pageId": 21,
+        "accessLevel": 1,
+        "helpStringId": 527,
+        "promptStringId": 526,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00A9",
+      "beginAddress": "0x000111BC",
+      "endAddress": "0x000111F2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 169,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 680,
+        "promptStringId": 679,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00AA",
+      "beginAddress": "0x00011204",
+      "endAddress": "0x0001123A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 170,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 681,
+        "promptStringId": 563,
+        "failsafe": 2,
+        "optimal": 2
+      }
+    },
+    {
+      "id": "OneOf-00AB",
+      "beginAddress": "0x00011254",
+      "endAddress": "0x0001128A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 171,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 598,
+        "promptStringId": 583,
+        "failsafe": 7,
+        "optimal": 7
+      }
+    },
+    {
+      "id": "OneOf-00AC",
+      "beginAddress": "0x000112A4",
+      "endAddress": "0x000112DA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 172,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 673,
+        "promptStringId": 658,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00AD",
+      "beginAddress": "0x00011434",
+      "endAddress": "0x0001146A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 173,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 763,
+        "promptStringId": 762,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00AE",
+      "beginAddress": "0x0001147C",
+      "endAddress": "0x000114B2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 174,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 698,
+        "promptStringId": 697,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00AF",
+      "beginAddress": "0x000114CC",
+      "endAddress": "0x00011502",
+      "type": "OneOf",
+      "question": {
+        "questionId": 175,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 757,
+        "promptStringId": 756,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "CheckBox-00B0",
+      "beginAddress": "0x0001151C",
+      "endAddress": "0x00011552",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 176,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 755,
+        "promptStringId": 754,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00B1",
+      "beginAddress": "0x0001162C",
+      "endAddress": "0x00011662",
+      "type": "OneOf",
+      "question": {
+        "questionId": 177,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 578,
+        "promptStringId": 564,
+        "failsafe": 3,
+        "optimal": 3
+      }
+    },
+    {
+      "id": "OneOf-00B2",
+      "beginAddress": "0x0001167C",
+      "endAddress": "0x000116B2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 178,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 598,
+        "promptStringId": 584,
+        "failsafe": 7,
+        "optimal": 7
+      }
+    },
+    {
+      "id": "OneOf-00B3",
+      "beginAddress": "0x000116CC",
+      "endAddress": "0x00011702",
+      "type": "OneOf",
+      "question": {
+        "questionId": 179,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 619,
+        "promptStringId": 605,
+        "failsafe": 8,
+        "optimal": 8
+      }
+    },
+    {
+      "id": "OneOf-00B4",
+      "beginAddress": "0x0001171C",
+      "endAddress": "0x00011752",
+      "type": "OneOf",
+      "question": {
+        "questionId": 180,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 637,
+        "promptStringId": 623,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00B5",
+      "beginAddress": "0x0001176C",
+      "endAddress": "0x000117A2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 181,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 657,
+        "promptStringId": 643,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00B6",
+      "beginAddress": "0x000117BC",
+      "endAddress": "0x000117F2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 182,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 673,
+        "promptStringId": 659,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "CheckBox-00B7",
+      "beginAddress": "0x0001180C",
+      "endAddress": "0x00011842",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 183,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 715,
+        "promptStringId": 701,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "CheckBox-00B8",
+      "beginAddress": "0x0001185C",
+      "endAddress": "0x00011892",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 184,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 730,
+        "promptStringId": 716,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "CheckBox-00B9",
+      "beginAddress": "0x000118AC",
+      "endAddress": "0x000118E2",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 185,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 696,
+        "promptStringId": 682,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00BA",
+      "beginAddress": "0x000118FC",
+      "endAddress": "0x00011932",
+      "type": "OneOf",
+      "question": {
+        "questionId": 186,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 748,
+        "promptStringId": 734,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00BB",
+      "beginAddress": "0x00011A4C",
+      "endAddress": "0x00011A82",
+      "type": "OneOf",
+      "question": {
+        "questionId": 187,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 578,
+        "promptStringId": 565,
+        "failsafe": 3,
+        "optimal": 3
+      }
+    },
+    {
+      "id": "OneOf-00BC",
+      "beginAddress": "0x00011A9C",
+      "endAddress": "0x00011AD2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 188,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 598,
+        "promptStringId": 585,
+        "failsafe": 7,
+        "optimal": 7
+      }
+    },
+    {
+      "id": "OneOf-00BD",
+      "beginAddress": "0x00011AEC",
+      "endAddress": "0x00011B22",
+      "type": "OneOf",
+      "question": {
+        "questionId": 189,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 619,
+        "promptStringId": 606,
+        "failsafe": 8,
+        "optimal": 8
+      }
+    },
+    {
+      "id": "OneOf-00BE",
+      "beginAddress": "0x00011B3C",
+      "endAddress": "0x00011B72",
+      "type": "OneOf",
+      "question": {
+        "questionId": 190,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 637,
+        "promptStringId": 624,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00BF",
+      "beginAddress": "0x00011B8C",
+      "endAddress": "0x00011BC2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 191,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 657,
+        "promptStringId": 644,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00C0",
+      "beginAddress": "0x00011BDC",
+      "endAddress": "0x00011C12",
+      "type": "OneOf",
+      "question": {
+        "questionId": 192,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 673,
+        "promptStringId": 660,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "CheckBox-00C1",
+      "beginAddress": "0x00011C2C",
+      "endAddress": "0x00011C62",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 193,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 715,
+        "promptStringId": 702,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "CheckBox-00C2",
+      "beginAddress": "0x00011C7C",
+      "endAddress": "0x00011CB2",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 194,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 730,
+        "promptStringId": 717,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "CheckBox-00C3",
+      "beginAddress": "0x00011CCC",
+      "endAddress": "0x00011D02",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 195,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 696,
+        "promptStringId": 683,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00C4",
+      "beginAddress": "0x00011D1C",
+      "endAddress": "0x00011D52",
+      "type": "OneOf",
+      "question": {
+        "questionId": 196,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 748,
+        "promptStringId": 735,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00C5",
+      "beginAddress": "0x00011E6C",
+      "endAddress": "0x00011EA2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 197,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 578,
+        "promptStringId": 566,
+        "failsafe": 3,
+        "optimal": 3
+      }
+    },
+    {
+      "id": "OneOf-00C6",
+      "beginAddress": "0x00011EBC",
+      "endAddress": "0x00011EF2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 198,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 598,
+        "promptStringId": 586,
+        "failsafe": 7,
+        "optimal": 7
+      }
+    },
+    {
+      "id": "OneOf-00C7",
+      "beginAddress": "0x00011F0C",
+      "endAddress": "0x00011F42",
+      "type": "OneOf",
+      "question": {
+        "questionId": 199,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 619,
+        "promptStringId": 607,
+        "failsafe": 8,
+        "optimal": 8
+      }
+    },
+    {
+      "id": "OneOf-00C8",
+      "beginAddress": "0x00011F5C",
+      "endAddress": "0x00011F92",
+      "type": "OneOf",
+      "question": {
+        "questionId": 200,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 637,
+        "promptStringId": 625,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00C9",
+      "beginAddress": "0x00011FAC",
+      "endAddress": "0x00011FE2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 201,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 657,
+        "promptStringId": 645,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00CA",
+      "beginAddress": "0x00011FFC",
+      "endAddress": "0x00012032",
+      "type": "OneOf",
+      "question": {
+        "questionId": 202,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 673,
+        "promptStringId": 661,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "CheckBox-00CB",
+      "beginAddress": "0x0001204C",
+      "endAddress": "0x00012082",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 203,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 715,
+        "promptStringId": 703,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "CheckBox-00CC",
+      "beginAddress": "0x0001209C",
+      "endAddress": "0x000120D2",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 204,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 730,
+        "promptStringId": 718,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "CheckBox-00CD",
+      "beginAddress": "0x000120EC",
+      "endAddress": "0x00012122",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 205,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 696,
+        "promptStringId": 684,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00CE",
+      "beginAddress": "0x0001213C",
+      "endAddress": "0x00012172",
+      "type": "OneOf",
+      "question": {
+        "questionId": 206,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 748,
+        "promptStringId": 736,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "CheckBox-00CF",
+      "beginAddress": "0x0001224C",
+      "endAddress": "0x00012282",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 207,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 176,
+        "promptStringId": 175,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00D0",
+      "beginAddress": "0x00012354",
+      "endAddress": "0x0001238A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 208,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 388,
+        "promptStringId": 386,
+        "failsafe": 32,
+        "optimal": 32
+      }
+    },
+    {
+      "id": "OneOf-00D1",
+      "beginAddress": "0x0001239C",
+      "endAddress": "0x000123D2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 209,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 388,
+        "promptStringId": 387,
+        "failsafe": 64,
+        "optimal": 64
+      }
+    },
+    {
+      "id": "OneOf-00D2",
+      "beginAddress": "0x000123E4",
+      "endAddress": "0x0001241A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 210,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 395,
+        "promptStringId": 394,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00D3",
+      "beginAddress": "0x00012434",
+      "endAddress": "0x0001246A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 211,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 397,
+        "promptStringId": 396,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00D4",
+      "beginAddress": "0x00012484",
+      "endAddress": "0x000124BA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 212,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 399,
+        "promptStringId": 398,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00D5",
+      "beginAddress": "0x000124D4",
+      "endAddress": "0x0001250A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 213,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 401,
+        "promptStringId": 400,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00D6",
+      "beginAddress": "0x00012524",
+      "endAddress": "0x0001255A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 214,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 403,
+        "promptStringId": 402,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00D7",
+      "beginAddress": "0x00012574",
+      "endAddress": "0x000125AA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 215,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 405,
+        "promptStringId": 404,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00D8",
+      "beginAddress": "0x000125C4",
+      "endAddress": "0x000125FA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 216,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 407,
+        "promptStringId": 406,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-00D9",
+      "beginAddress": "0x00012654",
+      "endAddress": "0x0001268A",
+      "type": "Ref",
+      "question": {
+        "questionId": 217,
+        "pageId": 28,
+        "accessLevel": 1,
+        "helpStringId": 384,
+        "promptStringId": 378,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-00DA",
+      "beginAddress": "0x000126D4",
+      "endAddress": "0x0001270A",
+      "type": "Ref",
+      "question": {
+        "questionId": 218,
+        "pageId": 29,
+        "accessLevel": 1,
+        "helpStringId": 385,
+        "promptStringId": 379,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00DB",
+      "beginAddress": "0x00012754",
+      "endAddress": "0x0001278A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 219,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 417,
+        "promptStringId": 416,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00DC",
+      "beginAddress": "0x000127A4",
+      "endAddress": "0x000127DA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 220,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 438,
+        "promptStringId": 437,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00DD",
+      "beginAddress": "0x000127F4",
+      "endAddress": "0x0001282A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 221,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 419,
+        "promptStringId": 418,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00DE",
+      "beginAddress": "0x00012844",
+      "endAddress": "0x0001287A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 222,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 421,
+        "promptStringId": 420,
+        "failsafe": 55,
+        "optimal": 55
+      }
+    },
+    {
+      "id": "OneOf-00DF",
+      "beginAddress": "0x0001288C",
+      "endAddress": "0x000128C2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 223,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 423,
+        "promptStringId": 422,
+        "failsafe": 55,
+        "optimal": 55
+      }
+    },
+    {
+      "id": "OneOf-00E0",
+      "beginAddress": "0x00012954",
+      "endAddress": "0x0001298A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 224,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 431,
+        "promptStringId": 430,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00E1",
+      "beginAddress": "0x00012A1C",
+      "endAddress": "0x00012A52",
+      "type": "OneOf",
+      "question": {
+        "questionId": 225,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 436,
+        "promptStringId": 435,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00E2",
+      "beginAddress": "0x00012AAC",
+      "endAddress": "0x00012AE2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 226,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 480,
+        "promptStringId": 479,
+        "failsafe": 5,
+        "optimal": 5
+      }
+    },
+    {
+      "id": "Numeric-00E3",
+      "beginAddress": "0x00012AF4",
+      "endAddress": "0x00012B2A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 227,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 482,
+        "promptStringId": 481,
+        "failsafe": 232,
+        "optimal": 3
+      }
+    },
+    {
+      "id": "OneOf-00E4",
+      "beginAddress": "0x00012B44",
+      "endAddress": "0x00012B7A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 228,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 520,
+        "promptStringId": 519,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00E5",
+      "beginAddress": "0x00012B94",
+      "endAddress": "0x00012BCA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 229,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 484,
+        "promptStringId": 483,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00E6",
+      "beginAddress": "0x00012C1C",
+      "endAddress": "0x00012C52",
+      "type": "OneOf",
+      "question": {
+        "questionId": 230,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 486,
+        "promptStringId": 485,
+        "failsafe": 255,
+        "optimal": 255
+      }
+    },
+    {
+      "id": "OneOf-00E7",
+      "beginAddress": "0x00012C64",
+      "endAddress": "0x00012C9A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 231,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 489,
+        "promptStringId": 488,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00E8",
+      "beginAddress": "0x00012CB4",
+      "endAddress": "0x00012CEA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 232,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 491,
+        "promptStringId": 490,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00E9",
+      "beginAddress": "0x00012D04",
+      "endAddress": "0x00012D3A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 233,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 493,
+        "promptStringId": 492,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00EA",
+      "beginAddress": "0x00012D54",
+      "endAddress": "0x00012D8A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 234,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 495,
+        "promptStringId": 494,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00EB",
+      "beginAddress": "0x00012DA4",
+      "endAddress": "0x00012DDA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 235,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 497,
+        "promptStringId": 496,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00EC",
+      "beginAddress": "0x00012DF4",
+      "endAddress": "0x00012E2A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 236,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 499,
+        "promptStringId": 498,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00ED",
+      "beginAddress": "0x00012E44",
+      "endAddress": "0x00012E7A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 237,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 501,
+        "promptStringId": 500,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00EE",
+      "beginAddress": "0x00012F14",
+      "endAddress": "0x00012F4A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 238,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 503,
+        "promptStringId": 502,
+        "failsafe": 55,
+        "optimal": 55
+      }
+    },
+    {
+      "id": "OneOf-00EF",
+      "beginAddress": "0x00012F5C",
+      "endAddress": "0x00012F92",
+      "type": "OneOf",
+      "question": {
+        "questionId": 239,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 516,
+        "promptStringId": 515,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00F0",
+      "beginAddress": "0x00012FAC",
+      "endAddress": "0x00012FE2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 240,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 510,
+        "promptStringId": 509,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00F1",
+      "beginAddress": "0x00012FFC",
+      "endAddress": "0x00013032",
+      "type": "OneOf",
+      "question": {
+        "questionId": 241,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 512,
+        "promptStringId": 511,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00F2",
+      "beginAddress": "0x0001304C",
+      "endAddress": "0x00013082",
+      "type": "OneOf",
+      "question": {
+        "questionId": 242,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 514,
+        "promptStringId": 513,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00F3",
+      "beginAddress": "0x000132DC",
+      "endAddress": "0x00013312",
+      "type": "OneOf",
+      "question": {
+        "questionId": 243,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 767,
+        "promptStringId": 766,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00F4",
+      "beginAddress": "0x00013324",
+      "endAddress": "0x0001335A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 244,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 779,
+        "promptStringId": 778,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00F5",
+      "beginAddress": "0x0001336C",
+      "endAddress": "0x000133A2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 245,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 812,
+        "promptStringId": 811,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00F6",
+      "beginAddress": "0x000133B4",
+      "endAddress": "0x000133EA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 246,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 769,
+        "promptStringId": 768,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00F7",
+      "beginAddress": "0x000133FC",
+      "endAddress": "0x00013432",
+      "type": "OneOf",
+      "question": {
+        "questionId": 247,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 782,
+        "promptStringId": 781,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00F8",
+      "beginAddress": "0x0001344C",
+      "endAddress": "0x00013482",
+      "type": "OneOf",
+      "question": {
+        "questionId": 248,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 784,
+        "promptStringId": 783,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-00F9",
+      "beginAddress": "0x00013494",
+      "endAddress": "0x000134CA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 249,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 816,
+        "promptStringId": 815,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00FA",
+      "beginAddress": "0x000134DC",
+      "endAddress": "0x00013512",
+      "type": "OneOf",
+      "question": {
+        "questionId": 250,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 810,
+        "promptStringId": 809,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00FB",
+      "beginAddress": "0x000135AC",
+      "endAddress": "0x000135E2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 251,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 797,
+        "promptStringId": 796,
+        "failsafe": 20,
+        "optimal": 20
+      }
+    },
+    {
+      "id": "OneOf-00FC",
+      "beginAddress": "0x000135F4",
+      "endAddress": "0x0001362A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 252,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 795,
+        "promptStringId": 794,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-00FD",
+      "beginAddress": "0x0001363C",
+      "endAddress": "0x00013672",
+      "type": "OneOf",
+      "question": {
+        "questionId": 253,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 799,
+        "promptStringId": 798,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-00FE",
+      "beginAddress": "0x00013684",
+      "endAddress": "0x000136BA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 254,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 802,
+        "promptStringId": 801,
+        "failsafe": 5,
+        "optimal": 5
+      }
+    },
+    {
+      "id": "OneOf-00FF",
+      "beginAddress": "0x00013754",
+      "endAddress": "0x0001378A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 255,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 823,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0100",
+      "beginAddress": "0x0001379C",
+      "endAddress": "0x000137D2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 256,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 824,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0101",
+      "beginAddress": "0x000137E4",
+      "endAddress": "0x0001381A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 257,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 825,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0102",
+      "beginAddress": "0x0001382C",
+      "endAddress": "0x00013862",
+      "type": "OneOf",
+      "question": {
+        "questionId": 258,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 826,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0103",
+      "beginAddress": "0x00013874",
+      "endAddress": "0x000138AA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 259,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 827,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0104",
+      "beginAddress": "0x000138BC",
+      "endAddress": "0x000138F2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 260,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 828,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0105",
+      "beginAddress": "0x00013904",
+      "endAddress": "0x0001393A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 261,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 829,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0106",
+      "beginAddress": "0x0001394C",
+      "endAddress": "0x00013982",
+      "type": "OneOf",
+      "question": {
+        "questionId": 262,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 830,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0107",
+      "beginAddress": "0x00013994",
+      "endAddress": "0x000139CA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 263,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 831,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0108",
+      "beginAddress": "0x000139DC",
+      "endAddress": "0x00013A12",
+      "type": "OneOf",
+      "question": {
+        "questionId": 264,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 832,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0109",
+      "beginAddress": "0x00013A24",
+      "endAddress": "0x00013A5A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 265,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 833,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-010A",
+      "beginAddress": "0x00013A6C",
+      "endAddress": "0x00013AA2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 266,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 834,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-010B",
+      "beginAddress": "0x00013AB4",
+      "endAddress": "0x00013AEA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 267,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 835,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-010C",
+      "beginAddress": "0x00013AFC",
+      "endAddress": "0x00013B32",
+      "type": "OneOf",
+      "question": {
+        "questionId": 268,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 836,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-010D",
+      "beginAddress": "0x00013B44",
+      "endAddress": "0x00013B7A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 269,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 837,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-010E",
+      "beginAddress": "0x00013B8C",
+      "endAddress": "0x00013BC2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 270,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 838,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-010F",
+      "beginAddress": "0x00013BD4",
+      "endAddress": "0x00013C0A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 271,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 839,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0110",
+      "beginAddress": "0x00013C1C",
+      "endAddress": "0x00013C52",
+      "type": "OneOf",
+      "question": {
+        "questionId": 272,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 840,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0111",
+      "beginAddress": "0x00013C64",
+      "endAddress": "0x00013C9A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 273,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 841,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0112",
+      "beginAddress": "0x00013CAC",
+      "endAddress": "0x00013CE2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 274,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 842,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0113",
+      "beginAddress": "0x00013CF4",
+      "endAddress": "0x00013D2A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 275,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 843,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0114",
+      "beginAddress": "0x00013D3C",
+      "endAddress": "0x00013D72",
+      "type": "OneOf",
+      "question": {
+        "questionId": 276,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 844,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0115",
+      "beginAddress": "0x00013D84",
+      "endAddress": "0x00013DBA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 277,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 845,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0116",
+      "beginAddress": "0x00013DCC",
+      "endAddress": "0x00013E02",
+      "type": "OneOf",
+      "question": {
+        "questionId": 278,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 846,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0117",
+      "beginAddress": "0x00013E14",
+      "endAddress": "0x00013E4A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 279,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 847,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0118",
+      "beginAddress": "0x00013E5C",
+      "endAddress": "0x00013E92",
+      "type": "OneOf",
+      "question": {
+        "questionId": 280,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 848,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0119",
+      "beginAddress": "0x00013EA4",
+      "endAddress": "0x00013EDA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 281,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 849,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-011A",
+      "beginAddress": "0x00013EEC",
+      "endAddress": "0x00013F22",
+      "type": "OneOf",
+      "question": {
+        "questionId": 282,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 850,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-011B",
+      "beginAddress": "0x00013F34",
+      "endAddress": "0x00013F6A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 283,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 851,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-011C",
+      "beginAddress": "0x00013F7C",
+      "endAddress": "0x00013FB2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 284,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 852,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-011D",
+      "beginAddress": "0x00013FC4",
+      "endAddress": "0x00013FFA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 285,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 853,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-011E",
+      "beginAddress": "0x0001400C",
+      "endAddress": "0x00014042",
+      "type": "OneOf",
+      "question": {
+        "questionId": 286,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 861,
+        "promptStringId": 854,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-011F",
+      "beginAddress": "0x000140D4",
+      "endAddress": "0x0001410A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 287,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 863,
+        "promptStringId": 862,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0120",
+      "beginAddress": "0x00014124",
+      "endAddress": "0x0001415A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 288,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 867,
+        "promptStringId": 866,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0121",
+      "beginAddress": "0x00014174",
+      "endAddress": "0x000141AA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 289,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 877,
+        "promptStringId": 876,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0122",
+      "beginAddress": "0x000141C4",
+      "endAddress": "0x000141FA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 290,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 869,
+        "promptStringId": 868,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0123",
+      "beginAddress": "0x00014214",
+      "endAddress": "0x0001424A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 291,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 879,
+        "promptStringId": 878,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0124",
+      "beginAddress": "0x00014264",
+      "endAddress": "0x0001429A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 292,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1354,
+        "promptStringId": 1353,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "Numeric-0125",
+      "beginAddress": "0x000142B4",
+      "endAddress": "0x000142EA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 293,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 873,
+        "promptStringId": 872,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0126",
+      "beginAddress": "0x00014304",
+      "endAddress": "0x0001433A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 294,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 875,
+        "promptStringId": 874,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-275A",
+      "beginAddress": "0x000143D4",
+      "endAddress": "0x0001440A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 10074,
+        "pageId": 65535,
+        "accessLevel": 41,
+        "helpStringId": 902,
+        "promptStringId": 901,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-0127",
+      "beginAddress": "0x000144E4",
+      "endAddress": "0x0001451A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 295,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 894,
+        "promptStringId": 891,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0128",
+      "beginAddress": "0x0001452C",
+      "endAddress": "0x00014562",
+      "type": "OneOf",
+      "question": {
+        "questionId": 296,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 884,
+        "promptStringId": 883,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-0129",
+      "beginAddress": "0x00014574",
+      "endAddress": "0x000145AA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 297,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 890,
+        "promptStringId": 887,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "OneOf-012A",
+      "beginAddress": "0x000145FC",
+      "endAddress": "0x00014632",
+      "type": "OneOf",
+      "question": {
+        "questionId": 298,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 904,
+        "promptStringId": 903,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-012B",
+      "beginAddress": "0x0001470C",
+      "endAddress": "0x00014742",
+      "type": "OneOf",
+      "question": {
+        "questionId": 299,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 910,
+        "promptStringId": 909,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-012C",
+      "beginAddress": "0x0001475C",
+      "endAddress": "0x00014792",
+      "type": "OneOf",
+      "question": {
+        "questionId": 300,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1354,
+        "promptStringId": 1353,
+        "failsafe": 2,
+        "optimal": 2
+      }
+    },
+    {
+      "id": "OneOf-012D",
+      "beginAddress": "0x000147A4",
+      "endAddress": "0x000147DA",
+      "type": "OneOf",
+      "question": {
+        "questionId": 301,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 912,
+        "promptStringId": 911,
+        "failsafe": 2,
+        "optimal": 2
+      }
+    },
+    {
+      "id": "OneOf-012E",
+      "beginAddress": "0x000147F4",
+      "endAddress": "0x0001482A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 302,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 914,
+        "promptStringId": 913,
+        "failsafe": 2,
+        "optimal": 2
+      }
+    },
+    {
+      "id": "OneOf-012F",
+      "beginAddress": "0x00014844",
+      "endAddress": "0x0001487A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 303,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 919,
+        "promptStringId": 918,
+        "failsafe": 2,
+        "optimal": 2
+      }
+    },
+    {
+      "id": "Ref-0130",
+      "beginAddress": "0x00014D14",
+      "endAddress": "0x00014D4A",
+      "type": "Ref",
+      "question": {
+        "questionId": 304,
+        "pageId": 35,
+        "accessLevel": 1,
+        "helpStringId": 103,
+        "promptStringId": 2,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0131",
+      "beginAddress": "0x00014D54",
+      "endAddress": "0x00014D8A",
+      "type": "Ref",
+      "question": {
+        "questionId": 305,
+        "pageId": 35,
+        "accessLevel": 1,
+        "helpStringId": 103,
+        "promptStringId": 2,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-2765",
+      "beginAddress": "0x00015214",
+      "endAddress": "0x0001524A",
+      "type": "Ref",
+      "question": {
+        "questionId": 10085,
+        "pageId": 38,
+        "accessLevel": 33,
+        "helpStringId": 1081,
+        "promptStringId": 1080,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-2767",
+      "beginAddress": "0x000153D4",
+      "endAddress": "0x0001540A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 10087,
+        "pageId": 65535,
+        "accessLevel": 41,
+        "helpStringId": 1090,
+        "promptStringId": 1089,
+        "failsafe": 1,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-2768",
+      "beginAddress": "0x000154DC",
+      "endAddress": "0x00015512",
+      "type": "OneOf",
+      "question": {
+        "questionId": 10088,
+        "pageId": 65535,
+        "accessLevel": 41,
+        "helpStringId": 1094,
+        "promptStringId": 1093,
+        "failsafe": 0,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "Ref-2769",
+      "beginAddress": "0x00015524",
+      "endAddress": "0x0001555A",
+      "type": "Ref",
+      "question": {
+        "questionId": 10089,
+        "pageId": 38,
+        "accessLevel": 41,
+        "helpStringId": 1105,
+        "promptStringId": 1104,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-276A",
+      "beginAddress": "0x00015564",
+      "endAddress": "0x0001559A",
+      "type": "Ref",
+      "question": {
+        "questionId": 10090,
+        "pageId": 38,
+        "accessLevel": 41,
+        "helpStringId": 1103,
+        "promptStringId": 1102,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-276E",
+      "beginAddress": "0x000155E4",
+      "endAddress": "0x0001561A",
+      "type": "Ref",
+      "question": {
+        "questionId": 10094,
+        "pageId": 39,
+        "accessLevel": 33,
+        "helpStringId": 1120,
+        "promptStringId": 1119,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-2770",
+      "beginAddress": "0x000156E4",
+      "endAddress": "0x0001571A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 10096,
+        "pageId": 65535,
+        "accessLevel": 41,
+        "helpStringId": 1122,
+        "promptStringId": 1121,
+        "failsafe": 1,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-2771",
+      "beginAddress": "0x0001572C",
+      "endAddress": "0x00015762",
+      "type": "Ref",
+      "question": {
+        "questionId": 10097,
+        "pageId": 39,
+        "accessLevel": 41,
+        "helpStringId": 1105,
+        "promptStringId": 1104,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-2772",
+      "beginAddress": "0x0001576C",
+      "endAddress": "0x000157A2",
+      "type": "Ref",
+      "question": {
+        "questionId": 10098,
+        "pageId": 39,
+        "accessLevel": 41,
+        "helpStringId": 1103,
+        "promptStringId": 1102,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-2773",
+      "beginAddress": "0x000157AC",
+      "endAddress": "0x000157E2",
+      "type": "Ref",
+      "question": {
+        "questionId": 10099,
+        "pageId": 39,
+        "accessLevel": 33,
+        "helpStringId": 1134,
+        "promptStringId": 1133,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-2774",
+      "beginAddress": "0x000157EC",
+      "endAddress": "0x00015822",
+      "type": "Ref",
+      "question": {
+        "questionId": 10100,
+        "pageId": 39,
+        "accessLevel": 33,
+        "helpStringId": 1136,
+        "promptStringId": 1135,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-2775",
+      "beginAddress": "0x000158AC",
+      "endAddress": "0x000158E2",
+      "type": "Ref",
+      "question": {
+        "questionId": 10101,
+        "pageId": 39,
+        "accessLevel": 33,
+        "helpStringId": 1125,
+        "promptStringId": 1124,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-2776",
+      "beginAddress": "0x000158EC",
+      "endAddress": "0x00015922",
+      "type": "Ref",
+      "question": {
+        "questionId": 10102,
+        "pageId": 39,
+        "accessLevel": 33,
+        "helpStringId": 1127,
+        "promptStringId": 1126,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-2777",
+      "beginAddress": "0x000159AC",
+      "endAddress": "0x000159E2",
+      "type": "Ref",
+      "question": {
+        "questionId": 10103,
+        "pageId": 39,
+        "accessLevel": 41,
+        "helpStringId": 1144,
+        "promptStringId": 1146,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-2778",
+      "beginAddress": "0x000159EC",
+      "endAddress": "0x00015A22",
+      "type": "Ref",
+      "question": {
+        "questionId": 10104,
+        "pageId": 39,
+        "accessLevel": 33,
+        "helpStringId": 1144,
+        "promptStringId": 1148,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-2779",
+      "beginAddress": "0x00015A2C",
+      "endAddress": "0x00015A62",
+      "type": "Ref",
+      "question": {
+        "questionId": 10105,
+        "pageId": 39,
+        "accessLevel": 33,
+        "helpStringId": 1144,
+        "promptStringId": 1150,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-277A",
+      "beginAddress": "0x00015A6C",
+      "endAddress": "0x00015AA2",
+      "type": "Ref",
+      "question": {
+        "questionId": 10106,
+        "pageId": 39,
+        "accessLevel": 33,
+        "helpStringId": 1144,
+        "promptStringId": 1152,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-277B",
+      "beginAddress": "0x00015AAC",
+      "endAddress": "0x00015AE2",
+      "type": "Ref",
+      "question": {
+        "questionId": 10107,
+        "pageId": 39,
+        "accessLevel": 33,
+        "helpStringId": 1144,
+        "promptStringId": 1154,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-277C",
+      "beginAddress": "0x00015AEC",
+      "endAddress": "0x00015B22",
+      "type": "Ref",
+      "question": {
+        "questionId": 10108,
+        "pageId": 39,
+        "accessLevel": 33,
+        "helpStringId": 1144,
+        "promptStringId": 1156,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0134",
+      "beginAddress": "0x00015B6C",
+      "endAddress": "0x00015BA2",
+      "type": "Numeric",
+      "question": {
+        "questionId": 308,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 37,
+        "promptStringId": 36,
+        "failsafe": 5,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0135",
+      "beginAddress": "0x00015BBC",
+      "endAddress": "0x00015BF2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 309,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 39,
+        "promptStringId": 38,
+        "failsafe": 1,
+        "optimal": 1
+      }
+    },
+    {
+      "id": "CheckBox-0136",
+      "beginAddress": "0x00015C0C",
+      "endAddress": "0x00015C42",
+      "type": "CheckBox",
+      "question": {
+        "questionId": 310,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 34,
+        "promptStringId": 33,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0137",
+      "beginAddress": "0x00015CDC",
+      "endAddress": "0x00015D12",
+      "type": "OneOf",
+      "question": {
+        "questionId": 311,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 45,
+        "promptStringId": 43,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0138",
+      "beginAddress": "0x00015DAC",
+      "endAddress": "0x00015DE2",
+      "type": "OneOf",
+      "question": {
+        "questionId": 312,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 143,
+        "promptStringId": 142,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-0139",
+      "beginAddress": "0x00015DF4",
+      "endAddress": "0x00015E2A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 313,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1338,
+        "promptStringId": 1337,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-013A",
+      "beginAddress": "0x00015E3C",
+      "endAddress": "0x00015E72",
+      "type": "OneOf",
+      "question": {
+        "questionId": 314,
+        "pageId": 65535,
+        "accessLevel": 9,
+        "helpStringId": 1441,
+        "promptStringId": 1440,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-013B",
+      "beginAddress": "0x00015EC4",
+      "endAddress": "0x00015EFA",
+      "type": "Ref",
+      "question": {
+        "questionId": 315,
+        "pageId": 43,
+        "accessLevel": 1,
+        "helpStringId": 51,
+        "promptStringId": 2,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "OneOf-013C",
+      "beginAddress": "0x00015F04",
+      "endAddress": "0x00015F3A",
+      "type": "OneOf",
+      "question": {
+        "questionId": 316,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 45,
+        "promptStringId": 44,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-013D",
+      "beginAddress": "0x00015F94",
+      "endAddress": "0x00015FCA",
+      "type": "Ref",
+      "question": {
+        "questionId": 317,
+        "pageId": 44,
+        "accessLevel": 1,
+        "helpStringId": 78,
+        "promptStringId": 77,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-013E",
+      "beginAddress": "0x00015FD4",
+      "endAddress": "0x0001600A",
+      "type": "Ref",
+      "question": {
+        "questionId": 318,
+        "pageId": 44,
+        "accessLevel": 1,
+        "helpStringId": 80,
+        "promptStringId": 79,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-013F",
+      "beginAddress": "0x00016054",
+      "endAddress": "0x0001608A",
+      "type": "Ref",
+      "question": {
+        "questionId": 319,
+        "pageId": 44,
+        "accessLevel": 1,
+        "helpStringId": 82,
+        "promptStringId": 81,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0140",
+      "beginAddress": "0x00016094",
+      "endAddress": "0x000160CA",
+      "type": "Ref",
+      "question": {
+        "questionId": 320,
+        "pageId": 44,
+        "accessLevel": 1,
+        "helpStringId": 84,
+        "promptStringId": 83,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0141",
+      "beginAddress": "0x00016114",
+      "endAddress": "0x0001614A",
+      "type": "Ref",
+      "question": {
+        "questionId": 321,
+        "pageId": 44,
+        "accessLevel": 1,
+        "helpStringId": 87,
+        "promptStringId": 86,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0142",
+      "beginAddress": "0x00016154",
+      "endAddress": "0x0001618A",
+      "type": "Ref",
+      "question": {
+        "questionId": 322,
+        "pageId": 44,
+        "accessLevel": 1,
+        "helpStringId": 89,
+        "promptStringId": 88,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0143",
+      "beginAddress": "0x00016214",
+      "endAddress": "0x0001624A",
+      "type": "Ref",
+      "question": {
+        "questionId": 323,
+        "pageId": 44,
+        "accessLevel": 1,
+        "helpStringId": 92,
+        "promptStringId": 91,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0144",
+      "beginAddress": "0x00016254",
+      "endAddress": "0x0001628A",
+      "type": "Ref",
+      "question": {
+        "questionId": 324,
+        "pageId": 44,
+        "accessLevel": 1,
+        "helpStringId": 94,
+        "promptStringId": 93,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0145",
+      "beginAddress": "0x00016294",
+      "endAddress": "0x000162CA",
+      "type": "Ref",
+      "question": {
+        "questionId": 325,
+        "pageId": 44,
+        "accessLevel": 1,
+        "helpStringId": 96,
+        "promptStringId": 95,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Ref-0146",
+      "beginAddress": "0x00016354",
+      "endAddress": "0x0001638A",
+      "type": "Ref",
+      "question": {
+        "questionId": 326,
+        "pageId": 44,
+        "accessLevel": 1,
+        "helpStringId": 2,
+        "promptStringId": 2,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-014B",
+      "beginAddress": "0x00016494",
+      "endAddress": "0x000164CA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 331,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0150",
+      "beginAddress": "0x000165D4",
+      "endAddress": "0x0001660A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 336,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0151",
+      "beginAddress": "0x00016614",
+      "endAddress": "0x0001664A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 337,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0152",
+      "beginAddress": "0x00016654",
+      "endAddress": "0x0001668A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 338,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0153",
+      "beginAddress": "0x00016694",
+      "endAddress": "0x000166CA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 339,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0154",
+      "beginAddress": "0x000166D4",
+      "endAddress": "0x0001670A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 340,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0156",
+      "beginAddress": "0x00016754",
+      "endAddress": "0x0001678A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 342,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0157",
+      "beginAddress": "0x00016794",
+      "endAddress": "0x000167CA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 343,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0159",
+      "beginAddress": "0x00016814",
+      "endAddress": "0x0001684A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 345,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-015A",
+      "beginAddress": "0x00016854",
+      "endAddress": "0x0001688A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 346,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-015C",
+      "beginAddress": "0x000168D4",
+      "endAddress": "0x0001690A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 348,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-015D",
+      "beginAddress": "0x00016914",
+      "endAddress": "0x0001694A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 349,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-015F",
+      "beginAddress": "0x00016994",
+      "endAddress": "0x000169CA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 351,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0160",
+      "beginAddress": "0x000169D4",
+      "endAddress": "0x00016A0A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 352,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0161",
+      "beginAddress": "0x00016A14",
+      "endAddress": "0x00016A4A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 353,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0163",
+      "beginAddress": "0x00016A94",
+      "endAddress": "0x00016ACA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 355,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0165",
+      "beginAddress": "0x00016B14",
+      "endAddress": "0x00016B4A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 357,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0169",
+      "beginAddress": "0x00016C14",
+      "endAddress": "0x00016C4A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 361,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-016B",
+      "beginAddress": "0x00016C94",
+      "endAddress": "0x00016CCA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 363,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-016D",
+      "beginAddress": "0x00016D14",
+      "endAddress": "0x00016D4A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 365,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-016E",
+      "beginAddress": "0x00016D54",
+      "endAddress": "0x00016D8A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 366,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0170",
+      "beginAddress": "0x00016DD4",
+      "endAddress": "0x00016E0A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 368,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0171",
+      "beginAddress": "0x00016E14",
+      "endAddress": "0x00016E4A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 369,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0173",
+      "beginAddress": "0x00016E94",
+      "endAddress": "0x00016ECA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 371,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0176",
+      "beginAddress": "0x00016F54",
+      "endAddress": "0x00016F8A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 374,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0179",
+      "beginAddress": "0x00017014",
+      "endAddress": "0x0001704A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 377,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-018B",
+      "beginAddress": "0x00017494",
+      "endAddress": "0x000174CA",
+      "type": "Numeric",
+      "question": {
+        "questionId": 395,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0196",
+      "beginAddress": "0x00017754",
+      "endAddress": "0x0001778A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 406,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    },
+    {
+      "id": "Numeric-0198",
+      "beginAddress": "0x000177D4",
+      "endAddress": "0x0001780A",
+      "type": "Numeric",
+      "question": {
+        "questionId": 408,
+        "pageId": 65535,
+        "accessLevel": 1,
+        "helpStringId": 0,
+        "promptStringId": 0,
+        "failsafe": 0,
+        "optimal": 0
+      }
+    }
+  ]
+}
