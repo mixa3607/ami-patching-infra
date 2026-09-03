@@ -3,16 +3,28 @@
   "type": "AMI-IFR-SCT-Patch",
   "suppressIfPatches": [
     {
-      "disable": true,
+      "apply": true,
       "offset": 83873
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 83973
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 84013
+    }
+  ],
+  "defaultValuePatches": [
+    {
+      "apply": true,
+      "offset": 100788,
+      "value": { "type": "u8", "value": 2 }
+    },
+    {
+      "apply": true,
+      "offset": 100794,
+      "value": { "type": "u8", "value": 2 }
     }
   ]
 }

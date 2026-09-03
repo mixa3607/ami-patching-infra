@@ -3,67 +3,67 @@
   "type": "AMI-IFR-SCT-Patch",
   "suppressIfPatches": [
     {
-      "disable": true,
+      "apply": true,
       "offset": 88380
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88447
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88481
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88515
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88572
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88564
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88599
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88632
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88624
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88671
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88663
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88710
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88702
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88749
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88741
     },
     {
-      "disable": true,
+      "apply": true,
       "offset": 88780
     }
   ]
