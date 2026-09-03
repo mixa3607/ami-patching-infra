@@ -1,0 +1,85 @@
+{
+  "version": 2,
+  "type": "AF516361-BiosDefaults-Store-Map",
+  "biosDefaultsSha256": "a83b7dd7d22ec1792d98907e1d047bc2101a709aef878d1c96766c48ebda0862",
+  "ifrSha256": "4a51ac0dadfbeecbd8a2e899e1934667456740337c65890523ca263fb3f1a83d",
+  "questionMappings": [
+    {
+      "id": "0001-FpgaSocketConfig-0000-0000057F",
+      "questionId": 1,
+      "opcode": "Numeric",
+      "varStoreName": "FpgaSocketConfig",
+      "varStoreOffset": 0,
+      "dataLength": 1,
+      "status": "Mapped",
+      "nvarDataOffset": 1407,
+      "value": "3"
+    },
+    {
+      "id": "0002-FpgaSocketConfig-0001-00000580",
+      "questionId": 2,
+      "opcode": "OneOf",
+      "varStoreName": "FpgaSocketConfig",
+      "varStoreOffset": 1,
+      "dataLength": 1,
+      "status": "Mapped",
+      "nvarDataOffset": 1408,
+      "value": "0"
+    },
+    {
+      "id": "0003-FpgaSocketConfig-0002-00000581",
+      "questionId": 3,
+      "opcode": "OneOf",
+      "varStoreName": "FpgaSocketConfig",
+      "varStoreOffset": 2,
+      "dataLength": 1,
+      "status": "Mapped",
+      "nvarDataOffset": 1409,
+      "value": "0"
+    },
+    {
+      "id": "0004-FpgaSocketConfig-0005-00000584",
+      "questionId": 4,
+      "opcode": "OneOf",
+      "varStoreName": "FpgaSocketConfig",
+      "varStoreOffset": 5,
+      "dataLength": 1,
+      "status": "Mapped",
+      "nvarDataOffset": 1412,
+      "value": "90"
+    },
+    {
+      "id": "0005-FpgaSocketConfig-0009-00000588",
+      "questionId": 5,
+      "opcode": "OneOf",
+      "varStoreName": "FpgaSocketConfig",
+      "varStoreOffset": 9,
+      "dataLength": 1,
+      "status": "Mapped",
+      "nvarDataOffset": 1416,
+      "value": "93"
+    },
+    {
+      "id": "0006-FpgaSocketConfig-0006-00000585",
+      "questionId": 6,
+      "opcode": "OneOf",
+      "varStoreName": "FpgaSocketConfig",
+      "varStoreOffset": 6,
+      "dataLength": 1,
+      "status": "Mapped",
+      "nvarDataOffset": 1413,
+      "value": "90"
+    },
+    {
+      "id": "0007-FpgaSocketConfig-000A-00000589",
+      "questionId": 7,
+      "opcode": "OneOf",
+      "varStoreName": "FpgaSocketConfig",
+      "varStoreOffset": 10,
+      "dataLength": 1,
+      "status": "Mapped",
+      "nvarDataOffset": 1417,
+      "value": "93"
+    }
+  ]
+}

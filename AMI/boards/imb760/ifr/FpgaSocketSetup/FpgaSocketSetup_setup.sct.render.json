@@ -1,0 +1,1286 @@
+{
+  "Version": 1,
+  "Type": "AMI-IFR-Render",
+  "IfrSha256": "4a51ac0dadfbeecbd8a2e899e1934667456740337c65890523ca263fb3f1a83d",
+  "Formsets": [
+    {
+      "NodeType": "formset",
+      "Source": {
+        "Offset": 3836,
+        "Length": 39
+      },
+      "Guid": "22819110-7F6F-4852-B4BB-13A770149B0C",
+      "Title": {
+        "id": 4,
+        "text": "FPGA Configuration"
+      },
+      "Help": {
+        "id": 5,
+        "text": "Displays and provides option to change the FPGA Settings"
+      },
+      "Varstores": [
+        {
+          "Id": 39424,
+          "Name": "FpgaSocketConfig",
+          "Guid": "75839B0B-0A99-4233-8AA4-3866F6CEF4B3",
+          "Kind": "efi",
+          "Size": 27,
+          "Attributes": 3
+        }
+      ],
+      "Forms": [
+        {
+          "NodeType": "form",
+          "Source": {
+            "Offset": 3972,
+            "Length": 6
+          },
+          "Id": 18384,
+          "Title": {
+            "id": 4,
+            "text": "FPGA Configuration"
+          },
+          "Children": [
+            {
+              "NodeType": "question",
+              "Opcode": "Numeric",
+              "Source": {
+                "Offset": 3996,
+                "Length": 17
+              },
+              "Kind": "numeric",
+              "Prompt": {
+                "id": 38,
+                "text": "Sockets Enable Bitmap(Hex)"
+              },
+              "Help": {
+                "id": 39,
+                "text": "0: Disable all Sockets, 0xFF: Enable all Sockets. "
+              },
+              "QuestionId": 1,
+              "VarstoreId": 39424,
+              "VarOffset": 0,
+              "QuestionFlags": 16,
+              "Flags": 32,
+              "Range": {
+                "size_bits": 8,
+                "min": 0,
+                "max": 255,
+                "step": 1
+              },
+              "Options": [],
+              "Defaults": [
+                {
+                  "Id": 0,
+                  "Value": {
+                    "type": "u8",
+                    "value": 3
+                  },
+                  "Source": {
+                    "Offset": 4013,
+                    "Length": 6
+                  }
+                },
+                {
+                  "Id": 1,
+                  "Value": {
+                    "type": "u8",
+                    "value": 3
+                  },
+                  "Source": {
+                    "Offset": 4019,
+                    "Length": 6
+                  }
+                }
+              ],
+              "ExpressionOperations": [],
+              "Children": []
+            },
+            {
+              "NodeType": "question",
+              "Opcode": "OneOf",
+              "Source": {
+                "Offset": 4036,
+                "Length": 17
+              },
+              "Kind": "oneof",
+              "Prompt": {
+                "id": 9,
+                "text": "Socket 0 BitStream"
+              },
+              "Help": {
+                "id": 11,
+                "text": "Pick a BitStream to assign to this socket."
+              },
+              "QuestionId": 2,
+              "VarstoreId": 39424,
+              "VarOffset": 1,
+              "QuestionFlags": 16,
+              "Flags": 16,
+              "Range": {
+                "size_bits": 8,
+                "min": 0,
+                "max": 255,
+                "step": 0
+              },
+              "Options": [
+                {
+                  "Text": {
+                    "id": 12,
+                    "text": "Auto"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 0
+                  },
+                  "Default": true,
+                  "ManufacturingDefault": true
+                },
+                {
+                  "Text": {
+                    "id": 14,
+                    "text": "SKX-PO-BBS"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 1
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 13,
+                    "text": "None"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 255
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                }
+              ],
+              "Defaults": [],
+              "ExpressionOperations": [],
+              "Children": []
+            },
+            {
+              "NodeType": "question",
+              "Opcode": "OneOf",
+              "Source": {
+                "Offset": 4076,
+                "Length": 17
+              },
+              "Kind": "oneof",
+              "Prompt": {
+                "id": 10,
+                "text": "Socket 1 BitStream"
+              },
+              "Help": {
+                "id": 11,
+                "text": "Pick a BitStream to assign to this socket."
+              },
+              "QuestionId": 3,
+              "VarstoreId": 39424,
+              "VarOffset": 2,
+              "QuestionFlags": 16,
+              "Flags": 16,
+              "Range": {
+                "size_bits": 8,
+                "min": 0,
+                "max": 255,
+                "step": 0
+              },
+              "Options": [
+                {
+                  "Text": {
+                    "id": 12,
+                    "text": "Auto"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 0
+                  },
+                  "Default": true,
+                  "ManufacturingDefault": true
+                },
+                {
+                  "Text": {
+                    "id": 14,
+                    "text": "SKX-PO-BBS"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 1
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 13,
+                    "text": "None"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 255
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                }
+              ],
+              "Defaults": [],
+              "ExpressionOperations": [],
+              "Children": []
+            },
+            {
+              "NodeType": "question",
+              "Opcode": "OneOf",
+              "Source": {
+                "Offset": 4125,
+                "Length": 17
+              },
+              "Kind": "oneof",
+              "Prompt": {
+                "id": 16,
+                "text": "Socket 0 Threshold 1"
+              },
+              "Help": {
+                "id": 15,
+                "text": "Select the FPGA Temperature Threshold."
+              },
+              "QuestionId": 4,
+              "VarstoreId": 39424,
+              "VarOffset": 5,
+              "QuestionFlags": 16,
+              "Flags": 16,
+              "Range": {
+                "size_bits": 8,
+                "min": 0,
+                "max": 103,
+                "step": 0
+              },
+              "Options": [
+                {
+                  "Text": {
+                    "id": 6,
+                    "text": "Disable"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 0
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 20,
+                    "text": "60 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 60
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 21,
+                    "text": "65 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 65
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 22,
+                    "text": "70 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 70
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 23,
+                    "text": "75 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 75
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 24,
+                    "text": "80 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 80
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 25,
+                    "text": "85 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 85
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 26,
+                    "text": "90 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 90
+                  },
+                  "Default": true,
+                  "ManufacturingDefault": true
+                },
+                {
+                  "Text": {
+                    "id": 27,
+                    "text": "93 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 93
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 28,
+                    "text": "94 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 94
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 29,
+                    "text": "95 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 95
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 30,
+                    "text": "96 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 96
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 31,
+                    "text": "97 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 97
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 32,
+                    "text": "98 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 98
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 33,
+                    "text": "99 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 99
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 34,
+                    "text": "100 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 100
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 35,
+                    "text": "101 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 101
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 36,
+                    "text": "102 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 102
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 37,
+                    "text": "103 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 103
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                }
+              ],
+              "Defaults": [],
+              "ExpressionOperations": [],
+              "Children": []
+            },
+            {
+              "NodeType": "question",
+              "Opcode": "OneOf",
+              "Source": {
+                "Offset": 4277,
+                "Length": 17
+              },
+              "Kind": "oneof",
+              "Prompt": {
+                "id": 17,
+                "text": "Socket 0 Threshold 2"
+              },
+              "Help": {
+                "id": 15,
+                "text": "Select the FPGA Temperature Threshold."
+              },
+              "QuestionId": 5,
+              "VarstoreId": 39424,
+              "VarOffset": 9,
+              "QuestionFlags": 16,
+              "Flags": 16,
+              "Range": {
+                "size_bits": 8,
+                "min": 0,
+                "max": 103,
+                "step": 0
+              },
+              "Options": [
+                {
+                  "Text": {
+                    "id": 6,
+                    "text": "Disable"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 0
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 20,
+                    "text": "60 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 60
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 21,
+                    "text": "65 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 65
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 22,
+                    "text": "70 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 70
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 23,
+                    "text": "75 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 75
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 24,
+                    "text": "80 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 80
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 25,
+                    "text": "85 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 85
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 26,
+                    "text": "90 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 90
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 27,
+                    "text": "93 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 93
+                  },
+                  "Default": true,
+                  "ManufacturingDefault": true
+                },
+                {
+                  "Text": {
+                    "id": 28,
+                    "text": "94 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 94
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 29,
+                    "text": "95 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 95
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 30,
+                    "text": "96 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 96
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 31,
+                    "text": "97 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 97
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 32,
+                    "text": "98 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 98
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 33,
+                    "text": "99 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 99
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 34,
+                    "text": "100 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 100
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 35,
+                    "text": "101 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 101
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 36,
+                    "text": "102 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 102
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 37,
+                    "text": "103 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 103
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                }
+              ],
+              "Defaults": [],
+              "ExpressionOperations": [],
+              "Children": []
+            },
+            {
+              "NodeType": "question",
+              "Opcode": "OneOf",
+              "Source": {
+                "Offset": 4429,
+                "Length": 17
+              },
+              "Kind": "oneof",
+              "Prompt": {
+                "id": 18,
+                "text": "Socket 1 Threshold 1"
+              },
+              "Help": {
+                "id": 15,
+                "text": "Select the FPGA Temperature Threshold."
+              },
+              "QuestionId": 6,
+              "VarstoreId": 39424,
+              "VarOffset": 6,
+              "QuestionFlags": 16,
+              "Flags": 16,
+              "Range": {
+                "size_bits": 8,
+                "min": 0,
+                "max": 103,
+                "step": 0
+              },
+              "Options": [
+                {
+                  "Text": {
+                    "id": 6,
+                    "text": "Disable"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 0
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 20,
+                    "text": "60 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 60
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 21,
+                    "text": "65 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 65
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 22,
+                    "text": "70 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 70
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 23,
+                    "text": "75 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 75
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 24,
+                    "text": "80 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 80
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 25,
+                    "text": "85 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 85
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 26,
+                    "text": "90 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 90
+                  },
+                  "Default": true,
+                  "ManufacturingDefault": true
+                },
+                {
+                  "Text": {
+                    "id": 27,
+                    "text": "93 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 93
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 28,
+                    "text": "94 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 94
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 29,
+                    "text": "95 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 95
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 30,
+                    "text": "96 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 96
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 31,
+                    "text": "97 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 97
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 32,
+                    "text": "98 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 98
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 33,
+                    "text": "99 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 99
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 34,
+                    "text": "100 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 100
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 35,
+                    "text": "101 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 101
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 36,
+                    "text": "102 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 102
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 37,
+                    "text": "103 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 103
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                }
+              ],
+              "Defaults": [],
+              "ExpressionOperations": [],
+              "Children": []
+            },
+            {
+              "NodeType": "question",
+              "Opcode": "OneOf",
+              "Source": {
+                "Offset": 4581,
+                "Length": 17
+              },
+              "Kind": "oneof",
+              "Prompt": {
+                "id": 19,
+                "text": "Socket 1 Threshold 2"
+              },
+              "Help": {
+                "id": 15,
+                "text": "Select the FPGA Temperature Threshold."
+              },
+              "QuestionId": 7,
+              "VarstoreId": 39424,
+              "VarOffset": 10,
+              "QuestionFlags": 16,
+              "Flags": 16,
+              "Range": {
+                "size_bits": 8,
+                "min": 0,
+                "max": 103,
+                "step": 0
+              },
+              "Options": [
+                {
+                  "Text": {
+                    "id": 6,
+                    "text": "Disable"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 0
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 20,
+                    "text": "60 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 60
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 21,
+                    "text": "65 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 65
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 22,
+                    "text": "70 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 70
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 23,
+                    "text": "75 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 75
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 24,
+                    "text": "80 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 80
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 25,
+                    "text": "85 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 85
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 26,
+                    "text": "90 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 90
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 27,
+                    "text": "93 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 93
+                  },
+                  "Default": true,
+                  "ManufacturingDefault": true
+                },
+                {
+                  "Text": {
+                    "id": 28,
+                    "text": "94 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 94
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 29,
+                    "text": "95 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 95
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 30,
+                    "text": "96 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 96
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 31,
+                    "text": "97 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 97
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 32,
+                    "text": "98 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 98
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 33,
+                    "text": "99 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 99
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 34,
+                    "text": "100 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 100
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 35,
+                    "text": "101 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 101
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 36,
+                    "text": "102 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 102
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                },
+                {
+                  "Text": {
+                    "id": 37,
+                    "text": "103 C"
+                  },
+                  "Value": {
+                    "type": "u8",
+                    "value": 103
+                  },
+                  "Default": false,
+                  "ManufacturingDefault": false
+                }
+              ],
+              "Defaults": [],
+              "ExpressionOperations": [],
+              "Children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
