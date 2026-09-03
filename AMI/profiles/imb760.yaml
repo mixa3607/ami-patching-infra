@@ -8,6 +8,7 @@ logos:
   - guid: 63819805-67BB-46EF-AA8D-1524A19A01E4
     source: logos/63819805-67BB-46EF-AA8D-1524A19A01E4.bmp
     point_size: 20
+
 mcodes:
   base: mcodes/microcodes_base.bin
   table: mcodes/microcodes.json
@@ -16,16 +17,26 @@ mcodes:
   container_guid: 17088572-377F-44EF-8F4E-B09FFF46A070
   fit_guid: B52282EE-9B66-44B9-B1CF-7E5040F787C1
   section_type: "0x01"
+
 dmi:
   table: dmi/SMBiosStaticData_body.bin
   file_guid: DAF4BF89-CE71-4917-B522-C89D32FBC59F
   section_type: "0x18"
   vendor_suffix: "; patched by mixa3607"
   version_suffix: "; patch {version}"
+
 ifr:
   manifest: sections.yaml
+
 bridge:
   component: components/bios-state-lab-bridge
   efi: BiosStateLabBridge.efi
   file_guid: D4395796-6F4C-4C6B-B9D1-92DAA7199A84
   section_type: "0x10"
+
+nvram_erase:
+  entry_ids:
+    # main nvram
+    - volume:0x01000000:0x80000
+    # backup nvram
+    - volume:0x01080000:0x80000

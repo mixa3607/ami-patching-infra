@@ -42,7 +42,7 @@ ARG REPO_GIT_REF=build
 
 RUN chmod +x /workspace/SOFTWARE/UEFITool_0.28.0/UEFIReplace \
     && cd /workspace/AMI \
-    && REPO_GIT_REF="$REPO_GIT_REF" python3 ./build.py
+    && REPO_GIT_REF="$REPO_GIT_REF" python3 ./build.py --allow-dangerous
 
 FROM scratch AS artifact
 COPY --from=build /workspace/AMI/build/*/IMB760_BIOS_AMI_mixa3607_mod-*.rom /

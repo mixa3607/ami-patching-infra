@@ -12,18 +12,19 @@ import sys
 from pipeline.context import BuildContext
 from pipeline.helpers import git_version, load_profile, sha256, write_manifest
 from pipeline.plan import Stage, parse_scopes, select_stages
-from pipeline.stages import bridge, dmi, logos, mcodes, nvar_defaults, prepare, sct, setup_data, validate
+from pipeline.stages import bridge, dmi, logos, mcodes, nvar_defaults, nvram_erase, prepare, sct, setup_data, validate
 
 
 AMI_DIR = Path(__file__).resolve().parent
 REPO_ROOT = AMI_DIR.parent
-DEFAULT_SCOPES = ("prepare", "dmi", "logos", "setup-data", "sct", "nvar-defaults", "mcodes", "bridge")
+DEFAULT_SCOPES = ("prepare", "dmi", "logos", "setup-data", "sct", "nvram-erase", "nvar-defaults", "mcodes", "bridge")
 STAGES = {
     "prepare": Stage("prepare", (), prepare.run, ready=True),
     "dmi": Stage("dmi", ("prepare",), dmi.run, ready=True),
     "logos": Stage("logos", ("prepare",), logos.run, ready=True),
     "setup-data": Stage("setup-data", ("prepare",), setup_data.run, ready=True),
     "sct": Stage("sct", ("setup-data",), sct.run, ready=True),
+    "nvram-erase": Stage("nvram-erase", ("prepare",), nvram_erase.run, ready=True, dangerous=True),
     "nvar-defaults": Stage("nvar-defaults", ("sct",), nvar_defaults.run, ready=True),
     "mcodes": Stage("mcodes", ("prepare",), mcodes.run, ready=True),
     "bridge": Stage("bridge", ("prepare",), bridge.run, ready=True),
