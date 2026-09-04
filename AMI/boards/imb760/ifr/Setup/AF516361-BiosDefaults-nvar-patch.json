@@ -4,7 +4,8 @@
   "varPatches": [
     {
       "id": "012A-Setup-00EF-00000117",
-      "value": "2"
+      "value": "2",
+      "comment": "Boot option filter: UEFI and Legacy => UEFI only"
     }
   ]
 }

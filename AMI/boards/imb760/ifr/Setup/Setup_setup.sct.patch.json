@@ -4,27 +4,32 @@
   "suppressIfPatches": [
     {
       "apply": true,
-      "offset": 83873
+      "offset": 83873,
+      "comment": "Advanced[83762] => *suppress[83873]* => ACPI Settings[83881]"
     },
     {
       "apply": true,
-      "offset": 83973
+      "offset": 83973,
+      "comment": "Advanced[83762] => *suppress[83973]* => UEFI Variables Protection[83981]"
     },
     {
       "apply": true,
-      "offset": 84013
+      "offset": 84013,
+      "comment": "Advanced[83762] => *suppress[84013]* => SIO Common Setting[84021]"
     }
   ],
   "defaultValuePatches": [
     {
       "apply": true,
       "offset": 100788,
-      "value": { "type": "u8", "value": 2 }
+      "value": { "type": "u8", "value": 2 },
+      "comment": "CSM Configuration[100528] => Boot option filter[100771] => default[100788]"
     },
     {
       "apply": true,
       "offset": 100794,
-      "value": { "type": "u8", "value": 2 }
+      "value": { "type": "u8", "value": 2 },
+      "comment": "CSM Configuration[100528] => Boot option filter[100771] => default[100794]"
     }
   ]
 }

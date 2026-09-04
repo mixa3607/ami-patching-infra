@@ -6,7 +6,8 @@
       "id": "OneOf-0006",
       "accessLevel": 9,
       "failsafe": 3,
-      "optimal": 3
+      "optimal": 3,
+      "comment": "FRB-2 Timer Policy: Do Nothing => Power Cycle"
     }
   ]
 }

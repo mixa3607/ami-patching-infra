@@ -4,15 +4,18 @@
   "varPatches": [
     {
       "id": "1186-SocketMemoryConfig-00C8-00002777",
-      "value": "0"
+      "value": "0",
+      "comment": "Halt on mem Training Error: Enable => Disable"
     },
     {
       "id": "1506-MemBootHealthConfig-0001-00002D0D",
-      "value": "0"
+      "value": "0",
+      "comment": "Memory Boot Health Check: Disable => Auto"
     },
     {
       "id": "118A-SocketMemoryConfig-024D-000028FC",
-      "value": "0"
+      "value": "0",
+      "comment": "SPD CRC Check: Auto => Disable"
     }
   ]
 }

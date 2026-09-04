@@ -4,21 +4,21 @@
   "questions": [
     {
       "id": "OneOf-1186",
-      "comment": "",
+      "comment": "Halt on mem Training Error: Enable => Disable",
       "accessLevel": 9,
       "failsafe": 0,
       "optimal": 0
     },
     {
       "id": "OneOf-1506",
-      "comment": "",
+      "comment": "Memory Boot Health Check: Disable => Auto",
       "accessLevel": 9,
       "failsafe": 0,
       "optimal": 0
     },
     {
       "id": "OneOf-118A",
-      "comment": "",
+      "comment": "SPD CRC Check: Auto => Disable",
       "accessLevel": 9,
       "failsafe": 0,
       "optimal": 0

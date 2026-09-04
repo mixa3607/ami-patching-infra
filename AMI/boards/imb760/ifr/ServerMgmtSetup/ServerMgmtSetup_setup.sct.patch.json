@@ -4,67 +4,83 @@
   "suppressIfPatches": [
     {
       "apply": true,
-      "offset": 91876
+      "offset": 91876,
+      "comment": "Server Mgmt[91745] => suppress[91872] => *suppress[91876]* => grayout[91884] => IPMI Interface Type[91892]"
     },
     {
       "apply": true,
-      "offset": 91872
+      "offset": 91872,
+      "comment": "Server Mgmt[91745] => *suppress[91872]* => suppress[91876] => grayout[91884] => IPMI Interface Type[91892]"
     },
     {
       "apply": true,
-      "offset": 92052
+      "offset": 92052,
+      "comment": "Server Mgmt[91745] => suppress[92048] => *suppress[92052]* => grayout[92060] => Wait For BMC[92068]"
     },
     {
       "apply": true,
-      "offset": 92048
+      "offset": 92048,
+      "comment": "Server Mgmt[91745] => *suppress[92048]* => suppress[92052] => grayout[92060] => Wait For BMC[92068]"
     },
     {
       "apply": true,
-      "offset": 92123
+      "offset": 92123,
+      "comment": "Server Mgmt[91745] => suppress[92119] => *suppress[92123]* => grayout[92131] => FRB-2 Timer[92139]"
     },
     {
       "apply": true,
-      "offset": 92119
+      "offset": 92119,
+      "comment": "Server Mgmt[91745] => *suppress[92119]* => suppress[92123] => grayout[92131] => FRB-2 Timer[92139]"
     },
     {
       "apply": true,
-      "offset": 92559
+      "offset": 92559,
+      "comment": "Server Mgmt[91745] => suppress[92555] => *suppress[92559]* => grayout[92567] => Serial Mux[92575]"
     },
     {
       "apply": true,
-      "offset": 92555
+      "offset": 92555,
+      "comment": "Server Mgmt[91745] => *suppress[92555]* => suppress[92559] => grayout[92567] => Serial Mux[92575]"
     },
     {
       "apply": true,
-      "offset": 92630
+      "offset": 92630,
+      "comment": "Server Mgmt[91745] => suppress[92626] => *suppress[92630]* => grayout[92638] => System Event Log[92654]"
     },
     {
       "apply": true,
-      "offset": 92626
+      "offset": 92626,
+      "comment": "Server Mgmt[91745] => *suppress[92626]* => suppress[92630] => grayout[92638] => System Event Log[92654]"
     },
     {
       "apply": true,
-      "offset": 92679
+      "offset": 92679,
+      "comment": "Server Mgmt[91745] => suppress[92675] => *suppress[92679]* => grayout[92687] => Bmc self test log[92695]"
     },
     {
       "apply": true,
-      "offset": 92675
+      "offset": 92675,
+      "comment": "Server Mgmt[91745] => *suppress[92675]* => suppress[92679] => grayout[92687] => Bmc self test log[92695]"
     },
     {
       "apply": true,
-      "offset": 92755
+      "offset": 92755,
+      "comment": "Server Mgmt[91745] => suppress[92751] => *suppress[92755]* => grayout[92763] => View System Event Log[92771]"
     },
     {
       "apply": true,
-      "offset": 92751
+      "offset": 92751,
+      "comment": "Server Mgmt[91745] => *suppress[92751]* => suppress[92755] => grayout[92763] => View System Event Log[92771]"
     },
     {
       "apply": true,
-      "offset": 92796
+      "offset": 92796,
+      "comment": "Server Mgmt[91745] => suppress[92792] => *suppress[92796]* => grayout[92804] => BMC User Settings[92812]"
     },
     {
       "apply": true,
-      "offset": 92792
+      "offset": 92792,
+      "comment": "Server Mgmt[91745] => *suppress[92792]* => suppress[92796] => grayout[92804] => BMC User Settings[92812]"
     }
   ]
 }

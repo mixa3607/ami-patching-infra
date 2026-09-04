@@ -4,7 +4,8 @@
   "varPatches": [
     {
       "id": "0006-ServerSetup-0019-00000318",
-      "value": "3"
+      "value": "3",
+      "comment": "FRB-2 Timer Policy: Do Nothing => Power Cycle"
     }
   ]
 }

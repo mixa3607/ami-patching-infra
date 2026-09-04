@@ -4,67 +4,83 @@
   "suppressIfPatches": [
     {
       "apply": true,
-      "offset": 88380
+      "offset": 88380,
+      "comment": "Platform Configuration[88374] => *suppress[88380]* => Fake Varstore Item[88384]"
     },
     {
       "apply": true,
-      "offset": 88447
+      "offset": 88447,
+      "comment": "Platform Configuration[88374] => suppress[88447] => Platform Over Clocking Support[88451]"
     },
     {
       "apply": true,
-      "offset": 88481
+      "offset": 88481,
+      "comment": "Platform Configuration[88374] => *suppress[88481]* => Anti Flash Wearout Supported[88485]"
     },
     {
       "apply": true,
-      "offset": 88515
+      "offset": 88515,
+      "comment": "Platform Configuration[88374] => *suppress[88515]* => Bios Guard Supported[88519]"
     },
     {
       "apply": true,
-      "offset": 88572
+      "offset": 88572,
+      "comment": "Platform Configuration[88374] => *suppress[88572]* => OverClocking Feature[88580]"
     },
     {
       "apply": true,
-      "offset": 88564
+      "offset": 88564,
+      "comment": "Platform Configuration[88374] => *suppress[88564]* => suppress[88572] => OverClocking Feature[88580]"
     },
     {
       "apply": true,
-      "offset": 88599
+      "offset": 88599,
+      "comment": "Platform Configuration[88374] => *suppress[88599]* => Miscellaneous Configuration[88607]"
     },
     {
       "apply": true,
-      "offset": 88632
+      "offset": 88632,
+      "comment": "Platform Configuration[88374] => *suppress[88632]* => Workstation ME Configuration[88644]"
     },
     {
       "apply": true,
-      "offset": 88624
+      "offset": 88624,
+      "comment": "Platform Configuration[88374] => *suppress[88624]* => suppress[88632] => Workstation ME Configuration[88644]"
     },
     {
       "apply": true,
-      "offset": 88671
+      "offset": 88671,
+      "comment": "Platform Configuration[88374] => *suppress[88671]* => Server ME Configuration[88683]"
     },
     {
       "apply": true,
-      "offset": 88663
+      "offset": 88663,
+      "comment": "Platform Configuration[88374] => *suppress[88663]* => suppress[88671] => Server ME Configuration[88683]"
     },
     {
       "apply": true,
-      "offset": 88710
+      "offset": 88710,
+      "comment": "Platform Configuration[88374] => *suppress[88710]* => Server ME Debug Configuration[88722]"
     },
     {
       "apply": true,
-      "offset": 88702
+      "offset": 88702,
+      "comment": "Platform Configuration[88374] => *suppress[88702]* => suppress[88710] => Server ME Debug Configuration[88722]"
     },
     {
       "apply": true,
-      "offset": 88749
+      "offset": 88749,
+      "comment": "Platform Configuration[88374] => *suppress[88749]* => ME DFX Debug Configuration[88761]"
     },
     {
       "apply": true,
-      "offset": 88741
+      "offset": 88741,
+      "comment": "Platform Configuration[88374] => *suppress[88741]* => suppress[88749] => ME DFX Debug Configuration[88761]"
     },
     {
       "apply": true,
-      "offset": 88780
+      "offset": 88780,
+      "comment": "Platform Configuration[88374] => *suppress[88780]* => Runtime Error Logging[88788]"
     }
   ]
 }

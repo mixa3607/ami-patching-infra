@@ -4,75 +4,93 @@
   "suppressIfPatches": [
     {
       "apply": true,
-      "offset": 75481
+      "offset": 75481,
+      "comment": "Socket Configuration[75460] => *suppress[75481]* => Common RefCode Configuration[75489]"
     },
     {
       "apply": true,
-      "offset": 75521
+      "offset": 75521,
+      "comment": "Socket Configuration[75460] => *suppress[75521]* => Memory Configuration[75529]"
     },
     {
       "apply": true,
-      "offset": 75561
+      "offset": 75561,
+      "comment": "Socket Configuration[75460] => *suppress[75561]* => Advanced Power Management Configuration[75569]"
     },
     {
       "apply": true,
-      "offset": 84350
+      "offset": 84350,
+      "comment": "Socket1 Configuration[83991] => *suppress[84350]* => Enable PCI-E Completion Timeout (Per-Port)[84358]"
     },
     {
       "apply": true,
-      "offset": 84525
+      "offset": 84525,
+      "comment": "Socket1 Configuration[83991] => *suppress[84525]* => Sck0 RP Correctable Err[84533]"
     },
     {
       "apply": true,
-      "offset": 84634
+      "offset": 84634,
+      "comment": "Socket1 Configuration[83991] => *suppress[84634]* => TraceHub Configuration Menu[84642]"
     },
     {
       "apply": true,
-      "offset": 84681
+      "offset": 84681,
+      "comment": "Socket1 Configuration[83991] => *suppress[84681]* => Port 0/DMI[84689]"
     },
     {
       "apply": true,
-      "offset": 85567
+      "offset": 85567,
+      "comment": "Socket2 Configuration[85246] => *suppress[85567]* => Enable PCI-E Completion Timeout (Per-Port)[85575]"
     },
     {
       "apply": true,
-      "offset": 260754
+      "offset": 260754,
+      "comment": "Memory Configuration[260670] => *suppress[260754]* => Enforce Population POR[260762]"
     },
     {
       "apply": true,
-      "offset": 260877
+      "offset": 260877,
+      "comment": "Memory Configuration[260670] => *suppress[260877]* => Memory Frequency[260903]"
     },
     {
       "apply": true,
-      "offset": 264430
+      "offset": 264430,
+      "comment": "Memory Configuration[260670] => *suppress[264430]* => SPD-SMBUS Access[264464]"
     },
     {
       "apply": true,
-      "offset": 264499
+      "offset": 264499,
+      "comment": "Memory Configuration[260670] => *suppress[264499]* => SPD Print[264503]"
     },
     {
       "apply": true,
-      "offset": 265147
+      "offset": 265147,
+      "comment": "Memory Configuration[260670] => *suppress[265147]* => Training Compensation Options Values[265169]"
     },
     {
       "apply": true,
-      "offset": 268226
+      "offset": 268226,
+      "comment": "Memory Timings Override[268220] => *suppress[268226]* => XMP Profiles Supported[268230]"
     },
     {
       "apply": true,
-      "offset": 268263
+      "offset": 268263,
+      "comment": "Memory Timings Override[268220] => *suppress[268263]* => XMP Profile[268275]"
     },
     {
       "apply": true,
-      "offset": 268310
+      "offset": 268310,
+      "comment": "Memory Timings Override[268220] => *suppress[268310]* => XMP Profile[268322]"
     },
     {
       "apply": true,
-      "offset": 268364
+      "offset": 268364,
+      "comment": "Memory Timings Override[268220] => *suppress[268364]* => XMP Profile[268376]"
     },
     {
       "apply": true,
-      "offset": 268425
+      "offset": 268425,
+      "comment": "Memory Timings Override[268220] => *suppress[268425]* => Memory Voltage[268433]"
     }
   ],
   "oneOfOptionDefaultPatches": [
@@ -80,13 +98,15 @@
       "apply": true,
       "offset": 261875,
       "default": false,
-      "manufacturingDefault": false
+      "manufacturingDefault": false,
+      "comment": "Memory Configuration[260670] => Halt on mem Training Error[261706] => Auto[261875]"
     },
     {
       "apply": true,
       "offset": 261882,
       "default": true,
-      "manufacturingDefault": true
+      "manufacturingDefault": true,
+      "comment": "Memory Configuration[260670] => Halt on mem Training Error[261706] => Disable[261882]"
     }
   ]
 }

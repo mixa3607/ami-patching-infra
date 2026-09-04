@@ -4,24 +4,28 @@
   "questions": [
     {
       "id": "Ref-000D",
+      "comment": "ACPI Settings: 1 => 5",
       "accessLevel": 5,
       "failsafe": 0,
       "optimal": 0
     },
     {
       "id": "Ref-0013",
+      "comment": "UEFI Variables Protection: 1 => 5",
       "accessLevel": 5,
       "failsafe": 0,
       "optimal": 0
     },
     {
       "id": "Ref-0015",
+      "comment": "SIO Common Setting: 1 => 5",
       "accessLevel": 5,
       "failsafe": 0,
       "optimal": 0
     },
     {
       "id": "OneOf-012A",
+      "comment": "Boot option filter: UEFI and Legacy => UEFI only",
       "failsafe": 2,
       "optimal": 2
     }
