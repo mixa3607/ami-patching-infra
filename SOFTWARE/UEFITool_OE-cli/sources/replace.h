@@ -6,7 +6,7 @@
 
 #include "manifest.h"
 
-void applyReplacements(const std::string &imagePath, const std::vector<Replacement> &items,
-                       const std::string &outputPath);
+void applyOperations(const std::string &imagePath, const std::vector<Operation> &items,
+                     const std::string &outputPath);
 
 #endif

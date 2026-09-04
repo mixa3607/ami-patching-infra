@@ -4,14 +4,23 @@
 #include <string>
 #include <vector>
 
-struct Replacement {
-    std::string name;
-    std::string guid;
+struct PathSegment {
+    std::string kind;
     std::string subtype;
-    std::string input;
-    std::string mode;
+    std::string guid;
+    bool hasIndex;
+    unsigned index;
 };
 
-std::vector<Replacement> readManifest(const std::string &path);
+struct Operation {
+    std::string name;
+    std::string action;
+    std::vector<PathSegment> path;
+    std::string input;
+    std::string inputMode;
+    std::string position;
+};
+
+std::vector<Operation> readManifest(const std::string &path, const std::string &inputDir);
 
 #endif

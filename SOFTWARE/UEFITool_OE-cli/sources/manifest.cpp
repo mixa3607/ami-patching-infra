@@ -30,10 +30,13 @@ static std::string lowerString(std::string value)
     return value;
 }
 
-static std::string manifestInputPath(const std::string &manifestPath, const std::string &input)
+static std::string manifestInputPath(const std::string &manifestPath, const std::string &input,
+                                     const std::string &inputDir)
 {
     const QFileInfo inputInfo(QString::fromStdString(input));
     if (inputInfo.isAbsolute()) return input;
+    if (!inputDir.empty())
+        return QDir(QString::fromStdString(inputDir)).absoluteFilePath(QString::fromStdString(input)).toStdString();
     return QDir(QFileInfo(QString::fromStdString(manifestPath)).absolutePath())
         .absoluteFilePath(QString::fromStdString(input)).toStdString();
 }
@@ -41,11 +44,40 @@ static std::string manifestInputPath(const std::string &manifestPath, const std:
 static std::string requiredString(const json &value, const char *field, std::size_t index)
 {
     if (!value.contains(field) || !value.at(field).is_string() || value.at(field).get<std::string>().empty())
-        throw std::runtime_error("replacement " + std::to_string(index) + " needs non-empty string " + field);
+        throw std::runtime_error("operation " + std::to_string(index) + " needs non-empty string " + field);
     return value.at(field).get<std::string>();
 }
 
-std::vector<Replacement> readManifest(const std::string &path)
+static PathSegment readPathSegment(const json &value, std::size_t operationIndex, std::size_t segmentIndex)
+{
+    if (!value.is_object())
+        throw std::runtime_error("operation " + std::to_string(operationIndex) + " path segment " + std::to_string(segmentIndex) + " must be an object");
+
+    PathSegment segment;
+    segment.kind = lowerString(requiredString(value, "kind", operationIndex));
+    segment.subtype = value.value("subtype", "");
+    segment.guid = value.value("guid", value.value("fsGuid", ""));
+    segment.hasIndex = value.contains("index");
+    segment.index = 0;
+    if (segment.hasIndex) {
+        if (!value["index"].is_number_unsigned())
+            throw std::runtime_error("operation " + std::to_string(operationIndex) + " path segment " + std::to_string(segmentIndex) + " index must be a non-negative integer");
+        segment.index = value["index"].get<unsigned>();
+    }
+    if (segment.kind != "region" && segment.kind != "volume" && segment.kind != "file" && segment.kind != "section")
+        throw std::runtime_error("operation " + std::to_string(operationIndex) + " path segment " + std::to_string(segmentIndex) + " has unsupported kind: " + segment.kind);
+    if (segment.kind == "region" || segment.kind == "section") {
+        if (segment.subtype.empty())
+            throw std::runtime_error("operation " + std::to_string(operationIndex) + " path segment " + std::to_string(segmentIndex) + " needs subtype");
+    }
+    if (segment.kind == "volume" || segment.kind == "file") {
+        if (segment.guid.empty())
+            throw std::runtime_error("operation " + std::to_string(operationIndex) + " path segment " + std::to_string(segmentIndex) + " needs " + (segment.kind == "volume" ? "fsGuid" : "guid"));
+    }
+    return segment;
+}
+
+std::vector<Operation> readManifest(const std::string &path, const std::string &inputDir)
 {
     json document;
     const std::string extension = lowerString(path.substr(path.find_last_of('.') + 1));
@@ -53,24 +85,42 @@ std::vector<Replacement> readManifest(const std::string &path)
     else { std::ifstream input(path.c_str()); if (!input) throw std::runtime_error("cannot open manifest: " + path); input >> document; }
 
     if (!document.is_object() || document.value("schema_version", 0) != 1
-        || !document.contains("replacements") || !document["replacements"].is_array()
-        || document["replacements"].empty())
-        throw std::runtime_error("manifest must contain schema_version: 1 and a non-empty replacements array");
+        || !document.contains("operations") || !document["operations"].is_array()
+        || document["operations"].empty())
+        throw std::runtime_error("manifest must contain schema_version: 1 and a non-empty operations array");
 
-    std::vector<Replacement> result;
-    for (std::size_t index = 0; index < document["replacements"].size(); ++index) {
-        const json &value = document["replacements"][index];
-        if (!value.is_object()) throw std::runtime_error("replacement " + std::to_string(index) + " must be an object");
-        Replacement item;
+    std::vector<Operation> result;
+    for (std::size_t index = 0; index < document["operations"].size(); ++index) {
+        const json &value = document["operations"][index];
+        if (!value.is_object()) throw std::runtime_error("operation " + std::to_string(index) + " must be an object");
+        Operation item;
         item.name = value.value("name", "");
-        item.guid = requiredString(value, "guid", index);
-        item.subtype = requiredString(value, "subtype", index);
-        item.input = manifestInputPath(path, requiredString(value, "input", index));
-        item.mode = value.value("mode", "body");
-        if (item.mode != "body" && item.mode != "as_is")
-            throw std::runtime_error("replacement " + std::to_string(index) + " mode must be body or as_is");
-        if (!QFileInfo(QString::fromStdString(item.input)).isFile())
-            throw std::runtime_error("replacement " + std::to_string(index) + " input is not a file: " + item.input);
+        item.action = requiredString(value, "action", index);
+        if (item.action != "replace" && item.action != "delete" && item.action != "insert")
+            throw std::runtime_error("operation " + std::to_string(index) + " action must be replace, delete, or insert");
+        if (!value.contains("path") || !value["path"].is_array() || value["path"].empty())
+            throw std::runtime_error("operation " + std::to_string(index) + " needs a non-empty path array");
+        for (std::size_t segment = 0; segment < value["path"].size(); ++segment)
+            item.path.push_back(readPathSegment(value["path"][segment], index, segment));
+        if (item.action == "delete") {
+            if (value.contains("input") || value.contains("inputMode") || value.contains("position"))
+                throw std::runtime_error("delete operation " + std::to_string(index) + " only accepts name, action, and path");
+        }
+        else {
+            item.input = manifestInputPath(path, requiredString(value, "input", index), inputDir);
+            item.inputMode = value.value("inputMode", "body");
+            if (item.inputMode != "body" && item.inputMode != "section" && item.inputMode != "file")
+                throw std::runtime_error("operation " + std::to_string(index) + " inputMode must be body, section, or file");
+            if (!QFileInfo(QString::fromStdString(item.input)).isFile())
+                throw std::runtime_error("operation " + std::to_string(index) + " input is not a file: " + item.input);
+        }
+        if (item.action == "insert") {
+            item.position = value.value("position", "append");
+            if (item.position != "append" && item.position != "prepend" && item.position != "before" && item.position != "after")
+                throw std::runtime_error("insert operation " + std::to_string(index) + " position must be append, prepend, before, or after");
+            if (item.inputMode == "body")
+                throw std::runtime_error("insert operation " + std::to_string(index) + " inputMode must be section or file");
+        }
         result.push_back(item);
     }
     return result;

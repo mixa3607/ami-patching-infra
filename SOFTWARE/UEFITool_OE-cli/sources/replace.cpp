@@ -1,15 +1,15 @@
 #include "replace.h"
 
-#include <map>
 #include <stdexcept>
+#include <vector>
 
 #include <QFile>
 #include <QFileInfo>
 #include <QTemporaryFile>
-#include <QUuid>
 
 #include "ffs.h"
 #include "ffsengine.h"
+#include "types.h"
 
 static std::string normalized(std::string value)
 {
@@ -24,35 +24,12 @@ static std::string normalized(std::string value)
     return result;
 }
 
-static UINT8 sectionType(const std::string &subtype)
+static bool matchingSubtype(const std::string &actual, const std::string &selected)
 {
-    static const std::map<std::string, UINT8> types = {
-        {"compressed", EFI_SECTION_COMPRESSION},
-        {"guid defined", EFI_SECTION_GUID_DEFINED},
-        {"disposable", EFI_SECTION_DISPOSABLE},
-        {"pe32 image", EFI_SECTION_PE32},
-        {"pic image", EFI_SECTION_PIC},
-        {"te image", EFI_SECTION_TE},
-        {"dxe dependency", EFI_SECTION_DXE_DEPEX},
-        {"version", EFI_SECTION_VERSION},
-        {"ui", EFI_SECTION_USER_INTERFACE},
-        {"16 bit image", EFI_SECTION_COMPATIBILITY16},
-        {"volume image", EFI_SECTION_FIRMWARE_VOLUME_IMAGE},
-        {"freeform subtype guid", EFI_SECTION_FREEFORM_SUBTYPE_GUID},
-        {"raw", EFI_SECTION_RAW},
-        {"pei dependency", EFI_SECTION_PEI_DEPEX},
-        {"mm dependency", EFI_SECTION_SMM_DEPEX}
-    };
-    const std::map<std::string, UINT8>::const_iterator value = types.find(normalized(subtype));
-    if (value == types.end()) throw std::runtime_error("unsupported section subtype from inspect: " + subtype);
-    return value->second;
-}
-
-static QByteArray guidBytes(const std::string &value)
-{
-    const QUuid guid(QString::fromStdString(value));
-    if (guid.isNull()) throw std::runtime_error("invalid GUID: " + value);
-    return QByteArray::fromRawData(reinterpret_cast<const char *>(&guid.data1), sizeof(EFI_GUID));
+    const std::string normalizedActual = normalized(actual);
+    const std::string normalizedSelected = normalized(selected);
+    if (normalizedActual == normalizedSelected) return true;
+    return normalizedSelected == "ui" && normalizedActual == "user interface";
 }
 
 static std::string temporaryPath(const std::string &outputPath)
@@ -67,10 +44,12 @@ static std::string temporaryPath(const std::string &outputPath)
 static std::string resultDescription(UINT8 result)
 {
     switch (result) {
-    case ERR_NOTHING_TO_PATCH: return "no matching section was replaced";
-    case ERR_NOT_IMPLEMENTED: return "Old Engine cannot replace this section body";
+    case ERR_NOTHING_TO_PATCH: return "no matching object was found";
+    case ERR_NOT_IMPLEMENTED: return "Old Engine does not support this operation for the selected object";
     case ERR_INVALID_FILE: return "invalid or corrupted firmware image";
-    case ERR_INVALID_SECTION: return "invalid replacement section";
+    case ERR_INVALID_SECTION: return "invalid section input";
+    case ERR_INVALID_PARAMETER: return "invalid operation parameters";
+    case ERR_BUFFER_TOO_SMALL: return "input is too small to contain its declared object type";
     case ERR_FILE_READ: return "cannot read input";
     case ERR_FILE_WRITE: return "cannot write output";
     default: return "Old Engine error " + std::to_string(result);
@@ -84,55 +63,150 @@ static QByteArray readFile(const std::string &path)
     return file.readAll();
 }
 
-static UINT8 replaceOne(FfsEngine &engine, TreeModel *model, const QModelIndex &index,
-                        const QByteArray &guid, UINT8 section, const QByteArray &contents, UINT8 mode)
+static bool matchesVolumeGuid(TreeModel *model, const QModelIndex &index, const std::string &guid)
 {
-    if (!model || !index.isValid()) return ERR_INVALID_PARAMETER;
-    bool patched = false;
-    if (model->subtype(index) == section) {
-        QModelIndex fileIndex = index;
-        if (model->type(index) != Types::File) fileIndex = model->findParentOfType(index, Types::File);
-        QByteArray fileGuid = model->header(fileIndex).left(sizeof(EFI_GUID));
-        bool guidMatch = fileGuid == guid;
-        if (!guidMatch && section == EFI_SECTION_FREEFORM_SUBTYPE_GUID)
-            guidMatch = model->header(index).mid(sizeof(UINT32), sizeof(EFI_GUID)) == guid;
-        if (guidMatch && model->action(index) != Actions::Replace) {
-            const UINT8 result = engine.replace(index, contents, mode);
-            if (result != ERR_SUCCESS) return result;
-            return ERR_SUCCESS;
-        }
-    }
-    for (int i = 0; i < model->rowCount(index); ++i) {
-        const UINT8 result = replaceOne(engine, model, index.child(i, 0), guid, section, contents, mode);
-        if (result == ERR_SUCCESS) return ERR_SUCCESS;
-        if (result != ERR_NOTHING_TO_PATCH) return result;
-        patched = patched || result == ERR_SUCCESS;
-    }
-    return patched ? ERR_SUCCESS : ERR_NOTHING_TO_PATCH;
+    if (normalized(model->name(index).toStdString()) == normalized(guid)) return true;
+
+    const QByteArray header = model->header(index);
+    if (header.size() < static_cast<int>(sizeof(EFI_FIRMWARE_VOLUME_HEADER))) return false;
+    const EFI_FIRMWARE_VOLUME_HEADER *volume = reinterpret_cast<const EFI_FIRMWARE_VOLUME_HEADER *>(header.constData());
+    if (volume->Revision <= 1 || volume->ExtHeaderOffset == 0
+        || header.size() < volume->ExtHeaderOffset + static_cast<int>(sizeof(EFI_FIRMWARE_VOLUME_EXT_HEADER))) return false;
+    const EFI_FIRMWARE_VOLUME_EXT_HEADER *extended = reinterpret_cast<const EFI_FIRMWARE_VOLUME_EXT_HEADER *>(header.constData() + volume->ExtHeaderOffset);
+    return normalized(guidToQString(extended->FvName).toStdString()) == normalized(guid);
 }
 
-void applyReplacements(const std::string &imagePath, const std::vector<Replacement> &items,
-                       const std::string &outputPath)
+static bool matchesSegment(TreeModel *model, const QModelIndex &index, const PathSegment &segment)
+{
+    UINT8 expectedType = Types::Root;
+    if (segment.kind == "region") expectedType = Types::Region;
+    else if (segment.kind == "volume") expectedType = Types::Volume;
+    else if (segment.kind == "file") expectedType = Types::File;
+    else if (segment.kind == "section") expectedType = Types::Section;
+    if (model->type(index) != expectedType) return false;
+
+    if (!segment.subtype.empty()
+        && !matchingSubtype(itemSubtypeToQString(model->type(index), model->subtype(index)).toStdString(), segment.subtype))
+        return false;
+
+    if (!segment.guid.empty()) {
+        if (segment.kind == "volume" && !matchesVolumeGuid(model, index, segment.guid)) return false;
+        if (segment.kind == "file" && normalized(model->name(index).toStdString()) != normalized(segment.guid)) return false;
+    }
+    return true;
+}
+
+static void findDescendants(TreeModel *model, const QModelIndex &parent, const PathSegment &segment,
+                            std::vector<QModelIndex> &matches)
+{
+    for (int row = 0; row < model->rowCount(parent); ++row) {
+        const QModelIndex child = model->index(row, 0, parent);
+        // Old Engine keeps removed nodes in the model until reconstruction.
+        if (model->action(child) == Actions::Remove) continue;
+        if (matchesSegment(model, child, segment)) matches.push_back(child);
+        findDescendants(model, child, segment, matches);
+    }
+}
+
+static void findKind(TreeModel *model, const QModelIndex &parent, UINT8 type, std::vector<QModelIndex> &matches)
+{
+    for (int row = 0; row < model->rowCount(parent); ++row) {
+        const QModelIndex child = model->index(row, 0, parent);
+        if (model->action(child) == Actions::Remove) continue;
+        if (model->type(child) == type) matches.push_back(child);
+        findKind(model, child, type, matches);
+    }
+}
+
+static QModelIndex resolvePath(TreeModel *model, const std::vector<PathSegment> &path)
+{
+    QModelIndex parent;
+    for (std::vector<PathSegment>::const_iterator segment = path.begin(); segment != path.end(); ++segment) {
+        std::vector<QModelIndex> matches;
+        findDescendants(model, parent, *segment, matches);
+        if (segment->hasIndex) {
+            if (segment->index >= matches.size()) matches.clear();
+            else {
+                const QModelIndex selected = matches[segment->index];
+                matches.clear();
+                matches.push_back(selected);
+            }
+        }
+        if (matches.size() != 1) {
+            UINT8 type = segment->kind == "region" ? Types::Region : segment->kind == "volume" ? Types::Volume
+                : segment->kind == "file" ? Types::File : Types::Section;
+            std::vector<QModelIndex> candidates;
+            findKind(model, parent, type, candidates);
+            std::string names;
+            for (std::size_t i = 0; i < candidates.size() && i < 5; ++i) {
+                if (!names.empty()) names += ", ";
+                names += model->name(candidates[i]).toStdString();
+            }
+            throw std::runtime_error("path segment " + segment->kind + " resolved to " + std::to_string(matches.size())
+                + " objects; candidates: " + names);
+        }
+        parent = matches[0];
+    }
+    return parent;
+}
+
+static std::string operationName(const Operation &item, std::size_t index)
+{
+    return item.name.empty() ? std::to_string(index) : item.name;
+}
+
+static UINT8 replaceOne(FfsEngine &engine, TreeModel *model, const QModelIndex &target, const Operation &item)
+{
+    UINT8 mode = REPLACE_MODE_BODY;
+    if (item.inputMode == "section") {
+        if (model->type(target) != Types::Section) return ERR_INVALID_PARAMETER;
+        mode = REPLACE_MODE_AS_IS;
+    }
+    else if (item.inputMode == "file") {
+        if (model->type(target) != Types::File) return ERR_INVALID_PARAMETER;
+        mode = REPLACE_MODE_AS_IS;
+    }
+    return engine.replace(target, readFile(item.input), mode);
+}
+
+static UINT8 insertOne(FfsEngine &engine, TreeModel *model, const QModelIndex &target, const Operation &item)
+{
+    UINT8 mode = CREATE_MODE_APPEND;
+    if (item.position == "prepend") mode = CREATE_MODE_PREPEND;
+    else if (item.position == "before") mode = CREATE_MODE_BEFORE;
+    else if (item.position == "after") mode = CREATE_MODE_AFTER;
+
+    const QModelIndex container = (mode == CREATE_MODE_BEFORE || mode == CREATE_MODE_AFTER) ? target.parent() : target;
+    if (!container.isValid()) return ERR_INVALID_PARAMETER;
+    if (model->type(container) == Types::Volume && item.inputMode != "file") return ERR_INVALID_PARAMETER;
+    if ((model->type(container) == Types::File || model->type(container) == Types::Section) && item.inputMode != "section") return ERR_INVALID_PARAMETER;
+    if (model->type(container) != Types::Volume && model->type(container) != Types::File && model->type(container) != Types::Section)
+        return ERR_NOT_IMPLEMENTED;
+    return engine.insert(target, readFile(item.input), mode);
+}
+
+void applyOperations(const std::string &imagePath, const std::vector<Operation> &items, const std::string &outputPath)
 {
     const QFileInfo image(QString::fromStdString(imagePath));
     const QFileInfo output(QString::fromStdString(outputPath));
     if (!image.isFile()) throw std::runtime_error("input image is not a file: " + imagePath);
     if (output.exists()) throw std::runtime_error("output already exists: " + outputPath);
 
-    const QByteArray imageData = readFile(image.absoluteFilePath().toStdString());
     FfsEngine engine;
     TreeModel *model = engine.treeModel();
-    UINT8 result = engine.parseImageFile(imageData);
+    UINT8 result = engine.parseImageFile(readFile(image.absoluteFilePath().toStdString()));
     if (result != ERR_SUCCESS) throw std::runtime_error("cannot parse input: " + resultDescription(result));
 
-    for (std::vector<Replacement>::const_iterator item = items.begin(); item != items.end(); ++item) {
-        result = replaceOne(engine, model, model->index(0, 0), guidBytes(item->guid), sectionType(item->subtype),
-            readFile(item->input), item->mode == "as_is" ? REPLACE_MODE_AS_IS : REPLACE_MODE_BODY);
-        if (result != ERR_SUCCESS) {
-            throw std::runtime_error("replacement " + (item->name.empty() ? item->guid : item->name)
-                + " failed: " + resultDescription(result));
-        }
+    for (std::size_t index = 0; index < items.size(); ++index) {
+        const Operation &item = items[index];
+        const QModelIndex target = resolvePath(model, item.path);
+        if (item.action == "replace") result = replaceOne(engine, model, target, item);
+        else if (item.action == "delete") result = engine.remove(target);
+        else result = insertOne(engine, model, target, item);
+        if (result != ERR_SUCCESS)
+            throw std::runtime_error("operation " + operationName(item, index) + " failed: " + resultDescription(result));
     }
+
     QByteArray reconstructed;
     result = engine.reconstructImageFile(reconstructed);
     if (result != ERR_SUCCESS) throw std::runtime_error("cannot reconstruct output: " + resultDescription(result));
