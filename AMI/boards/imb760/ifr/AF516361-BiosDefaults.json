@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "type": "AF516361-BiosDefaults-Map",
+  "type": "BiosDefaults-Map",
   "sourceSha256": "a83b7dd7d22ec1792d98907e1d047bc2101a709aef878d1c96766c48ebda0862",
   "sourceName": "AF516361-BiosDefaults.bin",
   "variables": [

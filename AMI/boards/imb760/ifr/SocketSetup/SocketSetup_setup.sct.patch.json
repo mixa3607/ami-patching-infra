@@ -74,5 +74,19 @@
       "apply": true,
       "offset": 268425
     }
+  ],
+  "oneOfOptionDefaultPatches": [
+    {
+      "apply": true,
+      "offset": 261875,
+      "default": false,
+      "manufacturingDefault": false
+    },
+    {
+      "apply": true,
+      "offset": 261882,
+      "default": true,
+      "manufacturingDefault": true
+    }
   ]
 }

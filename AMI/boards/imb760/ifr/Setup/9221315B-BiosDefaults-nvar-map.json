@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "type": "AF516361-BiosDefaults-Store-Map",
+  "type": "BiosDefaults-Store-Map",
   "biosDefaultsSha256": "a83b7dd7d22ec1792d98907e1d047bc2101a709aef878d1c96766c48ebda0862",
   "ifrSha256": "29a8e3ce918338b0b9f8001c17b683f10530981ccab7c8ff8bd1dba5f2d99697",
   "questionMappings": [
