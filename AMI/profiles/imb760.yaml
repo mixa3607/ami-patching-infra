@@ -98,7 +98,6 @@ mcodes:
       subtype: raw
 
 dmi:
-  table: dmi/SMBiosStaticData_body.bin
   path:
     - kind: region
       subtype: bios

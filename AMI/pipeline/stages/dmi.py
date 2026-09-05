@@ -16,18 +16,20 @@ def run(context: BuildContext) -> Path:
     if not isinstance(config, dict):
         raise ValueError("board profile field 'dmi' must be a mapping")
     try:
-        table = context.board_dir / str(config["table"])
         path = config["path"]
         vendor_suffix = str(config["vendor_suffix"])
         version_suffix = str(config["version_suffix"]).format(version=context.version)
     except KeyError as error:
         raise ValueError(f"board profile dmi config is missing '{error.args[0]}'") from error
 
-    require_file(table, "SMBIOS table")
     tool = context.repo_root / "SOFTWARE" / "uefi-mod-tools" / "uefi-mod-tools"
+    ne_tool = context.repo_root / "SOFTWARE" / "UEFITool_NE-cli" / "uefitool-ne-cli"
     require_file(tool, "uefi-mod-tools")
+    require_file(ne_tool, "uefitool-ne-cli")
     output = context.build_dir / "10-dmi.rom"
     work_dir = context.work_dir / "dmi"
+    extract_manifest = work_dir / "extract.json"
+    table = work_dir / "table-source.bin"
     table_json = work_dir / "table.json"
     bios_json = work_dir / "bios.json"
     patched_bios_json = work_dir / "bios-patched.json"
@@ -38,6 +40,14 @@ def run(context: BuildContext) -> Path:
     if not context.dry_run:
         work_dir.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(context.current_rom, output)
+
+    extraction = {
+        "schema_version": 1,
+        "outputs": [{"path": path, "output": table.name, "outputMode": "body"}],
+    }
+    if not context.dry_run:
+        extract_manifest.write_text(json.dumps(extraction, indent=2) + "\n")
+    run_command([str(ne_tool), "extract", str(output), str(extract_manifest), str(work_dir)], dry_run=context.dry_run)
 
     run_command([str(tool), "smbios", "table2json", "--input", str(table), "--output", str(table_json)], dry_run=context.dry_run)
     if not context.dry_run:
