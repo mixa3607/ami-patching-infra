@@ -23,7 +23,7 @@ STAGES = {
     "dmi": Stage("dmi", ("prepare",), dmi.run, ready=True),
     "logos": Stage("logos", ("prepare",), logos.run, ready=True),
     "nvar-defaults": Stage("nvar-defaults", ("logos",), nvar_defaults.run, ready=True),
-    "setup-data": Stage("setup-data", ("prepare",), setup_data.run, ready=True),
+    "setup-data": Stage("setup-data", ("nvar-defaults",), setup_data.run, ready=True),
     "sct": Stage("sct", ("setup-data",), sct.run, ready=True),
     "nvram-erase": Stage("nvram-erase", ("prepare",), nvram_erase.run, ready=True, dangerous=True),
     "mcodes": Stage("mcodes", ("prepare",), mcodes.run, ready=True),

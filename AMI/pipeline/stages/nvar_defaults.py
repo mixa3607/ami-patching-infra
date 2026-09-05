@@ -37,7 +37,7 @@ def run(context: BuildContext) -> Path:
     require_file(ifr_tool, "IFR extractor")
     require_file(tool, "uefi-mod-tools")
 
-    output = context.build_dir / "37-nvar-defaults.rom"
+    output = context.build_dir / "30-nvar-defaults.rom"
     work_dir = context.work_dir / "nvar-defaults"
     extract_manifest = work_dir / "extract.json"
     extract_dir = work_dir / "extracted"

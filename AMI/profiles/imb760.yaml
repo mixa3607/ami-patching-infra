@@ -46,40 +46,40 @@ logos:
 mcodes:
   catalog: MCODES
   use_microcodes:
-      # ============= cpu606A0 =============
-      # - "cpu606A0_plat97_ver0000001F_2019-07-22_PRD_776B0020.bin"
-    
-      # cpu606A4
-      - "cpu606A4_plat87_ver0B000280_2020-08-17_PRD_5E6AE35E.bin"
-    
-      # ============= cpu606A5 =============
-      # - "cpu606A5_plat87_ver0C0002B0_2020-12-24_PRD_51A81CBB.bin"
-      - "cpu606A5_plat87_ver0C0002F0_2021-03-08_PRD_F6B24822.bin"
-    
-      # ============= cpu606A6 =============
-      # - "cpu606A6_plat87_ver0D000250_2021-02-23_PRD_267751D3.bin"
-      # - "cpu606A6_plat87_ver0D000280_2021-03-31_PRD_3F4FD9F3.bin"
-      # - "cpu606A6_plat87_ver0D0002A0_2021-04-25_PRD_5D6CD5AA.bin"
-      # - "cpu606A6_plat87_ver0D0002B1_2021-05-13_PRD_496BAB22.bin"
-      # - "cpu606A6_plat87_ver0D0002C1_2021-05-27_PRD_E5421921.bin"
-      # - "cpu606A6_plat87_ver0D0002D0_2021-06-25_PRD_886F1017.bin"
-      # - "cpu606A6_plat87_ver0D0002E0_2021-07-27_PRD_DA008C96.bin"
-      # - "cpu606A6_plat87_ver0D000311_2021-09-17_PRD_AD1D5C41.bin"
-      # - "cpu606A6_plat87_ver0D000331_2021-12-03_PRD_85C35E65.bin"
-      # - "cpu606A6_plat87_ver0D000332_2021-12-17_PRD_758A1074.bin"
-      # - "cpu606A6_plat87_ver0D000363_2022-03-30_PRD_C92D5693.bin"
-      # - "cpu606A6_plat87_ver0D000375_2022-04-07_PRD_8049F953.bin"
-      # - "cpu606A6_plat87_ver0D00037B_2022-08-26_PRD_ECA7C0CD.bin"
-      # - "cpu606A6_plat87_ver0D000389_2022-10-09_PRD_C61EAEB0.bin"
-      # - "cpu606A6_plat87_ver0D000390_2022-12-28_PRD_1A808350.bin"
-      # - "cpu606A6_plat87_ver0D0003A5_2023-03-30_PRD_9B6921E3.bin"
-      # - "cpu606A6_plat87_ver0D0003B9_2023-09-01_PRD_58DE18CF.bin"
-      # - "cpu606A6_plat87_ver0D0003D1_2023-09-14_PRD_3860542C.bin"
-      # - "cpu606A6_plat87_ver0D0003E7_2024-04-01_PRD_D7026D0B.bin"
-      # - "cpu606A6_plat87_ver0D0003F5_2024-08-02_PRD_E8C8711F.bin"
-      # - "cpu606A6_plat87_ver0D000404_2025-01-07_PRD_6C279F25.bin"
-      # - "cpu606A6_plat87_ver0D000410_2025-03-11_PRD_B0A1AA91.bin"
-      - "cpu606A6_plat87_ver0D000421_2025-08-19_PRD_282B901A.bin"
+    # ============= cpu606A0 =============
+    # - "cpu606A0_plat97_ver0000001F_2019-07-22_PRD_776B0020.bin"
+
+    # cpu606A4
+    - "cpu606A4_plat87_ver0B000280_2020-08-17_PRD_5E6AE35E.bin"
+
+    # ============= cpu606A5 =============
+    # - "cpu606A5_plat87_ver0C0002B0_2020-12-24_PRD_51A81CBB.bin"
+    - "cpu606A5_plat87_ver0C0002F0_2021-03-08_PRD_F6B24822.bin"
+
+    # ============= cpu606A6 =============
+    # - "cpu606A6_plat87_ver0D000250_2021-02-23_PRD_267751D3.bin"
+    # - "cpu606A6_plat87_ver0D000280_2021-03-31_PRD_3F4FD9F3.bin"
+    # - "cpu606A6_plat87_ver0D0002A0_2021-04-25_PRD_5D6CD5AA.bin"
+    # - "cpu606A6_plat87_ver0D0002B1_2021-05-13_PRD_496BAB22.bin"
+    # - "cpu606A6_plat87_ver0D0002C1_2021-05-27_PRD_E5421921.bin"
+    # - "cpu606A6_plat87_ver0D0002D0_2021-06-25_PRD_886F1017.bin"
+    # - "cpu606A6_plat87_ver0D0002E0_2021-07-27_PRD_DA008C96.bin"
+    # - "cpu606A6_plat87_ver0D000311_2021-09-17_PRD_AD1D5C41.bin"
+    # - "cpu606A6_plat87_ver0D000331_2021-12-03_PRD_85C35E65.bin"
+    # - "cpu606A6_plat87_ver0D000332_2021-12-17_PRD_758A1074.bin"
+    # - "cpu606A6_plat87_ver0D000363_2022-03-30_PRD_C92D5693.bin"
+    # - "cpu606A6_plat87_ver0D000375_2022-04-07_PRD_8049F953.bin"
+    # - "cpu606A6_plat87_ver0D00037B_2022-08-26_PRD_ECA7C0CD.bin"
+    # - "cpu606A6_plat87_ver0D000389_2022-10-09_PRD_C61EAEB0.bin"
+    # - "cpu606A6_plat87_ver0D000390_2022-12-28_PRD_1A808350.bin"
+    # - "cpu606A6_plat87_ver0D0003A5_2023-03-30_PRD_9B6921E3.bin"
+    # - "cpu606A6_plat87_ver0D0003B9_2023-09-01_PRD_58DE18CF.bin"
+    # - "cpu606A6_plat87_ver0D0003D1_2023-09-14_PRD_3860542C.bin"
+    # - "cpu606A6_plat87_ver0D0003E7_2024-04-01_PRD_D7026D0B.bin"
+    # - "cpu606A6_plat87_ver0D0003F5_2024-08-02_PRD_E8C8711F.bin"
+    # - "cpu606A6_plat87_ver0D000404_2025-01-07_PRD_6C279F25.bin"
+    # - "cpu606A6_plat87_ver0D000410_2025-03-11_PRD_B0A1AA91.bin"
+    - "cpu606A6_plat87_ver0D000421_2025-08-19_PRD_282B901A.bin"
   container_path:
     - kind: region
       subtype: bios
@@ -117,6 +117,19 @@ dmi:
       subtype: freeform subtype guid
   vendor_suffix: "; patched by mixa3607"
   version_suffix: "; patch {version}"
+
+setup_data:
+  patch: "ifr/{sct}/SetupData.patch.json"
+  path:
+    - kind: region
+      subtype: bios
+    - kind: volume
+      fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+    - kind: file
+      guid: FE612B72-203C-47B1-8560-A66D946EB371
+      subtype: freeform
+    - kind: section
+      subtype: freeform subtype guid
 
 sct:
   sct_paths:
@@ -179,7 +192,7 @@ sct:
 nvar_defaults:
   nvar_sources:
     - name: AF516361-BiosDefaults
-      patch: 'ifr/{sct}/{name}-nvar-patch.json'
+      patch: "ifr/{sct}/{name}-nvar-patch.json"
       path:
         - kind: region
           subtype: bios
@@ -191,7 +204,7 @@ nvar_defaults:
         - kind: section
           subtype: raw
     - name: 9221315B-BiosDefaults
-      patch: 'ifr/{sct}/{name}-nvar-patch.json'
+      patch: "ifr/{sct}/{name}-nvar-patch.json"
       path:
         - kind: region
           subtype: bios

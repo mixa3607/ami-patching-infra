@@ -25,7 +25,7 @@ def run(context: BuildContext) -> Path:
 
     tool = context.repo_root / "SOFTWARE" / "uefi-mod-tools" / "uefi-mod-tools"
     require_file(tool, "uefi-mod-tools")
-    output = context.build_dir / "35-sct.rom"
+    output = context.build_dir / "40-sct.rom"
     work_dir = context.work_dir / "sct"
 
     print(f"Patching SCT in {context.current_rom} -> {output}")
