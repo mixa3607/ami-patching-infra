@@ -5,7 +5,7 @@ from pathlib import Path
 import shutil
 
 from ..context import BuildContext
-from ..helpers import require_file, run as run_command, section_type, uefi_replace
+from ..helpers import require_file, run as run_command, uefi_apply
 
 
 def run(context: BuildContext) -> Path:
@@ -17,8 +17,7 @@ def run(context: BuildContext) -> Path:
         raise ValueError("board profile field 'dmi' must be a mapping")
     try:
         table = context.board_dir / str(config["table"])
-        guid = str(config["file_guid"])
-        replacement_section = section_type(config["section_type"])
+        path = config["path"]
         vendor_suffix = str(config["vendor_suffix"])
         version_suffix = str(config["version_suffix"]).format(version=context.version)
     except KeyError as error:
@@ -65,5 +64,5 @@ def run(context: BuildContext) -> Path:
         dry_run=context.dry_run,
     )
     run_command([str(tool), "smbios", "json2table", "--input", str(patched_table_json), "--output", str(patched_table)], dry_run=context.dry_run)
-    uefi_replace(context, output, guid, replacement_section, patched_table)
+    uefi_apply(context, output, path, patched_table, input_mode="body")
     return output

@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import subprocess
 from typing import TYPE_CHECKING
+from uuid import uuid4
 
 import yaml
 
@@ -72,25 +73,44 @@ def write_manifest(context: BuildContext) -> None:
     (context.build_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
 
 
-def section_type(value: object) -> str:
-    return f"0x{value:02X}" if isinstance(value, int) else str(value)
-
-
-def uefi_replace(
-    context: BuildContext, rom: Path, guid: str, section: str, replacement: Path, *, as_is: bool = False
+def uefi_apply(
+    context: BuildContext, rom: Path, path: object, replacement: Path, *, input_mode: str
 ) -> None:
-    tool = context.repo_root / "SOFTWARE" / "UEFITool_0.28.0" / "UEFIReplace"
-    require_file(tool, "UEFIReplace")
-    command = [str(tool), str(rom), guid, section, str(replacement)]
-    if as_is:
-        command.append("-asis")
-    command.extend(("-o", str(rom)))
+    if not isinstance(path, list) or not path:
+        raise ValueError("UEFI target path must be a non-empty list")
+    if input_mode not in ("body", "section"):
+        raise ValueError("UEFI input mode must be body or section")
+
+    tool = context.repo_root / "SOFTWARE" / "UEFITool_OE-cli" / "uefitool-oe-cli"
+    require_file(tool, "uefitool-oe-cli")
+
+    work_dir = context.work_dir / "uefi-oe"
+    token = uuid4().hex
+    manifest = work_dir / f"{rom.stem}-{token}.yaml"
+    temporary_output = rom.with_name(f".{rom.name}.{token}.tmp")
+    document = {
+        "schema_version": 1,
+        "operations": [{
+            "name": replacement.name,
+            "action": "replace",
+            "path": path,
+            "input": str(replacement.resolve()),
+            "inputMode": input_mode,
+        }],
+    }
+    command = [str(tool), "apply", str(rom), str(manifest), str(temporary_output)]
     print("+", " ".join(command))
     if context.dry_run:
         return
-    result = subprocess.run(command, check=False)
-    if result.returncode not in (0, 41):
-        raise subprocess.CalledProcessError(result.returncode, result.args)
+
+    require_file(replacement, "UEFI replacement input")
+    work_dir.mkdir(parents=True, exist_ok=True)
+    manifest.write_text(yaml.safe_dump(document, sort_keys=False))
+    try:
+        subprocess.run(command, check=True)
+        temporary_output.replace(rom)
+    finally:
+        temporary_output.unlink(missing_ok=True)
 
 
 def pending(stage: str) -> Path:

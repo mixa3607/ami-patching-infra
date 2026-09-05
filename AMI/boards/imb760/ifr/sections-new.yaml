@@ -98,6 +98,7 @@ outputs:
         subtype: raw
     output: AF516361-BiosDefaults.bin
     outputMode: body
+    defaults: true
 
   - name: 9221315B-BiosDefaults
     path:
@@ -123,3 +124,4 @@ outputs:
         subtype: raw
     output: 9221315B-BiosDefaults.bin
     outputMode: body
+    defaults: true

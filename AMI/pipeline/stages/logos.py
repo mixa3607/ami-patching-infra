@@ -5,7 +5,7 @@ from pathlib import Path
 import shutil
 
 from ..context import BuildContext
-from ..helpers import require_file, run as run_command, uefi_replace
+from ..helpers import require_file, run as run_command, uefi_apply
 
 
 def run(context: BuildContext) -> Path:
@@ -28,18 +28,15 @@ def run(context: BuildContext) -> Path:
     for logo in logo_specs:
         if not isinstance(logo, dict):
             raise ValueError("board profile logo entries must be objects")
-        guid = logo["guid"]
         point_size = str(logo["point_size"])
-        if not isinstance(guid, str):
-            raise ValueError("board profile logo GUID must be a string")
         source = context.board_dir / str(logo["source"])
-        rendered = logos_work_dir / f"{guid}.bmp"
+        rendered = logos_work_dir / source.name
         require_file(source, "logo source")
         command = ["convert", str(source), "-gravity", "NorthWest", "-pointsize", point_size, "-fill", "white"]
         if font_name:
             command.extend(("-font", font_name))
         command.extend(("-annotate", "-0-3", annotation, f"BMP3:{rendered}"))
         run_command(command, dry_run=context.dry_run)
-        uefi_replace(context, output, guid, "0x19", rendered)
+        uefi_apply(context, output, logo["path"], rendered, input_mode="body")
 
     return output

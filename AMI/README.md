@@ -11,8 +11,7 @@ Features:
 
 - Extract board-local IFR sources with `./01.extract-ifr.sh` when updating the
   base BIOS dump.
-- Edit form patches under `boards/imb760/ifr/`; `99.run-ifr-editor.sh FORM`
-  serves a form in the current IFR renderer.
+- Edit form patches under `boards/imb760/ifr/`.
 - Run `python3 build.py` to create checkpoints for DMI, logos, IFR, microcodes,
   and the BIOS State Lab bridge under `build/<version>/`.
 - Flash the final ROM from `build/<version>/`.
@@ -41,4 +40,3 @@ Features:
   - Memory Configuration
     - ✅ Memory Frequency | но не оверклок частоты (оно и понятно)
     - ✅ Memory Topology
-

@@ -4,7 +4,7 @@ from pathlib import Path
 import shutil
 
 from ..context import BuildContext
-from ..helpers import load_yaml, require_file, run as run_command, section_type, uefi_replace
+from ..helpers import load_yaml, require_file, run as run_command, uefi_apply
 
 
 def run(context: BuildContext) -> Path:
@@ -16,10 +16,10 @@ def run(context: BuildContext) -> Path:
         raise ValueError("board profile field 'ifr.manifest' is required")
     ifr_root = context.board_dir / "ifr"
     manifest = load_yaml(ifr_root / str(config["manifest"]), "IFR sections manifest")
-    sections = manifest.get("sections")
-    if not isinstance(sections, list):
-        raise ValueError("IFR sections manifest field 'sections' must be a list")
-    forms = [section for section in sections if section.get("outputMode") == "section"]
+    outputs = manifest.get("outputs")
+    if not isinstance(outputs, list):
+        raise ValueError("IFR extraction manifest field 'outputs' must be a list")
+    forms = [section for section in outputs if section.get("outputMode") == "section"]
     if not forms:
         raise ValueError("IFR sections manifest must define form sections")
 
@@ -36,7 +36,7 @@ def run(context: BuildContext) -> Path:
     for form in forms:
         name = str(form["name"])
         source = ifr_root / str(form["output"])
-        ifr_json = ifr_root / str(form["ifrJson"])
+        ifr_json = ifr_root / f"{form['output']}.0.0.uefi.ifr.json"
         patch = source.with_name(f"{source.name}.patch.json")
         patched_sct = work_dir / f"{name}.sct"
         for path, description in ((source, f"{name} clean SCT"), (ifr_json, f"{name} IFR JSON"), (patch, f"{name} SCT patch")):
@@ -49,5 +49,5 @@ def run(context: BuildContext) -> Path:
             ],
             dry_run=context.dry_run,
         )
-        uefi_replace(context, output, str(form["fileGuid"]), section_type(form["sectionType"]), patched_sct, as_is=True)
+        uefi_apply(context, output, form["path"], patched_sct, input_mode="section")
     return output

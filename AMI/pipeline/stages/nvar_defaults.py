@@ -5,7 +5,7 @@ from pathlib import Path
 import shutil
 
 from ..context import BuildContext
-from ..helpers import load_yaml, require_file, run as run_command, section_type, uefi_replace
+from ..helpers import load_yaml, require_file, run as run_command, uefi_apply
 
 
 def run(context: BuildContext) -> Path:
@@ -17,11 +17,11 @@ def run(context: BuildContext) -> Path:
         raise ValueError("board profile field 'ifr.manifest' is required")
     ifr_root = context.board_dir / "ifr"
     manifest = load_yaml(ifr_root / str(config["manifest"]), "IFR sections manifest")
-    sections = manifest.get("sections")
-    if not isinstance(sections, list):
-        raise ValueError("IFR sections manifest field 'sections' must be a list")
-    defaults = [section for section in sections if section.get("defaults") is True]
-    forms = [section for section in sections if section.get("outputMode") == "section"]
+    outputs = manifest.get("outputs")
+    if not isinstance(outputs, list):
+        raise ValueError("IFR extraction manifest field 'outputs' must be a list")
+    defaults = [section for section in outputs if section.get("defaults") is True]
+    forms = [section for section in outputs if section.get("outputMode") == "section"]
     if not defaults or not forms:
         raise ValueError("IFR sections manifest must define defaults sections and form sections")
 
@@ -51,7 +51,7 @@ def run(context: BuildContext) -> Path:
         changed = False
         for form in forms:
             name = str(form["name"])
-            ifr_json = ifr_root / str(form["ifrJson"])
+            ifr_json = ifr_root / f"{form['output']}.0.0.uefi.ifr.json"
             patch = ifr_root / Path(str(form["output"])).parent / f"{defaults_name}-nvar-patch.json"
             require_file(ifr_json, f"{name} IFR JSON")
             require_file(patch, f"{name} {defaults_name} patch")
@@ -81,11 +81,5 @@ def run(context: BuildContext) -> Path:
             patched_defaults = next_defaults
             changed = True
 
-        uefi_replace(
-            context,
-            output,
-            str(defaults_section["fileGuid"]),
-            section_type(defaults_section["sectionType"]),
-            patched_defaults,
-        )
+        uefi_apply(context, output, defaults_section["path"], patched_defaults, input_mode="body")
     return output

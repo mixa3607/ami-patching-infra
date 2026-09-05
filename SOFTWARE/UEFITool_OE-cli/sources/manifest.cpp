@@ -60,7 +60,7 @@ static PathSegment readPathSegment(const json &value, std::size_t operationIndex
     segment.hasIndex = value.contains("index");
     segment.index = 0;
     if (segment.hasIndex) {
-        if (!value["index"].is_number_unsigned())
+        if (!value["index"].is_number_integer() || value["index"].get<long long>() < 0)
             throw std::runtime_error("operation " + std::to_string(operationIndex) + " path segment " + std::to_string(segmentIndex) + " index must be a non-negative integer");
         segment.index = value["index"].get<unsigned>();
     }

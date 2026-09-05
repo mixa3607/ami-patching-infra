@@ -4,7 +4,7 @@ from pathlib import Path
 import shutil
 
 from ..context import BuildContext
-from ..helpers import load_yaml, require_file, run as run_command, section_type, uefi_replace
+from ..helpers import load_yaml, require_file, run as run_command, uefi_apply
 
 
 def run(context: BuildContext) -> Path:
@@ -16,12 +16,12 @@ def run(context: BuildContext) -> Path:
         raise ValueError("board profile field 'ifr.manifest' is required")
     ifr_root = context.board_dir / "ifr"
     manifest = load_yaml(ifr_root / str(config["manifest"]), "IFR sections manifest")
-    sections = manifest.get("sections")
-    if not isinstance(sections, list):
-        raise ValueError("IFR sections manifest field 'sections' must be a list")
+    outputs = manifest.get("outputs")
+    if not isinstance(outputs, list):
+        raise ValueError("IFR extraction manifest field 'outputs' must be a list")
 
-    setup_data = next((section for section in sections if section.get("name") == "SetupData"), None)
-    forms = [section for section in sections if section.get("outputMode") == "section"]
+    setup_data = next((section for section in outputs if section.get("name") == "SetupData"), None)
+    forms = [section for section in outputs if section.get("outputMode") == "section"]
     if not isinstance(setup_data, dict) or not forms:
         raise ValueError("IFR sections manifest must define SetupData and form sections")
 
@@ -40,7 +40,7 @@ def run(context: BuildContext) -> Path:
     patched_setup_data = clean_setup_data
     for form in forms:
         name = str(form["name"])
-        ifr_json = ifr_root / str(form["ifrJson"])
+        ifr_json = ifr_root / f"{form['output']}.0.0.uefi.ifr.json"
         patch = ifr_root / Path(str(form["output"])).parent / "SetupData.patch.json"
         for path, description in ((ifr_json, f"{name} IFR JSON"), (patch, f"{name} SetupData patch")):
             require_file(path, description)
@@ -64,11 +64,5 @@ def run(context: BuildContext) -> Path:
         )
         patched_setup_data = next_setup_data
 
-    uefi_replace(
-        context,
-        output,
-        str(setup_data["fileGuid"]),
-        section_type(setup_data["sectionType"]),
-        patched_setup_data,
-    )
+    uefi_apply(context, output, setup_data["path"], patched_setup_data, input_mode="body")
     return output

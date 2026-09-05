@@ -4,7 +4,7 @@ from pathlib import Path
 import shutil
 
 from ..context import BuildContext
-from ..helpers import require_file, run as run_command, uefi_replace
+from ..helpers import require_file, run as run_command, uefi_apply
 
 
 def run(context: BuildContext) -> Path:
@@ -20,9 +20,8 @@ def run(context: BuildContext) -> Path:
         table = context.board_dir / str(config["table"])
         fit = context.board_dir / str(config["fit"])
         catalog = context.repo_root / str(config["catalog"])
-        container_guid = str(config["container_guid"])
-        fit_guid = str(config["fit_guid"])
-        section_type = str(config["section_type"])
+        container_path = config["container_path"]
+        fit_path = config["fit_path"]
     except KeyError as error:
         raise ValueError(f"board profile mcodes config is missing '{error.args[0]}'") from error
 
@@ -47,10 +46,10 @@ def run(context: BuildContext) -> Path:
         [str(tool), "uefi", "mcodes-combine", "--input", str(base), "--table", str(table), "--mcodes", str(catalog), "--output", str(microcodes)],
         dry_run=context.dry_run,
     )
-    uefi_replace(context, output, container_guid, section_type, microcodes)
+    uefi_apply(context, output, container_path, microcodes, input_mode="body")
     run_command(
         [str(tool), "uefi", "fit-inject-mcodes", "--input", str(fit), "--table", str(table), "--mcodes", str(catalog), "--output", str(patched_fit)],
         dry_run=context.dry_run,
     )
-    uefi_replace(context, output, fit_guid, section_type, patched_fit)
+    uefi_apply(context, output, fit_path, patched_fit, input_mode="body")
     return output

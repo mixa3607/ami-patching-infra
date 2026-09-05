@@ -4,7 +4,7 @@ from pathlib import Path
 import shutil
 
 from ..context import BuildContext
-from ..helpers import require_file, run as run_command, section_type, uefi_replace
+from ..helpers import require_file, run as run_command, uefi_apply
 
 
 def run(context: BuildContext) -> Path:
@@ -17,8 +17,7 @@ def run(context: BuildContext) -> Path:
     try:
         component = context.ami_dir / str(config["component"])
         efi_name = str(config["efi"])
-        guid = str(config["file_guid"])
-        replacement_section = section_type(config["section_type"])
+        path = config["path"]
     except KeyError as error:
         raise ValueError(f"board profile bridge config is missing '{error.args[0]}'") from error
 
@@ -39,5 +38,5 @@ def run(context: BuildContext) -> Path:
     )
     if not context.dry_run:
         require_file(bridge_efi, "built bridge EFI")
-    uefi_replace(context, output, guid, replacement_section, bridge_efi)
+    uefi_apply(context, output, path, bridge_efi, input_mode="body")
     return output

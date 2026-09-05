@@ -2,37 +2,114 @@ board_root: boards/imb760
 base_dump: base/IMB760_BIOS.bin
 rom_prefix: IMB760_BIOS_AMI_mixa3607_mod
 logos:
-  - guid: 7BB28B99-61BB-11D5-9A5D-0090273FC14D
-    source: logos/7BB28B99-61BB-11D5-9A5D-0090273FC14D.bmp
+  - source: logos/7BB28B99-61BB-11D5-9A5D-0090273FC14D.bmp
     point_size: 30
-  - guid: 63819805-67BB-46EF-AA8D-1524A19A01E4
-    source: logos/63819805-67BB-46EF-AA8D-1524A19A01E4.bmp
+    path:
+      - kind: region
+        subtype: bios
+      - kind: volume
+        fsGuid: 4F1C52D3-D824-4D2A-A2F0-EC40C23C5916
+      - kind: file
+        guid: 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792
+      - kind: section
+        subtype: guid defined
+        index: 0
+      - kind: volume
+        fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+      - kind: file
+        guid: 7BB28B99-61BB-11D5-9A5D-0090273FC14D
+        subtype: freeform
+      - kind: section
+        subtype: guid defined
+      - kind: section
+        subtype: raw
+  - source: logos/63819805-67BB-46EF-AA8D-1524A19A01E4.bmp
     point_size: 20
+    path:
+      - kind: region
+        subtype: bios
+      - kind: volume
+        fsGuid: 4F1C52D3-D824-4D2A-A2F0-EC40C23C5916
+      - kind: file
+        guid: 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792
+      - kind: section
+        subtype: guid defined
+        index: 0
+      - kind: volume
+        fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+      - kind: file
+        guid: 63819805-67BB-46EF-AA8D-1524A19A01E4
+        subtype: freeform
+      - kind: section
+        subtype: raw
 
 mcodes:
   base: mcodes/microcodes_base.bin
   table: mcodes/microcodes.json
   fit: mcodes/FIT_table_base.bin
   catalog: MCODES
-  container_guid: 17088572-377F-44EF-8F4E-B09FFF46A070
-  fit_guid: B52282EE-9B66-44B9-B1CF-7E5040F787C1
-  section_type: "0x01"
+  container_path:
+    - kind: region
+      subtype: bios
+    - kind: volume
+      fsGuid: 39DAA42C-87CA-4632-8AF3-1EB3D2A2D855
+    - kind: file
+      guid: 17088572-377F-44EF-8F4E-B09FFF46A070
+      subtype: raw
+  fit_path:
+    - kind: region
+      subtype: bios
+    - kind: volume
+      fsGuid: 61C0F511-A691-4F54-974F-B9A42172CE53
+    - kind: file
+      guid: B52282EE-9B66-44B9-B1CF-7E5040F787C1
+      subtype: raw
 
 dmi:
   table: dmi/SMBiosStaticData_body.bin
-  file_guid: DAF4BF89-CE71-4917-B522-C89D32FBC59F
-  section_type: "0x18"
+  path:
+    - kind: region
+      subtype: bios
+    - kind: volume
+      fsGuid: 4F1C52D3-D824-4D2A-A2F0-EC40C23C5916
+    - kind: file
+      guid: 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792
+    - kind: section
+      subtype: guid defined
+      index: 0
+    - kind: volume
+      fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+    - kind: file
+      guid: DAF4BF89-CE71-4917-B522-C89D32FBC59F
+      subtype: freeform
+    - kind: section
+      subtype: freeform subtype guid
   vendor_suffix: "; patched by mixa3607"
   version_suffix: "; patch {version}"
 
 ifr:
-  manifest: sections.yaml
+  manifest: sections-new.yaml
 
 bridge:
   component: components/bios-state-lab-bridge
   efi: BiosStateLabBridge.efi
-  file_guid: D4395796-6F4C-4C6B-B9D1-92DAA7199A84
-  section_type: "0x10"
+  path:
+    - kind: region
+      subtype: bios
+    - kind: volume
+      fsGuid: 4F1C52D3-D824-4D2A-A2F0-EC40C23C5916
+    - kind: file
+      guid: 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792
+    - kind: section
+      subtype: guid defined
+      index: 0
+    - kind: volume
+      fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+    - kind: file
+      guid: D4395796-6F4C-4C6B-B9D1-92DAA7199A84
+      subtype: dxe driver
+    - kind: section
+      subtype: pe32 image
 
 nvram_erase:
   entry_ids:
