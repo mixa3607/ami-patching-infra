@@ -118,6 +118,102 @@ dmi:
   vendor_suffix: "; patched by mixa3607"
   version_suffix: "; patch {version}"
 
+sct:
+  sct_paths:
+    - name: FpgaSocketSetup
+      path:
+        - kind: region
+          subtype: bios
+        - kind: volume
+          fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+        - kind: file
+          guid: BCEA6548-E204-4486-8F2A-36E13C7838CE
+          subtype: dxe_driver
+        - kind: section
+          subtype: pe32 image
+    - name: Platform
+      path:
+        - kind: region
+          subtype: bios
+        - kind: volume
+          fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+        - kind: file
+          guid: ABBCE13D-E25A-4D9F-A1F9-2F7710786892
+          subtype: dxe_driver
+        - kind: section
+          subtype: pe32 image
+    - name: ServerMgmtSetup
+      path:
+        - kind: region
+          subtype: bios
+        - kind: volume
+          fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+        - kind: file
+          guid: 1B08A1DB-F91A-4FA1-A911-255C417F1CF7
+          subtype: dxe_driver
+        - kind: section
+          subtype: pe32 image
+    - name: Setup
+      path:
+        - kind: region
+          subtype: bios
+        - kind: volume
+          fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+        - kind: file
+          guid: 899407D7-99FE-43D8-9A21-79EC328CAC21
+          subtype: dxe_driver
+        - kind: section
+          subtype: pe32 image
+    - name: SocketSetup
+      path:
+        - kind: region
+          subtype: bios
+        - kind: volume
+          fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+        - kind: file
+          guid: 6B6FD380-2C55-42C6-98BF-CBBC5A9AA666
+          subtype: dxe_driver
+        - kind: section
+          subtype: pe32 image
+
+nvar_defaults:
+  nvar_sources:
+    - name: AF516361-BiosDefaults
+      patch: 'ifr/{sct}/{name}-nvar-patch.json'
+      path:
+        - kind: region
+          subtype: bios
+        - kind: volume
+          fsGuid: 61C0F511-A691-4F54-974F-B9A42172CE53
+        - kind: file
+          guid: AF516361-B4C5-436E-A7E3-A149A31B1461
+          subtype: freeform
+        - kind: section
+          subtype: raw
+    - name: 9221315B-BiosDefaults
+      patch: 'ifr/{sct}/{name}-nvar-patch.json'
+      path:
+        - kind: region
+          subtype: bios
+        - kind: volume
+          fsGuid: 4F1C52D3-D824-4D2A-A2F0-EC40C23C5916
+        - kind: file
+          guid: 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792
+          subtype: volume image
+        - kind: section
+          subtype: guid defined
+          index: 0
+        - kind: volume
+          fsGuid: 5C60F367-A505-419A-859E-2A4FF6CA6FE5
+        - kind: file
+          guid: 9221315B-30BB-46B5-813E-1B1BF4712BD3
+          subtype: freeform
+        - kind: section
+          subtype: guid defined
+          index: 0
+        - kind: section
+          subtype: raw
+
 ifr:
   manifest: sections-new.yaml
 
