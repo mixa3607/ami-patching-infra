@@ -119,7 +119,7 @@ dmi:
   version_suffix: "; patch {version}"
 
 setup_data:
-  patch: "ifr/{sct}/SetupData.patch.json"
+  patch: "patches/setup-data/{sct}/SetupData.patch.json"
   path:
     - kind: region
       subtype: bios
@@ -132,7 +132,7 @@ setup_data:
       subtype: freeform subtype guid
 
 sct:
-  patch: "ifr/{sct}/{sct}_setup.sct.patch.json"
+  patch: "patches/sct/{sct}/{sct}_setup.sct.patch.json"
   sct_paths:
     - name: FpgaSocketSetup
       path:
@@ -193,7 +193,7 @@ sct:
 nvar_defaults:
   nvar_sources:
     - name: AF516361-BiosDefaults
-      patch: "ifr/{sct}/{name}-nvar-patch.json"
+      patch: "patches/nvar-defaults/{sct}/{name}-nvar-patch.json"
       path:
         - kind: region
           subtype: bios
@@ -205,7 +205,7 @@ nvar_defaults:
         - kind: section
           subtype: raw
     - name: 9221315B-BiosDefaults
-      patch: "ifr/{sct}/{name}-nvar-patch.json"
+      patch: "patches/nvar-defaults/{sct}/{name}-nvar-patch.json"
       path:
         - kind: region
           subtype: bios
