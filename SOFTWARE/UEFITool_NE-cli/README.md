@@ -80,6 +80,10 @@ SOFTWARE/UEFITool_NE-cli/uefitool-ne-cli \
   --output /tmp/imb760.inspect.json
 ```
 
+Pass `--add-paths` to include a canonical `path` for each supported `region`,
+`volume`, `file`, and `section`. The path is accepted by both `extract` and
+`uefitool-oe-cli apply`. Use `--output -` to explicitly write JSON to stdout.
+
 The command is read-only and never modifies the input image.
 
 ## Extract
