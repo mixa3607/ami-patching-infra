@@ -28,9 +28,6 @@ RUN apt-get update \
 
 WORKDIR /workspace
 
-# ImageMagick needs an explicit font inside minimal containers
-ENV FONT_NAME=DejaVu-Sans
-
 # Contexts: AMI/ is the default (.), SOFTWARE/ and MCODES/ are passed via
 # --build-context sw=../SOFTWARE --build-context mc=../MCODES by build-docker.sh
 COPY . /workspace/AMI/
@@ -40,8 +37,7 @@ COPY --from=mc / /workspace/MCODES/
 # Version is passed explicitly; build.py falls back to git tag/sha if unset.
 ARG REPO_GIT_REF=build
 
-RUN chmod +x /workspace/SOFTWARE/UEFITool_0.28.0/UEFIReplace \
-    && cd /workspace/AMI \
+RUN cd /workspace/AMI \
     && REPO_GIT_REF="$REPO_GIT_REF" python3 ./build.py --allow-dangerous
 
 FROM scratch AS artifact

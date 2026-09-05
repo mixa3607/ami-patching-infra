@@ -1,8 +1,9 @@
-board_root: boards/imb760
-base_dump: base/IMB760_BIOS.bin
+board_root: profiles/imb760
+base_dump: IMB760_BIOS.bin
 rom_prefix: IMB760_BIOS_AMI_mixa3607_mod
+
 logos:
-  - source: logos/7BB28B99-61BB-11D5-9A5D-0090273FC14D.bmp
+  - source: logos/big-logo.bmp
     point_size: 30
     path:
       - kind: region
@@ -23,7 +24,7 @@ logos:
         subtype: guid defined
       - kind: section
         subtype: raw
-  - source: logos/63819805-67BB-46EF-AA8D-1524A19A01E4.bmp
+  - source: logos/small-logo.bmp
     point_size: 20
     path:
       - kind: region

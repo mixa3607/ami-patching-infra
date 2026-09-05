@@ -15,7 +15,6 @@ def run(context: BuildContext) -> Path:
     output = context.build_dir / "20-logos.rom"
     logos_work_dir = context.work_dir / "logos"
     annotation = f"Patched by mixa3607\n{context.version}"
-    font_name = os.environ.get("FONT_NAME")
     logo_specs = context.profile["logos"]
     if not isinstance(logo_specs, list):
         raise ValueError("board profile field 'logos' must be a list")
@@ -32,10 +31,14 @@ def run(context: BuildContext) -> Path:
         source = context.board_dir / str(logo["source"])
         rendered = logos_work_dir / source.name
         require_file(source, "logo source")
-        command = ["convert", str(source), "-gravity", "NorthWest", "-pointsize", point_size, "-fill", "white"]
-        if font_name:
-            command.extend(("-font", font_name))
-        command.extend(("-annotate", "-0-3", annotation, f"BMP3:{rendered}"))
+        command = ["convert", str(source), 
+                   "-gravity", "NorthWest", 
+                   "-pointsize", point_size, 
+                   "-fill", "white",
+                   "-font", "DejaVu-Sans",
+                   "-annotate", "-0-3", annotation, 
+                   f"BMP3:{rendered}",
+                   ]
         run_command(command, dry_run=context.dry_run)
         uefi_apply(context, output, logo["path"], rendered, input_mode="body")
 
