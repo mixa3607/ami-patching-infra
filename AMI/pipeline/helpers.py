@@ -35,7 +35,7 @@ def sha256(path: Path) -> str:
 
 def load_profile(path: Path) -> dict[str, object]:
     profile = load_yaml(path, "board profile")
-    for key in ("board_root", "base_dump", "rom_prefix", "logos", "mcodes", "dmi", "ifr"):
+    for key in ("board_root", "base_dump", "rom_prefix", "logos", "mcodes", "dmi"):
         if key not in profile:
             raise ValueError(f"board profile is missing '{key}'")
     return profile

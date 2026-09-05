@@ -132,6 +132,7 @@ setup_data:
       subtype: freeform subtype guid
 
 sct:
+  patch: "ifr/{sct}/{sct}_setup.sct.patch.json"
   sct_paths:
     - name: FpgaSocketSetup
       path:
@@ -226,9 +227,6 @@ nvar_defaults:
           index: 0
         - kind: section
           subtype: raw
-
-ifr:
-  manifest: sections-new.yaml
 
 bridge:
   component: components/bios-state-lab-bridge
