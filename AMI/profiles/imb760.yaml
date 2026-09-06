@@ -256,3 +256,9 @@ nvram_erase:
     - volume:0x01000000:0x80000
     # backup nvram
     - volume:0x01080000:0x80000
+
+export_iso:
+  iso_size: 64mb
+  iso_name: "IMB760_BIOS_AMI_mixa3607_mod-{version}.iso"
+  add_files:
+    - iso/AfuEfix64.efi

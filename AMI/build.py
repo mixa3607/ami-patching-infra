@@ -5,19 +5,18 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
-import shutil
 import subprocess
 import sys
 
 from pipeline.context import BuildContext
-from pipeline.helpers import git_version, load_profile, sha256, write_manifest
+from pipeline.helpers import git_version, load_profile, sha256
 from pipeline.plan import Stage, parse_scopes, select_stages
-from pipeline.stages import bridge, dmi, logos, mcodes, nvar_defaults, nvram_erase, prepare, sct, setup_data, validate
+from pipeline.stages import bridge, dmi, export_bin, export_iso, logos, mcodes, nvar_defaults, nvram_erase, prepare, sct, setup_data, validate
 
 
 AMI_DIR = Path(__file__).resolve().parent
 REPO_ROOT = AMI_DIR.parent
-DEFAULT_SCOPES = ("prepare", "dmi", "logos", "nvar-defaults", "setup-data", "sct", "nvram-erase", "mcodes", "bridge")
+DEFAULT_SCOPES = ("prepare", "dmi", "logos", "nvar-defaults", "setup-data", "sct", "nvram-erase", "mcodes", "bridge", "export-bin", "export-iso")
 STAGES = {
     "prepare": Stage("prepare", (), prepare.run, ready=True),
     "dmi": Stage("dmi", ("prepare",), dmi.run, ready=True),
@@ -28,13 +27,15 @@ STAGES = {
     "nvram-erase": Stage("nvram-erase", ("prepare",), nvram_erase.run, ready=True, dangerous=True),
     "mcodes": Stage("mcodes", ("prepare",), mcodes.run, ready=True),
     "bridge": Stage("bridge", ("prepare",), bridge.run, ready=True),
+    "export-bin": Stage("export-bin", ("dmi", "sct", "nvram-erase", "mcodes", "bridge"), export_bin.run, ready=True),
+    "export-iso": Stage("export-iso", ("export-bin",), export_iso.run, ready=True),
     "validate": Stage("validate", (), validate.run, ready=False),
 }
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--scopes", action="append", help="Comma-separated stages to run (default: prepare,dmi,logos,nvar-defaults,setup-data,sct,nvram-erase,mcodes,bridge)")
+    parser.add_argument("--scopes", action="append", help="Comma-separated stages to run (default: prepare,dmi,logos,nvar-defaults,setup-data,sct,nvram-erase,mcodes,bridge,export-bin,export-iso)")
     parser.add_argument("--input", type=Path, help="Base ROM; defaults to the profile base_dump")
     parser.add_argument("--profile", type=Path, default=AMI_DIR / "profiles" / "imb760.yaml")
     parser.add_argument("--version", help="Build version; defaults to REPO_GIT_REF, tag, or commit SHA")
@@ -73,16 +74,17 @@ def main() -> int:
                 raise PermissionError(f"Scope '{stage.name}' requires --allow-dangerous")
             if not stage.ready:
                 raise NotImplementedError(f"Scope '{stage.name}' is not implemented yet.")
+            completed_count = len(context.completed)
             context.current_rom = stage.runner(context)
-            if not context.dry_run:
+            if not context.dry_run and len(context.completed) == completed_count:
                 context.completed.append({"name": stage.name, "rom": str(context.current_rom), "sha256": sha256(context.current_rom)})
 
         if context.current_rom is None:
             raise RuntimeError("The selected plan did not produce a ROM")
-        print(f"Final BIOS ROM: {context.final_rom}")
-        if not context.dry_run:
-            shutil.copyfile(context.current_rom, context.final_rom)
-            write_manifest(context)
+        if context.current_rom == context.final_rom:
+            print(f"Final BIOS ROM: {context.final_rom}")
+        else:
+            print(f"Last ROM checkpoint: {context.current_rom}")
         return 0
     except (FileNotFoundError, NotImplementedError, PermissionError, RuntimeError, ValueError, subprocess.CalledProcessError) as error:
         print(f"build failed: {error}", file=sys.stderr)
